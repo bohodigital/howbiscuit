@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">How Biscuit mark</title>
+  <desc id="desc">A simple biscuit-shaped field guide mark.</desc>
+  <rect width="96" height="96" rx="22" fill="#fff8e7"/>
+  <circle cx="48" cy="48" r="30" fill="#f4b400" stroke="#9a5b00" stroke-width="4"/>
+  <circle cx="36" cy="39" r="4" fill="#5f3b00"/>
+  <circle cx="58" cy="38" r="4" fill="#5f3b00"/>
+  <circle cx="45" cy="55" r="4" fill="#5f3b00"/>
+  <path d="M27 68h42" stroke="#2d6a4f" stroke-width="5" stroke-linecap="round"/>
+</svg>

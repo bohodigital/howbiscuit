@@ -1,0 +1,8 @@
+---
+const { title = 'Common mistakes' } = Astro.props;
+---
+
+<section class="hb-box" data-variant="common-mistake" aria-labelledby="common-mistakes-title">
+  <h2 id="common-mistakes-title" class="hb-box-label">{title}</h2>
+  <slot />
+</section>

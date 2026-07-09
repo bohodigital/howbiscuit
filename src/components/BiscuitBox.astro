@@ -1,0 +1,21 @@
+---
+type Variant = 'short-answer' | 'common-mistake' | 'cheap-safe' | 'dont-be-fooled' | 'source-note';
+
+const labels: Record<Variant, string> = {
+  'short-answer': 'Short answer',
+  'common-mistake': 'Common mistake',
+  'cheap-safe': 'Cheap safe version',
+  'dont-be-fooled': "Don't be fooled",
+  'source-note': 'Source note',
+};
+
+const { variant = 'short-answer', title } = Astro.props as {
+  variant?: Variant;
+  title?: string;
+};
+---
+
+<aside class="hb-box" data-variant={variant}>
+  <p class="hb-box-label">{title ?? labels[variant]}</p>
+  <slot />
+</aside>
