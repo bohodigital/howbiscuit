@@ -1,0 +1,7 @@
+---
+const allowed = new Set(['Tested', 'Researched', 'Theoretical']);
+const { value = 'Researched', label } = Astro.props as { value?: string; label?: string };
+const text = allowed.has(value) ? value : 'Researched';
+---
+
+<span class={`hb-badge hb-evidence hb-evidence-${text.toLowerCase()}`}>{label ?? text}</span>

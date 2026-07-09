@@ -1,0 +1,8 @@
+---
+const { title = 'Short answer' } = Astro.props;
+---
+
+<aside class="hb-box" data-variant="short-answer" aria-label={title}>
+  <p class="hb-box-label">{title}</p>
+  <slot />
+</aside>

@@ -1,0 +1,14 @@
+---
+const { title, href, description, status = 'live' } = Astro.props as {
+  title: string;
+  href: string;
+  description: string;
+  status?: 'live' | 'planned';
+};
+---
+
+<a class="hb-card hb-tool-card" data-status={status} href={href}>
+  <span class="hb-card-title">{title}</span>
+  <span>{description}</span>
+  <span class="hb-badge hb-tool-status">{status}</span>
+</a>
