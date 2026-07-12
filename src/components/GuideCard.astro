@@ -1,0 +1,17 @@
+---
+const { label, title, description, href, accent = 'honey', meta } = Astro.props as {
+  label: string;
+  title: string;
+  description: string;
+  href: string;
+  accent?: string;
+  meta?: string;
+};
+---
+
+<article class="hb-guide-card" data-accent={accent}>
+  <div class="hb-guide-card-top"><span>{label}</span><i aria-hidden="true">●</i></div>
+  <h3><a href={href}>{title}</a></h3>
+  <p>{description}</p>
+  <div class="hb-guide-card-bottom"><span>{meta ?? 'Field guide'}</span><a href={href} aria-label={`Read ${title}`}>Read →</a></div>
+</article>

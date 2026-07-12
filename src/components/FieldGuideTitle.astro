@@ -1,0 +1,45 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+const data = Astro.locals.starlightRoute.entry.data as typeof Astro.locals.starlightRoute.entry.data & {
+  division?: string;
+  evidence?: string;
+  readTime?: string;
+  updatedDate?: string | Date;
+};
+const division = data.division ?? '';
+const isArticle = data.kind === 'article';
+const isDivision = data.kind === 'division';
+const labels: Record<string, string> = {
+  cook: 'Cooking + food science',
+  'research-writing': 'Research + writing',
+  math: 'Math',
+  'home-tech': 'Home tech',
+  'make-do': 'Make-Do Lab',
+  science: 'Everyday science',
+};
+---
+
+{isArticle ? (
+  <header class="hb-article-title">
+    <a class="hb-back-link" href="/articles/">← All field guides</a>
+    <div class="hb-article-labels">
+      <span class="hb-topic-label">{labels[division] ?? 'Field guide'}</span>
+      <span class="hb-evidence-label">{data.evidence ?? 'Researched'}</span>
+    </div>
+    <h1 id="_top">{data.title}</h1>
+    <p>{data.description}</p>
+    <div class="hb-article-meta">
+      <span>How Biscuit field guide</span>
+      <span>Updated {data.updatedDate ?? data.lastUpdated}</span>
+      <span>{data.readTime ?? '6 min read'}</span>
+    </div>
+  </header>
+) : isDivision ? (
+  <header class="hb-hub-title" data-division={division || 'articles'}>
+    <span>Biscuit field guide / {labels[division] ?? 'Library'}</span>
+    <h1 id="_top">{data.title}</h1>
+    <p>{data.description}</p>
+  </header>
+) : (
+  <Default><slot /></Default>
+)}

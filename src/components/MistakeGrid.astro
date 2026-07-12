@@ -1,0 +1,14 @@
+---
+const { items } = Astro.props as { items: Array<{ title: string; body: string; fix?: string }> };
+---
+
+<div class="hb-mistake-grid">
+  {items.map((item) => (
+    <article>
+      <span aria-hidden="true">×</span>
+      <h3>{item.title}</h3>
+      <p>{item.body}</p>
+      {item.fix && <p class="hb-fix"><b>Try this:</b> {item.fix}</p>}
+    </article>
+  ))}
+</div>

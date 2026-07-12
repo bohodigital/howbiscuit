@@ -1,0 +1,8 @@
+---
+const { label = 'The short answer' } = Astro.props;
+---
+
+<aside class="hb-answer-stack">
+  <span>{label}</span>
+  <div><slot /></div>
+</aside>

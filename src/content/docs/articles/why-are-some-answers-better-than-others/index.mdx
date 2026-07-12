@@ -1,28 +1,83 @@
 ---
 title: Why Are Some Answers Better Than Others?
-description: A short explainer about what makes an answer useful, clear, and trustworthy.
+description: A useful answer addresses the real question, explains its reasoning, shows the next move, and makes the limits of its evidence visible.
 kind: article
 division: research-writing
+evidence: Editorial standard
+readTime: 6 min read
 feed: true
 pubDate: 2026-07-01
-updatedDate: 2026-07-01
-lastUpdated: 2026-07-01
+updatedDate: 2026-07-10
+lastUpdated: 2026-07-10
 ---
 
-import EvidenceBadge from '../../../../components/EvidenceBadge.astro';
-import RiskBadge from '../../../../components/RiskBadge.astro';
-import ShortAnswer from '../../../../components/ShortAnswer.astro';
+import AnswerStack from '../../../../components/AnswerStack.astro';
+import MechanismSteps from '../../../../components/MechanismSteps.astro';
+import MistakeGrid from '../../../../components/MistakeGrid.astro';
+import BiscuitBox from '../../../../components/BiscuitBox.astro';
+import SourceNotes from '../../../../components/SourceNotes.astro';
+import RelatedShelf from '../../../../components/RelatedShelf.astro';
 
-<ShortAnswer>
-  A better answer usually does three things quickly: it addresses the actual question, explains the reason, and makes the next step obvious.
-</ShortAnswer>
+<AnswerStack>
+  A better answer does four things: it answers the question early, explains why the answer is true, makes the next step usable, and shows where its evidence or confidence runs out.
+</AnswerStack>
 
-<EvidenceBadge value="Theoretical" label="editorial standard" /> <RiskBadge value="Green" label="low risk" />
+Length is not the test. A six-word answer can be useless. A long answer can be excellent. The question is whether each part earns the reader’s attention.
 
-## Clarity Beats Length
+## The four-part test
 
-A long answer can still be weak if it hides the point. A short answer can be strong when it names the answer, gives context, and avoids unsupported claims.
+<MechanismSteps steps={[
+  { title: 'Does it answer the real question?', body: 'A useful response identifies what the reader is actually trying to decide, understand, or fix—and says the answer before wandering into background.' },
+  { title: 'Can you follow the reason?', body: 'Rules become reusable when the mechanism, logic, or evidence is visible. “Because I said so” is not a portable skill.' },
+  { title: 'Is the next move obvious?', body: 'Examples, steps, checks, and stop conditions turn information into something a reader can use.' },
+  { title: 'Can you see the limits?', body: 'Strong answers separate facts from judgment, link important sources, and admit uncertainty instead of decorating it with confidence.' }
+]} />
 
-## Trust Comes From Traceability
+## Compare two answers
 
-When an answer relies on facts, readers should be able to tell where those facts came from or how the author reasoned from them.
+**Question:** Why did my baking powder stop working?
+
+<BiscuitBox variant="common-mistake" title="Weak answer">
+  It probably expired. Buy a new one.
+</BiscuitBox>
+
+The weak answer might be right, but it gives the reader no check and no useful understanding.
+
+<BiscuitBox variant="short-answer" title="Better answer">
+  Moisture and time can reduce baking powder’s activity. Test one teaspoon in one-third cup of hot water: vigorous foam means it still has rising power. If the reaction is weak, replace the can. Store the next one dry and covered.
+</BiscuitBox>
+
+The second answer names the likely cause, gives a safe check, defines what the result means, and provides a next move. It also creates a claim that can be checked against a real source.
+
+## Traceability builds trust
+
+When an answer depends on facts, the reader should be able to tell where those facts came from. That does not mean dumping a bibliography onto every ordinary sentence. It means linking the claims that matter and preferring sources close to the evidence: official guidance, standards, textbooks, universities, peer-reviewed research, and direct documentation.
+
+Purdue Online Writing Lab’s guidance on paragraph development emphasizes specific evidence plus analysis—not evidence dropped on the page and left to fend for itself. A source should support the reasoning; it should not replace it.
+
+## Four common answer failures
+
+<MistakeGrid items={[
+  { title: 'The throat-clearing essay', body: 'The response spends three paragraphs establishing vibes before it reaches the sentence the reader needed.', fix: 'Move the direct answer to the top, then earn the detail.' },
+  { title: 'The confident shrug', body: 'The answer sounds certain but shows no source, mechanism, calculation, or test.', fix: 'Expose the reasoning and label uncertainty.' },
+  { title: 'The fact pile', body: 'The information may be accurate, but no one explains how it changes the reader’s decision.', fix: 'Connect each important fact to the question.' },
+  { title: 'The one-size fix', body: 'A recommendation ignores cost, skill, safety, context, or the point where a reader should stop.', fix: 'Name assumptions and stop conditions.' }
+]} />
+
+## A useful answer is a small teaching system
+
+The best practical answers do more than close one question. They leave the reader better equipped for the next version of the problem. That is why How Biscuit pages use worked examples, common mistakes, source notes, evidence labels, cheap safe alternatives, and related guides.
+
+<BiscuitBox variant="source-note" title="Our editorial rule">
+  If an answer cannot show its reasoning, evidence, or limits, it is not ready to borrow the reader’s confidence.
+</BiscuitBox>
+
+<SourceNotes sources={[
+  { title: 'Paragraph Organization and Flow: evidence, analysis, and clear development', publisher: 'Purdue Online Writing Lab', href: 'https://owl.purdue.edu/owl/graduate_writing/documents/IWE_2020_Paragraphs_Organization-and-Flow_Transcript.doc.pdf' },
+  { title: 'How Biscuit Editorial Policy', publisher: 'How Biscuit', href: '/editorial-policy/' }
+]} />
+
+<RelatedShelf links={[
+  { label: 'See the method applied', title: 'How does baking powder work?', href: '/articles/how-does-baking-powder-work/' },
+  { label: 'Research + writing', title: 'Build clearer, traceable work', href: '/research-writing/' }
+]} />

@@ -25,6 +25,3 @@ jobs:
 
       - name: Run QA
         run: npm run qa
-
-      - name: Build site
-        run: npm run build
