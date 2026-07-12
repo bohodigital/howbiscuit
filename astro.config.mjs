@@ -75,6 +75,17 @@ export default defineConfig({
             href: '/feed.xml',
           },
         },
+        {
+          tag: 'script',
+          attrs: {
+            defer: true,
+            src: 'https://analytics.bohodigitalservices.com/script.js',
+            'data-website-id': 'fefef93c-b1d6-4d04-95d3-064af3d38a41',
+            'data-domains': 'howbiscuit.com,www.howbiscuit.com',
+            'data-do-not-track': 'true',
+            'data-exclude-search': 'true',
+          },
+        },
       ],
     }),
   ],
