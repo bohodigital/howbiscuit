@@ -1,0 +1,22 @@
+---
+import Search from '@astrojs/starlight/components/Search.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+---
+
+<div class="hb-site-header">
+  <a class="hb-brand" href="/" aria-label="How Biscuit home">
+    <span>HOW BISCUIT</span><b>?</b>
+  </a>
+  <nav class="hb-topics" aria-label="Main sections">
+    <a href="/math/">Math</a>
+    <a href="/research-writing/">Writing</a>
+    <a href="/cook/">Cooking</a>
+    <a href="/home-tech/">Home Tech</a>
+    <a href="/make-do/">Make-Do</a>
+    <a href="/tools/">Tools</a>
+  </nav>
+  <div class="hb-header-tools">
+    <Search />
+    <ThemeSelect />
+  </div>
+</div>

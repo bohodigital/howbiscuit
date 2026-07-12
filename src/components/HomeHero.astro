@@ -1,0 +1,27 @@
+---
+import Default from '@astrojs/starlight/components/Hero.astro';
+const isHomepage = Astro.locals.starlightRoute.id === '';
+---
+
+{isHomepage ? (
+  <section class="hb-home-hero">
+    <div class="hb-hero-copy">
+      <p class="hb-kicker"><span>THE BISCUIT FIELD GUIDE</span><i>Est. for people with questions</i></p>
+      <h1 id="_top">Plain answers.<br /><em>No sludge.</em></h1>
+      <p class="hb-hero-dek">For school, cooking, home tech, and making do. We explain the mechanism, show the practical move, and tell you when the cheap fix stops being the safe fix.</p>
+      <div class="hb-hero-actions">
+        <a class="hb-button hb-button-primary" href="/math/">Start with Math <span>→</span></a>
+        <a class="hb-button hb-button-secondary" href="/articles/">Read the field guides</a>
+      </div>
+    </div>
+    <div class="hb-hero-board" aria-label="How Biscuit answer method">
+      <div class="hb-board-card hb-board-answer"><span>01</span><b>THE ANSWER</b><p>First. Where it belongs.</p></div>
+      <div class="hb-board-card hb-board-why"><span>02</span><b>WHY IT WORKS</b><p>Mechanism, minus the fog.</p></div>
+      <div class="hb-board-card hb-board-fix"><span>03</span><b>THE MOVE</b><p>Do this next.</p></div>
+      <div class="hb-board-card hb-board-cheap"><span>04</span><b>CHEAP + SAFE</b><p>Budget is a real constraint.</p></div>
+      <div class="hb-board-stamp">THOROUGHLY<br />DE-SLUDGED</div>
+    </div>
+  </section>
+) : (
+  <Default><slot /></Default>
+)}

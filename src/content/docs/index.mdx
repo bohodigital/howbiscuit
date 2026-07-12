@@ -1,43 +1,67 @@
 ---
-title: Biscuit Field Guide
+title: How Biscuit
 description: Plain answers for school, cooking, home tech, and making do.
 kind: home
 template: splash
 hero:
   tagline: Plain answers for school, cooking, home tech, and making do.
-  actions:
-    - text: Start with Math
-      link: /math/
-      icon: right-arrow
-    - text: Browse Tools
-      link: /tools/
-      variant: secondary
 ---
 
-import DivisionCard from '../../components/DivisionCard.astro';
+import TopicCard from '../../components/TopicCard.astro';
+import GuideCard from '../../components/GuideCard.astro';
 
-How Biscuit explains the thing, shows the practical move, names the failure modes, and gives the cheap safe version.
+<section class="hb-home-section hb-topics-section">
+  <div class="hb-section-heading">
+    <div><span>Pick your problem</span><h2>Six ways out of the fog</h2></div>
+    <p>No endless category maze. Start with what is currently annoying you.</p>
+  </div>
+  <div class="hb-topic-grid">
+    <TopicCard number="01" symbol="√" title="Math" href="/math/" accent="mint" description="Worked examples, common mistakes, and the concepts your textbook sprinted past." />
+    <TopicCard number="02" symbol="¶" title="Research + Writing" href="/research-writing/" accent="lilac" description="Find real sources, build an argument, cite honestly, and keep your own voice." />
+    <TopicCard number="03" symbol="°" title="Cooking" href="/cook/" accent="tomato" description="Kitchen science, cheap staples, substitutions, and why dinner did that weird thing." />
+    <TopicCard number="04" symbol="⌁" title="Home Tech" href="/home-tech/" accent="blue" description="Wi-Fi, routers, settings, troubleshooting, and defaults that are actually safe." />
+    <TopicCard number="05" symbol="↺" title="Make-Do Lab" href="/make-do/" accent="mint" description="Cheap apartment fixes with cost ranges, safety bands, and a clear point to stop." />
+    <TopicCard number="06" symbol="+" title="Tools" href="/tools/" accent="honey" description="Small calculators and checklists that show their assumptions instead of bluffing." />
+  </div>
+</section>
 
-<div class="hb-grid">
-  <DivisionCard title="Math" href="/math/" accent="green" description="Homework panic, formulas, worked examples, and common mistakes." />
-  <DivisionCard title="Research & Writing" href="/research-writing/" accent="honey" description="Sources, outlines, citations, revision, and honest AI use." />
-  <DivisionCard title="Cooking" href="/cook/" accent="jam" description="Kitchen science, cheap staples, substitutions, and food failures." />
-  <DivisionCard title="Home Tech" href="/home-tech/" accent="blue" description="Wi-Fi, routers, settings, troubleshooting, and safe defaults." />
-  <DivisionCard title="Make-Do Lab" href="/make-do/" accent="green" description="Cheap apartment fixes with safety boundaries and stop signs." />
-  <DivisionCard title="Tools" href="/tools/" accent="honey" description="Checklists and calculators with assumptions shown up front." />
-</div>
+<section class="hb-panic-strip">
+  <p>WHAT BROKE?</p>
+  <div>
+    <a href="/math/"><span>I have homework panic</span><b>Go to Math →</b></a>
+    <a href="/cook/"><span>Dinner is behaving badly</span><b>Go to Cooking →</b></a>
+    <a href="/home-tech/"><span>The Wi-Fi is haunted</span><b>Go to Home Tech →</b></a>
+    <a href="/make-do/"><span>My budget said absolutely not</span><b>Go to Make-Do →</b></a>
+  </div>
+</section>
 
-## Start Here
+<section class="hb-home-section">
+  <div class="hb-section-heading">
+    <div><span>Freshly explained</span><h2>Start with a real answer</h2></div>
+    <a class="hb-text-link" href="/articles/">All field guides →</a>
+  </div>
+  <div class="hb-guide-grid">
+    <GuideCard label="Cooking + food science" title="How does baking powder work?" description="The acid, the base, the bubbles—and why your old can may be doing absolutely nothing." href="/articles/how-does-baking-powder-work/" accent="tomato" meta="7 min · Researched" />
+    <GuideCard label="Research + writing" title="Why are some answers better than others?" description="A practical test for clarity, evidence, useful next steps, and suspicious confidence." href="/articles/why-are-some-answers-better-than-others/" accent="lilac" meta="6 min · Editorial standard" />
+  </div>
+</section>
 
-- Homework panic: [Go to Math](/math/)
-- Cooking failure: [Go to Cooking](/cook/)
-- Wi-Fi chaos: [Go to Home Tech](/home-tech/)
-- Cheap apartment fix: [Go to Make-Do Lab](/make-do/)
+<section class="hb-method-section">
+  <div class="hb-method-lead">
+    <span>THE HOUSE METHOD</span>
+    <h2>An answer should leave you with fewer questions.</h2>
+  </div>
+  <div class="hb-method-list">
+    <div><b>1</b><span><strong>Answer it.</strong> Put the useful sentence before the throat-clearing.</span></div>
+    <div><b>2</b><span><strong>Explain it.</strong> Show the mechanism, not just the rule.</span></div>
+    <div><b>3</b><span><strong>Use it.</strong> Give the practical move, example, or checklist.</span></div>
+    <div><b>4</b><span><strong>Bound it.</strong> Name mistakes, evidence limits, cost, and safety stops.</span></div>
+  </div>
+  <p>Useful enough that you do not immediately need to search again. That is the whole job.</p>
+</section>
 
-## Featured Tool Shelf
-
-The tool shelf starts with checklists and calculators that show their assumptions. No mystery boxes, no fake precision.
-
-## Editorial Promise
-
-Every guide should answer the question, explain the mechanism, name the common failure modes, and tell you when the cheap version stops being the safe version.
+<section class="hb-trust-band">
+  <div><span>NO FAKE TESTING</span><span>NO FAKE EXPERTS</span><span>NO MYSTERY SOURCES</span></div>
+  <p>How Biscuit is not monetized. When facts matter, the sources are on the page. When evidence is weak, we say so.</p>
+  <a href="/editorial-policy/">Read the editorial policy →</a>
+</section>
