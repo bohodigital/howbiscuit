@@ -11,8 +11,8 @@ import { menuSections } from '../data/site-taxonomy.mjs';
   <nav class="hb-reader-nav" aria-label="How Biscuit navigation">
     <a class="hb-nav-link" href="/articles/">All Articles</a>
     {menuSections.map((section) => (
-      <details class="hb-explore" data-section={section.slug}>
-        <summary>{section.label} <span aria-hidden="true">⌄</span></summary>
+      <details class="hb-explore" name="hb-navigation" data-section={section.slug}>
+        <summary>{section.label} <span class="hb-explore-caret" aria-hidden="true"></span></summary>
         <div class="hb-explore-panel">
           <a class="hb-explore-overview" href={section.href}>
             <span>{section.label} Overview<small>{section.description}</small></span>
@@ -29,3 +29,60 @@ import { menuSections } from '../data/site-taxonomy.mjs';
     <ThemeSelect />
   </div>
 </div>
+
+<script>
+  const setupHeaderMenus = () => {
+    const nav = document.querySelector<HTMLElement>('.hb-reader-nav');
+    if (!nav || nav.dataset.menuReady === 'true') return;
+
+    nav.dataset.menuReady = 'true';
+    const menus = Array.from(nav.querySelectorAll<HTMLDetailsElement>('details.hb-explore'));
+    const closeOthers = (current?: HTMLDetailsElement) => {
+      menus.forEach((menu) => {
+        if (menu !== current) menu.open = false;
+      });
+    };
+
+    menus.forEach((menu) => {
+      let closeTimer = 0;
+      const cancelClose = () => window.clearTimeout(closeTimer);
+      const scheduleClose = () => {
+        cancelClose();
+        closeTimer = window.setTimeout(() => {
+          if (!menu.contains(document.activeElement)) menu.open = false;
+        }, 180);
+      };
+
+      menu.addEventListener('toggle', () => {
+        if (menu.open) closeOthers(menu);
+      });
+      menu.addEventListener('mouseenter', () => {
+        cancelClose();
+        closeOthers(menu);
+        menu.open = true;
+      });
+      menu.addEventListener('mouseleave', scheduleClose);
+      menu.addEventListener('focusin', cancelClose);
+      menu.addEventListener('focusout', () => {
+        window.requestAnimationFrame(() => {
+          if (!menu.contains(document.activeElement)) menu.open = false;
+        });
+      });
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (!nav.contains(event.target as Node)) closeOthers();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      const openMenu = menus.find((menu) => menu.open);
+      if (!openMenu) return;
+      const focusWasInside = openMenu.contains(document.activeElement);
+      openMenu.open = false;
+      if (focusWasInside) openMenu.querySelector('summary')?.focus();
+    });
+  };
+
+  setupHeaderMenus();
+  document.addEventListener('astro:page-load', setupHeaderMenus);
+</script>
