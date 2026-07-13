@@ -1,23 +1,39 @@
 ---
 title: Tools & Calculators
-description: Calculators, checklists, templates, and decision aids for How Biscuit readers.
+description: Transparent calculators, checklists, converters, cost estimators, templates, and decision tools.
 kind: division
 division: tools
 ---
 
-Tools & Calculators contains calculators, checklists, templates, and decision aids that support the article library.
+import TopicDirectory from '../../../components/TopicDirectory.astro';
+import { toolsTopics } from '../../../data/site-taxonomy.mjs';
 
-Tools should be simple enough to audit. If a tool makes a recommendation, it should show the inputs that shaped the output.
+Tools & Calculators supports the article library with small utilities that show their inputs, assumptions, units, and limits.
 
-## Start Here
+## Browse Tools & Calculators
 
-- Use a checklist when a calculator would imply fake precision.
-- Show assumptions beside the result.
-- Link each tool back to a guide that explains the idea.
+<TopicDirectory topics={toolsTopics} />
 
-## What This Section Covers
+## Calculators
 
-- calculators
-- checklists
-- templates
-- small decision aids
+Use a calculator when a formula produces a meaningful result. Show the formula, units, rounding, valid input range, and assumptions beside the answer.
+
+## Checklists
+
+Use checklists for setup, diagnosis, inspection, maintenance, comparison, and handoff tasks where missing a step matters more than computing a number.
+
+## Converters
+
+Cover measurements, temperature, cooking quantities, storage, networking, and other conversions with clear unit labels and appropriate precision.
+
+## Cost Estimators
+
+Separate upfront costs, recurring costs, energy, consumables, maintenance, repair, replacement, and likely service life.
+
+## Templates
+
+Provide reusable comparison sheets, inventories, maintenance logs, troubleshooting records, and project-planning formats.
+
+## Decision Tools
+
+Use auditable comparisons and decision trees. Do not hide subjective priorities behind a single score or imply precision the inputs cannot support.

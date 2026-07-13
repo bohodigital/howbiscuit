@@ -1,7 +1,7 @@
 ---
 import Search from '@astrojs/starlight/components/Search.astro';
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
-import { homeTechTopics } from '../data/site-taxonomy.mjs';
+import { menuSections } from '../data/site-taxonomy.mjs';
 ---
 
 <div class="hb-site-header">
@@ -10,20 +10,19 @@ import { homeTechTopics } from '../data/site-taxonomy.mjs';
   </a>
   <nav class="hb-reader-nav" aria-label="How Biscuit navigation">
     <a class="hb-nav-link" href="/articles/">All Articles</a>
-    <details class="hb-explore">
-      <summary>Home Tech <span aria-hidden="true">⌄</span></summary>
-      <div class="hb-explore-panel">
-        <a class="hb-explore-overview" href="/home-tech/">
-          <span>Home Tech Overview<small>Browse every home technology section</small></span>
-        </a>
-        {homeTechTopics.map((topic) => (
-          <a href={topic.href}><span>{topic.label}<small>{topic.description}</small></span></a>
-        ))}
-      </div>
-    </details>
-    <a class="hb-nav-link" href="/cook/">Cooking</a>
-    <a class="hb-nav-link" href="/make-do/">Home & DIY</a>
-    <a class="hb-nav-link" href="/buying-guides/">Buying Guides</a>
+    {menuSections.map((section) => (
+      <details class="hb-explore" data-section={section.slug}>
+        <summary>{section.label} <span aria-hidden="true">⌄</span></summary>
+        <div class="hb-explore-panel">
+          <a class="hb-explore-overview" href={section.href}>
+            <span>{section.label} Overview<small>{section.description}</small></span>
+          </a>
+          {section.topics.map((topic) => (
+            <a href={topic.href}><span>{topic.label}<small>{topic.description}</small></span></a>
+          ))}
+        </div>
+      </details>
+    ))}
   </nav>
   <div class="hb-header-tools">
     <Search />

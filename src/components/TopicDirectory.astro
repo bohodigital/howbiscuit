@@ -1,15 +1,18 @@
 ---
 import { homeTechTopics } from '../data/site-taxonomy.mjs';
 
-const { current = '' } = Astro.props as { current?: string };
+const { current = '', topics = homeTechTopics } = Astro.props as {
+  current?: string;
+  topics?: typeof homeTechTopics;
+};
 ---
 
 <div class="hb-topic-directory">
-  {homeTechTopics.map((topic) => (
-    <a href={topic.href} aria-current={current === topic.slug ? 'page' : undefined}>
+  {topics.map((topic) => (
+    <a href={topic.href} aria-current={current === topic.id ? 'page' : undefined}>
       <h3>{topic.label}</h3>
       <p>{topic.description}</p>
-      <span>{current === topic.slug ? 'Current section' : 'Open section'} →</span>
+      <span>{current === topic.id ? 'Current section' : 'Open section'} →</span>
     </a>
   ))}
 </div>

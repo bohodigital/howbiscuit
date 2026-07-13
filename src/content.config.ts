@@ -2,10 +2,9 @@ import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
-import { homeTechTopicIds } from './data/site-taxonomy.mjs';
+import { allTopicIds } from './data/site-taxonomy.mjs';
 
 const divisionSchema = z.enum([
-  'math',
   'research-writing',
   'cook',
   'home-tech',
@@ -26,7 +25,7 @@ export const collections = {
         feed: z.boolean().default(false),
         pubDate: z.coerce.date().optional(),
         updatedDate: z.coerce.date().optional(),
-        subtopic: z.enum(homeTechTopicIds).optional(),
+        subtopic: z.enum(allTopicIds).optional(),
         tags: z.array(z.string()).default([]),
         evidence: z.string().optional(),
         readTime: z.string().optional(),
