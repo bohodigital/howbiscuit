@@ -19,6 +19,11 @@ const requiredDocs = [
   'home-tech/privacy-security/index.mdx',
   'make-do/index.mdx',
   'tools/index.mdx',
+  'tools/converters/index.mdx',
+  'tools/calculators/index.mdx',
+  'tools/cost-estimators/index.mdx',
+  'tools/cost-estimators/appliance-running-cost/index.mdx',
+  'tools/cost-estimators/sales-tax/index.mdx',
   'buying-guides/index.mdx',
   'science/index.mdx',
   'glossary/index.mdx',
@@ -42,6 +47,10 @@ const requiredComponents = [
   'CheapSafeGuide.astro',
   'EvidenceBadge.astro',
   'RiskBadge.astro',
+  'calculators/UnitConverter.astro',
+  'calculators/ApplianceCostCalculator.astro',
+  'calculators/SalesTaxCalculator.astro',
+  'calculators/EverydayCostCalculators.astro',
 ];
 
 const forbiddenPublicRoutes = [

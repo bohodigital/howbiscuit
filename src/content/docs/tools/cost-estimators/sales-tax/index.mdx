@@ -1,0 +1,38 @@
+---
+title: Sales Tax & Honest Budget Calculator
+description: Itemize sales and special taxes or work backward from the total cash you can spend.
+kind: division
+division: tools
+---
+
+import SalesTaxCalculator from '../../../../../components/calculators/SalesTaxCalculator.astro';
+
+<SalesTaxCalculator />
+
+## What the estimate knows
+
+Enter a street address and ZIP to load the state, county, city, and special-district sales-tax lines. A ZIP-only lookup returns every matching jurisdiction when a postal area crosses tax boundaries, so the calculator does not silently guess which city applies.
+
+If the local-rate provider is unavailable or not configured, the status message clearly switches to the state-only fallback. The state selector still covers all 50 states and Washington, DC, and every loaded rate remains editable.
+
+Use the local fields when a receipt or official lookup gives the component rates. Use **I have a total budget** to answer the useful version of the question: how much sticker-price product fits inside the cash limit after checkout tax?
+
+The NYC presets distinguish taxes added at checkout from excise already built into the shelf price. Adult-use cannabis uses a 9% state and 4% local retail tax and is exempt from general sales tax. NYC cigarettes show the $5.35 state and $1.50 city excise per pack as embedded rather than adding it twice. The grocery preset assumes unheated, unprepared food for home use; prepared food, candy, soft drinks, and alcohol can be taxable. Vapor products add New York's 20% supplemental tax to regular sales tax.
+
+## Sources and limits
+
+- State base rates: [Tax Foundation, State and Local Sales Tax Rates, Midyear 2026](https://taxfoundation.org/data/all/state/2026-sales-tax-rates-midyear/)
+- Address and overlapping-jurisdiction lookup: [Ziptax API](https://docs.zip.tax/guides/rest-api/by-address)
+- State-only postal fallback: [Zippopotam.us](https://api.zippopotam.us/), an Open Database License dataset
+- NYC general rate and ZIP warning: [New York Publication 718](https://www.tax.ny.gov/pdf/publications/sales/pub718.pdf)
+- Adult-use cannabis: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/auc/)
+- Cigarettes and prepaid tax: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/cig/cigidx.htm)
+- Alcohol excise: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/bev/abt.htm)
+- Food sold by food stores: [New York Tax Bulletin ST-283](https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/food_sold_by_food_stores.htm)
+- Vapor products: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/vpt/)
+
+The page sends the location to How Biscuit's same-origin gateway. Street addresses travel in the request body rather than the public URL. When Ziptax is enabled, the gateway requests current jurisdiction data without exposing its API key. Exact-address responses are not cached; ZIP-only jurisdiction results can be cached at the edge for up to 24 hours. Providers may retain request logs. The fallback sends only the ZIP to Zippopotam.us, and the calculator never requests your device location.
+
+Product-specific Ziptax rules require a street address and a Pro or Enterprise account. ZIP-only results are general-merchandise rates. Cannabis and cigarette rules remain verified presets or manual inputs because a general sales-tax lookup cannot safely substitute for those special tax systems.
+
+Special taxes change often and can depend on product type, potency, volume, seller, and exact location. Check a current official source before making a purchase or business decision.

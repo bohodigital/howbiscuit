@@ -1,0 +1,136 @@
+---
+import { stateTaxRates } from '../../lib/calculators/us-data.mjs';
+---
+
+<form class="hb-calculator" data-appliance-calculator>
+  <div class="hb-calculator-head">
+    <div>
+      <span class="hb-calc-kicker">Electricity cost</span>
+      <h2>What does this device cost to run?</h2>
+    </div>
+    <a class="hb-inline-link" href="#find-wattage">Find the wattage</a>
+  </div>
+
+  <div class="hb-calc-grid hb-calc-grid-four">
+    <label class="hb-field">
+      <span>Power</span>
+      <span class="hb-input-suffix"><input name="watts" type="number" min="0" step="any" value="1000" inputmode="decimal" /><b>W</b></span>
+    </label>
+    <label class="hb-field">
+      <span>Hours per use day</span>
+      <input name="hours" type="number" min="0" max="24" step="any" value="2" inputmode="decimal" />
+    </label>
+    <label class="hb-field">
+      <span>Days per week</span>
+      <input name="days" type="number" min="0" max="7" step="any" value="7" inputmode="decimal" />
+    </label>
+    <label class="hb-field">
+      <span>Electric rate</span>
+      <span class="hb-input-suffix"><input name="rate" type="number" min="0" step="any" value="18.83" inputmode="decimal" /><b>¢/kWh</b></span>
+    </label>
+  </div>
+
+  <div class="hb-location-strip">
+    <label class="hb-field">
+      <span>ZIP code</span>
+      <input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" />
+    </label>
+    <button class="hb-calc-button" type="button" data-zip-lookup>Use ZIP</button>
+    <span class="hb-location-or">or</span>
+    <label class="hb-field hb-location-state">
+      <span>State average</span>
+      <select name="state">
+        <option value="">Choose state</option>
+        {stateTaxRates.map(({ code, name }) => <option value={code}>{name}</option>)}
+      </select>
+    </label>
+  </div>
+  <p class="hb-calc-status" data-location-status aria-live="polite">Using the April 2026 U.S. residential average. Your bill rate is better.</p>
+
+  <output class="hb-result-grid" aria-live="polite">
+    <span><small>Per use day</small><strong data-cost-day>$0.38</strong></span>
+    <span><small>Per week</small><strong data-cost-week>$2.64</strong></span>
+    <span><small>Per month</small><strong data-cost-month>$11.42</strong></span>
+    <span class="hb-result-primary"><small>Per year</small><strong data-cost-year>$137.52</strong></span>
+    <span><small>Energy / month</small><strong data-kwh-month>60.67 kWh</strong></span>
+  </output>
+  <p class="hb-calc-note">State figures are residential averages, not utility quotes. Fees, time-of-use pricing, standby power, and cycling can change the bill.</p>
+</form>
+
+<script>
+  import { calculateApplianceCost } from '../../lib/calculators/costs.mjs';
+  import { electricityRates } from '../../lib/calculators/us-data.mjs';
+
+  const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  const number = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+  const ratesByState = electricityRates.centsPerKwh as Record<string, number>;
+
+  function setupApplianceCalculators() {
+    document.querySelectorAll<HTMLFormElement>('[data-appliance-calculator]').forEach((form) => {
+      if (form.dataset.ready === 'true') return;
+      form.dataset.ready = 'true';
+      const watts = form.elements.namedItem('watts') as HTMLInputElement;
+      const hours = form.elements.namedItem('hours') as HTMLInputElement;
+      const days = form.elements.namedItem('days') as HTMLInputElement;
+      const rate = form.elements.namedItem('rate') as HTMLInputElement;
+      const zip = form.elements.namedItem('zip') as HTMLInputElement;
+      const state = form.elements.namedItem('state') as HTMLSelectElement;
+      const status = form.querySelector<HTMLElement>('[data-location-status]')!;
+
+      const render = () => {
+        try {
+          const result = calculateApplianceCost({
+            watts: watts.value,
+            hoursPerDay: hours.value,
+            daysPerWeek: days.value,
+            centsPerKwh: rate.value,
+          });
+          form.querySelector<HTMLElement>('[data-cost-day]')!.textContent = money.format(result.costPerActiveDay);
+          form.querySelector<HTMLElement>('[data-cost-week]')!.textContent = money.format(result.costPerWeek);
+          form.querySelector<HTMLElement>('[data-cost-month]')!.textContent = money.format(result.costPerMonth);
+          form.querySelector<HTMLElement>('[data-cost-year]')!.textContent = money.format(result.costPerYear);
+          form.querySelector<HTMLElement>('[data-kwh-month]')!.textContent = `${number.format(result.kwhPerMonth)} kWh`;
+        } catch {
+          form.querySelectorAll<HTMLElement>('.hb-result-grid strong').forEach((output) => { output.textContent = '—'; });
+        }
+      };
+
+      const useState = (code: string, place = '') => {
+        const average = ratesByState[code];
+        if (!average) return;
+        state.value = code;
+        rate.value = String(average);
+        status.textContent = `${place ? `${place}: ` : ''}${average}¢/kWh state residential average for April 2026. You can edit it.`;
+        render();
+      };
+
+      state.addEventListener('change', () => {
+        if (state.value) useState(state.value);
+      });
+      form.querySelector<HTMLButtonElement>('[data-zip-lookup]')!.addEventListener('click', async () => {
+        if (!/^\d{5}$/.test(zip.value)) {
+          status.textContent = 'Enter a five-digit U.S. ZIP code.';
+          zip.focus();
+          return;
+        }
+        status.textContent = 'Looking up the state…';
+        try {
+          const response = await fetch(`/api/tax-rates?postalCode=${encodeURIComponent(zip.value)}`);
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || 'ZIP not found');
+          const place = data.candidates?.[0];
+          if (!place?.state) throw new Error('State not found');
+          useState(place.state, place.city || place.label);
+        } catch (error) {
+          status.textContent = error instanceof Error ? error.message : 'ZIP lookup failed. Choose a state or enter your bill rate.';
+        }
+      });
+      form.addEventListener('input', render);
+      form.addEventListener('submit', (event) => event.preventDefault());
+      render();
+    });
+  }
+
+  setupApplianceCalculators();
+  document.addEventListener('astro:page-load', setupApplianceCalculators);
+</script>

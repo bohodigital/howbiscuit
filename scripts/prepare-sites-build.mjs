@@ -3,6 +3,7 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
+  readFileSync,
   renameSync,
   rmSync,
   writeFileSync,
@@ -19,33 +20,33 @@ if (!existsSync(join(dist, 'index.html'))) {
   throw new Error('Run the normal Astro build before preparing the Sites bundle.');
 }
 
+const workerSource = readFileSync(join(dist, '_worker.js'), 'utf8');
+
 rmSync(temporaryClient, { force: true, recursive: true });
 renameSync(dist, temporaryClient);
 mkdirSync(join(dist, 'client'), { recursive: true });
 
 for (const entry of readdirSync(temporaryClient)) {
+  if (entry === '_worker.js') continue;
   renameSync(join(temporaryClient, entry), join(dist, 'client', entry));
 }
 rmSync(temporaryClient, { force: true, recursive: true });
 
 mkdirSync(join(dist, 'server'), { recursive: true });
-writeFileSync(
-  join(dist, 'server', 'index.js'),
-  "export default { async fetch(request, env) { return env.ASSETS.fetch(request); } };\n",
-);
+writeFileSync(join(dist, 'server', 'index.js'), workerSource);
 writeFileSync(
   join(dist, 'server', 'wrangler.json'),
   JSON.stringify({
     name: 'howbiscuit-field-guide',
     main: 'index.js',
-    compatibility_date: '2026-05-15',
+    compatibility_date: '2026-07-13',
     rules: [{ type: 'ESModule', globs: ['**/*.js', '**/*.mjs'] }],
     assets: {
       directory: '../client',
       binding: 'ASSETS',
       html_handling: 'auto-trailing-slash',
       not_found_handling: '404-page',
-      run_worker_first: false,
+      run_worker_first: ['/api/*'],
     },
     no_bundle: true,
   }),

@@ -1,0 +1,19 @@
+---
+title: Appliance Running Cost Calculator
+description: Estimate how much an appliance or device costs to run by day, week, month, and year.
+kind: division
+division: tools
+---
+
+import ApplianceCostCalculator from '../../../../../components/calculators/ApplianceCostCalculator.astro';
+
+<ApplianceCostCalculator />
+
+## Find the wattage
+
+1. Check the rating label near the power cord, back panel, underside, battery compartment, or power adapter.
+2. Look for **W** or **watts**. If the label only lists volts and amps, watts are approximately volts × amps.
+3. For a computer, refrigerator, air conditioner, or anything that cycles, the label is usually a maximum—not the average. A plug-in power meter gives a better result.
+4. Use the electricity rate on your bill when possible. Divide the electricity charge by billed kWh if the bill does not print the rate directly.
+
+The ZIP lookup uses How Biscuit's same-origin location gateway only to identify a state; it does not request your device location. When the local-rate provider is unavailable, the gateway falls back to the free [Zippopotam.us postal-code database](https://api.zippopotam.us/). State estimates use the [U.S. Energy Information Administration April 2026 residential averages](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?form=MG0AV3&t=epmt_5_6_a).

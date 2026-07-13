@@ -33,10 +33,10 @@ export const homeDiyTopics = [
 ];
 
 export const toolsTopics = [
-  topic('tools', 'calculators', 'Calculators', 'Transparent calculators that show inputs, formulas, assumptions, and units.', 'tools'),
+  topic('tools', 'calculators', 'Calculators', 'Everyday price, subscription, trip, discount, bill-splitting, and budgeting calculators.', 'tools', true),
   topic('tools', 'checklists', 'Checklists', 'Setup, troubleshooting, maintenance, inspection, and buying checklists.', 'tools'),
-  topic('tools', 'converters', 'Converters', 'Unit, measurement, temperature, cooking, storage, and networking conversions.', 'tools'),
-  topic('tools', 'cost-estimators', 'Cost Estimators', 'Upfront, recurring, energy, repair, replacement, and total-cost estimates.', 'tools'),
+  topic('tools', 'converters', 'Converters', 'Liquid, weight, length, area, temperature, speed, storage, energy, and pressure conversions.', 'tools', true),
+  topic('tools', 'cost-estimators', 'Cost Estimators', 'Appliance energy, sales tax, special tax, and honest total-cost estimates.', 'tools', true),
   topic('tools', 'templates', 'Templates', 'Reusable planning, comparison, inventory, maintenance, and documentation templates.', 'tools'),
   topic('tools', 'decision-tools', 'Decision Tools', 'Auditable comparisons and decision trees without fake precision.', 'tools'),
 ];

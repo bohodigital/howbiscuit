@@ -1,0 +1,121 @@
+<div class="hb-mini-calculator-grid">
+  <form class="hb-mini-calculator" data-cost-per-unit>
+    <span class="hb-calc-kicker">Compare sizes</span>
+    <h2>Cost per unit</h2>
+    <div class="hb-mini-fields">
+      <label class="hb-field"><span>Price</span><span class="hb-input-prefix"><b>$</b><input name="price" type="number" min="0" step="any" value="12" inputmode="decimal" /></span></label>
+      <label class="hb-field"><span>Quantity</span><input name="quantity" type="number" min="0" step="any" value="48" inputmode="decimal" /></label>
+      <label class="hb-field"><span>Unit name</span><input name="unit" type="text" value="load" maxlength="24" /></label>
+    </div>
+    <output class="hb-mini-result" aria-live="polite"><strong data-output>$0.25</strong><span data-unit-output>per load</span></output>
+  </form>
+
+  <form class="hb-mini-calculator" data-discount-total>
+    <span class="hb-calc-kicker">Sale price</span>
+    <h2>Discount + tax</h2>
+    <div class="hb-mini-fields">
+      <label class="hb-field"><span>Original price</span><span class="hb-input-prefix"><b>$</b><input name="price" type="number" min="0" step="any" value="100" inputmode="decimal" /></span></label>
+      <label class="hb-field"><span>Discount</span><span class="hb-input-suffix"><input name="discount" type="number" min="0" max="100" step="any" value="20" inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span>Sales tax</span><span class="hb-input-suffix"><input name="tax" type="number" min="0" step="any" value="8.875" inputmode="decimal" /><b>%</b></span></label>
+    </div>
+    <output class="hb-mini-result" aria-live="polite"><strong data-output>$87.10</strong><span data-detail>You save $20.00 before tax</span></output>
+  </form>
+
+  <form class="hb-mini-calculator" data-recurring-cost>
+    <span class="hb-calc-kicker">Subscriptions</span>
+    <h2>Recurring cost</h2>
+    <div class="hb-mini-fields">
+      <label class="hb-field"><span>Charge</span><span class="hb-input-prefix"><b>$</b><input name="amount" type="number" min="0" step="any" value="15" inputmode="decimal" /></span></label>
+      <label class="hb-field"><span>Frequency</span><select name="frequency"><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="biweekly">Every 2 weeks</option><option value="monthly" selected>Monthly</option><option value="quarterly">Quarterly</option><option value="yearly">Yearly</option></select></label>
+    </div>
+    <output class="hb-mini-result hb-mini-result-stack" aria-live="polite">
+      <span><small>Monthly average</small><strong data-monthly>$15.00</strong></span>
+      <span><small>Per year</small><strong data-annual>$180.00</strong></span>
+      <span><small>Five years</small><strong data-five-year>$900.00</strong></span>
+    </output>
+  </form>
+
+  <form class="hb-mini-calculator" data-trip-cost>
+    <span class="hb-calc-kicker">Driving</span>
+    <h2>Fuel cost</h2>
+    <div class="hb-mini-fields">
+      <label class="hb-field"><span>Distance</span><span class="hb-input-suffix"><input name="miles" type="number" min="0" step="any" value="300" inputmode="decimal" /><b>mi</b></span></label>
+      <label class="hb-field"><span>Fuel economy</span><span class="hb-input-suffix"><input name="mpg" type="number" min="0" step="any" value="30" inputmode="decimal" /><b>mpg</b></span></label>
+      <label class="hb-field"><span>Fuel price</span><span class="hb-input-prefix"><b>$</b><input name="price" type="number" min="0" step="any" value="3.50" inputmode="decimal" /></span></label>
+    </div>
+    <output class="hb-mini-result" aria-live="polite"><strong data-output>$35.00</strong><span data-detail>10 gallons</span></output>
+  </form>
+
+  <form class="hb-mini-calculator" data-split-bill>
+    <span class="hb-calc-kicker">Restaurants & groups</span>
+    <h2>Split a bill</h2>
+    <div class="hb-mini-fields">
+      <label class="hb-field"><span>Subtotal</span><span class="hb-input-prefix"><b>$</b><input name="subtotal" type="number" min="0" step="any" value="100" inputmode="decimal" /></span></label>
+      <label class="hb-field"><span>Tax</span><span class="hb-input-suffix"><input name="tax" type="number" min="0" step="any" value="8.875" inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span>Tip on subtotal</span><span class="hb-input-suffix"><input name="tip" type="number" min="0" step="any" value="20" inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span>People</span><input name="people" type="number" min="1" step="1" value="4" inputmode="numeric" /></label>
+    </div>
+    <output class="hb-mini-result" aria-live="polite"><strong data-output>$32.22</strong><span data-detail>$128.88 total</span></output>
+  </form>
+</div>
+
+<script>
+  import {
+    calculateCostPerUnit,
+    calculateDiscountedTotal,
+    calculateRecurringCost,
+    calculateSplitBill,
+    calculateTripCost,
+  } from '../../lib/calculators/costs.mjs';
+
+  const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  const number = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+  const input = (form: HTMLFormElement, name: string) => (form.elements.namedItem(name) as HTMLInputElement).value;
+
+  function bindCalculator(selector: string, render: (form: HTMLFormElement) => void) {
+    document.querySelectorAll<HTMLFormElement>(selector).forEach((form) => {
+      if (form.dataset.ready === 'true') return;
+      form.dataset.ready = 'true';
+      const safeRender = () => {
+        try { render(form); } catch { form.querySelectorAll<HTMLElement>('output strong').forEach((item) => { item.textContent = '—'; }); }
+      };
+      form.addEventListener('input', safeRender);
+      form.addEventListener('change', safeRender);
+      form.addEventListener('submit', (event) => event.preventDefault());
+      safeRender();
+    });
+  }
+
+  function setupEverydayCalculators() {
+    bindCalculator('[data-cost-per-unit]', (form) => {
+      const value = calculateCostPerUnit({ price: input(form, 'price'), quantity: input(form, 'quantity') });
+      form.querySelector<HTMLElement>('[data-output]')!.textContent = money.format(value);
+      form.querySelector<HTMLElement>('[data-unit-output]')!.textContent = `per ${input(form, 'unit').trim() || 'unit'}`;
+    });
+    bindCalculator('[data-discount-total]', (form) => {
+      const value = calculateDiscountedTotal({ price: input(form, 'price'), discountPercent: Number(input(form, 'discount')), taxPercent: Number(input(form, 'tax')) });
+      form.querySelector<HTMLElement>('[data-output]')!.textContent = money.format(value.total);
+      form.querySelector<HTMLElement>('[data-detail]')!.textContent = `You save ${money.format(value.savings)} before tax`;
+    });
+    bindCalculator('[data-recurring-cost]', (form) => {
+      const frequency = input(form, 'frequency') as 'daily' | 'weekly' | 'biweekly' | 'monthly' | 'quarterly' | 'yearly';
+      const value = calculateRecurringCost({ amount: input(form, 'amount'), frequency });
+      form.querySelector<HTMLElement>('[data-monthly]')!.textContent = money.format(value.monthly);
+      form.querySelector<HTMLElement>('[data-annual]')!.textContent = money.format(value.annual);
+      form.querySelector<HTMLElement>('[data-five-year]')!.textContent = money.format(value.fiveYear);
+    });
+    bindCalculator('[data-trip-cost]', (form) => {
+      const value = calculateTripCost({ miles: input(form, 'miles'), milesPerGallon: input(form, 'mpg'), pricePerGallon: input(form, 'price') });
+      form.querySelector<HTMLElement>('[data-output]')!.textContent = money.format(value.cost);
+      form.querySelector<HTMLElement>('[data-detail]')!.textContent = `${number.format(value.gallons)} gallons`;
+    });
+    bindCalculator('[data-split-bill]', (form) => {
+      const value = calculateSplitBill({ subtotal: input(form, 'subtotal'), taxPercent: Number(input(form, 'tax')), tipPercent: Number(input(form, 'tip')), people: input(form, 'people') });
+      form.querySelector<HTMLElement>('[data-output]')!.textContent = money.format(value.perPerson);
+      form.querySelector<HTMLElement>('[data-detail]')!.textContent = `${money.format(value.total)} total`;
+    });
+  }
+
+  setupEverydayCalculators();
+  document.addEventListener('astro:page-load', setupEverydayCalculators);
+</script>

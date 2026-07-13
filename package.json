@@ -9,12 +9,14 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && node scripts/prepare-tax-worker.mjs",
     "build:sites": "npm run build && node scripts/prepare-sites-build.mjs",
-    "preview": "astro preview",
+    "preview": "node scripts/serve-local-preview.mjs",
+    "smoke:local": "node scripts/smoke-local-preview.mjs",
     "check": "astro check",
+    "test:calculators": "node --test test/*.test.mjs",
     "lint:content": "node scripts/lint-content.mjs",
-    "qa": "astro check && astro build && node scripts/lint-content.mjs"
+    "qa": "npm run test:calculators && npm run build && node scripts/lint-content.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

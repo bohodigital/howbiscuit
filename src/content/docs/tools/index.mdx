@@ -6,29 +6,24 @@ division: tools
 ---
 
 import TopicDirectory from '../../../components/TopicDirectory.astro';
+import ToolPreview from '../../../components/ToolPreview.astro';
 import { toolsTopics } from '../../../data/site-taxonomy.mjs';
 
-Tools & Calculators supports the article library with small utilities that show their inputs, assumptions, units, and limits.
+Use the tool, get the number, and see what the estimate includes.
+
+<div class="hb-tool-list">
+  <ToolPreview title="Convert common units" href="/tools/converters/" description="Liquid, weight, length, area, temperature, speed, data, energy, and pressure." />
+  <ToolPreview title="Estimate real costs" href="/tools/cost-estimators/" description="Electricity, sales tax, product tax, and cash-budget estimates." />
+  <ToolPreview title="Run everyday numbers" href="/tools/calculators/" description="Unit prices, discounts, subscriptions, driving, and shared bills." />
+</div>
 
 ## Browse Tools & Calculators
 
 <TopicDirectory topics={toolsTopics} />
 
-## Calculators
-
-Use a calculator when a formula produces a meaningful result. Show the formula, units, rounding, valid input range, and assumptions beside the answer.
-
 ## Checklists
 
 Use checklists for setup, diagnosis, inspection, maintenance, comparison, and handoff tasks where missing a step matters more than computing a number.
-
-## Converters
-
-Cover measurements, temperature, cooking quantities, storage, networking, and other conversions with clear unit labels and appropriate precision.
-
-## Cost Estimators
-
-Separate upfront costs, recurring costs, energy, consumables, maintenance, repair, replacement, and likely service life.
 
 ## Templates
 

@@ -1,0 +1,120 @@
+---
+import { conversionCategories } from '../../lib/calculators/units.mjs';
+
+const initialUnits = conversionCategories.volume.units;
+---
+
+<form class="hb-calculator" data-unit-converter>
+  <div class="hb-calculator-head">
+    <div>
+      <span class="hb-calc-kicker">Convert</span>
+      <h2>Common units</h2>
+    </div>
+    <label class="hb-field hb-field-compact">
+      <span>Type</span>
+      <select name="category">
+        {Object.entries(conversionCategories).map(([id, category]) => (
+          <option value={id}>{category.label}</option>
+        ))}
+      </select>
+    </label>
+  </div>
+
+  <div class="hb-calc-grid hb-converter-grid">
+    <label class="hb-field">
+      <span>Amount</span>
+      <input name="amount" type="number" inputmode="decimal" value="1" step="any" />
+    </label>
+    <label class="hb-field">
+      <span>From</span>
+      <select name="from">
+        {initialUnits.map((unit) => <option value={unit.id} selected={unit.id === 'us-cup'}>{unit.label} ({unit.symbol})</option>)}
+      </select>
+    </label>
+    <button class="hb-swap" type="button" aria-label="Swap units" title="Swap units">⇄</button>
+    <label class="hb-field">
+      <span>To</span>
+      <select name="to">
+        {initialUnits.map((unit) => <option value={unit.id} selected={unit.id === 'milliliter'}>{unit.label} ({unit.symbol})</option>)}
+      </select>
+    </label>
+  </div>
+
+  <output class="hb-calc-result hb-conversion-result" aria-live="polite">
+    <span>Result</span>
+    <strong data-result>236.588 mL</strong>
+    <small data-equation>1 US cup = 236.588 milliliters</small>
+  </output>
+  <p class="hb-calc-note" data-category-note>Liquid volume does not convert to ingredient weight without a density.</p>
+</form>
+
+<script>
+  import { conversionCategories, convertUnit } from '../../lib/calculators/units.mjs';
+
+  const numberFormat = new Intl.NumberFormat('en-US', { maximumSignificantDigits: 10 });
+  type Unit = { id: string; label: string; symbol: string };
+  type Category = { label: string; units: Unit[] };
+  const categoryMap = conversionCategories as Record<string, Category>;
+
+  function setupUnitConverters() {
+    document.querySelectorAll<HTMLFormElement>('[data-unit-converter]').forEach((form) => {
+      if (form.dataset.ready === 'true') return;
+      form.dataset.ready = 'true';
+      const category = form.elements.namedItem('category') as HTMLSelectElement;
+      const amount = form.elements.namedItem('amount') as HTMLInputElement;
+      const from = form.elements.namedItem('from') as HTMLSelectElement;
+      const to = form.elements.namedItem('to') as HTMLSelectElement;
+      const result = form.querySelector<HTMLElement>('[data-result]')!;
+      const equation = form.querySelector<HTMLElement>('[data-equation]')!;
+      const note = form.querySelector<HTMLElement>('[data-category-note]')!;
+      const swap = form.querySelector<HTMLButtonElement>('.hb-swap')!;
+
+      const makeOption = (unit: Unit) => {
+        const option = document.createElement('option');
+        option.value = unit.id;
+        option.textContent = `${unit.label} (${unit.symbol})`;
+        return option;
+      };
+      const populateUnits = () => {
+        const units = categoryMap[category.value].units;
+        from.replaceChildren(...units.map(makeOption));
+        to.replaceChildren(...units.map(makeOption));
+        to.selectedIndex = Math.min(1, units.length - 1);
+        note.textContent = category.value === 'volume'
+          ? 'Liquid volume does not convert to ingredient weight without a density.'
+          : category.value === 'data'
+            ? 'Decimal units use powers of 1,000. Binary units use powers of 1,024.'
+            : 'Conversions use the labeled units and do not add real-world tolerances.';
+      };
+
+      const calculate = () => {
+        try {
+          const converted = convertUnit(category.value, from.value, to.value, amount.value);
+          const fromUnit = categoryMap[category.value].units.find(({ id }) => id === from.value)!;
+          const toUnit = categoryMap[category.value].units.find(({ id }) => id === to.value)!;
+          result.textContent = `${numberFormat.format(converted)} ${toUnit.symbol}`;
+          equation.textContent = `${numberFormat.format(Number(amount.value))} ${fromUnit.label} = ${numberFormat.format(converted)} ${toUnit.label}`;
+        } catch {
+          result.textContent = 'Enter a valid amount';
+          equation.textContent = '';
+        }
+      };
+
+      category.addEventListener('change', () => { populateUnits(); calculate(); });
+      form.addEventListener('input', calculate);
+      form.addEventListener('change', calculate);
+      form.addEventListener('submit', (event) => event.preventDefault());
+      swap.addEventListener('click', () => {
+        const current = from.value;
+        from.value = to.value;
+        to.value = current;
+        calculate();
+        from.focus();
+      });
+      calculate();
+    });
+  }
+
+  setupUnitConverters();
+  document.addEventListener('astro:page-load', setupUnitConverters);
+</script>
