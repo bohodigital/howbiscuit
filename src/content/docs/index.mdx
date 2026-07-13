@@ -1,10 +1,10 @@
 ---
 title: How Biscuit
-description: Plain answers, useful next moves, and honest limits for everyday questions.
+description: Practical guides for home technology, cooking, repairs, and buying decisions.
 kind: home
 template: splash
 hero:
-  tagline: Plain answers, useful next moves, and honest limits for everyday questions.
+  tagline: Practical guides for home technology, cooking, repairs, and buying decisions.
 ---
 
 import PathCard from '../../components/PathCard.astro';
@@ -12,54 +12,54 @@ import GuideCard from '../../components/GuideCard.astro';
 
 <section class="hb-home-section hb-paths-section">
   <div class="hb-section-heading">
-    <div><span>Choose your route</span><h2>Start with what you need</h2></div>
-    <p>No subject maze. Pick the kind of help you want and get moving.</p>
+    <div><span>Main sections</span><h2>Browse by topic</h2></div>
+    <p>Each section has a clear scope so guides remain easy to find as the library grows.</p>
   </div>
   <div class="hb-path-grid">
-    <PathCard number="01" kicker="Two-minute route" title="Just give me the answer" href="/articles/" accent="honey" description="Start with the useful sentence. Keep reading only if you want the why." cta="See the answers" />
-    <PathCard number="02" kicker="Understand it" title="Show me why it works" href="/#house-method" accent="lilac" description="Get the mechanism without a lecture or a pile of unexplained rules." cta="See the method" />
-    <PathCard number="03" kicker="Troubleshoot it" title="Something is not working" href="/#what-broke" accent="tomato" description="Start from the symptom, find the likely cause, and take the safest next step." cta="Name the mess" />
-    <PathCard number="04" kicker="Use it" title="I need a practical tool" href="/tools/" accent="mint" description="Use a calculator or checklist that shows its assumptions instead of bluffing." cta="Open the toolbox" />
+    <PathCard number="01" kicker="Wi-Fi, computers, smart devices" title="Home Tech" href="/home-tech/" accent="honey" description="Setup, troubleshooting, upgrades, privacy, and buying help for the technology used at home." cta="Browse Home Tech" />
+    <PathCard number="02" kicker="Meals, baking, substitutions" title="Cooking" href="/cook/" accent="tomato" description="Practical cooking guidance, food safety, ingredient substitutions, and fixes for common kitchen problems." cta="Browse Cooking" />
+    <PathCard number="03" kicker="Maintenance and repairs" title="Home & DIY" href="/make-do/" accent="mint" description="Cleaning, maintenance, organization, apartment fixes, and low-cost repairs with clear safety limits." cta="Browse Home & DIY" />
+    <PathCard number="04" kicker="Products and total cost" title="Buying Guides" href="/buying-guides/" accent="lilac" description="Comparisons that explain tradeoffs, ongoing costs, repairability, and when keeping what you own is better." cta="Browse Buying Guides" />
   </div>
 </section>
 
-<section class="hb-panic-strip" id="what-broke">
-  <p>WHAT ARE YOU TRYING TO DO?</p>
+<section class="hb-panic-strip" id="home-tech-topics">
+  <p>HOME TECH SECTIONS</p>
   <div>
-    <a href="/math/"><span>Check my reasoning or calculation</span><b>Work it through →</b></a>
-    <a href="/research-writing/"><span>Make a claim that holds up</span><b>Build it clearly →</b></a>
-    <a href="/home-tech/"><span>Troubleshoot something at home</span><b>Find the likely cause →</b></a>
-    <a href="/make-do/"><span>Make the cheap version work safely</span><b>Find a workaround →</b></a>
+    <a href="/home-tech/wifi-routers/"><span>Wi-Fi & Routers</span><b>Coverage, speed, mesh, modems →</b></a>
+    <a href="/home-tech/gaming-pcs/"><span>Gaming PCs</span><b>Parts, upgrades, cooling, performance →</b></a>
+    <a href="/home-tech/laptops/"><span>Laptops</span><b>Buying, battery, storage, repairs →</b></a>
+    <a href="/home-tech/smart-home/"><span>Smart Home</span><b>Hubs, cameras, lights, privacy →</b></a>
   </div>
 </section>
 
-<section class="hb-home-section" id="fresh-answers">
+<section class="hb-home-section" id="latest-articles">
   <div class="hb-section-heading">
-    <div><span>Freshly explained</span><h2>Start with a real answer</h2></div>
-    <a class="hb-text-link" href="/articles/">All field guides →</a>
+    <div><span>Recently published</span><h2>Latest articles</h2></div>
+    <a class="hb-text-link" href="/articles/">View all articles →</a>
   </div>
   <div class="hb-guide-grid">
-    <GuideCard label="Kitchen science" title="How does baking powder work?" description="The acid, the base, the bubbles—and why your old can may be doing absolutely nothing." href="/articles/how-does-baking-powder-work/" accent="tomato" meta="7 min · Researched" />
-    <GuideCard label="How we judge an answer" title="Why are some answers better than others?" description="A practical test for clarity, evidence, useful next steps, and suspicious confidence." href="/articles/why-are-some-answers-better-than-others/" accent="lilac" meta="6 min · Editorial standard" />
+    <GuideCard label="Cooking" title="How does baking powder work?" description="How baking powder produces gas, why it can lose strength, and how to test it before it ruins a recipe." href="/articles/how-does-baking-powder-work/" accent="tomato" meta="7 min · Researched" />
+    <GuideCard label="Editorial standards" title="Why are some answers better than others?" description="A practical test for clarity, evidence, useful next steps, and claims that sound more certain than the evidence allows." href="/articles/why-are-some-answers-better-than-others/" accent="lilac" meta="6 min · Editorial standard" />
   </div>
 </section>
 
-<section class="hb-method-section" id="house-method">
+<section class="hb-method-section" id="guide-standard">
   <div class="hb-method-lead">
-    <span>THE HOUSE METHOD</span>
-    <h2>An answer should leave you with fewer questions.</h2>
+    <span>OUR GUIDE STANDARD</span>
+    <h2>Useful information in a predictable order.</h2>
   </div>
   <div class="hb-method-list">
-    <div><b>1</b><span><strong>Answer it.</strong> Put the useful sentence before the throat-clearing.</span></div>
-    <div><b>2</b><span><strong>Explain it.</strong> Show the mechanism, not just the rule.</span></div>
-    <div><b>3</b><span><strong>Use it.</strong> Give the practical move, example, or checklist.</span></div>
-    <div><b>4</b><span><strong>Bound it.</strong> Name mistakes, evidence limits, cost, and safety stops.</span></div>
+    <div><b>1</b><span><strong>Answer first.</strong> State the likely solution or conclusion before the background.</span></div>
+    <div><b>2</b><span><strong>Diagnose before changing things.</strong> Check the simplest likely causes in a sensible order.</span></div>
+    <div><b>3</b><span><strong>Show the steps and expected result.</strong> Readers should know whether the fix worked.</span></div>
+    <div><b>4</b><span><strong>State costs, tradeoffs, and stop points.</strong> Do not hide the part where professional help is safer or cheaper.</span></div>
   </div>
-  <p>Useful enough that you do not immediately need to search again. That is the whole job.</p>
+  <p>The goal is to help the reader solve the problem without creating a second one.</p>
 </section>
 
 <section class="hb-trust-band">
-  <div><span>NO FAKE TESTING</span><span>NO FAKE EXPERTS</span><span>NO MYSTERY SOURCES</span></div>
-  <p>How Biscuit is not monetized. When facts matter, the sources are on the page. When evidence is weak, we say so.</p>
+  <div><span>SOURCES ON THE PAGE</span><span>REAL COSTS AND LIMITS</span><span>CLEAR SAFETY STOPS</span></div>
+  <p>Recommendations distinguish researched specifications from hands-on testing. Prices, availability, software behavior, and service terms are dated when they may change.</p>
   <a href="/editorial-policy/">Read the editorial policy →</a>
 </section>

@@ -3,7 +3,7 @@ const { sources } = Astro.props as { sources: Array<{ title: string; publisher: 
 ---
 
 <section class="hb-sources" aria-labelledby="source-notes">
-  <div><span>Checked, not vibes</span><h2 id="source-notes">Source notes</h2></div>
+  <div><span>Sources reviewed</span><h2 id="source-notes">Source notes</h2></div>
   <ol>
     {sources.map((source) => <li><a href={source.href}>{source.title}</a><span>{source.publisher}</span></li>)}
   </ol>
