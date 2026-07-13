@@ -212,6 +212,8 @@ header.header::after {
   box-shadow: 8px 8px 0 color-mix(in srgb, var(--hb-ink), transparent 15%);
 }
 
+.hb-explore[data-section='home-tech'] .hb-explore-panel { right: auto; left: 0; }
+
 .hb-explore-panel a {
   display: block;
   min-height: 4.8rem;
@@ -504,8 +506,7 @@ header.header::after {
 
 @media (max-width: 72rem) {
   .hb-site-header { grid-template-columns: auto 1fr auto; gap: 0.8rem; }
-  .hb-reader-nav { justify-content: end; }
-  .hb-nav-link { display: none; }
+  .hb-reader-nav { display: none; }
   .hb-home-hero { grid-template-columns: 1fr 0.92fr; gap: 3rem; }
   .hb-path-grid { grid-template-columns: repeat(2, 1fr); }
   .hb-panic-strip > div { grid-template-columns: repeat(2, 1fr); }
@@ -532,9 +533,6 @@ header.header::after {
 @media (max-width: 34rem) {
   .hb-brand { font-size: 0.98rem; }
   .hb-brand i { display: none; }
-  .hb-reader-nav { margin-left: auto; }
-  .hb-explore summary { padding: 0.48rem 0.55rem; font-size: 0.61rem; }
-  .hb-explore-panel { position: fixed; top: 4.5rem; right: 0.75rem; left: 0.75rem; width: auto; grid-template-columns: 1fr; max-height: calc(100vh - 6rem); overflow: auto; }
   .hb-hero-actions { display: grid; }
   .hb-button { width: 100%; }
   .hb-topic-directory { grid-template-columns: 1fr; }

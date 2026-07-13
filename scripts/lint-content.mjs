@@ -8,7 +8,6 @@ const distRoot = path.join(root, 'dist');
 
 const requiredDocs = [
   'index.mdx',
-  'math/index.mdx',
   'research-writing/index.mdx',
   'cook/index.mdx',
   'home-tech/index.mdx',
@@ -57,6 +56,7 @@ const forbiddenPublicRoutes = [
 ];
 
 const requiredEndpoints = ['feed.xml.js', 'robots.txt.js', 'sitemap.xml.js'];
+const removedBuiltRoutes = ['math/index.html'];
 const forbiddenPatterns = [
   /\bTODO\b/i,
   /Lorem ipsum/i,
@@ -139,6 +139,13 @@ for (const endpoint of requiredEndpoints) {
 
 for (const publicRoute of forbiddenPublicRoutes) {
   rejectFile(publicRoute);
+}
+
+for (const removedRoute of removedBuiltRoutes) {
+  const fullPath = path.join(distRoot, removedRoute);
+  if (existsSync(fullPath)) {
+    errors.push(`Removed route was rebuilt: ${removedRoute}`);
+  }
 }
 
 const mdxFiles = await collectFiles(docsRoot, ['.mdx']);

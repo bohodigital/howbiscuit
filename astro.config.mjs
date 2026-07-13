@@ -1,6 +1,17 @@
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
-import { homeTechTopics } from './src/data/site-taxonomy.mjs';
+import { menuSections } from './src/data/site-taxonomy.mjs';
+
+const sectionMenus = menuSections.map(({ label, slug, topics }) => ({
+  label,
+  collapsed: true,
+  items: [
+    { label: `${label} Overview`, slug },
+    ...topics.map((topic) => topic.slug
+      ? { label: topic.label, slug: topic.slug }
+      : { label: topic.label, link: topic.href }),
+  ],
+}));
 
 export default defineConfig({
   site: 'https://howbiscuit.com',
@@ -23,21 +34,12 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Main sections',
+          label: 'Main menu',
+          collapsed: false,
           items: [
             { label: 'Home', slug: '' },
             { label: 'All Articles', slug: 'articles' },
-            { label: 'Cooking', slug: 'cook' },
-            { label: 'Home & DIY', slug: 'make-do' },
-            { label: 'Buying Guides', slug: 'buying-guides' },
-            { label: 'Tools & Calculators', slug: 'tools' },
-          ],
-        },
-        {
-          label: 'Home Tech',
-          items: [
-            { label: 'Home Tech Overview', slug: 'home-tech' },
-            ...homeTechTopics.map(({ label, slug }) => ({ label, slug })),
+            ...sectionMenus,
           ],
         },
         {

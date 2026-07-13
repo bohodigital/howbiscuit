@@ -1,25 +1,35 @@
 ---
 title: Cooking
-description: Everyday kitchen science, ingredient behavior, substitutions, and practical cooking explanations.
+description: Practical guides for cheap meals, baking, ingredient substitutions, kitchen troubleshooting, and food safety.
 kind: division
 division: cook
 ---
 
-Cooking covers kitchen science and practical food decisions: why ingredients behave the way they do, what substitutions change, and how timing or temperature affects the result.
+import TopicDirectory from '../../../components/TopicDirectory.astro';
+import { cookingTopics } from '../../../data/site-taxonomy.mjs';
 
-## Start Here
+Cooking covers everyday meals, ingredient behavior, substitutions, food safety, and fixing results that did not turn out as expected.
 
-- [How Does Baking Powder Work?](/articles/how-does-baking-powder-work/)
-- Separate a fast fix from the better method next time.
-- Treat food-safety limits as requirements, not optional advice.
+## Browse Cooking
 
-## What This Section Covers
+<TopicDirectory topics={cookingTopics} />
 
-- baking basics
-- rice, beans, grains, and cheap staples
-- kitchen failure diagnosis
-- ingredient substitutions
+## Cheap Meals
 
-## Evidence Note
+Staple ingredients, batch cooking, leftovers, meal planning, and honest per-serving costs. Guides should count condiments, cooking fat, energy, and wasted ingredients when those costs materially change the result.
 
-Food safety claims need official or extension-style sources. Recipe-style pages should not claim testing unless testing actually happened.
+## Baking
+
+Doughs, batters, leavening, temperature, timing, structure, and texture. Start with [How Does Baking Powder Work?](/articles/how-does-baking-powder-work/).
+
+## Ingredient Substitutions
+
+Explain the ingredient's job before suggesting a replacement. State how flavor, texture, rise, browning, storage life, or food safety will change.
+
+## Kitchen Troubleshooting
+
+Diagnose the symptom in order: ingredients, measurement, equipment, temperature, timing, and method. Separate a fast rescue from the better method for next time.
+
+## Food Safety
+
+Storage, cooking temperatures, cooling, reheating, cross-contamination, allergies, and spoilage require authoritative sources and conservative limits.
