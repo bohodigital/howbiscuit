@@ -66,6 +66,7 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
       <span>ZIP code</span>
       <input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" />
     </label>
+    <button class="hb-calc-button hb-calc-button-secondary" type="button" data-tax-auto-locate>Use my area</button>
     <button class="hb-calc-button" type="button" data-tax-zip-lookup>Load local rates</button>
     <label class="hb-field hb-location-state">
       <span>State fallback</span>
@@ -115,7 +116,7 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
       <p data-embedded-row hidden><span>Tax already in price</span><strong data-embedded>$0.00</strong></p>
     </div>
   </output>
-  <p class="hb-calc-note">Locations go through How Biscuit's Cloudflare gateway. When configured, Ziptax receives the lookup; the state fallback sends only the ZIP to Zippopotam. Exact-address responses are not cached, but providers may retain request logs. This remains a budgeting estimate.</p>
+  <p class="hb-calc-note">Locations go through How Biscuit's Cloudflare gateway. “Use my area” reads Cloudflare's approximate postal metadata without sending your IP to another lookup service. Official snapshots live in our database; the Census Bureau may receive street addresses, while Zippopotam and CDC receive ZIP or state lookups. Exact-address responses are not cached, but public providers may retain request logs. <a href="/api/tax-data/coverage">See source coverage</a>. This remains a budgeting estimate.</p>
 </form>
 
 <script>
@@ -133,6 +134,8 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
   } as const;
   type RateId = keyof typeof fieldMap;
   type RateComponent = { id: string; label: string; rate: number | string };
+  type UnitTax = { label: string; amount: number; unit: string; includedInPrice: boolean; citation?: string | null };
+  type ProductRule = { label: string; value: string; basis?: string; citation?: string | null };
   type TaxCandidate = {
     label: string;
     state: string;
@@ -141,9 +144,12 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
     postalCode: string;
     totalRate: number;
     components: RateComponent[];
+    unitTaxes?: UnitTax[];
+    rules?: ProductRule[];
+    confidence?: string;
   };
   type TaxLookup = {
-    provider: 'ziptax' | 'state-fallback';
+    provider: 'public-data' | 'ziptax';
     exact: boolean;
     ambiguous: boolean;
     candidates: TaxCandidate[];
@@ -301,7 +307,16 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
       };
 
       const applyCandidate = (candidate: TaxCandidate, lookup: TaxLookup) => {
-        if (!lookup.exact && !['general', 'custom'].includes(product.value)) {
+        const unitTaxes = candidate.unitTaxes ?? [];
+        const rules = candidate.rules ?? [];
+        const hasProductData = candidate.components.length > 0 || unitTaxes.length > 0 || rules.length > 0;
+        if (product.value === 'custom' && !hasProductData) {
+          if (candidate.state) state.value = candidate.state;
+          locationStatus.textContent = `${candidate.label} located. Your custom tax inputs were kept.`;
+          render();
+          return;
+        }
+        if (!lookup.exact && !['general', 'custom'].includes(product.value) && !hasProductData) {
           if (candidate.state) state.value = candidate.state;
           locationStatus.textContent = `${candidate.label} located, but ZIP-only data cannot apply ${product.options[product.selectedIndex].text.toLowerCase()} rules. Enter a street address or keep a verified preset.`;
           presetNote.textContent = 'No general-merchandise rate was loaded over the selected product rule.';
@@ -309,7 +324,7 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
           return;
         }
         const preservedProductRate = product.value === 'nicotine' ? getInput('productRate').value : '0';
-        const preserveUnitTax = product.value === 'alcohol';
+        const preserveUnitTax = product.value === 'alcohol' && unitTaxes.length === 0;
         const preservedUnitTax = preserveUnitTax ? getInput('unitTax').value : '0';
         const preservedUnitIncluded = preserveUnitTax && getInput('unitIncluded').checked;
         const preservedUnitLabel = preserveUnitTax
@@ -329,11 +344,21 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
           form.querySelector<HTMLElement>(`[data-label-${component.id}]`)!.textContent = component.label;
         });
         getInput('productRate').value = preservedProductRate;
-        getInput('unitTax').value = preservedUnitTax;
-        getInput('unitIncluded').checked = preservedUnitIncluded;
-        form.querySelector<HTMLElement>('[data-unit-count-label]')!.textContent = preservedUnitLabel;
-        const source = lookup.provider === 'ziptax' ? 'current jurisdiction data' : 'state-only fallback data';
-        presetNote.textContent = `${candidate.label}: ${candidate.totalRate}% combined rate from ${source}.`;
+        const unitKinds = new Set(unitTaxes.map((item) => item.unit));
+        if (unitTaxes.length && unitKinds.size === 1) {
+          getInput('unitTax').value = String(unitTaxes.reduce((sum, item) => sum + item.amount, 0));
+          getInput('unitIncluded').checked = unitTaxes.every((item) => item.includedInPrice);
+          form.querySelector<HTMLElement>('[data-unit-count-label]')!.textContent = unitTaxes[0].unit;
+        } else {
+          getInput('unitTax').value = preservedUnitTax;
+          getInput('unitIncluded').checked = preservedUnitIncluded;
+          form.querySelector<HTMLElement>('[data-unit-count-label]')!.textContent = preservedUnitLabel;
+        }
+        const source = lookup.provider === 'public-data' ? 'free official/public data' : 'optional paid fallback data';
+        const ruleSummary = rules.length
+          ? ` Rule: ${rules.slice(0, 2).map((rule) => `${rule.label}: ${rule.value}`).join('; ')}.`
+          : '';
+        presetNote.textContent = `${candidate.label}: ${candidate.totalRate}% percentage rate from ${source}.${ruleSummary}`;
         const caveat = lookup.warnings?.[0] ? ` ${lookup.warnings[0]}` : '';
         locationStatus.textContent = `${lookup.exact ? 'Exact address' : 'Location'} loaded for ${candidate.label}.${caveat}`;
         render();
@@ -366,14 +391,25 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
           warnings: [taxMatch.dataset.warning ?? 'ZIP codes can cross tax boundaries.'],
         });
       });
-      form.querySelector<HTMLButtonElement>('[data-tax-zip-lookup]')!.addEventListener('click', async () => {
+      const lookupButton = form.querySelector<HTMLButtonElement>('[data-tax-zip-lookup]')!;
+      form.querySelector<HTMLButtonElement>('[data-tax-auto-locate]')!.addEventListener('click', async () => {
+        locationStatus.textContent = 'Finding your approximate area…';
+        try {
+          const response = await fetch('/api/tax-data/locate', { headers: { Accept: 'application/json' } });
+          const data = await response.json() as { status?: string; location?: { postalCode?: string; state?: string; city?: string } | null };
+          if (!response.ok || !data.location?.postalCode) throw new Error('Your approximate ZIP is unavailable. Enter it instead.');
+          zip.value = data.location.postalCode;
+          if (data.location.state) state.value = data.location.state;
+          locationStatus.textContent = `Approximate area found${data.location.city ? ` near ${data.location.city}` : ''}. Loading local rates…`;
+          lookupButton.click();
+        } catch (error) {
+          locationStatus.textContent = error instanceof Error ? error.message : 'Your approximate ZIP is unavailable. Enter it instead.';
+        }
+      });
+      lookupButton.addEventListener('click', async () => {
         if (!/^\d{5}$/.test(zip.value)) {
           locationStatus.textContent = 'Enter a five-digit U.S. ZIP code.';
           zip.focus();
-          return;
-        }
-        if (['cannabis', 'cigarettes'].includes(product.value)) {
-          locationStatus.textContent = 'Automated general sales-tax data is not valid for this product. Keep a verified special-tax preset or enter a current local rule manually.';
           return;
         }
         locationStatus.textContent = address.value.trim() ? 'Loading exact local rates…' : 'Loading every jurisdiction in this ZIP…';

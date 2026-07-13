@@ -3,9 +3,12 @@ dist/
 .astro/
 .sites-client-build/
 .wrangler/
+.tax-data/
 work/
 outputs/
 *.tar.gz
 *.tgz
 .DS_Store
 npm-debug.log*
+__pycache__/
+*.pyc

@@ -1,18 +1,9 @@
-const ZIPTAX_ENDPOINT = 'https://api.zip-tax.com/request/v60';
-const ZIP_FALLBACK_ENDPOINT = 'https://api.zippopotam.us/us/';
-const POSTAL_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
-const FALLBACK_CACHE_CONTROL = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400';
-const EXACT_CACHE_CONTROL = 'no-store';
+import { lookupFreeTaxRates } from './free-tax-data.mjs';
+import { FREE_TAX_PRODUCTS } from './tax-source-registry.mjs';
 
-const STATE_BASE_RATES = {
-  AL: 4, AK: 0, AZ: 5.6, AR: 6.5, CA: 7.25, CO: 2.9, CT: 6.35, DE: 0,
-  DC: 6, FL: 6, GA: 4, HI: 4, ID: 6, IL: 6.25, IN: 7, IA: 6, KS: 6.5,
-  KY: 6, LA: 5, ME: 5.5, MD: 6, MA: 6.25, MI: 6, MN: 6.875, MS: 7,
-  MO: 4.225, MT: 0, NE: 5.5, NV: 6.85, NH: 0, NJ: 6.625, NM: 4.875,
-  NY: 4, NC: 4.75, ND: 5, OH: 5.75, OK: 4.5, OR: 0, PA: 6, RI: 7,
-  SC: 6, SD: 4.2, TN: 7, TX: 6.25, UT: 6.1, VT: 6, VA: 5.3, WA: 6.5,
-  WV: 6, WI: 5, WY: 4,
-};
+const ZIPTAX_ENDPOINT = 'https://api.zip-tax.com/request/v60';
+const POSTAL_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
+const EXACT_CACHE_CONTROL = 'no-store';
 
 const PRODUCT_CODES = {
   groceries: '40030',
@@ -284,37 +275,6 @@ const enforceRateLimit = async (request, exact, cacheStorage, options) => {
   return null;
 };
 
-const fallbackByPostalCode = async (postalCode, fetchImpl) => {
-  const response = await fetchWithTimeout(`${ZIP_FALLBACK_ENDPOINT}${postalCode}`, fetchImpl);
-  if (!response.ok) throw new Error('postal lookup failed');
-  const data = await response.json();
-  const places = Array.isArray(data.places) ? data.places : [];
-  const candidates = places.map((place) => {
-    const state = String(place['state abbreviation'] ?? '').toUpperCase();
-    const city = String(place['place name'] ?? '');
-    const rate = STATE_BASE_RATES[state];
-    if (rate === undefined) return null;
-    const location = { city, county: '', state, postalCode };
-    return {
-      ...location,
-      label: candidateLabel(location),
-      totalRate: rate,
-      components: rate > 0 ? [{ id: 'state', label: `${place.state ?? state} state base rate`, rate }] : [],
-    };
-  }).filter(Boolean);
-  if (!candidates.length) throw new Error('postal lookup failed');
-  return {
-    status: 'ok',
-    provider: 'state-fallback',
-    exact: false,
-    ambiguous: candidates.length > 1,
-    fetchedAt: new Date().toISOString(),
-    sourceUpdated: 'state-table-2026-07-01',
-    candidates,
-    warnings: ['Only the state base rate is available right now. Add local rates manually or configure the local tax-rate provider.'],
-  };
-};
-
 export async function handleTaxRateRequest(request, env = {}, context = {}, options = {}) {
   const fetchImpl = options.fetch ?? globalThis.fetch;
   if (!['GET', 'POST'].includes(request.method)) {
@@ -352,10 +312,14 @@ export async function handleTaxRateRequest(request, env = {}, context = {}, opti
   if (request.method === 'POST' && !address) {
     return responseJson({ error: 'Enter a street address for an exact lookup.' }, 400);
   }
+  if (![...FREE_TAX_PRODUCTS, 'custom'].includes(product)) {
+    return responseJson({ error: 'Choose a supported product type.' }, 400);
+  }
 
   const cacheStorage = options.caches ?? globalThis.caches;
   const cacheUrl = new URL('/api/tax-rates', url.origin);
   cacheUrl.searchParams.set('postalCode', postalCode);
+  cacheUrl.searchParams.set('product', product);
   const cacheKey = address ? null : new Request(cacheUrl);
   if (cacheKey) {
     const cached = await readCache(cacheKey, cacheStorage);
@@ -365,16 +329,32 @@ export async function handleTaxRateRequest(request, env = {}, context = {}, opti
   const limited = await enforceRateLimit(request, Boolean(address), cacheStorage, options);
   if (limited) return limited;
 
-  const providerKey = String(env.ZIPTAX_API_KEY ?? '').trim();
-  if (!providerKey) {
+  const allowPaidFallback = env.TAX_ALLOW_PAID_FALLBACK === 'true';
+  if (!allowPaidFallback) {
     try {
-      const fallback = await fallbackByPostalCode(postalCode, fetchImpl);
-      const response = responseJson(fallback, 200, address ? EXACT_CACHE_CONTROL : FALLBACK_CACHE_CONTROL);
+      const publicLookup = await lookupFreeTaxRates({
+        postalCode,
+        address,
+        product,
+        env,
+        fetchImpl,
+        now: options.now?.() ?? Date.now(),
+      });
+      if (!publicLookup.candidates.length) {
+        return responseJson({ error: 'No tax jurisdiction was found for that location.' }, 404);
+      }
+      const { cacheControl, ...publicBody } = publicLookup;
+      const response = responseJson(publicBody, 200, address ? EXACT_CACHE_CONTROL : cacheControl);
       if (cacheKey) writeCache(cacheKey, response, cacheStorage, context);
       return response;
     } catch {
-      return responseJson({ error: 'ZIP lookup is temporarily unavailable. Choose a state or enter rates manually.' }, 503);
+      return responseJson({ error: 'The free public tax sources are temporarily unavailable. Choose a state or enter rates manually.' }, 503);
     }
+  }
+
+  const providerKey = String(env.ZIPTAX_API_KEY ?? '').trim();
+  if (!providerKey) {
+    return responseJson({ error: 'The free public tax sources are temporarily unavailable. Choose a state or enter rates manually.' }, 503);
   }
 
   const providerUrl = new URL(ZIPTAX_ENDPOINT);

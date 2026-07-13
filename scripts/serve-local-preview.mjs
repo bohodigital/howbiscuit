@@ -4,6 +4,7 @@ import { extname, join, normalize, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { handleTaxRateRequest } from '../src/lib/tax-data-gateway.mjs';
+import { handleTaxCoverageRequest, handleTaxLocationRequest } from '../src/lib/free-tax-data.mjs';
 
 const root = normalize(join(fileURLToPath(new URL('..', import.meta.url)), 'dist'));
 const port = Number(process.env.PORT ?? 4322);
@@ -79,9 +80,23 @@ createServer(async (incoming, outgoing) => {
     }
     const request = new Request(url, { method: incoming.method, headers, body });
     const response = await handleTaxRateRequest(request, {
+      CDC_SOCRATA_APP_TOKEN: process.env.CDC_SOCRATA_APP_TOKEN,
+      TAX_ALLOW_PAID_FALLBACK: process.env.TAX_ALLOW_PAID_FALLBACK,
       ZIPTAX_API_KEY: process.env.ZIPTAX_API_KEY,
       ZIPTAX_PRODUCT_RULES: process.env.ZIPTAX_PRODUCT_RULES,
     });
+    await sendWebResponse(response, outgoing);
+    return;
+  }
+
+  if (url.pathname === '/api/tax-data/coverage') {
+    const response = await handleTaxCoverageRequest(new Request(url, { method: incoming.method }));
+    await sendWebResponse(response, outgoing);
+    return;
+  }
+
+  if (url.pathname === '/api/tax-data/locate') {
+    const response = await handleTaxLocationRequest(new Request(url, { method: incoming.method }));
     await sendWebResponse(response, outgoing);
     return;
   }

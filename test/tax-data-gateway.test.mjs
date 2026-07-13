@@ -131,6 +131,17 @@ test('rejects an invalid ZIP before calling a provider', async () => {
   assert.match((await response.json()).error, /five-digit/i);
 });
 
+test('rejects unknown product codes before they can create cache variants', async () => {
+  const response = await handleTaxRateRequest(
+    new Request('https://howbiscuit.com/api/tax-rates?postalCode=10001&product=made-up'),
+    {},
+    {},
+    { fetch: async () => { throw new Error('should not fetch'); } },
+  );
+  assert.equal(response.status, 400);
+  assert.equal((await response.json()).error, 'Choose a supported product type.');
+});
+
 test('falls back to a state base rate when no provider key is configured', async () => {
   const response = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?postalCode=10001'),
@@ -148,7 +159,7 @@ test('falls back to a state base rate when no provider key is configured', async
   );
   const body = await response.json();
   assert.equal(response.status, 200);
-  assert.equal(body.provider, 'state-fallback');
+  assert.equal(body.provider, 'public-data');
   assert.equal(body.exact, false);
   assert.equal(body.candidates[0].components[0].rate, 4);
   assert.match(body.warnings[0], /local/i);
@@ -158,7 +169,7 @@ test('sends a configured key only in the provider request header', async () => {
   let providerRequest;
   const response = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?postalCode=80112'),
-    { ZIPTAX_API_KEY: 'server-only-secret' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'server-only-secret' },
     {},
     {
       fetch: async (request) => {
@@ -182,13 +193,13 @@ test('uses privacy-safe cache rules for exact and ZIP-only lookups', async () =>
   );
   const exact = await handleTaxRateRequest(
     exactRequest(),
-    { ZIPTAX_API_KEY: 'secret' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret' },
     {},
     { fetch: providerFetch },
   );
   const postal = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?postalCode=80112'),
-    { ZIPTAX_API_KEY: 'secret' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret' },
     {},
     { fetch: providerFetch },
   );
@@ -199,7 +210,7 @@ test('uses privacy-safe cache rules for exact and ZIP-only lookups', async () =>
 test('returns a sanitized provider failure', async () => {
   const response = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?postalCode=10001'),
-    { ZIPTAX_API_KEY: 'never-print-this' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'never-print-this' },
     {},
     { fetch: async () => new Response('provider account details', { status: 403 }) },
   );
@@ -213,7 +224,7 @@ test('does not retry provider quota failures or expose application-level errors'
   let calls = 0;
   const quota = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?postalCode=10001'),
-    { ZIPTAX_API_KEY: 'secret' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret' },
     {},
     {
       fetch: async () => {
@@ -228,7 +239,7 @@ test('does not retry provider quota failures or expose application-level errors'
 
   const applicationError = await handleTaxRateRequest(
     exactRequest('groceries'),
-    { ZIPTAX_API_KEY: 'secret', ZIPTAX_PRODUCT_RULES: 'true' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret', ZIPTAX_PRODUCT_RULES: 'true' },
     {},
     {
       fetch: async () => new Response(JSON.stringify({
@@ -246,7 +257,7 @@ test('adds supported product codes only to exact address requests when enabled',
     address
       ? exactRequest(product)
       : new Request(`https://howbiscuit.com/api/tax-rates?postalCode=10001&product=${product}`),
-    { ZIPTAX_API_KEY: 'secret', ZIPTAX_PRODUCT_RULES: 'true' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret', ZIPTAX_PRODUCT_RULES: 'true' },
     {},
     {
       fetch: async (request) => {
@@ -280,20 +291,55 @@ test('canonicalizes ZIP cache keys so arbitrary query parameters cannot bypass t
   const context = { waitUntil(promise) { pending.push(promise); } };
   const first = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?postalCode=80112&nonce=one'),
-    { ZIPTAX_API_KEY: 'secret' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret' },
     context,
     options,
   );
   await Promise.all(pending);
   const second = await handleTaxRateRequest(
     new Request('https://howbiscuit.com/api/tax-rates?nonce=two&postalCode=80112'),
-    { ZIPTAX_API_KEY: 'secret' },
+    { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret' },
     context,
     options,
   );
   assert.equal(first.status, 200);
   assert.equal(second.status, 200);
   assert.equal(providerCalls, 1);
+});
+
+test('keeps product-specific public-data lookups in separate cache entries', async () => {
+  const caches = memoryCache();
+  const pending = [];
+  let locationCalls = 0;
+  const options = {
+    caches,
+    fetch: async () => {
+      locationCalls += 1;
+      return new Response(JSON.stringify({
+        places: [{ 'place name': 'New York City', 'state abbreviation': 'NY' }],
+      }), { status: 200 });
+    },
+  };
+  const context = { waitUntil(promise) { pending.push(promise); } };
+  const general = await handleTaxRateRequest(
+    new Request('https://howbiscuit.com/api/tax-rates?postalCode=10001&product=general'),
+    {},
+    context,
+    options,
+  );
+  await Promise.all(pending.splice(0));
+  const groceries = await handleTaxRateRequest(
+    new Request('https://howbiscuit.com/api/tax-rates?postalCode=10001&product=groceries'),
+    {},
+    context,
+    options,
+  );
+  await Promise.all(pending);
+  assert.equal(general.status, 200);
+  assert.equal(groceries.status, 200);
+  assert.equal(locationCalls, 2);
+  assert.equal((await general.json()).candidates[0].totalRate, 4);
+  assert.equal((await groceries.json()).candidates[0].totalRate, 0);
 });
 
 test('rate-limits repeated exact lookups without exposing the address in the public URL', async () => {
@@ -308,7 +354,7 @@ test('rate-limits repeated exact lookups without exposing the address in the pub
   for (let index = 0; index < 13; index += 1) {
     response = await handleTaxRateRequest(
       request(),
-      { ZIPTAX_API_KEY: 'secret' },
+      { TAX_ALLOW_PAID_FALLBACK: 'true', ZIPTAX_API_KEY: 'secret' },
       {},
       {
         caches,

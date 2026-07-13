@@ -11,9 +11,9 @@ import SalesTaxCalculator from '../../../../../components/calculators/SalesTaxCa
 
 ## What the estimate knows
 
-Enter a street address and ZIP to load the state, county, city, and special-district sales-tax lines. A ZIP-only lookup returns every matching jurisdiction when a postal area crosses tax boundaries, so the calculator does not silently guess which city applies.
+Enter a street address and ZIP to load the state, county, city, and special-district sales-tax lines available in How Biscuit's public-source database. A ZIP-only lookup returns every matching jurisdiction when a postal area crosses tax boundaries, so the calculator does not silently guess which city applies.
 
-If the local-rate provider is unavailable or not configured, the status message clearly switches to the state-only fallback. The state selector still covers all 50 states and Washington, DC, and every loaded rate remains editable.
+If a verified local record is unavailable, the status message clearly switches to the state-only fallback. The state selector still covers all 50 states and Washington, DC, and every loaded rate remains editable.
 
 Use the local fields when a receipt or official lookup gives the component rates. Use **I have a total budget** to answer the useful version of the question: how much sticker-price product fits inside the cash limit after checkout tax?
 
@@ -21,9 +21,14 @@ The NYC presets distinguish taxes added at checkout from excise already built in
 
 ## Sources and limits
 
-- State base rates: [Tax Foundation, State and Local Sales Tax Rates, Midyear 2026](https://taxfoundation.org/data/all/state/2026-sales-tax-rates-midyear/)
-- Address and overlapping-jurisdiction lookup: [Ziptax API](https://docs.zip.tax/guides/rest-api/by-address)
+- General rates and tax boundaries for participating states: [Streamlined Sales Tax rate and boundary files](https://www.streamlinedsalestax.org/Shared-Pages/rate-and-boundary-files)
+- Product taxability for participating states: [Streamlined Sales Tax state taxability matrices](https://www.streamlinedsalestax.org/Shared-Pages/State-taxability-matrix)
+- Address normalization: [US Census Geocoding Services API](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html)
+- Approximate postal autofill: [Cloudflare request location metadata](https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties)
 - State-only postal fallback: [Zippopotam.us](https://api.zippopotam.us/), an Open Database License dataset
+- State cigarette and vaping rules: [CDC STATE System datasets](https://data.cdc.gov/browse?category=Legislation)
+- State alcohol, cannabis, cigarette, and vaping source tables: [Federation of Tax Administrators](https://taxadmin.org/tax-rates-new/)
+- Non-participating states: [official state revenue agencies](https://www.streamlinedsalestax.org/contacts/state-contact-information)
 - NYC general rate and ZIP warning: [New York Publication 718](https://www.tax.ny.gov/pdf/publications/sales/pub718.pdf)
 - Adult-use cannabis: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/auc/)
 - Cigarettes and prepaid tax: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/cig/cigidx.htm)
@@ -31,8 +36,8 @@ The NYC presets distinguish taxes added at checkout from excise already built in
 - Food sold by food stores: [New York Tax Bulletin ST-283](https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/food_sold_by_food_stores.htm)
 - Vapor products: [New York State Department of Taxation and Finance](https://www.tax.ny.gov/bus/vpt/)
 
-The page sends the location to How Biscuit's same-origin gateway. Street addresses travel in the request body rather than the public URL. When Ziptax is enabled, the gateway requests current jurisdiction data without exposing its API key. Exact-address responses are not cached; ZIP-only jurisdiction results can be cached at the edge for up to 24 hours. Providers may retain request logs. The fallback sends only the ZIP to Zippopotam.us, and the calculator never requests your device location.
+The page sends the location to How Biscuit's same-origin gateway. Street addresses travel in the request body rather than the public URL. **Use my area** reads Cloudflare's approximate postal metadata and does not call a separate IP-location provider. The gateway checks our versioned public-source database first, then uses the Census Bureau for address normalization or Zippopotam for a ZIP-only fallback. Exact-address responses are not cached; ZIP-only jurisdiction results can be cached at the edge for up to 24 hours. Public providers may retain request logs. The calculator never requests your device location.
 
-Product-specific Ziptax rules require a street address and a Pro or Enterprise account. ZIP-only results are general-merchandise rates. Cannabis and cigarette rules remain verified presets or manual inputs because a general sales-tax lookup cannot safely substitute for those special tax systems.
+General and grocery rates can be loaded from machine-readable state files. Current cigarette excise can be itemized where the CDC publishes a directly computable per-pack amount. Vaping, alcohol, cannabis, and many local product rules use different units or legal conditions; the calculator shows those rules for review instead of inventing a checkout percentage. Verified presets and manual inputs remain available for those cases.
 
 Special taxes change often and can depend on product type, potency, volume, seller, and exact location. Check a current official source before making a purchase or business decision.

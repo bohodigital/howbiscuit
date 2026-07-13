@@ -1,5 +1,6 @@
 import {
   copyFileSync,
+  cpSync,
   existsSync,
   mkdirSync,
   readdirSync,
@@ -54,5 +55,8 @@ writeFileSync(
 
 mkdirSync(join(dist, '.openai'), { recursive: true });
 copyFileSync(hosting, join(dist, '.openai', 'hosting.json'));
+if (existsSync(join(root, 'drizzle'))) {
+  cpSync(join(root, 'drizzle'), join(dist, '.openai', 'drizzle'), { recursive: true });
+}
 
 console.log('Prepared Astro static output for Sites.');

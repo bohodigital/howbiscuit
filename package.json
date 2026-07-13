@@ -15,6 +15,7 @@
     "smoke:local": "node scripts/smoke-local-preview.mjs",
     "check": "astro check",
     "test:calculators": "node --test test/*.test.mjs",
+    "tax:data:sync": "python3 scripts/tax-data/sync_free_tax_data.py",
     "lint:content": "node scripts/lint-content.mjs",
     "qa": "npm run test:calculators && npm run build && node scripts/lint-content.mjs"
   },

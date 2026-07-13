@@ -757,6 +757,7 @@ header.header::after {
 }
 .hb-swap { width: 2.75rem; padding: 0; font-size: 1.2rem; }
 .hb-calc-button { align-self: end; padding: 0.55rem 0.85rem; }
+.hb-calc-button-secondary { background: var(--hb-paper); color: var(--hb-ink); }
 .hb-swap:hover,
 .hb-calc-button:hover { background: var(--hb-tomato); color: #142432; }
 
@@ -791,7 +792,7 @@ header.header::after {
   padding-top: 1.25rem;
 }
 .hb-location-or { align-self: center; color: var(--hb-ink-soft); font-size: 0.7rem; }
-.hb-tax-location-strip { grid-template-columns: minmax(14rem, 1.6fr) minmax(7rem, 0.65fr) auto minmax(11rem, 0.9fr); }
+.hb-tax-location-strip { grid-template-columns: minmax(14rem, 1.6fr) minmax(7rem, 0.65fr) auto auto minmax(11rem, 0.9fr); }
 .hb-location-address small { font: inherit; font-weight: 600; }
 .hb-tax-match-row {
   max-width: 34rem;
