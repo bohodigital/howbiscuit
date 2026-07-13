@@ -19,7 +19,7 @@ export async function GET(context) {
 
   return rss({
     title: 'How Biscuit',
-    description: 'Plain-language explainers from the Biscuit Field Guide.',
+    description: 'Practical guides for home technology, cooking, repairs, and buying decisions.',
     site: context.site?.toString() ?? 'https://howbiscuit.com',
     customData: '<language>en-us</language>',
     items,

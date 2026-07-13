@@ -1,5 +1,6 @@
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
+import { homeTechTopics } from './src/data/site-taxonomy.mjs';
 
 export default defineConfig({
   site: 'https://howbiscuit.com',
@@ -7,7 +8,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'How Biscuit',
-      description: 'Plain answers, useful next moves, and honest limits for everyday questions.',
+      description: 'Practical guides for home technology, cooking, repairs, and buying decisions.',
       customCss: ['./src/styles/biscuit.css'],
       credits: false,
       components: {
@@ -22,20 +23,25 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Ways in',
+          label: 'Main sections',
           items: [
-            { label: 'Start Here', slug: '' },
-            { label: 'All Answers', slug: 'articles' },
-            { label: 'Work It Out', slug: 'math' },
-            { label: 'Find It + Say It', slug: 'research-writing' },
-            { label: 'Fix Dinner', slug: 'cook' },
-            { label: 'Un-Haunt the House', slug: 'home-tech' },
-            { label: 'Make It Work', slug: 'make-do' },
-            { label: 'Use a Tool', slug: 'tools' },
+            { label: 'Home', slug: '' },
+            { label: 'All Articles', slug: 'articles' },
+            { label: 'Cooking', slug: 'cook' },
+            { label: 'Home & DIY', slug: 'make-do' },
+            { label: 'Buying Guides', slug: 'buying-guides' },
+            { label: 'Tools & Calculators', slug: 'tools' },
           ],
         },
         {
-          label: 'Articles',
+          label: 'Home Tech',
+          items: [
+            { label: 'Home Tech Overview', slug: 'home-tech' },
+            ...homeTechTopics.map(({ label, slug }) => ({ label, slug })),
+          ],
+        },
+        {
+          label: 'Latest articles',
           items: [
             {
               label: 'How Does Baking Powder Work?',
@@ -45,14 +51,6 @@ export default defineConfig({
               label: 'Why Are Some Answers Better Than Others?',
               slug: 'articles/why-are-some-answers-better-than-others',
             },
-          ],
-        },
-        {
-          label: 'More',
-          items: [
-            { label: 'Buying Guides', slug: 'buying-guides' },
-            { label: 'Everyday Science', slug: 'science' },
-            { label: 'Glossary', slug: 'glossary' },
           ],
         },
         {
@@ -89,7 +87,7 @@ export default defineConfig({
         },
         {
           tag: 'meta',
-          attrs: { property: 'og:image:alt', content: 'How Biscuit — Plain answers. No sludge.' },
+          attrs: { property: 'og:image:alt', content: 'How Biscuit practical guides and troubleshooting.' },
         },
         {
           tag: 'meta',

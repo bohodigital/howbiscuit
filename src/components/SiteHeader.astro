@@ -1,28 +1,29 @@
 ---
 import Search from '@astrojs/starlight/components/Search.astro';
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import { homeTechTopics } from '../data/site-taxonomy.mjs';
 ---
 
 <div class="hb-site-header">
   <a class="hb-brand" href="/" aria-label="How Biscuit home">
-    <span>HOW BISCUIT</span><b>?</b><i>Field Guide</i>
+    <span>HOW BISCUIT</span><b>?</b><i>Practical guides</i>
   </a>
   <nav class="hb-reader-nav" aria-label="How Biscuit navigation">
-    <a class="hb-nav-link" href="/articles/">Field guides</a>
-    <a class="hb-nav-link hb-nav-panic" href="/#what-broke">What broke?</a>
-    <a class="hb-nav-link" href="/#fresh-answers">Fresh answers</a>
-    <a class="hb-nav-link" href="/#house-method">How we answer</a>
+    <a class="hb-nav-link" href="/articles/">All Articles</a>
     <details class="hb-explore">
-      <summary>Explore <span>+</span></summary>
+      <summary>Home Tech <span aria-hidden="true">⌄</span></summary>
       <div class="hb-explore-panel">
-        <a href="/math/"><b>01</b><span>Work it out<small>Examples, logic, numbers</small></span></a>
-        <a href="/research-writing/"><b>02</b><span>Find it + say it<small>Sources, claims, citations</small></span></a>
-        <a href="/cook/"><b>03</b><span>Fix dinner<small>Food science that behaves</small></span></a>
-        <a href="/home-tech/"><b>04</b><span>Un-haunt the house<small>Wi-Fi and small tech</small></span></a>
-        <a href="/make-do/"><b>05</b><span>Make it work<small>Cheap, safe, practical</small></span></a>
-        <a href="/tools/"><b>06</b><span>Use a tool<small>Calculators without bluffing</small></span></a>
+        <a class="hb-explore-overview" href="/home-tech/">
+          <span>Home Tech Overview<small>Browse every home technology section</small></span>
+        </a>
+        {homeTechTopics.map((topic) => (
+          <a href={topic.href}><span>{topic.label}<small>{topic.description}</small></span></a>
+        ))}
       </div>
     </details>
+    <a class="hb-nav-link" href="/cook/">Cooking</a>
+    <a class="hb-nav-link" href="/make-do/">Home & DIY</a>
+    <a class="hb-nav-link" href="/buying-guides/">Buying Guides</a>
   </nav>
   <div class="hb-header-tools">
     <Search />

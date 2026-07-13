@@ -10,33 +10,33 @@ const division = data.division ?? '';
 const isArticle = data.kind === 'article';
 const isDivision = data.kind === 'division';
 const labels: Record<string, string> = {
-  cook: 'Cooking + food science',
-  'research-writing': 'Research + writing',
+  cook: 'Cooking',
+  'research-writing': 'Research & Writing',
   math: 'Math',
-  'home-tech': 'Home tech',
-  'make-do': 'Make-Do Lab',
-  science: 'Everyday science',
+  'home-tech': 'Home Tech',
+  'make-do': 'Home & DIY',
+  science: 'Science',
 };
 ---
 
 {isArticle ? (
   <header class="hb-article-title">
-    <a class="hb-back-link" href="/articles/">← All field guides</a>
+    <a class="hb-back-link" href="/articles/">← All articles</a>
     <div class="hb-article-labels">
-      <span class="hb-topic-label">{labels[division] ?? 'Field guide'}</span>
+      <span class="hb-topic-label">{labels[division] ?? 'Guide'}</span>
       <span class="hb-evidence-label">{data.evidence ?? 'Researched'}</span>
     </div>
     <h1 id="_top">{data.title}</h1>
     <p>{data.description}</p>
     <div class="hb-article-meta">
-      <span>How Biscuit field guide</span>
+      <span>How Biscuit guide</span>
       <span>Updated {data.updatedDate ?? data.lastUpdated}</span>
       <span>{data.readTime ?? '6 min read'}</span>
     </div>
   </header>
 ) : isDivision ? (
   <header class="hb-hub-title" data-division={division || 'articles'}>
-    <span>Biscuit field guide / {labels[division] ?? 'Library'}</span>
+    <span>{labels[division] ?? 'How Biscuit'} section</span>
     <h1 id="_top">{data.title}</h1>
     <p>{data.description}</p>
   </header>

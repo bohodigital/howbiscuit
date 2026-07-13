@@ -6,21 +6,23 @@ const isHomepage = Astro.locals.starlightRoute.id === '';
 {isHomepage ? (
   <section class="hb-home-hero">
     <div class="hb-hero-copy">
-      <p class="hb-kicker"><span>THE BISCUIT FIELD GUIDE</span><i>Est. for people with questions</i></p>
-      <h1 id="_top">Plain answers.<br /><em>No sludge.</em></h1>
-      <p class="hb-hero-dek">For the questions that can waste an afternoon. Get the short answer first, then the reason, the next move, and the honest limits.</p>
+      <p class="hb-kicker"><span>PRACTICAL HOW-TO GUIDES</span><i>Clear steps, costs, and limits</i></p>
+      <h1 id="_top">Fix it.<br /><em>Choose better.</em></h1>
+      <p class="hb-hero-dek">Step-by-step help for Wi-Fi, computers, smart homes, cooking, repairs, and buying decisions. Start with the answer, then follow the checks that apply to you.</p>
       <div class="hb-hero-actions">
-        <a class="hb-button hb-button-primary" href="/articles/">Find an answer <span>→</span></a>
-        <a class="hb-button hb-button-secondary" href="/#house-method">See how we answer</a>
+        <a class="hb-button hb-button-primary" href="/home-tech/">Browse Home Tech <span>→</span></a>
+        <a class="hb-button hb-button-secondary" href="/articles/">View all articles</a>
       </div>
     </div>
-    <div class="hb-hero-board" aria-label="How Biscuit answer method">
-      <div class="hb-board-card hb-board-answer"><span>01</span><b>THE ANSWER</b><p>First. Where it belongs.</p></div>
-      <div class="hb-board-card hb-board-why"><span>02</span><b>WHY IT WORKS</b><p>Mechanism, minus the fog.</p></div>
-      <div class="hb-board-card hb-board-fix"><span>03</span><b>THE MOVE</b><p>Do this next.</p></div>
-      <div class="hb-board-card hb-board-cheap"><span>04</span><b>CHEAP + SAFE</b><p>Budget is a real constraint.</p></div>
-      <div class="hb-board-stamp">THOROUGHLY<br />DE-SLUDGED</div>
-    </div>
+    <aside class="hb-guide-standard" aria-label="What How Biscuit guides include">
+      <h2>Every guide should tell you:</h2>
+      <ol>
+        <li><b>What to do first</b><span>The safest useful step before you change settings or spend money.</span></li>
+        <li><b>What to check</b><span>A short diagnostic order so you can identify the actual problem.</span></li>
+        <li><b>How to fix it</b><span>Plain steps, expected results, and lower-cost alternatives.</span></li>
+        <li><b>When to stop</b><span>Clear limits for safety, warranties, rentals, and professional help.</span></li>
+      </ol>
+    </aside>
   </section>
 ) : (
   <Default><slot /></Default>
