@@ -1,0 +1,20 @@
+---
+const { number, kicker, title, href, description, cta, accent = 'honey' } = Astro.props as {
+  number: string;
+  kicker: string;
+  title: string;
+  href: string;
+  description: string;
+  cta: string;
+  accent?: string;
+};
+---
+
+<a class="hb-path-card" data-accent={accent} href={href}>
+  <div class="hb-path-card-top"><span>{number}</span><b>{kicker}</b></div>
+  <div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+  <span class="hb-card-link">{cta} <b>↗</b></span>
+</a>
