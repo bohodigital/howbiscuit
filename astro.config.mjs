@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'How Biscuit',
-      description: 'Plain answers for school, cooking, home tech, and making do.',
+      description: 'Plain answers, useful next moves, and honest limits for everyday questions.',
       customCss: ['./src/styles/biscuit.css'],
       credits: false,
       components: {
@@ -15,22 +15,23 @@ export default defineConfig({
         Footer: './src/components/SiteFooter.astro',
         Hero: './src/components/HomeHero.astro',
         PageTitle: './src/components/FieldGuideTitle.astro',
+        PageFrame: './src/components/PersistentPageFrame.astro',
       },
       editLink: {
         baseUrl: 'https://github.com/bohodigital/howbiscuit/edit/main/',
       },
       sidebar: [
         {
-          label: 'Biscuit Field Guide',
+          label: 'Ways in',
           items: [
             { label: 'Start Here', slug: '' },
-            { label: 'Articles', slug: 'articles' },
-            { label: 'Math', slug: 'math' },
-            { label: 'Research & Writing', slug: 'research-writing' },
-            { label: 'Cooking', slug: 'cook' },
-            { label: 'Home Tech', slug: 'home-tech' },
-            { label: 'Make-Do Lab', slug: 'make-do' },
-            { label: 'Tools', slug: 'tools' },
+            { label: 'All Answers', slug: 'articles' },
+            { label: 'Work It Out', slug: 'math' },
+            { label: 'Find It + Say It', slug: 'research-writing' },
+            { label: 'Fix Dinner', slug: 'cook' },
+            { label: 'Un-Haunt the House', slug: 'home-tech' },
+            { label: 'Make It Work', slug: 'make-do' },
+            { label: 'Use a Tool', slug: 'tools' },
           ],
         },
         {

@@ -1,0 +1,86 @@
+<starlight-menu-button class="print:hidden">
+  <button
+    aria-expanded="false"
+    aria-label={Astro.locals.t('menuButton.accessibleLabel')}
+    aria-controls="starlight__sidebar"
+    class="sl-flex md:sl-hidden"
+  >
+    <span class="open-menu hb-menu-glyph" aria-hidden="true">☰</span>
+    <span class="close-menu hb-menu-glyph" aria-hidden="true">×</span>
+    <span class="open-menu">Biscuit Index</span>
+    <span class="close-menu">Close Index</span>
+  </button>
+</starlight-menu-button>
+
+<script>
+  class StarlightMenuButton extends HTMLElement {
+    btn = this.querySelector('button')!;
+
+    constructor() {
+      super();
+      this.btn.addEventListener('click', () => this.toggleExpanded());
+      const parentNav = this.closest('nav');
+      if (parentNav) parentNav.addEventListener('keyup', (event) => this.closeOnEscape(event));
+    }
+
+    setExpanded(expanded: boolean) {
+      this.setAttribute('aria-expanded', String(expanded));
+      this.btn.setAttribute('aria-expanded', String(expanded));
+      document.body.toggleAttribute('data-mobile-menu-expanded', expanded);
+    }
+
+    toggleExpanded() {
+      this.setExpanded(this.getAttribute('aria-expanded') !== 'true');
+    }
+
+    closeOnEscape(event: KeyboardEvent) {
+      if (event.code === 'Escape') {
+        this.setExpanded(false);
+        this.btn.focus();
+      }
+    }
+  }
+
+  if (!customElements.get('starlight-menu-button')) {
+    customElements.define('starlight-menu-button', StarlightMenuButton);
+  }
+</script>
+
+<style>
+  @layer starlight.core {
+    button {
+      position: fixed;
+      z-index: calc(var(--sl-z-index-menu) + 1);
+      right: 1rem;
+      bottom: 1rem;
+      align-items: center;
+      gap: 0.5rem;
+      min-height: 2.8rem;
+      border: 2px solid var(--hb-ink);
+      border-radius: 999px;
+      padding: 0.65rem 0.9rem;
+      background: var(--hb-honey);
+      color: #142432;
+      box-shadow: 4px 4px 0 var(--hb-ink);
+      cursor: pointer;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hb-menu-glyph { font-size: 1rem; line-height: 1; }
+    [aria-expanded='true'] button { background: var(--hb-tomato); }
+    [aria-expanded='true'] button .open-menu { display: none; }
+    :not([aria-expanded='true']) button .close-menu { display: none; }
+  }
+</style>
+
+<style is:global>
+  @layer starlight.core {
+    [data-mobile-menu-expanded] { overflow: hidden; }
+    @media (min-width: 50rem) {
+      [data-mobile-menu-expanded] { overflow: auto; }
+    }
+  }
+</style>
