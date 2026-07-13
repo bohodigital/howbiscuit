@@ -5,15 +5,24 @@ import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
 
 <div class="hb-site-header">
   <a class="hb-brand" href="/" aria-label="How Biscuit home">
-    <span>HOW BISCUIT</span><b>?</b>
+    <span>HOW BISCUIT</span><b>?</b><i>Field Guide</i>
   </a>
-  <nav class="hb-topics" aria-label="Main sections">
-    <a href="/math/">Math</a>
-    <a href="/research-writing/">Writing</a>
-    <a href="/cook/">Cooking</a>
-    <a href="/home-tech/">Home Tech</a>
-    <a href="/make-do/">Make-Do</a>
-    <a href="/tools/">Tools</a>
+  <nav class="hb-reader-nav" aria-label="How Biscuit navigation">
+    <a class="hb-nav-link" href="/articles/">Field guides</a>
+    <a class="hb-nav-link hb-nav-panic" href="/#what-broke">What broke?</a>
+    <a class="hb-nav-link" href="/#fresh-answers">Fresh answers</a>
+    <a class="hb-nav-link" href="/#house-method">How we answer</a>
+    <details class="hb-explore">
+      <summary>Explore <span>+</span></summary>
+      <div class="hb-explore-panel">
+        <a href="/math/"><b>01</b><span>Math<small>Work it through</small></span></a>
+        <a href="/research-writing/"><b>02</b><span>Research + Writing<small>Find it. Say it clearly.</small></span></a>
+        <a href="/cook/"><b>03</b><span>Cooking<small>Fix dinner with science</small></span></a>
+        <a href="/home-tech/"><b>04</b><span>Home Tech<small>Un-haunt the Wi-Fi</small></span></a>
+        <a href="/make-do/"><b>05</b><span>Make-Do Lab<small>Cheap, safe, workable</small></span></a>
+        <a href="/tools/"><b>06</b><span>Tools<small>Calculators without bluffing</small></span></a>
+      </div>
+    </details>
   </nav>
   <div class="hb-header-tools">
     <Search />
