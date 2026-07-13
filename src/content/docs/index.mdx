@@ -1,37 +1,35 @@
 ---
 title: How Biscuit
-description: Plain answers for school, cooking, home tech, and making do.
+description: Plain answers, useful next moves, and honest limits for everyday questions.
 kind: home
 template: splash
 hero:
-  tagline: Plain answers for school, cooking, home tech, and making do.
+  tagline: Plain answers, useful next moves, and honest limits for everyday questions.
 ---
 
-import TopicCard from '../../components/TopicCard.astro';
+import PathCard from '../../components/PathCard.astro';
 import GuideCard from '../../components/GuideCard.astro';
 
-<section class="hb-home-section hb-topics-section">
+<section class="hb-home-section hb-paths-section">
   <div class="hb-section-heading">
-    <div><span>Pick your problem</span><h2>Six ways out of the fog</h2></div>
-    <p>No endless category maze. Start with what is currently annoying you.</p>
+    <div><span>Choose your route</span><h2>Start with what you need</h2></div>
+    <p>No subject maze. Pick the kind of help you want and get moving.</p>
   </div>
-  <div class="hb-topic-grid">
-    <TopicCard number="01" symbol="√" title="Math" href="/math/" accent="mint" description="Worked examples, common mistakes, and the concepts your textbook sprinted past." />
-    <TopicCard number="02" symbol="¶" title="Research + Writing" href="/research-writing/" accent="lilac" description="Find real sources, build an argument, cite honestly, and keep your own voice." />
-    <TopicCard number="03" symbol="°" title="Cooking" href="/cook/" accent="tomato" description="Kitchen science, cheap staples, substitutions, and why dinner did that weird thing." />
-    <TopicCard number="04" symbol="⌁" title="Home Tech" href="/home-tech/" accent="blue" description="Wi-Fi, routers, settings, troubleshooting, and defaults that are actually safe." />
-    <TopicCard number="05" symbol="↺" title="Make-Do Lab" href="/make-do/" accent="mint" description="Cheap apartment fixes with cost ranges, safety bands, and a clear point to stop." />
-    <TopicCard number="06" symbol="+" title="Tools" href="/tools/" accent="honey" description="Small calculators and checklists that show their assumptions instead of bluffing." />
+  <div class="hb-path-grid">
+    <PathCard number="01" kicker="Two-minute route" title="Just give me the answer" href="/articles/" accent="honey" description="Start with the useful sentence. Keep reading only if you want the why." cta="See the answers" />
+    <PathCard number="02" kicker="Understand it" title="Show me why it works" href="/#house-method" accent="lilac" description="Get the mechanism without a lecture or a pile of unexplained rules." cta="See the method" />
+    <PathCard number="03" kicker="Troubleshoot it" title="Something is not working" href="/#what-broke" accent="tomato" description="Start from the symptom, find the likely cause, and take the safest next step." cta="Name the mess" />
+    <PathCard number="04" kicker="Use it" title="I need a practical tool" href="/tools/" accent="mint" description="Use a calculator or checklist that shows its assumptions instead of bluffing." cta="Open the toolbox" />
   </div>
 </section>
 
 <section class="hb-panic-strip" id="what-broke">
-  <p>WHAT BROKE?</p>
+  <p>WHAT ARE YOU TRYING TO DO?</p>
   <div>
-    <a href="/math/"><span>I have homework panic</span><b>Go to Math →</b></a>
-    <a href="/cook/"><span>Dinner is behaving badly</span><b>Go to Cooking →</b></a>
-    <a href="/home-tech/"><span>The Wi-Fi is haunted</span><b>Go to Home Tech →</b></a>
-    <a href="/make-do/"><span>My budget said absolutely not</span><b>Go to Make-Do →</b></a>
+    <a href="/math/"><span>Check my reasoning or calculation</span><b>Work it through →</b></a>
+    <a href="/research-writing/"><span>Make a claim that holds up</span><b>Build it clearly →</b></a>
+    <a href="/home-tech/"><span>Troubleshoot something at home</span><b>Find the likely cause →</b></a>
+    <a href="/make-do/"><span>Make the cheap version work safely</span><b>Find a workaround →</b></a>
   </div>
 </section>
 
@@ -41,8 +39,8 @@ import GuideCard from '../../components/GuideCard.astro';
     <a class="hb-text-link" href="/articles/">All field guides →</a>
   </div>
   <div class="hb-guide-grid">
-    <GuideCard label="Cooking + food science" title="How does baking powder work?" description="The acid, the base, the bubbles—and why your old can may be doing absolutely nothing." href="/articles/how-does-baking-powder-work/" accent="tomato" meta="7 min · Researched" />
-    <GuideCard label="Research + writing" title="Why are some answers better than others?" description="A practical test for clarity, evidence, useful next steps, and suspicious confidence." href="/articles/why-are-some-answers-better-than-others/" accent="lilac" meta="6 min · Editorial standard" />
+    <GuideCard label="Kitchen science" title="How does baking powder work?" description="The acid, the base, the bubbles—and why your old can may be doing absolutely nothing." href="/articles/how-does-baking-powder-work/" accent="tomato" meta="7 min · Researched" />
+    <GuideCard label="How we judge an answer" title="Why are some answers better than others?" description="A practical test for clarity, evidence, useful next steps, and suspicious confidence." href="/articles/why-are-some-answers-better-than-others/" accent="lilac" meta="6 min · Editorial standard" />
   </div>
 </section>
 
