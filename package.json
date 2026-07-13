@@ -16,8 +16,9 @@
     "check": "astro check",
     "test:calculators": "node --test test/*.test.mjs",
     "tax:data:sync": "python3 scripts/tax-data/sync_free_tax_data.py",
+    "verify:tax-locations": "node scripts/verify-tax-location-build.mjs",
     "lint:content": "node scripts/lint-content.mjs",
-    "qa": "npm run test:calculators && npm run build && node scripts/lint-content.mjs"
+    "qa": "npm run test:calculators && npm run build && node scripts/lint-content.mjs && npm run verify:tax-locations"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

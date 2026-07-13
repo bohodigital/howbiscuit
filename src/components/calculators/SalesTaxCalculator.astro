@@ -1,8 +1,83 @@
 ---
 import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
+
+interface LandingPreset {
+  kind: 'state' | 'metro';
+  slug: string;
+  label: string;
+  stateCode: string;
+  postalCode?: string;
+  presetId?: string;
+  autoLookup?: boolean;
+}
+
+interface Props {
+  landing?: LandingPreset;
+}
+
+interface InitialRateComponent {
+  id: string;
+  label: string;
+  rate: number;
+}
+
+interface InitialTaxPreset {
+  label: string;
+  stateCode: string;
+  percentageComponents: InitialRateComponent[];
+  unitTax?: number;
+  unitLabel?: string;
+  unitTaxIncluded?: boolean;
+  note: string;
+}
+
+const { landing } = Astro.props;
+const initialPresetMap = taxPresets as Record<string, InitialTaxPreset>;
+const initialPresetId = landing?.presetId && initialPresetMap[landing.presetId]
+  ? landing.presetId
+  : landing
+    ? 'custom'
+    : 'nyc-general';
+const initialPreset = initialPresetMap[initialPresetId];
+const initialStateCode = initialPreset?.stateCode ?? landing?.stateCode ?? 'NY';
+const initialState = stateTaxRates.find(({ code }) => code === initialStateCode) ?? stateTaxRates[0];
+const initialComponents: InitialRateComponent[] = initialPreset?.percentageComponents ?? [
+  { id: 'state', label: initialState.name, rate: initialState.stateRate },
+];
+const initialComponent = (id: string) => initialComponents.find((component) => component.id === id);
+const initialProduct = initialPresetId.startsWith('nyc-')
+  ? ({
+      'nyc-general': 'general',
+      'nyc-groceries': 'groceries',
+      'nyc-cannabis': 'cannabis',
+      'nyc-alcohol': 'alcohol',
+      'nyc-beer': 'alcohol',
+      'nyc-liquor': 'alcohol',
+      'nyc-cigarettes': 'cigarettes',
+      'nyc-vapor': 'nicotine',
+    }[initialPresetId] ?? 'general')
+  : 'general';
+const initialNote = initialPreset?.note ?? `${initialState.name} state base rate loaded. Add the local and product-specific rates that apply.`;
+const initialStatus = landing
+  ? `${landing.label} preset loaded${landing.postalCode ? ` with ZIP ${landing.postalCode}` : ''}. Change any input to continue in the full calculator.`
+  : 'NYC general merchandise preset. Enter a street address and ZIP for the most accurate local rate.';
+const initialPercentageTax = initialComponents.reduce((sum, component) => sum + component.rate, 0);
+const initialCheckoutUnitTax = initialPreset?.unitTaxIncluded ? 0 : (initialPreset?.unitTax ?? 0);
+const initialEmbeddedTax = initialPreset?.unitTaxIncluded ? (initialPreset?.unitTax ?? 0) : 0;
+const initialTaxAdded = initialPercentageTax + initialCheckoutUnitTax;
+const initialCheckoutTotal = 100 + initialTaxAdded;
+const initialMoney = (value: number) => `$${value.toFixed(2)}`;
 ---
 
-<form class="hb-calculator hb-tax-calculator" data-sales-tax-calculator>
+<form
+  class="hb-calculator hb-tax-calculator"
+  data-sales-tax-calculator
+  data-location-landing={landing ? 'true' : undefined}
+  data-landing-state={landing?.stateCode}
+  data-landing-zip={landing?.postalCode}
+  data-landing-preset={initialPresetId}
+  data-landing-auto-lookup={landing?.autoLookup ? 'true' : undefined}
+>
   <div class="hb-calculator-head">
     <div>
       <span class="hb-calc-kicker">Sales & special taxes</span>
@@ -33,13 +108,13 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
     <label class="hb-field">
       <span>Product type</span>
       <select name="product">
-        <option value="general">General merchandise</option>
-        <option value="groceries">Groceries</option>
-        <option value="alcohol">Alcohol</option>
-        <option value="cigarettes">Cigarettes</option>
-        <option value="nicotine">Other nicotine / vape</option>
-        <option value="cannabis">Adult-use cannabis</option>
-        <option value="custom">Custom</option>
+        <option value="general" selected={initialProduct === 'general'}>General merchandise</option>
+        <option value="groceries" selected={initialProduct === 'groceries'}>Groceries</option>
+        <option value="alcohol" selected={initialProduct === 'alcohol'}>Alcohol</option>
+        <option value="cigarettes" selected={initialProduct === 'cigarettes'}>Cigarettes</option>
+        <option value="nicotine" selected={initialProduct === 'nicotine'}>Other nicotine / vape</option>
+        <option value="cannabis" selected={initialProduct === 'cannabis'}>Adult-use cannabis</option>
+        <option value="custom" selected={initialProduct === 'custom'}>Custom</option>
       </select>
     </label>
   </div>
@@ -48,13 +123,13 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
     <label class="hb-field">
       <span>Verified preset</span>
       <select name="preset">
-        <option value="custom">State + my own local rates</option>
+        <option value="custom" selected={initialPresetId === 'custom'}>State + my own local rates</option>
         {Object.entries(taxPresets).map(([id, preset]) => (
-          <option value={id} selected={id === 'nyc-general'}>{preset.label}</option>
+          <option value={id} selected={id === initialPresetId}>{preset.label}</option>
         ))}
       </select>
     </label>
-    <p data-preset-note>{taxPresets['nyc-general'].note}</p>
+    <p data-preset-note>{initialNote}</p>
   </div>
 
   <div class="hb-location-strip hb-tax-location-strip">
@@ -64,14 +139,14 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
     </label>
     <label class="hb-field">
       <span>ZIP code</span>
-      <input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" />
+      <input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" value={landing?.postalCode ?? ''} />
     </label>
     <button class="hb-calc-button hb-calc-button-secondary" type="button" data-tax-auto-locate>Use my area</button>
     <button class="hb-calc-button" type="button" data-tax-zip-lookup>Load local rates</button>
     <label class="hb-field hb-location-state">
       <span>State fallback</span>
       <select name="state">
-        {stateTaxRates.map(({ code, name }) => <option value={code} selected={code === 'NY'}>{name}</option>)}
+        {stateTaxRates.map(({ code, name }) => <option value={code} selected={code === initialStateCode}>{name}</option>)}
       </select>
     </label>
   </div>
@@ -81,39 +156,45 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
       <select name="taxMatch"><option value="">Choose the matching city</option></select>
     </label>
   </div>
-  <p class="hb-calc-status" data-tax-location-status aria-live="polite">NYC general merchandise preset. Enter a street address and ZIP for the most accurate local rate.</p>
+  <p class="hb-calc-status" data-tax-location-status aria-live="polite">{initialStatus}</p>
 
   <fieldset class="hb-rate-fieldset">
     <legend>Tax rates</legend>
     <div class="hb-calc-grid hb-rate-grid">
-      <label class="hb-field"><span data-label-state>State</span><span class="hb-input-suffix"><input name="stateRate" type="number" min="0" step="any" value="4" inputmode="decimal" /><b>%</b></span></label>
-      <label class="hb-field"><span data-label-county>County</span><span class="hb-input-suffix"><input name="countyRate" type="number" min="0" step="any" value="0" inputmode="decimal" /><b>%</b></span></label>
-      <label class="hb-field"><span data-label-city>City / municipal</span><span class="hb-input-suffix"><input name="cityRate" type="number" min="0" step="any" value="4.5" inputmode="decimal" /><b>%</b></span></label>
-      <label class="hb-field"><span data-label-district>Special district</span><span class="hb-input-suffix"><input name="districtRate" type="number" min="0" step="any" value="0.375" inputmode="decimal" /><b>%</b></span></label>
-      <label class="hb-field"><span data-label-product>Product tax</span><span class="hb-input-suffix"><input name="productRate" type="number" min="0" step="any" value="0" inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span data-label-state>{initialComponent('state')?.label ?? 'State'}</span><span class="hb-input-suffix"><input name="stateRate" type="number" min="0" step="any" value={initialComponent('state')?.rate ?? 0} inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span data-label-county>{initialComponent('county')?.label ?? 'County'}</span><span class="hb-input-suffix"><input name="countyRate" type="number" min="0" step="any" value={initialComponent('county')?.rate ?? 0} inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span data-label-city>{initialComponent('city')?.label ?? 'City / municipal'}</span><span class="hb-input-suffix"><input name="cityRate" type="number" min="0" step="any" value={initialComponent('city')?.rate ?? 0} inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span data-label-district>{initialComponent('district')?.label ?? 'Special district'}</span><span class="hb-input-suffix"><input name="districtRate" type="number" min="0" step="any" value={initialComponent('district')?.rate ?? 0} inputmode="decimal" /><b>%</b></span></label>
+      <label class="hb-field"><span data-label-product>{initialComponent('product')?.label ?? 'Product tax'}</span><span class="hb-input-suffix"><input name="productRate" type="number" min="0" step="any" value={initialComponent('product')?.rate ?? 0} inputmode="decimal" /><b>%</b></span></label>
     </div>
   </fieldset>
 
   <fieldset class="hb-unit-tax-fieldset">
     <legend>Per-unit tax, if any</legend>
     <div class="hb-unit-tax-row">
-      <label class="hb-field"><span>Tax per unit</span><span class="hb-input-prefix"><b>$</b><input name="unitTax" type="number" min="0" step="any" value="0" inputmode="decimal" /></span></label>
-      <label class="hb-field"><span data-unit-count-label>Units</span><input name="units" type="number" min="0" step="any" value="1" inputmode="decimal" /></label>
-      <label class="hb-check-field"><input name="unitIncluded" type="checkbox" /> <span>Already in sticker price</span></label>
+      <label class="hb-field"><span>Tax per unit</span><span class="hb-input-prefix"><b>$</b><input name="unitTax" type="number" min="0" step="any" value={initialPreset?.unitTax ?? 0} inputmode="decimal" /></span></label>
+      <label class="hb-field"><span data-unit-count-label>{initialPreset?.unitLabel ?? 'Units'}</span><input name="units" type="number" min="0" step="any" value="1" inputmode="decimal" /></label>
+      <label class="hb-check-field"><input name="unitIncluded" type="checkbox" checked={Boolean(initialPreset?.unitTaxIncluded)} /> <span>Already in sticker price</span></label>
     </div>
   </fieldset>
 
   <output class="hb-tax-output" aria-live="polite">
     <div class="hb-tax-answer">
       <small data-answer-label>Checkout total</small>
-      <strong data-answer>$108.88</strong>
+      <strong data-answer>{initialMoney(initialCheckoutTotal)}</strong>
       <span data-answer-period>this purchase</span>
     </div>
     <div class="hb-tax-breakdown">
       <h3>Itemized</h3>
-      <ul data-tax-breakdown></ul>
-      <p><span data-secondary-label>Tax added</span><strong data-secondary>$8.88</strong></p>
-      <p data-embedded-row hidden><span>Tax already in price</span><strong data-embedded>$0.00</strong></p>
+      <ul data-tax-breakdown>
+        {initialComponents.filter(({ rate }) => rate > 0).map(({ label, rate }) => (
+          <li><span>{label} ({rate}%)</span><strong>{initialMoney(rate)}</strong></li>
+        ))}
+        {initialCheckoutUnitTax > 0 && <li><span>Per-unit tax</span><strong>{initialMoney(initialCheckoutUnitTax)}</strong></li>}
+        {initialTaxAdded === 0 && <li>No tax added with these inputs.</li>}
+      </ul>
+      <p><span data-secondary-label>Tax added</span><strong data-secondary>{initialMoney(initialTaxAdded)}</strong></p>
+      <p data-embedded-row hidden={initialEmbeddedTax <= 0}><span>Tax already in price</span><strong data-embedded>{initialMoney(initialEmbeddedTax)}</strong></p>
     </div>
   </output>
   <p class="hb-calc-note">Locations go through How Biscuit's Cloudflare gateway. “Use my area” reads Cloudflare's approximate postal metadata without sending your IP to another lookup service. Official snapshots live in our database; the Census Bureau may receive street addresses, while Zippopotam and CDC receive ZIP or state lookups. Exact-address responses are not cached, but public providers may retain request logs. <a href="/api/tax-data/coverage">See source coverage</a>. This remains a budgeting estimate.</p>
@@ -121,6 +202,7 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
 
 <script>
   import { calculateSalesTax, solvePretaxBudget } from '../../lib/calculators/costs.mjs';
+  import { buildCanonicalTaxCalculatorUrl, parseTaxCalculatorQuery } from '../../lib/calculators/tax-location-navigation.mjs';
   import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
 
   const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
@@ -392,7 +474,8 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
         });
       });
       const lookupButton = form.querySelector<HTMLButtonElement>('[data-tax-zip-lookup]')!;
-      form.querySelector<HTMLButtonElement>('[data-tax-auto-locate]')!.addEventListener('click', async () => {
+      const autoLocateButton = form.querySelector<HTMLButtonElement>('[data-tax-auto-locate]')!;
+      autoLocateButton.addEventListener('click', async () => {
         locationStatus.textContent = 'Finding your approximate area…';
         try {
           const response = await fetch('/api/tax-data/locate', { headers: { Accept: 'application/json' } });
@@ -450,7 +533,74 @@ import { stateTaxRates, taxPresets } from '../../lib/calculators/us-data.mjs';
       form.addEventListener('input', render);
       form.addEventListener('change', render);
       form.addEventListener('submit', (event) => event.preventDefault());
-      loadPreset('nyc-general');
+
+      const isLocationLanding = form.dataset.locationLanding === 'true';
+      const initialState = form.dataset.landingState ?? '';
+      const initialZip = form.dataset.landingZip ?? '';
+      const initialPreset = form.dataset.landingPreset ?? '';
+      const initialAutoLookup = form.dataset.landingAutoLookup === 'true';
+
+      if (isLocationLanding) {
+        let handingOff = false;
+        const handoff = (event: Event) => {
+          if (!event.isTrusted || handingOff) return;
+          const target = event.target;
+          if (!(target instanceof HTMLInputElement || target instanceof HTMLSelectElement || target instanceof HTMLButtonElement)) return;
+          handingOff = true;
+          const focus = target.name || '';
+          const action = target.matches('[data-tax-auto-locate]')
+            ? 'locate'
+            : target.matches('[data-tax-zip-lookup]')
+              ? 'lookup'
+              : '';
+          const destination = buildCanonicalTaxCalculatorUrl({
+            stateCode: initialState,
+            postalCode: initialZip,
+            presetId: initialPreset || 'custom',
+            autoLookup: action ? false : initialAutoLookup,
+            focus,
+            action,
+          });
+          window.location.replace(destination);
+        };
+        form.addEventListener('focusin', handoff, { capture: true });
+        form.addEventListener('pointerdown', handoff, { capture: true });
+        if (initialState) state.value = initialState;
+        if (initialZip) zip.value = initialZip;
+        preset.value = initialPreset || 'custom';
+        loadPreset(preset.value);
+        if (initialAutoLookup && /^\d{5}$/.test(initialZip)) {
+          window.setTimeout(() => lookupButton.click(), 0);
+        }
+      } else {
+        const query = parseTaxCalculatorQuery(
+          window.location.search,
+          stateTaxRates.map(({ code }) => String(code)),
+          ['custom', ...Object.keys(presetMap)],
+        );
+        const hasTransferredPreset = Boolean(query.stateCode || query.postalCode || query.presetId || query.action);
+        if (query.stateCode) state.value = query.stateCode;
+        if (query.postalCode) zip.value = query.postalCode;
+        const selectedPreset = query.presetId || (query.stateCode ? 'custom' : 'nyc-general');
+        preset.value = selectedPreset;
+        loadPreset(selectedPreset);
+        if (hasTransferredPreset) {
+          history.replaceState(history.state, '', window.location.pathname);
+          if (query.focus) {
+            window.requestAnimationFrame(() => {
+              const target = form.elements.namedItem(query.focus);
+              if (target instanceof HTMLElement) target.focus({ preventScroll: true });
+            });
+          }
+          if (query.action === 'locate') {
+            window.setTimeout(() => autoLocateButton.click(), 0);
+          } else if (query.action === 'lookup') {
+            window.setTimeout(() => lookupButton.click(), 0);
+          } else if (query.autoLookup && /^\d{5}$/.test(query.postalCode)) {
+            window.setTimeout(() => lookupButton.click(), 0);
+          }
+        }
+      }
     });
   }
 

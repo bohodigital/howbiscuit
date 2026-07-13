@@ -888,6 +888,91 @@ header.header::after {
 .hb-tool-card .hb-card-title { color: var(--hb-ink); font-size: 1rem; font-weight: 900; }
 .hb-tool-card .hb-tool-status { width: fit-content; margin-top: auto; border-radius: 999px; padding: 0.2rem 0.45rem; background: var(--hb-mint); color: #142432; font-size: 0.58rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; }
 
+/* Sales-tax location landing pages */
+
+.hb-tax-directory-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin: -1.5rem 0 3.5rem;
+  border: 1.5px solid var(--hb-ink);
+  border-radius: 0.7rem;
+  padding: 1rem 1.1rem;
+  background: var(--hb-paper-deep);
+}
+.hb-tax-directory-callout div,
+.hb-tax-directory-callout span { display: block; }
+.hb-tax-directory-callout strong { color: var(--hb-ink); font-size: 0.85rem; }
+.hb-tax-directory-callout span { margin-top: 0.25rem; color: var(--hb-ink-soft); font-size: 0.72rem; line-height: 1.45; }
+.hb-tax-directory-callout a {
+  flex: 0 0 auto;
+  border: 1.5px solid var(--hb-ink);
+  border-radius: 0.45rem;
+  padding: 0.65rem 0.8rem;
+  background: var(--hb-ink);
+  color: var(--hb-paper) !important;
+  font-size: 0.7rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+.hb-tax-directory-callout a:hover { background: var(--hb-tomato); color: #142432 !important; }
+
+.hb-tax-location-breadcrumb { margin: -0.5rem 0 1.25rem !important; color: var(--hb-ink-soft); font-size: 0.72rem; }
+.hb-tax-location-summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0 0 2rem;
+  border: 1.5px solid var(--hb-ink);
+  border-radius: 0.75rem;
+  padding: 1.15rem 1.25rem;
+  background: var(--hb-honey);
+  color: #142432;
+}
+.hb-tax-location-summary > span { grid-column: 1; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.07em; text-transform: uppercase; }
+.hb-tax-location-summary > strong { grid-column: 1; font-family: Georgia, serif; font-size: 2.6rem; line-height: 1; }
+.hb-tax-location-summary > p { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0; color: #142432; font-size: 0.82rem; line-height: 1.55; }
+.hb-tax-location-page .hb-tax-calculator { margin-top: 1.5rem; }
+.hb-tax-handoff-note { margin: -2.4rem 0 3.5rem !important; color: var(--hb-ink-soft); font-size: 0.72rem; }
+.hb-tax-location-caveat {
+  display: grid;
+  gap: 0.35rem;
+  margin: 2rem 0 3rem;
+  border-left: 0.45rem solid var(--hb-tomato);
+  padding: 1rem 1.1rem;
+  background: var(--hb-paper-deep);
+}
+.hb-tax-location-caveat strong { color: var(--hb-ink); font-size: 0.82rem; }
+.hb-tax-location-caveat span { color: var(--hb-ink-soft); font-size: 0.76rem; line-height: 1.5; }
+.hb-tax-location-links,
+.hb-tax-state-index {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 2rem;
+}
+.hb-tax-location-links a,
+.hb-tax-state-index a {
+  min-width: 0;
+  display: grid;
+  gap: 0.3rem;
+  border: 1px solid color-mix(in srgb, var(--hb-ink), transparent 50%);
+  border-radius: 0.55rem;
+  padding: 0.85rem;
+  background: var(--hb-white);
+  color: var(--hb-ink) !important;
+  text-decoration: none;
+}
+.hb-tax-location-links a:hover,
+.hb-tax-state-index a:hover { border-color: var(--hb-ink); background: var(--hb-honey); color: #142432 !important; }
+.hb-tax-location-links strong,
+.hb-tax-state-index strong { font-size: 0.82rem; line-height: 1.25; }
+.hb-tax-location-links span,
+.hb-tax-state-index span { color: var(--hb-ink-soft); font-size: 0.66rem; line-height: 1.4; }
+.hb-tax-directory-intro { max-width: 46rem; font-size: 1.03rem; }
+.hb-tax-state-index { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
 /* Footer */
 
 .hb-global-footer { margin-top: 4rem; padding: 2rem 0; border-top: 2px solid var(--hb-ink); }
@@ -932,6 +1017,7 @@ header.header::after {
   .hb-result-grid > span:last-child { grid-column: 1 / -1; }
   .hb-mini-calculator-grid { grid-template-columns: 1fr; }
   .hb-tool-list { grid-template-columns: 1fr; }
+  .hb-tax-location-links,.hb-tax-state-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hb-tax-location-strip { grid-template-columns: minmax(12rem, 1fr) minmax(7rem, 0.55fr) auto; }
   .hb-tax-location-strip .hb-location-state { grid-column: 1 / -1; }
 }
@@ -966,4 +1052,9 @@ header.header::after {
   .hb-mini-result { align-items: flex-start; flex-direction: column; }
   .hb-mini-result > span { text-align: left; }
   .hb-mini-result-stack { grid-template-columns: 1fr; }
+  .hb-tax-directory-callout { align-items: stretch; flex-direction: column; }
+  .hb-tax-directory-callout a { width: fit-content; }
+  .hb-tax-location-summary { grid-template-columns: 1fr; }
+  .hb-tax-location-summary > p { grid-column: 1; grid-row: auto; margin-top: 0.5rem; }
+  .hb-tax-location-links,.hb-tax-state-index { grid-template-columns: 1fr; }
 }

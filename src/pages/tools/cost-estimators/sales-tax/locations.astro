@@ -1,0 +1,58 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import {
+  metroTaxPages,
+  stateTaxPages,
+  taxLocationPagePath,
+  taxLocationSource,
+} from '../../../../data/tax-location-pages.mjs';
+
+const rankedMarkets = metroTaxPages
+  .filter(({ censusRank }) => censusRank)
+  .sort((a, b) => Number(a.censusRank) - Number(b.censusRank));
+const otherMarkets = metroTaxPages.filter(({ censusRank }) => !censusRank);
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Sales Tax Calculators by State and City',
+    description: 'Choose a state or major U.S. city to start the How Biscuit sales tax calculator with a useful local preset.',
+    kind: 'division',
+    division: 'tools',
+    editUrl: false,
+  }}
+>
+  <div class="sl-markdown-content hb-tax-directory-page">
+    <p class="hb-tax-directory-intro">Choose a location to load a practical starting point. State pages include the statewide general rate. City pages include a representative ZIP and request the current local lines available from How Biscuit’s public-source gateway.</p>
+
+    <h2 id="major-city-calculators">Major-city sales tax calculators</h2>
+    <div class="hb-tax-location-links hb-tax-location-links-featured">
+      {rankedMarkets.map((market) => (
+        <a href={taxLocationPagePath(market)}>
+          <strong>{market.label}</strong>
+          <span>#{market.censusRank} U.S. city · ZIP {market.postalCode}</span>
+        </a>
+      ))}
+      {otherMarkets.map((market) => (
+        <a href={taxLocationPagePath(market)}>
+          <strong>{market.label}</strong>
+          <span>Representative ZIP {market.postalCode}</span>
+        </a>
+      ))}
+    </div>
+
+    <h2 id="state-calculators">Sales tax calculator for every state</h2>
+    <div class="hb-tax-state-index">
+      {stateTaxPages.map((state) => (
+        <a href={taxLocationPagePath(state)}>
+          <strong>{state.label}</strong>
+          <span>{state.stateRate}% state rate</span>
+        </a>
+      ))}
+    </div>
+
+    <h2 id="how-presets-work">How these presets work</h2>
+    <p>Each page is a useful starting point, not a claim that one rate applies everywhere in a state or ZIP. Local jurisdictions, exemptions, delivery rules, and special product taxes can change the amount. Editing any preset takes you to the single full calculator, where the state, ZIP, product, and rate fields remain editable.</p>
+    <p>State starting rates come from <a href={taxLocationSource.url}>{taxLocationSource.title}</a>, effective {taxLocationSource.effectiveDate}. Major-city selection uses the <a href={taxLocationSource.censusUrl}>{taxLocationSource.censusTitle}</a> plus additional large regional markets.</p>
+  </div>
+</StarlightPage>

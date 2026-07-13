@@ -1,0 +1,111 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import SalesTaxCalculator from '../../../../components/calculators/SalesTaxCalculator.astro';
+import {
+  allTaxLocationPages,
+  canonicalSalesTaxPath,
+  relatedTaxLocationPages,
+  taxLocationDirectoryPath,
+  taxLocationPagePath,
+  taxLocationSource,
+} from '../../../../data/tax-location-pages.mjs';
+
+export function getStaticPaths() {
+  return allTaxLocationPages.map((page) => ({ params: { location: page.slug }, props: { page } }));
+}
+
+const page = Astro.props.page as any;
+const related = relatedTaxLocationPages(page) as any[];
+const rateText = page.stateRate === 0
+  ? 'no statewide general sales tax'
+  : `a ${page.stateRate}% statewide general sales tax rate`;
+const pageUrl = new URL(taxLocationPagePath(page), Astro.site);
+const directoryUrl = new URL(taxLocationDirectoryPath, Astro.site);
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: page.title,
+  description: page.description,
+  url: pageUrl.href,
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Any',
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+};
+const landing = {
+  kind: page.kind,
+  slug: page.slug,
+  label: page.label,
+  stateCode: page.stateCode,
+  postalCode: page.postalCode,
+  presetId: page.presetId,
+  autoLookup: page.autoLookup,
+};
+---
+
+<StarlightPage
+  frontmatter={{
+    title: page.title,
+    description: page.description,
+    kind: 'division',
+    division: 'tools',
+    editUrl: false,
+  }}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />
+
+  <div class="sl-markdown-content hb-tax-location-page">
+    <p class="hb-tax-location-breadcrumb"><a href={directoryUrl.pathname}>State and city calculators</a> / {page.label}</p>
+    <div class="hb-tax-location-summary">
+      <span>{page.kind === 'state' ? 'State preset' : `Representative ZIP ${page.postalCode}`}</span>
+      <strong>{page.stateRate}%</strong>
+      <p>{page.stateName ?? page.label} has {rateText}. Local jurisdictions and special product rules can change what is actually charged.</p>
+    </div>
+
+    <SalesTaxCalculator landing={landing} />
+
+    <p class="hb-tax-handoff-note">This page starts with {page.label} selected. Changing an input continues in the <a href={canonicalSalesTaxPath}>full sales tax calculator</a> so the location page always remains a clean, reusable preset.</p>
+
+    <h2 id={`how-${page.slug}-sales-tax-works`}>How the {page.label} estimate works</h2>
+    {page.kind === 'metro' ? (
+      <>
+        <p>The calculator begins with ZIP <strong>{page.postalCode}</strong> and the {page.stateName} state rate. It then asks How Biscuit's public-data gateway for every matching county, city, and special-district record currently available. If that ZIP crosses tax boundaries, you must choose the jurisdiction that matches the purchase address.</p>
+        <p>A ZIP code is a postal route, not a tax boundary. For a purchase, delivery, or business filing, use the exact address and confirm the result with the relevant tax agency.</p>
+      </>
+    ) : (
+      <>
+        <p>The preset loads the <strong>{page.stateRate}% {page.label} statewide general rate</strong>. It does not silently invent a county or city rate. Enter the purchase ZIP or street address in the full calculator to load a current local breakdown when How Biscuit has an official or public-source record.</p>
+        <p>{page.sourceStrategy === 'streamlined'
+          ? `${page.label} publishes rate or boundary material through the Streamlined Sales Tax program, which is the preferred local-data source for this prototype.`
+          : `${page.label} requires a state-specific public-data adapter for complete local coverage. Until a verified local record is available, the calculator clearly identifies the state-only fallback.`}</p>
+      </>
+    )}
+
+    <h2 id="what-to-enter">What to enter</h2>
+    <ul>
+      <li>Use the sticker price to estimate the checkout total.</li>
+      <li>Use the total-budget mode to find how much pre-tax merchandise fits inside a cash limit.</li>
+      <li>Select groceries, alcohol, cigarettes, nicotine, or cannabis only when a verified product rule is available; these categories often use exemptions or per-unit taxes.</li>
+      <li>For business reporting or a large purchase, confirm the result with the current state or local tax authority.</li>
+    </ul>
+
+    <h2 id="rate-source">Rate source and date</h2>
+    <p>The starting state rate comes from <a href={taxLocationSource.url}>{taxLocationSource.title}</a>, effective {taxLocationSource.effectiveDate}. Local results can come from state-published Streamlined Sales Tax files or the project’s documented public-source adapters. Tax laws can change after a source is published.</p>
+
+    <aside class="hb-tax-location-caveat">
+      <strong>Budgeting estimate, not a tax filing.</strong>
+      <span>Exemptions, delivery rules, seller location, product type, and exact jurisdiction can alter the tax due.</span>
+    </aside>
+
+    <h2 id="related-calculators">Related sales tax calculators</h2>
+    <div class="hb-tax-location-links">
+      {related.map((candidate) => (
+        <a href={taxLocationPagePath(candidate)}>
+          <strong>{candidate.label}</strong>
+          <span>{candidate.kind === 'metro' ? `Start with ZIP ${candidate.postalCode}` : `${candidate.stateRate}% state starting rate`}</span>
+        </a>
+      ))}
+    </div>
+    <p><a href={taxLocationDirectoryPath}>Browse every state and major-city calculator</a>.</p>
+  </div>
+</StarlightPage>
