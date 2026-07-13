@@ -5,8 +5,8 @@
     aria-controls="starlight__sidebar"
     class="sl-flex md:sl-hidden"
   >
-    <span class="open-menu hb-menu-glyph" aria-hidden="true">☰</span>
-    <span class="close-menu hb-menu-glyph" aria-hidden="true">×</span>
+    <span class="open-menu hb-menu-glyph hb-menu-glyph-open" aria-hidden="true"></span>
+    <span class="close-menu hb-menu-glyph hb-menu-glyph-close" aria-hidden="true"></span>
     <span class="open-menu">Browse Topics</span>
     <span class="close-menu">Close Menu</span>
   </button>
@@ -69,7 +69,9 @@
       text-transform: uppercase;
     }
 
-    .hb-menu-glyph { font-size: 1rem; line-height: 1; }
+    .hb-menu-glyph { width: 1rem; font-size: 1rem; line-height: 1; text-align: center; }
+    .hb-menu-glyph-open::before { content: '\2630'; }
+    .hb-menu-glyph-close::before { content: '\00d7'; }
     [aria-expanded='true'] button { background: var(--hb-tomato); }
     [aria-expanded='true'] button .open-menu { display: none; }
     :not([aria-expanded='true']) button .close-menu { display: none; }
