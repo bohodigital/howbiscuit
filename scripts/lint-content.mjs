@@ -141,6 +141,7 @@ for (const pipelineFile of [
   'content/latex/articles/why-salt-melts-ice.tex',
   'docs/latex-article-pipeline.md',
   'scripts/compile-latex-articles.mjs',
+  'scripts/run-pi-qa.mjs',
   'src/lib/latex/article-compiler.mjs',
   'test/latex-article.test.mjs',
 ]) {
@@ -208,7 +209,8 @@ if (!existsSync(latexBuiltPath)) {
   for (const marker of ['hb-latex-paper', 'katex-mathml', 'the-short-answer', 'latex-source-notes']) {
     if (!latexBuilt.includes(marker)) errors.push(`Compiled LaTeX article is missing ${marker}.`);
   }
-  if (/\\(?:section|begin|end)\b/.test(latexBuilt)) {
+  const visibleLatex = latexBuilt.replaceAll(/<annotation\b[^>]*>[\s\S]*?<\/annotation>/gi, '');
+  if (/\\(?:section|begin|end)\b/.test(visibleLatex)) {
     errors.push('Raw LaTeX block commands leaked into the built article.');
   }
 }
