@@ -61,3 +61,9 @@ Do not weaken the allowlist to make one article pass. Add a narrowly tested lang
 Both paths are ignored. Delete them and run `npm run latex:compile` to regenerate from source. `npm run latex:check` fails if generated output is missing, stale, or orphaned.
 
 To roll back the pipeline, revert the pipeline commit and rebuild. Existing hand-authored MDX articles live in article subdirectories and are not overwritten by the flat generated-file convention.
+
+## Raspberry Pi validation note
+
+The current Pi 5 kernel uses 16 KiB memory pages. Pagefind's published ARM64 binary is built with a jemalloc configuration that aborts on that page size. `npm run qa:pi` therefore runs the same compiler, Astro diagnostics, static route build, unit tests, endpoint checks, and content lint with Starlight's Pagefind hook explicitly disabled.
+
+This is a validation exception, not a production fallback. `npm run build`, `npm run qa`, and `npm run build:sites` keep Pagefind enabled and must pass on the x64 release lane. The release artifact copied back to the Pi must contain `dist/pagefind/`; do not deploy the search-disabled Pi build.

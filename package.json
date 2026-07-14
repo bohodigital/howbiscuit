@@ -17,7 +17,8 @@
     "check": "npm run latex:compile && astro check",
     "test": "npm run latex:compile && node --test test/*.test.mjs",
     "lint:content": "node scripts/lint-content.mjs",
-    "qa": "npm run latex:compile && astro check && astro build && node --test test/*.test.mjs && node scripts/lint-content.mjs"
+    "qa": "npm run latex:compile && astro check && astro build && node --test test/*.test.mjs && node scripts/lint-content.mjs",
+    "qa:pi": "node scripts/run-pi-qa.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

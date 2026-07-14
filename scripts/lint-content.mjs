@@ -71,6 +71,7 @@ const forbiddenPatterns = [
   /traffic laboratory/i,
 ];
 const errors = [];
+const pagefindRequired = process.env.HOWBISCUIT_SKIP_PAGEFIND !== '1';
 
 function requireFile(relativePath) {
   const fullPath = path.join(root, relativePath);
@@ -221,6 +222,14 @@ for (const endpoint of ['feed.xml', 'sitemap.xml']) {
   const endpointSource = await readFile(endpointPath, 'utf8');
   if (!endpointSource.includes('/articles/why-salt-melts-ice/')) {
     errors.push(`The LaTeX article is missing from ${endpoint}.`);
+  }
+}
+
+if (pagefindRequired) {
+  for (const pagefindFile of ['pagefind/pagefind.js', 'pagefind/pagefind-entry.json']) {
+    if (!existsSync(path.join(distRoot, pagefindFile))) {
+      errors.push(`Missing Pagefind release artifact: ${pagefindFile}`);
+    }
   }
 }
 
