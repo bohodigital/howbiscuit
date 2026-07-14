@@ -578,6 +578,97 @@ header.header::after {
 .hb-article-title > p { max-width: 42rem; margin: 1.5rem 0; color: var(--hb-ink-soft); font-size: 1.12rem; line-height: 1.65; }
 .hb-article-meta { display: flex; flex-wrap: wrap; gap: 0.65rem 1.5rem; padding-top: 1rem; border-top: 1px solid color-mix(in srgb, var(--hb-ink), transparent 72%); font-size: 0.64rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
 
+/* Build-time LaTeX articles */
+
+.hb-latex-site-context { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.2rem 0 1rem; }
+.hb-latex-site-context .hb-back-link { margin-bottom: 0; }
+
+.hb-latex-outline {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  margin: 0 0 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--hb-ink), transparent 67%);
+  border-radius: 0.45rem;
+  padding: 0.85rem 1rem;
+  background: color-mix(in srgb, var(--hb-white), transparent 12%);
+}
+.hb-latex-outline > span { padding-top: 0.12rem; color: var(--hb-ink-soft); font-size: 0.64rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.hb-latex-outline ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.3rem 1rem; margin: 0; padding: 0; list-style: none; }
+.hb-latex-outline li[data-depth='3'] { padding-left: 1rem; }
+.hb-latex-outline a { display: flex; gap: 0.45rem; color: var(--hb-ink); font-size: 0.76rem; line-height: 1.35; text-decoration: none; }
+.hb-latex-outline a:hover { color: var(--hb-blue); text-decoration: underline; text-underline-offset: 0.18em; }
+.hb-latex-outline b { min-width: 1.5rem; color: var(--hb-tomato); font-variant-numeric: tabular-nums; }
+
+.hb-latex-paper {
+  width: min(100%, 50rem);
+  margin: 0 auto 3rem;
+  border: 1px solid #d6d1c5;
+  padding: clamp(2rem, 7vw, 4.7rem) clamp(1.35rem, 8vw, 5.2rem);
+  background: #fffefb;
+  box-shadow: 0 1.2rem 3rem rgb(20 36 50 / 14%);
+  color: #202020;
+  font-family: 'KaTeX_Main', 'Latin Modern Roman', 'Times New Roman', serif;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.62;
+}
+.hb-latex-paper a { color: #164aa8; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+.hb-latex-paper a:hover { color: #922b18; }
+.hb-latex-masthead { margin-bottom: 2.9rem; text-align: center; }
+.hb-latex-kicker { margin: 0 0 1.25rem !important; color: #666 !important; font-family: var(--sl-font); font-size: 0.63rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.sl-markdown-content .hb-latex-masthead h1 { margin: 0 auto; color: #111; font-family: 'KaTeX_Main', 'Latin Modern Roman', 'Times New Roman', serif; font-size: clamp(2rem, 5vw, 2.85rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.06; }
+.hb-latex-author { margin: 1.2rem 0 0.05rem !important; font-variant: small-caps; letter-spacing: 0.06em; }
+.hb-latex-date { margin: 0 !important; color: #555; font-size: 0.88rem; }
+
+.hb-latex-abstract { margin-top: 2.2rem; border-top: 1px solid #bdb8ae; border-bottom: 1px solid #bdb8ae; padding: 1.1rem 0; text-align: left; }
+.sl-markdown-content .hb-latex-abstract h2 { margin: 0 0 0.5rem; color: #222; font-family: var(--sl-font); font-size: 0.7rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.hb-latex-abstract p { margin: 0 !important; color: #333; font-size: 0.94rem; line-height: 1.55 !important; }
+.hb-latex-copy > p { margin: 0 0 1.05rem; line-height: 1.68; }
+.hb-latex-copy :is(strong, b) { font-weight: 700; }
+.hb-latex-wordmark sup { font-size: 0.62em; vertical-align: 0.4em; }
+.hb-latex-wordmark sub { font-size: 0.62em; vertical-align: -0.18em; }
+
+.sl-markdown-content .hb-latex-copy :is(h2, h3, h4) { scroll-margin-top: 5rem; color: #181818; font-family: 'KaTeX_Main', 'Latin Modern Roman', 'Times New Roman', serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.sl-markdown-content .hb-latex-copy h2 { display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.35rem; margin: 3.2rem 0 1rem; font-size: 1.55rem; }
+.sl-markdown-content .hb-latex-copy h3 { display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.35rem; margin: 2.2rem 0 0.8rem; font-size: 1.2rem; }
+.sl-markdown-content .hb-latex-copy h4 { margin: 1.5rem 0 0.5rem; font-size: 1rem; font-style: italic; }
+.hb-latex-copy :is(h2, h3) > span { color: #777; font-variant-numeric: tabular-nums; }
+.hb-latex-list { margin: 1.15rem 0 1.4rem; padding-left: 1.55rem; }
+.hb-latex-list li { margin: 0.45rem 0; padding-left: 0.25rem; line-height: 1.6; }
+.hb-latex-copy blockquote { margin: 1.7rem 1.3rem; border: 0; padding: 0; color: #393939; font-style: italic; }
+.hb-latex-copy blockquote p { line-height: 1.55; }
+
+.hb-latex-display-math,
+.hb-latex-equation { position: relative; margin: 1.6rem 0; overflow-x: auto; overflow-y: hidden; padding: 0.35rem 2.7rem 0.35rem 0.4rem; }
+.hb-latex-display-math { padding-right: 0.4rem; }
+.hb-latex-equation-number { position: absolute; right: 0.2rem; top: 50%; translate: 0 -50%; color: #555; font-variant-numeric: tabular-nums; }
+.hb-latex-paper .katex-display { margin: 0.45rem 0; }
+
+.hb-latex-box { margin: 2rem 0; border: 1px solid #8b867d; border-left: 0.35rem solid #ef6547; padding: 1.15rem 1.25rem 1rem; background: #faf7ef; }
+.sl-markdown-content .hb-latex-box h2 { display: block; margin: 0 0 0.55rem; color: #222; font-family: var(--sl-font); font-size: 0.76rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; }
+.hb-latex-box p { margin: 0.45rem 0 !important; font-size: 0.94rem; line-height: 1.55 !important; }
+
+.hb-latex-sources { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 1.5rem; margin: 3.7rem 0 2.5rem; border-top: 1px solid #999; padding-top: 1.2rem; }
+.hb-latex-sources header > span { color: #922b18; font-family: var(--sl-font); font-size: 0.61rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.sl-markdown-content .hb-latex-sources h2 { display: block; margin: 0.25rem 0 0; color: #222; font-size: 1.25rem; }
+.hb-latex-sources ol { margin: 0; padding: 0; list-style: none; }
+.hb-latex-sources li { padding: 0.55rem 0; border-bottom: 1px solid #d6d1c5; line-height: 1.35; }
+.hb-latex-sources li:first-child { padding-top: 0; }
+.hb-latex-sources li:last-child { border-bottom: 0; }
+.hb-latex-sources li a { display: block; font-family: var(--sl-font); font-size: 0.78rem; font-weight: 750; }
+.hb-latex-sources li span { color: #666; font-family: var(--sl-font); font-size: 0.68rem; }
+
+.hb-latex-related { margin-top: 3rem; border-top: 2px solid #222; padding-top: 1rem; }
+.sl-markdown-content .hb-latex-related h2 { display: block; margin: 0 0 0.8rem; color: #222; font-family: var(--sl-font); font-size: 0.68rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.hb-latex-related > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.hb-latex-related a { position: relative; min-height: 6.5rem; display: flex; flex-direction: column; border: 1px solid #aaa49a; padding: 0.8rem; color: #222; font-family: var(--sl-font); text-decoration: none; }
+.hb-latex-related a:hover { background: #fff2c7; color: #111; }
+.hb-latex-related a span { color: #777; font-size: 0.6rem; font-weight: 850; letter-spacing: 0.05em; text-transform: uppercase; }
+.hb-latex-related a strong { max-width: 18ch; margin-top: auto; font-size: 0.82rem; line-height: 1.3; }
+.hb-latex-related a i { position: absolute; right: 0.8rem; bottom: 0.65rem; }
+:root[data-theme='dark'] .hb-latex-paper { border-color: #555; background: #f6f2e8; box-shadow: 0 1.2rem 3rem rgb(0 0 0 / 35%); color: #202020; }
+
 .hb-answer-stack { position: relative; margin: 1rem 0 4rem; border: 2px solid var(--hb-ink); border-radius: 0.9rem; padding: 1.6rem 1.8rem 1.7rem; background: var(--hb-honey); color: #142432; box-shadow: var(--hb-shadow); }
 .hb-answer-stack > span { display: inline-block; margin-bottom: 0.7rem; font-size: 0.65rem; font-weight: 950; letter-spacing: 0.1em; text-transform: uppercase; }
 .hb-answer-stack > div { font-family: Georgia, serif; font-size: clamp(1.25rem, 2.8vw, 1.75rem); font-weight: 700; line-height: 1.38; }
@@ -666,6 +757,11 @@ header.header::after {
   .hb-method-section { grid-template-columns: 1fr; gap: 2.5rem; padding: 2rem; }
   .hb-method-section > p { grid-column: 1; margin-top: 0; }
   .hb-sources { grid-template-columns: 1fr; }
+  .hb-latex-site-context { align-items: flex-start; flex-direction: column; }
+  .hb-latex-outline { grid-template-columns: 1fr; }
+  .hb-latex-outline ol { grid-template-columns: 1fr; }
+  .hb-latex-paper { padding: 2.3rem 1.25rem; }
+  .hb-latex-sources { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 34rem) {
@@ -678,8 +774,19 @@ header.header::after {
   .hb-panic-strip a { border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--hb-paper), transparent 70%); }
   .hb-panic-strip a:last-child { border-bottom: 0; }
   .hb-mistake-grid,.hb-related > div { grid-template-columns: 1fr; }
+  .hb-latex-related > div { grid-template-columns: 1fr; }
   .hb-article-title h1 { font-size: clamp(3rem, 15vw, 4.3rem); }
   .hb-answer-stack { padding: 1.25rem; }
   .hb-mechanism li { grid-template-columns: 3rem 1fr; gap: 0.75rem; }
   .hb-mechanism > li > span { width: 2.5rem; height: 2.5rem; }
+}
+
+@media print {
+  .hb-latex-site-context,
+  .hb-latex-outline,
+  .hb-global-footer { display: none !important; }
+  .hb-latex-paper { width: 100%; margin: 0; border: 0; padding: 0.55in 0.65in; box-shadow: none; color: #000; }
+  .hb-latex-paper a { color: #000; }
+  .hb-latex-box,
+  .hb-latex-related a { break-inside: avoid; }
 }

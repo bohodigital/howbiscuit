@@ -2,6 +2,8 @@ import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 import { menuSections } from './src/data/site-taxonomy.mjs';
 
+const skipPagefind = process.env.HOWBISCUIT_SKIP_PAGEFIND === '1';
+
 const sectionMenus = menuSections.map(({ label, slug, topics }) => ({
   label,
   collapsed: true,
@@ -20,6 +22,7 @@ export default defineConfig({
     starlight({
       title: 'How Biscuit',
       description: 'Practical guides for home technology, cooking, repairs, and buying decisions.',
+      pagefind: skipPagefind ? false : true,
       customCss: ['./src/styles/biscuit.css'],
       credits: false,
       components: {
@@ -45,6 +48,10 @@ export default defineConfig({
         {
           label: 'Latest articles',
           items: [
+            {
+              label: 'Why Salt Melts Ice',
+              slug: 'articles/why-salt-melts-ice',
+            },
             {
               label: 'How Does Baking Powder Work?',
               slug: 'articles/how-does-baking-powder-work',

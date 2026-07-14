@@ -1,0 +1,106 @@
+% How Biscuit LaTeX article source. This file is the canonical editable document.
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+
+\title{Why Salt Melts Ice (and When It Stops Working)}
+\author{How Biscuit}
+\date{July 13, 2026}
+\hbslug{why-salt-melts-ice}
+\hbdescription{A plain-English field guide to freezing-point depression, brine, the limits of rock salt, and the least-wasteful way to de-ice a walk.}
+\hbdivision{science}
+\hbevidence{Chemistry textbook and EPA guidance}
+\hbpubdate{2026-07-13}
+\hbupdated{2026-07-13}
+\hbreadtime{8 min read}
+\hbtag{freezing point}
+\hbtag{road salt}
+\hbtag{solutions}
+\hbfeed{true}
+\hbfeatured{false}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Salt does not make ice warm. It changes the liquid water touching the ice so that the mixture freezes at a lower temperature. That new salty liquid---brine---can melt more ice until the temperature, concentration, or available liquid water reaches a practical limit.
+\end{abstract}
+
+\section{The short answer}
+
+Pure water and ice settle at a freezing point near \(0^\circ\mathrm{C}\) under ordinary conditions. Dissolved salt separates into ions. Those extra particles make it harder for water molecules to organize into a solid crystal, so the liquid solution can remain liquid below \(0^\circ\mathrm{C}\).
+
+That shift is called \textbf{freezing-point depression}. For a dilute solution, chemistry summarizes it as
+
+\begin{equation}
+\Delta T_f = i K_f m
+\end{equation}
+
+where \(\Delta T_f\) is the drop in freezing point, \(i\) counts the effective number of dissolved particles per formula unit, \(K_f\) is a property of the solvent, and \(m\) is the solution's molality.
+
+\begin{biscuitbox}{The useful mental model}
+Salt needs a little liquid water to start a brine. Once that brine exists, its lower freezing point lets more ice join the liquid. Salt is changing the phase balance, not burning through the ice like a chemical torch.
+\end{biscuitbox}
+
+\section{What happens on the sidewalk}
+
+The process is easier to see as a loop:
+
+\begin{enumerate}
+\item A thin film of liquid water exists on or around the ice.
+\item Salt dissolves into that film and makes brine.
+\item The brine's freezing point is lower than the temperature at which pure water would freeze.
+\item Some ice melts to move the mixture toward its new balance.
+\end{enumerate}
+
+Shoveling first matters because salt works at the ice--brine boundary. Removing loose snow exposes the bonded layer, gives the salt a smaller job, and leaves less chloride to wash away later.
+
+\subsection{A quick idealized calculation}
+
+For water, \(K_f\) is about \(1.86^\circ\mathrm{C}\,\mathrm{kg}\,\mathrm{mol}^{-1}\). If a dilute sodium chloride solution behaved ideally, one mole of salt would yield roughly two moles of ions, so \(i\) would be near \(2\). At a molality of \(1\), the estimate is
+
+\begin{align}
+\Delta T_f &\approx (2)(1.86)(1) \\
+            &\approx 3.72^\circ\mathrm{C}.
+\end{align}
+
+Real solutions are less tidy. Ions interact, pavement is uneven, salt grains do not dissolve instantly, and concentrated brines depart from the dilute-solution model. The equation explains the direction and scale; it is not a promise about a particular driveway.
+
+\section{Why rock salt eventually loses}
+
+Rock salt gets slower as the air and pavement get colder because less liquid water is available and dissolution slows. Sodium chloride brine also has a hard physical limit: its lowest possible freezing point occurs near the eutectic composition, around \(-21^\circ\mathrm{C}\). A loose grain of salt on real pavement becomes impractical well before a neat laboratory limit.
+
+Other chloride salts can form brines at lower temperatures, but that does not make them harmless or automatically cost-effective. Product instructions and local winter-maintenance guidance should beat a generic temperature chart.
+
+\begin{biscuitbox}{A low-waste de-icing routine}
+Shovel or scrape first. Apply the smallest labeled amount that breaks the remaining bond. Give it time to form brine, then scrape again. Sweep up visible excess after the surface dries instead of sending it into soil or a storm drain.
+\end{biscuitbox}
+
+\section{The tradeoff after the melt}
+
+Chloride does not disappear when the ice does. Runoff can carry it into soil, groundwater, streams, and infrastructure. The U.S. Environmental Protection Agency maintains road-salt resources and chloride research because de-icing has real water-quality and corrosion consequences.
+
+That makes the practical rule simple:
+
+\begin{itemize}
+\item Remove snow mechanically whenever you can.
+\item Treat the stubborn bonded layer, not the whole weather event.
+\item Follow the product label and keep piles away from drains, plants, and pet traffic.
+\item Do not assume that more granules mean faster melting.
+\end{itemize}
+
+\begin{quote}
+The best dose is not the dose that makes the pavement look salted. It is the smallest dose that helps you remove the ice.
+\end{quote}
+
+\begin{sourcenotes}
+\source{Colligative Properties}{OpenStax Chemistry 2e}{https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties}
+\source{Water Properties}{OpenStax Chemistry 2e}{https://openstax.org/books/chemistry-2e/pages/e-water-properties}
+\source{Salt Resources}{U.S. Environmental Protection Agency}{https://www.epa.gov/risk/salt-resources}
+\end{sourcenotes}
+
+\begin{related}
+\related{Cooking and food science}{How does baking powder work?}{/articles/how-does-baking-powder-work/}
+\related{How we judge evidence}{Why are some answers better than others?}{/articles/why-are-some-answers-better-than-others/}
+\end{related}
+
+\end{document}

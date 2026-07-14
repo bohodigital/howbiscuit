@@ -5,9 +5,11 @@ const data = Astro.locals.starlightRoute.entry.data as typeof Astro.locals.starl
   evidence?: string;
   readTime?: string;
   updatedDate?: string | Date;
+  articleFormat?: 'standard' | 'latex';
 };
 const division = data.division ?? '';
 const isArticle = data.kind === 'article';
+const isLatexArticle = isArticle && data.articleFormat === 'latex';
 const isDivision = data.kind === 'division';
 const labels: Record<string, string> = {
   cook: 'Cooking',
@@ -18,7 +20,15 @@ const labels: Record<string, string> = {
 };
 ---
 
-{isArticle ? (
+{isLatexArticle ? (
+  <header class="hb-latex-site-context">
+    <a class="hb-back-link" href="/articles/">&larr; All articles</a>
+    <div class="hb-article-labels">
+      <span class="hb-topic-label">{labels[division] ?? 'Guide'}</span>
+      <span class="hb-evidence-label">{data.evidence ?? 'Researched'}</span>
+    </div>
+  </header>
+) : isArticle ? (
   <header class="hb-article-title">
     <a class="hb-back-link" href="/articles/">← All articles</a>
     <div class="hb-article-labels">

@@ -21,6 +21,7 @@ export const collections = {
     schema: docsSchema({
       extend: z.object({
         kind: z.enum(['home', 'division', 'article', 'trust']).optional(),
+        articleFormat: z.enum(['standard', 'latex']).default('standard'),
         division: divisionSchema.optional(),
         feed: z.boolean().default(false),
         pubDate: z.coerce.date().optional(),

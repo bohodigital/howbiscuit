@@ -8,19 +8,24 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build",
+    "latex:compile": "node scripts/compile-latex-articles.mjs",
+    "latex:check": "node scripts/compile-latex-articles.mjs --check",
+    "dev": "npm run latex:compile && astro dev",
+    "build": "npm run latex:compile && astro check && astro build",
     "build:sites": "npm run build && node scripts/prepare-sites-build.mjs",
     "preview": "astro preview",
-    "check": "astro check",
+    "check": "npm run latex:compile && astro check",
+    "test": "npm run latex:compile && node --test test/*.test.mjs",
     "lint:content": "node scripts/lint-content.mjs",
-    "qa": "astro check && astro build && node scripts/lint-content.mjs"
+    "qa": "npm run latex:compile && astro check && astro build && node --test test/*.test.mjs && node scripts/lint-content.mjs",
+    "qa:pi": "node scripts/run-pi-qa.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/starlight": "0.39.3",
     "astro": "6.4.2",
+    "katex": "^0.17.0",
     "typescript": "^5.9.3"
   }
 }
