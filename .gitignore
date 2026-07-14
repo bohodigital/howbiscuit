@@ -9,3 +9,6 @@ outputs/
 *.tgz
 .DS_Store
 npm-debug.log*
+src/generated/latex/
+# Flat article MDX files are generated from content/latex/articles/*.tex.
+src/content/docs/articles/*.mdx

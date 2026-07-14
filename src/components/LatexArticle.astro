@@ -1,0 +1,32 @@
+---
+import 'katex/dist/katex.min.css';
+
+interface OutlineItem {
+  depth: number;
+  id: string;
+  label: string;
+  number: string;
+}
+
+interface LatexArticleDocument {
+  html: string;
+  outline: OutlineItem[];
+}
+
+const { article } = Astro.props as { article: LatexArticleDocument };
+---
+
+{article.outline.length > 0 && (
+  <nav class="hb-latex-outline" aria-labelledby="latex-outline-title">
+    <span id="latex-outline-title">In this paper</span>
+    <ol>
+      {article.outline.map((item) => (
+        <li data-depth={item.depth}>
+          <a href={`#${item.id}`}><b>{item.number}</b>{item.label}</a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}
+
+<Fragment set:html={article.html} />

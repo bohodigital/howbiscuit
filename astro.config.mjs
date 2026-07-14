@@ -46,6 +46,10 @@ export default defineConfig({
           label: 'Latest articles',
           items: [
             {
+              label: 'Why Salt Melts Ice',
+              slug: 'articles/why-salt-melts-ice',
+            },
+            {
               label: 'How Does Baking Powder Work?',
               slug: 'articles/how-does-baking-powder-work',
             },

@@ -31,6 +31,7 @@ const requiredDocs = [
   'contact/index.mdx',
   'articles/how-does-baking-powder-work/index.mdx',
   'articles/why-are-some-answers-better-than-others/index.mdx',
+  'articles/why-salt-melts-ice.mdx',
 ];
 
 const requiredComponents = [
@@ -42,6 +43,7 @@ const requiredComponents = [
   'CheapSafeGuide.astro',
   'EvidenceBadge.astro',
   'RiskBadge.astro',
+  'LatexArticle.astro',
 ];
 
 const forbiddenPublicRoutes = [
@@ -53,6 +55,7 @@ const forbiddenPublicRoutes = [
   'assets/styles.css',
   'articles/how-does-baking-powder-work/index.html',
   'articles/why-are-some-answers-better-than-others/index.html',
+  'articles/why-salt-melts-ice/index.html',
 ];
 
 const requiredEndpoints = ['feed.xml.js', 'robots.txt.js', 'sitemap.xml.js'];
@@ -133,6 +136,16 @@ for (const component of requiredComponents) {
   requireFile(path.join('src', 'components', component));
 }
 
+for (const pipelineFile of [
+  'content/latex/articles/why-salt-melts-ice.tex',
+  'docs/latex-article-pipeline.md',
+  'scripts/compile-latex-articles.mjs',
+  'src/lib/latex/article-compiler.mjs',
+  'test/latex-article.test.mjs',
+]) {
+  requireFile(pipelineFile);
+}
+
 for (const endpoint of requiredEndpoints) {
   requireFile(path.join('src', 'pages', endpoint));
 }
@@ -169,19 +182,45 @@ for (const file of distFiles) {
   scanForbidden(source, relativePath);
 }
 
-const feedArticlePaths = [
-  path.join(docsRoot, 'articles', 'how-does-baking-powder-work', 'index.mdx'),
-  path.join(docsRoot, 'articles', 'why-are-some-answers-better-than-others', 'index.mdx'),
+const feedArticles = [
+  { articlePath: path.join(docsRoot, 'articles', 'how-does-baking-powder-work', 'index.mdx'), pubDate: '2026-07-01' },
+  { articlePath: path.join(docsRoot, 'articles', 'why-are-some-answers-better-than-others', 'index.mdx'), pubDate: '2026-07-01' },
+  { articlePath: path.join(docsRoot, 'articles', 'why-salt-melts-ice.mdx'), pubDate: '2026-07-13' },
 ];
 
-for (const articlePath of feedArticlePaths) {
+for (const { articlePath, pubDate } of feedArticles) {
   const source = await readFile(articlePath, 'utf8');
   const frontmatter = frontmatterFor(source, path.relative(root, articlePath));
   if (!/feed:\s*true/.test(frontmatter)) {
     errors.push(`Article is not in RSS feed: ${path.relative(root, articlePath)}`);
   }
-  if (!/pubDate:\s*2026-07-01/.test(frontmatter)) {
+  if (!new RegExp(`pubDate:\\s*${pubDate}`).test(frontmatter)) {
     errors.push(`Article publication date changed unexpectedly: ${path.relative(root, articlePath)}`);
+  }
+}
+
+const latexBuiltPath = path.join(distRoot, 'articles', 'why-salt-melts-ice', 'index.html');
+if (!existsSync(latexBuiltPath)) {
+  errors.push('The compiled LaTeX article route is missing from dist.');
+} else {
+  const latexBuilt = await readFile(latexBuiltPath, 'utf8');
+  for (const marker of ['hb-latex-paper', 'katex-mathml', 'the-short-answer', 'latex-source-notes']) {
+    if (!latexBuilt.includes(marker)) errors.push(`Compiled LaTeX article is missing ${marker}.`);
+  }
+  if (/\\(?:section|begin|end)\b/.test(latexBuilt)) {
+    errors.push('Raw LaTeX block commands leaked into the built article.');
+  }
+}
+
+for (const endpoint of ['feed.xml', 'sitemap.xml']) {
+  const endpointPath = path.join(distRoot, endpoint);
+  if (!existsSync(endpointPath)) {
+    errors.push(`Missing built endpoint: ${endpoint}`);
+    continue;
+  }
+  const endpointSource = await readFile(endpointPath, 'utf8');
+  if (!endpointSource.includes('/articles/why-salt-melts-ice/')) {
+    errors.push(`The LaTeX article is missing from ${endpoint}.`);
   }
 }
 
