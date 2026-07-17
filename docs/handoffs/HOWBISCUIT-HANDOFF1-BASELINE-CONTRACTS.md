@@ -316,8 +316,8 @@ The compiler's `LEGACY_LATEX_DIVISIONS` is a separately named, fail-closed input
 | Full metadata is not present in legacy frontmatter | Missing states use explicit provenance such as `legacy-body` or `not-declared`; nothing is fabricated. |
 | A route overlay could become another article registry | Real sources are discovered from tracked files; the temporary manifest contains only missing classifications and enforces exact route-set parity. |
 | Raw ad-hoc frontmatter parsing would drift | The adapter uses declared `js-yaml`, the parser family used by Astro/Starlight dependencies, and validates normalized invariants. Phase B/C must move canonical fields into content metadata. |
-| `.mjs` importing `.ts` would break Node workflows | No direct Node consumer imports TypeScript. A small loader compiles the standalone contract for QA, and `tsc --noEmit` performs a real type check. |
-| Strip-only execution would not type-check | `typecheck:contracts` is required by `check`, `build`, and `qa`. |
+| `.mjs` importing `.ts` would break Node workflows | No direct Node consumer imports TypeScript. A small loader compiles the standalone contract for QA, and a dedicated strict TypeScript project performs a real type check. |
+| Strip-only execution would not type-check | `typecheck:contracts` checks `public-taxonomy.ts` with strict types and no ambient package types; full Astro source remains covered by `astro check`. |
 | Product taxonomy could weaken TeX security | The legacy TeX input vocabulary remains separate, named, frozen, and fail-closed. |
 | Target and legacy topic shapes could be conflated | The current legacy module is untouched; the target taxonomy uses its own types and is not re-exported into current consumers. |
 | Topic visibility semantics were ambiguous | Publishable-guide rules and contiguous thresholds are explicit; unknown topics fail. |
@@ -375,6 +375,7 @@ Phase B must leave for Phase C:
 - Redirect targets for combined Home Tech topics are threshold-gated and require Phase C resolution before publication.
 - Native Pi Pagefind remains unavailable because of the ARM64/16 KiB page-size incompatibility.
 - `npm audit` findings remain unresolved and must be recorded with the final validation result.
+- A raw repository-wide `tsc` invocation enters platform-dependent Starlight dependency sources on Linux and fails on an existing `RenderResult`/Astro type mismatch. The accepted gates are strict contract-scoped `tsc` plus full `astro check`; neither suppresses project diagnostics.
 - The Sites bundle is packaging evidence only; no Sites save or deployment is authorized.
 
 ## Rollback
