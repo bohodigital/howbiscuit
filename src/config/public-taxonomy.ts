@@ -1,0 +1,531 @@
+/**
+ * Owner-approved target taxonomy and migration contracts for How Biscuit Handoff 1.
+ *
+ * Phase A deliberately does not import this file into the current Starlight shell.
+ * Every target surface is marked `implemented: false` until a later accepted work
+ * order changes and verifies public rendering. The current Starlight navigation in
+ * `src/data/site-taxonomy.mjs` remains an observed legacy dependency, not a second
+ * target taxonomy.
+ */
+
+export type PublicCategoryId = 'home-tech' | 'home' | 'kitchen' | 'shop' | 'tools';
+export type TopicPublicationMode = 'hidden' | 'filter' | 'standalone';
+
+export interface TopicPublicationThresholds {
+  hiddenMaximum: number;
+  filterMinimum: number;
+  filterMaximum: number;
+  standaloneMinimum: number;
+}
+
+export interface PublicTopic {
+  id: string;
+  categoryId: PublicCategoryId;
+  label: string;
+  route: string;
+  description: string;
+  order: number;
+  publicationPolicy: 'threshold-gated';
+  implemented: false;
+}
+
+export interface PublicCategory {
+  id: PublicCategoryId;
+  label: string;
+  route: string;
+  description: string;
+  order: number;
+  artworkId: string;
+  metadata: {
+    title: string;
+    description: string;
+  };
+  topics: readonly PublicTopic[];
+  implemented: false;
+}
+
+export const PUBLIC_TAXONOMY_CONTRACT_VERSION = '2026-07-17.handoff1.phase-a';
+
+export const PUBLIC_METADATA_DEFAULTS = Object.freeze({
+  siteName: 'How Biscuit',
+  titleTemplate: '%s | How Biscuit',
+  description: 'Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.',
+  socialImage: '/og.png',
+  twitterCard: 'summary_large_image',
+});
+
+export const TOPIC_PUBLICATION_THRESHOLDS: Readonly<TopicPublicationThresholds> = Object.freeze({
+  hiddenMaximum: 0,
+  filterMinimum: 1,
+  filterMaximum: 2,
+  standaloneMinimum: 3,
+});
+
+function assertThresholds(thresholds: TopicPublicationThresholds): void {
+  const values = Object.values(thresholds);
+  if (!values.every((value) => Number.isInteger(value) && value >= 0)) {
+    throw new Error('Topic publication thresholds must be non-negative integers.');
+  }
+  if (
+    thresholds.hiddenMaximum !== 0
+    || thresholds.filterMinimum !== thresholds.hiddenMaximum + 1
+    || thresholds.standaloneMinimum !== thresholds.filterMaximum + 1
+    || thresholds.filterMaximum < thresholds.filterMinimum
+  ) {
+    throw new Error('Topic publication thresholds must be contiguous from zero.');
+  }
+}
+
+export function topicPublicationMode(
+  publishableGuideCount: number,
+  thresholds: TopicPublicationThresholds = TOPIC_PUBLICATION_THRESHOLDS,
+): TopicPublicationMode {
+  if (!Number.isInteger(publishableGuideCount) || publishableGuideCount < 0) {
+    throw new Error('Publishable guide count must be a non-negative integer.');
+  }
+  assertThresholds(thresholds);
+  if (publishableGuideCount <= thresholds.hiddenMaximum) return 'hidden';
+  if (publishableGuideCount <= thresholds.filterMaximum) return 'filter';
+  return 'standalone';
+}
+
+function topic(
+  categoryId: PublicCategoryId,
+  id: string,
+  label: string,
+  description: string,
+  order: number,
+): PublicTopic {
+  return Object.freeze({
+    id,
+    categoryId,
+    label,
+    route: `/${categoryId}/${id}/`,
+    description,
+    order,
+    publicationPolicy: 'threshold-gated' as const,
+    implemented: false as const,
+  });
+}
+
+function category(
+  id: PublicCategoryId,
+  label: string,
+  description: string,
+  order: number,
+  artworkId: string,
+  topics: readonly PublicTopic[],
+): PublicCategory {
+  return Object.freeze({
+    id,
+    label,
+    route: `/${id}/`,
+    description,
+    order,
+    artworkId,
+    metadata: Object.freeze({ title: label, description }),
+    topics: Object.freeze(topics),
+    implemented: false as const,
+  });
+}
+
+export const PUBLIC_CATEGORIES: readonly PublicCategory[] = Object.freeze([
+  category(
+    'home-tech',
+    'Home Tech',
+    'Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.',
+    1,
+    'category-home-tech',
+    [
+      topic('home-tech', 'wifi-routers', 'Wi-Fi & Routers', 'Coverage, speed, placement, mesh systems, modems, and reliable home-network troubleshooting.', 1),
+      topic('home-tech', 'computers-laptops', 'Computers & Laptops', 'Choosing, setting up, maintaining, repairing, and extending the useful life of personal computers.', 2),
+      topic('home-tech', 'smart-home', 'Smart Home', 'Compatibility, local control, subscriptions, privacy, reliability, and safer connected-home defaults.', 3),
+      topic('home-tech', 'tvs-streaming', 'TVs & Streaming', 'Televisions, streaming devices, HDMI, audio, picture settings, and playback troubleshooting.', 4),
+      topic('home-tech', 'privacy-security', 'Privacy & Security', 'Updates, accounts, backups, passwords, network security, recovery, and practical privacy controls.', 5),
+      topic('home-tech', 'power-cooling-storage', 'Power, Cooling & Storage', 'Power delivery, battery care, heat, airflow, storage capacity, failure signs, and replacement decisions.', 6),
+    ],
+  ),
+  category(
+    'home',
+    'Home & Apartment',
+    'Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.',
+    2,
+    'category-home-apartment',
+    [
+      topic('home', 'repairs-maintenance', 'Repairs & Maintenance', 'Routine upkeep, practical diagnosis, reversible repairs, materials, stop conditions, and professional boundaries.', 1),
+      topic('home', 'apartment-comfort', 'Apartment Comfort', 'Renter-safe improvements for noise, airflow, temperature, lighting, space, and everyday comfort.', 2),
+      topic('home', 'heating-cooling', 'Heating & Cooling', 'Temperature control, airflow, seasonal preparation, de-icing, efficiency, and equipment warning signs.', 3),
+      topic('home', 'cleaning', 'Cleaning', 'Methods that work without damaging surfaces, fabrics, appliances, indoor air, or shared spaces.', 4),
+      topic('home', 'tools-materials', 'Tools & Materials', 'Choosing, using, maintaining, and safely storing common household tools, supplies, and repair materials.', 5),
+      topic('home', 'utilities-energy', 'Utilities & Energy', 'Electricity, water, gas, service costs, conservation tradeoffs, billing checks, and outage preparation.', 6),
+    ],
+  ),
+  category(
+    'kitchen',
+    'Kitchen',
+    'Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.',
+    3,
+    'category-kitchen',
+    [
+      topic('kitchen', 'kitchen-appliances', 'Kitchen Appliances', 'Choosing, using, maintaining, and troubleshooting common countertop and major kitchen appliances.', 1),
+      topic('kitchen', 'cookware-tools', 'Cookware & Tools', 'Materials, sizes, maintenance, safe use, replacement signs, and practical kitchen-tool comparisons.', 2),
+      topic('kitchen', 'food-science', 'Food Science', 'The chemistry and physics behind ingredients, heat, texture, browning, preservation, and common failures.', 3),
+      topic('kitchen', 'ingredient-substitutions', 'Ingredient Substitutions', 'What can be replaced, how the result changes, and when a substitution will not work safely.', 4),
+      topic('kitchen', 'cheap-meals', 'Cheap Meals', 'Staples, meal planning, batch cooking, leftovers, nutrition tradeoffs, and realistic per-serving costs.', 5),
+      topic('kitchen', 'troubleshooting-safety', 'Kitchen Troubleshooting & Safety', 'Diagnosing texture, timing, equipment, storage, temperatures, contamination, and important stop conditions.', 6),
+    ],
+  ),
+  category(
+    'shop',
+    'Shop Smarter',
+    'Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.',
+    4,
+    'category-shop-smarter',
+    [
+      topic('shop', 'product-comparisons', 'Product Comparisons', 'Auditable comparisons based on real requirements, tradeoffs, support life, repairability, and total value.', 1),
+      topic('shop', 'local-prices', 'Local Prices', 'Location-aware price checks with source, freshness, unit, availability, and geographic limits made visible.', 2),
+      topic('shop', 'used-refurbished', 'Used & Refurbished', 'Inspection, remaining life, warranties, repair costs, seller risk, and when used is poor value.', 3),
+      topic('shop', 'total-cost-ownership', 'Total Cost of Ownership', 'Upfront cost, subscriptions, energy, maintenance, repair, replacement, resale, and switching costs.', 4),
+      topic('shop', 'deals-worth-considering', 'Deals Worth Considering', 'Time-bounded offers evaluated against normal price, product quality, real need, and important restrictions.', 5),
+      topic('shop', 'products-to-avoid', 'Products to Avoid', 'Products with poor support, unsafe compromises, misleading claims, lock-in, weak value, or preventable failure risks.', 6),
+      topic('shop', 'product-index', 'Product Index', 'A transparent index of covered product groups, evidence state, available guidance, and known coverage gaps.', 7),
+    ],
+  ),
+  category(
+    'tools',
+    'Tools',
+    'Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.',
+    5,
+    'category-tools',
+    [
+      topic('tools', 'calculators', 'Calculators', 'Transparent calculators that expose inputs, units, formulas, assumptions, limitations, and output meaning.', 1),
+      topic('tools', 'converters', 'Converters', 'Unit, measurement, temperature, cooking, storage, networking, and other practical conversions.', 2),
+      topic('tools', 'price-checkers', 'Price Checkers', 'Source-aware checks that show product identity, location, observed price, freshness, and uncertainty.', 3),
+      topic('tools', 'checklists', 'Checklists', 'Reusable setup, troubleshooting, inspection, maintenance, comparison, and buying checklists.', 4),
+      topic('tools', 'decision-tools', 'Decision Tools', 'Auditable comparisons and decision trees that make criteria and tradeoffs visible without fake precision.', 5),
+      topic('tools', 'templates', 'Templates', 'Reusable planning, comparison, inventory, maintenance, budgeting, and documentation templates.', 6),
+    ],
+  ),
+]);
+
+export const ALL_GUIDES_TARGET = Object.freeze({
+  route: '/articles/',
+  label: 'All Guides',
+  baselineLabels: Object.freeze(['All Articles', 'Articles']),
+  implemented: false as const,
+});
+
+const categoryById = new Map(PUBLIC_CATEGORIES.map((item) => [item.id, item]));
+const topicByRef: ReadonlyMap<string, PublicTopic> = new Map<string, PublicTopic>(
+  PUBLIC_CATEGORIES.flatMap((item) => (
+    item.topics.map((entry): [string, PublicTopic] => [`${item.id}/${entry.id}`, entry])
+  )),
+);
+
+const CATEGORY_COMPATIBILITY: Readonly<Record<string, PublicCategoryId | null>> = Object.freeze({
+  'home-tech': 'home-tech',
+  home: 'home',
+  'make-do': 'home',
+  'home-diy': 'home',
+  kitchen: 'kitchen',
+  cook: 'kitchen',
+  cooking: 'kitchen',
+  shop: 'shop',
+  'buying-guides': 'shop',
+  tools: 'tools',
+  'research-writing': null,
+  science: null,
+  glossary: null,
+});
+
+const TOPIC_COMPATIBILITY: Readonly<Record<string, readonly [PublicCategoryId, string] | null>> = Object.freeze({
+  'home-tech/gaming-pcs': ['home-tech', 'computers-laptops'],
+  'home-tech/laptops': ['home-tech', 'computers-laptops'],
+  'home-tech/streaming-tvs': ['home-tech', 'tvs-streaming'],
+  'home-diy/organization-storage': null,
+});
+
+export function targetCategoryFor(id: string): { categoryId: PublicCategoryId; implemented: false } | null {
+  if (!(id in CATEGORY_COMPATIBILITY)) return null;
+  const categoryId = CATEGORY_COMPATIBILITY[id];
+  return categoryId ? { categoryId, implemented: false } : null;
+}
+
+export function targetTopicFor(ref: string): {
+  categoryId: PublicCategoryId;
+  topicId: string;
+  implemented: false;
+} | null {
+  const direct = topicByRef.get(ref);
+  if (direct) return { categoryId: direct.categoryId, topicId: direct.id, implemented: false };
+  const mapped = TOPIC_COMPATIBILITY[ref];
+  if (!mapped) return null;
+  const [categoryId, topicId] = mapped;
+  if (!topicByRef.has(`${categoryId}/${topicId}`)) return null;
+  return { categoryId, topicId, implemented: false };
+}
+
+export function hasTargetTopic(categoryId: string, topicId: string): boolean {
+  return topicByRef.has(`${categoryId}/${topicId}`);
+}
+
+export function hasTargetCategory(categoryId: string): categoryId is PublicCategoryId {
+  return categoryById.has(categoryId as PublicCategoryId);
+}
+
+export const BASELINE_LEGACY_NAVIGATION = Object.freeze({
+  sourceFile: 'src/data/site-taxonomy.mjs',
+  state: 'observed-current-starlight-runtime',
+  targetAuthoritative: false,
+  removalWorkOrder: 'WO-2026-07-17-HOWBISCUIT-HANDOFF1-CUSTOM-ASTRO-SHELL-002',
+});
+
+interface RouteContract {
+  route: string;
+  outcome: 'serve' | 'preserve' | 'create' | 'redirect' | 'terminal' | 'threshold-gated';
+  status: number | null;
+  canonicalRoute: string | null;
+  redirectCode: number | null;
+  allowedStatuses?: readonly number[];
+  evidence?: string;
+  publicLabel?: string;
+  reason: string;
+  implemented?: false;
+}
+
+const observedServe = (route: string, reason: string): RouteContract => ({
+  route,
+  outcome: 'serve',
+  status: 200,
+  canonicalRoute: route,
+  redirectCode: null,
+  evidence: 'built-and-live',
+  reason,
+});
+
+export const OBSERVED_ROUTE_CONTRACTS: readonly RouteContract[] = Object.freeze([
+  observedServe('/', 'Existing homepage.'),
+  observedServe('/home-tech/', 'Existing Starlight category page.'),
+  observedServe('/tools/', 'Existing Starlight category page.'),
+  observedServe('/articles/', 'Existing article index; current labels are All Articles and Articles.'),
+  observedServe('/make-do/', 'Existing legacy Home and DIY category page.'),
+  observedServe('/cook/', 'Existing legacy Cooking category page.'),
+  observedServe('/buying-guides/', 'Existing legacy Buying Guides category page.'),
+  observedServe('/research-writing/', 'Existing legacy Research and Writing page.'),
+  observedServe('/science/', 'Existing legacy Everyday Science page.'),
+  observedServe('/glossary/', 'Existing legacy Glossary page.'),
+  observedServe('/home-tech/gaming-pcs/', 'Existing thin Home Tech topic page.'),
+  observedServe('/home-tech/laptops/', 'Existing thin Home Tech topic page.'),
+  observedServe('/home-tech/streaming-tvs/', 'Existing thin Home Tech topic page.'),
+  ...[
+    '/articles/why-salt-melts-ice/',
+    '/articles/how-does-baking-powder-work/',
+    '/articles/why-are-some-answers-better-than-others/',
+    '/about/',
+    '/affiliate-disclosure/',
+    '/contact/',
+    '/corrections/',
+    '/editorial-policy/',
+    '/privacy/',
+  ].map((route) => observedServe(route, 'Existing canonical content route.')),
+  {
+    route: '/math/',
+    outcome: 'terminal',
+    status: 404,
+    canonicalRoute: null,
+    redirectCode: null,
+    evidence: 'live-http',
+    reason: 'No current source route exists.',
+  },
+  {
+    route: '/cooking/*',
+    outcome: 'redirect',
+    status: 301,
+    canonicalRoute: '/cook/:splat',
+    redirectCode: 301,
+    evidence: 'source-redirects',
+    reason: 'Current legacy wildcard declared in public/_redirects.',
+  },
+  {
+    route: '/make-do-lab/*',
+    outcome: 'redirect',
+    status: 301,
+    canonicalRoute: '/make-do/:splat',
+    redirectCode: 301,
+    evidence: 'source-redirects',
+    reason: 'Current legacy wildcard declared in public/_redirects.',
+  },
+]);
+
+const target = (
+  route: string,
+  outcome: RouteContract['outcome'],
+  canonicalRoute: string | null,
+  reason: string,
+  options: Partial<RouteContract> = {},
+): RouteContract => Object.freeze({
+  route,
+  outcome,
+  status: options.status ?? (['preserve', 'create'].includes(outcome) ? 200 : null),
+  canonicalRoute,
+  redirectCode: options.redirectCode ?? (outcome === 'redirect' ? 301 : null),
+  reason,
+  implemented: false,
+  ...(options.allowedStatuses ? { allowedStatuses: Object.freeze(options.allowedStatuses) } : {}),
+  ...(options.publicLabel ? { publicLabel: options.publicLabel } : {}),
+});
+
+export const TARGET_ROUTE_CONTRACTS: readonly RouteContract[] = Object.freeze([
+  target('/', 'preserve', '/', 'Preserve the homepage canonical.'),
+  target('/home-tech/', 'preserve', '/home-tech/', 'Preserve the approved Home Tech category route.'),
+  target('/home/', 'create', '/home/', 'Create the approved Home and Apartment category route.'),
+  target('/kitchen/', 'create', '/kitchen/', 'Create the approved Kitchen category route.'),
+  target('/shop/', 'create', '/shop/', 'Create the approved Shop Smarter category route.'),
+  target('/tools/', 'preserve', '/tools/', 'Preserve the approved Tools category route.'),
+  target('/articles/', 'preserve', '/articles/', 'Preserve the canonical article index and relabel it All Guides.', { publicLabel: 'All Guides' }),
+  target('/make-do/', 'redirect', '/home/', 'Migrate the legacy Home and DIY category directly to Home and Apartment.'),
+  target('/cook/', 'redirect', '/kitchen/', 'Migrate the legacy Cooking category directly to Kitchen.'),
+  target('/buying-guides/', 'redirect', '/shop/', 'Migrate the legacy Buying Guides category directly to Shop Smarter.'),
+  target('/research-writing/', 'redirect', '/editorial-policy/', 'Move the noncommercial editorial standard to the trust surface.'),
+  target('/science/', 'terminal', null, 'Retire the thin legacy division after moving real article classification.', { allowedStatuses: [404, 410] }),
+  target('/glossary/', 'terminal', null, 'Retire and exclude the thin legacy glossary surface.', { allowedStatuses: [404, 410] }),
+  target('/math/', 'terminal', null, 'Return clean recovery behavior linking users to BetterGrades.', { allowedStatuses: [404, 410] }),
+  target('/home-tech/computers-laptops/', 'threshold-gated', '/home-tech/computers-laptops/', 'Canonical destination exists only when accepted topic eligibility is satisfied.'),
+  target('/home-tech/tvs-streaming/', 'threshold-gated', '/home-tech/tvs-streaming/', 'Canonical destination exists only when accepted topic eligibility is satisfied.'),
+  target('/home-tech/gaming-pcs/', 'redirect', '/home-tech/computers-laptops/', 'Combine the retired Gaming PCs topic with Computers and Laptops.'),
+  target('/home-tech/laptops/', 'redirect', '/home-tech/computers-laptops/', 'Combine the retired Laptops topic with Computers and Laptops.'),
+  target('/home-tech/streaming-tvs/', 'redirect', '/home-tech/tvs-streaming/', 'Rename the topic without a redirect chain.'),
+  target('/cooking/*', 'redirect', '/kitchen/:splat', 'Send the legacy wildcard directly to the final Kitchen namespace.'),
+  target('/make-do-lab/*', 'redirect', '/home/:splat', 'Send the legacy wildcard directly to the final Home namespace.'),
+  ...[
+    '/articles/why-salt-melts-ice/',
+    '/articles/how-does-baking-powder-work/',
+    '/articles/why-are-some-answers-better-than-others/',
+    '/about/',
+    '/affiliate-disclosure/',
+    '/contact/',
+    '/corrections/',
+    '/editorial-policy/',
+    '/privacy/',
+  ].map((route) => target(route, 'preserve', route, 'Preserve the existing canonical route exactly.')),
+]);
+
+export const HOST_CONTRACT = Object.freeze({
+  host: 'www.howbiscuit.com',
+  sourceDeclared: Object.freeze({
+    outcome: 'redirect' as const,
+    code: 301,
+    destinationHost: 'howbiscuit.com',
+  }),
+  liveObserved: Object.freeze({
+    outcome: 'serve' as const,
+    status: 200,
+    canonicalHost: 'howbiscuit.com',
+  }),
+  target: Object.freeze({
+    outcome: 'redirect' as const,
+    code: 301,
+    destinationHost: 'howbiscuit.com',
+    implemented: false as const,
+  }),
+});
+
+function normalizeRoute(route: string): string {
+  if (!route.startsWith('/')) throw new Error(`Route must be root-relative: ${route}`);
+  const [path] = route.split(/[?#]/, 1);
+  if (path === '/') return '/';
+  return path.endsWith('/') || /\.[a-z0-9]+$/i.test(path) ? path : `${path}/`;
+}
+
+function matchContract(contracts: readonly RouteContract[], requestedRoute: string): {
+  contract: RouteContract;
+  splat: string;
+} | null {
+  const route = normalizeRoute(requestedRoute);
+  const exact = contracts.find((entry) => entry.route === route);
+  if (exact) return { contract: exact, splat: '' };
+  for (const contract of contracts) {
+    if (!contract.route.endsWith('*')) continue;
+    const prefix = contract.route.slice(0, -1);
+    if (route.startsWith(prefix)) return { contract, splat: route.slice(prefix.length) };
+  }
+  return null;
+}
+
+function substituteSplat(route: string, splat: string): string {
+  return normalizeRoute(route.replace(':splat', splat.replace(/^\//, '')));
+}
+
+function resolveRoute(contracts: readonly RouteContract[], requestedRoute: string): Record<string, unknown> {
+  const normalized = normalizeRoute(requestedRoute);
+  const matched = matchContract(contracts, normalized);
+  if (!matched) {
+    return {
+      requestedRoute: normalized,
+      outcome: 'unknown',
+      status: null,
+      canonicalRoute: null,
+      redirectCode: null,
+      redirectChain: [],
+    };
+  }
+
+  const { contract } = matched;
+  if (contract.outcome !== 'redirect') {
+    return {
+      requestedRoute: normalized,
+      outcome: contract.outcome,
+      status: contract.status,
+      canonicalRoute: contract.canonicalRoute,
+      redirectCode: null,
+      redirectChain: [],
+      ...(contract.allowedStatuses ? { allowedStatuses: [...contract.allowedStatuses] } : {}),
+      ...(contract.evidence ? { evidence: contract.evidence } : {}),
+      ...(contract.implemented === false ? { implemented: false } : {}),
+    };
+  }
+
+  const chain: Array<{ from: string; to: string; code: number }> = [];
+  const seen = new Set([normalized]);
+  let current = normalized;
+  let currentMatch = matched;
+  while (currentMatch.contract.outcome === 'redirect') {
+    const destination = substituteSplat(currentMatch.contract.canonicalRoute!, currentMatch.splat);
+    if (seen.has(destination)) throw new Error(`Redirect loop detected at ${destination}`);
+    seen.add(destination);
+    chain.push({ from: current, to: destination, code: currentMatch.contract.redirectCode ?? 301 });
+    current = destination;
+    const next = matchContract(contracts, destination);
+    if (!next || next.contract.outcome !== 'redirect') break;
+    currentMatch = next;
+  }
+
+  return {
+    requestedRoute: normalized,
+    outcome: 'redirect',
+    status: contract.redirectCode,
+    canonicalRoute: current,
+    redirectCode: contract.redirectCode,
+    redirectChain: chain,
+    ...(contract.implemented === false ? { implemented: false } : {}),
+  };
+}
+
+export function resolveObservedRoute(route: string): Record<string, unknown> {
+  return resolveRoute(OBSERVED_ROUTE_CONTRACTS, route);
+}
+
+export function resolveTargetRoute(route: string): Record<string, unknown> {
+  return resolveRoute(TARGET_ROUTE_CONTRACTS, route);
+}
+
+export function findTargetRedirectChains(): Array<{ route: string; chain: unknown[] }> {
+  const problems: Array<{ route: string; chain: unknown[] }> = [];
+  for (const contract of TARGET_ROUTE_CONTRACTS.filter((entry) => entry.outcome === 'redirect')) {
+    const sampleRoute = contract.route.replace('*', 'contract-probe/');
+    const resolution = resolveTargetRoute(sampleRoute);
+    const chain = resolution.redirectChain as unknown[];
+    if (chain.length > 1) problems.push({ route: contract.route, chain });
+  }
+  return problems;
+}

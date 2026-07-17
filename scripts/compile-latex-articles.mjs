@@ -35,6 +35,18 @@ async function generatedFlatMdx() {
   return files;
 }
 
+async function generatedModules(directory = moduleRoot) {
+  if (!existsSync(directory)) return [];
+  const entries = await readdir(directory, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...(await generatedModules(fullPath)));
+    else if (entry.isFile() && entry.name.endsWith('.mjs')) files.push(fullPath);
+  }
+  return files.sort();
+}
+
 async function assertExact(filePath, expected, errors) {
   if (!existsSync(filePath)) {
     errors.push(`Missing generated file: ${path.relative(root, filePath)}`);
@@ -73,6 +85,12 @@ if (checkOnly) {
   for (const filePath of await generatedFlatMdx()) {
     if (!expectedMdx.has(path.resolve(filePath).toLowerCase())) {
       errors.push(`Orphaned generated file: ${path.relative(root, filePath)}`);
+    }
+  }
+  const expectedModules = new Set(outputs.map((output) => path.resolve(output.modulePath).toLowerCase()));
+  for (const filePath of await generatedModules()) {
+    if (!expectedModules.has(path.resolve(filePath).toLowerCase())) {
+      errors.push(`Orphaned generated module: ${path.relative(root, filePath)}`);
     }
   }
   if (errors.length) throw new Error(errors.join('\n'));

@@ -10,14 +10,16 @@
   "scripts": {
     "latex:compile": "node scripts/compile-latex-articles.mjs",
     "latex:check": "node scripts/compile-latex-articles.mjs --check",
-    "dev": "npm run latex:compile && astro dev",
-    "build": "npm run latex:compile && astro check && astro build",
+    "contracts:check": "node scripts/check-public-contracts.mjs",
+    "typecheck:contracts": "tsc --noEmit --pretty false",
+    "dev": "npm run latex:compile && npm run contracts:check && astro dev",
+    "build": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check && astro build",
     "build:sites": "npm run build && node scripts/prepare-sites-build.mjs",
     "preview": "astro preview",
-    "check": "npm run latex:compile && astro check",
+    "check": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check",
     "test": "npm run latex:compile && node --test test/*.test.mjs",
     "lint:content": "node scripts/lint-content.mjs",
-    "qa": "npm run latex:compile && astro check && astro build && node --test test/*.test.mjs && node scripts/lint-content.mjs",
+    "qa": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check && astro build && node --test test/*.test.mjs && node scripts/lint-content.mjs",
     "qa:pi": "node scripts/run-pi-qa.mjs"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "@astrojs/rss": "^4.0.19",
     "@astrojs/starlight": "0.39.3",
     "astro": "6.4.2",
+    "js-yaml": "4.3.0",
     "katex": "^0.17.0",
     "typescript": "^5.9.3"
   }

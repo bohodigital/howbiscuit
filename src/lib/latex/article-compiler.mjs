@@ -1,6 +1,8 @@
 import katex from 'katex';
 
-const SAFE_DIVISIONS = new Set([
+// Versioned legacy input vocabulary for existing TeX metadata. This is not the
+// target public taxonomy; changing it requires an explicit content migration.
+export const LEGACY_LATEX_DIVISIONS = Object.freeze([
   'research-writing',
   'cook',
   'home-tech',
@@ -10,6 +12,7 @@ const SAFE_DIVISIONS = new Set([
   'science',
   'glossary',
 ]);
+const SAFE_DIVISIONS = new Set(LEGACY_LATEX_DIVISIONS);
 
 const SAFE_PACKAGES = new Set(['amsmath', 'amssymb']);
 const FORBIDDEN_COMMANDS = [

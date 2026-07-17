@@ -1,10 +1,19 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import path from 'node:path';
 import test from 'node:test';
-import { compileLatexArticle, generatedMdx, generatedModule } from '../src/lib/latex/article-compiler.mjs';
+import { fileURLToPath } from 'node:url';
+import {
+  compileLatexArticle,
+  generatedMdx,
+  generatedModule,
+  LEGACY_LATEX_DIVISIONS,
+} from '../src/lib/latex/article-compiler.mjs';
 
 const examplePath = new URL('../content/latex/articles/why-salt-melts-ice.tex', import.meta.url);
 const example = await readFile(examplePath, 'utf8');
+const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 test('compiles the canonical article into static, accessible math markup', () => {
   const article = compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' });
@@ -34,6 +43,15 @@ test('rejects file inclusion and arbitrary TeX execution', () => {
   );
 });
 
+test('keeps the legacy TeX division boundary separate and fail-closed', () => {
+  assert.ok(LEGACY_LATEX_DIVISIONS.includes('science'));
+  assert.ok(!LEGACY_LATEX_DIVISIONS.includes('shop'));
+  assert.throws(
+    () => compileLatexArticle(example.replace('\\hbdivision{science}', '\\hbdivision{shop}')),
+    /Unknown How Biscuit division: shop/,
+  );
+});
+
 test('rejects unsupported prose commands instead of leaking raw TeX', () => {
   assert.throws(
     () => compileLatexArticle(example.replace('Pure water and ice', '\\unknown{Nope} Pure water and ice')),
@@ -60,4 +78,20 @@ test('rejects repeated document environments', () => {
     () => compileLatexArticle(`${example}\n\\begin{document}\\end{document}`),
     /Nested or repeated document environments|Content after \\end\{document\}/,
   );
+});
+
+test('check-only mode rejects an orphaned generated module', async () => {
+  const orphanPath = path.join(root, 'src', 'generated', 'latex', 'orphan-contract-probe.mjs');
+  await mkdir(path.dirname(orphanPath), { recursive: true });
+  await writeFile(orphanPath, '// orphan contract probe\n', 'utf8');
+  try {
+    const result = spawnSync(process.execPath, ['scripts/compile-latex-articles.mjs', '--check'], {
+      cwd: root,
+      encoding: 'utf8',
+    });
+    assert.notEqual(result.status, 0);
+    assert.match(`${result.stdout}\n${result.stderr}`, /Orphaned generated module/);
+  } finally {
+    await rm(orphanPath, { force: true });
+  }
 });
