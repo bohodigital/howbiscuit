@@ -118,23 +118,27 @@ const testingLabels: Record<string, string> = {
     </header>
     <DisclosureBanner disclosure={record.disclosure} />
     <div class:list={['hb-article-grid', outline.length === 0 && 'hb-article-grid-wide']}>
+      {outline.length > 0 && (
+        <nav class="hb-article-toc" aria-labelledby="article-toc-title">
+          <h2 id="article-toc-title">On this page</h2>
+          <ol>{outline.map((heading) => <li data-depth={heading.depth}><a href={'#' + heading.slug}>{heading.text}</a></li>)}</ol>
+        </nav>
+      )}
       <div class="hb-content">
         <slot />
         <SourceNotes sources={[...record.sourceNotes.items]} />
         {related.length > 0 && <RelatedShelf links={related} />}
         <p class="hb-correction-link">See something wrong or out of date? <a href="/corrections/">Report a correction</a>.</p>
       </div>
-      {outline.length > 0 && (
-        <aside class="hb-article-toc" aria-labelledby="article-toc-title">
-          <h2 id="article-toc-title">On this page</h2>
-          <ol>{outline.map((heading) => <li data-depth={heading.depth}><a href={'#' + heading.slug}>{heading.text}</a></li>)}</ol>
-        </aside>
-      )}
     </div>
   </article>
 </BaseLayout>
 
 <style>
+  @media (min-width: 58.001rem) {
+    .hb-content { grid-column: 1; grid-row: 1; }
+    .hb-article-toc { grid-column: 2; grid-row: 1; }
+  }
   .hb-direct-answer {
     margin-top: 1.2rem;
     border-left: 4px solid var(--hb-tomato);

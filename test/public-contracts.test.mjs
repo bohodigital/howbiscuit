@@ -9,6 +9,7 @@ import {
   assertValidPriceBadgeProps,
   assertValidProductEvidence,
   createPublicContentRegistry,
+  createPublicDocumentRegistry,
   isPublishableGuide,
   orderFeaturedContent,
   orderHomepageContent,
@@ -16,12 +17,15 @@ import {
   selectRelatedContent,
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
-import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
+import { PHASE_C_DOCUMENT_ROUTES } from '../src/lib/public-content/pagefind-policy.mjs';
+import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src/config/public-taxonomy.ts'));
-const sources = discoverTrackedArticleSources(root);
+const publicSources = discoverTrackedPublicSources(root);
+const sources = publicSources.filter(({ kind }) => kind === 'article');
 const registry = createPublicContentRegistry({ sources, taxonomy });
+const publicRegistry = createPublicDocumentRegistry({ sources: publicSources, taxonomy });
 const bySlug = Object.fromEntries(registry.map((record) => [record.slug, record]));
 
 test('Phase C taxonomy activates exactly five categories and 31 threshold-gated topics', () => {
@@ -34,6 +38,25 @@ test('Phase C taxonomy activates exactly five categories and 31 threshold-gated 
   ]);
   const topics = taxonomy.PUBLIC_CATEGORIES.flatMap(({ topics }) => topics);
   assert.equal(topics.length, 31);
+  assert.deepEqual(taxonomy.PUBLIC_CATEGORIES.map(({ id, topics: categoryTopics }) => [
+    id,
+    categoryTopics.map(({ id: topicId }) => topicId),
+  ]), [
+    ['home-tech', ['wifi-routers', 'computers-laptops', 'smart-home', 'tvs-streaming', 'privacy-security', 'power-cooling-storage']],
+    ['home', ['repairs-maintenance', 'apartment-comfort', 'heating-cooling', 'cleaning', 'tools-materials', 'utilities-energy']],
+    ['kitchen', ['kitchen-appliances', 'cookware-tools', 'food-science', 'ingredient-substitutions', 'cheap-meals', 'troubleshooting-safety']],
+    ['shop', ['product-comparisons', 'local-prices', 'used-refurbished', 'total-cost-ownership', 'deals-worth-considering', 'products-to-avoid', 'product-index']],
+    ['tools', ['calculators', 'converters', 'price-checkers', 'checklists', 'decision-tools', 'templates']],
+  ]);
+  const topicRefs = topics.map(({ categoryId, id }) => `${categoryId}/${id}`);
+  assert.equal(new Set(topicRefs).size, topics.length);
+  for (const category of taxonomy.PUBLIC_CATEGORIES) {
+    category.topics.forEach((topic, index) => {
+      assert.equal(topic.categoryId, category.id);
+      assert.equal(topic.route, `/${category.id}/${topic.id}/`);
+      assert.equal(topic.order, index + 1);
+    });
+  }
   assert.ok(taxonomy.PUBLIC_CATEGORIES.every(({ implemented }) => implemented === true));
   assert.ok(topics.every(({ implemented, publicationPolicy }) => implemented === true && publicationPolicy === 'threshold-gated'));
   assert.deepEqual(taxonomy.ALL_GUIDES_TARGET, {
@@ -84,6 +107,31 @@ test('route migration resolves directly to real Phase C destinations', () => {
   assert.deepEqual(taxonomy.findTargetRedirectChains(), []);
 });
 
+test('the deployed redirect artifact exactly matches the direct Phase C matrix', () => {
+  const expected = [
+    ['https://www.howbiscuit.com/*', 'https://howbiscuit.com/:splat', '301'],
+    ['/make-do/', '/home/', '301'],
+    ['/cook/', '/kitchen/', '301'],
+    ['/buying-guides/', '/shop/', '301'],
+    ['/research-writing/', '/editorial-policy/', '301'],
+    ['/home-tech/gaming-pcs/', '/home-tech/', '301'],
+    ['/home-tech/laptops/', '/home-tech/', '301'],
+    ['/home-tech/streaming-tvs/', '/home-tech/', '301'],
+    ['/home-tech/wifi-routers/', '/home-tech/', '301'],
+    ['/home-tech/smart-home/', '/home-tech/', '301'],
+    ['/home-tech/privacy-security/', '/home-tech/', '301'],
+    ['/cooking/*', '/kitchen/', '301'],
+    ['/make-do-lab/*', '/home/', '301'],
+  ];
+  const actual = readFileSync(path.join(root, 'public/_redirects'), 'utf8')
+    .trim().split(/\r?\n/).filter(Boolean).map((line) => line.split(/\s+/));
+  assert.deepEqual(actual, expected);
+  const exactTargets = new Map(actual.flatMap(([from, to]) => (
+    from.startsWith('/') && !from.includes('*') ? [[from, to]] : []
+  )));
+  assert.deepEqual([...exactTargets].filter(([, to]) => exactTargets.has(to)), []);
+});
+
 test('compatibility lookups are active but do not invent editorial categories', () => {
   assert.deepEqual(taxonomy.targetCategoryFor('make-do'), { categoryId: 'home', implemented: true });
   assert.deepEqual(taxonomy.targetCategoryFor('cook'), { categoryId: 'kitchen', implemented: true });
@@ -119,6 +167,21 @@ test('registry discovers exactly three source-owned, publishable records', () =>
   assert.equal(isPublishableGuide(bySlug['why-are-some-answers-better-than-others']), false);
 });
 
+test('one normalized public registry owns every document and eligibility decision', () => {
+  assert.deepEqual(publicRegistry.map(({ route }) => route), [...PHASE_C_DOCUMENT_ROUTES].sort());
+  assert.ok(publicRegistry.every(({ searchEligible, sitemapEligible, llmsEligible }) => (
+    searchEligible === true && sitemapEligible === true && llmsEligible === true
+  )));
+  assert.deepEqual(publicRegistry.map(({ kind }) => kind), [
+    'home', 'trust', 'trust', 'guide-index', 'article', 'article', 'article', 'trust',
+    'trust', 'trust', 'category', 'category', 'category', 'trust', 'category', 'category',
+  ]);
+  const privacy = publicRegistry.find(({ route }) => route === '/privacy/');
+  assert.equal(privacy.updatedDate, null);
+  assert.equal(privacy.publishedDate, null);
+  assert.equal(privacy.provenance.eligibility, 'normalized-source-state');
+});
+
 test('current data exposes only two category filters and no standalone topic pages', () => {
   assert.equal(topicPublicationModeForRegistry({ registry, categoryId: 'home', topicId: 'heating-cooling', taxonomy }), 'filter');
   assert.equal(topicPublicationModeForRegistry({ registry, categoryId: 'kitchen', topicId: 'food-science', taxonomy }), 'filter');
@@ -151,6 +214,10 @@ test('normalizer rejects unclassified, unsafe, or contradictory records', () => 
   assert.throws(() => createPublicContentRegistry({ sources: [{ ...source, evidence: 'Theoretical' }], taxonomy }), /unsupported evidence label/i);
   assert.throws(() => createPublicContentRegistry({ sources: [{ ...source, draft: true, featured: true }], taxonomy }), /featured content cannot be draft/i);
   assert.throws(() => createPublicContentRegistry({ sources: [{ ...source, disclosure: { state: 'affiliate' } }], taxonomy }), /unsupported disclosure state/i);
+  assert.throws(() => createPublicContentRegistry({ sources: [{
+    ...source,
+    sourceNotes: { ...source.sourceNotes, items: [{ ...source.sourceNotes.items[0], href: '//user:password@example.test/path' }] },
+  }], taxonomy }), /credential-free HTTP\(S\)/i);
 });
 
 test('price and product evidence states stay strict for later shopping phases', () => {

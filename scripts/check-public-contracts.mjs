@@ -4,16 +4,17 @@ import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
 import {
-  createPublicContentRegistry,
+  createPublicDocumentRegistry,
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
-import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
+import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 import { PHASE_C_DOCUMENT_ROUTES } from '../src/lib/public-content/pagefind-policy.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
-const sources = discoverTrackedArticleSources(root);
-const registry = createPublicContentRegistry({ sources, taxonomy });
+const sources = discoverTrackedPublicSources(root);
+const publicRegistry = createPublicDocumentRegistry({ sources, taxonomy });
+const registry = publicRegistry.filter(({ kind }) => kind === 'article');
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -28,6 +29,10 @@ invariant(taxonomy.findTargetRedirectChains().length === 0, 'Phase C redirects m
 invariant(taxonomy.HOST_CONTRACT.target.implemented === true, 'The source host contract must remain explicit.');
 invariant(!existsSync(path.join(root, 'src', 'data', 'site-taxonomy.mjs')), 'The legacy navigation taxonomy must be removed.');
 invariant(!existsSync(path.join(root, 'src', 'lib', 'public-content', 'classification-manifest.mjs')), 'The temporary classification manifest must be removed.');
+invariant(
+  JSON.stringify(publicRegistry.map(({ route }) => route)) === JSON.stringify([...PHASE_C_DOCUMENT_ROUTES].sort()),
+  'Every Phase C document route must come from the normalized public registry.',
+);
 
 const expected = new Map([
   ['/articles/how-does-baking-powder-work/', ['kitchen', 'food-science', 'guide']],
@@ -54,19 +59,35 @@ invariant(topicModes['home/heating-cooling'] === 'filter', 'Salt must activate t
 invariant(topicModes['kitchen/food-science'] === 'filter', 'Baking powder must activate the Kitchen food-science category filter.');
 invariant(Object.entries(topicModes).every(([ref, mode]) => ['home/heating-cooling', 'kitchen/food-science'].includes(ref) ? mode === 'filter' : mode === 'hidden'), 'Zero-guide topics must remain hidden.');
 
-const redirects = readFileSync(path.join(root, 'public', '_redirects'), 'utf8');
-for (const line of [
+const redirectLines = readFileSync(path.join(root, 'public', '_redirects'), 'utf8').trim().split(/\r?\n/).filter(Boolean);
+const expectedRedirectLines = [
+  'https://www.howbiscuit.com/* https://howbiscuit.com/:splat 301',
   '/make-do/ /home/ 301',
   '/cook/ /kitchen/ 301',
   '/buying-guides/ /shop/ 301',
   '/research-writing/ /editorial-policy/ 301',
+  '/home-tech/gaming-pcs/ /home-tech/ 301',
+  '/home-tech/laptops/ /home-tech/ 301',
+  '/home-tech/streaming-tvs/ /home-tech/ 301',
+  '/home-tech/wifi-routers/ /home-tech/ 301',
+  '/home-tech/smart-home/ /home-tech/ 301',
+  '/home-tech/privacy-security/ /home-tech/ 301',
   '/cooking/* /kitchen/ 301',
   '/make-do-lab/* /home/ 301',
-]) invariant(redirects.includes(line), `Missing direct redirect: ${line}`);
+];
+invariant(JSON.stringify(redirectLines) === JSON.stringify(expectedRedirectLines), 'The deployed redirect matrix differs from the exact Phase C contract.');
+const exactTargets = new Map(redirectLines.flatMap((line) => {
+  const [from, to] = line.split(/\s+/);
+  return from.startsWith('/') && !from.includes('*') ? [[from, to]] : [];
+}));
+for (const [from, to] of exactTargets) {
+  invariant(!exactTargets.has(to), `The deployed redirect matrix contains a chain: ${from} -> ${to}.`);
+}
 
 console.log(JSON.stringify({
   contractVersion: taxonomy.PUBLIC_TAXONOMY_CONTRACT_VERSION,
   documentRoutes: PHASE_C_DOCUMENT_ROUTES.length,
+  normalizedDocuments: publicRegistry.length,
   categories: taxonomy.PUBLIC_CATEGORIES.length,
   articles: registry.length,
   topicModes,

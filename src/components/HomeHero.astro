@@ -28,6 +28,10 @@ const accentByCategory: Record<string, string> = {
   shop: 'lilac',
   tools: 'honey',
 };
+const categoryLabelById = new Map(categoryViews.map(({ id, label }) => [id, label]));
+const guideCategoryLabel = (guide: ArticleRecord) => (
+  guide.categoryId ? categoryLabelById.get(guide.categoryId) ?? 'Editorial standard' : 'Editorial standard'
+);
 const updatedDates = registry.map(({ updatedDate, publishedDate }) => updatedDate ?? publishedDate).filter(Boolean).sort();
 const latestUpdate = updatedDates.at(-1);
 ---
@@ -60,7 +64,7 @@ const latestUpdate = updatedDates.at(-1);
   </div>
   {featured.length > 0 ? (
     <div class="hb-guide-grid">
-      {featured.map((guide) => <GuideCard label={guide.categoryId ?? 'Editorial standard'} title={guide.title} description={guide.description} href={guide.route} accent={accentByCategory[guide.categoryId ?? ''] ?? 'lilac'} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}
+      {featured.map((guide) => <GuideCard label={guideCategoryLabel(guide)} title={guide.title} description={guide.description} href={guide.route} accent={accentByCategory[guide.categoryId ?? ''] ?? 'lilac'} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}
     </div>
   ) : <EmptyState title="No featured guides are declared" message="Published guides remain available in All Guides; this shelf does not invent a feature flag." actionHref="/articles/" actionLabel="Browse All Guides" />}
 </section>
@@ -90,7 +94,7 @@ const latestUpdate = updatedDates.at(-1);
     <a class="hb-text-link" href="/articles/">Browse All Guides →</a>
   </div>
   <div class="hb-guide-grid">
-    {latest.map((guide) => <GuideCard label={guide.categoryId ?? 'Editorial standard'} title={guide.title} description={guide.description} href={guide.route} accent={accentByCategory[guide.categoryId ?? ''] ?? 'lilac'} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}
+    {latest.map((guide) => <GuideCard label={guideCategoryLabel(guide)} title={guide.title} description={guide.description} href={guide.route} accent={accentByCategory[guide.categoryId ?? ''] ?? 'lilac'} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}
   </div>
 </section>
 

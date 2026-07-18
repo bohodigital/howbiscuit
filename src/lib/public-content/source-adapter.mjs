@@ -24,18 +24,18 @@ function extractFrontmatter(source, sourcePath) {
 function routeFromMdxPath(relativePath) {
   const prefix = 'src/content/docs/';
   if (!relativePath.startsWith(prefix) || !relativePath.endsWith('.mdx')) {
-    throw new Error(`Unsupported MDX article path: ${relativePath}`);
+    throw new Error(`Unsupported public MDX path: ${relativePath}`);
   }
   let route = relativePath.slice(prefix.length, -'.mdx'.length);
-  if (route.endsWith('/index')) route = route.slice(0, -'/index'.length);
+  route = route.replace(/(^|\/)index$/, '');
   return `/${route}/`.replaceAll('//', '/');
 }
 
 function mdxSource(root, relativePath) {
   const data = extractFrontmatter(readFileSync(path.join(root, relativePath), 'utf8'), relativePath);
-  if (data.kind !== 'article') return null;
   const route = routeFromMdxPath(relativePath);
   return Object.freeze({
+    kind: data.kind,
     sourceKind: 'mdx',
     sourcePath: relativePath,
     route,
@@ -76,6 +76,7 @@ function latexSource(root, relativePath) {
   });
   const data = compiled.metadata;
   return Object.freeze({
+    kind: 'article',
     sourceKind: 'latex',
     sourcePath: relativePath,
     route: `/articles/${data.slug}/`,
@@ -110,11 +111,11 @@ function latexSource(root, relativePath) {
   });
 }
 
-export function discoverTrackedArticleSources(root) {
+export function discoverTrackedPublicSources(root) {
   const output = execFileSync('git', [
     'ls-files',
     '--',
-    'src/content/docs/articles',
+    'src/content/docs',
     'content/latex/articles',
   ], { cwd: root, encoding: 'utf8' });
   const paths = output.trim().split(/\r?\n/).filter(Boolean);
@@ -131,11 +132,17 @@ export function discoverTrackedArticleSources(root) {
   sources.sort((left, right) => asciiCompare(left.route, right.route));
   const routes = sources.map(({ route }) => route);
   if (new Set(routes).size !== routes.length) {
-    throw new Error(`Duplicate discovered article route: ${routes.join(', ')}`);
+    throw new Error(`Duplicate discovered public route: ${routes.join(', ')}`);
   }
-  if (!sources.length) throw new Error('No tracked article sources were discovered.');
+  if (!sources.length) throw new Error('No tracked public sources were discovered.');
   return Object.freeze(sources.map((source) => Object.freeze({
     ...source,
-    classificationProvenance: 'canonical-source-metadata',
+    ...(source.kind === 'article' ? { classificationProvenance: 'canonical-source-metadata' } : {}),
   })));
+}
+
+export function discoverTrackedArticleSources(root) {
+  const sources = discoverTrackedPublicSources(root).filter(({ kind }) => kind === 'article');
+  if (!sources.length) throw new Error('No tracked article sources were discovered.');
+  return Object.freeze(sources);
 }

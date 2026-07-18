@@ -167,7 +167,9 @@ function validateDate(value, label, sourcePath) {
 }
 
 function validateUrl(value, sourcePath) {
-  if (value.startsWith('/') || value.startsWith('#')) return value;
+  if (/[\u0000-\u001f\u007f]/.test(value)) fail(`Unsafe or invalid URL: ${value}`, sourcePath);
+  if (value.startsWith('#')) return value;
+  if (value.startsWith('/') && !value.startsWith('//') && !value.startsWith('/\\')) return value;
   let parsed;
   try {
     parsed = new URL(value);

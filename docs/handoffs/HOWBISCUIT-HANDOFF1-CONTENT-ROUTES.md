@@ -123,7 +123,7 @@ The specialized LaTeX paper retains its paper body and outline while sharing all
 
 ## Generated public surfaces
 
-One registry and one eligibility rule drive:
+One normalized registry contains all 16 public documents, while the same registry's article subset drives guide-only surfaces. One shared eligibility rule drives:
 
 - homepage featured and latest guides;
 - category featured and latest guides;
@@ -136,7 +136,7 @@ One registry and one eligibility rule drive:
 - generated `llms.txt`;
 - WebSite, Article, and BreadcrumbList JSON-LD.
 
-The generated artifact contains 17 HTML files: the exact 16 Phase C document routes plus the custom 404. All 16 public document routes are Pagefind-eligible and sitemap-eligible. RSS contains the three canonical articles. `llms.txt` contains all 16 public routes plus `hello@howbiscuit.com`.
+The generated artifact contains 17 HTML files: the exact 16 Phase C document routes plus the custom 404. All 16 public document routes are Pagefind-eligible and sitemap-eligible. Sitemap `lastmod` values come only from source-owned publication or modification dates; routes without either date omit `lastmod`. RSS contains the three canonical articles. `llms.txt` contains all 16 public routes plus `hello@howbiscuit.com`.
 
 ## Starlight status and dependencies
 
@@ -154,19 +154,18 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
 - Pagefind: 16 eligible pages and 16 real indexed fragments.
-- Node tests: 37 passed, 0 failed.
+- Node tests: 40 passed, 0 failed.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.
 
 ### Browser and accessibility
 
-- Desktop homepage, Home & Apartment category, and LaTeX article rendered from the built x64 artifact.
-- Search dialog focused its input, returned six Pagefind results for `salt`, closed deterministically, and returned focus to its trigger.
-- Mobile category and article passed at 390 by 844 CSS pixels with no horizontal overflow.
-- Mobile navigation opened with focus on Close, closed deterministically, and returned focus to the mobile trigger.
-- The representative article had one H1, one main landmark, no empty links, no missing image alt attributes, and WebSite, Article, and BreadcrumbList JSON-LD.
-- Category topic links expose a count-aware accessible name rather than concatenating the visible label and badge.
+- On the candidate lineage before the final blocking-review repairs, the desktop homepage, Home & Apartment category, and LaTeX article rendered from the built x64 artifact.
+- That lineage's search dialog focused its input, returned six Pagefind results for `salt`, closed deterministically, and returned focus to its trigger.
+- That lineage's mobile category and article passed at 390 by 844 CSS pixels with no horizontal overflow; mobile navigation opened with focus on Close, closed deterministically, and returned focus to the mobile trigger.
+- Exact repaired-tree artifact tests verify heading-level continuity, public category labels, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
+- Exact repaired-SHA interactive replay remains required when the in-app browser backend becomes available; the backend returned unavailable during the first repaired-candidate review attempt.
 
 ### Raspberry Pi
 
@@ -178,7 +177,7 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
 - `npm ci` retains the accepted dependency audit baseline of six findings: one low, four moderate, and one high. No forced audit rewrite was applied.
-- Browser evidence is local exact-artifact evidence, not public production evidence. Production remains unchanged.
+- Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 
 ## Changed-file scope
 

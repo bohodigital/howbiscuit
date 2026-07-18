@@ -20,12 +20,16 @@ export async function GET(context) {
       loc: site + page.route,
       lastmod: page.updatedDate ?? page.publishedDate,
     }));
-  if (urls.some(({ lastmod }) => !lastmod)) throw new Error('Every sitemap-eligible page requires a source-owned lastmod date.');
 
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...urls.map((url) => '  <url>\n    <loc>' + xmlEscape(url.loc) + '</loc>\n    <lastmod>' + url.lastmod + '</lastmod>\n  </url>'),
+    ...urls.map((url) => [
+      '  <url>',
+      '    <loc>' + xmlEscape(url.loc) + '</loc>',
+      ...(url.lastmod ? ['    <lastmod>' + xmlEscape(url.lastmod) + '</lastmod>'] : []),
+      '  </url>',
+    ].join('\n')),
     '</urlset>',
     '',
   ].join('\n');

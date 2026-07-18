@@ -34,7 +34,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
             <div class="hb-category-intro"><a href={category.href}><strong>{category.label}</strong><span>Open category →</span></a><p>{category.description}</p></div>
             {category.topicLabels.length > 0 && (
               <div class="hb-topic-labels" aria-label={`${category.label} published topics`}>
-                {category.topicLabels.map((topic) => <a href={topic.href}>{topic.label}<span>{topic.count}</span></a>)}
+                {category.topicLabels.map((topic) => <a href={topic.href} aria-label={`${topic.label}, ${topic.count} published guide${topic.count === 1 ? '' : 's'}`}>{topic.label}<span aria-hidden="true">{topic.count}</span></a>)}
               </div>
             )}
             {category.guideLinks.length > 0 && (

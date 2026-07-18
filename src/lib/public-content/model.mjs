@@ -6,6 +6,18 @@ function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim().length > 0;
 }
 
+function isSafePublicHref(value) {
+  if (!isNonEmptyString(value) || /[\u0000-\u001f\u007f]/.test(value)) return false;
+  if (value.startsWith('/')) return !value.startsWith('//') && !value.startsWith('/\\');
+  let parsed;
+  try {
+    parsed = new URL(value);
+  } catch {
+    return false;
+  }
+  return ['https:', 'http:'].includes(parsed.protocol) && !parsed.username && !parsed.password;
+}
+
 const PRICE_BADGE_STATES = new Set(['observed', 'estimate', 'unavailable', 'stale']);
 const EVIDENCE_LABELS = new Set([
   'Hands-on tested',
@@ -143,6 +155,26 @@ function normalizeDisclosure(sourceValue, fallbackState) {
   return Object.freeze({ ...sourceValue, state });
 }
 
+function normalizeEligibilityState(source, route) {
+  const draft = source.draft === true;
+  const preview = source.preview === true;
+  const thin = source.thin === true;
+  const redirectState = source.redirectState ?? null;
+  const retirementState = source.retirementState ?? null;
+  if (redirectState && retirementState) {
+    throw new Error(`${route}: content cannot be both redirected and retired`);
+  }
+  if (redirectState?.to === route) throw new Error(`${route}: content cannot redirect to itself`);
+  return Object.freeze({
+    draft,
+    preview,
+    thin,
+    redirectState,
+    retirementState,
+    publishable: !draft && !preview && !thin && !redirectState && !retirementState,
+  });
+}
+
 function normalizeContent(source, taxonomy) {
   const route = source.route;
   validateClassification(route, source, taxonomy);
@@ -164,22 +196,13 @@ function normalizeContent(source, taxonomy) {
 
   const publishedDate = normalizeDate(source.publishedDate, 'publishedDate', route);
   const updatedDate = normalizeDate(source.updatedDate, 'updatedDate', route);
-  const draft = source.draft === true;
-  const preview = source.preview === true;
-  const thin = source.thin === true;
-  const redirectState = source.redirectState ?? null;
-  const retirementState = source.retirementState ?? null;
-  if (redirectState && retirementState) {
-    throw new Error(`${route}: content cannot be both redirected and retired`);
-  }
-  if (redirectState?.to === route) throw new Error(`${route}: content cannot redirect to itself`);
+  const { draft, preview, thin, redirectState, retirementState, publishable } = normalizeEligibilityState(source, route);
   if (source.feed === true && !publishedDate) throw new Error(`${route}: feed content requires a publication date`);
   if (source.featured === true && draft) throw new Error(`${route}: featured content cannot be draft`);
   if (source.featured === true && (preview || thin || redirectState || retirementState)) {
     throw new Error(`${route}: featured content must be publishable`);
   }
 
-  const publishable = !draft && !preview && !thin && !redirectState && !retirementState;
   const sourceNotes = normalizeStructuredField(
     source.sourceNotes,
     source.sourceNotesState ?? 'missing',
@@ -188,8 +211,8 @@ function normalizeContent(source, taxonomy) {
       if (!item || !isNonEmptyString(item.title) || !isNonEmptyString(item.publisher) || !isNonEmptyString(item.href)) {
         throw new Error(`${route}: source notes require title, publisher, and href`);
       }
-      if (!item.href.startsWith('/') && !/^https?:\/\//.test(item.href)) {
-        throw new Error(`${route}: source-note href must be HTTP(S) or root-relative`);
+      if (!isSafePublicHref(item.href)) {
+        throw new Error(`${route}: source-note href must be credential-free HTTP(S) or root-relative`);
       }
     },
   );
@@ -211,6 +234,7 @@ function normalizeContent(source, taxonomy) {
   }
 
   return Object.freeze({
+    kind: 'article',
     route,
     canonicalRoute: route,
     slug: source.slug,
@@ -271,6 +295,58 @@ function normalizeContent(source, taxonomy) {
   });
 }
 
+function normalizePublicPage(source, taxonomy) {
+  const route = source.route;
+  if (!['home', 'category', 'guide-index', 'trust'].includes(source.kind)) {
+    throw new Error(`${route}: unsupported public page kind ${source.kind}`);
+  }
+  if (!isNonEmptyString(source.title)) throw new Error(`${route}: source title is missing`);
+  if (!isNonEmptyString(source.description) || source.description.trim().length < 40) {
+    throw new Error(`${route}: source description is missing or too thin`);
+  }
+  if (source.kind === 'category') {
+    if (!taxonomy.hasTargetCategory(source.categoryId)) {
+      throw new Error(`${route}: unknown category ${source.categoryId}`);
+    }
+    const category = taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === source.categoryId);
+    if (category?.route !== route) throw new Error(`${route}: category source route does not match ${source.categoryId}`);
+  }
+  const publishedDate = normalizeDate(source.publishedDate, 'publishedDate', route);
+  const updatedDate = normalizeDate(source.updatedDate, 'updatedDate', route);
+  const { draft, preview, thin, redirectState, retirementState, publishable } = normalizeEligibilityState(source, route);
+  return Object.freeze({
+    kind: source.kind,
+    route,
+    canonicalRoute: route,
+    slug: source.slug,
+    title: source.title.trim(),
+    description: source.description.trim(),
+    categoryId: source.categoryId ?? null,
+    topicId: source.topicId ?? null,
+    articleType: source.kind,
+    publishedDate,
+    updatedDate,
+    feedEligible: false,
+    searchEligible: publishable,
+    sitemapEligible: publishable,
+    llmsEligible: publishable,
+    featured: false,
+    editorialPriority: 0,
+    draft,
+    preview,
+    thin,
+    redirectState,
+    retirementState,
+    legacy: Object.freeze({ sourceKind: source.sourceKind, sourcePath: source.sourcePath }),
+    provenance: Object.freeze({
+      title: 'source',
+      description: 'source',
+      dates: 'source-or-absent',
+      eligibility: 'normalized-source-state',
+    }),
+  });
+}
+
 export function createPublicContentRegistry({ sources, taxonomy }) {
   if (!Array.isArray(sources) || !sources.length) throw new Error('Public content sources are required.');
   const sourceRoutes = sources.map(({ route }) => route).sort(asciiCompare);
@@ -278,6 +354,19 @@ export function createPublicContentRegistry({ sources, taxonomy }) {
     throw new Error('Public-content source routes must be unique.');
   }
   const registry = sources.map((source) => normalizeContent(source, taxonomy));
+  registry.sort((left, right) => asciiCompare(left.route, right.route));
+  return Object.freeze(registry);
+}
+
+export function createPublicDocumentRegistry({ sources, taxonomy }) {
+  if (!Array.isArray(sources) || !sources.length) throw new Error('Public document sources are required.');
+  const sourceRoutes = sources.map(({ route }) => route).sort(asciiCompare);
+  if (new Set(sourceRoutes).size !== sourceRoutes.length) {
+    throw new Error('Public-document source routes must be unique.');
+  }
+  const registry = sources.map((source) => (
+    source.kind === 'article' ? normalizeContent(source, taxonomy) : normalizePublicPage(source, taxonomy)
+  ));
   registry.sort((left, right) => asciiCompare(left.route, right.route));
   return Object.freeze(registry);
 }

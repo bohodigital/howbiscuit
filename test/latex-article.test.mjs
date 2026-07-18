@@ -65,6 +65,7 @@ test('rejects unsupported prose commands, invalid math, and unsafe links', () =>
   assert.throws(() => compileLatexArticle(example.replace('Pure water and ice', '\\unknown{Nope} Pure water and ice')), /Unsupported prose command \\unknown/);
   assert.throws(() => compileLatexArticle(example.replace('\\Delta T_f = i K_f m', '\\frac{1}{')), /KaTeX could not render/);
   assert.throws(() => compileLatexArticle(example.replace('https://www.epa.gov/risk/salt-resources', 'javascript:alert(1)')), /Only credential-free HTTP\(S\)/);
+  assert.throws(() => compileLatexArticle(example.replace('https://www.epa.gov/risk/salt-resources', '//user:password@example.test/path')), /Unsafe or invalid URL|Only credential-free HTTP\(S\)/);
 });
 
 test('rejects repeated document environments', () => {
@@ -81,5 +82,18 @@ test('check-only mode rejects an orphaned generated module', async () => {
     assert.match(result.stdout + '\n' + result.stderr, /Orphaned generated module/);
   } finally {
     await rm(orphanPath, { force: true });
+  }
+});
+
+test('check-only mode rejects stale generated output', async () => {
+  const generatedPath = path.join(root, 'src', 'content', 'docs', 'articles', 'why-salt-melts-ice.mdx');
+  const original = await readFile(generatedPath, 'utf8');
+  await writeFile(generatedPath, original + '\n<!-- stale-output-contract-probe -->\n', 'utf8');
+  try {
+    const result = spawnSync(process.execPath, ['scripts/compile-latex-articles.mjs', '--check'], { cwd: root, encoding: 'utf8' });
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout + '\n' + result.stderr, /Stale generated file/);
+  } finally {
+    await writeFile(generatedPath, original, 'utf8');
   }
 });

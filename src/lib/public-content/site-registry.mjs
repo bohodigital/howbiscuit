@@ -1,13 +1,13 @@
 import * as taxonomy from '../../config/public-taxonomy.ts';
 import { buildPublicNavigation } from './public-navigation.mjs';
 import {
-  createPublicContentRegistry,
+  createPublicDocumentRegistry,
   isPublishableGuide,
   orderFeaturedContent,
   orderLatestContent,
   topicPublicationModeForRegistry,
 } from './model.mjs';
-import { discoverTrackedArticleSources } from './source-adapter.mjs';
+import { discoverTrackedPublicSources } from './source-adapter.mjs';
 
 function routeFromEntryId(id) {
   const clean = id.replace(/\.(md|mdx)$/, '').replace(/(^|\/)index$/, '');
@@ -44,20 +44,66 @@ function buildCategoryViews(registry) {
   }));
 }
 
+function buildTopicPageRecords(categoryViews) {
+  return Object.freeze(categoryViews.flatMap((category) => (
+    category.topics.filter(({ mode }) => mode === 'standalone').map((topic) => Object.freeze({
+      kind: 'topic',
+      route: topic.route,
+      canonicalRoute: topic.route,
+      slug: topic.id,
+      title: topic.label,
+      description: topic.description,
+      categoryId: category.id,
+      topicId: topic.id,
+      articleType: 'topic',
+      updatedDate: topic.guides[0]?.updatedDate ?? topic.guides[0]?.publishedDate ?? null,
+      publishedDate: null,
+      feedEligible: false,
+      searchEligible: true,
+      sitemapEligible: true,
+      llmsEligible: true,
+      featured: false,
+      editorialPriority: 0,
+      draft: false,
+      preview: false,
+      thin: false,
+      redirectState: null,
+      retirementState: null,
+      legacy: Object.freeze({ sourceKind: 'generated-topic', sourcePath: null }),
+      provenance: Object.freeze({
+        title: 'taxonomy',
+        description: 'taxonomy',
+        dates: 'normalized-topic-guides-or-absent',
+        eligibility: 'normalized-topic-threshold',
+      }),
+    }))
+  )));
+}
+
 let cachedRoot;
 let cachedValue;
 
 export function getPublicSiteData(root = process.cwd()) {
   if (cachedValue && cachedRoot === root) return cachedValue;
-  const registry = createPublicContentRegistry({
-    sources: discoverTrackedArticleSources(root),
+  const documentRegistry = createPublicDocumentRegistry({
+    sources: discoverTrackedPublicSources(root),
     taxonomy,
   });
+  const registry = Object.freeze(documentRegistry.filter(({ kind }) => kind === 'article'));
   const categoryViews = buildCategoryViews(registry);
+  const publicRegistry = Object.freeze([
+    ...documentRegistry,
+    ...buildTopicPageRecords(categoryViews),
+  ].sort((left, right) => left.route.localeCompare(right.route)));
+  const routes = publicRegistry.map(({ route }) => route);
+  if (new Set(routes).size !== routes.length) {
+    throw new Error(`Duplicate normalized public route: ${routes.join(', ')}`);
+  }
   cachedRoot = root;
   cachedValue = Object.freeze({
     taxonomy,
     registry,
+    publicRegistry,
     categoryViews,
     navigation: buildPublicNavigation({ taxonomy, categoryViews }),
   });
@@ -66,64 +112,29 @@ export function getPublicSiteData(root = process.cwd()) {
 
 export function createPublicPageCatalog(entries, siteData = getPublicSiteData()) {
   if (!Array.isArray(entries)) throw new Error('Content collection entries are required.');
-  const articleByRoute = new Map(siteData.registry.map((record) => [record.route, record]));
-  const pages = entries.map((entry) => {
+  const entryByRoute = new Map();
+  for (const entry of entries) {
     const route = routeFromEntryId(entry.id);
-    const record = articleByRoute.get(route);
-    const excluded = entry.data.draft === true
-      || entry.data.preview === true
-      || entry.data.thin === true
-      || Boolean(entry.data.redirectState)
-      || Boolean(entry.data.retirementState);
-    if (entry.data.kind === 'article' && !record) {
-      throw new Error(`Article is missing from the normalized registry: ${route}`);
-    }
-    return Object.freeze({
-      route,
-      title: record?.title ?? entry.data.title,
-      description: record?.description ?? entry.data.description,
-      kind: entry.data.kind,
-      categoryId: record?.categoryId ?? entry.data.categoryId ?? null,
-      topicId: record?.topicId ?? entry.data.topicId ?? null,
-      articleType: record?.articleType ?? entry.data.kind,
-      updatedDate: record?.updatedDate
-        ?? entry.data.updatedDate?.toISOString().slice(0, 10)
-        ?? entry.data.pubDate?.toISOString().slice(0, 10)
-        ?? '2026-07-18',
-      publishedDate: record?.publishedDate ?? entry.data.pubDate?.toISOString().slice(0, 10) ?? null,
-      searchEligible: record?.searchEligible ?? !excluded,
-      sitemapEligible: record?.sitemapEligible ?? !excluded,
-      llmsEligible: record?.llmsEligible ?? !excluded,
-      record: record ?? null,
-    });
-  });
-
-  for (const category of siteData.categoryViews) {
-    for (const topic of category.topics.filter(({ mode }) => mode === 'standalone')) {
-      pages.push(Object.freeze({
-        route: topic.route,
-        title: topic.label,
-        description: topic.description,
-        kind: 'topic',
-        categoryId: category.id,
-        topicId: topic.id,
-        articleType: 'topic',
-        updatedDate: topic.guides[0]?.updatedDate ?? topic.guides[0]?.publishedDate ?? null,
-        publishedDate: null,
-        searchEligible: true,
-        sitemapEligible: true,
-        llmsEligible: true,
-        record: null,
-      }));
+    if (entryByRoute.has(route)) throw new Error(`Duplicate content collection route: ${route}`);
+    entryByRoute.set(route, entry);
+  }
+  const recordByRoute = new Map(siteData.publicRegistry.map((record) => [record.route, record]));
+  for (const [route, entry] of entryByRoute) {
+    const record = recordByRoute.get(route);
+    if (!record) throw new Error(`Content entry is missing from the normalized public registry: ${route}`);
+    if (record.kind !== entry.data.kind) {
+      throw new Error(`${route}: content entry kind ${entry.data.kind} differs from normalized kind ${record.kind}`);
     }
   }
-
-  pages.sort((left, right) => left.route.localeCompare(right.route));
-  const routes = pages.map(({ route }) => route);
-  if (new Set(routes).size !== routes.length) {
-    throw new Error(`Duplicate public page route: ${routes.join(', ')}`);
+  for (const record of siteData.publicRegistry) {
+    if (record.kind !== 'topic' && !entryByRoute.has(record.route)) {
+      throw new Error(`Normalized public record has no content entry: ${record.route}`);
+    }
+    if (record.kind === 'topic' && entryByRoute.has(record.route)) {
+      throw new Error(`Generated topic route collides with a content entry: ${record.route}`);
+    }
   }
-  return Object.freeze(pages);
+  return siteData.publicRegistry;
 }
 
 export { routeFromEntryId };

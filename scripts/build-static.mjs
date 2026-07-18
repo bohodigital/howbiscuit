@@ -3,6 +3,8 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { gunzipSync } from 'node:zlib';
 
+import { load as parseYaml } from 'js-yaml';
+
 import {
   assertFullPagefindLane,
   assertPiPagefindSkipAllowed,
@@ -53,6 +55,18 @@ function routeFromHtml(filePath, artifactRoot) {
   if (relative === '404.html') return '/404.html';
   if (relative.endsWith('/index.html')) return `/${relative.slice(0, -'/index.html'.length)}/`;
   return `/${relative}`;
+}
+
+function sourceLastmod(filePath) {
+  const source = readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '').replaceAll('\r\n', '\n');
+  const match = source.match(/^---\n([\s\S]*?)\n---(?:\n|$)/);
+  invariant(match, `Content source has no YAML frontmatter: ${filePath}`);
+  const data = parseYaml(match[1]);
+  const value = data?.updatedDate ?? data?.lastUpdated ?? data?.pubDate ?? null;
+  if (!value) return null;
+  const normalized = value instanceof Date ? value.toISOString().slice(0, 10) : String(value).slice(0, 10);
+  invariant(/^\d{4}-\d{2}-\d{2}$/.test(normalized), `Content source has an invalid sitemap date: ${filePath}`);
+  return normalized;
 }
 
 function assertSetsEqual(expected, actual, label) {
@@ -140,9 +154,21 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   assertSetsEqual(expectedEligibleRoutes, eligibleRoutes, `${label} Pagefind-eligible route set`);
 
   const sitemap = readFileSync(path.join(artifactRoot, 'sitemap.xml'), 'utf8');
-  const sitemapRoutes = new Set([...sitemap.matchAll(/<loc>https:\/\/howbiscuit\.com([^<]+)<\/loc>/g)].map((match) => match[1]));
+  const sitemapEntries = [...sitemap.matchAll(/<url>\s*<loc>https:\/\/howbiscuit\.com([^<]+)<\/loc>(?:\s*<lastmod>([^<]+)<\/lastmod>)?\s*<\/url>/g)]
+    .map((match) => ({ route: match[1], lastmod: match[2] ?? null }));
+  const sitemapRoutes = new Set(sitemapEntries.map(({ route }) => route));
   assertSetsEqual(expectedEligibleRoutes, sitemapRoutes, `${label} sitemap route set`);
-  invariant(countText(sitemap, '<lastmod>') === expectedEligibleRoutes.size, `${label} sitemap requires one lastmod per eligible route.`);
+  const sourceLastmodByRoute = new Map(sourceFiles.map((filePath) => [
+    routeFromSource(filePath, docsRoot),
+    sourceLastmod(filePath),
+  ]));
+  for (const { route, lastmod } of sitemapEntries) {
+    if (!sourceLastmodByRoute.has(route)) continue;
+    invariant(
+      lastmod === sourceLastmodByRoute.get(route),
+      `${label} sitemap lastmod for ${route} must equal its source date or be omitted when the source has no date.`,
+    );
+  }
 
   const feed = readFileSync(path.join(artifactRoot, 'feed.xml'), 'utf8');
   const articleRoutes = [...acceptedRoutes].filter((route) => route.startsWith('/articles/') && route !== '/articles/');

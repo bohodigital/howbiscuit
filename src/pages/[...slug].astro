@@ -19,6 +19,7 @@ interface PageProps {
   topic?: { categoryId: string; id: string; label: string; description: string };
 }
 interface RegistryRecord {
+  kind: 'article';
   route: string; title: string; description: string; categoryId: string | null;
   topicId: string | null; readTime: string | null; evidence: string;
   articleType: string; articleFormat: string; answerSummary: string;
@@ -27,6 +28,10 @@ interface RegistryRecord {
   sourceNotes: { state: string; items: readonly { title: string; publisher: string; href: string }[] };
   relatedContent: { state: string; routes: readonly string[] };
   disclosure: { state: string; text?: string; href?: string };
+}
+interface PublicRecord {
+  kind: string; route: string; title: string; description: string;
+  categoryId: string | null; searchEligible: boolean;
 }
 interface TopicView {
   id: string; route: string; label: string; description: string; mode: 'filter' | 'standalone';
@@ -38,6 +43,7 @@ interface CategoryView {
 }
 interface SiteData {
   registry: readonly RegistryRecord[];
+  publicRegistry: readonly PublicRecord[];
   categoryViews: readonly CategoryView[];
 }
 
@@ -75,7 +81,7 @@ export async function getStaticPaths() {
 
 const page = Astro.props as PageProps;
 const siteData = getPublicSiteData() as SiteData;
-const { registry } = siteData;
+const { registry, publicRegistry } = siteData;
 let Content;
 let headings: Array<{ depth: number; slug: string; text: string }> = [];
 if (page.entry) {
@@ -83,17 +89,23 @@ if (page.entry) {
   Content = rendered.Content;
   headings = rendered.headings;
 }
-const data = page.entry?.data;
-const excluded = Boolean(data?.draft || data?.preview || data?.thin || data?.redirectState || data?.retirementState);
-const record = data?.kind === 'article' ? registry.find(({ route }) => route === page.route) : undefined;
-if (data?.kind === 'article' && !record) throw new Error('Article is missing from the normalized registry: ' + page.route);
+const pageRecord = publicRegistry.find(({ route }) => route === page.route);
+if (!pageRecord) throw new Error('Page is missing from the normalized public registry: ' + page.route);
+if (page.entry && page.entry.data.kind !== pageRecord.kind) {
+  throw new Error('Content entry kind differs from normalized public registry: ' + page.route);
+}
+const record = pageRecord.kind === 'article' ? pageRecord as RegistryRecord : undefined;
 const topicView = page.topic
   ? siteData.categoryViews.find(({ id }) => id === page.topic?.categoryId)?.topics.find(({ id }) => id === page.topic?.id)
   : null;
-const categoryView = data?.kind === 'category'
-  ? siteData.categoryViews.find(({ id }) => id === data.categoryId)
+const categoryView = pageRecord.kind === 'category'
+  ? siteData.categoryViews.find(({ id }) => id === pageRecord.categoryId)
   : null;
 const neighboringCategories = categoryView ? siteData.categoryViews.filter(({ id }) => id !== categoryView.id) : [];
+const categoryLabelById = new Map(siteData.categoryViews.map(({ id, label }) => [id, label]));
+const guideCategoryLabel = (guide: RegistryRecord) => (
+  guide.categoryId ? categoryLabelById.get(guide.categoryId) ?? 'Editorial standard' : 'Editorial standard'
+);
 const categoryAccent = categoryView?.id === 'home'
   ? 'mint'
   : categoryView?.id === 'kitchen'
@@ -103,21 +115,24 @@ const categoryAccent = categoryView?.id === 'home'
       : 'honey';
 ---
 
-{data?.kind === 'home' && Content ? (
-  <HomeLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></HomeLayout>
-) : data?.kind === 'guide-index' ? (
-  <CategoryLayout title="All Guides" description={data.description} canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
+{pageRecord.kind === 'home' && Content ? (
+  <HomeLayout title={pageRecord.title} description={pageRecord.description} canonical={page.route} searchEligible={pageRecord.searchEligible}><Content /></HomeLayout>
+) : pageRecord.kind === 'guide-index' ? (
+  <CategoryLayout title="All Guides" description={pageRecord.description} canonical={page.route} searchEligible={pageRecord.searchEligible} sectionLabel="How Biscuit">
     <p>Every card below comes from the normalized registry. Drafts, previews, redirects, retirements, and thin content do not qualify.</p>
-    <div class="hb-guide-grid hb-article-index-grid">
-      {(orderLatestContent(registry) as RegistryRecord[]).map((item) => <GuideCard label={item.categoryId ?? 'Editorial standard'} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
-    </div>
+    <section aria-labelledby="all-guides-list-title">
+      <h2 id="all-guides-list-title">Guides</h2>
+      <div class="hb-guide-grid hb-article-index-grid">
+        {(orderLatestContent(registry) as RegistryRecord[]).map((item) => <GuideCard label={guideCategoryLabel(item)} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
+      </div>
+    </section>
   </CategoryLayout>
-) : data?.kind === 'article' && record && Content ? (
-  <ArticleLayout title={data.title} description={data.description} canonical={page.route} {record} {headings}><Content /></ArticleLayout>
-) : data?.kind === 'trust' && Content ? (
-  <TrustLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></TrustLayout>
-) : data?.kind === 'category' && categoryView ? (
-  <CategoryLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
+) : pageRecord.kind === 'article' && record && Content ? (
+  <ArticleLayout title={pageRecord.title} description={pageRecord.description} canonical={page.route} {record} {headings}><Content /></ArticleLayout>
+) : pageRecord.kind === 'trust' && Content ? (
+  <TrustLayout title={pageRecord.title} description={pageRecord.description} canonical={page.route} searchEligible={pageRecord.searchEligible}><Content /></TrustLayout>
+) : pageRecord.kind === 'category' && categoryView ? (
+  <CategoryLayout title={pageRecord.title} description={pageRecord.description} canonical={page.route} searchEligible={pageRecord.searchEligible} sectionLabel="How Biscuit">
     <section aria-labelledby="eligible-topics-title">
       <h2 id="eligible-topics-title">Eligible topics</h2>
       {categoryView.topics.length > 0 ? (
@@ -175,7 +190,7 @@ const categoryAccent = categoryView?.id === 'home'
     </nav>
   </CategoryLayout>
 ) : page.topic && topicView ? (
-  <CategoryLayout title={page.topic.label} description={page.topic.description} canonical={page.route} searchEligible={true} sectionLabel="Topic">
+  <CategoryLayout title={pageRecord.title} description={pageRecord.description} canonical={page.route} searchEligible={pageRecord.searchEligible} sectionLabel="Topic">
     <p>This standalone index exists because the normalized registry contains at least three publishable guides for this topic.</p>
     <div class="hb-guide-grid">
       {topicView.guides.map((item) => <GuideCard label={item.evidence} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
