@@ -70,9 +70,10 @@ function mdxSource(root, relativePath) {
   });
 }
 
-function latexSource(root, relativePath) {
+function latexSource(root, relativePath, taxonomy) {
   const compiled = compileLatexArticle(readFileSync(path.join(root, relativePath), 'utf8'), {
     sourcePath: relativePath,
+    taxonomy,
   });
   const data = compiled.metadata;
   return Object.freeze({
@@ -111,7 +112,7 @@ function latexSource(root, relativePath) {
   });
 }
 
-export function discoverTrackedPublicSources(root) {
+export function discoverTrackedPublicSources(root, { taxonomy } = {}) {
   const output = execFileSync('git', [
     'ls-files',
     '--',
@@ -122,7 +123,7 @@ export function discoverTrackedPublicSources(root) {
   const sources = [];
   for (const relativePath of paths) {
     const source = relativePath.endsWith('.tex')
-      ? latexSource(root, relativePath)
+      ? latexSource(root, relativePath, taxonomy)
       : relativePath.endsWith('.mdx')
         ? mdxSource(root, relativePath)
         : null;
@@ -141,8 +142,8 @@ export function discoverTrackedPublicSources(root) {
   })));
 }
 
-export function discoverTrackedArticleSources(root) {
-  const sources = discoverTrackedPublicSources(root).filter(({ kind }) => kind === 'article');
+export function discoverTrackedArticleSources(root, { taxonomy } = {}) {
+  const sources = discoverTrackedPublicSources(root, { taxonomy }).filter(({ kind }) => kind === 'article');
   if (!sources.length) throw new Error('No tracked article sources were discovered.');
   return Object.freeze(sources);
 }

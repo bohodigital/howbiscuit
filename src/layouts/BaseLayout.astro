@@ -2,7 +2,8 @@
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { PUBLIC_METADATA_DEFAULTS } from '../config/public-taxonomy';
-import { pagefindAttributesForPage } from '../lib/public-content/pagefind-policy.mjs';
+import { pagefindAttributesForPage, pagefindMetadataForRecord } from '../lib/public-content/pagefind-policy.mjs';
+import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
 import '../styles/biscuit.css';
 import '../styles/shell.css';
 
@@ -57,7 +58,15 @@ const structuredData = [
   webSiteSchema,
   ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [pageSchema]),
 ];
-const pagefindAttributes = pagefindAttributesForPage({ searchEligible });
+const pagefindRoute = new URL(canonical, site).pathname;
+const pagefindRecord = searchEligible
+  ? getPublicSiteData().publicRegistry.find((record: { route: string }) => record.route === pagefindRoute)
+  : null;
+if (searchEligible && !pagefindRecord) {
+  throw new Error(`Pagefind-eligible route is missing from the normalized public registry: ${pagefindRoute}`);
+}
+const pagefindMetadata = pagefindMetadataForRecord(pagefindRecord ?? { searchEligible: false });
+const pagefindAttributes = pagefindAttributesForPage(pagefindRecord ?? { searchEligible: false });
 ---
 
 <!doctype html>
@@ -117,6 +126,15 @@ const pagefindAttributes = pagefindAttributesForPage({ searchEligible });
     <a class="hb-skip-link" href="#main-content">Skip to content</a>
     <SiteHeader currentPath={Astro.url.pathname} />
     <main id="main-content" class:list={['hb-main', mainClass]} {...pagefindAttributes}>
+      {pagefindMetadata.include && (
+        <Fragment>
+          <span hidden aria-hidden="true" data-pagefind-filter="category">{pagefindMetadata.filters.category}</span>
+          <span hidden aria-hidden="true" data-pagefind-filter="type">{pagefindMetadata.filters.type}</span>
+          <span hidden aria-hidden="true" data-pagefind-meta="title">{pagefindMetadata.meta.title}</span>
+          <span hidden aria-hidden="true" data-pagefind-meta="description">{pagefindMetadata.meta.description}</span>
+          <span hidden aria-hidden="true" data-pagefind-meta="route">{pagefindMetadata.meta.route}</span>
+        </Fragment>
+      )}
       <slot />
     </main>
     <SiteFooter />

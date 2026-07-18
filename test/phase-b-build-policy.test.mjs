@@ -30,8 +30,11 @@ test('normal build and QA lanes run the explicit Pagefind build and reject skip 
   const buildScript = readFileSync(path.join(root, 'scripts', 'build-static.mjs'), 'utf8');
   assert.match(buildScript, /data-pagefind-body/);
   assert.match(buildScript, /\.pf_fragment/);
-  assert.match(buildScript, /pagefindUrlFromFragment/);
+  assert.match(buildScript, /pagefindPayloadFromFragment/);
   assert.match(buildScript, /assertSetsEqual\(eligibleRoutes, indexedRoutes/);
+  assert.match(buildScript, /Pagefind category filter differs/);
+  assert.match(buildScript, /Pagefind type filter differs/);
+  assert.match(buildScript, /Pagefind \$\{name\} metadata differs/);
   assert.match(packageJson.scripts['build:sites'], /--verify-sites-package/);
   assert.match(
     packageJson.scripts['build:sites'],

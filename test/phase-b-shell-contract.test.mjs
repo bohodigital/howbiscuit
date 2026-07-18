@@ -4,11 +4,22 @@ import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
-import { PHASE_C_DOCUMENT_ROUTES, RETIRED_DOCUMENT_ROUTES } from '../src/lib/public-content/pagefind-policy.mjs';
+import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
+import { createPublicSiteRegistry } from '../src/lib/public-content/model.mjs';
+import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const dist = path.join(root, 'dist');
 const read = (relative) => readFileSync(path.join(root, relative), 'utf8');
+const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
+const publicRegistry = createPublicSiteRegistry({
+  sources: discoverTrackedPublicSources(root, { taxonomy }),
+  taxonomy,
+});
+const PHASE_C_DOCUMENT_ROUTES = publicRegistry.map(({ route }) => route);
+const RETIRED_DOCUMENT_ROUTES = taxonomy.TARGET_ROUTE_CONTRACTS
+  .filter(({ route, outcome }) => !route.includes('*') && ['redirect', 'terminal'].includes(outcome))
+  .map(({ route }) => route);
 
 function collectHtml(directory) {
   const files = [];

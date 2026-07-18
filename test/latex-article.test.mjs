@@ -5,14 +5,17 @@ import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
+import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
 import { compileLatexArticle, generatedMdx, generatedModule } from '../src/lib/latex/article-compiler.mjs';
 
 const examplePath = new URL('../content/latex/articles/why-salt-melts-ice.tex', import.meta.url);
 const example = await readFile(examplePath, 'utf8');
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
+const compile = (source, options = {}) => compileLatexArticle(source, { ...options, taxonomy });
 
 test('compiles canonical Phase C metadata and accessible math without duplicating global services', () => {
-  const article = compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' });
+  const article = compile(example, { sourcePath: 'why-salt-melts-ice.tex' });
   assert.equal(article.metadata.slug, 'why-salt-melts-ice');
   assert.equal(article.metadata.categoryId, 'home');
   assert.equal(article.metadata.topicId, 'heating-cooling');
@@ -35,8 +38,8 @@ test('compiles canonical Phase C metadata and accessible math without duplicatin
 });
 
 test('generation is deterministic and carries source-owned structured metadata into Astro', () => {
-  const first = compileLatexArticle(example);
-  const second = compileLatexArticle(example);
+  const first = compile(example);
+  const second = compile(example);
   assert.equal(generatedMdx(first), generatedMdx(second));
   assert.equal(generatedModule(first), generatedModule(second));
   assert.match(generatedMdx(first), /articleFormat: latex/);
@@ -48,28 +51,29 @@ test('generation is deterministic and carries source-owned structured metadata i
 
 test('classification commands fail closed', () => {
   assert.throws(
-    () => compileLatexArticle(example.replace('\\hbcategory{home}', '\\hbcategory{science}')),
+    () => compile(example.replace('\\hbcategory{home}', '\\hbcategory{science}')),
     /Unknown How Biscuit category: science/,
   );
   assert.throws(
-    () => compileLatexArticle(example.replace('\\hbpriority{30}', '\\hbpriority{high}')),
+    () => compile(example.replace('\\hbpriority{30}', '\\hbpriority{high}')),
     /must be an integer/,
   );
 });
 
-test('rejects file inclusion and arbitrary TeX execution', () => {
-  assert.throws(() => compileLatexArticle(example.replace('\\maketitle', '\\input{secrets.tex}\n\\maketitle')), /Forbidden command \\input/);
+test('requires the canonical taxonomy and rejects file inclusion or arbitrary TeX execution', () => {
+  assert.throws(() => compileLatexArticle(example), /canonical public taxonomy is required/);
+  assert.throws(() => compile(example.replace('\\maketitle', '\\input{secrets.tex}\n\\maketitle')), /Forbidden command \\input/);
 });
 
 test('rejects unsupported prose commands, invalid math, and unsafe links', () => {
-  assert.throws(() => compileLatexArticle(example.replace('Pure water and ice', '\\unknown{Nope} Pure water and ice')), /Unsupported prose command \\unknown/);
-  assert.throws(() => compileLatexArticle(example.replace('\\Delta T_f = i K_f m', '\\frac{1}{')), /KaTeX could not render/);
-  assert.throws(() => compileLatexArticle(example.replace('https://www.epa.gov/risk/salt-resources', 'javascript:alert(1)')), /Only credential-free HTTP\(S\)/);
-  assert.throws(() => compileLatexArticle(example.replace('https://www.epa.gov/risk/salt-resources', '//user:password@example.test/path')), /Unsafe or invalid URL|Only credential-free HTTP\(S\)/);
+  assert.throws(() => compile(example.replace('Pure water and ice', '\\unknown{Nope} Pure water and ice')), /Unsupported prose command \\unknown/);
+  assert.throws(() => compile(example.replace('\\Delta T_f = i K_f m', '\\frac{1}{')), /KaTeX could not render/);
+  assert.throws(() => compile(example.replace('https://www.epa.gov/risk/salt-resources', 'javascript:alert(1)')), /Only credential-free HTTP\(S\)/);
+  assert.throws(() => compile(example.replace('https://www.epa.gov/risk/salt-resources', '//user:password@example.test/path')), /Unsafe or invalid URL|Only credential-free HTTP\(S\)/);
 });
 
 test('rejects repeated document environments', () => {
-  assert.throws(() => compileLatexArticle(example + '\n\\begin{document}\\end{document}'), /Nested or repeated document environments|Content after \\end\{document\}/);
+  assert.throws(() => compile(example + '\n\\begin{document}\\end{document}'), /Nested or repeated document environments|Content after \\end\{document\}/);
 });
 
 test('check-only mode rejects an orphaned generated module', async () => {

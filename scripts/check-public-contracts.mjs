@@ -4,16 +4,16 @@ import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
 import {
-  createPublicDocumentRegistry,
+  createPublicSiteRegistry,
+  topicMigrationDestinationForRegistry,
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
-import { PHASE_C_DOCUMENT_ROUTES } from '../src/lib/public-content/pagefind-policy.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
-const sources = discoverTrackedPublicSources(root);
-const publicRegistry = createPublicDocumentRegistry({ sources, taxonomy });
+const sources = discoverTrackedPublicSources(root, { taxonomy });
+const publicRegistry = createPublicSiteRegistry({ sources, taxonomy });
 const registry = publicRegistry.filter(({ kind }) => kind === 'article');
 
 function invariant(condition, message) {
@@ -34,10 +34,7 @@ invariant(
 );
 invariant(!existsSync(path.join(root, 'src', 'data', 'site-taxonomy.mjs')), 'The legacy navigation taxonomy must be removed.');
 invariant(!existsSync(path.join(root, 'src', 'lib', 'public-content', 'classification-manifest.mjs')), 'The temporary classification manifest must be removed.');
-invariant(
-  JSON.stringify(publicRegistry.map(({ route }) => route)) === JSON.stringify([...PHASE_C_DOCUMENT_ROUTES].sort()),
-  'Every Phase C document route must come from the normalized public registry.',
-);
+invariant(publicRegistry.length === sources.length, 'Current Phase C sources must produce no below-threshold topic pages.');
 
 const expected = new Map([
   ['/articles/how-does-baking-powder-work/', ['kitchen', 'food-science', 'guide']],
@@ -89,6 +86,15 @@ const exactTargets = new Map(redirectLines.flatMap((line) => {
 for (const [from, to] of exactTargets) {
   invariant(!exactTargets.has(to), `The deployed redirect matrix contains a chain: ${from} -> ${to}.`);
 }
+const streamingMigrationDestination = topicMigrationDestinationForRegistry({
+  legacyRef: 'home-tech/streaming-tvs',
+  registry,
+  taxonomy,
+});
+invariant(
+  exactTargets.get('/home-tech/streaming-tvs/') === streamingMigrationDestination,
+  'The legacy Streaming TVs redirect must track the canonical topic publication threshold.',
+);
 
 const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
 const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
@@ -130,7 +136,7 @@ invariant(assetRequests.includes('https://howbiscuit.com/articles/?ref=contract'
 
 console.log(JSON.stringify({
   contractVersion: taxonomy.PUBLIC_TAXONOMY_CONTRACT_VERSION,
-  documentRoutes: PHASE_C_DOCUMENT_ROUTES.length,
+  documentRoutes: publicRegistry.filter(({ kind }) => kind !== 'topic').length,
   normalizedDocuments: publicRegistry.length,
   categories: taxonomy.PUBLIC_CATEGORIES.length,
   articles: registry.length,
@@ -139,4 +145,5 @@ console.log(JSON.stringify({
   workerRedirectRules: redirectRules.length,
   workerHostCanonicalization: 'www-to-apex',
   classifications: 'canonical-source-metadata',
+  streamingMigrationDestination,
 }, null, 2));

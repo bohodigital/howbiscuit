@@ -397,6 +397,89 @@ export function topicPublicationModeForRegistry({ registry, categoryId, topicId,
   return taxonomy.topicPublicationMode(count);
 }
 
+export function topicMigrationDestinationForRegistry({ legacyRef, registry, taxonomy }) {
+  const target = taxonomy.targetTopicFor(legacyRef);
+  if (!target) throw new Error(`Unknown legacy topic mapping: ${legacyRef}`);
+  const category = taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === target.categoryId);
+  const topic = category?.topics.find(({ id }) => id === target.topicId);
+  if (!category || !topic) throw new Error(`Incomplete canonical topic mapping: ${legacyRef}`);
+  const mode = topicPublicationModeForRegistry({
+    registry,
+    categoryId: target.categoryId,
+    topicId: target.topicId,
+    taxonomy,
+  });
+  return mode === 'standalone' ? topic.route : category.route;
+}
+
+function createTopicPageRecord({ category, topic, guides }) {
+  return Object.freeze({
+    kind: 'topic',
+    route: topic.route,
+    canonicalRoute: topic.route,
+    slug: topic.id,
+    title: topic.label,
+    description: topic.description,
+    categoryId: category.id,
+    topicId: topic.id,
+    articleType: 'topic',
+    updatedDate: guides[0]?.updatedDate ?? guides[0]?.publishedDate ?? null,
+    publishedDate: null,
+    feedEligible: false,
+    searchEligible: true,
+    sitemapEligible: true,
+    llmsEligible: true,
+    featured: false,
+    editorialPriority: 0,
+    draft: false,
+    preview: false,
+    thin: false,
+    redirectState: null,
+    retirementState: null,
+    legacy: Object.freeze({ sourceKind: 'generated-topic', sourcePath: null }),
+    provenance: Object.freeze({
+      title: 'taxonomy',
+      description: 'taxonomy',
+      dates: 'normalized-topic-guides-or-absent',
+      eligibility: 'normalized-topic-threshold',
+    }),
+  });
+}
+
+/**
+ * Builds the complete public route registry from canonical source documents and
+ * threshold-generated topic pages. Runtime routing, artifact checks, Pagefind,
+ * sitemap, llms.txt, and tests consume this registry instead of a route list.
+ */
+export function createPublicSiteRegistry({ sources, taxonomy }) {
+  const documentRegistry = createPublicDocumentRegistry({ sources, taxonomy });
+  const articleRegistry = documentRegistry.filter(({ kind }) => kind === 'article');
+  const topicRecords = taxonomy.PUBLIC_CATEGORIES.flatMap((category) => (
+    category.topics.flatMap((topic) => {
+      const mode = topicPublicationModeForRegistry({
+        registry: articleRegistry,
+        categoryId: category.id,
+        topicId: topic.id,
+        taxonomy,
+      });
+      if (mode !== 'standalone') return [];
+      const guides = orderLatestContent(articleRegistry.filter((record) => (
+        isPublishableGuide(record)
+        && record.categoryId === category.id
+        && record.topicId === topic.id
+      )));
+      return [createTopicPageRecord({ category, topic, guides })];
+    })
+  ));
+  const publicRegistry = [...documentRegistry, ...topicRecords]
+    .sort((left, right) => asciiCompare(left.route, right.route));
+  const routes = publicRegistry.map(({ route }) => route);
+  if (new Set(routes).size !== routes.length) {
+    throw new Error(`Duplicate normalized public route: ${routes.join(', ')}`);
+  }
+  return Object.freeze(publicRegistry);
+}
+
 function dateSortValue(value) {
   return value ?? '0000-00-00';
 }

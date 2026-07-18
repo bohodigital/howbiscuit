@@ -45,6 +45,10 @@ At this candidate, `home/heating-cooling` and `kitchen/food-science` are categor
 
 This is the complete Phase C migration matrix. “Included” refers to the final canonical 200 route; redirect sources, terminal routes, and below-threshold routes are excluded from both generated discovery surfaces.
 
+### Owner-approved resolution: Streaming TVs legacy route
+
+The governing handoff's exact row sends `/home-tech/streaming-tvs/` to `/home-tech/tvs-streaming/`, but that canonical topic is required to remain a 404 until it has at least three publishable guides. Sending visitors there now would therefore conflict with the same handoff's no-dead-destination and no-thin-topic rules. On 2026-07-18, the owner explicitly approved the safe one-hop recovery route `/home-tech/` while the topic is below threshold. A deterministic contract check requires the redirect to change atomically to `/home-tech/tvs-streaming/` once three real guides qualify. The decision is recorded in Bohopi on this Phase C work order; it resolves this route contradiction but does not accept the eventual Phase C completion commit.
+
 | Previous or requested route | New route or terminal status | Redirect code | Canonical destination | Sitemap | Pagefind | Reason |
 | --- | --- | --- | --- | --- | --- | --- |
 | `/` | Preserve 200 | — | `/` | Included | Included | Preserve the homepage. |
@@ -58,14 +62,14 @@ This is the complete Phase C migration matrix. “Included” refers to the fina
 | `/cook/` | `/kitchen/` | 301 | `/kitchen/` | Source excluded; destination included | Source excluded; destination included | Migrate the legacy Cooking category directly to Kitchen. |
 | `/buying-guides/` | `/shop/` | 301 | `/shop/` | Source excluded; destination included | Source excluded; destination included | Migrate the legacy Buying Guides category directly to Shop Smarter. |
 | `/research-writing/` | `/editorial-policy/` | 301 | `/editorial-policy/` | Source excluded; destination included | Source excluded; destination included | Move the noncommercial editorial standard to the trust surface. |
-| `/science/` | Terminal 404/410 | — | None | Excluded | Excluded | Retire the thin legacy division after migrating its real articles. |
-| `/glossary/` | Terminal 404/410 | — | None | Excluded | Excluded | Retire the thin legacy glossary rather than publish an empty surface. |
+| `/science/` | Terminal 404 | — | None | Excluded | Excluded | Retire the thin legacy division after migrating its real articles; the candidate artifact returns 404. |
+| `/glossary/` | Terminal 404 | — | None | Excluded | Excluded | Retire the thin legacy glossary rather than publish an empty surface; the candidate artifact returns 404. |
 | `/math/` | Recovery 404 linking to BetterGrades | — | None | Excluded | Excluded | Retire the unrelated math surface while giving visitors a truthful recovery path. |
 | `/home-tech/computers-laptops/` | 404 while below threshold | — | None while hidden | Excluded | Excluded | The canonical topic needs three publishable guides before it becomes a 200 index. |
 | `/home-tech/tvs-streaming/` | 404 while below threshold | — | None while hidden | Excluded | Excluded | The canonical topic needs three publishable guides before it becomes a 200 index. |
 | `/home-tech/gaming-pcs/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while Computers & Laptops is below threshold. |
 | `/home-tech/laptops/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while Computers & Laptops is below threshold. |
-| `/home-tech/streaming-tvs/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while TVs & Streaming is below threshold. |
+| `/home-tech/streaming-tvs/` | `/home-tech/` while below threshold; `/home-tech/tvs-streaming/` at three guides | 301 | Threshold-selected final destination | Source excluded; destination included | Source excluded; destination included | Owner-approved Phase C resolution: recover at the final category now, then switch atomically to the standalone topic when it becomes real. |
 | `/home-tech/wifi-routers/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
 | `/home-tech/smart-home/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
 | `/home-tech/privacy-security/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
@@ -167,7 +171,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - TypeScript contract: passed.
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
-- Pagefind: 16 eligible pages and 16 real indexed fragments.
+- Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, and exact normalized title, description, route, category, and type metadata in every fragment.
 - Node tests: 41 passed, 0 failed.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
@@ -190,7 +194,7 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - Native Pagefind remains unavailable on the Pi ARM64/16 KiB environment. The Pi validation artifact must omit Pagefind only after the platform guard passes. Every release artifact still requires the full x64 Pagefind build.
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
-- `npm ci` retains the accepted dependency audit baseline of six findings: one low, four moderate, and one high. No forced audit rewrite was applied.
+- The pinned lockfile is unchanged. A fresh npm 11.7.0 audit on 2026-07-18 reported ten inherited findings (three low, five moderate, and two high); no forced audit rewrite or unrelated dependency change was applied in Phase C.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 - The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 
@@ -204,4 +208,4 @@ Before merge, restore the accepted Phase B parent by reverting or removing the c
 
 ## Acceptance gate
 
-Phase C must remain `needs_review` until fresh exact-SHA OpenAI/Codex blocking reviews pass, Pi validation passes, the canonical report records the evidence, and the owner explicitly accepts that exact SHA in Bohopi. Phase D must not begin before that acceptance.
+Phase C remains `in_progress` while implementation, validation, blocking review, or report repair is incomplete. Only after all blockers are cleared, fresh exact-SHA OpenAI/Codex blocking reviews pass, Pi validation passes, and the canonical report records the exact evidence may Bohopi move Phase C to `needs_review`. It must then remain `needs_review` until the owner explicitly accepts that exact SHA in Bohopi. Phase D must not begin before that acceptance.

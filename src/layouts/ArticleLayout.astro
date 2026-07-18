@@ -103,12 +103,12 @@ const testingLabels: Record<string, string> = {
     <Breadcrumbs items={breadcrumbItems} />
     <header class:list={['hb-article-title', record.articleFormat === 'latex' && 'hb-latex-site-context']}>
       <div class="hb-article-labels" aria-label="Article classification">
-        <span data-pagefind-filter="category">{categoryLabel}</span>
+        <span>{categoryLabel}</span>
         {topic && <span>{topic.label}</span>}
-        <span data-pagefind-filter="type">{articleTypeLabel}</span>
+        <span>{articleTypeLabel}</span>
       </div>
-      {record.articleFormat !== 'latex' && <h1 data-pagefind-meta="title">{title}</h1>}
-      <p class="hb-direct-answer" data-pagefind-meta="description">{record.answerSummary}</p>
+      {record.articleFormat !== 'latex' && <h1>{title}</h1>}
+      <p class="hb-direct-answer">{record.answerSummary}</p>
       <div class="hb-article-meta">
         {formattedDate && <span>{dateLabel} <time datetime={date ?? undefined}>{formattedDate}</time></span>}
         {record.readTime && <span>{record.readTime}</span>}

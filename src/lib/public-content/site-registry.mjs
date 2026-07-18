@@ -1,7 +1,7 @@
 import * as taxonomy from '../../config/public-taxonomy.ts';
 import { buildPublicNavigation } from './public-navigation.mjs';
 import {
-  createPublicDocumentRegistry,
+  createPublicSiteRegistry,
   isPublishableGuide,
   orderFeaturedContent,
   orderLatestContent,
@@ -44,61 +44,17 @@ function buildCategoryViews(registry) {
   }));
 }
 
-function buildTopicPageRecords(categoryViews) {
-  return Object.freeze(categoryViews.flatMap((category) => (
-    category.topics.filter(({ mode }) => mode === 'standalone').map((topic) => Object.freeze({
-      kind: 'topic',
-      route: topic.route,
-      canonicalRoute: topic.route,
-      slug: topic.id,
-      title: topic.label,
-      description: topic.description,
-      categoryId: category.id,
-      topicId: topic.id,
-      articleType: 'topic',
-      updatedDate: topic.guides[0]?.updatedDate ?? topic.guides[0]?.publishedDate ?? null,
-      publishedDate: null,
-      feedEligible: false,
-      searchEligible: true,
-      sitemapEligible: true,
-      llmsEligible: true,
-      featured: false,
-      editorialPriority: 0,
-      draft: false,
-      preview: false,
-      thin: false,
-      redirectState: null,
-      retirementState: null,
-      legacy: Object.freeze({ sourceKind: 'generated-topic', sourcePath: null }),
-      provenance: Object.freeze({
-        title: 'taxonomy',
-        description: 'taxonomy',
-        dates: 'normalized-topic-guides-or-absent',
-        eligibility: 'normalized-topic-threshold',
-      }),
-    }))
-  )));
-}
-
 let cachedRoot;
 let cachedValue;
 
 export function getPublicSiteData(root = process.cwd()) {
   if (cachedValue && cachedRoot === root) return cachedValue;
-  const documentRegistry = createPublicDocumentRegistry({
-    sources: discoverTrackedPublicSources(root),
+  const publicRegistry = createPublicSiteRegistry({
+    sources: discoverTrackedPublicSources(root, { taxonomy }),
     taxonomy,
   });
-  const registry = Object.freeze(documentRegistry.filter(({ kind }) => kind === 'article'));
+  const registry = Object.freeze(publicRegistry.filter(({ kind }) => kind === 'article'));
   const categoryViews = buildCategoryViews(registry);
-  const publicRegistry = Object.freeze([
-    ...documentRegistry,
-    ...buildTopicPageRecords(categoryViews),
-  ].sort((left, right) => left.route.localeCompare(right.route)));
-  const routes = publicRegistry.map(({ route }) => route);
-  if (new Set(routes).size !== routes.length) {
-    throw new Error(`Duplicate normalized public route: ${routes.join(', ')}`);
-  }
   cachedRoot = root;
   cachedValue = Object.freeze({
     taxonomy,

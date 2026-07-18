@@ -1,12 +1,22 @@
 import assert from 'node:assert/strict';
+import path from 'node:path';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 
+import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
+import { createPublicSiteRegistry } from '../src/lib/public-content/model.mjs';
 import {
-  PHASE_C_DOCUMENT_ROUTES,
-  RETIRED_DOCUMENT_ROUTES,
   pagefindAttributesForPage,
   pagefindMetadataForRecord,
 } from '../src/lib/public-content/pagefind-policy.mjs';
+import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
+
+const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
+const publicRegistry = createPublicSiteRegistry({
+  sources: discoverTrackedPublicSources(root, { taxonomy }),
+  taxonomy,
+});
 
 const publishable = {
   route: '/articles/example/',
@@ -50,8 +60,12 @@ test('draft, preview, thin, redirected, and retired records are excluded fail cl
   assert.throws(() => pagefindMetadataForRecord({ ...publishable, draft: true }), /contradictory Pagefind eligibility/i);
 });
 
-test('the 16 active Phase C documents are unique and disjoint from retired sources', () => {
-  assert.equal(PHASE_C_DOCUMENT_ROUTES.length, 16);
-  assert.equal(new Set(PHASE_C_DOCUMENT_ROUTES).size, 16);
-  assert.ok(RETIRED_DOCUMENT_ROUTES.every((route) => !PHASE_C_DOCUMENT_ROUTES.includes(route)));
+test('the normalized registry owns active routes and stays disjoint from inactive route contracts', () => {
+  const activeRoutes = publicRegistry.map(({ route }) => route);
+  const inactiveRoutes = taxonomy.TARGET_ROUTE_CONTRACTS
+    .filter(({ route, outcome }) => !route.includes('*') && ['redirect', 'terminal'].includes(outcome))
+    .map(({ route }) => route);
+  assert.equal(activeRoutes.length, 16);
+  assert.equal(new Set(activeRoutes).size, activeRoutes.length);
+  assert.ok(inactiveRoutes.every((route) => !activeRoutes.includes(route)));
 });

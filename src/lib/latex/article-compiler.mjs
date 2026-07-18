@@ -1,6 +1,5 @@
 import katex from 'katex';
 
-const SAFE_CATEGORY_IDS = new Set(['home-tech', 'home', 'kitchen', 'shop', 'tools']);
 const SAFE_ARTICLE_TYPES = new Set(['guide', 'editorial-standard']);
 const SAFE_TESTING_STATES = new Set(['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable']);
 const SAFE_DISCLOSURE_STATES = new Set(['no-paid-links']);
@@ -182,7 +181,7 @@ function validateUrl(value, sourcePath) {
   return parsed.toString();
 }
 
-function parsePreamble(source, sourcePath) {
+function parsePreamble(source, sourcePath, taxonomy) {
   const state = { source, sourcePath };
 
   const documentClass = state.source.match(/\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}/);
@@ -222,11 +221,14 @@ function parsePreamble(source, sourcePath) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbslug)) {
     fail('\\hbslug{...} must be a lowercase, hyphen-separated URL slug.', sourcePath);
   }
-  if (!SAFE_CATEGORY_IDS.has(values.hbcategory)) {
+  if (!taxonomy.hasTargetCategory(values.hbcategory)) {
     fail(`Unknown How Biscuit category: ${values.hbcategory}`, sourcePath);
   }
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbtopic)) {
     fail('\\hbtopic{...} must be a lowercase, hyphen-separated topic id.', sourcePath);
+  }
+  if (!taxonomy.hasTargetTopic(values.hbcategory, values.hbtopic)) {
+    fail(`Unknown How Biscuit topic: ${values.hbcategory}/${values.hbtopic}`, sourcePath);
   }
   if (!SAFE_ARTICLE_TYPES.has(values.hbtype)) {
     fail(`Unsupported How Biscuit article type: ${values.hbtype}`, sourcePath);
@@ -718,8 +720,15 @@ function articleHtml(metadata, parsed) {
   ].join('\n');
 }
 
-export function compileLatexArticle(rawSource, { sourcePath = '' } = {}) {
+export function compileLatexArticle(rawSource, { sourcePath = '', taxonomy } = {}) {
   if (typeof rawSource !== 'string' || !rawSource.trim()) fail('LaTeX source is empty.', sourcePath);
+  if (
+    !taxonomy
+    || typeof taxonomy.hasTargetCategory !== 'function'
+    || typeof taxonomy.hasTargetTopic !== 'function'
+  ) {
+    fail('The canonical public taxonomy is required.', sourcePath);
+  }
   const source = stripComments(rawSource);
   assertNoForbiddenCommands(source, sourcePath);
 
@@ -733,7 +742,7 @@ export function compileLatexArticle(rawSource, { sourcePath = '' } = {}) {
   }
   if (source.slice(end + endToken.length).trim()) fail('Content after \\end{document} is not allowed.', sourcePath);
 
-  const sourceMetadata = parsePreamble(source.slice(0, begin), sourcePath);
+  const sourceMetadata = parsePreamble(source.slice(0, begin), sourcePath, taxonomy);
   const body = source.slice(begin + beginToken.length, end);
   const parsed = new BodyParser(body, sourceMetadata, sourcePath).parse();
   const metadata = Object.freeze({

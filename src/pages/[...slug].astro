@@ -9,8 +9,7 @@ import CategoryLayout from '../layouts/CategoryLayout.astro';
 import HomeLayout from '../layouts/HomeLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
 import { orderLatestContent } from '../lib/public-content/model.mjs';
-import { PHASE_C_DOCUMENT_ROUTES } from '../lib/public-content/pagefind-policy.mjs';
-import { getPublicSiteData, routeFromEntryId } from '../lib/public-content/site-registry.mjs';
+import { createPublicPageCatalog, getPublicSiteData, routeFromEntryId } from '../lib/public-content/site-registry.mjs';
 
 type DocsEntry = CollectionEntry<'docs'>;
 interface PageProps {
@@ -49,6 +48,8 @@ interface SiteData {
 
 export async function getStaticPaths() {
   const entries = await getCollection('docs');
+  const siteData = getPublicSiteData() as SiteData;
+  createPublicPageCatalog(entries, siteData);
   const pages: Array<{ params: { slug: string | undefined }; props: PageProps }> = entries.map((entry) => {
     const route = routeFromEntryId(entry.id);
     return {
@@ -56,15 +57,7 @@ export async function getStaticPaths() {
       props: { entry, route },
     };
   });
-  const sourceRoutes = new Set(pages.map(({ props }) => props.route));
-  const expectedRoutes = new Set(PHASE_C_DOCUMENT_ROUTES);
-  const missingRoutes = [...expectedRoutes].filter((route) => !sourceRoutes.has(route));
-  const unexpectedRoutes = [...sourceRoutes].filter((route) => !expectedRoutes.has(route));
-  if (missingRoutes.length || unexpectedRoutes.length) {
-    throw new Error('Phase C document boundary mismatch. Missing: ' + (missingRoutes.join(', ') || 'none') + '. Unexpected: ' + (unexpectedRoutes.join(', ') || 'none') + '.');
-  }
-
-  const { categoryViews } = getPublicSiteData() as SiteData;
+  const { categoryViews } = siteData;
   for (const category of categoryViews) {
     for (const topic of category.topics.filter(({ mode }) => mode === 'standalone')) {
       pages.push({

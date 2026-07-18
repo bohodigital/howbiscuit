@@ -11,10 +11,9 @@ import {
   assertPiPagefindSkipAllowed,
 } from './lib/pagefind-platform-policy.mjs';
 import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
-import {
-  PHASE_C_DOCUMENT_ROUTES,
-  RETIRED_DOCUMENT_ROUTES,
-} from '../src/lib/public-content/pagefind-policy.mjs';
+import { createPublicSiteRegistry } from '../src/lib/public-content/model.mjs';
+import { pagefindMetadataForRecord } from '../src/lib/public-content/pagefind-policy.mjs';
+import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = process.cwd();
 const piSkipRequested = process.argv.includes('--pi-pagefind-skip');
@@ -22,6 +21,10 @@ const sitesPackageFinalizationRequested = process.argv.includes('--finalize-site
 const sitesPackageVerificationRequested = process.argv.includes('--verify-sites-package');
 const environmentSkipRequested = process.env.HOWBISCUIT_SKIP_PAGEFIND === '1';
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
+const normalizedPublicRegistry = createPublicSiteRegistry({
+  sources: discoverTrackedPublicSources(root, { taxonomy }),
+  taxonomy,
+});
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -86,13 +89,13 @@ function countText(value, needle) {
   return value.split(needle).length - 1;
 }
 
-function pagefindUrlFromFragment(filePath) {
+function pagefindPayloadFromFragment(filePath) {
   const decoded = gunzipSync(readFileSync(filePath)).toString('utf8');
   const jsonStart = decoded.indexOf('{');
   invariant(jsonStart >= 0, `Pagefind fragment has no JSON payload: ${filePath}`);
   const payload = JSON.parse(decoded.slice(jsonStart));
   invariant(typeof payload.url === 'string' && payload.url.startsWith('/'), `Pagefind fragment has no route: ${filePath}`);
-  return payload.url;
+  return payload;
 }
 
 function verifyPageHtml(route, html) {
@@ -133,11 +136,15 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   const docsRoot = path.join(root, 'src', 'content', 'docs');
   const sourceFiles = collectFiles(docsRoot, (filePath) => /\.(md|mdx)$/.test(filePath));
   const sourceRoutes = new Set(sourceFiles.map((filePath) => routeFromSource(filePath, docsRoot)));
-  const acceptedRoutes = new Set(PHASE_C_DOCUMENT_ROUTES);
-  invariant(acceptedRoutes.size === PHASE_C_DOCUMENT_ROUTES.length, 'The Phase C document route contract contains a duplicate.');
-  assertSetsEqual(acceptedRoutes, sourceRoutes, 'Phase C source document route set');
-  for (const route of RETIRED_DOCUMENT_ROUTES) {
-    invariant(!sourceRoutes.has(route), `Retired Phase C source route remains: ${route}`);
+  const normalizedDocumentRoutes = new Set(
+    normalizedPublicRegistry.filter(({ kind }) => kind !== 'topic').map(({ route }) => route),
+  );
+  assertSetsEqual(normalizedDocumentRoutes, sourceRoutes, 'Normalized source document route set');
+  const inactiveContractRoutes = taxonomy.TARGET_ROUTE_CONTRACTS
+    .filter(({ route, outcome }) => !route.includes('*') && ['redirect', 'terminal'].includes(outcome))
+    .map(({ route }) => route);
+  for (const route of inactiveContractRoutes) {
+    invariant(!sourceRoutes.has(route), `Inactive source route remains in public content: ${route}`);
   }
 
   const htmlFiles = collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html'));
@@ -145,6 +152,8 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
     routeFromHtml(filePath, artifactRoot),
     readFileSync(filePath, 'utf8'),
   ]));
+  const acceptedRecords = normalizedPublicRegistry.filter(({ searchEligible }) => searchEligible === true);
+  const acceptedRoutes = new Set(acceptedRecords.map(({ route }) => route));
   const expectedHtmlRoutes = new Set([...acceptedRoutes, '/404.html']);
   assertSetsEqual(expectedHtmlRoutes, new Set(htmlByRoute.keys()), `${label} HTML route set`);
   for (const [route, html] of htmlByRoute) verifyPageHtml(route, html);
@@ -154,7 +163,7 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
       .filter(([, html]) => html.includes('data-pagefind-body'))
       .map(([route]) => route),
   );
-  const expectedEligibleRoutes = new Set(acceptedRoutes);
+  const expectedEligibleRoutes = new Set(acceptedRecords.map(({ route }) => route));
   assertSetsEqual(expectedEligibleRoutes, eligibleRoutes, `${label} Pagefind-eligible route set`);
 
   const sitemap = readFileSync(path.join(artifactRoot, 'sitemap.xml'), 'utf8');
@@ -175,7 +184,9 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   }
 
   const feed = readFileSync(path.join(artifactRoot, 'feed.xml'), 'utf8');
-  const articleRoutes = [...acceptedRoutes].filter((route) => route.startsWith('/articles/') && route !== '/articles/');
+  const articleRoutes = acceptedRecords
+    .filter(({ kind, feedEligible }) => kind === 'article' && feedEligible === true)
+    .map(({ route }) => route);
   for (const route of articleRoutes) {
     invariant(feed.includes(`https://howbiscuit.com${route}`), `${label} feed is missing ${route}.`);
   }
@@ -197,9 +208,29 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   const fragments = existsSync(fragmentRoot)
     ? collectFiles(fragmentRoot, (filePath) => filePath.endsWith('.pf_fragment'))
     : [];
-  const indexedRoutes = new Set(fragments.map(pagefindUrlFromFragment));
-  invariant(indexedRoutes.size === fragments.length, `${label} has duplicate Pagefind route fragments.`);
+  const fragmentByRoute = new Map(fragments.map((filePath) => {
+    const payload = pagefindPayloadFromFragment(filePath);
+    return [payload.url, payload];
+  }));
+  const indexedRoutes = new Set(fragmentByRoute.keys());
+  invariant(fragmentByRoute.size === fragments.length, `${label} has duplicate Pagefind route fragments.`);
   assertSetsEqual(eligibleRoutes, indexedRoutes, `${label} indexed Pagefind route set`);
+  for (const record of acceptedRecords) {
+    const expected = pagefindMetadataForRecord(record);
+    const payload = fragmentByRoute.get(record.route);
+    invariant(payload, `${label} has no Pagefind fragment for ${record.route}.`);
+    invariant(
+      payload.filters?.category?.includes(expected.filters.category),
+      `${label} Pagefind category filter differs for ${record.route}.`,
+    );
+    invariant(
+      payload.filters?.type?.includes(expected.filters.type),
+      `${label} Pagefind type filter differs for ${record.route}.`,
+    );
+    for (const [name, value] of Object.entries(expected.meta)) {
+      invariant(payload.meta?.[name] === value, `${label} Pagefind ${name} metadata differs for ${record.route}.`);
+    }
+  }
   return { htmlCount: htmlByRoute.size, eligibleCount: eligibleRoutes.size, fragmentCount: fragments.length };
 }
 

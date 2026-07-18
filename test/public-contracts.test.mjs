@@ -9,23 +9,23 @@ import {
   assertValidPriceBadgeProps,
   assertValidProductEvidence,
   createPublicContentRegistry,
-  createPublicDocumentRegistry,
+  createPublicSiteRegistry,
   isPublishableGuide,
   orderFeaturedContent,
   orderHomepageContent,
   orderLatestContent,
   selectRelatedContent,
+  topicMigrationDestinationForRegistry,
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
-import { PHASE_C_DOCUMENT_ROUTES } from '../src/lib/public-content/pagefind-policy.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src/config/public-taxonomy.ts'));
-const publicSources = discoverTrackedPublicSources(root);
+const publicSources = discoverTrackedPublicSources(root, { taxonomy });
 const sources = publicSources.filter(({ kind }) => kind === 'article');
 const registry = createPublicContentRegistry({ sources, taxonomy });
-const publicRegistry = createPublicDocumentRegistry({ sources: publicSources, taxonomy });
+const publicRegistry = createPublicSiteRegistry({ sources: publicSources, taxonomy });
 const bySlug = Object.fromEntries(registry.map((record) => [record.slug, record]));
 
 test('Phase C taxonomy activates exactly five categories and 31 threshold-gated topics', () => {
@@ -207,7 +207,10 @@ test('registry discovers exactly three source-owned, publishable records', () =>
 });
 
 test('one normalized public registry owns every document and eligibility decision', () => {
-  assert.deepEqual(publicRegistry.map(({ route }) => route), [...PHASE_C_DOCUMENT_ROUTES].sort());
+  assert.deepEqual(
+    publicRegistry.filter(({ kind }) => kind !== 'topic').map(({ route }) => route),
+    publicSources.map(({ route }) => route).sort(),
+  );
   assert.ok(publicRegistry.every(({ searchEligible, sitemapEligible, llmsEligible }) => (
     searchEligible === true && sitemapEligible === true && llmsEligible === true
   )));
@@ -226,6 +229,20 @@ test('current data exposes only two category filters and no standalone topic pag
   assert.equal(topicPublicationModeForRegistry({ registry, categoryId: 'kitchen', topicId: 'food-science', taxonomy }), 'filter');
   assert.equal(topicPublicationModeForRegistry({ registry, categoryId: 'home-tech', topicId: 'wifi-routers', taxonomy }), 'hidden');
   assert.throws(() => topicPublicationModeForRegistry({ registry, categoryId: 'home-tech', topicId: 'not-real', taxonomy }), /Unknown topic/);
+  assert.equal(topicMigrationDestinationForRegistry({
+    legacyRef: 'home-tech/streaming-tvs', registry, taxonomy,
+  }), '/home-tech/');
+  const template = registry.find(({ articleType }) => articleType === 'guide');
+  const withThreeStreamingGuides = [0, 1, 2].reduce((items, index) => ([...items, {
+    ...template,
+    route: `/articles/streaming-threshold-${index}/`,
+    slug: `streaming-threshold-${index}`,
+    categoryId: 'home-tech',
+    topicId: 'tvs-streaming',
+  }]), registry);
+  assert.equal(topicMigrationDestinationForRegistry({
+    legacyRef: 'home-tech/streaming-tvs', registry: withThreeStreamingGuides, taxonomy,
+  }), '/home-tech/tvs-streaming/');
 });
 
 test('homepage, latest, featured, and related ordering are deterministic', () => {

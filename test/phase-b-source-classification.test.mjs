@@ -4,10 +4,12 @@ import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
+import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
 import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const sources = discoverTrackedArticleSources(root);
+const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
+const sources = discoverTrackedArticleSources(root, { taxonomy });
 
 test('Phase C classifications and global article-service metadata are source-owned', () => {
   assert.equal(existsSync(path.join(root, 'src/lib/public-content/classification-manifest.mjs')), false);

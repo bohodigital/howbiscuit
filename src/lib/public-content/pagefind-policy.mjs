@@ -1,41 +1,3 @@
-/**
- * Exact Phase C document boundary. Standalone topic routes are added only by
- * the normalized threshold policy when a topic has at least three guides.
- */
-export const PHASE_C_DOCUMENT_ROUTES = Object.freeze([
-  '/',
-  '/about/',
-  '/affiliate-disclosure/',
-  '/articles/',
-  '/articles/how-does-baking-powder-work/',
-  '/articles/why-are-some-answers-better-than-others/',
-  '/articles/why-salt-melts-ice/',
-  '/contact/',
-  '/corrections/',
-  '/editorial-policy/',
-  '/home-tech/',
-  '/home/',
-  '/kitchen/',
-  '/privacy/',
-  '/shop/',
-  '/tools/',
-]);
-
-export const RETIRED_DOCUMENT_ROUTES = Object.freeze([
-  '/buying-guides/',
-  '/cook/',
-  '/glossary/',
-  '/home-tech/gaming-pcs/',
-  '/home-tech/laptops/',
-  '/home-tech/privacy-security/',
-  '/home-tech/smart-home/',
-  '/home-tech/streaming-tvs/',
-  '/home-tech/wifi-routers/',
-  '/make-do/',
-  '/research-writing/',
-  '/science/',
-]);
-
 function hasExcludedState(record) {
   return record?.draft === true
     || record?.preview === true
@@ -56,7 +18,7 @@ export function pagefindMetadataForRecord(record) {
     include: true,
     filters: Object.freeze({
       category: record.categoryId ?? 'editorial',
-      type: record.articleType,
+      type: record.articleType ?? record.kind ?? 'page',
     }),
     meta: Object.freeze({
       title: record.title,

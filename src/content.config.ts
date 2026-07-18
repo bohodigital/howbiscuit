@@ -2,7 +2,14 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const categoryId = z.enum(['home-tech', 'home', 'kitchen', 'shop', 'tools']);
+import {
+  PUBLIC_CATEGORIES,
+  hasTargetTopic,
+  type PublicCategoryId,
+} from './config/public-taxonomy';
+
+const publicCategoryIds = PUBLIC_CATEGORIES.map(({ id }) => id) as [PublicCategoryId, ...PublicCategoryId[]];
+const categoryId = z.enum(publicCategoryIds);
 const sourceNote = z.object({
   title: z.string().min(1),
   publisher: z.string().min(1),
@@ -70,8 +77,12 @@ const docs = defineCollection({
         context.addIssue({ code: 'custom', path: [field], message: `Article pages require ${field}.` });
       }
     }
-    if (data.articleType === 'guide' && (!data.categoryId || !data.topicId)) {
-      context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Guide articles require category and topic metadata.' });
+    if (data.articleType === 'guide') {
+      if (!data.categoryId || !data.topicId) {
+        context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Guide articles require category and topic metadata.' });
+      } else if (!hasTargetTopic(data.categoryId, data.topicId)) {
+        context.addIssue({ code: 'custom', path: ['topicId'], message: 'Guide articles require a topic from the canonical public taxonomy.' });
+      }
     }
     if (data.articleType === 'editorial-standard' && (data.categoryId !== null || data.topicId !== null)) {
       context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Editorial standards must remain categoryless.' });
