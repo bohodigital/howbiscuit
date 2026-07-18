@@ -12,6 +12,8 @@ Implementation commit: `948237bc70810c0c16bea2583d0575739a95d110`
 
 Documentation candidate transferred to Pi: `433c8a23b0f34b31fb5c6c16ca62ab839d991240`
 
+Blocking-review reconciliation candidate validated on Pi: `d3bcea21a983e4fb4fbe9dd731f2d55b6583446c`
+
 ## Phase boundary and status
 
 Phase B replaces Starlight's public rendering and shell responsibilities with a custom Astro implementation. This document describes an implementation candidate; it is not by itself an acceptance decision or production release.
@@ -202,7 +204,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 
 ### Raspberry Pi
 
-The candidate was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`.
+The reconciliation candidate `d3bcea21a983e4fb4fbe9dd731f2d55b6583446c` was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`.
 
 Pi validation passed:
 
@@ -212,11 +214,12 @@ Pi validation passed:
 - `npm run qa:pi`: passed.
 - Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 26 pages.
-- Node tests: 40 passed, 0 failed.
+- Node tests: 44 passed, 0 failed.
 - Content lint: 25 MDX sources and 32 Pi-built files.
+- Artifact contracts: exact 26-route HTML set and 20 Pagefind-eligible routes passed; all five known thin routes were excluded.
 - Native Pagefind execution: skipped only after the platform guard passed; `dist/pagefind/pagefind.js` was absent as required for the validation-only Pi artifact.
 - Loopback preview: home 200, representative LaTeX article 200, unknown route 404.
-- Preview process: stopped and verified absent after the check.
+- Preview cleanup: npm left its child preview process bound after the wrapper exited; the task-owned listener on port 4324 was stopped explicitly and the port was verified clear.
 - Git worktree: clean at the transferred candidate.
 
 The Pi artifact remains validation-only and must never be promoted as a release artifact. A release artifact still requires the full x64 Pagefind build.
