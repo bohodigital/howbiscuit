@@ -10,6 +10,8 @@ Working branch: `feature/howbiscuit-h1-b-custom-astro-shell`
 
 Implementation commit: `948237bc70810c0c16bea2583d0575739a95d110`
 
+Documentation candidate transferred to Pi: `433c8a23b0f34b31fb5c6c16ca62ab839d991240`
+
 ## Phase boundary and status
 
 Phase B replaces Starlight's public rendering and shell responsibilities with a custom Astro implementation. This document describes an implementation candidate; it is not by itself an acceptance decision or production release.
@@ -179,7 +181,24 @@ Fresh-context architecture, frontend, accessibility, and test reviews of the com
 
 ### Raspberry Pi
 
-Pi validation must run from the canonical Phase B Pi worktree after the candidate commit is transferred. `npm run qa:pi` must prove Linux ARM64 with a 16,384-byte page size and pass every gate except native Pagefind execution. The Pi artifact is validation-only and must never be promoted as a release artifact.
+The candidate was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`.
+
+Pi validation passed:
+
+- Platform proof: Linux ARM64 with a 16,384-byte page size.
+- Runtime: Node `v24.18.0`, npm `11.16.0`.
+- `npm ci`: passed; the same six audit findings were reported.
+- `npm run qa:pi`: passed.
+- Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
+- Static build: 26 pages.
+- Node tests: 40 passed, 0 failed.
+- Content lint: 25 MDX sources and 32 Pi-built files.
+- Native Pagefind execution: skipped only after the platform guard passed; `dist/pagefind/pagefind.js` was absent as required for the validation-only Pi artifact.
+- Loopback preview: home 200, representative LaTeX article 200, unknown route 404.
+- Preview process: stopped and verified absent after the check.
+- Git worktree: clean at the transferred candidate.
+
+The Pi artifact remains validation-only and must never be promoted as a release artifact. A release artifact still requires the full x64 Pagefind build.
 
 ## Known limitations and deferred work
 
