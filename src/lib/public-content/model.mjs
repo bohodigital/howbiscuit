@@ -6,6 +6,21 @@ function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim().length > 0;
 }
 
+const PRICE_BADGE_STATES = new Set(['observed', 'estimate', 'unavailable', 'stale']);
+
+export function assertValidPriceBadgeProps({ state, observedAt } = {}) {
+  if (!PRICE_BADGE_STATES.has(state)) {
+    throw new Error('Price badges require a recognized price state.');
+  }
+  if ((state === 'observed' || state === 'stale') && !isNonEmptyString(observedAt)) {
+    throw new Error(`${state} price badges require an observation date.`);
+  }
+  if ((state === 'estimate' || state === 'unavailable') && observedAt !== undefined) {
+    throw new Error(`${state} price badges must not claim an observation date.`);
+  }
+  return { state, observedAt };
+}
+
 export function assertValidProductEvidence(product) {
   if (!product || typeof product !== 'object' || Array.isArray(product)) {
     throw new Error('Product evidence must be an object.');

@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
 import {
+  assertValidPriceBadgeProps,
   assertValidProductEvidence,
   createPublicContentRegistry,
   isPublishableGuide,
@@ -88,6 +89,17 @@ test('product evidence states reject contradictory runtime data', () => {
   assert.throws(() => assertValidProductEvidence({ ...core, priceState: 'unavailable', price: '$10' }), /must not imply a price observation/i);
   assert.throws(() => assertValidProductEvidence({ ...core, priceState: 'observed', price: '$10', source: 'Example source' }), /require price, observedAt, and source/i);
   assert.throws(() => assertValidProductEvidence({ ...core, priceState: 'invented' }), /recognized price state/i);
+});
+
+test('standalone price badges reject unknown and contradictory runtime states', () => {
+  assert.doesNotThrow(() => assertValidPriceBadgeProps({ state: 'observed', observedAt: '2026-07-18' }));
+  assert.doesNotThrow(() => assertValidPriceBadgeProps({ state: 'estimate' }));
+  assert.throws(() => assertValidPriceBadgeProps({ state: 'invented' }), /recognized price state/i);
+  assert.throws(() => assertValidPriceBadgeProps({ state: 'stale' }), /require an observation date/i);
+  assert.throws(
+    () => assertValidPriceBadgeProps({ state: 'unavailable', observedAt: '2026-07-18' }),
+    /must not claim an observation date/i,
+  );
 });
 
 test('target taxonomy is exact, unique, ordered, descriptive, and explicitly unimplemented', () => {

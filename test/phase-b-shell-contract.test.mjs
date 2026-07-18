@@ -184,6 +184,8 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
   assert.match(publicModel, /Estimated product prices must not claim an observation date/);
   assert.match(publicModel, /Unavailable products must not imply a price observation/);
   assert.match(priceStatusBadge, /estimate' \| 'unavailable'; observedAt\?: never/);
+  assert.match(priceStatusBadge, /assertValidPriceBadgeProps\(\{ state, observedAt \}\)/);
+  assert.match(publicModel, /Price badges require a recognized price state/);
 });
 
 test('the built artifact has the exact accepted routes, per-page metadata, tracker counts, and H1 counts', () => {

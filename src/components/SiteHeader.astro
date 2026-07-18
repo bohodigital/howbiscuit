@@ -107,7 +107,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
 </dialog>
 
 <script>
-  import { createInitialModalState, reduceModalState, resolveModalFocusReturnId } from '../lib/ui/modal-coordinator.mjs';
+  import { createInitialModalState, modalFocusReturnCandidates, reduceModalState } from '../lib/ui/modal-coordinator.mjs';
 
   const dialogs = new Map([
     ['mobile-navigation', document.querySelector<HTMLDialogElement>('#mobile-navigation-dialog')],
@@ -146,10 +146,16 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     modalState = reduceModalState(modalState, { type: 'close', reason });
     if (dialog?.open) dialog.close();
     document.body.classList.remove('hb-modal-open');
-    const focusTargetId = modalState.focusTargetId
-      ? resolveModalFocusReturnId(modalState.focusTargetId, desktopNavigationMedia.matches)
-      : null;
-    const focusTarget = returnFocus && focusTargetId ? document.getElementById(focusTargetId) : null;
+    let focusTarget: HTMLElement | null = null;
+    if (returnFocus && modalState.focusTargetId) {
+      for (const candidateId of modalFocusReturnCandidates(modalState.focusTargetId)) {
+        const candidate = document.getElementById(candidateId);
+        if (candidate && candidate.getClientRects().length > 0) {
+          focusTarget = candidate;
+          break;
+        }
+      }
+    }
     if (focusTarget) window.requestAnimationFrame(() => focusTarget.focus());
   }
 

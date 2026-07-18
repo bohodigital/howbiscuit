@@ -6,8 +6,8 @@ import { fileURLToPath } from 'node:url';
 
 import {
   createInitialModalState,
+  modalFocusReturnCandidates,
   reduceModalState,
-  resolveModalFocusReturnId,
 } from '../src/lib/ui/modal-coordinator.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -67,12 +67,12 @@ test('the mobile dialog is dismissed without focusing a hidden trigger when desk
 });
 
 test('search focus return follows the visible trigger across the navigation breakpoint', () => {
-  assert.equal(resolveModalFocusReturnId('mobile-search-trigger', true), 'search-trigger');
-  assert.equal(resolveModalFocusReturnId('search-trigger', false), 'mobile-search-trigger');
-  assert.equal(resolveModalFocusReturnId('mobile-navigation-trigger', false), 'mobile-navigation-trigger');
-  assert.throws(() => resolveModalFocusReturnId('', true), /focus-return target/i);
-  assert.throws(() => resolveModalFocusReturnId('search-trigger', 'desktop'), /must be a boolean/i);
+  assert.deepEqual(modalFocusReturnCandidates('mobile-search-trigger'), ['mobile-search-trigger', 'search-trigger']);
+  assert.deepEqual(modalFocusReturnCandidates('search-trigger'), ['search-trigger', 'mobile-search-trigger']);
+  assert.deepEqual(modalFocusReturnCandidates('mobile-navigation-trigger'), ['mobile-navigation-trigger']);
+  assert.throws(() => modalFocusReturnCandidates(''), /focus-return target/i);
 
   const header = readFileSync(path.join(root, 'src', 'components', 'SiteHeader.astro'), 'utf8');
-  assert.match(header, /resolveModalFocusReturnId\(modalState\.focusTargetId, desktopNavigationMedia\.matches\)/);
+  assert.match(header, /modalFocusReturnCandidates\(modalState\.focusTargetId\)/);
+  assert.match(header, /candidate\.getClientRects\(\)\.length > 0/);
 });

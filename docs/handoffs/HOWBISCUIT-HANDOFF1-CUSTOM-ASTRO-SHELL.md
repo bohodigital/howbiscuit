@@ -14,7 +14,9 @@ Documentation candidate transferred to Pi: `433c8a23b0f34b31fb5c6c16ca62ab839d99
 
 Blocking-review reconciliation candidate validated on Pi: `d3bcea21a983e4fb4fbe9dd731f2d55b6583446c`
 
-Post-review route-boundary and contrast correction validated on Pi: `253f1d23921048bffee71c56108cb489ea233b79`
+Prior post-review route-boundary and contrast correction validated on Pi: `253f1d23921048bffee71c56108cb489ea233b79`
+
+The canonical work-order report records the exact completion commit and its final Pi validation because a commit cannot reliably name itself.
 
 ## Phase boundary and status
 
@@ -176,8 +178,8 @@ Fresh-context Codex architecture, frontend/accessibility, and test-evidence revi
 - The Home Tech title switches from white to dark ink when the dark theme lightens the blue background, preserving WCAG-AA contrast for its small inherited copy.
 - The inverted dark-theme panic-strip label and the panic-strip and LaTeX-paper focus rings use context-specific foregrounds with explicit text and non-text contrast assertions.
 - Small LaTeX related-guide labels use a foreground that remains WCAG-AA compliant on both paper and honey hover backgrounds.
-- Search focus return resolves to the currently visible desktop or mobile trigger after a viewport breakpoint change.
-- Product evidence now runs through an executable shared validator; estimate and unavailable states reject observation dates at runtime, and the price badge receives dates only for observed or stale states.
+- Search focus return checks actual rendered visibility and chooses the first visible desktop or mobile trigger after a viewport breakpoint change, including fractional zoom widths.
+- Product evidence and standalone price badges now run through executable shared validators; unknown states and contradictory observation dates fail closed, and the price badge receives dates only for observed or stale states.
 
 Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candidate remain blocking before acceptance.
 
@@ -188,7 +190,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 - LaTeX compilation: passed for one canonical article.
 - Contract-scoped TypeScript: passed.
 - Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
-- Node tests: 46 passed, 0 failed.
+- Node tests: 47 passed, 0 failed.
 - Content lint: passed for 25 MDX sources and 33 built files.
 - Static build: 26 pages.
 - Pagefind: 20 eligible pages, 20 indexed fragments, 1,300 words, 2 filters; all five known thin routes were absent from the fragment route set.
@@ -214,7 +216,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 
 ### Raspberry Pi
 
-The post-review correction candidate `253f1d23921048bffee71c56108cb489ea233b79` was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`.
+The prior post-review correction candidate `253f1d23921048bffee71c56108cb489ea233b79` was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`. The canonical report owns the exact completion commit and final Pi rerun.
 
 Pi validation passed:
 
@@ -224,7 +226,7 @@ Pi validation passed:
 - `npm run qa:pi`: passed.
 - Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 26 pages.
-- Node tests: 46 passed, 0 failed.
+- Node tests: 47 passed, 0 failed.
 - Content lint: 25 MDX sources and 32 Pi-built files.
 - Artifact contracts: exact 26-route HTML set and 20 Pagefind-eligible routes passed; all five known thin routes were excluded.
 - Native Pagefind execution: skipped only after the platform guard passed; `dist/pagefind/pagefind.js` was absent as required for the validation-only Pi artifact.

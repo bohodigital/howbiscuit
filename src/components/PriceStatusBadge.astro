@@ -1,15 +1,12 @@
 ---
+import { assertValidPriceBadgeProps } from '../lib/public-content/model.mjs';
+
 type PriceState = 'observed' | 'estimate' | 'unavailable' | 'stale';
 type Props =
   | { state: 'observed' | 'stale'; observedAt: string }
   | { state: 'estimate' | 'unavailable'; observedAt?: never };
 const { state, observedAt } = Astro.props;
 const labels: Record<PriceState, string> = { observed: 'Price observed', estimate: 'Price estimate', unavailable: 'Price unavailable', stale: 'Price may be stale' };
-if ((state === 'observed' || state === 'stale') && (typeof observedAt !== 'string' || !observedAt.trim())) {
-  throw new Error(`${state} price badges require an observation date.`);
-}
-if ((state === 'estimate' || state === 'unavailable') && observedAt !== undefined) {
-  throw new Error(`${state} price badges must not claim an observation date.`);
-}
+assertValidPriceBadgeProps({ state, observedAt });
 ---
 <span class="hb-badge hb-price-status" data-state={state}>{labels[state]}{observedAt && ` · ${observedAt}`}</span>
