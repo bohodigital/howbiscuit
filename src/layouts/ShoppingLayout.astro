@@ -1,0 +1,6 @@
+---
+import CategoryLayout from './CategoryLayout.astro';
+interface Props { title: string; description: string; canonical?: string; searchEligible?: boolean }
+const props = Astro.props;
+---
+<CategoryLayout {...props} sectionLabel="Shop Smarter"><div class="hb-shopping-content"><slot /></div></CategoryLayout>

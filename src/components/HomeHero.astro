@@ -1,29 +1,20 @@
----
-import Default from '@astrojs/starlight/components/Hero.astro';
-const isHomepage = Astro.locals.starlightRoute.id === '';
----
-
-{isHomepage ? (
-  <section class="hb-home-hero">
-    <div class="hb-hero-copy">
-      <p class="hb-kicker"><span>PRACTICAL HOW-TO GUIDES</span><i>Clear steps, costs, and limits</i></p>
-      <h1 id="_top">Fix it.<br /><em>Choose better.</em></h1>
-      <p class="hb-hero-dek">Step-by-step help for Wi-Fi, computers, smart homes, cooking, repairs, and buying decisions. Start with the answer, then follow the checks that apply to you.</p>
-      <div class="hb-hero-actions">
-        <a class="hb-button hb-button-primary" href="/home-tech/">Browse Home Tech <span>→</span></a>
-        <a class="hb-button hb-button-secondary" href="/articles/">View all articles</a>
-      </div>
+<section class="hb-home-hero">
+  <div class="hb-hero-copy">
+    <p class="hb-kicker"><span>PRACTICAL HOW-TO GUIDES</span><i>Clear steps, costs, and limits</i></p>
+    <h1>Fix it.<br /><em>Choose better.</em></h1>
+    <p class="hb-hero-dek">Step-by-step help for Wi-Fi, computers, smart homes, cooking, repairs, and buying decisions. Start with the answer, then follow the checks that apply to you.</p>
+    <div class="hb-hero-actions">
+      <a class="hb-button hb-button-primary" href="/home-tech/">Browse Home Tech <span aria-hidden="true">→</span></a>
+      <a class="hb-button hb-button-secondary" href="/articles/">View all guides</a>
     </div>
-    <aside class="hb-guide-standard" aria-label="What How Biscuit guides include">
-      <h2>Every guide should tell you:</h2>
-      <ol>
-        <li><b>What to do first</b><span>The safest useful step before you change settings or spend money.</span></li>
-        <li><b>What to check</b><span>A short diagnostic order so you can identify the actual problem.</span></li>
-        <li><b>How to fix it</b><span>Plain steps, expected results, and lower-cost alternatives.</span></li>
-        <li><b>When to stop</b><span>Clear limits for safety, warranties, rentals, and professional help.</span></li>
-      </ol>
-    </aside>
-  </section>
-) : (
-  <Default><slot /></Default>
-)}
+  </div>
+  <aside class="hb-guide-standard" aria-label="What How Biscuit guides include">
+    <h2>Every guide should tell you:</h2>
+    <ol>
+      <li><div><b>What to do first</b><span>The safest useful step before you change settings or spend money.</span></div></li>
+      <li><div><b>What to check</b><span>A short diagnostic order so you can identify the actual problem.</span></div></li>
+      <li><div><b>How to fix it</b><span>Plain steps, expected results, and lower-cost alternatives.</span></div></li>
+      <li><div><b>When to stop</b><span>Clear limits for safety, warranties, rentals, and professional help.</span></div></li>
+    </ol>
+  </aside>
+</section>

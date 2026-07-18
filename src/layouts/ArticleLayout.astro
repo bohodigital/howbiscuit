@@ -1,0 +1,70 @@
+---
+import ArticleMeta from '../components/ArticleMeta.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import DisclosureBanner from '../components/DisclosureBanner.astro';
+import BaseLayout from './BaseLayout.astro';
+
+interface Heading { depth: number; slug: string; text: string }
+interface ArticleRecord {
+  route: string;
+  title: string;
+  description: string;
+  categoryId: string | null;
+  articleType: string;
+  articleFormat: string;
+  publishedDate: string | null;
+  updatedDate: string | null;
+  readTime: string | null;
+  evidence: string | null;
+  testing: { state: string; notes?: readonly string[] };
+  searchEligible: boolean;
+  disclosure: { state: string };
+}
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  record: ArticleRecord;
+  headings?: Heading[];
+}
+const { title, description, canonical, record, headings = [] } = Astro.props;
+const outline = headings.filter(({ depth }) => depth === 2 || depth === 3);
+const categoryLabel = record.categoryId ?? 'Editorial';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: new URL(canonical, Astro.site).toString(),
+  datePublished: record.publishedDate ?? undefined,
+  dateModified: record.updatedDate ?? record.publishedDate ?? undefined,
+  author: { '@type': 'Organization', name: 'How Biscuit' },
+  publisher: { '@type': 'Organization', name: 'How Biscuit' },
+};
+---
+
+<BaseLayout {title} {description} {canonical} searchEligible={record.searchEligible} jsonLd={schema} mainClass="hb-article-page">
+  <article class:list={['hb-article-shell', record.articleFormat === 'latex' && 'hb-latex-article']}>
+    <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'All Guides', href: '/articles/' }, { label: title }]} />
+    <header class:list={['hb-article-title', record.articleFormat === 'latex' && 'hb-latex-site-context']}>
+      <div class="hb-article-labels" aria-label="Article classification">
+        <span data-pagefind-filter="category">{categoryLabel}</span>
+        <span data-pagefind-filter="type">{record.articleType}</span>
+      </div>
+      {record.articleFormat !== 'latex' && (
+        <><h1 data-pagefind-meta="title">{title}</h1><p data-pagefind-meta="description">{description}</p></>
+      )}
+      <ArticleMeta record={record} />
+    </header>
+    {record.disclosure?.state !== 'not-declared' && <DisclosureBanner disclosure={record.disclosure} />}
+    <div class:list={['hb-article-grid', outline.length === 0 && 'hb-article-grid-wide']}>
+      <div class="hb-content"><slot /></div>
+      {outline.length > 0 && (
+        <aside class="hb-article-toc" aria-labelledby="article-toc-title">
+          <h2 id="article-toc-title">On this page</h2>
+          <ol>{outline.map((heading) => <li data-depth={heading.depth}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>
+        </aside>
+      )}
+    </div>
+  </article>
+</BaseLayout>

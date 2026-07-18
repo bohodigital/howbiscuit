@@ -19,7 +19,11 @@ test('compiles the canonical article into static, accessible math markup', () =>
   const article = compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' });
   assert.equal(article.metadata.slug, 'why-salt-melts-ice');
   assert.equal(article.metadata.division, 'science');
+  assert.equal(article.metadata.categoryId, 'home');
+  assert.equal(article.metadata.topicId, 'heating-cooling');
+  assert.equal(article.metadata.articleType, 'guide');
   assert.match(article.html, /class="hb-latex-paper"/);
+  assert.match(article.html, /<h1 data-pagefind-meta="title">/);
   assert.match(article.html, /class="katex-mathml"/);
   assert.match(article.html, /id="the-short-answer"/);
   assert.match(article.html, /aria-label="Equation 1"/);
@@ -27,12 +31,14 @@ test('compiles the canonical article into static, accessible math markup', () =>
   assert.equal(article.outline.filter((item) => item.depth === 2).length, 4);
 });
 
-test('generation is deterministic and produces a Starlight route module', () => {
+test('generation is deterministic and produces a custom Astro route module', () => {
   const first = compileLatexArticle(example);
   const second = compileLatexArticle(example);
   assert.equal(generatedMdx(first), generatedMdx(second));
   assert.equal(generatedModule(first), generatedModule(second));
   assert.match(generatedMdx(first), /articleFormat: latex/);
+  assert.match(generatedMdx(first), /categoryId: home/);
+  assert.match(generatedMdx(first), /topicId: heating-cooling/);
   assert.match(generatedMdx(first), /LatexArticle article=\{article\}/);
 });
 

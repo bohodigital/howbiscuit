@@ -48,6 +48,11 @@ const REQUIRED_METADATA = [
   'hbslug',
   'hbdescription',
   'hbdivision',
+  'hbcategory',
+  'hbtopic',
+  'hbarticletype',
+  'hbeditorialclassification',
+  'hbeditorialpriority',
   'hbevidence',
   'hbpubdate',
   'hbupdated',
@@ -225,6 +230,18 @@ function parsePreamble(source, sourcePath) {
   if (!SAFE_DIVISIONS.has(values.hbdivision)) {
     fail(`Unknown How Biscuit division: ${values.hbdivision}`, sourcePath);
   }
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbcategory)) {
+    fail('\\hbcategory{...} must be a lowercase, hyphen-separated category ID.', sourcePath);
+  }
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbtopic)) {
+    fail('\\hbtopic{...} must be a lowercase, hyphen-separated topic ID.', sourcePath);
+  }
+  if (!['guide', 'editorial-standard'].includes(values.hbarticletype)) {
+    fail('\\hbarticletype{...} must be guide or editorial-standard.', sourcePath);
+  }
+  if (!/^-?\d+$/.test(values.hbeditorialpriority)) {
+    fail('\\hbeditorialpriority{...} must be an integer.', sourcePath);
+  }
   if (!['true', 'false'].includes(values.feed) || !['true', 'false'].includes(values.featured)) {
     fail('\\hbfeed and \\hbfeatured must be true or false.', sourcePath);
   }
@@ -237,6 +254,11 @@ function parsePreamble(source, sourcePath) {
     slug: values.hbslug,
     description: values.hbdescription,
     division: values.hbdivision,
+    categoryId: values.hbcategory,
+    topicId: values.hbtopic,
+    articleType: values.hbarticletype,
+    editorialClassification: values.hbeditorialclassification,
+    editorialPriority: Number.parseInt(values.hbeditorialpriority, 10),
     evidence: values.hbevidence,
     pubDate: validateDate(values.hbpubdate, 'hbpubdate', sourcePath),
     updatedDate: validateDate(values.hbupdated, 'hbupdated', sourcePath),
@@ -664,7 +686,7 @@ function articleHtml(metadata, parsed) {
     '<article class="hb-latex-paper" data-article-format="latex">',
     '  <header class="hb-latex-masthead">',
     '    <p class="hb-latex-kicker">How Biscuit field paper</p>',
-    `    <h1>${title}</h1>`,
+    `    <h1 data-pagefind-meta="title">${title}</h1>`,
     `    <p class="hb-latex-author">${author}</p>`,
     `    <p class="hb-latex-date">${date}</p>`,
     `    <section class="hb-latex-abstract" aria-labelledby="latex-abstract"><h2 id="latex-abstract">Abstract</h2>${parsed.abstractHtml}</section>`,
@@ -713,6 +735,11 @@ description: ${yamlString(metadata.description)}
 kind: article
 articleFormat: latex
 division: ${metadata.division}
+categoryId: ${metadata.categoryId}
+topicId: ${metadata.topicId}
+articleType: ${metadata.articleType}
+editorialClassification: ${metadata.editorialClassification}
+editorialPriority: ${metadata.editorialPriority}
 feed: ${metadata.feed}
 pubDate: ${metadata.pubDate}
 updatedDate: ${metadata.updatedDate}

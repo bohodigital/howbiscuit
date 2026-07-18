@@ -1,0 +1,11 @@
+---
+interface TopicFilter { id: string; label: string; count: number }
+interface Props { topics: TopicFilter[]; activeId?: string; baseRoute: string }
+const { topics, activeId, baseRoute } = Astro.props;
+---
+<nav class="hb-topic-filters" aria-label="Filter guides by topic">
+  <a href={baseRoute} aria-current={!activeId ? 'page' : undefined}>All</a>
+  {topics.filter(({ count }) => count > 0).map((topic) => (
+    <a href={`${baseRoute}?topic=${encodeURIComponent(topic.id)}`} aria-current={activeId === topic.id ? 'page' : undefined}>{topic.label}<span>{topic.count}</span></a>
+  ))}
+</nav>

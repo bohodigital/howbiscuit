@@ -1,0 +1,20 @@
+---
+import PriceStatusBadge from './PriceStatusBadge.astro';
+interface Product {
+  name: string;
+  description: string;
+  href?: string;
+  price?: string;
+  priceState: 'observed' | 'estimate' | 'unavailable' | 'stale';
+  observedAt?: string;
+  source?: string;
+}
+interface Props { product: Product }
+const { product } = Astro.props;
+---
+<article class="hb-product-card">
+  <h3>{product.href ? <a href={product.href}>{product.name}</a> : product.name}</h3>
+  <p>{product.description}</p>
+  <div>{product.price && <strong>{product.price}</strong>}<PriceStatusBadge state={product.priceState} observedAt={product.observedAt} /></div>
+  {product.source && <small>Source: {product.source}</small>}
+</article>

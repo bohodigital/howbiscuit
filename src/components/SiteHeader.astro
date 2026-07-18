@@ -1,88 +1,261 @@
 ---
-import Search from '@astrojs/starlight/components/Search.astro';
-import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
-import { menuSections } from '../data/site-taxonomy.mjs';
+import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
+
+interface Props { currentPath?: string }
+interface NavigationTopic { id: string; label: string; mode: 'filter' | 'standalone' }
+interface NavigationGuide { href: string; title: string; description: string; topicId: string | null }
+interface NavigationCategory {
+  id: string;
+  label: string;
+  description: string;
+  href: string | null;
+  topicLabels: readonly NavigationTopic[];
+  guideLinks: readonly NavigationGuide[];
+}
+interface NavigationModel {
+  categories: readonly NavigationCategory[];
+  allGuides: { label: string; href: string };
+}
+const { currentPath = '/' } = Astro.props;
+const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
 ---
 
-<div class="hb-site-header">
-  <a class="hb-brand" href="/" aria-label="How Biscuit home">
-    <span>HOW BISCUIT</span><b>?</b><i>Practical guides</i>
-  </a>
-  <nav class="hb-reader-nav" aria-label="How Biscuit navigation">
-    <a class="hb-nav-link" href="/articles/">All Articles</a>
-    {menuSections.map((section) => (
-      <details class="hb-explore" name="hb-navigation" data-section={section.slug}>
-        <summary>{section.label} <span class="hb-explore-caret" aria-hidden="true"></span></summary>
-        <div class="hb-explore-panel">
-          <a class="hb-explore-overview" href={section.href}>
-            <span>{section.label} Overview<small>{section.description}</small></span>
-          </a>
-          {section.topics.map((topic) => (
-            <a href={topic.href}><span>{topic.label}<small>{topic.description}</small></span></a>
-          ))}
-        </div>
-      </details>
-    ))}
-  </nav>
-  <div class="hb-header-tools">
-    <Search />
-    <ThemeSelect />
+<header class="hb-custom-header" data-pagefind-ignore="all">
+  <div class="hb-header-inner">
+    <a class="hb-brand" href="/" aria-label="How Biscuit home" aria-current={currentPath === '/' ? 'page' : undefined}>
+      <span>HOW BISCUIT</span><b aria-hidden="true">?</b><i>Practical guides</i>
+    </a>
+
+    <nav class="hb-desktop-nav" aria-label="Primary navigation">
+      {navigation.categories.map((category) => (
+        <details class="hb-category-menu" name="hb-primary-navigation" data-category={category.id}>
+          <summary>{category.label}<span aria-hidden="true"></span></summary>
+          <div class="hb-category-panel">
+            <div class="hb-category-intro"><strong>{category.label}</strong><p>{category.description}</p></div>
+            {category.topicLabels.length > 0 && (
+              <div class="hb-topic-labels" aria-label={`${category.label} published topics`}>
+                {category.topicLabels.map((topic) => <span>{topic.label}</span>)}
+              </div>
+            )}
+            {category.guideLinks.length > 0 && (
+              <div class="hb-menu-guides">
+                {category.guideLinks.map((guide) => (
+                  <a href={guide.href}><strong>{guide.title}</strong><small>{guide.description}</small></a>
+                ))}
+              </div>
+            )}
+          </div>
+        </details>
+      ))}
+      <a class="hb-all-guides-link" href={navigation.allGuides.href} aria-current={currentPath === '/articles/' ? 'page' : undefined}>{navigation.allGuides.label}</a>
+      <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog">Search</button>
+      <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light.">Theme: System</button>
+    </nav>
+
+    <div class="hb-mobile-actions">
+      <button class="hb-header-action" id="mobile-navigation-trigger" type="button" data-open-modal="mobile-navigation" aria-haspopup="dialog">Menu</button>
+      <button class="hb-header-action" id="mobile-search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog">Search</button>
+      <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light.">Theme</button>
+    </div>
   </div>
-</div>
+</header>
+
+<dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title">
+  <div class="hb-dialog-card">
+    <header><h2 id="mobile-navigation-title">Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu">Close</button></header>
+    <nav aria-label="Mobile navigation">
+      {navigation.categories.map((category) => (
+        <details class="hb-mobile-category">
+          <summary>{category.label}<span aria-hidden="true">+</span></summary>
+          <div>
+            <p>{category.description}</p>
+            {category.topicLabels.length > 0 && <p class="hb-mobile-topic-labels">{category.topicLabels.map(({ label }) => <span>{label}</span>)}</p>}
+            {category.guideLinks.map((guide) => <a href={guide.href}>{guide.title}</a>)}
+          </div>
+        </details>
+      ))}
+      <a class="hb-mobile-all-guides" href={navigation.allGuides.href}>{navigation.allGuides.label}</a>
+    </nav>
+  </div>
+</dialog>
+
+<dialog class="hb-shell-dialog hb-search-dialog" id="search-dialog" aria-labelledby="search-dialog-title">
+  <div class="hb-dialog-card">
+    <header><h2 id="search-dialog-title">Search How Biscuit</h2><button type="button" data-close-modal aria-label="Close search">Close</button></header>
+    <form class="hb-search-form" role="search">
+      <label for="howbiscuit-search-input">Search published guides and pages</label>
+      <div><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" /><button type="submit">Search</button></div>
+    </form>
+    <p class="hb-search-status" role="status" aria-live="polite">Enter a word or phrase to search.</p>
+    <div class="hb-search-results" aria-label="Search results"></div>
+  </div>
+</dialog>
 
 <script>
-  const setupHeaderMenus = () => {
-    const nav = document.querySelector<HTMLElement>('.hb-reader-nav');
-    if (!nav || nav.dataset.menuReady === 'true') return;
+  import { createInitialModalState, reduceModalState } from '../lib/ui/modal-coordinator.mjs';
 
-    nav.dataset.menuReady = 'true';
-    const menus = Array.from(nav.querySelectorAll<HTMLDetailsElement>('details.hb-explore'));
-    const closeOthers = (current?: HTMLDetailsElement) => {
-      menus.forEach((menu) => {
-        if (menu !== current) menu.open = false;
-      });
+  const dialogs = new Map([
+    ['mobile-navigation', document.querySelector<HTMLDialogElement>('#mobile-navigation-dialog')],
+    ['search', document.querySelector<HTMLDialogElement>('#search-dialog')],
+  ]);
+  interface ModalViewState {
+    openModalId: 'mobile-navigation' | 'search' | null;
+    returnFocusId: string | null;
+    focusTargetId?: string | null;
+    closeReason?: string;
+  }
+  let modalState = createInitialModalState() as ModalViewState;
+
+  function openModal(modalId: 'mobile-navigation' | 'search', trigger: HTMLElement) {
+    const current = modalState.openModalId ? dialogs.get(modalState.openModalId) : null;
+    if (current?.open) current.close();
+    modalState = reduceModalState(modalState, {
+      type: 'open',
+      modalId,
+      returnFocusId: trigger.id,
+    });
+    const dialog = dialogs.get(modalId);
+    if (!dialog) return;
+    dialog.showModal();
+    document.body.classList.add('hb-modal-open');
+    const focusTarget = modalId === 'search'
+      ? dialog.querySelector<HTMLInputElement>('input[type="search"]')
+      : dialog.querySelector<HTMLElement>('summary, a, button');
+    window.requestAnimationFrame(() => focusTarget?.focus());
+  }
+
+  function closeModal(reason: 'button' | 'escape' | 'outside' | 'replacement' | 'result', returnFocus = true) {
+    if (!modalState.openModalId) return;
+    const dialog = dialogs.get(modalState.openModalId);
+    modalState = reduceModalState(modalState, { type: 'close', reason });
+    if (dialog?.open) dialog.close();
+    document.body.classList.remove('hb-modal-open');
+    const focusTarget = returnFocus && modalState.focusTargetId ? document.getElementById(modalState.focusTargetId) : null;
+    if (focusTarget) window.requestAnimationFrame(() => focusTarget.focus());
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-open-modal]').forEach((trigger) => {
+    trigger.addEventListener('click', () => openModal(trigger.dataset.openModal as 'mobile-navigation' | 'search', trigger));
+  });
+  document.querySelectorAll<HTMLElement>('[data-close-modal]').forEach((button) => button.addEventListener('click', () => closeModal('button')));
+  dialogs.forEach((dialog) => {
+    dialog?.addEventListener('cancel', (event) => { event.preventDefault(); closeModal('escape'); });
+    dialog?.addEventListener('pointerdown', (event) => { if (event.target === dialog) closeModal('outside'); });
+    dialog?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => closeModal('result')));
+  });
+
+  const desktopNavigationMedia = matchMedia('(min-width: 75.01rem)');
+  desktopNavigationMedia.addEventListener('change', ({ matches }) => {
+    if (matches && modalState.openModalId === 'mobile-navigation') closeModal('replacement', false);
+  });
+
+  const categoryMenus = Array.from(document.querySelectorAll<HTMLDetailsElement>('.hb-category-menu'));
+  const closeCategoryMenus = (except?: HTMLDetailsElement) => categoryMenus.forEach((menu) => { if (menu !== except) menu.open = false; });
+  categoryMenus.forEach((menu) => {
+    let closeTimer = 0;
+    const cancelClose = () => window.clearTimeout(closeTimer);
+    const scheduleClose = () => {
+      cancelClose();
+      closeTimer = window.setTimeout(() => { if (!menu.contains(document.activeElement)) menu.open = false; }, 180);
     };
+    menu.addEventListener('toggle', () => { if (menu.open) closeCategoryMenus(menu); });
+    menu.addEventListener('mouseenter', () => { cancelClose(); closeCategoryMenus(menu); menu.open = true; });
+    menu.addEventListener('mouseleave', scheduleClose);
+    menu.addEventListener('focusin', cancelClose);
+    menu.addEventListener('focusout', () => window.requestAnimationFrame(() => { if (!menu.contains(document.activeElement)) menu.open = false; }));
+  });
+  document.addEventListener('pointerdown', (event) => {
+    const target = event.target;
+    if (!(target instanceof Node) || !categoryMenus.some((menu) => menu.contains(target))) closeCategoryMenus();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    if (modalState.openModalId) {
+      event.preventDefault();
+      closeModal('escape');
+      return;
+    }
+    const menu = categoryMenus.find(({ open }) => open);
+    if (!menu) return;
+    menu.open = false;
+    menu.querySelector<HTMLElement>('summary')?.focus();
+  });
 
-    menus.forEach((menu) => {
-      let closeTimer = 0;
-      const cancelClose = () => window.clearTimeout(closeTimer);
-      const scheduleClose = () => {
-        cancelClose();
-        closeTimer = window.setTimeout(() => {
-          if (!menu.contains(document.activeElement)) menu.open = false;
-        }, 180);
-      };
-
-      menu.addEventListener('toggle', () => {
-        if (menu.open) closeOthers(menu);
-      });
-      menu.addEventListener('mouseenter', () => {
-        cancelClose();
-        closeOthers(menu);
-        menu.open = true;
-      });
-      menu.addEventListener('mouseleave', scheduleClose);
-      menu.addEventListener('focusin', cancelClose);
-      menu.addEventListener('focusout', () => {
-        window.requestAnimationFrame(() => {
-          if (!menu.contains(document.activeElement)) menu.open = false;
-        });
-      });
+  const themePreferences = ['system', 'light', 'dark'] as const;
+  const media = matchMedia('(prefers-color-scheme: dark)');
+  function applyTheme(preference: typeof themePreferences[number]) {
+    const resolved = preference === 'system' ? (media.matches ? 'dark' : 'light') : preference;
+    document.documentElement.dataset.themePreference = preference;
+    document.documentElement.dataset.theme = resolved;
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-control]').forEach((button) => {
+      const next = themePreferences[(themePreferences.indexOf(preference) + 1) % themePreferences.length];
+      const label = preference[0].toUpperCase() + preference.slice(1);
+      const nextLabel = next[0].toUpperCase() + next.slice(1);
+      button.textContent = button.closest('.hb-mobile-actions') ? 'Theme' : `Theme: ${label}`;
+      button.setAttribute('aria-label', `Theme: ${label}. Activate for ${nextLabel}.`);
     });
+  }
+  let storedTheme: string | null = null;
+  try { storedTheme = localStorage.getItem('howbiscuit-theme'); } catch { storedTheme = null; }
+  applyTheme(themePreferences.includes(storedTheme as typeof themePreferences[number]) ? storedTheme as typeof themePreferences[number] : 'system');
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-control]').forEach((button) => button.addEventListener('click', () => {
+    const current = document.documentElement.dataset.themePreference as typeof themePreferences[number];
+    const next = themePreferences[(themePreferences.indexOf(current) + 1) % themePreferences.length];
+    try { localStorage.setItem('howbiscuit-theme', next); } catch { /* Preference remains active for this page. */ }
+    applyTheme(next);
+  }));
+  media.addEventListener('change', () => { if (document.documentElement.dataset.themePreference === 'system') applyTheme('system'); });
 
-    document.addEventListener('pointerdown', (event) => {
-      if (!nav.contains(event.target as Node)) closeOthers();
-    });
-    document.addEventListener('keydown', (event) => {
-      if (event.key !== 'Escape') return;
-      const openMenu = menus.find((menu) => menu.open);
-      if (!openMenu) return;
-      const focusWasInside = openMenu.contains(document.activeElement);
-      openMenu.open = false;
-      if (focusWasInside) openMenu.querySelector('summary')?.focus();
-    });
-  };
-
-  setupHeaderMenus();
-  document.addEventListener('astro:page-load', setupHeaderMenus);
+  const searchForm = document.querySelector<HTMLFormElement>('.hb-search-form');
+  const searchInput = document.querySelector<HTMLInputElement>('#howbiscuit-search-input');
+  const searchStatus = document.querySelector<HTMLElement>('.hb-search-status');
+  const searchResults = document.querySelector<HTMLElement>('.hb-search-results');
+  let searchSequence = 0;
+  function setSearchStatus(message: string) { if (searchStatus) searchStatus.textContent = message; }
+  function textFromHtml(value: string) {
+    const template = document.createElement('template');
+    template.innerHTML = value;
+    return template.content.textContent?.trim() ?? '';
+  }
+  async function runSearch(query: string) {
+    const sequence = ++searchSequence;
+    if (!searchResults) return;
+    searchResults.replaceChildren();
+    if (!query.trim()) { setSearchStatus('Enter a word or phrase to search.'); return; }
+    setSearchStatus('Searching…');
+    try {
+      const pagefindPath = '/pagefind/pagefind.js';
+      const pagefind = await import(/* @vite-ignore */ pagefindPath);
+      const response = await pagefind.search(query.trim());
+      if (sequence !== searchSequence) return;
+      if (response.results.length === 0) { setSearchStatus(`No results found for “${query.trim()}”.`); return; }
+      const records = await Promise.all(response.results.slice(0, 12).map((result: { data: () => Promise<any> }) => result.data()));
+      if (sequence !== searchSequence) return;
+      const fragment = document.createDocumentFragment();
+      records.forEach((record) => {
+        const article = document.createElement('article');
+        article.className = 'hb-search-result-card';
+        const title = document.createElement('h3');
+        const link = document.createElement('a');
+        link.href = record.url;
+        link.textContent = record.meta?.title || record.url;
+        link.addEventListener('click', () => closeModal('result'));
+        title.append(link);
+        const description = document.createElement('p');
+        description.textContent = record.meta?.description || textFromHtml(record.excerpt || '');
+        const meta = document.createElement('span');
+        const filters = record.filters || {};
+        meta.textContent = [filters.category, filters.type, record.url].flat().filter(Boolean).join(' · ');
+        article.append(title, description, meta);
+        fragment.append(article);
+      });
+      searchResults.append(fragment);
+      setSearchStatus(`${records.length} result${records.length === 1 ? '' : 's'} found.`);
+    } catch (error) {
+      if (sequence !== searchSequence) return;
+      console.error('How Biscuit search failed', error);
+      setSearchStatus('Search is temporarily unavailable. Try again later or browse All Guides.');
+    }
+  }
+  searchForm?.addEventListener('submit', (event) => { event.preventDefault(); void runSearch(searchInput?.value ?? ''); });
 </script>

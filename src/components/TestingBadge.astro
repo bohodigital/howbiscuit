@@ -1,0 +1,11 @@
+---
+interface Props { state: string; label?: string }
+const { state, label } = Astro.props;
+const labels: Record<string, string> = {
+  tested: 'Tested',
+  declared: 'Testing declared',
+  'not-declared': 'Testing not declared',
+};
+const text = label ?? labels[state] ?? 'Testing status unavailable';
+---
+<span class="hb-badge hb-testing-badge" data-state={state}>{text}</span>

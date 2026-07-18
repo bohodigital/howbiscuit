@@ -1,0 +1,110 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { pagefindAttributesForPage } from '../lib/search/pagefind-policy.mjs';
+import '../styles/biscuit.css';
+import '../styles/shell.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  robots?: string;
+  image?: string;
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
+  searchEligible?: boolean;
+  analytics?: boolean;
+  mainClass?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.pathname,
+  robots = 'index, follow',
+  image = '/og.png',
+  jsonLd,
+  searchEligible = true,
+  analytics = true,
+  mainClass = '',
+} = Astro.props;
+const site = Astro.site ?? new URL('https://howbiscuit.com');
+const canonicalUrl = new URL(canonical, site).toString();
+const imageUrl = new URL(image, site).toString();
+const pageTitle = title === 'How Biscuit' ? title : `${title} | How Biscuit`;
+const structuredData = jsonLd ?? {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: canonicalUrl,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'How Biscuit',
+    url: site.toString(),
+  },
+};
+const pagefindAttributes = pagefindAttributesForPage({ searchEligible });
+---
+
+<!doctype html>
+<html lang="en" data-theme="light" data-theme-preference="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      (() => {
+        try {
+          const storedPreference = localStorage.getItem('howbiscuit-theme');
+          const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';
+          const resolved = preference === 'system'
+            ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            : preference;
+          document.documentElement.dataset.themePreference = preference;
+          document.documentElement.dataset.theme = resolved;
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#fff8e7" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="How Biscuit" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content="How Biscuit practical guides and troubleshooting." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    {analytics && (
+      <Fragment>
+        <script is:inline defer src="https://analytics.bohodigitalservices.com/script.js" data-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-domains="howbiscuit.com,www.howbiscuit.com" data-do-not-track="true" data-exclude-search="true"></script>
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-NG0NQMVFEH', { anonymize_ip: true });
+        </script>
+      </Fragment>
+    )}
+  </head>
+  <body>
+    <a class="hb-skip-link" href="#main-content">Skip to content</a>
+    <SiteHeader currentPath={Astro.url.pathname} />
+    <main id="main-content" class:list={['hb-main', mainClass]} {...pagefindAttributes}>
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

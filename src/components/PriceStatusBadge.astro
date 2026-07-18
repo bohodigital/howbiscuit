@@ -1,0 +1,7 @@
+---
+type PriceState = 'observed' | 'estimate' | 'unavailable' | 'stale';
+interface Props { state: PriceState; observedAt?: string }
+const { state, observedAt } = Astro.props;
+const labels: Record<PriceState, string> = { observed: 'Price observed', estimate: 'Price estimate', unavailable: 'Price unavailable', stale: 'Price may be stale' };
+---
+<span class="hb-badge hb-price-status" data-state={state}>{labels[state]}{observedAt && ` · ${observedAt}`}</span>

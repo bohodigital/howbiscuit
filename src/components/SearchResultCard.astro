@@ -1,0 +1,5 @@
+---
+interface Props { title: string; description: string; href: string; category?: string; type?: string }
+const { title, description, href, category, type } = Astro.props;
+---
+<article class="hb-search-result-card"><h3><a href={href}>{title}</a></h3><p>{description}</p><span>{[category, type, href].filter(Boolean).join(' · ')}</span></article>

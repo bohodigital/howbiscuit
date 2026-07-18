@@ -1,0 +1,6 @@
+---
+import CategoryLayout from './CategoryLayout.astro';
+interface Props { title: string; description: string; canonical?: string; searchEligible?: boolean }
+const props = Astro.props;
+---
+<CategoryLayout {...props} sectionLabel="Tools"><div class="hb-tool-content"><slot /></div></CategoryLayout>

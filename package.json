@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "How Biscuit publishing shell built with Astro Starlight.",
+  "description": "How Biscuit publishing shell built with custom Astro components.",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -13,22 +13,25 @@
     "contracts:check": "node scripts/check-public-contracts.mjs",
     "typecheck:contracts": "tsc --pretty false -p src/config/tsconfig.json",
     "dev": "npm run latex:compile && npm run contracts:check && astro dev",
-    "build": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check && astro build",
+    "build": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check && node scripts/build-static.mjs",
     "build:sites": "npm run build && node scripts/prepare-sites-build.mjs",
     "preview": "astro preview",
     "check": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check",
     "test": "npm run latex:compile && node --test test/*.test.mjs",
     "lint:content": "node scripts/lint-content.mjs",
-    "qa": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check && astro build && node --test test/*.test.mjs && node scripts/lint-content.mjs",
-    "qa:pi": "node scripts/run-pi-qa.mjs"
+    "qa": "npm run build && node --test test/*.test.mjs && node scripts/lint-content.mjs",
+    "qa:pi": "node scripts/run-pi-qa.mjs",
+    "qa:pi:inner": "npm run latex:compile && npm run contracts:check && npm run typecheck:contracts && astro check && node scripts/build-static.mjs --pi-pagefind-skip && node --test test/*.test.mjs && node scripts/lint-content.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/mdx": "5.0.6",
     "@astrojs/rss": "^4.0.19",
-    "@astrojs/starlight": "0.39.3",
+    "@astrojs/sitemap": "3.7.3",
     "astro": "6.4.2",
     "js-yaml": "4.3.0",
     "katex": "^0.17.0",
+    "pagefind": "1.5.2",
     "typescript": "^5.9.3"
   }
 }

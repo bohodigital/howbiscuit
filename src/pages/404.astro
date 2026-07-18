@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The requested How Biscuit page could not be found."
+  canonical="/404/"
+  robots="noindex, nofollow"
+  searchEligible={false}
+  analytics={false}
+  mainClass="hb-not-found-page"
+>
+  <section class="hb-not-found" data-pagefind-ignore="all">
+    <span>404</span>
+    <h1>That page is not in the biscuit tin.</h1>
+    <p>The address may be outdated, or the guide may not exist.</p>
+    <a class="hb-button hb-button-primary" href="/">Return home</a>
+  </section>
+</BaseLayout>

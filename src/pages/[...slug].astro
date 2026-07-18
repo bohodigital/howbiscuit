@@ -1,0 +1,81 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+
+import GuideCard from '../components/GuideCard.astro';
+import { OBSERVED_ROUTE_CONTRACTS } from '../config/public-taxonomy';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import CategoryLayout from '../layouts/CategoryLayout.astro';
+import HomeLayout from '../layouts/HomeLayout.astro';
+import ShoppingLayout from '../layouts/ShoppingLayout.astro';
+import ToolLayout from '../layouts/ToolLayout.astro';
+import TrustLayout from '../layouts/TrustLayout.astro';
+import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
+
+type DocsEntry = CollectionEntry<'docs'>;
+interface PageProps { entry: DocsEntry; route: string }
+interface RegistryRecord {
+  route: string;
+  title: string;
+  description: string;
+  categoryId: string | null;
+  topicId: string | null;
+  articleType: string;
+  articleFormat: string;
+  publishedDate: string | null;
+  updatedDate: string | null;
+  readTime: string | null;
+  evidence: string | null;
+  testing: { state: string; notes?: readonly string[] };
+  disclosure: { state: string };
+  searchEligible: boolean;
+}
+
+export async function getStaticPaths() {
+  const routeFromEntryId = (id: string): string => {
+    const clean = id.replace(/\.(md|mdx)$/, '').replace(/(^|\/)index$/, '');
+    return clean ? `/${clean}/` : '/';
+  };
+  const entries = await getCollection('docs');
+  const pages: Array<{ params: { slug: string | undefined }; props: PageProps }> = entries.map((entry) => ({
+    params: { slug: routeFromEntryId(entry.id).slice(1, -1) || undefined },
+    props: { entry, route: routeFromEntryId(entry.id) },
+  }));
+  const contentRoutes = new Set(pages.map(({ props }) => props.route));
+  for (const contract of OBSERVED_ROUTE_CONTRACTS.filter(({ outcome }) => outcome === 'serve')) {
+    if (!contentRoutes.has(contract.route)) {
+      throw new Error(`Observed served route has no custom-shell source: ${contract.route}`);
+    }
+  }
+  return pages;
+}
+
+const page = Astro.props as PageProps;
+const { registry } = getPublicSiteData() as { registry: readonly RegistryRecord[] };
+const { Content, headings } = await render(page.entry);
+const { data } = page.entry;
+const excluded = data.draft || data.preview || data.thin || Boolean(data.redirectState) || Boolean(data.retirementState);
+const record = data.kind === 'article' ? registry.find(({ route }) => route === page.route) : undefined;
+if (data.kind === 'article' && !record) throw new Error(`Article is missing from the normalized registry: ${page.route}`);
+---
+
+{data.kind === 'home' ? (
+  <HomeLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></HomeLayout>
+) : page.route === '/articles/' ? (
+  <CategoryLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
+    <Content />
+    <div class="hb-guide-grid">
+      {registry.filter((item) => item.searchEligible).map((item) => <GuideCard label={item.categoryId ?? 'Editorial standard'} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
+    </div>
+  </CategoryLayout>
+) : data.kind === 'article' && record ? (
+  <ArticleLayout title={data.title} description={data.description} canonical={page.route} {record} {headings}><Content /></ArticleLayout>
+) : data.kind === 'trust' ? (
+  <TrustLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></TrustLayout>
+) : data.division === 'buying-guides' ? (
+  <ShoppingLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></ShoppingLayout>
+) : data.division === 'tools' ? (
+  <ToolLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></ToolLayout>
+) : (
+  <CategoryLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></CategoryLayout>
+)}

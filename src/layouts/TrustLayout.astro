@@ -1,0 +1,13 @@
+---
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BaseLayout from './BaseLayout.astro';
+interface Props { title: string; description: string; canonical?: string; searchEligible?: boolean }
+const { title, description, canonical, searchEligible } = Astro.props;
+---
+<BaseLayout {title} {description} {canonical} {searchEligible} mainClass="hb-trust-page">
+  <div class="hb-page-shell hb-trust-shell">
+    <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: title }]} />
+    <header class="hb-page-title"><span>How Biscuit</span><h1 data-pagefind-meta="title">{title}</h1><p data-pagefind-meta="description">{description}</p></header>
+    <div class="hb-content"><slot /></div>
+  </div>
+</BaseLayout>

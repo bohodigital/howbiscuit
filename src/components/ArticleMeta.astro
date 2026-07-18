@@ -1,0 +1,22 @@
+---
+import EvidenceBadge from './EvidenceBadge.astro';
+import TestingBadge from './TestingBadge.astro';
+
+interface ArticleRecord {
+  publishedDate: string | null;
+  updatedDate: string | null;
+  readTime: string | null;
+  evidence: string | null;
+  testing: { state: string; notes?: readonly string[] };
+}
+interface Props { record: ArticleRecord }
+const { record } = Astro.props;
+const date = record.updatedDate ?? record.publishedDate;
+const formattedDate = date ? new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`)) : null;
+---
+<div class="hb-article-meta">
+  {formattedDate && <span>Updated <time datetime={date}>{formattedDate}</time></span>}
+  {record.readTime && <span>{record.readTime}</span>}
+  {record.evidence && <EvidenceBadge value="Researched" label={record.evidence} />}
+  <TestingBadge state={record.testing.state} />
+</div>

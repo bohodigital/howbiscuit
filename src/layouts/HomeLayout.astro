@@ -1,0 +1,12 @@
+---
+import HomeHero from '../components/HomeHero.astro';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props { title: string; description: string; canonical?: string; searchEligible?: boolean }
+const props = Astro.props;
+---
+
+<BaseLayout {...props} mainClass="hb-home-page">
+  <HomeHero />
+  <div class="hb-content hb-home-content"><slot /></div>
+</BaseLayout>

@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
-import { ARTICLE_CLASSIFICATION_MANIFEST } from '../src/lib/public-content/classification-manifest.mjs';
 import {
   createPublicContentRegistry,
   isPublishableGuide,
@@ -22,7 +21,6 @@ const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'pu
 const sources = discoverTrackedArticleSources(root);
 const registry = createPublicContentRegistry({
   sources,
-  classificationManifest: ARTICLE_CLASSIFICATION_MANIFEST,
   taxonomy,
 });
 
@@ -267,39 +265,16 @@ test('source adapter discovers each real tracked article once and ignores genera
   assert.ok(sources.every(({ sourcePath }) => sourcePath !== 'src/content/docs/articles/why-salt-melts-ice.mdx'));
 });
 
-test('classification manifest supplies only migration-only fields and has exact source parity', () => {
-  assert.deepEqual(Object.keys(ARTICLE_CLASSIFICATION_MANIFEST).sort(), expectedArticleRoutes);
-  const forbiddenDuplicateFields = [
-    'title',
-    'description',
-    'publishedDate',
-    'updatedDate',
-    'readTime',
-    'evidence',
-    'articleFormat',
-    'feed',
-    'featured',
-  ];
-  for (const [route, classification] of Object.entries(ARTICLE_CLASSIFICATION_MANIFEST)) {
-    for (const field of forbiddenDuplicateFields) {
-      assert.ok(!(field in classification), `${route} duplicates source field ${field}`);
-    }
-    assert.ok(classification.rationale.length >= 40);
+test('accepted classifications are owned by canonical article sources', () => {
+  for (const source of sources) {
+    assert.ok(['guide', 'editorial-standard'].includes(source.articleType), source.route);
+    assert.ok(Number.isInteger(source.editorialPriority), source.route);
+    assert.ok(source.editorialClassification, source.route);
   }
-
   assert.throws(() => createPublicContentRegistry({
-    sources: sources.slice(1),
-    classificationManifest: ARTICLE_CLASSIFICATION_MANIFEST,
+    sources: [{ ...sources[0], articleType: null }],
     taxonomy,
-  }), /classification parity/i);
-  assert.throws(() => createPublicContentRegistry({
-    sources,
-    classificationManifest: {
-      ...ARTICLE_CLASSIFICATION_MANIFEST,
-      '/articles/not-real/': ARTICLE_CLASSIFICATION_MANIFEST[expectedArticleRoutes[0]],
-    },
-    taxonomy,
-  }), /classification parity/i);
+  }), /unsupported article type/i);
 });
 
 test('normalized model derives source facts and applies the deliberate three-article classification', () => {
@@ -343,7 +318,7 @@ test('normalized model derives source facts and applies the deliberate three-art
     assert.equal(article.redirectState, null);
     assert.equal(article.retirementState, null);
     assert.equal(article.provenance.title, 'source');
-    assert.equal(article.provenance.categoryId, 'migration-classification');
+    assert.equal(article.provenance.categoryId, 'source');
   }
 });
 
@@ -418,22 +393,16 @@ test('ordering and related selection are immutable and deterministic on explicit
 
 test('normalizer invariants reject contradictory or unclassified records', () => {
   const saltSource = sources.find(({ route }) => route === '/articles/why-salt-melts-ice/');
-  const saltClass = ARTICLE_CLASSIFICATION_MANIFEST[saltSource.route];
   assert.throws(() => createPublicContentRegistry({
     sources: [{ ...saltSource, draft: true, featured: true }],
-    classificationManifest: { [saltSource.route]: saltClass },
     taxonomy,
   }), /featured content cannot be draft/i);
   assert.throws(() => createPublicContentRegistry({
     sources: [{ ...saltSource, feed: true, publishedDate: null }],
-    classificationManifest: { [saltSource.route]: saltClass },
     taxonomy,
   }), /feed content requires/i);
   assert.throws(() => createPublicContentRegistry({
-    sources: [saltSource],
-    classificationManifest: {
-      [saltSource.route]: { ...saltClass, topicId: 'not-real' },
-    },
+    sources: [{ ...saltSource, topicId: 'not-real' }],
     taxonomy,
   }), /unknown topic/i);
 
@@ -447,7 +416,6 @@ test('normalizer invariants reject contradictory or unclassified records', () =>
   for (const exclusion of exclusionCases) {
     const [record] = createPublicContentRegistry({
       sources: [{ ...saltSource, ...exclusion }],
-      classificationManifest: { [saltSource.route]: saltClass },
       taxonomy,
     });
     assert.equal(record.feedEligible, false);
@@ -459,37 +427,43 @@ test('normalizer invariants reject contradictory or unclassified records', () =>
 
 test('baseline tracker identities and public /guides/ absence are checked as exact source sets', () => {
   const astroConfig = readFileSync(path.join(root, 'astro.config.mjs'), 'utf8');
+  const baseLayout = readFileSync(path.join(root, 'src', 'layouts', 'BaseLayout.astro'), 'utf8');
   assert.deepEqual(
-    astroConfig.match(/https:\/\/analytics\.bohodigitalservices\.com\/script\.js/g),
+    baseLayout.match(/https:\/\/analytics\.bohodigitalservices\.com\/script\.js/g),
     ['https://analytics.bohodigitalservices.com/script.js'],
   );
   assert.deepEqual(
-    astroConfig.match(/fefef93c-b1d6-4d04-95d3-064af3d38a41/g),
+    baseLayout.match(/fefef93c-b1d6-4d04-95d3-064af3d38a41/g),
     ['fefef93c-b1d6-4d04-95d3-064af3d38a41'],
   );
   assert.deepEqual(
-    astroConfig.match(/https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-NG0NQMVFEH/g),
+    baseLayout.match(/https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-NG0NQMVFEH/g),
     ['https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH'],
   );
-  assert.equal((astroConfig.match(/gtag\('config', 'G-NG0NQMVFEH'/g) ?? []).length, 1);
+  assert.equal((baseLayout.match(/gtag\('config', 'G-NG0NQMVFEH'/g) ?? []).length, 1);
   assert.equal((astroConfig.match(/site: 'https:\/\/howbiscuit\.com'/g) ?? []).length, 1);
-  assert.equal((astroConfig.match(/property: 'og:image'/g) ?? []).length, 1);
-  assert.equal((astroConfig.match(/name: 'twitter:image'/g) ?? []).length, 1);
-  assert.equal((astroConfig.match(/name: 'twitter:card', content: 'summary_large_image'/g) ?? []).length, 1);
-  assert.equal((astroConfig.match(/https:\/\/howbiscuit\.com\/og\.png/g) ?? []).length, 2);
+  assert.equal((baseLayout.match(/property="og:image"/g) ?? []).length, 1);
+  assert.equal((baseLayout.match(/name="twitter:image"/g) ?? []).length, 1);
+  assert.equal((baseLayout.match(/name="twitter:card" content="summary_large_image"/g) ?? []).length, 1);
+  assert.equal((baseLayout.match(/image = '\/og\.png'/g) ?? []).length, 1);
 
   const publicSourcePaths = execFileSync('git', [
     'ls-files',
+    '--cached',
+    '--others',
+    '--exclude-standard',
     '--',
     'astro.config.mjs',
     'public',
     'src/components',
     'src/content',
+    'src/layouts',
     'src/pages',
   ], { cwd: root, encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean);
   const guidesRoutePattern = /(?:href|slug|route|link|canonical)\s*[:=]\s*["']\/guides\//;
-  const offenders = publicSourcePaths.filter((relativePath) => guidesRoutePattern.test(
-    readFileSync(path.join(root, relativePath), 'utf8'),
-  ));
+  const offenders = publicSourcePaths.filter((relativePath) => {
+    const absolutePath = path.join(root, relativePath);
+    return existsSync(absolutePath) && guidesRoutePattern.test(readFileSync(absolutePath, 'utf8'));
+  });
   assert.deepEqual(offenders, []);
 });

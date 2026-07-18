@@ -1,0 +1,5 @@
+---
+interface Props { title: string; message: string; actionHref?: string; actionLabel?: string }
+const { title, message, actionHref, actionLabel } = Astro.props;
+---
+<div class="hb-empty-state" role="status"><strong>{title}</strong><p>{message}</p>{actionHref && actionLabel && <a href={actionHref}>{actionLabel}</a>}</div>

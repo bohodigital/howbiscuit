@@ -2,7 +2,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
-import { ARTICLE_CLASSIFICATION_MANIFEST } from '../src/lib/public-content/classification-manifest.mjs';
 import {
   createPublicContentRegistry,
   topicPublicationModeForRegistry,
@@ -14,7 +13,6 @@ const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'pu
 const sources = discoverTrackedArticleSources(root);
 const registry = createPublicContentRegistry({
   sources,
-  classificationManifest: ARTICLE_CLASSIFICATION_MANIFEST,
   taxonomy,
 });
 

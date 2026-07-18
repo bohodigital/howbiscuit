@@ -12,3 +12,4 @@ npm-debug.log*
 src/generated/latex/
 # Flat article MDX files are generated from content/latex/articles/*.tex.
 src/content/docs/articles/*.mdx
+!src/content/docs/articles/index.mdx

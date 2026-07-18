@@ -1,0 +1,11 @@
+---
+interface Disclosure { state: string; text?: string; href?: string }
+interface Props { disclosure: Disclosure }
+const { disclosure } = Astro.props;
+const text = disclosure.text ?? 'This guide contains a declared commercial disclosure.';
+---
+<aside class="hb-disclosure" aria-label="Disclosure">
+  <strong>Disclosure</strong>
+  <p>{text}</p>
+  {disclosure.href && <a href={disclosure.href}>Read the disclosure</a>}
+</aside>

@@ -75,9 +75,9 @@ function normalizeDisclosure(sourceValue, fallbackState) {
   return Object.freeze({ ...sourceValue });
 }
 
-function normalizeContent(source, classification, taxonomy) {
+function normalizeContent(source, taxonomy) {
   const route = source.route;
-  validateClassification(route, classification, taxonomy);
+  validateClassification(route, source, taxonomy);
   if (typeof source.title !== 'string' || source.title.trim().length < 8) {
     throw new Error(`${route}: source title is missing or too thin`);
   }
@@ -108,12 +108,12 @@ function normalizeContent(source, classification, taxonomy) {
   const publishable = !draft && !preview && !thin && !redirectState && !retirementState;
   const sourceNotes = normalizeStructuredField(
     source.sourceNotes,
-    classification.sourceNotesState,
+    source.sourceNotesState ?? 'legacy-body',
     'items',
   );
   const relatedContent = normalizeStructuredField(
     source.relatedContent,
-    classification.relatedContentState,
+    source.relatedContentState ?? 'legacy-body',
     'routes',
   );
 
@@ -123,10 +123,10 @@ function normalizeContent(source, classification, taxonomy) {
     slug: source.slug,
     title: source.title.trim(),
     description: source.description.trim(),
-    categoryId: classification.categoryId,
-    topicId: classification.topicId,
-    articleType: classification.articleType,
-    editorialClassification: classification.editorialClassification,
+    categoryId: source.categoryId,
+    topicId: source.topicId,
+    articleType: source.articleType,
+    editorialClassification: source.editorialClassification,
     articleFormat: source.articleFormat,
     publishedDate,
     updatedDate,
@@ -135,13 +135,13 @@ function normalizeContent(source, classification, taxonomy) {
     sitemapEligible: publishable,
     llmsEligible: publishable,
     featured: publishable && source.featured === true,
-    editorialPriority: classification.editorialPriority,
+    editorialPriority: source.editorialPriority,
     readTime: source.readTime ?? null,
     evidence: source.evidence ?? null,
-    testing: normalizeTesting(source.testing, classification.testingState),
+    testing: normalizeTesting(source.testing, source.testingState ?? 'not-declared'),
     sourceNotes,
     relatedContent,
-    disclosure: normalizeDisclosure(source.disclosure, classification.disclosureState),
+    disclosure: normalizeDisclosure(source.disclosure, source.disclosureState ?? 'not-declared'),
     draft,
     preview,
     thin,
@@ -162,10 +162,10 @@ function normalizeContent(source, classification, taxonomy) {
       featured: 'source',
       readTime: 'source',
       evidence: 'source',
-      categoryId: 'migration-classification',
-      topicId: 'migration-classification',
-      articleType: 'migration-classification',
-      editorialClassification: 'migration-classification',
+      categoryId: 'source',
+      topicId: 'source',
+      articleType: 'source',
+      editorialClassification: 'source',
       testing: source.testing ? 'source' : 'explicit-not-declared',
       sourceNotes: source.sourceNotes ? 'source' : 'legacy-body-not-normalized',
       relatedContent: source.relatedContent ? 'source' : 'legacy-body-not-normalized',
@@ -174,21 +174,13 @@ function normalizeContent(source, classification, taxonomy) {
   });
 }
 
-export function createPublicContentRegistry({ sources, classificationManifest, taxonomy }) {
+export function createPublicContentRegistry({ sources, taxonomy }) {
   if (!Array.isArray(sources) || !sources.length) throw new Error('Public content sources are required.');
   const sourceRoutes = sources.map(({ route }) => route).sort(asciiCompare);
-  const classificationRoutes = Object.keys(classificationManifest).sort(asciiCompare);
-  if (JSON.stringify(sourceRoutes) !== JSON.stringify(classificationRoutes)) {
-    throw new Error(`Public-content classification parity failed: sources=${sourceRoutes.join(',')} classifications=${classificationRoutes.join(',')}`);
-  }
   if (new Set(sourceRoutes).size !== sourceRoutes.length) {
     throw new Error('Public-content source routes must be unique.');
   }
-  const registry = sources.map((source) => normalizeContent(
-    source,
-    classificationManifest[source.route],
-    taxonomy,
-  ));
+  const registry = sources.map((source) => normalizeContent(source, taxonomy));
   registry.sort((left, right) => asciiCompare(left.route, right.route));
   return Object.freeze(registry);
 }
