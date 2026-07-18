@@ -2,49 +2,80 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const divisionSchema = z.enum([
-  'research-writing',
-  'cook',
-  'home-tech',
-  'make-do',
-  'tools',
-  'buying-guides',
-  'science',
-  'glossary',
-]);
+const categoryId = z.enum(['home-tech', 'home', 'kitchen', 'shop', 'tools']);
+const sourceNote = z.object({
+  title: z.string().min(1),
+  publisher: z.string().min(1),
+  href: z.string().min(1),
+});
 
 const docs = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/docs' }),
   schema: z.object({
     title: z.string().min(1),
-    description: z.string().min(1),
-    kind: z.enum(['home', 'division', 'article', 'trust']),
+    description: z.string().min(40),
+    kind: z.enum(['home', 'category', 'guide-index', 'article', 'trust']),
     articleFormat: z.enum(['standard', 'latex']).default('standard'),
-    division: divisionSchema.optional(),
-    categoryId: z.enum(['home-tech', 'home', 'kitchen', 'shop', 'tools']).nullable().optional(),
+    categoryId: categoryId.nullable().optional(),
     topicId: z.string().nullable().optional(),
     articleType: z.enum(['guide', 'editorial-standard']).optional(),
     editorialClassification: z.string().optional(),
+    editorialPriority: z.number().int().optional(),
+    answerSummary: z.string().min(40).optional(),
+    problemLabel: z.string().min(1).optional(),
     feed: z.boolean().default(false),
     pubDate: z.coerce.date().optional(),
     updatedDate: z.coerce.date().optional(),
     lastUpdated: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
-    evidence: z.string().optional(),
+    evidence: z.enum([
+      'Hands-on tested',
+      'Owner experience',
+      'Specification reviewed',
+      'Researched',
+      'Price listing only',
+      'Editorial standard',
+    ]).optional(),
     readTime: z.string().optional(),
     featured: z.boolean().default(false),
-    template: z.string().optional(),
-    hero: z.object({ tagline: z.string().optional() }).optional(),
     draft: z.boolean().default(false),
     preview: z.boolean().default(false),
     thin: z.boolean().default(false),
     redirectState: z.object({ to: z.string() }).nullable().optional(),
     retirementState: z.object({ allowedStatuses: z.array(z.number().int()) }).nullable().optional(),
-    editorialPriority: z.number().int().optional(),
-    testing: z.unknown().optional(),
-    sourceNotes: z.unknown().optional(),
-    relatedContent: z.unknown().optional(),
-    disclosure: z.unknown().optional(),
+    testing: z.object({
+      state: z.enum(['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable']),
+      notes: z.array(z.string().min(1)),
+    }).optional(),
+    sourceNotes: z.object({
+      state: z.literal('structured'),
+      items: z.array(sourceNote).min(1),
+    }).optional(),
+    relatedContent: z.object({
+      state: z.literal('structured'),
+      routes: z.array(z.string().startsWith('/articles/')),
+    }).optional(),
+    disclosure: z.object({
+      state: z.literal('no-paid-links'),
+      text: z.string().min(1),
+      href: z.literal('/affiliate-disclosure/'),
+    }).optional(),
+  }).superRefine((data, context) => {
+    if (data.kind === 'category' && !data.categoryId) {
+      context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Category pages require categoryId.' });
+    }
+    if (data.kind !== 'article') return;
+    for (const field of ['articleType', 'editorialClassification', 'editorialPriority', 'answerSummary', 'evidence', 'readTime', 'testing', 'sourceNotes', 'relatedContent', 'disclosure'] as const) {
+      if (data[field] === undefined) {
+        context.addIssue({ code: 'custom', path: [field], message: `Article pages require ${field}.` });
+      }
+    }
+    if (data.articleType === 'guide' && (!data.categoryId || !data.topicId)) {
+      context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Guide articles require category and topic metadata.' });
+    }
+    if (data.articleType === 'editorial-standard' && (data.categoryId !== null || data.topicId !== null)) {
+      context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Editorial standards must remain categoryless.' });
+    }
   }),
 });
 

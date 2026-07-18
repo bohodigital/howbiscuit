@@ -1,18 +1,9 @@
 import katex from 'katex';
 
-// Versioned legacy input vocabulary for existing TeX metadata. This is not the
-// target public taxonomy; changing it requires an explicit content migration.
-export const LEGACY_LATEX_DIVISIONS = Object.freeze([
-  'research-writing',
-  'cook',
-  'home-tech',
-  'make-do',
-  'tools',
-  'buying-guides',
-  'science',
-  'glossary',
-]);
-const SAFE_DIVISIONS = new Set(LEGACY_LATEX_DIVISIONS);
+const SAFE_CATEGORY_IDS = new Set(['home-tech', 'home', 'kitchen', 'shop', 'tools']);
+const SAFE_ARTICLE_TYPES = new Set(['guide', 'editorial-standard']);
+const SAFE_TESTING_STATES = new Set(['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable']);
+const SAFE_DISCLOSURE_STATES = new Set(['no-paid-links']);
 
 const SAFE_PACKAGES = new Set(['amsmath', 'amssymb']);
 const FORBIDDEN_COMMANDS = [
@@ -47,7 +38,13 @@ const REQUIRED_METADATA = [
   'title',
   'hbslug',
   'hbdescription',
-  'hbdivision',
+  'hbcategory',
+  'hbtopic',
+  'hbtype',
+  'hbpriority',
+  'hbanswer',
+  'hbtesting',
+  'hbdisclosure',
   'hbevidence',
   'hbpubdate',
   'hbupdated',
@@ -214,6 +211,7 @@ function parsePreamble(source, sourcePath) {
   values.tags = takePreambleCommand(state, 'hbtag', 1, { multiple: true }).map(([tag]) => tag);
   values.feed = takePreambleCommand(state, 'hbfeed', 1)?.[0] ?? 'true';
   values.featured = takePreambleCommand(state, 'hbfeatured', 1)?.[0] ?? 'false';
+  values.problem = takePreambleCommand(state, 'hbproblem', 1)?.[0] ?? null;
 
   if (state.source.trim()) {
     fail(`Unsupported preamble content: ${state.source.trim().slice(0, 80)}`, sourcePath);
@@ -222,8 +220,23 @@ function parsePreamble(source, sourcePath) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbslug)) {
     fail('\\hbslug{...} must be a lowercase, hyphen-separated URL slug.', sourcePath);
   }
-  if (!SAFE_DIVISIONS.has(values.hbdivision)) {
-    fail(`Unknown How Biscuit division: ${values.hbdivision}`, sourcePath);
+  if (!SAFE_CATEGORY_IDS.has(values.hbcategory)) {
+    fail(`Unknown How Biscuit category: ${values.hbcategory}`, sourcePath);
+  }
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbtopic)) {
+    fail('\\hbtopic{...} must be a lowercase, hyphen-separated topic id.', sourcePath);
+  }
+  if (!SAFE_ARTICLE_TYPES.has(values.hbtype)) {
+    fail(`Unsupported How Biscuit article type: ${values.hbtype}`, sourcePath);
+  }
+  if (!/^-?\d+$/.test(values.hbpriority)) {
+    fail('\\hbpriority{...} must be an integer.', sourcePath);
+  }
+  if (!SAFE_TESTING_STATES.has(values.hbtesting)) {
+    fail(`Unsupported How Biscuit testing state: ${values.hbtesting}`, sourcePath);
+  }
+  if (!SAFE_DISCLOSURE_STATES.has(values.hbdisclosure)) {
+    fail(`Unsupported How Biscuit disclosure state: ${values.hbdisclosure}`, sourcePath);
   }
   if (!['true', 'false'].includes(values.feed) || !['true', 'false'].includes(values.featured)) {
     fail('\\hbfeed and \\hbfeatured must be true or false.', sourcePath);
@@ -236,7 +249,13 @@ function parsePreamble(source, sourcePath) {
     title: values.title,
     slug: values.hbslug,
     description: values.hbdescription,
-    division: values.hbdivision,
+    categoryId: values.hbcategory,
+    topicId: values.hbtopic,
+    articleType: values.hbtype,
+    editorialClassification: values.hbtype === 'editorial-standard' ? 'editorial-standard' : 'guide',
+    editorialPriority: Number.parseInt(values.hbpriority, 10),
+    answerSummary: values.hbanswer,
+    problemLabel: values.problem,
     evidence: values.hbevidence,
     pubDate: validateDate(values.hbpubdate, 'hbpubdate', sourcePath),
     updatedDate: validateDate(values.hbupdated, 'hbupdated', sourcePath),
@@ -246,6 +265,15 @@ function parsePreamble(source, sourcePath) {
     tags: values.tags,
     feed: values.feed === 'true',
     featured: values.featured === 'true',
+    testing: {
+      state: values.hbtesting,
+      notes: ['This mechanism guide was researched from cited sources; How Biscuit did not run a controlled de-icing test.'],
+    },
+    disclosure: {
+      state: values.hbdisclosure,
+      text: 'This guide contains no affiliate links, sponsored placements, paid reviews, or product placements.',
+      href: '/affiliate-disclosure/',
+    },
   };
 }
 
@@ -415,6 +443,8 @@ class BodyParser {
     this.ids = new Map();
     this.abstractHtml = '';
     this.seenMaketitle = false;
+    this.sourceNotes = [];
+    this.relatedContent = [];
   }
 
   uniqueId(label) {
@@ -509,29 +539,33 @@ class BodyParser {
   }
 
   renderSources(lines) {
+    if (this.sourceNotes.length) fail('Only one sourcenotes environment is allowed.', this.sourcePath);
     const sources = lines.filter((line) => line.trim());
     if (!sources.length) fail('The sourcenotes environment cannot be empty.', this.sourcePath);
-    const items = sources.map((line) => {
+    this.sourceNotes = sources.map((line) => {
       const values = commandLine(line.trim(), 'source', 3, this.sourcePath);
       if (!values) fail('Source notes must use \\source{title}{publisher}{url}.', this.sourcePath);
       const title = renderInline(values[0], this.sourcePath);
       const publisher = renderInline(values[1], this.sourcePath);
       const url = validateUrl(values[2], this.sourcePath);
-      return `<li><a href="${escapeHtml(url)}" rel="noopener noreferrer">${title.html}</a><span>${publisher.html}</span></li>`;
+      return Object.freeze({ title: title.plain, publisher: publisher.plain, href: url });
     });
-    return `<section class="hb-latex-sources" aria-labelledby="latex-source-notes"><header><span>Sources reviewed</span><h2 id="latex-source-notes">Source notes</h2></header><ol>${items.join('')}</ol></section>`;
+    return '';
   }
 
   renderRelated(lines) {
+    if (this.relatedContent.length) fail('Only one related environment is allowed.', this.sourcePath);
     const related = lines.filter((line) => line.trim());
     if (!related.length) fail('The related environment cannot be empty.', this.sourcePath);
-    const items = related.map((line) => {
+    related.forEach((line) => {
       const values = commandLine(line.trim(), 'related', 3, this.sourcePath);
       if (!values) fail('Related links must use \\related{label}{title}{url}.', this.sourcePath);
       const url = validateUrl(values[2], this.sourcePath);
+      if (!url.startsWith('/articles/')) fail('Related routes must stay within /articles/.', this.sourcePath);
+      this.relatedContent.push(url);
       return `<a href="${escapeHtml(url)}"><span>${renderInline(values[0], this.sourcePath).html}</span><strong>${renderInline(values[1], this.sourcePath).html}</strong><i aria-hidden="true">→</i></a>`;
     });
-    return `<section class="hb-latex-related"><h2>Keep going</h2><div>${items.join('')}</div></section>`;
+    return '';
   }
 
   renderEquation(tex, environment) {
@@ -644,8 +678,16 @@ class BodyParser {
     if (!this.seenMaketitle) fail('The document body must include \\maketitle.', this.sourcePath);
     if (!this.abstractHtml) fail('The document body must include an abstract environment.', this.sourcePath);
     if (!this.outline.some((item) => item.depth === 2)) fail('The article must contain at least one \\section.', this.sourcePath);
+    if (!this.sourceNotes.length) fail('The article must contain structured source notes.', this.sourcePath);
+    if (!this.relatedContent.length) fail('The article must contain structured related routes.', this.sourcePath);
 
-    return { bodyHtml: blocks.join('\n'), abstractHtml: this.abstractHtml, outline: this.outline };
+    return {
+      bodyHtml: blocks.join('\n'),
+      abstractHtml: this.abstractHtml,
+      outline: this.outline,
+      sourceNotes: this.sourceNotes,
+      relatedContent: this.relatedContent,
+    };
   }
 }
 
@@ -689,9 +731,14 @@ export function compileLatexArticle(rawSource, { sourcePath = '' } = {}) {
   }
   if (source.slice(end + endToken.length).trim()) fail('Content after \\end{document} is not allowed.', sourcePath);
 
-  const metadata = parsePreamble(source.slice(0, begin), sourcePath);
+  const sourceMetadata = parsePreamble(source.slice(0, begin), sourcePath);
   const body = source.slice(begin + beginToken.length, end);
-  const parsed = new BodyParser(body, metadata, sourcePath).parse();
+  const parsed = new BodyParser(body, sourceMetadata, sourcePath).parse();
+  const metadata = Object.freeze({
+    ...sourceMetadata,
+    sourceNotes: Object.freeze({ state: 'structured', items: Object.freeze(parsed.sourceNotes) }),
+    relatedContent: Object.freeze({ state: 'structured', routes: Object.freeze(parsed.relatedContent) }),
+  });
 
   return {
     metadata,
@@ -713,7 +760,7 @@ export function generatedMdx(article) {
     || typeof metadata.editorialClassification !== 'string'
     || !Number.isInteger(metadata.editorialPriority)
   ) {
-    throw new Error('Generated LaTeX articles require an accepted classification adapter.');
+    throw new Error('Generated LaTeX articles require source-owned Phase C classification.');
   }
   const tags = metadata.tags.length ? `[${metadata.tags.map(yamlString).join(', ')}]` : '[]';
   return `---
@@ -721,12 +768,16 @@ title: ${yamlString(metadata.title)}
 description: ${yamlString(metadata.description)}
 kind: article
 articleFormat: latex
-division: ${metadata.division}
 categoryId: ${metadata.categoryId}
 topicId: ${metadata.topicId}
 articleType: ${metadata.articleType}
 editorialClassification: ${metadata.editorialClassification}
 editorialPriority: ${metadata.editorialPriority}
+answerSummary: ${yamlString(metadata.answerSummary)}
+${metadata.problemLabel ? `problemLabel: ${yamlString(metadata.problemLabel)}\n` : ''}testing: ${JSON.stringify(metadata.testing)}
+sourceNotes: ${JSON.stringify(metadata.sourceNotes)}
+relatedContent: ${JSON.stringify(metadata.relatedContent)}
+disclosure: ${JSON.stringify(metadata.disclosure)}
 feed: ${metadata.feed}
 pubDate: ${metadata.pubDate}
 updatedDate: ${metadata.updatedDate}

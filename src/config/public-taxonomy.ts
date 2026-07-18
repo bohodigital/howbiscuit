@@ -1,11 +1,10 @@
 /**
  * Owner-approved target taxonomy and migration contracts for How Biscuit Handoff 1.
  *
- * Phase A deliberately does not import this file into the current Starlight shell.
- * Every target surface is marked `implemented: false` until a later accepted work
- * order changes and verifies public rendering. The current Starlight navigation in
- * `src/data/site-taxonomy.mjs` remains an observed legacy dependency, not a second
- * target taxonomy.
+ * Phase C activates this owner-approved taxonomy as the single public navigation
+ * and classification contract. Topic routes remain threshold-gated: zero eligible
+ * guides hides the topic, one or two guides keep it as a category filter, and three
+ * or more guides permit a standalone topic index.
  */
 
 export type PublicCategoryId = 'home-tech' | 'home' | 'kitchen' | 'shop' | 'tools';
@@ -26,7 +25,7 @@ export interface PublicTopic {
   description: string;
   order: number;
   publicationPolicy: 'threshold-gated';
-  implemented: false;
+  implemented: true;
 }
 
 export interface PublicCategory {
@@ -41,10 +40,10 @@ export interface PublicCategory {
     description: string;
   };
   topics: readonly PublicTopic[];
-  implemented: false;
+  implemented: true;
 }
 
-export const PUBLIC_TAXONOMY_CONTRACT_VERSION = '2026-07-17.handoff1.phase-a';
+export const PUBLIC_TAXONOMY_CONTRACT_VERSION = '2026-07-18.handoff1.phase-c';
 
 export const PUBLIC_METADATA_DEFAULTS = Object.freeze({
   siteName: 'How Biscuit',
@@ -104,7 +103,7 @@ function topic(
     description,
     order,
     publicationPolicy: 'threshold-gated' as const,
-    implemented: false as const,
+    implemented: true as const,
   });
 }
 
@@ -125,7 +124,7 @@ function category(
     artworkId,
     metadata: Object.freeze({ title: label, description }),
     topics: Object.freeze(topics),
-    implemented: false as const,
+    implemented: true as const,
   });
 }
 
@@ -212,7 +211,7 @@ export const ALL_GUIDES_TARGET = Object.freeze({
   route: '/articles/',
   label: 'All Guides',
   baselineLabels: Object.freeze(['All Articles', 'Articles']),
-  implemented: false as const,
+  implemented: true as const,
 });
 
 const categoryById = new Map(PUBLIC_CATEGORIES.map((item) => [item.id, item]));
@@ -245,24 +244,24 @@ const TOPIC_COMPATIBILITY: Readonly<Record<string, readonly [PublicCategoryId, s
   'home-diy/organization-storage': null,
 });
 
-export function targetCategoryFor(id: string): { categoryId: PublicCategoryId; implemented: false } | null {
+export function targetCategoryFor(id: string): { categoryId: PublicCategoryId; implemented: true } | null {
   if (!(id in CATEGORY_COMPATIBILITY)) return null;
   const categoryId = CATEGORY_COMPATIBILITY[id];
-  return categoryId ? { categoryId, implemented: false } : null;
+  return categoryId ? { categoryId, implemented: true } : null;
 }
 
 export function targetTopicFor(ref: string): {
   categoryId: PublicCategoryId;
   topicId: string;
-  implemented: false;
+  implemented: true;
 } | null {
   const direct = topicByRef.get(ref);
-  if (direct) return { categoryId: direct.categoryId, topicId: direct.id, implemented: false };
+  if (direct) return { categoryId: direct.categoryId, topicId: direct.id, implemented: true };
   const mapped = TOPIC_COMPATIBILITY[ref];
   if (!mapped) return null;
   const [categoryId, topicId] = mapped;
   if (!topicByRef.has(`${categoryId}/${topicId}`)) return null;
-  return { categoryId, topicId, implemented: false };
+  return { categoryId, topicId, implemented: true };
 }
 
 export function hasTargetTopic(categoryId: string, topicId: string): boolean {
@@ -275,9 +274,9 @@ export function hasTargetCategory(categoryId: string): categoryId is PublicCateg
 
 export const BASELINE_LEGACY_NAVIGATION = Object.freeze({
   sourceFile: 'src/data/site-taxonomy.mjs',
-  state: 'observed-current-starlight-runtime',
+  state: 'removed-in-phase-c',
   targetAuthoritative: false,
-  removalWorkOrder: 'WO-2026-07-17-HOWBISCUIT-HANDOFF1-CUSTOM-ASTRO-SHELL-002',
+  removalWorkOrder: 'WO-2026-07-17-HOWBISCUIT-HANDOFF1-CONTENT-ROUTES-003',
 });
 
 interface RouteContract {
@@ -290,7 +289,7 @@ interface RouteContract {
   evidence?: string;
   publicLabel?: string;
   reason: string;
-  implemented?: false;
+  implemented?: boolean;
 }
 
 const observedServe = (route: string, reason: string): RouteContract => ({
@@ -373,7 +372,7 @@ const target = (
   canonicalRoute,
   redirectCode: options.redirectCode ?? (outcome === 'redirect' ? 301 : null),
   reason,
-  implemented: false,
+  implemented: true,
   ...(options.allowedStatuses ? { allowedStatuses: Object.freeze(options.allowedStatuses) } : {}),
   ...(options.publicLabel ? { publicLabel: options.publicLabel } : {}),
 });
@@ -393,13 +392,16 @@ export const TARGET_ROUTE_CONTRACTS: readonly RouteContract[] = Object.freeze([
   target('/science/', 'terminal', null, 'Retire the thin legacy division after moving real article classification.', { allowedStatuses: [404, 410] }),
   target('/glossary/', 'terminal', null, 'Retire and exclude the thin legacy glossary surface.', { allowedStatuses: [404, 410] }),
   target('/math/', 'terminal', null, 'Return clean recovery behavior linking users to BetterGrades.', { allowedStatuses: [404, 410] }),
-  target('/home-tech/computers-laptops/', 'threshold-gated', '/home-tech/computers-laptops/', 'Canonical destination exists only when accepted topic eligibility is satisfied.'),
-  target('/home-tech/tvs-streaming/', 'threshold-gated', '/home-tech/tvs-streaming/', 'Canonical destination exists only when accepted topic eligibility is satisfied.'),
-  target('/home-tech/gaming-pcs/', 'redirect', '/home-tech/computers-laptops/', 'Combine the retired Gaming PCs topic with Computers and Laptops.'),
-  target('/home-tech/laptops/', 'redirect', '/home-tech/computers-laptops/', 'Combine the retired Laptops topic with Computers and Laptops.'),
-  target('/home-tech/streaming-tvs/', 'redirect', '/home-tech/tvs-streaming/', 'Rename the topic without a redirect chain.'),
-  target('/cooking/*', 'redirect', '/kitchen/:splat', 'Send the legacy wildcard directly to the final Kitchen namespace.'),
-  target('/make-do-lab/*', 'redirect', '/home/:splat', 'Send the legacy wildcard directly to the final Home namespace.'),
+  target('/home-tech/computers-laptops/', 'threshold-gated', '/home-tech/computers-laptops/', 'The canonical topic route remains hidden until three publishable guides qualify.'),
+  target('/home-tech/tvs-streaming/', 'threshold-gated', '/home-tech/tvs-streaming/', 'The canonical topic route remains hidden until three publishable guides qualify.'),
+  target('/home-tech/gaming-pcs/', 'redirect', '/home-tech/', 'The intended Computers and Laptops topic is below threshold, so recover at the final Home Tech category instead of a dead or thin destination.'),
+  target('/home-tech/laptops/', 'redirect', '/home-tech/', 'The intended Computers and Laptops topic is below threshold, so recover at the final Home Tech category instead of a dead or thin destination.'),
+  target('/home-tech/streaming-tvs/', 'redirect', '/home-tech/', 'The intended TVs and Streaming topic is below threshold, so recover at the final Home Tech category instead of a dead or thin destination.'),
+  target('/home-tech/wifi-routers/', 'redirect', '/home-tech/', 'The zero-guide topic is hidden and recovers at its final category.'),
+  target('/home-tech/smart-home/', 'redirect', '/home-tech/', 'The zero-guide topic is hidden and recovers at its final category.'),
+  target('/home-tech/privacy-security/', 'redirect', '/home-tech/', 'The zero-guide topic is hidden and recovers at its final category.'),
+  target('/cooking/*', 'redirect', '/kitchen/', 'Send the legacy wildcard directly to the final Kitchen category without creating unverified child routes.'),
+  target('/make-do-lab/*', 'redirect', '/home/', 'Send the legacy wildcard directly to the final Home category without creating unverified child routes.'),
   ...[
     '/articles/why-salt-melts-ice/',
     '/articles/how-does-baking-powder-work/',
@@ -429,7 +431,7 @@ export const HOST_CONTRACT = Object.freeze({
     outcome: 'redirect' as const,
     code: 301,
     destinationHost: 'howbiscuit.com',
-    implemented: false as const,
+    implemented: true as const,
   }),
 });
 
@@ -484,7 +486,7 @@ function resolveRoute(contracts: readonly RouteContract[], requestedRoute: strin
       redirectChain: [],
       ...(contract.allowedStatuses ? { allowedStatuses: [...contract.allowedStatuses] } : {}),
       ...(contract.evidence ? { evidence: contract.evidence } : {}),
-      ...(contract.implemented === false ? { implemented: false } : {}),
+      ...(typeof contract.implemented === 'boolean' ? { implemented: contract.implemented } : {}),
     };
   }
 
@@ -510,7 +512,7 @@ function resolveRoute(contracts: readonly RouteContract[], requestedRoute: strin
     canonicalRoute: current,
     redirectCode: contract.redirectCode,
     redirectChain: chain,
-    ...(contract.implemented === false ? { implemented: false } : {}),
+    ...(typeof contract.implemented === 'boolean' ? { implemented: contract.implemented } : {}),
   };
 }
 

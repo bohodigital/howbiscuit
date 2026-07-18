@@ -1,24 +1,34 @@
 ---
-import ArticleMeta from '../components/ArticleMeta.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import DisclosureBanner from '../components/DisclosureBanner.astro';
+import EvidenceBadge from '../components/EvidenceBadge.astro';
+import RelatedShelf from '../components/RelatedShelf.astro';
+import SourceNotes from '../components/SourceNotes.astro';
+import TestingBadge from '../components/TestingBadge.astro';
+import { selectRelatedContent } from '../lib/public-content/model.mjs';
+import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
 import BaseLayout from './BaseLayout.astro';
 
 interface Heading { depth: number; slug: string; text: string }
+interface SourceNote { title: string; publisher: string; href: string }
 interface ArticleRecord {
   route: string;
   title: string;
   description: string;
   categoryId: string | null;
+  topicId: string | null;
   articleType: string;
   articleFormat: string;
+  answerSummary: string;
   publishedDate: string | null;
   updatedDate: string | null;
   readTime: string | null;
   evidence: string | null;
   testing: { state: string; notes?: readonly string[] };
+  sourceNotes: { state: string; items: readonly SourceNote[] };
+  relatedContent: { state: string; routes: readonly string[] };
   searchEligible: boolean;
-  disclosure: { state: string };
+  disclosure: { state: string; text?: string; href?: string };
 }
 interface Props {
   title: string;
@@ -28,43 +38,109 @@ interface Props {
   headings?: Heading[];
 }
 const { title, description, canonical, record, headings = [] } = Astro.props;
+interface TaxonomyTopic { id: string; label: string }
+interface TaxonomyCategory { id: string; label: string; route: string; topics: readonly TaxonomyTopic[] }
+const { taxonomy, registry } = getPublicSiteData() as {
+  taxonomy: { PUBLIC_CATEGORIES: readonly TaxonomyCategory[] };
+  registry: readonly ArticleRecord[];
+};
+const category = record.categoryId ? taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === record.categoryId) : null;
+const topic = category?.topics.find(({ id }) => id === record.topicId) ?? null;
+const categoryLabel = category?.label ?? 'Editorial standard';
+const articleTypeLabel = record.articleType === 'editorial-standard' ? 'Editorial standard' : 'Guide';
 const outline = headings.filter(({ depth }) => depth === 2 || depth === 3);
-const categoryLabel = record.categoryId ?? 'Editorial';
-const schema = {
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  ...(category ? [{ label: category.label, href: category.route }] : [{ label: 'All Guides', href: '/articles/' }]),
+  ...(topic ? [{ label: topic.label, href: category?.route + '#topic-' + topic.id }] : []),
+  { label: title },
+];
+const site = Astro.site ?? new URL('https://howbiscuit.com');
+const absoluteUrl = new URL(canonical, site).toString();
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    ...(item.href ? { item: new URL(item.href, site).toString() } : {}),
+  })),
+};
+const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description,
-  url: new URL(canonical, Astro.site).toString(),
+  url: absoluteUrl,
   datePublished: record.publishedDate ?? undefined,
   dateModified: record.updatedDate ?? record.publishedDate ?? undefined,
+  articleSection: categoryLabel,
+  about: topic?.label ?? articleTypeLabel,
   author: { '@type': 'Organization', name: 'How Biscuit' },
   publisher: { '@type': 'Organization', name: 'How Biscuit' },
 };
+const related = (selectRelatedContent(record, registry, 3) as ArticleRecord[]).map((item) => ({
+  label: taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === item.categoryId)?.label ?? 'Editorial standard',
+  title: item.title,
+  href: item.route,
+}));
+const date = record.updatedDate ?? record.publishedDate;
+const dateLabel = record.updatedDate ? 'Updated' : 'Published';
+const formattedDate = date
+  ? new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(date + 'T12:00:00Z'))
+  : null;
+const testingLabels: Record<string, string> = {
+  'hands-on-tested': 'Hands-on tested',
+  'owner-experience': 'Owner experience',
+  'not-hands-on-tested': 'Not hands-on tested',
+  'not-applicable': 'Testing not applicable',
+};
 ---
 
-<BaseLayout {title} {description} {canonical} searchEligible={record.searchEligible} jsonLd={schema} mainClass="hb-article-page">
+<BaseLayout title={title} description={description} canonical={canonical} searchEligible={record.searchEligible} jsonLd={[articleSchema, breadcrumbSchema]} mainClass="hb-article-page">
   <article class:list={['hb-article-shell', record.articleFormat === 'latex' && 'hb-latex-article']}>
-    <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'All Guides', href: '/articles/' }, { label: title }]} />
+    <Breadcrumbs items={breadcrumbItems} />
     <header class:list={['hb-article-title', record.articleFormat === 'latex' && 'hb-latex-site-context']}>
       <div class="hb-article-labels" aria-label="Article classification">
         <span data-pagefind-filter="category">{categoryLabel}</span>
-        <span data-pagefind-filter="type">{record.articleType}</span>
+        {topic && <span>{topic.label}</span>}
+        <span data-pagefind-filter="type">{articleTypeLabel}</span>
       </div>
-      {record.articleFormat !== 'latex' && (
-        <><h1 data-pagefind-meta="title">{title}</h1><p data-pagefind-meta="description">{description}</p></>
-      )}
-      <ArticleMeta record={record} />
+      {record.articleFormat !== 'latex' && <h1 data-pagefind-meta="title">{title}</h1>}
+      <p class="hb-direct-answer" data-pagefind-meta="description">{record.answerSummary}</p>
+      <div class="hb-article-meta">
+        {formattedDate && <span>{dateLabel} <time datetime={date ?? undefined}>{formattedDate}</time></span>}
+        {record.readTime && <span>{record.readTime}</span>}
+        {record.evidence && <EvidenceBadge value="Researched" label={record.evidence} />}
+        <TestingBadge state="declared" label={testingLabels[record.testing.state] ?? 'Testing status unavailable'} />
+      </div>
     </header>
-    {record.disclosure?.state !== 'not-declared' && <DisclosureBanner disclosure={record.disclosure} />}
+    <DisclosureBanner disclosure={record.disclosure} />
     <div class:list={['hb-article-grid', outline.length === 0 && 'hb-article-grid-wide']}>
-      <div class="hb-content"><slot /></div>
+      <div class="hb-content">
+        <slot />
+        <SourceNotes sources={[...record.sourceNotes.items]} />
+        {related.length > 0 && <RelatedShelf links={related} />}
+        <p class="hb-correction-link">See something wrong or out of date? <a href="/corrections/">Report a correction</a>.</p>
+      </div>
       {outline.length > 0 && (
         <aside class="hb-article-toc" aria-labelledby="article-toc-title">
           <h2 id="article-toc-title">On this page</h2>
-          <ol>{outline.map((heading) => <li data-depth={heading.depth}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>
+          <ol>{outline.map((heading) => <li data-depth={heading.depth}><a href={'#' + heading.slug}>{heading.text}</a></li>)}</ol>
         </aside>
       )}
     </div>
   </article>
 </BaseLayout>
+
+<style>
+  .hb-direct-answer {
+    margin-top: 1.2rem;
+    border-left: 4px solid var(--hb-tomato);
+    padding-left: 1rem;
+    color: var(--hb-ink);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+  }
+  .hb-correction-link { margin-top: 3rem; border-top: 1px solid var(--hb-ink); padding-top: 1rem; }
+</style>

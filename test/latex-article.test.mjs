@@ -4,104 +4,71 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
-import {
-  compileLatexArticle,
-  generatedMdx,
-  generatedModule,
-  LEGACY_LATEX_DIVISIONS,
-} from '../src/lib/latex/article-compiler.mjs';
-import { acceptedArticleClassification } from '../src/lib/public-content/classification-manifest.mjs';
+
+import { compileLatexArticle, generatedMdx, generatedModule } from '../src/lib/latex/article-compiler.mjs';
 
 const examplePath = new URL('../content/latex/articles/why-salt-melts-ice.tex', import.meta.url);
 const example = await readFile(examplePath, 'utf8');
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-function withAcceptedClassification(article) {
-  const route = `/articles/${article.metadata.slug}/`;
-  return {
-    ...article,
-    metadata: { ...article.metadata, ...acceptedArticleClassification(route) },
-  };
-}
-
-test('compiles the canonical article into static, accessible math markup', () => {
-  const article = withAcceptedClassification(compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' }));
+test('compiles canonical Phase C metadata and accessible math without duplicating global services', () => {
+  const article = compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' });
   assert.equal(article.metadata.slug, 'why-salt-melts-ice');
-  assert.equal(article.metadata.division, 'science');
   assert.equal(article.metadata.categoryId, 'home');
   assert.equal(article.metadata.topicId, 'heating-cooling');
   assert.equal(article.metadata.articleType, 'guide');
+  assert.equal(article.metadata.featured, true);
+  assert.equal(article.metadata.evidence, 'Researched');
+  assert.equal(article.metadata.testing.state, 'not-hands-on-tested');
+  assert.equal(article.metadata.disclosure.state, 'no-paid-links');
+  assert.equal(article.metadata.sourceNotes.items.length, 3);
+  assert.deepEqual(article.metadata.relatedContent.routes, [
+    '/articles/how-does-baking-powder-work/',
+    '/articles/why-are-some-answers-better-than-others/',
+  ]);
   assert.match(article.html, /class="hb-latex-paper"/);
-  assert.match(article.html, /<h1 data-pagefind-meta="title">/);
   assert.match(article.html, /class="katex-mathml"/);
   assert.match(article.html, /id="the-short-answer"/);
   assert.match(article.html, /aria-label="Equation 1"/);
-  assert.match(article.html, /U\.S\. Environmental Protection Agency/);
+  assert.doesNotMatch(article.html, /hb-latex-sources|hb-latex-related/);
   assert.equal(article.outline.filter((item) => item.depth === 2).length, 4);
 });
 
-test('generation is deterministic and produces a custom Astro route module', () => {
-  const first = withAcceptedClassification(compileLatexArticle(example));
-  const second = withAcceptedClassification(compileLatexArticle(example));
+test('generation is deterministic and carries source-owned structured metadata into Astro', () => {
+  const first = compileLatexArticle(example);
+  const second = compileLatexArticle(example);
   assert.equal(generatedMdx(first), generatedMdx(second));
   assert.equal(generatedModule(first), generatedModule(second));
   assert.match(generatedMdx(first), /articleFormat: latex/);
   assert.match(generatedMdx(first), /categoryId: home/);
-  assert.match(generatedMdx(first), /topicId: heating-cooling/);
+  assert.match(generatedMdx(first), /answerSummary:/);
+  assert.match(generatedMdx(first), /sourceNotes: \{"state":"structured"/);
   assert.match(generatedMdx(first), /LatexArticle article=\{article\}/);
 });
 
-test('generation fails closed without the accepted classification adapter', () => {
-  const article = compileLatexArticle(example);
-  assert.throws(() => generatedMdx(article), /accepted classification adapter/i);
+test('classification commands fail closed', () => {
   assert.throws(
-    () => acceptedArticleClassification('/articles/not-an-accepted-article/'),
-    /No accepted article classification/i,
+    () => compileLatexArticle(example.replace('\\hbcategory{home}', '\\hbcategory{science}')),
+    /Unknown How Biscuit category: science/,
+  );
+  assert.throws(
+    () => compileLatexArticle(example.replace('\\hbpriority{30}', '\\hbpriority{high}')),
+    /must be an integer/,
   );
 });
 
 test('rejects file inclusion and arbitrary TeX execution', () => {
-  assert.throws(
-    () => compileLatexArticle(example.replace('\\maketitle', '\\input{secrets.tex}\n\\maketitle')),
-    /Forbidden command \\input/,
-  );
+  assert.throws(() => compileLatexArticle(example.replace('\\maketitle', '\\input{secrets.tex}\n\\maketitle')), /Forbidden command \\input/);
 });
 
-test('keeps the legacy TeX division boundary separate and fail-closed', () => {
-  assert.ok(LEGACY_LATEX_DIVISIONS.includes('science'));
-  assert.ok(!LEGACY_LATEX_DIVISIONS.includes('shop'));
-  assert.throws(
-    () => compileLatexArticle(example.replace('\\hbdivision{science}', '\\hbdivision{shop}')),
-    /Unknown How Biscuit division: shop/,
-  );
-});
-
-test('rejects unsupported prose commands instead of leaking raw TeX', () => {
-  assert.throws(
-    () => compileLatexArticle(example.replace('Pure water and ice', '\\unknown{Nope} Pure water and ice')),
-    /Unsupported prose command \\unknown/,
-  );
-});
-
-test('rejects invalid math instead of rendering a broken equation', () => {
-  assert.throws(
-    () => compileLatexArticle(example.replace('\\Delta T_f = i K_f m', '\\frac{1}{')),
-    /KaTeX could not render/,
-  );
-});
-
-test('rejects unsafe links', () => {
-  assert.throws(
-    () => compileLatexArticle(example.replace('https://www.epa.gov/risk/salt-resources', 'javascript:alert(1)')),
-    /Only credential-free HTTP\(S\)/,
-  );
+test('rejects unsupported prose commands, invalid math, and unsafe links', () => {
+  assert.throws(() => compileLatexArticle(example.replace('Pure water and ice', '\\unknown{Nope} Pure water and ice')), /Unsupported prose command \\unknown/);
+  assert.throws(() => compileLatexArticle(example.replace('\\Delta T_f = i K_f m', '\\frac{1}{')), /KaTeX could not render/);
+  assert.throws(() => compileLatexArticle(example.replace('https://www.epa.gov/risk/salt-resources', 'javascript:alert(1)')), /Only credential-free HTTP\(S\)/);
 });
 
 test('rejects repeated document environments', () => {
-  assert.throws(
-    () => compileLatexArticle(`${example}\n\\begin{document}\\end{document}`),
-    /Nested or repeated document environments|Content after \\end\{document\}/,
-  );
+  assert.throws(() => compileLatexArticle(example + '\n\\begin{document}\\end{document}'), /Nested or repeated document environments|Content after \\end\{document\}/);
 });
 
 test('check-only mode rejects an orphaned generated module', async () => {
@@ -109,12 +76,9 @@ test('check-only mode rejects an orphaned generated module', async () => {
   await mkdir(path.dirname(orphanPath), { recursive: true });
   await writeFile(orphanPath, '// orphan contract probe\n', 'utf8');
   try {
-    const result = spawnSync(process.execPath, ['scripts/compile-latex-articles.mjs', '--check'], {
-      cwd: root,
-      encoding: 'utf8',
-    });
+    const result = spawnSync(process.execPath, ['scripts/compile-latex-articles.mjs', '--check'], { cwd: root, encoding: 'utf8' });
     assert.notEqual(result.status, 0);
-    assert.match(`${result.stdout}\n${result.stderr}`, /Orphaned generated module/);
+    assert.match(result.stdout + '\n' + result.stderr, /Orphaned generated module/);
   } finally {
     await rm(orphanPath, { force: true });
   }

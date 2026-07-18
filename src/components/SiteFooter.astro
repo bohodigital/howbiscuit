@@ -1,6 +1,20 @@
+---
+import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
+
+interface FooterNavigation {
+  categories: readonly { label: string; href: string }[];
+  allGuides: { label: string; href: string };
+}
+const { navigation } = getPublicSiteData() as { navigation: FooterNavigation };
+---
+
 <footer class="hb-global-footer" data-pagefind-ignore="all">
   <div class="hb-footer-mark">HOW BISCUIT<span>?</span></div>
   <p>Practical guides for technology, home, kitchens, shopping decisions, and useful tools.</p>
+  <nav aria-label="Browse categories">
+    {navigation.categories.map((category) => <a href={category.href}>{category.label}</a>)}
+    <a href={navigation.allGuides.href}>{navigation.allGuides.label}</a>
+  </nav>
   <nav aria-label="Site information">
     <a href="/about/">About</a>
     <a href="/editorial-policy/">Editorial policy</a>

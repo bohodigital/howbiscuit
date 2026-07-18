@@ -2,13 +2,13 @@
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
 
 interface Props { currentPath?: string }
-interface NavigationTopic { id: string; label: string; mode: 'filter' | 'standalone' }
+interface NavigationTopic { id: string; label: string; mode: 'filter' | 'standalone'; count: number; href: string }
 interface NavigationGuide { href: string; title: string; description: string; topicId: string | null }
 interface NavigationCategory {
   id: string;
   label: string;
   description: string;
-  href: string | null;
+  href: string;
   topicLabels: readonly NavigationTopic[];
   guideLinks: readonly NavigationGuide[];
 }
@@ -31,10 +31,10 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
         <details class="hb-category-menu" name="hb-primary-navigation" data-category={category.id}>
           <summary>{category.label}<span aria-hidden="true"></span></summary>
           <div class="hb-category-panel">
-            <div class="hb-category-intro"><strong>{category.label}</strong><p>{category.description}</p></div>
+            <div class="hb-category-intro"><a href={category.href}><strong>{category.label}</strong><span>Open category →</span></a><p>{category.description}</p></div>
             {category.topicLabels.length > 0 && (
               <div class="hb-topic-labels" aria-label={`${category.label} published topics`}>
-                {category.topicLabels.map((topic) => <span>{topic.label}</span>)}
+                {category.topicLabels.map((topic) => <a href={topic.href}>{topic.label}<span>{topic.count}</span></a>)}
               </div>
             )}
             {category.guideLinks.length > 0 && (
@@ -66,7 +66,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     <nav aria-label="Primary navigation without JavaScript">
       {navigation.categories.map((category) => (
         <div>
-          <strong>{category.label}</strong>
+          <a href={category.href}><strong>{category.label}</strong></a>
           {category.guideLinks.map((guide) => <a href={guide.href}>{guide.title}</a>)}
         </div>
       ))}
@@ -83,8 +83,9 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
         <details class="hb-mobile-category">
           <summary>{category.label}<span aria-hidden="true">+</span></summary>
           <div>
+            <a class="hb-mobile-category-link" href={category.href}>Open {category.label} →</a>
             <p>{category.description}</p>
-            {category.topicLabels.length > 0 && <p class="hb-mobile-topic-labels">{category.topicLabels.map(({ label }) => <span>{label}</span>)}</p>}
+            {category.topicLabels.length > 0 && <p class="hb-mobile-topic-labels">{category.topicLabels.map((topic) => <a href={topic.href}>{topic.label}</a>)}</p>}
             {category.guideLinks.map((guide) => <a href={guide.href}>{guide.title}</a>)}
           </div>
         </details>
@@ -105,6 +106,40 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     <div class="hb-search-results" aria-label="Search results"></div>
   </div>
 </dialog>
+
+<style>
+  .hb-category-intro a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--hb-ink);
+    text-decoration: none;
+  }
+  .hb-category-intro a > span {
+    color: var(--hb-tomato-text);
+    font-size: 0.68rem;
+    font-weight: 850;
+  }
+  .hb-topic-labels a,
+  .hb-mobile-topic-labels a {
+    border: 1px solid var(--hb-ink);
+    border-radius: 999px;
+    padding: 0.3rem 0.5rem;
+    background: var(--hb-paper-deep);
+    color: var(--hb-ink);
+    font-size: 0.66rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .hb-topic-labels a > span { margin-left: 0.3rem; }
+  .hb-mobile-category-link {
+    display: inline-block;
+    margin-bottom: 0.7rem;
+    color: var(--hb-ink);
+    font-weight: 850;
+  }
+</style>
 
 <script>
   import { createInitialModalState, modalFocusReturnCandidates, reduceModalState } from '../lib/public-content/modal-coordinator.mjs';

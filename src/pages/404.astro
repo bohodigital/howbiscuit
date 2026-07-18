@@ -14,7 +14,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="hb-not-found" data-pagefind-ignore="all">
     <span>404</span>
     <h1>That page is not in the biscuit tin.</h1>
-    <p>The address may be outdated, or the guide may not exist.</p>
-    <a class="hb-button hb-button-primary" href="/">Return home</a>
+    <p>The address may be outdated, the guide may have moved, or a retired science, glossary, or math route may no longer exist.</p>
+    <div class="hb-not-found-actions">
+      <a class="hb-button hb-button-primary" href="/">Return home</a>
+      <a class="hb-button hb-button-secondary" href="https://bettergrades.net/">Looking for math? Visit BetterGrades</a>
+    </div>
   </section>
 </BaseLayout>
+
+<style>
+  .hb-not-found-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+</style>

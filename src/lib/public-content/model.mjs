@@ -7,6 +7,15 @@ function isNonEmptyString(value) {
 }
 
 const PRICE_BADGE_STATES = new Set(['observed', 'estimate', 'unavailable', 'stale']);
+const EVIDENCE_LABELS = new Set([
+  'Hands-on tested',
+  'Owner experience',
+  'Specification reviewed',
+  'Researched',
+  'Price listing only',
+  'Editorial standard',
+]);
+const TESTING_STATES = new Set(['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable']);
 
 export function assertValidPriceBadgeProps({ state, observedAt } = {}) {
   if (!PRICE_BADGE_STATES.has(state)) {
@@ -84,7 +93,7 @@ function validateClassification(route, classification, taxonomy) {
   }
 }
 
-function normalizeStructuredField(sourceValue, fallbackState, itemKey) {
+function normalizeStructuredField(sourceValue, fallbackState, itemKey, validateItem) {
   if (sourceValue === null || sourceValue === undefined) {
     return Object.freeze({ state: fallbackState, [itemKey]: Object.freeze([]) });
   }
@@ -93,6 +102,7 @@ function normalizeStructuredField(sourceValue, fallbackState, itemKey) {
   }
   const values = sourceValue[itemKey] ?? [];
   if (!Array.isArray(values)) throw new Error(`Structured ${itemKey} metadata must contain an array.`);
+  values.forEach(validateItem);
   return Object.freeze({
     state: sourceValue.state ?? 'structured',
     [itemKey]: Object.freeze([...values]),
@@ -106,9 +116,15 @@ function normalizeTesting(sourceValue, fallbackState) {
   if (typeof sourceValue !== 'object' || Array.isArray(sourceValue)) {
     throw new Error('Testing metadata must be an object.');
   }
+  const state = sourceValue.state ?? fallbackState;
+  if (!TESTING_STATES.has(state)) throw new Error(`Unsupported testing state: ${state}`);
+  const notes = sourceValue.notes ?? [];
+  if (!Array.isArray(notes) || notes.some((note) => !isNonEmptyString(note))) {
+    throw new Error('Testing notes must be non-empty strings.');
+  }
   return Object.freeze({
-    state: sourceValue.state ?? 'declared',
-    notes: Object.freeze([...(sourceValue.notes ?? [])]),
+    state,
+    notes: Object.freeze([...notes]),
   });
 }
 
@@ -119,7 +135,12 @@ function normalizeDisclosure(sourceValue, fallbackState) {
   if (typeof sourceValue !== 'object' || Array.isArray(sourceValue)) {
     throw new Error('Disclosure metadata must be an object.');
   }
-  return Object.freeze({ ...sourceValue });
+  const state = sourceValue.state ?? fallbackState;
+  if (state !== 'no-paid-links') throw new Error(`Unsupported disclosure state: ${state}`);
+  if (!isNonEmptyString(sourceValue.text) || sourceValue.href !== '/affiliate-disclosure/') {
+    throw new Error('No-paid-links disclosure requires truthful text and the canonical disclosure route.');
+  }
+  return Object.freeze({ ...sourceValue, state });
 }
 
 function normalizeContent(source, taxonomy) {
@@ -133,6 +154,12 @@ function normalizeContent(source, taxonomy) {
   }
   if (!['standard', 'latex'].includes(source.articleFormat)) {
     throw new Error(`${route}: unsupported article format ${source.articleFormat}`);
+  }
+  if (!isNonEmptyString(source.answerSummary) || source.answerSummary.trim().length < 40) {
+    throw new Error(`${route}: a direct answer summary of at least 40 characters is required`);
+  }
+  if (!EVIDENCE_LABELS.has(source.evidence)) {
+    throw new Error(`${route}: unsupported evidence label ${source.evidence}`);
   }
 
   const publishedDate = normalizeDate(source.publishedDate, 'publishedDate', route);
@@ -155,14 +182,33 @@ function normalizeContent(source, taxonomy) {
   const publishable = !draft && !preview && !thin && !redirectState && !retirementState;
   const sourceNotes = normalizeStructuredField(
     source.sourceNotes,
-    source.sourceNotesState ?? 'legacy-body',
+    source.sourceNotesState ?? 'missing',
     'items',
+    (item) => {
+      if (!item || !isNonEmptyString(item.title) || !isNonEmptyString(item.publisher) || !isNonEmptyString(item.href)) {
+        throw new Error(`${route}: source notes require title, publisher, and href`);
+      }
+      if (!item.href.startsWith('/') && !/^https?:\/\//.test(item.href)) {
+        throw new Error(`${route}: source-note href must be HTTP(S) or root-relative`);
+      }
+    },
   );
   const relatedContent = normalizeStructuredField(
     source.relatedContent,
-    source.relatedContentState ?? 'legacy-body',
+    source.relatedContentState ?? 'missing',
     'routes',
+    (relatedRoute) => {
+      if (!isNonEmptyString(relatedRoute) || !relatedRoute.startsWith('/articles/') || relatedRoute === route) {
+        throw new Error(`${route}: related routes must be other canonical article routes`);
+      }
+    },
   );
+  if (sourceNotes.state !== 'structured' || sourceNotes.items.length === 0) {
+    throw new Error(`${route}: structured source notes are required`);
+  }
+  if (relatedContent.state !== 'structured') {
+    throw new Error(`${route}: structured related-content metadata is required`);
+  }
 
   return Object.freeze({
     route,
@@ -175,6 +221,8 @@ function normalizeContent(source, taxonomy) {
     articleType: source.articleType,
     editorialClassification: source.editorialClassification,
     articleFormat: source.articleFormat,
+    answerSummary: source.answerSummary.trim(),
+    problemLabel: isNonEmptyString(source.problemLabel) ? source.problemLabel.trim() : null,
     publishedDate,
     updatedDate,
     feedEligible: publishable && source.feed === true && publishedDate !== null,
@@ -204,6 +252,8 @@ function normalizeContent(source, taxonomy) {
       title: 'source',
       description: 'source',
       articleFormat: 'source',
+      answerSummary: 'source',
+      problemLabel: source.problemLabel ? 'source' : 'not-declared',
       dates: 'source',
       feed: 'source',
       featured: 'source',
@@ -213,10 +263,10 @@ function normalizeContent(source, taxonomy) {
       topicId: source.classificationProvenance ?? 'source',
       articleType: source.classificationProvenance ?? 'source',
       editorialClassification: source.classificationProvenance ?? 'source',
-      testing: source.testing ? 'source' : 'explicit-not-declared',
-      sourceNotes: source.sourceNotes ? 'source' : 'legacy-body-not-normalized',
-      relatedContent: source.relatedContent ? 'source' : 'legacy-body-not-normalized',
-      disclosure: source.disclosure ? 'source' : 'explicit-not-declared',
+      testing: 'source',
+      sourceNotes: 'source',
+      relatedContent: 'source',
+      disclosure: 'source',
     }),
   });
 }
@@ -277,8 +327,15 @@ export function orderFeaturedContent(registry) {
   return registry
     .filter(({ featured, searchEligible }) => featured && searchEligible)
     .slice()
+    .sort(latestComparator);
+}
+
+export function orderHomepageContent(registry) {
+  return registry
+    .filter(({ searchEligible }) => searchEligible)
+    .slice()
     .sort((left, right) => (
-      right.editorialPriority - left.editorialPriority
+      Number(right.featured) - Number(left.featured)
       || latestComparator(left, right)
     ));
 }

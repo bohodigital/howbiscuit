@@ -1,8 +1,42 @@
+---
+import EmptyState from './EmptyState.astro';
+import GuideCard from './GuideCard.astro';
+import PathCard from './PathCard.astro';
+import { orderHomepageContent, orderLatestContent } from '../lib/public-content/model.mjs';
+import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
+
+interface ArticleRecord {
+  route: string; title: string; description: string; categoryId: string | null;
+  readTime: string | null; evidence: string; featured: boolean; problemLabel: string | null;
+  updatedDate: string | null; publishedDate: string | null;
+}
+interface CategoryView {
+  id: string; label: string; route: string; description: string; guides: readonly ArticleRecord[];
+}
+const { categoryViews, registry } = getPublicSiteData() as {
+  categoryViews: readonly CategoryView[];
+  registry: readonly ArticleRecord[];
+};
+const homepageOrder = orderHomepageContent(registry) as ArticleRecord[];
+const featured = homepageOrder.filter(({ featured }) => featured).slice(0, 3);
+const latest = (orderLatestContent(registry) as ArticleRecord[]).slice(0, 6);
+const problems = homepageOrder.filter(({ problemLabel }) => problemLabel);
+const accentByCategory: Record<string, string> = {
+  'home-tech': 'honey',
+  home: 'mint',
+  kitchen: 'tomato',
+  shop: 'lilac',
+  tools: 'honey',
+};
+const updatedDates = registry.map(({ updatedDate, publishedDate }) => updatedDate ?? publishedDate).filter(Boolean).sort();
+const latestUpdate = updatedDates.at(-1);
+---
+
 <section class="hb-home-hero">
   <div class="hb-hero-copy">
-    <p class="hb-kicker"><span>PRACTICAL HOW-TO GUIDES</span><i>Clear steps, costs, and limits</i></p>
-    <h1>Fix it.<br /><em>Choose better.</em></h1>
-    <p class="hb-hero-dek">Step-by-step help for Wi-Fi, computers, smart homes, cooking, repairs, and buying decisions. Start with the answer, then follow the checks that apply to you.</p>
+    <p class="hb-kicker"><span>PRACTICAL HOW-TO GUIDES</span><i>Clear evidence, costs, and limits</i></p>
+    <h1>Fix your tech.<br /><em>Buy the right thing.</em><br />Waste less money.</h1>
+    <p class="hb-hero-dek">Practical, evidence-aware guides for home technology, apartments, kitchens, shopping decisions, and useful tools. Start with the answer, then inspect the basis and limits.</p>
     <div class="hb-hero-actions">
       <a class="hb-button hb-button-primary" href="/home-tech/">Browse Home Tech <span aria-hidden="true">→</span></a>
       <a class="hb-button hb-button-secondary" href="/articles/">View all guides</a>
@@ -17,4 +51,59 @@
       <li><div><b>When to stop</b><span>Clear limits for safety, warranties, rentals, and professional help.</span></div></li>
     </ol>
   </aside>
+</section>
+
+<section class="hb-home-section" aria-labelledby="featured-guides-title">
+  <div class="hb-section-heading">
+    <div><span>Selected from published metadata</span><h2 id="featured-guides-title">Featured guides</h2></div>
+    <p>Featured status, publication date, update date, and editorial priority determine this shelf.</p>
+  </div>
+  {featured.length > 0 ? (
+    <div class="hb-guide-grid">
+      {featured.map((guide) => <GuideCard label={guide.categoryId ?? 'Editorial standard'} title={guide.title} description={guide.description} href={guide.route} accent={accentByCategory[guide.categoryId ?? ''] ?? 'lilac'} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}
+    </div>
+  ) : <EmptyState title="No featured guides are declared" message="Published guides remain available in All Guides; this shelf does not invent a feature flag." actionHref="/articles/" actionLabel="Browse All Guides" />}
+</section>
+
+{problems.length > 0 && (
+  <section class="hb-panic-strip" aria-labelledby="browse-by-problem-title">
+    <p id="browse-by-problem-title">BROWSE BY PROBLEM</p>
+    <div>
+      {problems.map((guide) => <a href={guide.route}><span>{guide.problemLabel}</span><b>{guide.title} →</b></a>)}
+    </div>
+  </section>
+)}
+
+<section class="hb-home-section" aria-labelledby="category-overview-title">
+  <div class="hb-section-heading">
+    <div><span>Five governed categories</span><h2 id="category-overview-title">Browse by category</h2></div>
+    <p>Every category route is real. Topics appear only when the publishable-guide threshold supports them.</p>
+  </div>
+  <div class="hb-path-grid">
+    {categoryViews.map((category, index) => <PathCard number={String(index + 1).padStart(2, '0')} kicker={category.guides.length + ' published guide' + (category.guides.length === 1 ? '' : 's')} title={category.label} href={category.route} accent={accentByCategory[category.id]} description={category.description} cta={'Browse ' + category.label} />)}
+  </div>
+</section>
+
+<section class="hb-home-section" aria-labelledby="latest-guides-title">
+  <div class="hb-section-heading">
+    <div><span>Generated from publication metadata</span><h2 id="latest-guides-title">Latest guides</h2></div>
+    <a class="hb-text-link" href="/articles/">Browse All Guides →</a>
+  </div>
+  <div class="hb-guide-grid">
+    {latest.map((guide) => <GuideCard label={guide.categoryId ?? 'Editorial standard'} title={guide.title} description={guide.description} href={guide.route} accent={accentByCategory[guide.categoryId ?? ''] ?? 'lilac'} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}
+  </div>
+</section>
+
+<section class="hb-home-section" aria-labelledby="shopping-resources-title">
+  <div class="hb-section-heading">
+    <div><span>Shopping resources</span><h2 id="shopping-resources-title">Compare before spending</h2></div>
+    <p>How Biscuit does not publish live prices, product rankings, or deal claims without verified product data.</p>
+  </div>
+  <EmptyState title="Shopping coverage is active; product data is not" message="Use the Shop Smarter category for the current evidence rules and coverage state. Local-price tools will appear only after a real data route is approved." actionHref="/shop/" actionLabel="Open Shop Smarter" />
+</section>
+
+<section class="hb-trust-band" aria-labelledby="trust-strip-title">
+  <div id="trust-strip-title"><span>EVIDENCE ON EVERY GUIDE</span><span>TESTING LABELED HONESTLY</span><span>NO PAID LINKS</span></div>
+  <p>Published records expose their evidence basis, testing basis, update state, paid-link state, and correction route. The latest recorded guide update is {latestUpdate ?? 'not available'}.</p>
+  <a href="/corrections/">Report a correction →</a>
 </section>

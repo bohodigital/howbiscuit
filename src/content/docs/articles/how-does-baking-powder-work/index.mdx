@@ -2,25 +2,50 @@
 title: How Does Baking Powder Work?
 description: Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.
 kind: article
-division: cook
+categoryId: kitchen
+topicId: food-science
+articleType: guide
+editorialClassification: guide
+editorialPriority: 20
+answerSummary: Baking powder combines a dry acid and base that release carbon dioxide after liquid is added; heat expands those bubbles while the batter or dough sets around them.
+problemLabel: My baking powder is not working
 evidence: Researched
 readTime: 7 min read
 feed: true
+featured: false
 pubDate: 2026-07-01
 updatedDate: 2026-07-10
 lastUpdated: 2026-07-10
+testing:
+  state: not-hands-on-tested
+  notes:
+    - This mechanism guide was researched from university extension sources; How Biscuit did not run a controlled product test.
+sourceNotes:
+  state: structured
+  items:
+    - title: "Cooking Food Storage: baking powder activity and double-acting acids"
+      publisher: Utah State University Extension
+      href: https://extension.usu.edu/preserve-the-harvest/research/cooking-food-storage
+    - title: "Storing Staple Ingredients in the Kitchen: freshness test"
+      publisher: Penn State Extension
+      href: https://extension.psu.edu/storing-staple-ingredients-in-the-kitchen
+    - title: Ingredient Substitutions for Cooking and Baking
+      publisher: Utah State University Extension
+      href: https://extension.usu.edu/archive/list-of-ingredient-substitutions-for-cooking-and-baking
+relatedContent:
+  state: structured
+  routes:
+    - /articles/why-are-some-answers-better-than-others/
+    - /articles/why-salt-melts-ice/
+disclosure:
+  state: no-paid-links
+  text: This guide contains no affiliate links, sponsored placements, paid reviews, or product placements.
+  href: /affiliate-disclosure/
 ---
 
-import AnswerStack from '../../../../components/AnswerStack.astro';
 import MechanismSteps from '../../../../components/MechanismSteps.astro';
 import MistakeGrid from '../../../../components/MistakeGrid.astro';
 import BiscuitBox from '../../../../components/BiscuitBox.astro';
-import SourceNotes from '../../../../components/SourceNotes.astro';
-import RelatedShelf from '../../../../components/RelatedShelf.astro';
-
-<AnswerStack>
-  Baking powder is a packaged acid-and-base reaction. Add liquid and the ingredients react, releasing carbon dioxide gas. Heat expands those bubbles while the batter or dough firms around them, which gives quick breads, cakes, and biscuits their lift.
-</AnswerStack>
 
 ## What is actually in the can?
 
@@ -49,7 +74,6 @@ That second reaction gives you a little breathing room, but not unlimited time. 
 <BiscuitBox variant="dont-be-fooled" title="More baking powder does not mean more height">
   Too much can make a bake rise quickly and then collapse before the structure is strong enough to hold it. It can also leave an unpleasant chemical or bitter taste. Measure the recipe amount; the can is not a volume knob.
 </BiscuitBox>
-
 ## Why baking powder fails
 
 <MistakeGrid items={[
@@ -83,14 +107,3 @@ Utah State University Extension lists workable baking-powder substitutions that 
 <BiscuitBox variant="cheap-safe" title="The cheap safe version">
   Test the can before buying another one. If it fails, replace it rather than improvising a large amount of baking soda. A small can costs less than a pan of dense, metallic-tasting cake.
 </BiscuitBox>
-
-<SourceNotes sources={[
-  { title: 'Cooking Food Storage: baking powder activity and double-acting acids', publisher: 'Utah State University Extension', href: 'https://extension.usu.edu/preserve-the-harvest/research/cooking-food-storage' },
-  { title: 'Storing Staple Ingredients in the Kitchen: freshness test', publisher: 'Penn State Extension', href: 'https://extension.psu.edu/storing-staple-ingredients-in-the-kitchen' },
-  { title: 'Ingredient Substitutions for Cooking and Baking', publisher: 'Utah State University Extension', href: 'https://extension.usu.edu/archive/list-of-ingredient-substitutions-for-cooking-and-baking' }
-]} />
-
-<RelatedShelf links={[
-  { label: 'Cooking hub', title: 'Understand more kitchen failures', href: '/cook/' },
-  { label: 'Editorial guide', title: 'How we check practical answers', href: '/editorial-policy/' }
-]} />

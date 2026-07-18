@@ -1,13 +1,8 @@
 /**
- * Frozen document-route boundary accepted in Phase A.
- *
- * Phase B may replace rendering and shell behavior, but it must neither remove
- * a current document route nor activate a Phase C document route. Keep this
- * list explicit so a one-for-one source replacement cannot satisfy validation
- * by preserving only the document count.
- * This public-content policy path is within the canonical Phase B boundary.
+ * Exact Phase C document boundary. Standalone topic routes are added only by
+ * the normalized threshold policy when a topic has at least three guides.
  */
-export const ACCEPTED_PHASE_A_DOCUMENT_ROUTES = Object.freeze([
+export const PHASE_C_DOCUMENT_ROUTES = Object.freeze([
   '/',
   '/about/',
   '/affiliate-disclosure/',
@@ -15,13 +10,21 @@ export const ACCEPTED_PHASE_A_DOCUMENT_ROUTES = Object.freeze([
   '/articles/how-does-baking-powder-work/',
   '/articles/why-are-some-answers-better-than-others/',
   '/articles/why-salt-melts-ice/',
-  '/buying-guides/',
   '/contact/',
-  '/cook/',
   '/corrections/',
   '/editorial-policy/',
-  '/glossary/',
   '/home-tech/',
+  '/home/',
+  '/kitchen/',
+  '/privacy/',
+  '/shop/',
+  '/tools/',
+]);
+
+export const RETIRED_DOCUMENT_ROUTES = Object.freeze([
+  '/buying-guides/',
+  '/cook/',
+  '/glossary/',
   '/home-tech/gaming-pcs/',
   '/home-tech/laptops/',
   '/home-tech/privacy-security/',
@@ -29,39 +32,16 @@ export const ACCEPTED_PHASE_A_DOCUMENT_ROUTES = Object.freeze([
   '/home-tech/streaming-tvs/',
   '/home-tech/wifi-routers/',
   '/make-do/',
-  '/privacy/',
   '/research-writing/',
   '/science/',
-  '/tools/',
 ]);
-
-export const PHASE_C_ONLY_DOCUMENT_ROUTES = Object.freeze([
-  '/home/',
-  '/home-tech/computers-laptops/',
-  '/home-tech/tvs-streaming/',
-  '/kitchen/',
-  '/shop/',
-]);
-
-export const KNOWN_THIN_CURRENT_ROUTES = Object.freeze([
-  '/glossary/',
-  '/home-tech/gaming-pcs/',
-  '/home-tech/laptops/',
-  '/home-tech/streaming-tvs/',
-  '/science/',
-]);
-
-export function isKnownThinCurrentRoute(route) {
-  return KNOWN_THIN_CURRENT_ROUTES.includes(route);
-}
 
 function hasExcludedState(record) {
-  return record.draft === true
-    || record.preview === true
-    || record.thin === true
-    || isKnownThinCurrentRoute(record.route)
-    || record.redirectState !== null && record.redirectState !== undefined
-    || record.retirementState !== null && record.retirementState !== undefined;
+  return record?.draft === true
+    || record?.preview === true
+    || record?.thin === true
+    || record?.redirectState !== null && record?.redirectState !== undefined
+    || record?.retirementState !== null && record?.retirementState !== undefined;
 }
 
 export function pagefindMetadataForRecord(record) {

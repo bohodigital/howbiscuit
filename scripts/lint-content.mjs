@@ -8,20 +8,11 @@ const distRoot = path.join(root, 'dist');
 
 const requiredDocs = [
   'index.mdx',
-  'research-writing/index.mdx',
-  'cook/index.mdx',
   'home-tech/index.mdx',
-  'home-tech/wifi-routers/index.mdx',
-  'home-tech/gaming-pcs/index.mdx',
-  'home-tech/laptops/index.mdx',
-  'home-tech/smart-home/index.mdx',
-  'home-tech/streaming-tvs/index.mdx',
-  'home-tech/privacy-security/index.mdx',
-  'make-do/index.mdx',
+  'home/index.mdx',
+  'kitchen/index.mdx',
+  'shop/index.mdx',
   'tools/index.mdx',
-  'buying-guides/index.mdx',
-  'science/index.mdx',
-  'glossary/index.mdx',
   'articles/index.mdx',
   'about/index.mdx',
   'editorial-policy/index.mdx',
@@ -36,14 +27,10 @@ const requiredDocs = [
 
 const requiredComponents = [
   'BiscuitBox.astro',
-  'DivisionCard.astro',
-  'ToolPreview.astro',
-  'ShortAnswer.astro',
-  'CommonMistakes.astro',
-  'CheapSafeGuide.astro',
   'EvidenceBadge.astro',
-  'RiskBadge.astro',
   'LatexArticle.astro',
+  'SourceNotes.astro',
+  'TestingBadge.astro',
 ];
 
 const forbiddenPublicRoutes = [
@@ -52,14 +39,29 @@ const forbiddenPublicRoutes = [
   'feed.xml',
   'robots.txt',
   'sitemap.xml',
+  'llms.txt',
   'assets/styles.css',
   'articles/how-does-baking-powder-work/index.html',
   'articles/why-are-some-answers-better-than-others/index.html',
   'articles/why-salt-melts-ice/index.html',
 ];
 
-const requiredEndpoints = ['feed.xml.js', 'robots.txt.js', 'sitemap.xml.js'];
-const removedBuiltRoutes = ['math/index.html'];
+const requiredEndpoints = ['feed.xml.js', 'llms.txt.js', 'robots.txt.js', 'sitemap.xml.js'];
+const removedBuiltRoutes = [
+  'buying-guides/index.html',
+  'cook/index.html',
+  'glossary/index.html',
+  'home-tech/gaming-pcs/index.html',
+  'home-tech/laptops/index.html',
+  'home-tech/privacy-security/index.html',
+  'home-tech/smart-home/index.html',
+  'home-tech/streaming-tvs/index.html',
+  'home-tech/wifi-routers/index.html',
+  'make-do/index.html',
+  'math/index.html',
+  'research-writing/index.html',
+  'science/index.html',
+];
 const forbiddenPatterns = [
   /\bTODO\b/i,
   /Lorem ipsum/i,
@@ -206,7 +208,7 @@ if (!existsSync(latexBuiltPath)) {
   errors.push('The compiled LaTeX article route is missing from dist.');
 } else {
   const latexBuilt = await readFile(latexBuiltPath, 'utf8');
-  for (const marker of ['hb-latex-paper', 'katex-mathml', 'the-short-answer', 'latex-source-notes']) {
+  for (const marker of ['hb-latex-paper', 'katex-mathml', 'the-short-answer', 'hb-sources', 'hb-correction-link']) {
     if (!latexBuilt.includes(marker)) errors.push(`Compiled LaTeX article is missing ${marker}.`);
   }
   const visibleLatex = latexBuilt.replaceAll(/<annotation\b[^>]*>[\s\S]*?<\/annotation>/gi, '');
@@ -215,7 +217,7 @@ if (!existsSync(latexBuiltPath)) {
   }
 }
 
-for (const endpoint of ['feed.xml', 'sitemap.xml']) {
+for (const endpoint of ['feed.xml', 'sitemap.xml', 'llms.txt']) {
   const endpointPath = path.join(distRoot, endpoint);
   if (!existsSync(endpointPath)) {
     errors.push(`Missing built endpoint: ${endpoint}`);

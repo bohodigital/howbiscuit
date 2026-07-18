@@ -27,7 +27,6 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/mdx": "5.0.6",
     "@astrojs/rss": "^4.0.19",
-    "@astrojs/sitemap": "3.7.3",
     "astro": "6.4.2",
     "js-yaml": "4.3.0",
     "katex": "^0.17.0",

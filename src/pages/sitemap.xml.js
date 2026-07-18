@@ -1,9 +1,6 @@
 import { getCollection } from 'astro:content';
 
-function docPath(id) {
-  const clean = id.replace(/\.(md|mdx)$/, '').replace(/(^|\/)index$/, '');
-  return clean ? `/${clean}/` : '/';
-}
+import { createPublicPageCatalog, getPublicSiteData } from '../lib/public-content/site-registry.mjs';
 
 function xmlEscape(value) {
   return value
@@ -14,35 +11,24 @@ function xmlEscape(value) {
     .replaceAll("'", '&apos;');
 }
 
-function dateOnly(value) {
-  if (!value) return '2026-07-01';
-  return new Date(value).toISOString().slice(0, 10);
-}
-
 export async function GET(context) {
   const site = context.site?.toString().replace(/\/$/, '') ?? 'https://howbiscuit.com';
-  const docs = await getCollection('docs');
-  const urls = docs
-    .map((entry) => ({
-      loc: `${site}${docPath(entry.id)}`,
-      lastmod: dateOnly(entry.data.updatedDate ?? entry.data.lastUpdated ?? entry.data.pubDate),
-    }))
-    .sort((a, b) => a.loc.localeCompare(b.loc));
+  const entries = await getCollection('docs');
+  const urls = createPublicPageCatalog(entries, getPublicSiteData())
+    .filter(({ sitemapEligible }) => sitemapEligible)
+    .map((page) => ({
+      loc: site + page.route,
+      lastmod: page.updatedDate ?? page.publishedDate,
+    }));
+  if (urls.some(({ lastmod }) => !lastmod)) throw new Error('Every sitemap-eligible page requires a source-owned lastmod date.');
 
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...urls.map(
-      (url) =>
-        `  <url>\n    <loc>${xmlEscape(url.loc)}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n  </url>`,
-    ),
+    ...urls.map((url) => '  <url>\n    <loc>' + xmlEscape(url.loc) + '</loc>\n    <lastmod>' + url.lastmod + '</lastmod>\n  </url>'),
     '</urlset>',
     '',
   ].join('\n');
 
-  return new Response(body, {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-    },
-  });
+  return new Response(body, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
 }

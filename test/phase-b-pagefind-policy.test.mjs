@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import {
-  isKnownThinCurrentRoute,
-  KNOWN_THIN_CURRENT_ROUTES,
+  PHASE_C_DOCUMENT_ROUTES,
+  RETIRED_DOCUMENT_ROUTES,
   pagefindAttributesForPage,
   pagefindMetadataForRecord,
 } from '../src/lib/public-content/pagefind-policy.mjs';
@@ -22,55 +22,36 @@ const publishable = {
   retirementState: null,
 };
 
-test('eligible records receive index-time Pagefind metadata', () => {
+test('eligible records receive complete Pagefind metadata', () => {
   assert.deepEqual(pagefindMetadataForRecord(publishable), {
     include: true,
     filters: { category: 'home', type: 'guide' },
     meta: {
-      title: 'A real example guide',
-      description: 'A sufficiently complete description for a real example guide in search.',
-      route: '/articles/example/',
+      title: publishable.title,
+      description: publishable.description,
+      route: publishable.route,
     },
   });
-  assert.deepEqual(pagefindAttributesForPage({ searchEligible: true }), {
-    'data-pagefind-body': '',
-  });
+  assert.deepEqual(pagefindAttributesForPage({ searchEligible: true }), { 'data-pagefind-body': '' });
 });
 
-test('draft, preview, thin, redirected, and retired records are excluded at index time', () => {
-  const exclusions = [
+test('draft, preview, thin, redirected, and retired records are excluded fail closed', () => {
+  for (const exclusion of [
     { draft: true, searchEligible: false },
     { preview: true, searchEligible: false },
     { thin: true, searchEligible: false },
     { redirectState: { to: '/elsewhere/' }, searchEligible: false },
     { retirementState: { allowedStatuses: [404, 410] }, searchEligible: false },
-  ];
-  for (const exclusion of exclusions) {
+  ]) {
     const record = { ...publishable, ...exclusion };
     assert.deepEqual(pagefindMetadataForRecord(record), { include: false });
     assert.deepEqual(pagefindAttributesForPage(record), { 'data-pagefind-ignore': 'all' });
   }
+  assert.throws(() => pagefindMetadataForRecord({ ...publishable, draft: true }), /contradictory Pagefind eligibility/i);
 });
 
-test('an inconsistent eligibility claim is rejected instead of indexed', () => {
-  assert.throws(
-    () => pagefindMetadataForRecord({ ...publishable, draft: true }),
-    /contradictory Pagefind eligibility/i,
-  );
-});
-
-test('all five known thin legacy routes remain served but are excluded from Pagefind', () => {
-  assert.deepEqual(KNOWN_THIN_CURRENT_ROUTES, [
-    '/glossary/',
-    '/home-tech/gaming-pcs/',
-    '/home-tech/laptops/',
-    '/home-tech/streaming-tvs/',
-    '/science/',
-  ]);
-  for (const route of KNOWN_THIN_CURRENT_ROUTES) {
-    assert.equal(isKnownThinCurrentRoute(route), true);
-    assert.deepEqual(pagefindAttributesForPage({ route, searchEligible: true }), {
-      'data-pagefind-ignore': 'all',
-    });
-  }
+test('the 16 active Phase C documents are unique and disjoint from retired sources', () => {
+  assert.equal(PHASE_C_DOCUMENT_ROUTES.length, 16);
+  assert.equal(new Set(PHASE_C_DOCUMENT_ROUTES).size, 16);
+  assert.ok(RETIRED_DOCUMENT_ROUTES.every((route) => !PHASE_C_DOCUMENT_ROUTES.includes(route)));
 });

@@ -13,10 +13,11 @@ import {
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const packageJson = JSON.parse(readFileSync(path.join(root, 'package.json'), 'utf8'));
 
-test('Phase B declares every build integration as a direct dependency', () => {
-  for (const dependency of ['@astrojs/mdx', '@astrojs/sitemap', 'pagefind']) {
+test('Phase C declares every active build integration as a direct dependency', () => {
+  for (const dependency of ['@astrojs/mdx', '@astrojs/rss', 'pagefind']) {
     assert.ok(Object.hasOwn(packageJson.dependencies, dependency), `${dependency} must be a direct dependency`);
   }
+  assert.equal(Object.hasOwn(packageJson.dependencies, '@astrojs/sitemap'), false);
 });
 
 test('normal build and QA lanes run the explicit Pagefind build and reject skip leakage', () => {
@@ -30,6 +31,8 @@ test('normal build and QA lanes run the explicit Pagefind build and reject skip 
   assert.match(buildScript, /pagefindUrlFromFragment/);
   assert.match(buildScript, /assertSetsEqual\(eligibleRoutes, indexedRoutes/);
   assert.match(packageJson.scripts['build:sites'], /--verify-sites-package/);
+  assert.match(buildScript, /sitemap route set/);
+  assert.match(buildScript, /llms\.txt/);
 
   assert.doesNotThrow(() => assertFullPagefindLane({ skipRequested: false, lane: 'build' }));
   assert.throws(

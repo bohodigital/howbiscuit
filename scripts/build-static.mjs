@@ -8,9 +8,8 @@ import {
   assertPiPagefindSkipAllowed,
 } from './lib/pagefind-platform-policy.mjs';
 import {
-  ACCEPTED_PHASE_A_DOCUMENT_ROUTES,
-  KNOWN_THIN_CURRENT_ROUTES,
-  PHASE_C_ONLY_DOCUMENT_ROUTES,
+  PHASE_C_DOCUMENT_ROUTES,
+  RETIRED_DOCUMENT_ROUTES,
 } from '../src/lib/public-content/pagefind-policy.mjs';
 
 const root = process.cwd();
@@ -116,11 +115,11 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   const docsRoot = path.join(root, 'src', 'content', 'docs');
   const sourceFiles = collectFiles(docsRoot, (filePath) => /\.(md|mdx)$/.test(filePath));
   const sourceRoutes = new Set(sourceFiles.map((filePath) => routeFromSource(filePath, docsRoot)));
-  const acceptedRoutes = new Set(ACCEPTED_PHASE_A_DOCUMENT_ROUTES);
-  invariant(acceptedRoutes.size === ACCEPTED_PHASE_A_DOCUMENT_ROUTES.length, 'The frozen Phase A document route contract contains a duplicate.');
-  assertSetsEqual(acceptedRoutes, sourceRoutes, 'Phase B source document route set');
-  for (const route of PHASE_C_ONLY_DOCUMENT_ROUTES) {
-    invariant(!sourceRoutes.has(route), `Phase C document route activated before acceptance: ${route}`);
+  const acceptedRoutes = new Set(PHASE_C_DOCUMENT_ROUTES);
+  invariant(acceptedRoutes.size === PHASE_C_DOCUMENT_ROUTES.length, 'The Phase C document route contract contains a duplicate.');
+  assertSetsEqual(acceptedRoutes, sourceRoutes, 'Phase C source document route set');
+  for (const route of RETIRED_DOCUMENT_ROUTES) {
+    invariant(!sourceRoutes.has(route), `Retired Phase C source route remains: ${route}`);
   }
 
   const htmlFiles = collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html'));
@@ -130,27 +129,32 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   ]));
   const expectedHtmlRoutes = new Set([...acceptedRoutes, '/404.html']);
   assertSetsEqual(expectedHtmlRoutes, new Set(htmlByRoute.keys()), `${label} HTML route set`);
-  for (const route of PHASE_C_ONLY_DOCUMENT_ROUTES) {
-    invariant(!htmlByRoute.has(route), `${label} activated a Phase C document route before acceptance: ${route}`);
-  }
   for (const [route, html] of htmlByRoute) verifyPageHtml(route, html);
-
-  for (const route of KNOWN_THIN_CURRENT_ROUTES) {
-    const html = htmlByRoute.get(route);
-    invariant(html, `Known thin route is no longer served: ${route}`);
-    invariant(html.includes('data-pagefind-ignore="all"'), `Known thin route is not excluded from Pagefind: ${route}`);
-    invariant(!html.includes('data-pagefind-body'), `Known thin route is still Pagefind eligible: ${route}`);
-  }
 
   const eligibleRoutes = new Set(
     [...htmlByRoute]
       .filter(([, html]) => html.includes('data-pagefind-body'))
       .map(([route]) => route),
   );
-  const expectedEligibleRoutes = new Set(
-    [...acceptedRoutes].filter((route) => !KNOWN_THIN_CURRENT_ROUTES.includes(route)),
-  );
+  const expectedEligibleRoutes = new Set(acceptedRoutes);
   assertSetsEqual(expectedEligibleRoutes, eligibleRoutes, `${label} Pagefind-eligible route set`);
+
+  const sitemap = readFileSync(path.join(artifactRoot, 'sitemap.xml'), 'utf8');
+  const sitemapRoutes = new Set([...sitemap.matchAll(/<loc>https:\/\/howbiscuit\.com([^<]+)<\/loc>/g)].map((match) => match[1]));
+  assertSetsEqual(expectedEligibleRoutes, sitemapRoutes, `${label} sitemap route set`);
+  invariant(countText(sitemap, '<lastmod>') === expectedEligibleRoutes.size, `${label} sitemap requires one lastmod per eligible route.`);
+
+  const feed = readFileSync(path.join(artifactRoot, 'feed.xml'), 'utf8');
+  const articleRoutes = [...acceptedRoutes].filter((route) => route.startsWith('/articles/') && route !== '/articles/');
+  for (const route of articleRoutes) {
+    invariant(feed.includes(`https://howbiscuit.com${route}`), `${label} feed is missing ${route}.`);
+  }
+
+  const llms = readFileSync(path.join(artifactRoot, 'llms.txt'), 'utf8');
+  for (const route of expectedEligibleRoutes) {
+    invariant(llms.includes(`https://howbiscuit.com${route}`), `${label} llms.txt is missing ${route}.`);
+  }
+  invariant(llms.includes('hello@howbiscuit.com'), `${label} llms.txt is missing the public contact route.`);
 
   const pagefindRoot = path.join(artifactRoot, 'pagefind');
   if (!requirePagefind) {

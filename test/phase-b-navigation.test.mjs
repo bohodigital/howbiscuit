@@ -3,51 +3,36 @@ import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
-import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
-import { buildPublicNavigation } from '../src/lib/public-content/public-navigation.mjs';
-import { createPublicContentRegistry } from '../src/lib/public-content/model.mjs';
-import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
+import { getPublicSiteData } from '../src/lib/public-content/site-registry.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
-const registry = createPublicContentRegistry({
-  sources: discoverTrackedArticleSources(root),
-  taxonomy,
+const { navigation, registry } = getPublicSiteData(root);
+
+test('Phase C navigation exposes five real category routes and All Guides', () => {
+  assert.deepEqual(navigation.categories.map(({ label, href }) => [label, href]), [
+    ['Home Tech', '/home-tech/'],
+    ['Home & Apartment', '/home/'],
+    ['Kitchen', '/kitchen/'],
+    ['Shop Smarter', '/shop/'],
+    ['Tools', '/tools/'],
+  ]);
+  assert.deepEqual(navigation.allGuides, { label: 'All Guides', href: '/articles/' });
+  const guideLinks = navigation.categories.flatMap(({ guideLinks }) => guideLinks);
+  assert.ok(guideLinks.length > 0);
+  assert.ok(guideLinks.every(({ href }) => registry.some(({ route }) => route === href)));
 });
 
-test('Phase B navigation exposes the exact controls without activating target routes', () => {
-  const navigation = buildPublicNavigation({ taxonomy, registry });
-
-  assert.deepEqual(navigation.categories.map(({ label }) => label), [
-    'Home Tech',
-    'Home & Apartment',
-    'Kitchen',
-    'Shop Smarter',
-    'Tools',
-  ]);
-  assert.equal(navigation.allGuides.label, 'All Guides');
-  assert.equal(navigation.allGuides.href, '/articles/');
-  assert.ok(navigation.categories.every(({ href }) => href === null));
-
-  const targetRoutes = new Set([
-    ...taxonomy.PUBLIC_CATEGORIES.map(({ route }) => route),
-    ...taxonomy.PUBLIC_CATEGORIES.flatMap(({ topics }) => topics.map(({ route }) => route)),
-  ]);
-  const links = navigation.categories.flatMap(({ guideLinks }) => guideLinks);
-  assert.ok(links.length > 0, 'real published guide links should be available');
-  assert.ok(links.every(({ href }) => registry.some(({ route }) => route === href)));
-  assert.ok(links.every(({ href }) => !targetRoutes.has(href)));
-  assert.ok(links.every(({ title }) => !/coming soon|placeholder|preview/i.test(title)));
-});
-
-test('topic visibility is derived from the accepted threshold and never creates a dead link', () => {
-  const navigation = buildPublicNavigation({ taxonomy, registry });
+test('one-guide topics remain category filters and zero-guide topics stay hidden', () => {
   const home = navigation.categories.find(({ id }) => id === 'home');
   const kitchen = navigation.categories.find(({ id }) => id === 'kitchen');
   const homeTech = navigation.categories.find(({ id }) => id === 'home-tech');
-
-  assert.deepEqual(home.topicLabels, [{ id: 'heating-cooling', label: 'Heating & Cooling', mode: 'filter' }]);
-  assert.deepEqual(kitchen.topicLabels, [{ id: 'food-science', label: 'Food Science', mode: 'filter' }]);
+  assert.deepEqual(home.topicLabels, [{
+    id: 'heating-cooling', label: 'Heating & Cooling', mode: 'filter', count: 1,
+    href: '/home/#topic-heating-cooling',
+  }]);
+  assert.deepEqual(kitchen.topicLabels, [{
+    id: 'food-science', label: 'Food Science', mode: 'filter', count: 1,
+    href: '/kitchen/#topic-food-science',
+  }]);
   assert.deepEqual(homeTech.topicLabels, []);
-  assert.ok(navigation.categories.flatMap(({ topicLabels }) => topicLabels).every(({ href }) => href === undefined));
 });

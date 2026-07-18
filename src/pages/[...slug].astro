@@ -2,87 +2,192 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 
+import EmptyState from '../components/EmptyState.astro';
 import GuideCard from '../components/GuideCard.astro';
-import { OBSERVED_ROUTE_CONTRACTS } from '../config/public-taxonomy';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
 import HomeLayout from '../layouts/HomeLayout.astro';
-import ShoppingLayout from '../layouts/ShoppingLayout.astro';
-import ToolLayout from '../layouts/ToolLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
-import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
-import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES, isKnownThinCurrentRoute } from '../lib/public-content/pagefind-policy.mjs';
+import { orderLatestContent } from '../lib/public-content/model.mjs';
+import { PHASE_C_DOCUMENT_ROUTES } from '../lib/public-content/pagefind-policy.mjs';
+import { getPublicSiteData, routeFromEntryId } from '../lib/public-content/site-registry.mjs';
 
 type DocsEntry = CollectionEntry<'docs'>;
-interface PageProps { entry: DocsEntry; route: string }
-interface RegistryRecord {
+interface PageProps {
+  entry?: DocsEntry;
   route: string;
-  title: string;
-  description: string;
-  categoryId: string | null;
-  topicId: string | null;
-  articleType: string;
-  articleFormat: string;
-  publishedDate: string | null;
-  updatedDate: string | null;
-  readTime: string | null;
-  evidence: string | null;
+  topic?: { categoryId: string; id: string; label: string; description: string };
+}
+interface RegistryRecord {
+  route: string; title: string; description: string; categoryId: string | null;
+  topicId: string | null; readTime: string | null; evidence: string;
+  articleType: string; articleFormat: string; answerSummary: string;
+  publishedDate: string | null; updatedDate: string | null; searchEligible: boolean;
   testing: { state: string; notes?: readonly string[] };
-  disclosure: { state: string };
-  searchEligible: boolean;
+  sourceNotes: { state: string; items: readonly { title: string; publisher: string; href: string }[] };
+  relatedContent: { state: string; routes: readonly string[] };
+  disclosure: { state: string; text?: string; href?: string };
+}
+interface TopicView {
+  id: string; route: string; label: string; description: string; mode: 'filter' | 'standalone';
+  count: number; guides: readonly RegistryRecord[];
+}
+interface CategoryView {
+  id: string; label: string; route: string; description: string; topics: readonly TopicView[];
+  featuredGuides: readonly RegistryRecord[]; latestGuides: readonly RegistryRecord[];
+}
+interface SiteData {
+  registry: readonly RegistryRecord[];
+  categoryViews: readonly CategoryView[];
 }
 
 export async function getStaticPaths() {
-  const routeFromEntryId = (id: string): string => {
-    const clean = id.replace(/\.(md|mdx)$/, '').replace(/(^|\/)index$/, '');
-    return clean ? `/${clean}/` : '/';
-  };
   const entries = await getCollection('docs');
-  const pages: Array<{ params: { slug: string | undefined }; props: PageProps }> = entries.map((entry) => ({
-    params: { slug: routeFromEntryId(entry.id).slice(1, -1) || undefined },
-    props: { entry, route: routeFromEntryId(entry.id) },
-  }));
-  const contentRoutes = new Set(pages.map(({ props }) => props.route));
-  const missingRoutes = ACCEPTED_PHASE_A_DOCUMENT_ROUTES.filter((route) => !contentRoutes.has(route));
-  const unexpectedRoutes = [...contentRoutes].filter((route) => !ACCEPTED_PHASE_A_DOCUMENT_ROUTES.includes(route));
+  const pages: Array<{ params: { slug: string | undefined }; props: PageProps }> = entries.map((entry) => {
+    const route = routeFromEntryId(entry.id);
+    return {
+      params: { slug: route.slice(1, -1) || undefined },
+      props: { entry, route },
+    };
+  });
+  const sourceRoutes = new Set(pages.map(({ props }) => props.route));
+  const expectedRoutes = new Set(PHASE_C_DOCUMENT_ROUTES);
+  const missingRoutes = [...expectedRoutes].filter((route) => !sourceRoutes.has(route));
+  const unexpectedRoutes = [...sourceRoutes].filter((route) => !expectedRoutes.has(route));
   if (missingRoutes.length || unexpectedRoutes.length) {
-    throw new Error(`Phase A document route boundary changed. Missing: ${missingRoutes.join(', ') || 'none'}. Unexpected: ${unexpectedRoutes.join(', ') || 'none'}.`);
+    throw new Error('Phase C document boundary mismatch. Missing: ' + (missingRoutes.join(', ') || 'none') + '. Unexpected: ' + (unexpectedRoutes.join(', ') || 'none') + '.');
   }
-  for (const contract of OBSERVED_ROUTE_CONTRACTS.filter(({ outcome }) => outcome === 'serve')) {
-    if (!contentRoutes.has(contract.route)) {
-      throw new Error(`Observed served route has no custom-shell source: ${contract.route}`);
+
+  const { categoryViews } = getPublicSiteData() as SiteData;
+  for (const category of categoryViews) {
+    for (const topic of category.topics.filter(({ mode }) => mode === 'standalone')) {
+      pages.push({
+        params: { slug: topic.route.slice(1, -1) },
+        props: {
+          route: topic.route,
+          topic: { categoryId: category.id, id: topic.id, label: topic.label, description: topic.description },
+        },
+      });
     }
   }
   return pages;
 }
 
 const page = Astro.props as PageProps;
-const { registry } = getPublicSiteData() as { registry: readonly RegistryRecord[] };
-const { Content, headings } = await render(page.entry);
-const { data } = page.entry;
-const thin = data.thin || isKnownThinCurrentRoute(page.route);
-const excluded = data.draft || data.preview || thin || Boolean(data.redirectState) || Boolean(data.retirementState);
-const record = data.kind === 'article' ? registry.find(({ route }) => route === page.route) : undefined;
-if (data.kind === 'article' && !record) throw new Error(`Article is missing from the normalized registry: ${page.route}`);
+const siteData = getPublicSiteData() as SiteData;
+const { registry } = siteData;
+let Content;
+let headings: Array<{ depth: number; slug: string; text: string }> = [];
+if (page.entry) {
+  const rendered = await render(page.entry);
+  Content = rendered.Content;
+  headings = rendered.headings;
+}
+const data = page.entry?.data;
+const excluded = Boolean(data?.draft || data?.preview || data?.thin || data?.redirectState || data?.retirementState);
+const record = data?.kind === 'article' ? registry.find(({ route }) => route === page.route) : undefined;
+if (data?.kind === 'article' && !record) throw new Error('Article is missing from the normalized registry: ' + page.route);
+const topicView = page.topic
+  ? siteData.categoryViews.find(({ id }) => id === page.topic?.categoryId)?.topics.find(({ id }) => id === page.topic?.id)
+  : null;
+const categoryView = data?.kind === 'category'
+  ? siteData.categoryViews.find(({ id }) => id === data.categoryId)
+  : null;
+const neighboringCategories = categoryView ? siteData.categoryViews.filter(({ id }) => id !== categoryView.id) : [];
+const categoryAccent = categoryView?.id === 'home'
+  ? 'mint'
+  : categoryView?.id === 'kitchen'
+    ? 'tomato'
+    : categoryView?.id === 'shop'
+      ? 'lilac'
+      : 'honey';
 ---
 
-{data.kind === 'home' ? (
+{data?.kind === 'home' && Content ? (
   <HomeLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></HomeLayout>
-) : page.route === '/articles/' ? (
-  <CategoryLayout title="All Guides" description="Every published How Biscuit guide, ordered from the normalized public-content registry." canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
-    <p>This shelf is generated only from normalized, publishable records. Drafts, previews, thin pages, redirects, retirements, and fixtures do not qualify.</p>
-    <div class="hb-guide-grid">
-      {registry.filter((item) => item.searchEligible).map((item) => <GuideCard label={item.categoryId ?? 'Editorial standard'} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
+) : data?.kind === 'guide-index' ? (
+  <CategoryLayout title="All Guides" description={data.description} canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
+    <p>Every card below comes from the normalized registry. Drafts, previews, redirects, retirements, and thin content do not qualify.</p>
+    <div class="hb-guide-grid hb-article-index-grid">
+      {(orderLatestContent(registry) as RegistryRecord[]).map((item) => <GuideCard label={item.categoryId ?? 'Editorial standard'} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
     </div>
   </CategoryLayout>
-) : data.kind === 'article' && record ? (
+) : data?.kind === 'article' && record && Content ? (
   <ArticleLayout title={data.title} description={data.description} canonical={page.route} {record} {headings}><Content /></ArticleLayout>
-) : data.kind === 'trust' ? (
+) : data?.kind === 'trust' && Content ? (
   <TrustLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></TrustLayout>
-) : data.division === 'buying-guides' ? (
-  <ShoppingLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></ShoppingLayout>
-) : data.division === 'tools' ? (
-  <ToolLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></ToolLayout>
-) : (
-  <CategoryLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></CategoryLayout>
-)}
+) : data?.kind === 'category' && categoryView ? (
+  <CategoryLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
+    <section aria-labelledby="eligible-topics-title">
+      <h2 id="eligible-topics-title">Eligible topics</h2>
+      {categoryView.topics.length > 0 ? (
+        <>
+          <p>Topics with one or two guides stay as category filters. A standalone topic index requires at least three publishable guides.</p>
+          <nav class="hb-topic-filters" aria-label="Browse published topics">
+            <a href={categoryView.route}>All</a>
+            {categoryView.topics.map((topic) => (
+              <a href={topic.mode === 'standalone' ? topic.route : categoryView.route + '#topic-' + topic.id} aria-label={`${topic.label}, ${topic.count} published guide${topic.count === 1 ? '' : 's'}`}>
+                {topic.label}<span aria-hidden="true">{topic.count}</span>
+              </a>
+            ))}
+          </nav>
+        </>
+      ) : <EmptyState title="No topic has enough published guides yet" message="The topic taxonomy is preserved in the registry, but zero-guide labels and standalone pages remain hidden." />}
+    </section>
+
+    <section aria-labelledby="category-featured-title">
+      <h2 id="category-featured-title">Featured guides</h2>
+      {categoryView.featuredGuides.length > 0 ? (
+        <div class="hb-guide-grid">{categoryView.featuredGuides.map((guide) => <GuideCard label={guide.evidence} title={guide.title} description={guide.description} href={guide.route} accent={categoryAccent} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}</div>
+      ) : <EmptyState title="No featured guide is declared" message="This category does not promote an article unless its canonical source metadata marks it featured." />}
+    </section>
+
+    <section aria-labelledby="category-latest-title">
+      <h2 id="category-latest-title">Latest guides</h2>
+      {categoryView.latestGuides.length > 0 ? (
+        <div class="hb-guide-grid">{categoryView.latestGuides.map((guide) => <GuideCard label={guide.evidence} title={guide.title} description={guide.description} href={guide.route} accent={categoryAccent} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}</div>
+      ) : <EmptyState title="No publishable guides in this category" message="The category route is active, but the public library will not show filler cards or unsupported topic pages." actionHref="/articles/" actionLabel="Browse All Guides" />}
+    </section>
+
+    {categoryView.topics.map((topic) => (
+      <section id={'topic-' + topic.id} class="hb-topic-section" aria-labelledby={'topic-' + topic.id + '-title'}>
+        <h2 id={'topic-' + topic.id + '-title'}>{topic.label}</h2>
+        <p>{topic.description}</p>
+        <div class="hb-guide-grid">{topic.guides.map((guide) => <GuideCard label={guide.evidence} title={guide.title} description={guide.description} href={guide.route} accent={categoryAccent} meta={[guide.readTime, guide.evidence].filter(Boolean).join(' · ')} />)}</div>
+      </section>
+    ))}
+
+    <section aria-labelledby="category-tools-title">
+      <h2 id="category-tools-title">Relevant tools</h2>
+      <EmptyState title="No approved tool is attached to this category" message="Calculators, converters, checklists, and price tools appear here only after a real route and transparent method exist." actionHref="/tools/" actionLabel="View the Tools category" />
+    </section>
+
+    {categoryView.id === 'shop' && (
+      <section aria-labelledby="product-groups-title">
+        <h2 id="product-groups-title">Product groups</h2>
+        <EmptyState title="No product group is published" message="How Biscuit has not activated product rankings, live prices, deals, or merchant claims in this phase." />
+      </section>
+    )}
+
+    <nav class="hb-neighbor-links" aria-label="Neighboring categories">
+      <strong>Explore neighboring categories</strong>
+      <div>{neighboringCategories.map((item) => <a href={item.route}>{item.label}</a>)}</div>
+    </nav>
+  </CategoryLayout>
+) : page.topic && topicView ? (
+  <CategoryLayout title={page.topic.label} description={page.topic.description} canonical={page.route} searchEligible={true} sectionLabel="Topic">
+    <p>This standalone index exists because the normalized registry contains at least three publishable guides for this topic.</p>
+    <div class="hb-guide-grid">
+      {topicView.guides.map((item) => <GuideCard label={item.evidence} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
+    </div>
+  </CategoryLayout>
+) : null}
+
+<style>
+  :global(.hb-empty-state p) { color: var(--hb-ink-soft); }
+  :global(.hb-empty-state a) { color: var(--hb-ink); font-weight: 850; }
+  .hb-topic-section { scroll-margin-top: 6.5rem; }
+  .hb-neighbor-links { margin-top: 4rem; border-top: 2px solid var(--hb-ink); padding-top: 1.2rem; }
+  .hb-neighbor-links > div { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.8rem; }
+  .hb-neighbor-links a { border: 1px solid var(--hb-ink); border-radius: 999px; padding: 0.45rem 0.7rem; color: var(--hb-ink); text-decoration: none; }
+</style>

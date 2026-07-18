@@ -5,10 +5,6 @@ import path from 'node:path';
 import { load as parseYaml } from 'js-yaml';
 
 import { compileLatexArticle } from '../latex/article-compiler.mjs';
-import {
-  acceptedArticleClassification,
-  assertArticleClassificationParity,
-} from './classification-manifest.mjs';
 
 function asciiCompare(left, right) {
   return left < right ? -1 : left > right ? 1 : 0;
@@ -53,6 +49,8 @@ function mdxSource(root, relativePath) {
     articleType: data.articleType ?? null,
     editorialClassification: data.editorialClassification ?? null,
     articleFormat: data.articleFormat ?? 'standard',
+    answerSummary: data.answerSummary ?? null,
+    problemLabel: data.problemLabel ?? null,
     publishedDate: data.pubDate ?? null,
     updatedDate: data.updatedDate ?? data.lastUpdated ?? null,
     feed: data.feed ?? false,
@@ -84,13 +82,15 @@ function latexSource(root, relativePath) {
     slug: data.slug,
     title: data.title,
     description: data.description,
-    legacyDivision: data.division ?? null,
+    legacyDivision: null,
     legacySubtopic: null,
     categoryId: data.categoryId ?? null,
     topicId: data.topicId ?? null,
     articleType: data.articleType ?? null,
     editorialClassification: data.editorialClassification ?? null,
     articleFormat: 'latex',
+    answerSummary: data.answerSummary ?? null,
+    problemLabel: data.problemLabel ?? null,
     publishedDate: data.pubDate ?? null,
     updatedDate: data.updatedDate ?? null,
     feed: data.feed ?? false,
@@ -98,10 +98,10 @@ function latexSource(root, relativePath) {
     editorialPriority: data.editorialPriority ?? null,
     readTime: data.readTime ?? null,
     evidence: data.evidence ?? null,
-    testing: null,
-    sourceNotes: null,
-    relatedContent: null,
-    disclosure: null,
+    testing: data.testing ?? null,
+    sourceNotes: data.sourceNotes ?? null,
+    relatedContent: data.relatedContent ?? null,
+    disclosure: data.disclosure ?? null,
     draft: false,
     preview: false,
     thin: false,
@@ -134,10 +134,8 @@ export function discoverTrackedArticleSources(root) {
     throw new Error(`Duplicate discovered article route: ${routes.join(', ')}`);
   }
   if (!sources.length) throw new Error('No tracked article sources were discovered.');
-  assertArticleClassificationParity(routes);
   return Object.freeze(sources.map((source) => Object.freeze({
     ...source,
-    ...acceptedArticleClassification(source.route),
-    classificationProvenance: 'accepted-phase-a-manifest',
+    classificationProvenance: 'canonical-source-metadata',
   })));
 }

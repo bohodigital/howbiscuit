@@ -1,6 +1,7 @@
 ---
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import { PUBLIC_METADATA_DEFAULTS } from '../config/public-taxonomy';
 import { pagefindAttributesForPage } from '../lib/public-content/pagefind-policy.mjs';
 import '../styles/biscuit.css';
 import '../styles/shell.css';
@@ -32,7 +33,15 @@ const site = Astro.site ?? new URL('https://howbiscuit.com');
 const canonicalUrl = new URL(canonical, site).toString();
 const imageUrl = new URL(image, site).toString();
 const pageTitle = title === 'How Biscuit' ? title : `${title} | How Biscuit`;
-const structuredData = jsonLd ?? {
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: PUBLIC_METADATA_DEFAULTS.siteName,
+  description: PUBLIC_METADATA_DEFAULTS.description,
+  url: site.toString(),
+  publisher: { '@type': 'Organization', name: 'How Biscuit' },
+};
+const pageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: title,
@@ -44,6 +53,10 @@ const structuredData = jsonLd ?? {
     url: site.toString(),
   },
 };
+const structuredData = [
+  webSiteSchema,
+  ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [pageSchema]),
+];
 const pagefindAttributes = pagefindAttributesForPage({ searchEligible });
 ---
 
