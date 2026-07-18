@@ -58,7 +58,7 @@ The catch-all derives routes from the `docs` content collection and verifies eve
 
 Stored theme values are allowlisted to `system`, `light`, or `dark`. Invalid or unavailable storage falls back to a readable system preference, while the no-JavaScript default remains readable light mode.
 
-Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. Panic-strip hover links switch to fixed dark ink against the decorative tomato background. The measured contrast is greater than 4.5:1 for both text treatments in light and dark themes.
+Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. Panic-strip hover links switch to fixed dark ink against the decorative tomato background. Honey hover cards also reset explicitly colored secondary copy to the same dark ink. The measured contrast is greater than 4.5:1 for these text treatments in light and dark themes.
 
 ### Navigation and modal state
 
@@ -172,6 +172,7 @@ Fresh-context Codex architecture, frontend/accessibility, and test-evidence revi
 - Rollback instructions cover the complete multi-commit Phase B range rather than implying that reverting only the tip is sufficient.
 - The accepted route boundary is an explicit 25-route contract shared by rendering, build verification, and tests; the three previously omitted observed Home Tech topics are now represented, and Phase C-only routes are asserted absent.
 - Panic-strip hover links use a WCAG-AA dark foreground on the tomato background in both themes.
+- Menu-guide and topic-directory honey hover states reset secondary copy to a WCAG-AA dark foreground instead of retaining the dark-theme soft-ink token.
 
 Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candidate remain blocking before acceptance.
 
@@ -181,7 +182,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 
 - LaTeX compilation: passed for one canonical article.
 - Contract-scoped TypeScript: passed.
-- Astro diagnostics: 74 files, 0 errors, 0 warnings, 0 hints.
+- Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
 - Node tests: 44 passed, 0 failed.
 - Content lint: passed for 25 MDX sources and 33 built files.
 - Static build: 26 pages.
@@ -216,7 +217,7 @@ Pi validation passed:
 - Runtime: Node `v24.18.0`, npm `11.16.0`.
 - `npm ci`: passed; the same six audit findings were reported.
 - `npm run qa:pi`: passed.
-- Astro diagnostics: 74 files, 0 errors, 0 warnings, 0 hints.
+- Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 26 pages.
 - Node tests: 44 passed, 0 failed.
 - Content lint: 25 MDX sources and 32 Pi-built files.

@@ -211,6 +211,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-topic-directory a[aria-current='page'] { border-width: 3px; }
 .hb-topic-directory h3 { margin: 0 0 0.6rem; color: inherit; font-size: 1.1rem; letter-spacing: -0.02em; }
 .hb-topic-directory p { margin: 0; color: var(--hb-ink-soft); font-size: 0.8rem; line-height: 1.5; }
+.hb-topic-directory a:hover p { color: #142432; }
 .hb-topic-directory span { margin-top: auto; padding-top: 1rem; color: inherit; font-size: 0.68rem; font-weight: 850; text-transform: uppercase; }
 
 .hb-guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }

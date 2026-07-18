@@ -9,9 +9,9 @@ import {
 } from './lib/pagefind-platform-policy.mjs';
 import {
   ACCEPTED_PHASE_A_DOCUMENT_ROUTES,
+  KNOWN_THIN_CURRENT_ROUTES,
   PHASE_C_ONLY_DOCUMENT_ROUTES,
-} from '../src/config/phase-a-route-contract.mjs';
-import { KNOWN_THIN_CURRENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
+} from '../src/lib/search/pagefind-policy.mjs';
 
 const root = process.cwd();
 const piSkipRequested = process.argv.includes('--pi-pagefind-skip');

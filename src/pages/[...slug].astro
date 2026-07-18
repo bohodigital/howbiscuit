@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 
 import GuideCard from '../components/GuideCard.astro';
-import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES } from '../config/phase-a-route-contract.mjs';
 import { OBSERVED_ROUTE_CONTRACTS } from '../config/public-taxonomy';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
@@ -12,7 +11,7 @@ import ShoppingLayout from '../layouts/ShoppingLayout.astro';
 import ToolLayout from '../layouts/ToolLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
-import { isKnownThinCurrentRoute } from '../lib/search/pagefind-policy.mjs';
+import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES, isKnownThinCurrentRoute } from '../lib/search/pagefind-policy.mjs';
 
 type DocsEntry = CollectionEntry<'docs'>;
 interface PageProps { entry: DocsEntry; route: string }

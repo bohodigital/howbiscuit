@@ -121,6 +121,7 @@ button, input { font: inherit; }
 .hb-menu-guides a { display: block; border: 1px solid color-mix(in srgb, var(--hb-ink), transparent 65%); border-radius: 0.6rem; padding: 0.7rem; background: var(--hb-white); color: var(--hb-ink); text-decoration: none; }
 .hb-menu-guides a:hover { border-color: var(--hb-ink); background: var(--hb-honey); color: #142432; }
 .hb-menu-guides small { display: block; margin-top: 0.25rem; color: var(--hb-ink-soft); font-size: 0.65rem; line-height: 1.4; }
+.hb-menu-guides a:hover small { color: #142432; }
 .hb-mobile-actions { display: none; align-items: center; gap: 0.35rem; }
 .hb-noscript-navigation { display: none; }
 html:not(.js) .hb-desktop-nav .hb-header-action { display: none; }

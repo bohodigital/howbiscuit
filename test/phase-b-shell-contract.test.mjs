@@ -7,9 +7,9 @@ import { gunzipSync } from 'node:zlib';
 
 import {
   ACCEPTED_PHASE_A_DOCUMENT_ROUTES,
+  KNOWN_THIN_CURRENT_ROUTES,
   PHASE_C_ONLY_DOCUMENT_ROUTES,
-} from '../src/config/phase-a-route-contract.mjs';
-import { KNOWN_THIN_CURRENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
+} from '../src/lib/search/pagefind-policy.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const read = (relativePath) => readFileSync(path.join(root, relativePath), 'utf8');
@@ -148,8 +148,11 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
   assert.ok(contrastRatio('#ff7759', '#111b23') >= 4.5, 'dark tomato foreground must meet WCAG AA');
   assert.ok(contrastRatio('#142432', '#ef6547') >= 4.5, 'light panic-strip hover must meet WCAG AA');
   assert.ok(contrastRatio('#142432', '#ff7759') >= 4.5, 'dark panic-strip hover must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#ffd05b') >= 4.5, 'dark honey hover foreground must meet WCAG AA');
   assert.match(biscuitCss, /--hb-tomato-text:\s*#b43a22/);
   assert.match(biscuitCss, /\.hb-panic-strip a:hover\s*\{[^}]*background:\s*var\(--hb-tomato\);[^}]*color:\s*#142432;/);
+  assert.match(biscuitCss, /\.hb-topic-directory a:hover p\s*\{\s*color:\s*#142432;/);
+  assert.match(shellCss, /\.hb-menu-guides a:hover small\s*\{\s*color:\s*#142432;/);
   assert.doesNotMatch(shellCss, /\.hb-article-toc[^{}]*grid-row:\s*1/);
   assert.match(base, /document\.documentElement\.classList\.add\('js'\)/);
   assert.match(header, /<noscript>[\s\S]*Primary navigation without JavaScript/);
