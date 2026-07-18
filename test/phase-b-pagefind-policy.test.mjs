@@ -6,7 +6,7 @@ import {
   KNOWN_THIN_CURRENT_ROUTES,
   pagefindAttributesForPage,
   pagefindMetadataForRecord,
-} from '../src/lib/search/pagefind-policy.mjs';
+} from '../src/lib/public-content/pagefind-policy.mjs';
 
 const publishable = {
   route: '/articles/example/',

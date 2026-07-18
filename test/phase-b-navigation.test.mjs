@@ -4,7 +4,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
-import { buildPublicNavigation } from '../src/lib/navigation/public-navigation.mjs';
+import { buildPublicNavigation } from '../src/lib/public-content/public-navigation.mjs';
 import { createPublicContentRegistry } from '../src/lib/public-content/model.mjs';
 import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
 

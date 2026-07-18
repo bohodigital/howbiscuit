@@ -107,7 +107,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
 </dialog>
 
 <script>
-  import { createInitialModalState, modalFocusReturnCandidates, reduceModalState } from '../lib/ui/modal-coordinator.mjs';
+  import { createInitialModalState, modalFocusReturnCandidates, reduceModalState } from '../lib/public-content/modal-coordinator.mjs';
 
   const dialogs = new Map([
     ['mobile-navigation', document.querySelector<HTMLDialogElement>('#mobile-navigation-dialog')],

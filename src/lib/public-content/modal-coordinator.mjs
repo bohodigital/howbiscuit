@@ -1,3 +1,4 @@
+// Pure modal state shared by the custom public-content shell.
 const MODAL_IDS = new Set(['mobile-navigation', 'search']);
 const CLOSE_REASONS = new Set(['button', 'escape', 'outside', 'replacement', 'result']);
 

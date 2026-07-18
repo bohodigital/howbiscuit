@@ -5,6 +5,7 @@
  * a current document route nor activate a Phase C document route. Keep this
  * list explicit so a one-for-one source replacement cannot satisfy validation
  * by preserving only the document count.
+ * This public-content policy path is within the canonical Phase B boundary.
  */
 export const ACCEPTED_PHASE_A_DOCUMENT_ROUTES = Object.freeze([
   '/',

@@ -1,7 +1,7 @@
 import {
   isPublishableGuide,
   topicPublicationModeForRegistry,
-} from '../public-content/model.mjs';
+} from './model.mjs';
 
 function compareGuides(left, right) {
   const leftDate = left.publishedDate ?? '';

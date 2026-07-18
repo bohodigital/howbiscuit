@@ -1,5 +1,5 @@
 import * as taxonomy from '../../config/public-taxonomy.ts';
-import { buildPublicNavigation } from '../navigation/public-navigation.mjs';
+import { buildPublicNavigation } from './public-navigation.mjs';
 import { createPublicContentRegistry } from './model.mjs';
 import { discoverTrackedArticleSources } from './source-adapter.mjs';
 

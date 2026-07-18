@@ -11,7 +11,7 @@ import ShoppingLayout from '../layouts/ShoppingLayout.astro';
 import ToolLayout from '../layouts/ToolLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
-import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES, isKnownThinCurrentRoute } from '../lib/search/pagefind-policy.mjs';
+import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES, isKnownThinCurrentRoute } from '../lib/public-content/pagefind-policy.mjs';
 
 type DocsEntry = CollectionEntry<'docs'>;
 interface PageProps { entry: DocsEntry; route: string }

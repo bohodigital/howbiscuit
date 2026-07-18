@@ -17,7 +17,7 @@ import {
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
 import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
-import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
+import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES } from '../src/lib/public-content/pagefind-policy.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));

@@ -8,7 +8,7 @@ import {
   createInitialModalState,
   modalFocusReturnCandidates,
   reduceModalState,
-} from '../src/lib/ui/modal-coordinator.mjs';
+} from '../src/lib/public-content/modal-coordinator.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
