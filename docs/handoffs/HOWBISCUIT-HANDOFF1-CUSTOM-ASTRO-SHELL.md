@@ -56,7 +56,7 @@ The catch-all derives routes from the `docs` content collection and verifies eve
 
 Stored theme values are allowlisted to `system`, `light`, or `dark`. Invalid or unavailable storage falls back to a readable system preference, while the no-JavaScript default remains readable light mode.
 
-Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. The measured contrast is greater than 4.5:1 in both light and dark themes.
+Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. Panic-strip hover links switch to fixed dark ink against the decorative tomato background. The measured contrast is greater than 4.5:1 for both text treatments in light and dark themes.
 
 ### Navigation and modal state
 
@@ -92,7 +92,7 @@ The Starlight search UI is replaced by a framework-free Pagefind dialog. It prov
 - Keyboard closing and deterministic focus return.
 - Index-time exclusion for draft, preview, thin, redirected, retired, recovery, and other ineligible surfaces.
 
-The full x64 build invokes Pagefind directly. It derives the exact accepted route set from the 25 content sources, verifies all 26 HTML artifacts including 404, and requires the real Pagefind fragment URL set to equal the eligible HTML route set. The five known thin legacy routes (`/glossary/`, `/home-tech/gaming-pcs/`, `/home-tech/laptops/`, `/home-tech/streaming-tvs/`, and `/science/`) remain served until Phase C but are explicitly excluded from Pagefind. A generic environment flag cannot disable Pagefind in `build`, `qa`, or `build:sites`.
+The full x64 build invokes Pagefind directly. It compares both the source set and all 26 HTML artifacts including 404 against a frozen, explicit list of the 25 Phase A document routes; preserving only the count cannot hide a removed current route or an early Phase C route. It separately asserts that all Phase C-only document routes remain absent and requires the real Pagefind fragment URL set to equal the eligible HTML route set. The five known thin legacy routes (`/glossary/`, `/home-tech/gaming-pcs/`, `/home-tech/laptops/`, `/home-tech/streaming-tvs/`, and `/science/`) remain served until Phase C but are explicitly excluded from Pagefind. A generic environment flag cannot disable Pagefind in `build`, `qa`, or `build:sites`.
 
 The same artifact verifier checks per-page canonical, robots, Open Graph, Twitter, JSON-LD, H1, Umami, and GA4 contracts. After `prepare-sites-build.mjs`, it also checks the full Pagefind client artifact, worker asset delegation, Wrangler asset/404 rules, and tracked Sites metadata without saving or publishing a Sites version.
 
@@ -168,6 +168,8 @@ Fresh-context Codex architecture, frontend/accessibility, and test-evidence revi
 - Mobile navigation has a native no-JavaScript fallback.
 - Article dates label the published-date fallback as `Published` rather than `Updated`.
 - Rollback instructions cover the complete multi-commit Phase B range rather than implying that reverting only the tip is sufficient.
+- The accepted route boundary is an explicit 25-route contract shared by rendering, build verification, and tests; the three previously omitted observed Home Tech topics are now represented, and Phase C-only routes are asserted absent.
+- Panic-strip hover links use a WCAG-AA dark foreground on the tomato background in both themes.
 
 Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candidate remain blocking before acceptance.
 

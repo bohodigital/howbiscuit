@@ -6,6 +6,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
+import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES } from '../src/config/phase-a-route-contract.mjs';
 import {
   createPublicContentRegistry,
   isPublishableGuide,
@@ -189,6 +190,14 @@ test('compatibility functions expose target mappings without claiming current im
 });
 
 test('observed baseline and target route resolvers cannot be confused', () => {
+  assert.deepEqual(
+    taxonomy.OBSERVED_ROUTE_CONTRACTS
+      .filter(({ outcome }) => outcome === 'serve')
+      .map(({ route }) => route)
+      .sort(),
+    [...ACCEPTED_PHASE_A_DOCUMENT_ROUTES].sort(),
+  );
+
   const baselineMakeDo = taxonomy.resolveObservedRoute('/make-do/');
   assert.equal(baselineMakeDo.outcome, 'serve');
   assert.equal(baselineMakeDo.status, 200);

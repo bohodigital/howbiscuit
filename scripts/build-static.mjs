@@ -7,13 +7,16 @@ import {
   assertFullPagefindLane,
   assertPiPagefindSkipAllowed,
 } from './lib/pagefind-platform-policy.mjs';
+import {
+  ACCEPTED_PHASE_A_DOCUMENT_ROUTES,
+  PHASE_C_ONLY_DOCUMENT_ROUTES,
+} from '../src/config/phase-a-route-contract.mjs';
 import { KNOWN_THIN_CURRENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
 
 const root = process.cwd();
 const piSkipRequested = process.argv.includes('--pi-pagefind-skip');
 const sitesPackageVerificationRequested = process.argv.includes('--verify-sites-package');
 const environmentSkipRequested = process.env.HOWBISCUIT_SKIP_PAGEFIND === '1';
-const acceptedDocumentCount = 25;
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -113,15 +116,23 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   const docsRoot = path.join(root, 'src', 'content', 'docs');
   const sourceFiles = collectFiles(docsRoot, (filePath) => /\.(md|mdx)$/.test(filePath));
   const sourceRoutes = new Set(sourceFiles.map((filePath) => routeFromSource(filePath, docsRoot)));
-  invariant(sourceRoutes.size === acceptedDocumentCount, `Expected ${acceptedDocumentCount} accepted document routes; found ${sourceRoutes.size}.`);
+  const acceptedRoutes = new Set(ACCEPTED_PHASE_A_DOCUMENT_ROUTES);
+  invariant(acceptedRoutes.size === ACCEPTED_PHASE_A_DOCUMENT_ROUTES.length, 'The frozen Phase A document route contract contains a duplicate.');
+  assertSetsEqual(acceptedRoutes, sourceRoutes, 'Phase B source document route set');
+  for (const route of PHASE_C_ONLY_DOCUMENT_ROUTES) {
+    invariant(!sourceRoutes.has(route), `Phase C document route activated before acceptance: ${route}`);
+  }
 
   const htmlFiles = collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html'));
   const htmlByRoute = new Map(htmlFiles.map((filePath) => [
     routeFromHtml(filePath, artifactRoot),
     readFileSync(filePath, 'utf8'),
   ]));
-  const expectedHtmlRoutes = new Set([...sourceRoutes, '/404.html']);
+  const expectedHtmlRoutes = new Set([...acceptedRoutes, '/404.html']);
   assertSetsEqual(expectedHtmlRoutes, new Set(htmlByRoute.keys()), `${label} HTML route set`);
+  for (const route of PHASE_C_ONLY_DOCUMENT_ROUTES) {
+    invariant(!htmlByRoute.has(route), `${label} activated a Phase C document route before acceptance: ${route}`);
+  }
   for (const [route, html] of htmlByRoute) verifyPageHtml(route, html);
 
   for (const route of KNOWN_THIN_CURRENT_ROUTES) {
@@ -137,7 +148,7 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
       .map(([route]) => route),
   );
   const expectedEligibleRoutes = new Set(
-    [...sourceRoutes].filter((route) => !KNOWN_THIN_CURRENT_ROUTES.includes(route)),
+    [...acceptedRoutes].filter((route) => !KNOWN_THIN_CURRENT_ROUTES.includes(route)),
   );
   assertSetsEqual(expectedEligibleRoutes, eligibleRoutes, `${label} Pagefind-eligible route set`);
 

@@ -201,7 +201,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-panic-strip > div { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid color-mix(in srgb, var(--hb-paper), transparent 70%); }
 .hb-panic-strip a { min-height: 8rem; display: flex; flex-direction: column; justify-content: space-between; padding: 1.25rem; border-right: 1px solid color-mix(in srgb, var(--hb-paper), transparent 70%); color: var(--hb-paper); text-decoration: none; }
 .hb-panic-strip a:last-child { border-right: 0; }
-.hb-panic-strip a:hover { background: var(--hb-tomato); }
+.hb-panic-strip a:hover { background: var(--hb-tomato); color: #142432; }
 .hb-panic-strip span { font-size: 1rem; font-weight: 850; }
 .hb-panic-strip b { font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; }
 

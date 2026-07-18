@@ -5,6 +5,10 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { gunzipSync } from 'node:zlib';
 
+import {
+  ACCEPTED_PHASE_A_DOCUMENT_ROUTES,
+  PHASE_C_ONLY_DOCUMENT_ROUTES,
+} from '../src/config/phase-a-route-contract.mjs';
 import { KNOWN_THIN_CURRENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -142,7 +146,10 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
 
   assert.ok(contrastRatio('#b43a22', '#fff8e7') >= 4.5, 'light tomato foreground must meet WCAG AA');
   assert.ok(contrastRatio('#ff7759', '#111b23') >= 4.5, 'dark tomato foreground must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#ef6547') >= 4.5, 'light panic-strip hover must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#ff7759') >= 4.5, 'dark panic-strip hover must meet WCAG AA');
   assert.match(biscuitCss, /--hb-tomato-text:\s*#b43a22/);
+  assert.match(biscuitCss, /\.hb-panic-strip a:hover\s*\{[^}]*background:\s*var\(--hb-tomato\);[^}]*color:\s*#142432;/);
   assert.doesNotMatch(shellCss, /\.hb-article-toc[^{}]*grid-row:\s*1/);
   assert.match(base, /document\.documentElement\.classList\.add\('js'\)/);
   assert.match(header, /<noscript>[\s\S]*Primary navigation without JavaScript/);
@@ -162,9 +169,13 @@ test('the built artifact has the exact accepted routes, per-page metadata, track
   const sourceRoot = path.join(root, 'src', 'content', 'docs');
   assert.ok(existsSync(artifactRoot), 'npm test must build the artifact before running contract tests');
   const sourceRoutes = new Set(collectFiles(sourceRoot, (filePath) => /\.(md|mdx)$/.test(filePath)).map((filePath) => sourceRoute(filePath, sourceRoot)));
-  assert.equal(sourceRoutes.size, 25);
+  const acceptedRoutes = new Set(ACCEPTED_PHASE_A_DOCUMENT_ROUTES);
+  assert.equal(acceptedRoutes.size, ACCEPTED_PHASE_A_DOCUMENT_ROUTES.length, 'accepted Phase A routes must be unique');
+  assert.deepEqual([...sourceRoutes].sort(), [...acceptedRoutes].sort());
+  for (const route of PHASE_C_ONLY_DOCUMENT_ROUTES) assert.ok(!sourceRoutes.has(route), `${route} must remain inactive until Phase C`);
   const pages = new Map(collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html')).map((filePath) => [artifactRoute(filePath, artifactRoot), readFileSync(filePath, 'utf8')]));
-  assert.deepEqual([...pages.keys()].sort(), [...sourceRoutes, '/404.html'].sort());
+  assert.deepEqual([...pages.keys()].sort(), [...acceptedRoutes, '/404.html'].sort());
+  for (const route of PHASE_C_ONLY_DOCUMENT_ROUTES) assert.ok(!pages.has(route), `${route} must remain absent from the Phase B artifact`);
 
   for (const [route, html] of pages) {
     assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, `${route} H1 count`);

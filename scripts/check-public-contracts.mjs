@@ -6,6 +6,7 @@ import {
   createPublicContentRegistry,
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
+import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES } from '../src/config/phase-a-route-contract.mjs';
 import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -21,6 +22,14 @@ if (taxonomy.PUBLIC_CATEGORIES.length !== 5) {
 }
 if (taxonomy.TARGET_ROUTE_CONTRACTS.some(({ implemented }) => implemented !== false)) {
   throw new Error('Every Phase A target route must remain explicitly unimplemented.');
+}
+const observedDocumentRoutes = taxonomy.OBSERVED_ROUTE_CONTRACTS
+  .filter(({ outcome }) => outcome === 'serve')
+  .map(({ route }) => route)
+  .sort();
+const acceptedDocumentRoutes = [...ACCEPTED_PHASE_A_DOCUMENT_ROUTES].sort();
+if (JSON.stringify(observedDocumentRoutes) !== JSON.stringify(acceptedDocumentRoutes)) {
+  throw new Error(`Observed document routes differ from the frozen Phase A boundary. Observed: ${observedDocumentRoutes.join(', ')}.`);
 }
 const redirectChains = taxonomy.findTargetRedirectChains();
 if (redirectChains.length) {

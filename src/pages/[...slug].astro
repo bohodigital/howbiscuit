@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 
 import GuideCard from '../components/GuideCard.astro';
+import { ACCEPTED_PHASE_A_DOCUMENT_ROUTES } from '../config/phase-a-route-contract.mjs';
 import { OBSERVED_ROUTE_CONTRACTS } from '../config/public-taxonomy';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
@@ -43,6 +44,11 @@ export async function getStaticPaths() {
     props: { entry, route: routeFromEntryId(entry.id) },
   }));
   const contentRoutes = new Set(pages.map(({ props }) => props.route));
+  const missingRoutes = ACCEPTED_PHASE_A_DOCUMENT_ROUTES.filter((route) => !contentRoutes.has(route));
+  const unexpectedRoutes = [...contentRoutes].filter((route) => !ACCEPTED_PHASE_A_DOCUMENT_ROUTES.includes(route));
+  if (missingRoutes.length || unexpectedRoutes.length) {
+    throw new Error(`Phase A document route boundary changed. Missing: ${missingRoutes.join(', ') || 'none'}. Unexpected: ${unexpectedRoutes.join(', ') || 'none'}.`);
+  }
   for (const contract of OBSERVED_ROUTE_CONTRACTS.filter(({ outcome }) => outcome === 'serve')) {
     if (!contentRoutes.has(contract.route)) {
       throw new Error(`Observed served route has no custom-shell source: ${contract.route}`);

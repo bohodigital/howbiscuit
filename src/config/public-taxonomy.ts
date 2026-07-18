@@ -316,7 +316,10 @@ export const OBSERVED_ROUTE_CONTRACTS: readonly RouteContract[] = Object.freeze(
   observedServe('/glossary/', 'Existing legacy Glossary page.'),
   observedServe('/home-tech/gaming-pcs/', 'Existing thin Home Tech topic page.'),
   observedServe('/home-tech/laptops/', 'Existing thin Home Tech topic page.'),
+  observedServe('/home-tech/privacy-security/', 'Existing Home Tech topic page.'),
+  observedServe('/home-tech/smart-home/', 'Existing Home Tech topic page.'),
   observedServe('/home-tech/streaming-tvs/', 'Existing thin Home Tech topic page.'),
+  observedServe('/home-tech/wifi-routers/', 'Existing Home Tech topic page.'),
   ...[
     '/articles/why-salt-melts-ice/',
     '/articles/how-does-baking-powder-work/',
