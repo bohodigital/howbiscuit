@@ -1,6 +1,6 @@
 # LaTeX article pipeline
 
-How Biscuit can publish an article from one canonical `.tex` file without running a TeX engine in the browser or on a Cloudflare Worker. The build validates a constrained document dialect, renders mathematics with KaTeX, and generates ignored Astro content files before the normal Starlight build.
+How Biscuit can publish an article from one canonical `.tex` file without running a TeX engine in the browser or on a Cloudflare Worker. The build validates a constrained document dialect, renders mathematics with KaTeX, and generates ignored Astro content files before the custom Astro build.
 
 ## Authoring flow
 
@@ -23,7 +23,13 @@ The route comes from `\hbslug{...}`. For example, `\hbslug{why-salt-melts-ice}` 
 \date{July 13, 2026}
 \hbslug{useful-specific-title}
 \hbdescription{A complete search and social description of at least 40 characters.}
+% Compatibility metadata only; it does not control the canonical taxonomy.
 \hbdivision{science}
+\hbcategory{home}
+\hbtopic{heating-cooling}
+\hbarticletype{guide}
+\hbeditorialclassification{not-separately-declared}
+\hbeditorialpriority{0}
 \hbevidence{What kinds of evidence were reviewed}
 \hbpubdate{2026-07-13}
 \hbupdated{2026-07-13}
@@ -33,7 +39,7 @@ The route comes from `\hbslug{...}`. For example, `\hbslug{why-salt-melts-ice}` 
 \hbfeatured{false}
 ```
 
-Valid divisions are `research-writing`, `cook`, `home-tech`, `make-do`, `tools`, `buying-guides`, `science`, and `glossary`. Only `amsmath` and `amssymb` are accepted package declarations; KaTeX already supplies the supported math behavior.
+`\hbcategory`, `\hbtopic`, and `\hbarticletype` own the canonical classification consumed by the normalized public-content model. `\hbdivision` is retained only as a validated compatibility field while the observed Phase A routes remain in place; it is not independently authoritative. Valid compatibility divisions are `research-writing`, `cook`, `home-tech`, `make-do`, `tools`, `buying-guides`, `science`, and `glossary`. Only `amsmath` and `amssymb` are accepted package declarations; KaTeX already supplies the supported math behavior.
 
 ## Supported document vocabulary
 
@@ -55,7 +61,7 @@ Do not weaken the allowlist to make one article pass. Add a narrowly tested lang
 
 `scripts/compile-latex-articles.mjs` creates:
 
-- `src/content/docs/articles/<slug>.mdx`, which registers the route with Starlight, RSS, sitemap, and Pagefind.
+- `src/content/docs/articles/<slug>.mdx`, which registers the route with the custom catch-all Astro renderer and `ArticleLayout`, RSS, sitemap, and Pagefind.
 - `src/generated/latex/<slug>.mjs`, which contains the validated static article HTML and outline.
 
 Both paths are ignored. Delete them and run `npm run latex:compile` to regenerate from source. `npm run latex:check` fails if generated output is missing, stale, or orphaned.
@@ -64,6 +70,6 @@ To roll back the pipeline, revert the pipeline commit and rebuild. Existing hand
 
 ## Raspberry Pi validation note
 
-The current Pi 5 kernel uses 16 KiB memory pages. Pagefind's published ARM64 binary is built with a jemalloc configuration that aborts on that page size. `npm run qa:pi` therefore runs the same compiler, Astro diagnostics, static route build, unit tests, endpoint checks, and content lint with Starlight's Pagefind hook explicitly disabled.
+The current Pi 5 kernel uses 16 KiB memory pages. Pagefind's published ARM64 binary is built with a jemalloc configuration that aborts on that page size. `npm run qa:pi` first verifies Linux, ARM64, and a 16 KiB page size, then runs the same compiler, Astro diagnostics, static route build, unit tests, endpoint checks, and content lint with only the native Pagefind invocation skipped.
 
 This is a validation exception, not a production fallback. `npm run build`, `npm run qa`, and `npm run build:sites` keep Pagefind enabled and must pass on the x64 release lane. The release artifact copied back to the Pi must contain `dist/pagefind/`; do not deploy the search-disabled Pi build.
