@@ -1,18 +1,16 @@
 import assert from 'node:assert/strict';
-import { existsSync } from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { discoverTrackedArticleSources } from '../src/lib/public-content/source-adapter.mjs';
-import { ACCEPTED_LATEX_CLASSIFICATION_ROUTES } from '../src/lib/public-content/latex-classification-bridge.mjs';
+import { ARTICLE_CLASSIFICATION_MANIFEST } from '../src/lib/public-content/classification-manifest.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const sources = discoverTrackedArticleSources(root);
 
-test('accepted classifications are source-owned except for the exact Phase B LaTeX bridge', () => {
-  assert.equal(existsSync(path.join(root, 'src', 'lib', 'public-content', 'classification-manifest.mjs')), false);
-  assert.deepEqual(ACCEPTED_LATEX_CLASSIFICATION_ROUTES, ['/articles/why-salt-melts-ice/']);
+test('the exact accepted Phase A classification manifest remains until Phase C can edit content paths', () => {
+  assert.deepEqual(Object.keys(ARTICLE_CLASSIFICATION_MANIFEST).sort(), sources.map(({ route }) => route).sort());
   assert.deepEqual(Object.fromEntries(sources.map((source) => [source.route, {
     categoryId: source.categoryId,
     topicId: source.topicId,
@@ -42,5 +40,5 @@ test('accepted classifications are source-owned except for the exact Phase B LaT
       editorialPriority: 0,
     },
   });
-  assert.deepEqual(sources.filter(({ sourceKind }) => sourceKind === 'latex').map(({ route }) => route), ACCEPTED_LATEX_CLASSIFICATION_ROUTES);
+  assert.ok(sources.every(({ classificationProvenance }) => classificationProvenance === 'accepted-phase-a-manifest'));
 });

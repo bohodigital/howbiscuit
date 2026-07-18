@@ -713,7 +713,7 @@ export function generatedMdx(article) {
     || typeof metadata.editorialClassification !== 'string'
     || !Number.isInteger(metadata.editorialPriority)
   ) {
-    throw new Error('Generated LaTeX articles require an accepted classification bridge.');
+    throw new Error('Generated LaTeX articles require an accepted classification adapter.');
   }
   const tags = metadata.tags.length ? `[${metadata.tags.map(yamlString).join(', ')}]` : '[]';
   return `---

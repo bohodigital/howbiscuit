@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs';
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { compileLatexArticle, generatedMdx, generatedModule } from '../src/lib/latex/article-compiler.mjs';
-import { applyAcceptedLatexClassification } from '../src/lib/public-content/latex-classification-bridge.mjs';
+import { acceptedArticleClassification } from '../src/lib/public-content/classification-manifest.mjs';
 
 const root = process.cwd();
 const sourceRoot = path.join(root, 'content', 'latex', 'articles');
@@ -64,9 +64,15 @@ const outputs = [];
 const slugs = new Set();
 for (const filePath of sources) {
   const sourcePath = path.relative(root, filePath).replaceAll(path.sep, '/');
-  const article = applyAcceptedLatexClassification(
-    compileLatexArticle(await readFile(filePath, 'utf8'), { sourcePath }),
-  );
+  const compiled = compileLatexArticle(await readFile(filePath, 'utf8'), { sourcePath });
+  const route = `/articles/${compiled.metadata.slug}/`;
+  const article = Object.freeze({
+    ...compiled,
+    metadata: Object.freeze({
+      ...compiled.metadata,
+      ...acceptedArticleClassification(route),
+    }),
+  });
   if (slugs.has(article.metadata.slug)) throw new Error(`Duplicate LaTeX article slug: ${article.metadata.slug}`);
   slugs.add(article.metadata.slug);
   outputs.push({

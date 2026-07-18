@@ -301,7 +301,7 @@ test('source adapter discovers each real tracked article once and ignores genera
   assert.ok(sources.every(({ sourcePath }) => sourcePath !== 'src/content/docs/articles/why-salt-melts-ice.mdx'));
 });
 
-test('accepted classifications are owned by canonical article sources', () => {
+test('accepted classifications remain exact through the Phase A manifest adapter', () => {
   for (const source of sources) {
     assert.ok(['guide', 'editorial-standard'].includes(source.articleType), source.route);
     assert.ok(Number.isInteger(source.editorialPriority), source.route);
@@ -354,7 +354,7 @@ test('normalized model derives source facts and applies the deliberate three-art
     assert.equal(article.redirectState, null);
     assert.equal(article.retirementState, null);
     assert.equal(article.provenance.title, 'source');
-    assert.equal(article.provenance.categoryId, 'source');
+    assert.equal(article.provenance.categoryId, 'accepted-phase-a-manifest');
   }
 });
 

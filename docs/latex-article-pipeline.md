@@ -34,7 +34,7 @@ The route comes from `\hbslug{...}`. For example, `\hbslug{why-salt-melts-ice}` 
 \hbfeatured{false}
 ```
 
-`\hbdivision` is a validated compatibility field while the observed Phase A routes remain in place; it is not independent taxonomy authority. Phase B keeps the accepted salt-article classification in an exact fail-closed public-content bridge because this work order does not permit editing `content/latex`. Phase C owns that path and must move the classification into canonical TeX metadata before deleting the bridge. Valid compatibility divisions are `research-writing`, `cook`, `home-tech`, `make-do`, `tools`, `buying-guides`, `science`, and `glossary`. Only `amsmath` and `amssymb` are accepted package declarations; KaTeX already supplies the supported math behavior.
+`\hbdivision` is a validated compatibility field while the observed Phase A routes remain in place; it is not independent taxonomy authority. Phase B retains the exact accepted Phase A classification manifest because this work order does not permit editing `content/latex` or article MDX. The adapter fails closed unless its route set exactly matches the discovered canonical sources. Phase C owns those content paths and must move each classification into canonical metadata before deleting the manifest. Valid compatibility divisions are `research-writing`, `cook`, `home-tech`, `make-do`, `tools`, `buying-guides`, `science`, and `glossary`. Only `amsmath` and `amssymb` are accepted package declarations; KaTeX already supplies the supported math behavior.
 
 ## Supported document vocabulary
 

@@ -69,8 +69,8 @@ if (data.kind === 'article' && !record) throw new Error(`Article is missing from
 {data.kind === 'home' ? (
   <HomeLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded}><Content /></HomeLayout>
 ) : page.route === '/articles/' ? (
-  <CategoryLayout title={data.title} description={data.description} canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
-    <Content />
+  <CategoryLayout title="All Guides" description="Every published How Biscuit guide, ordered from the normalized public-content registry." canonical={page.route} searchEligible={!excluded} sectionLabel="How Biscuit">
+    <p>This shelf is generated only from normalized, publishable records. Drafts, previews, thin pages, redirects, retirements, and fixtures do not qualify.</p>
     <div class="hb-guide-grid">
       {registry.filter((item) => item.searchEligible).map((item) => <GuideCard label={item.categoryId ?? 'Editorial standard'} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
     </div>

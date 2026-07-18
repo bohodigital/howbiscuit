@@ -10,16 +10,22 @@ import {
   generatedModule,
   LEGACY_LATEX_DIVISIONS,
 } from '../src/lib/latex/article-compiler.mjs';
-import { applyAcceptedLatexClassification } from '../src/lib/public-content/latex-classification-bridge.mjs';
+import { acceptedArticleClassification } from '../src/lib/public-content/classification-manifest.mjs';
 
 const examplePath = new URL('../content/latex/articles/why-salt-melts-ice.tex', import.meta.url);
 const example = await readFile(examplePath, 'utf8');
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
+function withAcceptedClassification(article) {
+  const route = `/articles/${article.metadata.slug}/`;
+  return {
+    ...article,
+    metadata: { ...article.metadata, ...acceptedArticleClassification(route) },
+  };
+}
+
 test('compiles the canonical article into static, accessible math markup', () => {
-  const article = applyAcceptedLatexClassification(
-    compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' }),
-  );
+  const article = withAcceptedClassification(compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' }));
   assert.equal(article.metadata.slug, 'why-salt-melts-ice');
   assert.equal(article.metadata.division, 'science');
   assert.equal(article.metadata.categoryId, 'home');
@@ -35,8 +41,8 @@ test('compiles the canonical article into static, accessible math markup', () =>
 });
 
 test('generation is deterministic and produces a custom Astro route module', () => {
-  const first = applyAcceptedLatexClassification(compileLatexArticle(example));
-  const second = applyAcceptedLatexClassification(compileLatexArticle(example));
+  const first = withAcceptedClassification(compileLatexArticle(example));
+  const second = withAcceptedClassification(compileLatexArticle(example));
   assert.equal(generatedMdx(first), generatedMdx(second));
   assert.equal(generatedModule(first), generatedModule(second));
   assert.match(generatedMdx(first), /articleFormat: latex/);
@@ -45,15 +51,12 @@ test('generation is deterministic and produces a custom Astro route module', () 
   assert.match(generatedMdx(first), /LatexArticle article=\{article\}/);
 });
 
-test('generation fails closed without an accepted LaTeX classification bridge', () => {
+test('generation fails closed without the accepted classification adapter', () => {
   const article = compileLatexArticle(example);
-  assert.throws(() => generatedMdx(article), /accepted classification bridge/i);
+  assert.throws(() => generatedMdx(article), /accepted classification adapter/i);
   assert.throws(
-    () => applyAcceptedLatexClassification({
-      ...article,
-      metadata: { ...article.metadata, slug: 'not-an-accepted-article' },
-    }),
-    /No accepted LaTeX classification/i,
+    () => acceptedArticleClassification('/articles/not-an-accepted-article/'),
+    /No accepted article classification/i,
   );
 });
 

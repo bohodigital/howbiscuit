@@ -5,7 +5,10 @@ import path from 'node:path';
 import { load as parseYaml } from 'js-yaml';
 
 import { compileLatexArticle } from '../latex/article-compiler.mjs';
-import { applyAcceptedLatexClassification } from './latex-classification-bridge.mjs';
+import {
+  acceptedArticleClassification,
+  assertArticleClassificationParity,
+} from './classification-manifest.mjs';
 
 function asciiCompare(left, right) {
   return left < right ? -1 : left > right ? 1 : 0;
@@ -70,11 +73,9 @@ function mdxSource(root, relativePath) {
 }
 
 function latexSource(root, relativePath) {
-  const compiled = applyAcceptedLatexClassification(
-    compileLatexArticle(readFileSync(path.join(root, relativePath), 'utf8'), {
-      sourcePath: relativePath,
-    }),
-  );
+  const compiled = compileLatexArticle(readFileSync(path.join(root, relativePath), 'utf8'), {
+    sourcePath: relativePath,
+  });
   const data = compiled.metadata;
   return Object.freeze({
     sourceKind: 'latex',
@@ -133,5 +134,10 @@ export function discoverTrackedArticleSources(root) {
     throw new Error(`Duplicate discovered article route: ${routes.join(', ')}`);
   }
   if (!sources.length) throw new Error('No tracked article sources were discovered.');
-  return Object.freeze(sources);
+  assertArticleClassificationParity(routes);
+  return Object.freeze(sources.map((source) => Object.freeze({
+    ...source,
+    ...acceptedArticleClassification(source.route),
+    classificationProvenance: 'accepted-phase-a-manifest',
+  })));
 }
