@@ -27,6 +27,11 @@ invariant(taxonomy.ALL_GUIDES_TARGET.implemented === true && taxonomy.ALL_GUIDES
 invariant(taxonomy.TARGET_ROUTE_CONTRACTS.every(({ implemented }) => implemented === true), 'Every Phase C target route contract must be marked implemented.');
 invariant(taxonomy.findTargetRedirectChains().length === 0, 'Phase C redirects must be direct.');
 invariant(taxonomy.HOST_CONTRACT.target.implemented === true, 'The source host contract must remain explicit.');
+invariant(
+  taxonomy.HOST_CONTRACT.sourceDeclared.mechanism === 'sites-worker'
+    && taxonomy.HOST_CONTRACT.sourceDeclared.sourcePath === 'scripts/build-static.mjs',
+  'The supported Sites Worker must own the source host redirect contract.',
+);
 invariant(!existsSync(path.join(root, 'src', 'data', 'site-taxonomy.mjs')), 'The legacy navigation taxonomy must be removed.');
 invariant(!existsSync(path.join(root, 'src', 'lib', 'public-content', 'classification-manifest.mjs')), 'The temporary classification manifest must be removed.');
 invariant(
@@ -61,7 +66,6 @@ invariant(Object.entries(topicModes).every(([ref, mode]) => ['home/heating-cooli
 
 const redirectLines = readFileSync(path.join(root, 'public', '_redirects'), 'utf8').trim().split(/\r?\n/).filter(Boolean);
 const expectedRedirectLines = [
-  'https://www.howbiscuit.com/* https://howbiscuit.com/:splat 301',
   '/make-do/ /home/ 301',
   '/cook/ /kitchen/ 301',
   '/buying-guides/ /shop/ 301',
@@ -76,6 +80,8 @@ const expectedRedirectLines = [
   '/make-do-lab/* /home/ 301',
 ];
 invariant(JSON.stringify(redirectLines) === JSON.stringify(expectedRedirectLines), 'The deployed redirect matrix differs from the exact Phase C contract.');
+const redirectSource = readFileSync(path.join(root, 'public', '_redirects'), 'utf8');
+const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
 const exactTargets = new Map(redirectLines.flatMap((line) => {
   const [from, to] = line.split(/\s+/);
   return from.startsWith('/') && !from.includes('*') ? [[from, to]] : [];
@@ -83,6 +89,44 @@ const exactTargets = new Map(redirectLines.flatMap((line) => {
 for (const [from, to] of exactTargets) {
   invariant(!exactTargets.has(to), `The deployed redirect matrix contains a chain: ${from} -> ${to}.`);
 }
+
+const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
+const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
+const assetRequests = [];
+const workerEnv = {
+  ASSETS: {
+    fetch(request) {
+      assetRequests.push(request.url);
+      return new Response('asset', { status: 200 });
+    },
+  },
+};
+async function assertSingleHop(requestUrl, expectedLocation) {
+  const response = await workerModule.default.fetch(new Request(requestUrl), workerEnv);
+  invariant(response.status === 301, `${requestUrl} must return 301.`);
+  invariant(response.headers.get('location') === expectedLocation, `${requestUrl} returned the wrong Location header.`);
+  const follow = await workerModule.default.fetch(new Request(expectedLocation), workerEnv);
+  invariant(follow.status === 200 && follow.headers.get('location') === null, `${requestUrl} must reach static assets after one redirect.`);
+}
+for (const { from, to } of redirectRules) {
+  const sourcePath = from.replace('*', 'contract-probe/');
+  await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
+  await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
+}
+await assertSingleHop(
+  'https://www.howbiscuit.com/articles/?ref=contract',
+  'https://howbiscuit.com/articles/?ref=contract',
+);
+await assertSingleHop(
+  'https://preview.example.test/make-do/?ref=contract',
+  'https://preview.example.test/home/?ref=contract',
+);
+const ordinaryResponse = await workerModule.default.fetch(
+  new Request('https://howbiscuit.com/articles/?ref=contract'),
+  workerEnv,
+);
+invariant(ordinaryResponse.status === 200 && ordinaryResponse.headers.get('location') === null, 'A current apex route must delegate without redirecting.');
+invariant(assetRequests.includes('https://howbiscuit.com/articles/?ref=contract'), 'The Sites worker did not delegate a current route to static assets.');
 
 console.log(JSON.stringify({
   contractVersion: taxonomy.PUBLIC_TAXONOMY_CONTRACT_VERSION,
@@ -92,5 +136,7 @@ console.log(JSON.stringify({
   articles: registry.length,
   topicModes,
   redirectChains: 0,
+  workerRedirectRules: redirectRules.length,
+  workerHostCanonicalization: 'www-to-apex',
   classifications: 'canonical-source-metadata',
 }, null, 2));

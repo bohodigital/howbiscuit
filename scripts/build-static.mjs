@@ -1,6 +1,7 @@
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { gunzipSync } from 'node:zlib';
 
 import { load as parseYaml } from 'js-yaml';
@@ -9,6 +10,7 @@ import {
   assertFullPagefindLane,
   assertPiPagefindSkipAllowed,
 } from './lib/pagefind-platform-policy.mjs';
+import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
 import {
   PHASE_C_DOCUMENT_ROUTES,
   RETIRED_DOCUMENT_ROUTES,
@@ -16,8 +18,10 @@ import {
 
 const root = process.cwd();
 const piSkipRequested = process.argv.includes('--pi-pagefind-skip');
+const sitesPackageFinalizationRequested = process.argv.includes('--finalize-sites-package');
 const sitesPackageVerificationRequested = process.argv.includes('--verify-sites-package');
 const environmentSkipRequested = process.env.HOWBISCUIT_SKIP_PAGEFIND === '1';
+const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -199,32 +203,88 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   return { htmlCount: htmlByRoute.size, eligibleCount: eligibleRoutes.size, fragmentCount: fragments.length };
 }
 
-function verifySitesPackage() {
+function finalizeSitesPackage() {
+  const serverRoot = path.join(root, 'dist', 'server');
+  const redirectSource = readFileSync(path.join(root, 'dist', 'client', '_redirects'), 'utf8');
+  const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
+  writeFileSync(path.join(serverRoot, 'index.js'), taxonomy.buildSitesWorkerSource(redirectSource));
+  const wranglerPath = path.join(serverRoot, 'wrangler.json');
+  const wrangler = JSON.parse(readFileSync(wranglerPath, 'utf8'));
+  invariant(wrangler.assets?.binding === 'ASSETS', 'Sites finalization requires the accepted ASSETS binding.');
+  wrangler.assets.run_worker_first = true;
+  writeFileSync(wranglerPath, JSON.stringify(wrangler));
+  return redirectRules.length;
+}
+
+async function verifySitesPackage() {
   const result = verifyStaticArtifact(path.join(root, 'dist', 'client'), {
     requirePagefind: true,
     label: 'Sites client package',
   });
   const serverRoot = path.join(root, 'dist', 'server');
-  const worker = readFileSync(path.join(serverRoot, 'index.js'), 'utf8');
+  const workerPath = path.join(serverRoot, 'index.js');
+  const worker = readFileSync(workerPath, 'utf8');
   invariant(worker.includes('env.ASSETS.fetch(request)'), 'Sites worker must delegate requests to the ASSETS binding.');
+  invariant(worker.includes('www.howbiscuit.com'), 'Sites worker must implement www canonicalization.');
+  invariant(worker.includes('Response.redirect(location, 301)'), 'Sites worker must emit permanent redirects before asset delegation.');
   const wrangler = JSON.parse(readFileSync(path.join(serverRoot, 'wrangler.json'), 'utf8'));
   invariant(wrangler.main === 'index.js', 'Sites wrangler main must be index.js.');
   invariant(wrangler.assets?.directory === '../client', 'Sites assets directory must be ../client.');
   invariant(wrangler.assets?.binding === 'ASSETS', 'Sites assets binding must be ASSETS.');
   invariant(wrangler.assets?.html_handling === 'auto-trailing-slash', 'Sites trailing-slash handling changed unexpectedly.');
   invariant(wrangler.assets?.not_found_handling === '404-page', 'Sites must use the custom 404 page.');
-  invariant(wrangler.assets?.run_worker_first === false, 'Static assets must not run through the worker first.');
+  invariant(wrangler.assets?.run_worker_first === true, 'Sites must run the redirect Worker before static assets.');
   const hostingSource = readFileSync(path.join(root, '.openai', 'hosting.json'), 'utf8');
   const hostingCopy = readFileSync(path.join(root, 'dist', '.openai', 'hosting.json'), 'utf8');
   invariant(hostingCopy === hostingSource, 'Sites package hosting metadata differs from the tracked source.');
   const hosting = JSON.parse(hostingCopy);
   invariant(typeof hosting.project_id === 'string' && hosting.project_id.length > 0, 'Sites package has no project_id.');
+
+  const redirectSource = readFileSync(path.join(root, 'dist', 'client', '_redirects'), 'utf8');
+  const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
+  const workerModule = await import(`${pathToFileURL(workerPath).href}?verify=${Date.now()}`);
+  const assetRequests = [];
+  const env = {
+    ASSETS: {
+      fetch(request) {
+        assetRequests.push(request.url);
+        return new Response('asset', { status: 200 });
+      },
+    },
+  };
+  async function assertSingleHop(requestUrl, expectedLocation) {
+    const response = await workerModule.default.fetch(new Request(requestUrl), env);
+    invariant(response.status === 301, `${requestUrl} must return 301 in the packaged Worker.`);
+    invariant(response.headers.get('location') === expectedLocation, `${requestUrl} returned the wrong packaged Location header.`);
+    const follow = await workerModule.default.fetch(new Request(expectedLocation), env);
+    invariant(follow.status === 200 && follow.headers.get('location') === null, `${requestUrl} must reach packaged static assets after one redirect.`);
+  }
+  for (const { from, to } of redirectRules) {
+    const sourcePath = from.replace('*', 'package-probe/');
+    await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=sites`, `https://howbiscuit.com${to}?ref=sites`);
+    await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=sites`, `https://howbiscuit.com${to}?ref=sites`);
+  }
+  await assertSingleHop(
+    'https://www.howbiscuit.com/articles/?ref=sites',
+    'https://howbiscuit.com/articles/?ref=sites',
+  );
+  await assertSingleHop(
+    'https://preview.example.test/make-do/?ref=sites',
+    'https://preview.example.test/home/?ref=sites',
+  );
+  const ordinaryResponse = await workerModule.default.fetch(new Request('https://howbiscuit.com/articles/?ref=sites'), env);
+  invariant(ordinaryResponse.status === 200 && ordinaryResponse.headers.get('location') === null, 'The packaged Worker must delegate a current apex route without redirecting.');
+  invariant(assetRequests.includes('https://howbiscuit.com/articles/?ref=sites'), 'The packaged Worker did not delegate a current route to static assets.');
   return result;
 }
 
-if (sitesPackageVerificationRequested) {
+if (sitesPackageFinalizationRequested) {
+  invariant(!sitesPackageVerificationRequested, 'Sites finalization and verification must be separate invocations.');
+  const ruleCount = finalizeSitesPackage();
+  console.log(`Finalized the Sites redirect Worker with ${ruleCount} path rules and www canonicalization.`);
+} else if (sitesPackageVerificationRequested) {
   invariant(!piSkipRequested && !environmentSkipRequested, 'Sites package verification requires the full x64 Pagefind artifact.');
-  const result = verifySitesPackage();
+  const result = await verifySitesPackage();
   console.log(`Sites package verification passed: ${result.htmlCount} HTML routes, ${result.eligibleCount} eligible routes, ${result.fragmentCount} Pagefind fragments.`);
 } else {
   if (piSkipRequested) {

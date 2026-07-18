@@ -105,11 +105,27 @@ test('route migration resolves directly to real Phase C destinations', () => {
     assert.equal(result.implemented, true);
   }
   assert.deepEqual(taxonomy.findTargetRedirectChains(), []);
+
+  const migrationRecord = readFileSync(
+    path.join(root, 'docs/handoffs/HOWBISCUIT-HANDOFF1-CONTENT-ROUTES.md'),
+    'utf8',
+  );
+  assert.match(
+    migrationRecord,
+    /\| Previous or requested route \| New route or terminal status \| Redirect code \| Canonical destination \| Sitemap \| Pagefind \| Reason \|/,
+  );
+  const documentedRoutes = new Set([
+    ...taxonomy.TARGET_ROUTE_CONTRACTS.map(({ route }) => route),
+    ...publicRegistry.map(({ route }) => route),
+  ]);
+  for (const route of documentedRoutes) {
+    assert.ok(migrationRecord.includes(`| \`${route}\` |`), `The migration record is missing ${route}`);
+  }
+  assert.ok(migrationRecord.includes('| `https://www.howbiscuit.com/*` |'));
 });
 
-test('the deployed redirect artifact exactly matches the direct Phase C matrix', () => {
+test('the deployed redirect artifact and Worker exactly match the direct Phase C matrix', async () => {
   const expected = [
-    ['https://www.howbiscuit.com/*', 'https://howbiscuit.com/:splat', '301'],
     ['/make-do/', '/home/', '301'],
     ['/cook/', '/kitchen/', '301'],
     ['/buying-guides/', '/shop/', '301'],
@@ -126,10 +142,33 @@ test('the deployed redirect artifact exactly matches the direct Phase C matrix',
   const actual = readFileSync(path.join(root, 'public/_redirects'), 'utf8')
     .trim().split(/\r?\n/).filter(Boolean).map((line) => line.split(/\s+/));
   assert.deepEqual(actual, expected);
+  const redirectSource = readFileSync(path.join(root, 'public/_redirects'), 'utf8');
+  const rules = taxonomy.parseSitesRedirectRules(redirectSource);
   const exactTargets = new Map(actual.flatMap(([from, to]) => (
     from.startsWith('/') && !from.includes('*') ? [[from, to]] : []
   )));
   assert.deepEqual([...exactTargets].filter(([, to]) => exactTargets.has(to)), []);
+
+  const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
+  const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
+  const env = { ASSETS: { fetch: () => new Response('asset', { status: 200 }) } };
+  async function assertSingleHop(requestUrl, expectedLocation) {
+    const response = await workerModule.default.fetch(new Request(requestUrl), env);
+    assert.equal(response.status, 301, requestUrl);
+    assert.equal(response.headers.get('location'), expectedLocation, requestUrl);
+    const follow = await workerModule.default.fetch(new Request(expectedLocation), env);
+    assert.equal(follow.status, 200, `${requestUrl} must terminate after one redirect`);
+    assert.equal(follow.headers.get('location'), null, `${requestUrl} must not redirect twice`);
+  }
+  for (const { from, to } of rules) {
+    const sourcePath = from.replace('*', 'contract-probe/');
+    await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
+    await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
+  }
+  await assertSingleHop(
+    'https://www.howbiscuit.com/articles/?ref=contract',
+    'https://howbiscuit.com/articles/?ref=contract',
+  );
 });
 
 test('compatibility lookups are active but do not invent editorial categories', () => {

@@ -421,6 +421,8 @@ export const HOST_CONTRACT = Object.freeze({
     outcome: 'redirect' as const,
     code: 301,
     destinationHost: 'howbiscuit.com',
+    mechanism: 'sites-worker' as const,
+    sourcePath: 'scripts/build-static.mjs' as const,
   }),
   liveObserved: Object.freeze({
     outcome: 'serve' as const,
@@ -434,6 +436,77 @@ export const HOST_CONTRACT = Object.freeze({
     implemented: true as const,
   }),
 });
+
+export type SitesRedirectRule = Readonly<{
+  from: string;
+  to: string;
+  code: 301;
+}>;
+
+export function parseSitesRedirectRules(source: string): readonly SitesRedirectRule[] {
+  const lines = source.split(/\r?\n/).map((line) => line.trim()).filter((line) => line && !line.startsWith('#'));
+  return Object.freeze(lines.map((line, index) => {
+    const fields = line.split(/\s+/);
+    if (fields.length !== 3) throw new Error(`Redirect line ${index + 1} must contain source, destination, and code.`);
+    const [from, to, code] = fields;
+    const wildcardCount = (from.match(/\*/g) ?? []).length;
+    if (
+      !from.startsWith('/')
+      || from.startsWith('//')
+      || /[:?#\\]/.test(from)
+      || wildcardCount > 1
+      || (wildcardCount === 1 && !from.endsWith('*'))
+    ) {
+      throw new Error(`Redirect line ${index + 1} must use an exact root-relative path or one trailing wildcard.`);
+    }
+    if (!to.startsWith('/') || to.startsWith('//') || /[*:?#\\]/.test(to)) {
+      throw new Error(`Redirect line ${index + 1} must use a fixed root-relative destination.`);
+    }
+    if (code !== '301') throw new Error(`Redirect line ${index + 1} must remain a permanent 301.`);
+    return Object.freeze({ from, to, code: 301 as const });
+  }));
+}
+
+export function buildSitesWorkerSource(redirectSource: string): string {
+  const rules = parseSitesRedirectRules(redirectSource);
+  const exactRules = rules.filter(({ from }) => !from.includes('*')).map(({ from, to }) => [from, to]);
+  const wildcardRules = rules.filter(({ from }) => from.endsWith('*')).map(({ from, to }) => [from.slice(0, -1), to]);
+  return [
+    `const APEX_HOST = ${JSON.stringify(HOST_CONTRACT.target.destinationHost)};`,
+    `const WWW_HOST = ${JSON.stringify(HOST_CONTRACT.host)};`,
+    `const EXACT_REDIRECTS = new Map(${JSON.stringify(exactRules)});`,
+    `const WILDCARD_REDIRECTS = Object.freeze(${JSON.stringify(wildcardRules)});`,
+    'function migratedPath(pathname) {',
+    '  const exact = EXACT_REDIRECTS.get(pathname);',
+    '  if (exact) return exact;',
+    '  for (const [prefix, destination] of WILDCARD_REDIRECTS) {',
+    '    if (pathname.startsWith(prefix)) return destination;',
+    '  }',
+    '  return null;',
+    '}',
+    'export function redirectLocation(request) {',
+    '  const url = new URL(request.url);',
+    '  const destinationPath = migratedPath(url.pathname);',
+    '  const canonicalizeHost = url.hostname === WWW_HOST;',
+    '  if (!destinationPath && !canonicalizeHost) return null;',
+    '  if (canonicalizeHost) {',
+    "    url.protocol = 'https:';",
+    '    url.hostname = APEX_HOST;',
+    "    url.port = '';",
+    '  }',
+    '  if (destinationPath) url.pathname = destinationPath;',
+    '  return url.toString();',
+    '}',
+    'export default {',
+    '  async fetch(request, env) {',
+    '    const location = redirectLocation(request);',
+    '    if (location) return Response.redirect(location, 301);',
+    '    return env.ASSETS.fetch(request);',
+    '  },',
+    '};',
+    '',
+  ].join('\n');
+}
 
 function normalizeRoute(route: string): string {
   if (!route.startsWith('/')) throw new Error(`Route must be root-relative: ${route}`);

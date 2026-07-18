@@ -43,34 +43,48 @@ At this candidate, `home/heating-cooling` and `kitchen/food-science` are categor
 
 ## Route migration
 
-| Previous or requested route | Phase C result |
-| --- | --- |
-| `/` | Preserve 200 and canonical `/` |
-| `/home-tech/` | Preserve 200 |
-| `/home/` | Create 200 |
-| `/kitchen/` | Create 200 |
-| `/shop/` | Create 200 |
-| `/tools/` | Preserve 200 |
-| `/articles/` | Preserve 200; public label becomes All Guides |
-| `/make-do/` | 301 directly to `/home/` |
-| `/cook/` | 301 directly to `/kitchen/` |
-| `/buying-guides/` | 301 directly to `/shop/` |
-| `/research-writing/` | 301 directly to `/editorial-policy/` |
-| `/science/` | Clean 404/410 terminal behavior |
-| `/glossary/` | Clean 404/410 terminal behavior |
-| `/math/` | Clean recovery 404 linking to BetterGrades |
-| `/home-tech/gaming-pcs/` | 301 directly to `/home-tech/` while the intended topic is below threshold |
-| `/home-tech/laptops/` | 301 directly to `/home-tech/` while the intended topic is below threshold |
-| `/home-tech/streaming-tvs/` | 301 directly to `/home-tech/` while the intended topic is below threshold |
-| `/home-tech/wifi-routers/` | 301 directly to `/home-tech/`; zero-guide topic stays hidden |
-| `/home-tech/smart-home/` | 301 directly to `/home-tech/`; zero-guide topic stays hidden |
-| `/home-tech/privacy-security/` | 301 directly to `/home-tech/`; zero-guide topic stays hidden |
-| `/cooking/*` | 301 directly to `/kitchen/` |
-| `/make-do-lab/*` | 301 directly to `/home/` |
-| existing article and trust routes | Preserve exactly |
-| `www.howbiscuit.com/*` | Preserve direct canonical-host 301 to `howbiscuit.com` |
+This is the complete Phase C migration matrix. “Included” refers to the final canonical 200 route; redirect sources, terminal routes, and below-threshold routes are excluded from both generated discovery surfaces.
 
-The target resolver reports zero redirect chains. Retired source MDX files no longer build as 200 pages.
+| Previous or requested route | New route or terminal status | Redirect code | Canonical destination | Sitemap | Pagefind | Reason |
+| --- | --- | --- | --- | --- | --- | --- |
+| `/` | Preserve 200 | — | `/` | Included | Included | Preserve the homepage. |
+| `/home-tech/` | Preserve 200 | — | `/home-tech/` | Included | Included | Preserve the approved Home Tech category. |
+| `/home/` | Create 200 | — | `/home/` | Included | Included | Publish the approved Home & Apartment category. |
+| `/kitchen/` | Create 200 | — | `/kitchen/` | Included | Included | Publish the approved Kitchen category. |
+| `/shop/` | Create 200 | — | `/shop/` | Included | Included | Publish Shop Smarter without inventing product data. |
+| `/tools/` | Preserve 200 | — | `/tools/` | Included | Included | Preserve the approved Tools category. |
+| `/articles/` | Preserve 200 and relabel All Guides | — | `/articles/` | Included | Included | Preserve the canonical guide index under its approved public label. |
+| `/make-do/` | `/home/` | 301 | `/home/` | Source excluded; destination included | Source excluded; destination included | Migrate the legacy Home and DIY category directly to Home & Apartment. |
+| `/cook/` | `/kitchen/` | 301 | `/kitchen/` | Source excluded; destination included | Source excluded; destination included | Migrate the legacy Cooking category directly to Kitchen. |
+| `/buying-guides/` | `/shop/` | 301 | `/shop/` | Source excluded; destination included | Source excluded; destination included | Migrate the legacy Buying Guides category directly to Shop Smarter. |
+| `/research-writing/` | `/editorial-policy/` | 301 | `/editorial-policy/` | Source excluded; destination included | Source excluded; destination included | Move the noncommercial editorial standard to the trust surface. |
+| `/science/` | Terminal 404/410 | — | None | Excluded | Excluded | Retire the thin legacy division after migrating its real articles. |
+| `/glossary/` | Terminal 404/410 | — | None | Excluded | Excluded | Retire the thin legacy glossary rather than publish an empty surface. |
+| `/math/` | Recovery 404 linking to BetterGrades | — | None | Excluded | Excluded | Retire the unrelated math surface while giving visitors a truthful recovery path. |
+| `/home-tech/computers-laptops/` | 404 while below threshold | — | None while hidden | Excluded | Excluded | The canonical topic needs three publishable guides before it becomes a 200 index. |
+| `/home-tech/tvs-streaming/` | 404 while below threshold | — | None while hidden | Excluded | Excluded | The canonical topic needs three publishable guides before it becomes a 200 index. |
+| `/home-tech/gaming-pcs/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while Computers & Laptops is below threshold. |
+| `/home-tech/laptops/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while Computers & Laptops is below threshold. |
+| `/home-tech/streaming-tvs/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while TVs & Streaming is below threshold. |
+| `/home-tech/wifi-routers/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
+| `/home-tech/smart-home/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
+| `/home-tech/privacy-security/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
+| `/cooking/*` | `/kitchen/` | 301 | `/kitchen/` | Sources excluded; destination included | Sources excluded; destination included | Collapse the legacy family directly to the final Kitchen category. |
+| `/make-do-lab/*` | `/home/` | 301 | `/home/` | Sources excluded; destination included | Sources excluded; destination included | Collapse the legacy family directly to the final Home & Apartment category. |
+| `/articles/why-salt-melts-ice/` | Preserve 200 | — | `/articles/why-salt-melts-ice/` | Included | Included | Preserve the canonical LaTeX article route. |
+| `/articles/how-does-baking-powder-work/` | Preserve 200 | — | `/articles/how-does-baking-powder-work/` | Included | Included | Preserve the canonical practical guide route. |
+| `/articles/why-are-some-answers-better-than-others/` | Preserve 200 | — | `/articles/why-are-some-answers-better-than-others/` | Included | Included | Preserve the canonical editorial-standard route. |
+| `/about/` | Preserve 200 | — | `/about/` | Included | Included | Preserve the public trust route. |
+| `/affiliate-disclosure/` | Preserve 200 | — | `/affiliate-disclosure/` | Included | Included | Preserve the public disclosure route. |
+| `/contact/` | Preserve 200 | — | `/contact/` | Included | Included | Preserve the public contact route. |
+| `/corrections/` | Preserve 200 | — | `/corrections/` | Included | Included | Preserve the public corrections route. |
+| `/editorial-policy/` | Preserve 200 | — | `/editorial-policy/` | Included | Included | Preserve the public editorial standard. |
+| `/privacy/` | Preserve 200 | — | `/privacy/` | Included | Included | Preserve the public privacy route. |
+| `https://www.howbiscuit.com/*` | Final path on `https://howbiscuit.com` | 301 | Final apex URL | Apex canonical URLs only | Apex canonical URLs only | Remove the duplicate host; if the path is also legacy, collapse host and path migration into the same response. |
+
+The 12 tracked path rules are parsed fail-closed and compiled into the packaged Sites Worker. Its configuration runs that Worker before static assets, so it handles both legacy paths and `www` canonicalization before delegating current routes to `env.ASSETS`. Executable tests issue apex, `www`, and preview-host requests for every exact and wildcard rule, assert status 301 and the exact `Location`, follow that location, and require a delegated 200 rather than a second redirect. Retired source MDX files no longer build as 200 pages.
+
+This is candidate-artifact evidence, not a live-production claim. The previously observed public `www` response remained 200, and changing it requires the separate Phase C acceptance and publication approvals.
 
 ## Article migration
 
@@ -154,7 +168,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
 - Pagefind: 16 eligible pages and 16 real indexed fragments.
-- Node tests: 40 passed, 0 failed.
+- Node tests: 41 passed, 0 failed.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.
@@ -178,6 +192,7 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
 - `npm ci` retains the accepted dependency audit baseline of six findings: one low, four moderate, and one high. No forced audit rewrite was applied.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
+- The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 
 ## Changed-file scope
 
