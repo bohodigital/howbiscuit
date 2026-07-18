@@ -5,6 +5,7 @@ import path from 'node:path';
 import { load as parseYaml } from 'js-yaml';
 
 import { compileLatexArticle } from '../latex/article-compiler.mjs';
+import { applyAcceptedLatexClassification } from './latex-classification-bridge.mjs';
 
 function asciiCompare(left, right) {
   return left < right ? -1 : left > right ? 1 : 0;
@@ -69,9 +70,11 @@ function mdxSource(root, relativePath) {
 }
 
 function latexSource(root, relativePath) {
-  const compiled = compileLatexArticle(readFileSync(path.join(root, relativePath), 'utf8'), {
-    sourcePath: relativePath,
-  });
+  const compiled = applyAcceptedLatexClassification(
+    compileLatexArticle(readFileSync(path.join(root, relativePath), 'utf8'), {
+      sourcePath: relativePath,
+    }),
+  );
   const data = compiled.metadata;
   return Object.freeze({
     sourceKind: 'latex',

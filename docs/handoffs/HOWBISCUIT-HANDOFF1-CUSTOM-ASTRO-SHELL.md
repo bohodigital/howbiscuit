@@ -122,9 +122,9 @@ Product components use a strict discriminated union and runtime fail-closed chec
 
 ## Normalized content and LaTeX seam
 
-The three accepted article classifications now live in their canonical MDX or LaTeX sources rather than a separate migration manifest. The normalized registry derives those classifications from source and remains the sole article registry used by navigation and article surfaces.
+The two standard-article classifications now live in canonical MDX sources. The accepted salt-article classification remains in one exact fail-closed LaTeX bridge because Phase B does not permit editing `content/latex`; Phase C owns that path and must move the fields into canonical TeX metadata before deleting the bridge. The normalized registry remains the sole article registry used by navigation and article surfaces.
 
-The LaTeX source now declares canonical category, topic, article type, editorial classification, and priority through allowlisted metadata commands. The old division value remains a validated compatibility field only; it is not independent taxonomy authority.
+The LaTeX compiler applies the exact accepted bridge before deterministic MDX/module generation. The old division value remains a validated compatibility field only; it is not independent taxonomy authority.
 
 The compiler still preserves:
 

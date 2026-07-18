@@ -48,11 +48,6 @@ const REQUIRED_METADATA = [
   'hbslug',
   'hbdescription',
   'hbdivision',
-  'hbcategory',
-  'hbtopic',
-  'hbarticletype',
-  'hbeditorialclassification',
-  'hbeditorialpriority',
   'hbevidence',
   'hbpubdate',
   'hbupdated',
@@ -230,18 +225,6 @@ function parsePreamble(source, sourcePath) {
   if (!SAFE_DIVISIONS.has(values.hbdivision)) {
     fail(`Unknown How Biscuit division: ${values.hbdivision}`, sourcePath);
   }
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbcategory)) {
-    fail('\\hbcategory{...} must be a lowercase, hyphen-separated category ID.', sourcePath);
-  }
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(values.hbtopic)) {
-    fail('\\hbtopic{...} must be a lowercase, hyphen-separated topic ID.', sourcePath);
-  }
-  if (!['guide', 'editorial-standard'].includes(values.hbarticletype)) {
-    fail('\\hbarticletype{...} must be guide or editorial-standard.', sourcePath);
-  }
-  if (!/^-?\d+$/.test(values.hbeditorialpriority)) {
-    fail('\\hbeditorialpriority{...} must be an integer.', sourcePath);
-  }
   if (!['true', 'false'].includes(values.feed) || !['true', 'false'].includes(values.featured)) {
     fail('\\hbfeed and \\hbfeatured must be true or false.', sourcePath);
   }
@@ -254,11 +237,6 @@ function parsePreamble(source, sourcePath) {
     slug: values.hbslug,
     description: values.hbdescription,
     division: values.hbdivision,
-    categoryId: values.hbcategory,
-    topicId: values.hbtopic,
-    articleType: values.hbarticletype,
-    editorialClassification: values.hbeditorialclassification,
-    editorialPriority: Number.parseInt(values.hbeditorialpriority, 10),
     evidence: values.hbevidence,
     pubDate: validateDate(values.hbpubdate, 'hbpubdate', sourcePath),
     updatedDate: validateDate(values.hbupdated, 'hbupdated', sourcePath),
@@ -728,6 +706,15 @@ function yamlString(value) {
 
 export function generatedMdx(article) {
   const { metadata } = article;
+  if (
+    typeof metadata.categoryId !== 'string'
+    || typeof metadata.topicId !== 'string'
+    || typeof metadata.articleType !== 'string'
+    || typeof metadata.editorialClassification !== 'string'
+    || !Number.isInteger(metadata.editorialPriority)
+  ) {
+    throw new Error('Generated LaTeX articles require an accepted classification bridge.');
+  }
   const tags = metadata.tags.length ? `[${metadata.tags.map(yamlString).join(', ')}]` : '[]';
   return `---
 title: ${yamlString(metadata.title)}

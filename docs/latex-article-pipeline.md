@@ -25,11 +25,6 @@ The route comes from `\hbslug{...}`. For example, `\hbslug{why-salt-melts-ice}` 
 \hbdescription{A complete search and social description of at least 40 characters.}
 % Compatibility metadata only; it does not control the canonical taxonomy.
 \hbdivision{science}
-\hbcategory{home}
-\hbtopic{heating-cooling}
-\hbarticletype{guide}
-\hbeditorialclassification{not-separately-declared}
-\hbeditorialpriority{0}
 \hbevidence{What kinds of evidence were reviewed}
 \hbpubdate{2026-07-13}
 \hbupdated{2026-07-13}
@@ -39,7 +34,7 @@ The route comes from `\hbslug{...}`. For example, `\hbslug{why-salt-melts-ice}` 
 \hbfeatured{false}
 ```
 
-`\hbcategory`, `\hbtopic`, and `\hbarticletype` own the canonical classification consumed by the normalized public-content model. `\hbdivision` is retained only as a validated compatibility field while the observed Phase A routes remain in place; it is not independently authoritative. Valid compatibility divisions are `research-writing`, `cook`, `home-tech`, `make-do`, `tools`, `buying-guides`, `science`, and `glossary`. Only `amsmath` and `amssymb` are accepted package declarations; KaTeX already supplies the supported math behavior.
+`\hbdivision` is a validated compatibility field while the observed Phase A routes remain in place; it is not independent taxonomy authority. Phase B keeps the accepted salt-article classification in an exact fail-closed public-content bridge because this work order does not permit editing `content/latex`. Phase C owns that path and must move the classification into canonical TeX metadata before deleting the bridge. Valid compatibility divisions are `research-writing`, `cook`, `home-tech`, `make-do`, `tools`, `buying-guides`, `science`, and `glossary`. Only `amsmath` and `amssymb` are accepted package declarations; KaTeX already supplies the supported math behavior.
 
 ## Supported document vocabulary
 

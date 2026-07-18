@@ -10,13 +10,16 @@ import {
   generatedModule,
   LEGACY_LATEX_DIVISIONS,
 } from '../src/lib/latex/article-compiler.mjs';
+import { applyAcceptedLatexClassification } from '../src/lib/public-content/latex-classification-bridge.mjs';
 
 const examplePath = new URL('../content/latex/articles/why-salt-melts-ice.tex', import.meta.url);
 const example = await readFile(examplePath, 'utf8');
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 test('compiles the canonical article into static, accessible math markup', () => {
-  const article = compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' });
+  const article = applyAcceptedLatexClassification(
+    compileLatexArticle(example, { sourcePath: 'why-salt-melts-ice.tex' }),
+  );
   assert.equal(article.metadata.slug, 'why-salt-melts-ice');
   assert.equal(article.metadata.division, 'science');
   assert.equal(article.metadata.categoryId, 'home');
@@ -32,14 +35,26 @@ test('compiles the canonical article into static, accessible math markup', () =>
 });
 
 test('generation is deterministic and produces a custom Astro route module', () => {
-  const first = compileLatexArticle(example);
-  const second = compileLatexArticle(example);
+  const first = applyAcceptedLatexClassification(compileLatexArticle(example));
+  const second = applyAcceptedLatexClassification(compileLatexArticle(example));
   assert.equal(generatedMdx(first), generatedMdx(second));
   assert.equal(generatedModule(first), generatedModule(second));
   assert.match(generatedMdx(first), /articleFormat: latex/);
   assert.match(generatedMdx(first), /categoryId: home/);
   assert.match(generatedMdx(first), /topicId: heating-cooling/);
   assert.match(generatedMdx(first), /LatexArticle article=\{article\}/);
+});
+
+test('generation fails closed without an accepted LaTeX classification bridge', () => {
+  const article = compileLatexArticle(example);
+  assert.throws(() => generatedMdx(article), /accepted classification bridge/i);
+  assert.throws(
+    () => applyAcceptedLatexClassification({
+      ...article,
+      metadata: { ...article.metadata, slug: 'not-an-accepted-article' },
+    }),
+    /No accepted LaTeX classification/i,
+  );
 });
 
 test('rejects file inclusion and arbitrary TeX execution', () => {
