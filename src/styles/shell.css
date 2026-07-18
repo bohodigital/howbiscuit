@@ -198,6 +198,8 @@ html:not(.js) .hb-desktop-nav .hb-header-action { display: none; }
 .hb-article-toc a { color: var(--hb-ink-soft); font-size: 0.72rem; line-height: 1.35; }
 .hb-disclosure { margin: 1.5rem 0; border: 2px solid var(--hb-ink); border-radius: 0.7rem; padding: 1rem; background: var(--hb-honey); color: #142432; }
 .hb-disclosure p { margin: 0.35rem 0 0; }
+.hb-disclosure a { color: #142432; }
+.hb-disclosure a:focus-visible { outline-color: #142432; }
 
 .hb-topic-filters { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .hb-topic-filters a { border: 1px solid var(--hb-ink); border-radius: 999px; padding: 0.45rem 0.65rem; color: var(--hb-ink); text-decoration: none; }

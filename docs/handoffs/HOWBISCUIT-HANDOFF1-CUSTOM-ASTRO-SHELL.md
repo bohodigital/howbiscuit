@@ -178,6 +178,7 @@ Fresh-context Codex architecture, frontend/accessibility, and test-evidence revi
 - The Home Tech title switches from white to dark ink when the dark theme lightens the blue background, preserving WCAG-AA contrast for its small inherited copy.
 - The inverted dark-theme panic-strip label and the panic-strip and LaTeX-paper focus rings use context-specific foregrounds with explicit text and non-text contrast assertions.
 - Small LaTeX related-guide labels use a foreground that remains WCAG-AA compliant on both paper and honey hover backgrounds.
+- Disclosure links and focus indicators use dark ink on honey in both themes, including the supported link branch that is dormant in current content.
 - Search focus return checks actual rendered visibility and chooses the first visible desktop or mobile trigger after a viewport breakpoint change, including fractional zoom widths.
 - Product evidence and standalone price badges now run through executable shared validators; unknown states and contradictory observation dates fail closed, and the price badge receives dates only for observed or stale states.
 

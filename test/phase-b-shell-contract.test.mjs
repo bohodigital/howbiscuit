@@ -160,6 +160,10 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
   assert.ok(contrastRatio('#315ee8', '#f6f2e8') >= 3, 'dark LaTeX-paper focus indicator must meet WCAG non-text contrast');
   assert.ok(contrastRatio('#666666', '#fffefb') >= 4.5, 'LaTeX related label must meet WCAG AA on paper');
   assert.ok(contrastRatio('#666666', '#fff2c7') >= 4.5, 'LaTeX related label must meet WCAG AA on hover');
+  assert.ok(contrastRatio('#142432', '#f7c94b') >= 4.5, 'light disclosure link must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#ffd05b') >= 4.5, 'dark disclosure link must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#f7c94b') >= 3, 'light disclosure focus indicator must meet WCAG non-text contrast');
+  assert.ok(contrastRatio('#142432', '#ffd05b') >= 3, 'dark disclosure focus indicator must meet WCAG non-text contrast');
   assert.match(biscuitCss, /--hb-tomato-text:\s*#b43a22/);
   assert.match(biscuitCss, /\.hb-panic-strip a:hover\s*\{[^}]*background:\s*var\(--hb-tomato\);[^}]*color:\s*#142432;/);
   assert.match(biscuitCss, /\.hb-topic-directory a:hover p\s*\{\s*color:\s*#142432;/);
@@ -169,6 +173,8 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
   assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-latex-paper a:focus-visible\s*\{\s*outline-color:\s*#315ee8/);
   assert.match(biscuitCss, /\.hb-latex-related a span\s*\{\s*color:\s*#666/);
   assert.match(shellCss, /\.hb-menu-guides a:hover small\s*\{\s*color:\s*#142432;/);
+  assert.match(shellCss, /\.hb-disclosure a\s*\{\s*color:\s*#142432;/);
+  assert.match(shellCss, /\.hb-disclosure a:focus-visible\s*\{\s*outline-color:\s*#142432;/);
   assert.doesNotMatch(shellCss, /\.hb-article-toc[^{}]*grid-row:\s*1/);
   assert.match(base, /document\.documentElement\.classList\.add\('js'\)/);
   assert.match(header, /<noscript>[\s\S]*Primary navigation without JavaScript/);
