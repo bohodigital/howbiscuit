@@ -12,10 +12,11 @@ interface ArticleRecord {
 interface Props { record: ArticleRecord }
 const { record } = Astro.props;
 const date = record.updatedDate ?? record.publishedDate;
+const dateLabel = record.updatedDate ? 'Updated' : 'Published';
 const formattedDate = date ? new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`)) : null;
 ---
 <div class="hb-article-meta">
-  {formattedDate && <span>Updated <time datetime={date}>{formattedDate}</time></span>}
+  {formattedDate && <span>{dateLabel} <time datetime={date ?? undefined}>{formattedDate}</time></span>}
   {record.readTime && <span>{record.readTime}</span>}
   {record.evidence && <EvidenceBadge value="Researched" label={record.evidence} />}
   <TestingBadge state={record.testing.state} />

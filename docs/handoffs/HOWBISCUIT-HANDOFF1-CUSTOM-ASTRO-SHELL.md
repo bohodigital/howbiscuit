@@ -54,6 +54,8 @@ The catch-all derives routes from the `docs` content collection and verifies eve
 
 Stored theme values are allowlisted to `system`, `light`, or `dark`. Invalid or unavailable storage falls back to a readable system preference, while the no-JavaScript default remains readable light mode.
 
+Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. The measured contrast is greater than 4.5:1 in both light and dark themes.
+
 ### Navigation and modal state
 
 Desktop order is:
@@ -76,6 +78,8 @@ One reducer coordinates mobile navigation and search. It enforces mutual exclusi
 
 The mobile trigger is in the normal top header. The dialog contains all five categories and All Guides, supports nested categories, stays within the viewport, and has no horizontal overflow at 320 CSS pixels or the 640-CSS-pixel reflow equivalent of a 1280-pixel viewport at 200 percent zoom.
 
+When JavaScript is unavailable, the scripted mobile controls remain hidden and a native disclosure exposes all five category labels, every real published guide link, and All Guides. The article DOM and visual order both keep content before the table of contents.
+
 ### Search
 
 The Starlight search UI is replaced by a framework-free Pagefind dialog. It provides:
@@ -86,7 +90,9 @@ The Starlight search UI is replaced by a framework-free Pagefind dialog. It prov
 - Keyboard closing and deterministic focus return.
 - Index-time exclusion for draft, preview, thin, redirected, retired, recovery, and other ineligible surfaces.
 
-The full x64 build invokes Pagefind directly. It counts Pagefind-eligible HTML files before indexing and then requires an equal number of generated `.pf_fragment` files plus `dist/pagefind/pagefind.js`. A generic environment flag cannot disable Pagefind in `build`, `qa`, or `build:sites`.
+The full x64 build invokes Pagefind directly. It derives the exact accepted route set from the 25 content sources, verifies all 26 HTML artifacts including 404, and requires the real Pagefind fragment URL set to equal the eligible HTML route set. The five known thin legacy routes (`/glossary/`, `/home-tech/gaming-pcs/`, `/home-tech/laptops/`, `/home-tech/streaming-tvs/`, and `/science/`) remain served until Phase C but are explicitly excluded from Pagefind. A generic environment flag cannot disable Pagefind in `build`, `qa`, or `build:sites`.
+
+The same artifact verifier checks per-page canonical, robots, Open Graph, Twitter, JSON-LD, H1, Umami, and GA4 contracts. After `prepare-sites-build.mjs`, it also checks the full Pagefind client artifact, worker asset delegation, Wrangler asset/404 rules, and tracked Sites metadata without saving or publishing a Sites version.
 
 ### Reusable component families
 
@@ -106,7 +112,7 @@ The shell provides typed component families for:
 - Search result cards.
 - Empty states.
 
-Product components receive explicit price state and source fields and do not create product or offer records. Empty product shelves render an honest no-verified-products state.
+Product components use a strict discriminated union and runtime fail-closed checks. Observed and stale prices require price, observation date, and source; estimates require price and source; unavailable products reject implied price observations. The components do not create product or offer records, and empty shelves render an honest no-verified-products state.
 
 ## Normalized content and LaTeX seam
 
@@ -150,7 +156,18 @@ The pre-implementation fresh-context architecture reviews were reconciled before
 - One shared modal coordinator and viewport cleanup.
 - A fail-closed Pi-only Pagefind exception.
 
-Fresh-context architecture, frontend, accessibility, and test reviews of the completed candidate remain blocking before acceptance.
+Fresh-context Codex architecture, frontend/accessibility, and test-evidence reviews of the first completed candidate all returned `BLOCK` and were treated as binding. Their material findings were reconciled as follows:
+
+- Five known thin legacy routes are served but excluded from the real Pagefind index.
+- Build and test lanes now verify exact artifact routes, Pagefind fragment routes, metadata, tracker counts, H1 counts, 404 behavior, and the complete non-published Sites package.
+- Light-theme tomato text now uses a WCAG-AA foreground token while decorative tomato remains unchanged.
+- Product price states now require their evidence fields through both types and runtime validation.
+- Mobile article content and table-of-contents visual order now match DOM reading order.
+- Mobile navigation has a native no-JavaScript fallback.
+- Article dates label the published-date fallback as `Published` rather than `Updated`.
+- Rollback instructions cover the complete multi-commit Phase B range rather than implying that reverting only the tip is sufficient.
+
+Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candidate remain blocking before acceptance.
 
 ## Validation evidence
 
@@ -159,10 +176,12 @@ Fresh-context architecture, frontend, accessibility, and test reviews of the com
 - LaTeX compilation: passed for one canonical article.
 - Contract-scoped TypeScript: passed.
 - Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
-- Node tests: 40 passed, 0 failed.
+- Node tests: 44 passed, 0 failed.
 - Content lint: passed for 25 MDX sources and 33 built files.
 - Static build: 26 pages.
-- Pagefind: 25 eligible pages, 25 indexed fragments, 1,405 words, 2 filters.
+- Pagefind: 20 eligible pages, 20 indexed fragments, 1,300 words, 2 filters; all five known thin routes were absent from the fragment route set.
+- Artifact contracts: exact 26-route HTML set, one H1 and required metadata per page, exact tracker counts, and 404 exclusions passed.
+- Sites package: 26 client HTML routes, 20 eligible routes, 20 Pagefind fragments, worker/asset/404 configuration, and hosting-metadata parity passed without publication.
 - Built homepage: one Umami loader, one GA4 loader, and one GA4 configuration.
 - Built 404: zero analytics loaders, `noindex, nofollow`, and Pagefind ignored.
 - HTTP preview: home, representative article, Pagefind JavaScript, RSS, and sitemap index returned 200; an unknown route returned 404.
@@ -174,8 +193,10 @@ Fresh-context architecture, frontend, accessibility, and test reviews of the com
 - Mouse/touch-style activation, one-menu-at-a-time behavior, outside close, Escape close, and focus return passed.
 - Search returned two classified results for `freezing point` and a true empty state for `qzxvjkplmwnrty`.
 - System/light/dark preference, accessible labels, persistence, and system restoration passed.
+- The corrected light tomato text rendered as `#b43a22`; the dark token rendered as `#ff7759`.
 - Mobile navigation and search dialogs fit within 320 pixels, locked body scrolling, closed with Escape, and returned focus.
 - The 640-CSS-pixel reflow check had no overflow and represents a 1280-pixel viewport at 200 percent zoom.
+- Reconciled article markup rendered content before the table of contents, with the table of contents at computed `grid-row: auto`.
 - The standard article and LaTeX article each rendered one H1, exact canonicals, no permanent documentation sidebar, and no horizontal overflow.
 - The LaTeX article rendered 14 MathML nodes.
 
@@ -203,6 +224,7 @@ The Pi artifact remains validation-only and must never be promoted as a release 
 ## Known limitations and deferred work
 
 - Phase C owns category/topic route activation, route migrations, target redirects, generated discovery migrations, related-content migration, and public content-surface conversion.
+- The five known thin legacy routes remain served and search-engine indexable under the accepted observed-route contract, but are excluded from Pagefind until Phase C replaces or retires them.
 - The current custom RSS and sitemap behavior remains the accepted Phase A observed behavior until Phase C; target discovery semantics are not claimed.
 - Native Pagefind remains unavailable on the Pi's ARM64/16 KiB environment. Full x64 Pagefind output remains mandatory for every release artifact.
 - `npm ci` reports six dependency audit findings: one low, four moderate, and one high. No automatic or forced dependency rewrite was applied in this phase.
@@ -210,9 +232,7 @@ The Pi artifact remains validation-only and must never be promoted as a release 
 
 ## Rollback
 
-Before merge, delete the isolated Phase B branch/worktree and return to the accepted parent `3856af487d7869c31600400de6cd78fbcbf7ad30`.
-
-After a later approved merge, revert the Phase B completion commit, run `npm ci`, run the accepted x64 QA lane, and rebuild the prior Starlight artifact. Production rollback remains a separate owner-approved release action.
+Before merge, restoring the accepted parent requires removing or reverting the entire Phase B range `3856af487d7869c31600400de6cd78fbcbf7ad30..candidate` newest-to-oldest; reverting only the tip is insufficient. If the Phase B range is later squash-merged, revert that squash commit instead. Then run `npm ci`, the accepted x64 QA lane, and rebuild the prior Starlight artifact. Production rollback remains a separate owner-approved release action.
 
 ## Acceptance gate
 

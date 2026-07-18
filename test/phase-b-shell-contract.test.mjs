@@ -1,11 +1,47 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import { gunzipSync } from 'node:zlib';
+
+import { KNOWN_THIN_CURRENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const read = (relativePath) => readFileSync(path.join(root, relativePath), 'utf8');
+
+function collectFiles(directory, predicate) {
+  const files = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...collectFiles(fullPath, predicate));
+    else if (predicate(fullPath)) files.push(fullPath);
+  }
+  return files;
+}
+
+function artifactRoute(filePath, artifactRoot) {
+  const relative = path.relative(artifactRoot, filePath).replaceAll('\\', '/');
+  if (relative === 'index.html') return '/';
+  if (relative === '404.html') return '/404.html';
+  return relative.endsWith('/index.html') ? `/${relative.slice(0, -'/index.html'.length)}/` : `/${relative}`;
+}
+
+function sourceRoute(filePath, sourceRoot) {
+  const relative = path.relative(sourceRoot, filePath).replaceAll('\\', '/').replace(/\.(md|mdx)$/, '');
+  const withoutIndex = relative.replace(/(^|\/)index$/, '');
+  return withoutIndex ? `/${withoutIndex}/` : '/';
+}
+
+function contrastRatio(foreground, background) {
+  const luminance = (hex) => {
+    const channels = hex.match(/[a-f\d]{2}/gi).map((value) => Number.parseInt(value, 16) / 255);
+    const linear = channels.map((value) => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+  };
+  const [lighter, darker] = [luminance(foreground), luminance(background)].sort((a, b) => b - a);
+  return (lighter + 0.05) / (darker + 0.05);
+}
 
 test('all seven custom layouts and the custom catch-all renderer exist', () => {
   for (const layout of [
@@ -93,4 +129,86 @@ test('observed Phase A routes remain the rendering source while target routes st
   assert.match(renderer, /registry\.filter\(\(item\) => item\.searchEligible\)/);
   assert.doesNotMatch(renderer, /TARGET_ROUTE_CONTRACTS/);
   assert.doesNotMatch(read('public/_redirects'), /\/cook\/\s+\/kitchen\//);
+});
+
+test('reviewed accessibility and evidence contracts fail closed in source', () => {
+  const biscuitCss = read('src/styles/biscuit.css');
+  const shellCss = read('src/styles/shell.css');
+  const header = read('src/components/SiteHeader.astro');
+  const base = read('src/layouts/BaseLayout.astro');
+  const productCard = read('src/components/ProductCard.astro');
+  const productShelf = read('src/components/ProductShelf.astro');
+  const articleMeta = read('src/components/ArticleMeta.astro');
+
+  assert.ok(contrastRatio('#b43a22', '#fff8e7') >= 4.5, 'light tomato foreground must meet WCAG AA');
+  assert.ok(contrastRatio('#ff7759', '#111b23') >= 4.5, 'dark tomato foreground must meet WCAG AA');
+  assert.match(biscuitCss, /--hb-tomato-text:\s*#b43a22/);
+  assert.doesNotMatch(shellCss, /\.hb-article-toc[^{}]*grid-row:\s*1/);
+  assert.match(base, /document\.documentElement\.classList\.add\('js'\)/);
+  assert.match(header, /<noscript>[\s\S]*Primary navigation without JavaScript/);
+  assert.match(articleMeta, /record\.updatedDate \? 'Updated' : 'Published'/);
+
+  for (const component of [productCard, productShelf]) {
+    assert.match(component, /priceState: 'observed' \| 'stale'; price: string; observedAt: string; source: string/);
+    assert.match(component, /priceState: 'estimate'; price: string; observedAt\?: never; source: string/);
+    assert.match(component, /priceState: 'unavailable'; price\?: never; observedAt\?: never/);
+  }
+  assert.match(productCard, /require price, observedAt, and source evidence/);
+  assert.match(productCard, /Unavailable products must not imply a price observation/);
+});
+
+test('the built artifact has the exact accepted routes, per-page metadata, tracker counts, and H1 counts', () => {
+  const artifactRoot = path.join(root, 'dist');
+  const sourceRoot = path.join(root, 'src', 'content', 'docs');
+  assert.ok(existsSync(artifactRoot), 'npm test must build the artifact before running contract tests');
+  const sourceRoutes = new Set(collectFiles(sourceRoot, (filePath) => /\.(md|mdx)$/.test(filePath)).map((filePath) => sourceRoute(filePath, sourceRoot)));
+  assert.equal(sourceRoutes.size, 25);
+  const pages = new Map(collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html')).map((filePath) => [artifactRoute(filePath, artifactRoot), readFileSync(filePath, 'utf8')]));
+  assert.deepEqual([...pages.keys()].sort(), [...sourceRoutes, '/404.html'].sort());
+
+  for (const [route, html] of pages) {
+    assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, `${route} H1 count`);
+    assert.equal((html.match(/rel="canonical"/g) ?? []).length, 1, `${route} canonical count`);
+    assert.equal((html.match(/name="robots"/g) ?? []).length, 1, `${route} robots count`);
+    assert.equal((html.match(/property="og:title"/g) ?? []).length, 1, `${route} Open Graph title count`);
+    assert.equal((html.match(/property="og:image"/g) ?? []).length, 1, `${route} Open Graph image count`);
+    assert.equal((html.match(/name="twitter:card"/g) ?? []).length, 1, `${route} Twitter card count`);
+    const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
+    assert.equal(jsonLd.length, 1, `${route} JSON-LD count`);
+    assert.doesNotThrow(() => JSON.parse(jsonLd[0][1]), `${route} JSON-LD must parse`);
+    const trackerCount = route === '/404.html' ? 0 : 1;
+    for (const marker of [
+      'analytics.bohodigitalservices.com/script.js',
+      'fefef93c-b1d6-4d04-95d3-064af3d38a41',
+      'googletagmanager.com/gtag/js?id=G-NG0NQMVFEH',
+      "gtag('config', 'G-NG0NQMVFEH'",
+    ]) assert.equal(html.split(marker).length - 1, trackerCount, `${route} tracker count for ${marker}`);
+  }
+
+  for (const route of KNOWN_THIN_CURRENT_ROUTES) {
+    assert.ok(pages.has(route), `${route} must remain served until Phase C`);
+    assert.match(pages.get(route), /data-pagefind-ignore="all"/);
+    assert.doesNotMatch(pages.get(route), /data-pagefind-body/);
+  }
+});
+
+test('the real Pagefind fragment route set exactly matches eligible built HTML', () => {
+  const artifactRoot = path.join(root, 'dist');
+  const pages = new Map(collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html')).map((filePath) => [artifactRoute(filePath, artifactRoot), readFileSync(filePath, 'utf8')]));
+  const eligibleRoutes = [...pages].filter(([, html]) => html.includes('data-pagefind-body')).map(([route]) => route).sort();
+  assert.equal(eligibleRoutes.length, 20);
+
+  const pagefindRoot = path.join(artifactRoot, 'pagefind');
+  if (!existsSync(pagefindRoot)) {
+    assert.equal(process.env.HOWBISCUIT_SKIP_PAGEFIND, '1', 'only the guarded Pi lane may omit Pagefind');
+    return;
+  }
+  assert.ok(existsSync(path.join(pagefindRoot, 'pagefind.js')));
+  const fragments = collectFiles(path.join(pagefindRoot, 'fragment'), (filePath) => filePath.endsWith('.pf_fragment'));
+  const indexedRoutes = fragments.map((filePath) => {
+    const payload = gunzipSync(readFileSync(filePath)).toString('utf8');
+    return JSON.parse(payload.slice(payload.indexOf('{'))).url;
+  }).sort();
+  assert.equal(new Set(indexedRoutes).size, indexedRoutes.length, 'Pagefind routes must not be duplicated');
+  assert.deepEqual(indexedRoutes, eligibleRoutes);
 });

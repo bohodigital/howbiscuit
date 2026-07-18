@@ -1,15 +1,23 @@
 import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { gunzipSync } from 'node:zlib';
 
 import {
   assertFullPagefindLane,
   assertPiPagefindSkipAllowed,
 } from './lib/pagefind-platform-policy.mjs';
+import { KNOWN_THIN_CURRENT_ROUTES } from '../src/lib/search/pagefind-policy.mjs';
 
 const root = process.cwd();
 const piSkipRequested = process.argv.includes('--pi-pagefind-skip');
+const sitesPackageVerificationRequested = process.argv.includes('--verify-sites-package');
 const environmentSkipRequested = process.env.HOWBISCUIT_SKIP_PAGEFIND === '1';
+const acceptedDocumentCount = 25;
+
+function invariant(condition, message) {
+  if (!condition) throw new Error(message);
+}
 
 function runNode(modulePath, args) {
   const result = spawnSync(process.execPath, [modulePath, ...args], {
@@ -31,36 +39,174 @@ function collectFiles(directory, predicate) {
   return files;
 }
 
-if (piSkipRequested) {
-  if (!environmentSkipRequested) throw new Error('The guarded Pi build requires the wrapper-provided exception flag.');
-  const pageSize = Number.parseInt(execFileSync('getconf', ['PAGESIZE'], { encoding: 'utf8' }).trim(), 10);
-  assertPiPagefindSkipAllowed({ platform: process.platform, arch: process.arch, pageSize });
-} else {
-  assertFullPagefindLane({ skipRequested: environmentSkipRequested, lane: 'The normal build' });
+function routeFromSource(filePath, sourceRoot) {
+  const relative = path.relative(sourceRoot, filePath).replaceAll('\\', '/').replace(/\.(md|mdx)$/, '');
+  const withoutIndex = relative.replace(/(^|\/)index$/, '');
+  return withoutIndex ? `/${withoutIndex}/` : '/';
 }
 
-runNode(path.join(root, 'node_modules', 'astro', 'bin', 'astro.mjs'), ['build']);
+function routeFromHtml(filePath, artifactRoot) {
+  const relative = path.relative(artifactRoot, filePath).replaceAll('\\', '/');
+  if (relative === 'index.html') return '/';
+  if (relative === '404.html') return '/404.html';
+  if (relative.endsWith('/index.html')) return `/${relative.slice(0, -'/index.html'.length)}/`;
+  return `/${relative}`;
+}
 
-const htmlFiles = collectFiles(path.join(root, 'dist'), (filePath) => filePath.endsWith('.html'));
-const eligibleHtmlFiles = htmlFiles.filter((filePath) => readFileSync(filePath, 'utf8').includes('data-pagefind-body'));
-if (!eligibleHtmlFiles.length) throw new Error('The static artifact contains no Pagefind-eligible HTML pages.');
+function assertSetsEqual(expected, actual, label) {
+  const missing = [...expected].filter((value) => !actual.has(value)).sort();
+  const extra = [...actual].filter((value) => !expected.has(value)).sort();
+  invariant(
+    missing.length === 0 && extra.length === 0,
+    `${label} mismatch. Missing: ${missing.join(', ') || 'none'}. Extra: ${extra.join(', ') || 'none'}.`,
+  );
+}
 
-if (piSkipRequested) {
-  console.log('Astro build passed; Pagefind binary execution skipped only for the verified Pi ARM64/16 KiB QA artifact.');
-} else {
-  runNode(path.join(root, 'node_modules', 'pagefind', 'lib', 'runner', 'bin.cjs'), [
-    '--site',
-    'dist',
-    '--output-subdir',
-    'pagefind',
-  ]);
-  const pagefindRoot = path.join(root, 'dist', 'pagefind');
-  const pagefindEntry = path.join(pagefindRoot, 'pagefind.js');
-  const fragments = existsSync(path.join(pagefindRoot, 'fragment'))
-    ? collectFiles(path.join(pagefindRoot, 'fragment'), (filePath) => filePath.endsWith('.pf_fragment'))
-    : [];
-  if (!existsSync(pagefindEntry) || fragments.length !== eligibleHtmlFiles.length) {
-    throw new Error(`Pagefind artifact mismatch: ${eligibleHtmlFiles.length} eligible HTML pages, ${fragments.length} indexed fragments.`);
+function countText(value, needle) {
+  return value.split(needle).length - 1;
+}
+
+function pagefindUrlFromFragment(filePath) {
+  const decoded = gunzipSync(readFileSync(filePath)).toString('utf8');
+  const jsonStart = decoded.indexOf('{');
+  invariant(jsonStart >= 0, `Pagefind fragment has no JSON payload: ${filePath}`);
+  const payload = JSON.parse(decoded.slice(jsonStart));
+  invariant(typeof payload.url === 'string' && payload.url.startsWith('/'), `Pagefind fragment has no route: ${filePath}`);
+  return payload.url;
+}
+
+function verifyPageHtml(route, html) {
+  const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
+  invariant((html.match(/<link\b[^>]*rel="canonical"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one canonical link.`);
+  invariant((html.match(/<meta\b[^>]*name="robots"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one robots directive.`);
+  invariant((html.match(/<meta\b[^>]*property="og:title"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Open Graph title.`);
+  invariant((html.match(/<meta\b[^>]*property="og:image"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Open Graph image.`);
+  invariant((html.match(/<meta\b[^>]*name="twitter:card"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Twitter card.`);
+  invariant(jsonLd.length === 1, `${route} must emit exactly one JSON-LD payload.`);
+  JSON.parse(jsonLd[0][1]);
+  invariant((html.match(/<h1\b/gi) ?? []).length === 1, `${route} must render exactly one H1.`);
+
+  const canonicalRoute = route === '/404.html' ? '/404/' : route;
+  invariant(html.includes(`href="https://howbiscuit.com${canonicalRoute}"`), `${route} has the wrong canonical URL.`);
+
+  const analyticsCounts = {
+    umamiLoader: countText(html, 'https://analytics.bohodigitalservices.com/script.js'),
+    umamiSite: countText(html, 'fefef93c-b1d6-4d04-95d3-064af3d38a41'),
+    gaLoader: countText(html, 'https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH'),
+    gaConfig: countText(html, "gtag('config', 'G-NG0NQMVFEH'"),
+  };
+  const expectedAnalyticsCount = route === '/404.html' ? 0 : 1;
+  for (const [name, count] of Object.entries(analyticsCounts)) {
+    invariant(count === expectedAnalyticsCount, `${route} has ${count} ${name} occurrences; expected ${expectedAnalyticsCount}.`);
   }
-  console.log('Astro and Pagefind static build passed.');
+
+  if (route === '/404.html') {
+    invariant(html.includes('content="noindex, nofollow"'), 'The 404 artifact must be noindex, nofollow.');
+    invariant(html.includes('data-pagefind-ignore="all"'), 'The 404 artifact must be excluded from Pagefind.');
+  } else {
+    invariant(html.includes('content="index, follow"'), `${route} must remain index, follow.`);
+  }
+}
+
+function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
+  invariant(existsSync(artifactRoot), `${label} root is missing: ${artifactRoot}`);
+  const docsRoot = path.join(root, 'src', 'content', 'docs');
+  const sourceFiles = collectFiles(docsRoot, (filePath) => /\.(md|mdx)$/.test(filePath));
+  const sourceRoutes = new Set(sourceFiles.map((filePath) => routeFromSource(filePath, docsRoot)));
+  invariant(sourceRoutes.size === acceptedDocumentCount, `Expected ${acceptedDocumentCount} accepted document routes; found ${sourceRoutes.size}.`);
+
+  const htmlFiles = collectFiles(artifactRoot, (filePath) => filePath.endsWith('.html'));
+  const htmlByRoute = new Map(htmlFiles.map((filePath) => [
+    routeFromHtml(filePath, artifactRoot),
+    readFileSync(filePath, 'utf8'),
+  ]));
+  const expectedHtmlRoutes = new Set([...sourceRoutes, '/404.html']);
+  assertSetsEqual(expectedHtmlRoutes, new Set(htmlByRoute.keys()), `${label} HTML route set`);
+  for (const [route, html] of htmlByRoute) verifyPageHtml(route, html);
+
+  for (const route of KNOWN_THIN_CURRENT_ROUTES) {
+    const html = htmlByRoute.get(route);
+    invariant(html, `Known thin route is no longer served: ${route}`);
+    invariant(html.includes('data-pagefind-ignore="all"'), `Known thin route is not excluded from Pagefind: ${route}`);
+    invariant(!html.includes('data-pagefind-body'), `Known thin route is still Pagefind eligible: ${route}`);
+  }
+
+  const eligibleRoutes = new Set(
+    [...htmlByRoute]
+      .filter(([, html]) => html.includes('data-pagefind-body'))
+      .map(([route]) => route),
+  );
+  const expectedEligibleRoutes = new Set(
+    [...sourceRoutes].filter((route) => !KNOWN_THIN_CURRENT_ROUTES.includes(route)),
+  );
+  assertSetsEqual(expectedEligibleRoutes, eligibleRoutes, `${label} Pagefind-eligible route set`);
+
+  const pagefindRoot = path.join(artifactRoot, 'pagefind');
+  if (!requirePagefind) {
+    invariant(!existsSync(pagefindRoot), `${label} must not retain a stale Pagefind directory in the guarded Pi artifact.`);
+    return { htmlCount: htmlByRoute.size, eligibleCount: eligibleRoutes.size, fragmentCount: 0 };
+  }
+
+  invariant(existsSync(path.join(pagefindRoot, 'pagefind.js')), `${label} is missing pagefind/pagefind.js.`);
+  const fragmentRoot = path.join(pagefindRoot, 'fragment');
+  const fragments = existsSync(fragmentRoot)
+    ? collectFiles(fragmentRoot, (filePath) => filePath.endsWith('.pf_fragment'))
+    : [];
+  const indexedRoutes = new Set(fragments.map(pagefindUrlFromFragment));
+  invariant(indexedRoutes.size === fragments.length, `${label} has duplicate Pagefind route fragments.`);
+  assertSetsEqual(eligibleRoutes, indexedRoutes, `${label} indexed Pagefind route set`);
+  return { htmlCount: htmlByRoute.size, eligibleCount: eligibleRoutes.size, fragmentCount: fragments.length };
+}
+
+function verifySitesPackage() {
+  const result = verifyStaticArtifact(path.join(root, 'dist', 'client'), {
+    requirePagefind: true,
+    label: 'Sites client package',
+  });
+  const serverRoot = path.join(root, 'dist', 'server');
+  const worker = readFileSync(path.join(serverRoot, 'index.js'), 'utf8');
+  invariant(worker.includes('env.ASSETS.fetch(request)'), 'Sites worker must delegate requests to the ASSETS binding.');
+  const wrangler = JSON.parse(readFileSync(path.join(serverRoot, 'wrangler.json'), 'utf8'));
+  invariant(wrangler.main === 'index.js', 'Sites wrangler main must be index.js.');
+  invariant(wrangler.assets?.directory === '../client', 'Sites assets directory must be ../client.');
+  invariant(wrangler.assets?.binding === 'ASSETS', 'Sites assets binding must be ASSETS.');
+  invariant(wrangler.assets?.html_handling === 'auto-trailing-slash', 'Sites trailing-slash handling changed unexpectedly.');
+  invariant(wrangler.assets?.not_found_handling === '404-page', 'Sites must use the custom 404 page.');
+  invariant(wrangler.assets?.run_worker_first === false, 'Static assets must not run through the worker first.');
+  const hostingSource = readFileSync(path.join(root, '.openai', 'hosting.json'), 'utf8');
+  const hostingCopy = readFileSync(path.join(root, 'dist', '.openai', 'hosting.json'), 'utf8');
+  invariant(hostingCopy === hostingSource, 'Sites package hosting metadata differs from the tracked source.');
+  const hosting = JSON.parse(hostingCopy);
+  invariant(typeof hosting.project_id === 'string' && hosting.project_id.length > 0, 'Sites package has no project_id.');
+  return result;
+}
+
+if (sitesPackageVerificationRequested) {
+  invariant(!piSkipRequested && !environmentSkipRequested, 'Sites package verification requires the full x64 Pagefind artifact.');
+  const result = verifySitesPackage();
+  console.log(`Sites package verification passed: ${result.htmlCount} HTML routes, ${result.eligibleCount} eligible routes, ${result.fragmentCount} Pagefind fragments.`);
+} else {
+  if (piSkipRequested) {
+    invariant(environmentSkipRequested, 'The guarded Pi build requires the wrapper-provided exception flag.');
+    const pageSize = Number.parseInt(execFileSync('getconf', ['PAGESIZE'], { encoding: 'utf8' }).trim(), 10);
+    assertPiPagefindSkipAllowed({ platform: process.platform, arch: process.arch, pageSize });
+  } else {
+    assertFullPagefindLane({ skipRequested: environmentSkipRequested, lane: 'The normal build' });
+  }
+
+  runNode(path.join(root, 'node_modules', 'astro', 'bin', 'astro.mjs'), ['build']);
+
+  if (piSkipRequested) {
+    const result = verifyStaticArtifact(path.join(root, 'dist'), { requirePagefind: false, label: 'Guarded Pi artifact' });
+    console.log(`Astro build passed with ${result.htmlCount} routes and ${result.eligibleCount} Pagefind-eligible routes; Pagefind execution was skipped only for verified Linux ARM64/16 KiB validation.`);
+  } else {
+    runNode(path.join(root, 'node_modules', 'pagefind', 'lib', 'runner', 'bin.cjs'), [
+      '--site',
+      'dist',
+      '--output-subdir',
+      'pagefind',
+    ]);
+    const result = verifyStaticArtifact(path.join(root, 'dist'), { requirePagefind: true, label: 'Static x64 artifact' });
+    console.log(`Astro and Pagefind static build passed: ${result.htmlCount} HTML routes, ${result.eligibleCount} eligible routes, ${result.fragmentCount} indexed fragments.`);
+  }
 }

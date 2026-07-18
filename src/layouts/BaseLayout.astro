@@ -54,6 +54,7 @@ const pagefindAttributes = pagefindAttributesForPage({ searchEligible });
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script is:inline>
       (() => {
+        document.documentElement.classList.add('js');
         try {
           const storedPreference = localStorage.getItem('howbiscuit-theme');
           const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';

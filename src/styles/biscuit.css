@@ -6,6 +6,7 @@
   --hb-white: #fffdf7;
   --hb-honey: #f7c94b;
   --hb-tomato: #ef6547;
+  --hb-tomato-text: #b43a22;
   --hb-mint: #4c9f7b;
   --hb-blue: #315ee8;
   --hb-lilac: #b78ade;
@@ -23,6 +24,7 @@
   --hb-white: #17242d;
   --hb-honey: #ffd05b;
   --hb-tomato: #ff7759;
+  --hb-tomato-text: #ff7759;
   --hb-mint: #64bd93;
   --hb-blue: #7190ff;
   --hb-lilac: #cba6ec;
@@ -120,7 +122,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
   line-height: 0.82;
 }
 
-.hb-home-hero h1 em { color: var(--hb-tomato); font-family: Georgia, serif; font-weight: 700; }
+.hb-home-hero h1 em { color: var(--hb-tomato-text); font-family: Georgia, serif; font-weight: 700; }
 .hb-hero-dek { max-width: 42rem; margin: 2rem 0; color: var(--hb-ink-soft); font-size: clamp(1rem, 1.6vw, 1.17rem); line-height: 1.65; }
 .hb-hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
@@ -159,7 +161,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 
 .hb-home-section { width: min(1160px, calc(100% - 4rem)); margin: 0 auto; padding: 6.8rem 0; }
 .hb-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 3rem; margin-bottom: 2.25rem; padding-bottom: 1.4rem; border-bottom: 2px solid var(--hb-ink); }
-.hb-section-heading span { display: block; margin-bottom: 0.65rem; color: var(--hb-tomato); font-size: 0.7rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+.hb-section-heading span { display: block; margin-bottom: 0.65rem; color: var(--hb-tomato-text); font-size: 0.7rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
 .hb-section-heading h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: 0.9; }
 .hb-section-heading > p { max-width: 26rem; margin: 0; color: var(--hb-ink-soft); font-size: 0.9rem; line-height: 1.6; }
 .hb-text-link { flex: 0 0 auto; border-bottom: 2px solid; color: var(--hb-ink); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.06em; text-decoration: none; text-transform: uppercase; }
@@ -236,7 +238,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 
 .hb-trust-band { width: min(1160px, calc(100% - 4rem)); margin: 0 auto 6rem; padding-top: 2rem; border-top: 2px solid var(--hb-ink); }
 .hb-trust-band > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
-.hb-trust-band span { color: var(--hb-tomato); font-size: clamp(0.85rem, 1.8vw, 1.25rem); font-weight: 950; letter-spacing: -0.03em; }
+.hb-trust-band span { color: var(--hb-tomato-text); font-size: clamp(0.85rem, 1.8vw, 1.25rem); font-weight: 950; letter-spacing: -0.03em; }
 .hb-trust-band > p { max-width: 55rem; margin: 2.2rem 0 1rem; color: var(--hb-ink-soft); font-family: Georgia, serif; font-size: 1.2rem; line-height: 1.6; }
 .hb-trust-band > a { color: var(--hb-ink); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; }
 
@@ -284,7 +286,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-latex-outline li[data-depth='3'] { padding-left: 1rem; }
 .hb-latex-outline a { display: flex; gap: 0.45rem; color: var(--hb-ink); font-size: 0.76rem; line-height: 1.35; text-decoration: none; }
 .hb-latex-outline a:hover { color: var(--hb-blue); text-decoration: underline; text-underline-offset: 0.18em; }
-.hb-latex-outline b { min-width: 1.5rem; color: var(--hb-tomato); font-variant-numeric: tabular-nums; }
+.hb-latex-outline b { min-width: 1.5rem; color: var(--hb-tomato-text); font-variant-numeric: tabular-nums; }
 
 .hb-latex-paper {
   width: min(100%, 50rem);
@@ -386,7 +388,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-content :is(th,td) { border: 1px solid color-mix(in srgb, var(--hb-ink), transparent 55%); padding: 0.8rem; }
 
 .hb-sources { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 2.2rem; margin: 5rem 0 3rem; padding: 2rem; border: 2px solid var(--hb-ink); background: var(--hb-paper-deep); }
-.hb-sources > div > span { color: var(--hb-tomato); font-size: 0.64rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+.hb-sources > div > span { color: var(--hb-tomato-text); font-size: 0.64rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
 .hb-sources h2 { margin: 0.6rem 0 0; font-family: Georgia, serif; font-size: 2rem; }
 .hb-sources ol { margin: 0; padding: 0; list-style: none; }
 .hb-sources li { padding: 0.7rem 0; border-bottom: 1px solid color-mix(in srgb, var(--hb-ink), transparent 70%); }
@@ -396,7 +398,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-sources li span { color: var(--hb-ink-soft); font-size: 0.69rem; }
 
 .hb-related { margin: 4rem 0 1rem; padding-top: 1.5rem; border-top: 2px solid var(--hb-ink); }
-.hb-related > p { margin: 0 0 1rem; color: var(--hb-tomato); font-size: 0.65rem; font-weight: 900; letter-spacing: 0.09em; text-transform: uppercase; }
+.hb-related > p { margin: 0 0 1rem; color: var(--hb-tomato-text); font-size: 0.65rem; font-weight: 900; letter-spacing: 0.09em; text-transform: uppercase; }
 .hb-related > div { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .hb-related a { position: relative; min-height: 8.5rem; display: flex; flex-direction: column; border: 1.5px solid var(--hb-ink); border-radius: 0.7rem; padding: 1rem; background: var(--hb-white); color: var(--hb-ink); text-decoration: none; }
 .hb-related a:hover { background: var(--hb-honey); color: #142432; }
@@ -408,11 +410,11 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 
 .hb-global-footer { margin-top: 4rem; padding: 2rem 0; border-top: 2px solid var(--hb-ink); }
 .hb-footer-mark { color: var(--hb-ink); font-size: 1.25rem; font-weight: 950; letter-spacing: -0.07em; }
-.hb-footer-mark span { color: var(--hb-tomato); }
+.hb-footer-mark span { color: var(--hb-tomato-text); }
 .hb-global-footer > p { margin: 0.6rem 0 1.5rem; color: var(--hb-ink-soft); font-family: Georgia, serif; font-style: italic; }
 .hb-global-footer nav { display: flex; flex-wrap: wrap; gap: 0.6rem 1.1rem; }
 .hb-global-footer nav a { color: var(--hb-ink); font-size: 0.66rem; font-weight: 800; letter-spacing: 0.04em; text-decoration: none; text-transform: uppercase; }
-.hb-global-footer nav a:hover { color: var(--hb-tomato); }
+.hb-global-footer nav a:hover { color: var(--hb-tomato-text); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

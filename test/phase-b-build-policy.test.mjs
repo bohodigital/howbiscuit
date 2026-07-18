@@ -21,11 +21,15 @@ test('Phase B declares every build integration as a direct dependency', () => {
 
 test('normal build and QA lanes run the explicit Pagefind build and reject skip leakage', () => {
   assert.match(packageJson.scripts.build, /scripts\/build-static\.mjs/);
-  assert.match(packageJson.scripts.qa, /npm run build/);
+  assert.match(packageJson.scripts.test, /npm run build/);
+  assert.match(packageJson.scripts.qa, /npm run test/);
   assert.doesNotMatch(packageJson.scripts.qa, /astro build/);
   const buildScript = readFileSync(path.join(root, 'scripts', 'build-static.mjs'), 'utf8');
   assert.match(buildScript, /data-pagefind-body/);
   assert.match(buildScript, /\.pf_fragment/);
+  assert.match(buildScript, /pagefindUrlFromFragment/);
+  assert.match(buildScript, /assertSetsEqual\(eligibleRoutes, indexedRoutes/);
+  assert.match(packageJson.scripts['build:sites'], /--verify-sites-package/);
 
   assert.doesNotThrow(() => assertFullPagefindLane({ skipRequested: false, lane: 'build' }));
   assert.throws(

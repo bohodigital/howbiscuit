@@ -1,11 +1,17 @@
 ---
 import EmptyState from './EmptyState.astro';
 import ProductCard from './ProductCard.astro';
-interface Product { name: string; description: string; href?: string; price?: string; priceState: 'observed' | 'estimate' | 'unavailable' | 'stale'; observedAt?: string; source?: string }
+interface ProductCore { name: string; description: string; href?: string }
+type Product = ProductCore & (
+  | { priceState: 'observed' | 'stale'; price: string; observedAt: string; source: string }
+  | { priceState: 'estimate'; price: string; observedAt?: never; source: string }
+  | { priceState: 'unavailable'; price?: never; observedAt?: never; source?: string }
+);
 interface Props { title: string; products: Product[] }
 const { title, products } = Astro.props;
+const shelfId = `product-shelf-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'products'}`;
 ---
-<section class="hb-product-shelf" aria-labelledby="product-shelf-title">
-  <h2 id="product-shelf-title">{title}</h2>
+<section class="hb-product-shelf" aria-labelledby={shelfId}>
+  <h2 id={shelfId}>{title}</h2>
   {products.length > 0 ? <div>{products.map((product) => <ProductCard {product} />)}</div> : <EmptyState title="No verified products" message="No evidence-backed product records are available for this shelf." />}
 </section>

@@ -11,6 +11,7 @@ import ShoppingLayout from '../layouts/ShoppingLayout.astro';
 import ToolLayout from '../layouts/ToolLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
+import { isKnownThinCurrentRoute } from '../lib/search/pagefind-policy.mjs';
 
 type DocsEntry = CollectionEntry<'docs'>;
 interface PageProps { entry: DocsEntry; route: string }
@@ -54,7 +55,8 @@ const page = Astro.props as PageProps;
 const { registry } = getPublicSiteData() as { registry: readonly RegistryRecord[] };
 const { Content, headings } = await render(page.entry);
 const { data } = page.entry;
-const excluded = data.draft || data.preview || data.thin || Boolean(data.redirectState) || Boolean(data.retirementState);
+const thin = data.thin || isKnownThinCurrentRoute(page.route);
+const excluded = data.draft || data.preview || thin || Boolean(data.redirectState) || Boolean(data.retirementState);
 const record = data.kind === 'article' ? registry.find(({ route }) => route === page.route) : undefined;
 if (data.kind === 'article' && !record) throw new Error(`Article is missing from the normalized registry: ${page.route}`);
 ---

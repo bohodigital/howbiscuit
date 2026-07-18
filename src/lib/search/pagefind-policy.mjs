@@ -1,7 +1,20 @@
+export const KNOWN_THIN_CURRENT_ROUTES = Object.freeze([
+  '/glossary/',
+  '/home-tech/gaming-pcs/',
+  '/home-tech/laptops/',
+  '/home-tech/streaming-tvs/',
+  '/science/',
+]);
+
+export function isKnownThinCurrentRoute(route) {
+  return KNOWN_THIN_CURRENT_ROUTES.includes(route);
+}
+
 function hasExcludedState(record) {
   return record.draft === true
     || record.preview === true
     || record.thin === true
+    || isKnownThinCurrentRoute(record.route)
     || record.redirectState !== null && record.redirectState !== undefined
     || record.retirementState !== null && record.retirementState !== undefined;
 }

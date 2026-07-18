@@ -60,6 +60,21 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
   </div>
 </header>
 
+<noscript>
+  <details class="hb-noscript-navigation">
+    <summary>Browse How Biscuit</summary>
+    <nav aria-label="Primary navigation without JavaScript">
+      {navigation.categories.map((category) => (
+        <div>
+          <strong>{category.label}</strong>
+          {category.guideLinks.map((guide) => <a href={guide.href}>{guide.title}</a>)}
+        </div>
+      ))}
+      <a class="hb-mobile-all-guides" href={navigation.allGuides.href}>{navigation.allGuides.label}</a>
+    </nav>
+  </details>
+</noscript>
+
 <dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title">
   <div class="hb-dialog-card">
     <header><h2 id="mobile-navigation-title">Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu">Close</button></header>

@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import {
+  isKnownThinCurrentRoute,
+  KNOWN_THIN_CURRENT_ROUTES,
   pagefindAttributesForPage,
   pagefindMetadataForRecord,
 } from '../src/lib/search/pagefind-policy.mjs';
@@ -55,4 +57,20 @@ test('an inconsistent eligibility claim is rejected instead of indexed', () => {
     () => pagefindMetadataForRecord({ ...publishable, draft: true }),
     /contradictory Pagefind eligibility/i,
   );
+});
+
+test('all five known thin legacy routes remain served but are excluded from Pagefind', () => {
+  assert.deepEqual(KNOWN_THIN_CURRENT_ROUTES, [
+    '/glossary/',
+    '/home-tech/gaming-pcs/',
+    '/home-tech/laptops/',
+    '/home-tech/streaming-tvs/',
+    '/science/',
+  ]);
+  for (const route of KNOWN_THIN_CURRENT_ROUTES) {
+    assert.equal(isKnownThinCurrentRoute(route), true);
+    assert.deepEqual(pagefindAttributesForPage({ route, searchEligible: true }), {
+      'data-pagefind-ignore': 'all',
+    });
+  }
 });
