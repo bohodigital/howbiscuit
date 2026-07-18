@@ -58,7 +58,7 @@ The catch-all derives routes from the `docs` content collection and verifies eve
 
 Stored theme values are allowlisted to `system`, `light`, or `dark`. Invalid or unavailable storage falls back to a readable system preference, while the no-JavaScript default remains readable light mode.
 
-Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. Panic-strip hover links switch to fixed dark ink against the decorative tomato background. Honey hover cards also reset explicitly colored secondary copy to the same dark ink. The measured contrast is greater than 4.5:1 for these text treatments in light and dark themes.
+Light mode uses a separate `#b43a22` tomato foreground token for text on the paper background, preserving the brighter tomato token for decoration. Panic-strip hover links switch to fixed dark ink against the decorative tomato background. Honey hover cards also reset explicitly colored secondary copy to the same dark ink. The Home Tech title uses white on the light-theme blue and dark ink on the lighter dark-theme blue. The measured contrast is greater than 4.5:1 for these text treatments in light and dark themes.
 
 ### Navigation and modal state
 
@@ -173,6 +173,11 @@ Fresh-context Codex architecture, frontend/accessibility, and test-evidence revi
 - The accepted route boundary is an explicit 25-route contract shared by rendering, build verification, and tests; the three previously omitted observed Home Tech topics are now represented, and Phase C-only routes are asserted absent.
 - Panic-strip hover links use a WCAG-AA dark foreground on the tomato background in both themes.
 - Menu-guide and topic-directory honey hover states reset secondary copy to a WCAG-AA dark foreground instead of retaining the dark-theme soft-ink token.
+- The Home Tech title switches from white to dark ink when the dark theme lightens the blue background, preserving WCAG-AA contrast for its small inherited copy.
+- The inverted dark-theme panic-strip label and the panic-strip and LaTeX-paper focus rings use context-specific foregrounds with explicit text and non-text contrast assertions.
+- Small LaTeX related-guide labels use a foreground that remains WCAG-AA compliant on both paper and honey hover backgrounds.
+- Search focus return resolves to the currently visible desktop or mobile trigger after a viewport breakpoint change.
+- Product evidence now runs through an executable shared validator; estimate and unavailable states reject observation dates at runtime, and the price badge receives dates only for observed or stale states.
 
 Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candidate remain blocking before acceptance.
 
@@ -183,7 +188,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 - LaTeX compilation: passed for one canonical article.
 - Contract-scoped TypeScript: passed.
 - Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
-- Node tests: 44 passed, 0 failed.
+- Node tests: 46 passed, 0 failed.
 - Content lint: passed for 25 MDX sources and 33 built files.
 - Static build: 26 pages.
 - Pagefind: 20 eligible pages, 20 indexed fragments, 1,300 words, 2 filters; all five known thin routes were absent from the fragment route set.
@@ -219,7 +224,7 @@ Pi validation passed:
 - `npm run qa:pi`: passed.
 - Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 26 pages.
-- Node tests: 44 passed, 0 failed.
+- Node tests: 46 passed, 0 failed.
 - Content lint: 25 MDX sources and 32 Pi-built files.
 - Artifact contracts: exact 26-route HTML set and 20 Pagefind-eligible routes passed; all five known thin routes were excluded.
 - Native Pagefind execution: skipped only after the platform guard passed; `dist/pagefind/pagefind.js` was absent as required for the validation-only Pi artifact.

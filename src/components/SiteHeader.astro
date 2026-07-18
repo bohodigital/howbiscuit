@@ -107,7 +107,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
 </dialog>
 
 <script>
-  import { createInitialModalState, reduceModalState } from '../lib/ui/modal-coordinator.mjs';
+  import { createInitialModalState, reduceModalState, resolveModalFocusReturnId } from '../lib/ui/modal-coordinator.mjs';
 
   const dialogs = new Map([
     ['mobile-navigation', document.querySelector<HTMLDialogElement>('#mobile-navigation-dialog')],
@@ -120,6 +120,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     closeReason?: string;
   }
   let modalState = createInitialModalState() as ModalViewState;
+  const desktopNavigationMedia = matchMedia('(min-width: 75.01rem)');
 
   function openModal(modalId: 'mobile-navigation' | 'search', trigger: HTMLElement) {
     const current = modalState.openModalId ? dialogs.get(modalState.openModalId) : null;
@@ -145,7 +146,10 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     modalState = reduceModalState(modalState, { type: 'close', reason });
     if (dialog?.open) dialog.close();
     document.body.classList.remove('hb-modal-open');
-    const focusTarget = returnFocus && modalState.focusTargetId ? document.getElementById(modalState.focusTargetId) : null;
+    const focusTargetId = modalState.focusTargetId
+      ? resolveModalFocusReturnId(modalState.focusTargetId, desktopNavigationMedia.matches)
+      : null;
+    const focusTarget = returnFocus && focusTargetId ? document.getElementById(focusTargetId) : null;
     if (focusTarget) window.requestAnimationFrame(() => focusTarget.focus());
   }
 
@@ -159,7 +163,6 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     dialog?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => closeModal('result')));
   });
 
-  const desktopNavigationMedia = matchMedia('(min-width: 75.01rem)');
   desktopNavigationMedia.addEventListener('change', ({ matches }) => {
     if (matches && modalState.openModalId === 'mobile-navigation') closeModal('replacement', false);
   });

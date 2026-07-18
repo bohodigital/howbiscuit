@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
 import {
+  assertValidProductEvidence,
   createPublicContentRegistry,
   isPublishableGuide,
   orderFeaturedContent,
@@ -74,6 +75,20 @@ const expectedArticleRoutes = [
   '/articles/why-are-some-answers-better-than-others/',
   '/articles/why-salt-melts-ice/',
 ];
+
+test('product evidence states reject contradictory runtime data', () => {
+  const core = { name: 'Evidence-backed example', description: 'A bounded component validation record.' };
+  assert.doesNotThrow(() => assertValidProductEvidence({ ...core, priceState: 'observed', price: '$10', observedAt: '2026-07-18', source: 'Example source' }));
+  assert.doesNotThrow(() => assertValidProductEvidence({ ...core, priceState: 'estimate', price: 'About $10', source: 'Example source' }));
+  assert.doesNotThrow(() => assertValidProductEvidence({ ...core, priceState: 'unavailable' }));
+  assert.throws(
+    () => assertValidProductEvidence({ ...core, priceState: 'estimate', price: '$10', observedAt: '2026-07-18', source: 'Example source' }),
+    /must not claim an observation date/i,
+  );
+  assert.throws(() => assertValidProductEvidence({ ...core, priceState: 'unavailable', price: '$10' }), /must not imply a price observation/i);
+  assert.throws(() => assertValidProductEvidence({ ...core, priceState: 'observed', price: '$10', source: 'Example source' }), /require price, observedAt, and source/i);
+  assert.throws(() => assertValidProductEvidence({ ...core, priceState: 'invented' }), /recognized price state/i);
+});
 
 test('target taxonomy is exact, unique, ordered, descriptive, and explicitly unimplemented', () => {
   assert.deepEqual(taxonomy.PUBLIC_CATEGORIES.map(({ id }) => id), [

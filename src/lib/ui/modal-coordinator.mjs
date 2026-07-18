@@ -5,6 +5,15 @@ export function createInitialModalState() {
   return Object.freeze({ openModalId: null, returnFocusId: null });
 }
 
+export function resolveModalFocusReturnId(requestedId, desktopNavigationActive) {
+  if (typeof requestedId !== 'string' || !requestedId) throw new Error('A focus-return target is required.');
+  if (typeof desktopNavigationActive !== 'boolean') throw new Error('Desktop-navigation state must be a boolean.');
+  if (requestedId === 'search-trigger' || requestedId === 'mobile-search-trigger') {
+    return desktopNavigationActive ? 'search-trigger' : 'mobile-search-trigger';
+  }
+  return requestedId;
+}
+
 export function reduceModalState(state, event) {
   if (!state || typeof state !== 'object') throw new Error('Modal state is required.');
   if (!event || typeof event !== 'object') throw new Error('A modal event is required.');

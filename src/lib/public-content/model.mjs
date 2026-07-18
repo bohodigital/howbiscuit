@@ -2,6 +2,38 @@ function asciiCompare(left, right) {
   return left < right ? -1 : left > right ? 1 : 0;
 }
 
+function isNonEmptyString(value) {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+export function assertValidProductEvidence(product) {
+  if (!product || typeof product !== 'object' || Array.isArray(product)) {
+    throw new Error('Product evidence must be an object.');
+  }
+  if (!isNonEmptyString(product.name) || !isNonEmptyString(product.description)) {
+    throw new Error('Product cards require a non-empty name and description.');
+  }
+  if (product.priceState === 'observed' || product.priceState === 'stale') {
+    if (!isNonEmptyString(product.price) || !isNonEmptyString(product.observedAt) || !isNonEmptyString(product.source)) {
+      throw new Error(`${product.priceState} product prices require price, observedAt, and source evidence.`);
+    }
+  } else if (product.priceState === 'estimate') {
+    if (!isNonEmptyString(product.price) || !isNonEmptyString(product.source)) {
+      throw new Error('Estimated product prices require price and source evidence.');
+    }
+    if (product.observedAt !== undefined) {
+      throw new Error('Estimated product prices must not claim an observation date.');
+    }
+  } else if (product.priceState === 'unavailable') {
+    if (product.price !== undefined || product.observedAt !== undefined) {
+      throw new Error('Unavailable products must not imply a price observation.');
+    }
+  } else {
+    throw new Error('Product cards require a recognized price state.');
+  }
+  return product;
+}
+
 function normalizeDate(value, field, route) {
   if (value === null || value === undefined || value === '') return null;
   const normalized = value instanceof Date

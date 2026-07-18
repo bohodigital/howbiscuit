@@ -198,8 +198,10 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 
 .hb-panic-strip { width: 100%; padding: 4rem max(2rem, calc((100% - 1160px) / 2)); background: var(--hb-ink); color: var(--hb-paper); }
 .hb-panic-strip > p { margin: 0 0 1.4rem; color: var(--hb-honey); font-size: 0.68rem; font-weight: 900; letter-spacing: 0.12em; }
+:root[data-theme='dark'] .hb-panic-strip > p { color: #142432; }
 .hb-panic-strip > div { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid color-mix(in srgb, var(--hb-paper), transparent 70%); }
 .hb-panic-strip a { min-height: 8rem; display: flex; flex-direction: column; justify-content: space-between; padding: 1.25rem; border-right: 1px solid color-mix(in srgb, var(--hb-paper), transparent 70%); color: var(--hb-paper); text-decoration: none; }
+.hb-panic-strip a:focus-visible { outline-color: var(--hb-paper); }
 .hb-panic-strip a:last-child { border-right: 0; }
 .hb-panic-strip a:hover { background: var(--hb-tomato); color: #142432; }
 .hb-panic-strip span { font-size: 1rem; font-weight: 850; }
@@ -249,6 +251,7 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-hub-title[data-division='research-writing'] { background: var(--hb-lilac); }
 .hb-hub-title[data-division='cook'] { background: var(--hb-tomato); }
 .hb-hub-title[data-division='home-tech'] { background: var(--hb-blue); color: #fff; }
+:root[data-theme='dark'] .hb-hub-title[data-division='home-tech'] { color: #142432; }
 .hb-hub-title[data-division='make-do'] { background: var(--hb-mint); }
 .hb-hub-title[data-division='tools'] { background: var(--hb-honey); }
 .hb-hub-title[data-division='articles'] { background: linear-gradient(135deg, var(--hb-lilac), var(--hb-tomato)); }
@@ -353,10 +356,11 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-latex-related > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
 .hb-latex-related a { position: relative; min-height: 6.5rem; display: flex; flex-direction: column; border: 1px solid #aaa49a; padding: 0.8rem; color: #222; font-family: var(--hb-font-sans); text-decoration: none; }
 .hb-latex-related a:hover { background: #fff2c7; color: #111; }
-.hb-latex-related a span { color: #777; font-size: 0.6rem; font-weight: 850; letter-spacing: 0.05em; text-transform: uppercase; }
+.hb-latex-related a span { color: #666; font-size: 0.6rem; font-weight: 850; letter-spacing: 0.05em; text-transform: uppercase; }
 .hb-latex-related a strong { max-width: 18ch; margin-top: auto; font-size: 0.82rem; line-height: 1.3; }
 .hb-latex-related a i { position: absolute; right: 0.8rem; bottom: 0.65rem; }
 :root[data-theme='dark'] .hb-latex-paper { border-color: #555; background: #f6f2e8; box-shadow: 0 1.2rem 3rem rgb(0 0 0 / 35%); color: #202020; }
+:root[data-theme='dark'] .hb-latex-paper a:focus-visible { outline-color: #315ee8; }
 
 .hb-answer-stack { position: relative; margin: 1rem 0 4rem; border: 2px solid var(--hb-ink); border-radius: 0.9rem; padding: 1.6rem 1.8rem 1.7rem; background: var(--hb-honey); color: #142432; box-shadow: var(--hb-shadow); }
 .hb-answer-stack > span { display: inline-block; margin-bottom: 0.7rem; font-size: 0.65rem; font-weight: 950; letter-spacing: 0.1em; text-transform: uppercase; }

@@ -142,6 +142,8 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
   const base = read('src/layouts/BaseLayout.astro');
   const productCard = read('src/components/ProductCard.astro');
   const productShelf = read('src/components/ProductShelf.astro');
+  const publicModel = read('src/lib/public-content/model.mjs');
+  const priceStatusBadge = read('src/components/PriceStatusBadge.astro');
   const articleMeta = read('src/components/ArticleMeta.astro');
 
   assert.ok(contrastRatio('#b43a22', '#fff8e7') >= 4.5, 'light tomato foreground must meet WCAG AA');
@@ -149,9 +151,23 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
   assert.ok(contrastRatio('#142432', '#ef6547') >= 4.5, 'light panic-strip hover must meet WCAG AA');
   assert.ok(contrastRatio('#142432', '#ff7759') >= 4.5, 'dark panic-strip hover must meet WCAG AA');
   assert.ok(contrastRatio('#142432', '#ffd05b') >= 4.5, 'dark honey hover foreground must meet WCAG AA');
+  assert.ok(contrastRatio('#ffffff', '#315ee8') >= 4.5, 'light Home Tech title foreground must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#7190ff') >= 4.5, 'dark Home Tech title foreground must meet WCAG AA');
+  assert.ok(contrastRatio('#f7c94b', '#142432') >= 4.5, 'light panic-strip label must meet WCAG AA');
+  assert.ok(contrastRatio('#142432', '#fff7e5') >= 4.5, 'dark panic-strip label must meet WCAG AA');
+  assert.ok(contrastRatio('#fff8e7', '#142432') >= 3, 'light panic-strip focus indicator must meet WCAG non-text contrast');
+  assert.ok(contrastRatio('#111b23', '#fff7e5') >= 3, 'dark panic-strip focus indicator must meet WCAG non-text contrast');
+  assert.ok(contrastRatio('#315ee8', '#f6f2e8') >= 3, 'dark LaTeX-paper focus indicator must meet WCAG non-text contrast');
+  assert.ok(contrastRatio('#666666', '#fffefb') >= 4.5, 'LaTeX related label must meet WCAG AA on paper');
+  assert.ok(contrastRatio('#666666', '#fff2c7') >= 4.5, 'LaTeX related label must meet WCAG AA on hover');
   assert.match(biscuitCss, /--hb-tomato-text:\s*#b43a22/);
   assert.match(biscuitCss, /\.hb-panic-strip a:hover\s*\{[^}]*background:\s*var\(--hb-tomato\);[^}]*color:\s*#142432;/);
   assert.match(biscuitCss, /\.hb-topic-directory a:hover p\s*\{\s*color:\s*#142432;/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-hub-title\[data-division='home-tech'\]\s*\{\s*color:\s*#142432;/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-panic-strip > p\s*\{\s*color:\s*#142432;/);
+  assert.match(biscuitCss, /\.hb-panic-strip a:focus-visible\s*\{\s*outline-color:\s*var\(--hb-paper\)/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-latex-paper a:focus-visible\s*\{\s*outline-color:\s*#315ee8/);
+  assert.match(biscuitCss, /\.hb-latex-related a span\s*\{\s*color:\s*#666/);
   assert.match(shellCss, /\.hb-menu-guides a:hover small\s*\{\s*color:\s*#142432;/);
   assert.doesNotMatch(shellCss, /\.hb-article-toc[^{}]*grid-row:\s*1/);
   assert.match(base, /document\.documentElement\.classList\.add\('js'\)/);
@@ -163,8 +179,11 @@ test('reviewed accessibility and evidence contracts fail closed in source', () =
     assert.match(component, /priceState: 'estimate'; price: string; observedAt\?: never; source: string/);
     assert.match(component, /priceState: 'unavailable'; price\?: never; observedAt\?: never/);
   }
-  assert.match(productCard, /require price, observedAt, and source evidence/);
-  assert.match(productCard, /Unavailable products must not imply a price observation/);
+  assert.match(productCard, /assertValidProductEvidence\(product\)/);
+  assert.match(productCard, /product\.priceState === 'observed' \|\| product\.priceState === 'stale'[\s\S]*observedAt=\{product\.observedAt\}[\s\S]*<PriceStatusBadge state=\{product\.priceState\} \/>/);
+  assert.match(publicModel, /Estimated product prices must not claim an observation date/);
+  assert.match(publicModel, /Unavailable products must not imply a price observation/);
+  assert.match(priceStatusBadge, /estimate' \| 'unavailable'; observedAt\?: never/);
 });
 
 test('the built artifact has the exact accepted routes, per-page metadata, tracker counts, and H1 counts', () => {

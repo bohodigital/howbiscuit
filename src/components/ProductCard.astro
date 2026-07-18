@@ -1,5 +1,6 @@
 ---
 import PriceStatusBadge from './PriceStatusBadge.astro';
+import { assertValidProductEvidence } from '../lib/public-content/model.mjs';
 interface ProductCore {
   name: string;
   description: string;
@@ -12,30 +13,16 @@ type Product = ProductCore & (
 );
 interface Props { product: Product }
 const { product } = Astro.props;
-
-const isNonEmpty = (value: unknown): value is string => typeof value === 'string' && value.trim().length > 0;
-if (!isNonEmpty(product.name) || !isNonEmpty(product.description)) {
-  throw new Error('Product cards require a non-empty name and description.');
-}
-if (product.priceState === 'observed' || product.priceState === 'stale') {
-  if (!isNonEmpty(product.price) || !isNonEmpty(product.observedAt) || !isNonEmpty(product.source)) {
-    throw new Error(`${product.priceState} product prices require price, observedAt, and source evidence.`);
-  }
-} else if (product.priceState === 'estimate') {
-  if (!isNonEmpty(product.price) || !isNonEmpty(product.source)) {
-    throw new Error('Estimated product prices require price and source evidence.');
-  }
-} else if (product.priceState === 'unavailable') {
-  if (product.price !== undefined || product.observedAt !== undefined) {
-    throw new Error('Unavailable products must not imply a price observation.');
-  }
-} else {
-  throw new Error('Product cards require a recognized price state.');
-}
+assertValidProductEvidence(product);
 ---
 <article class="hb-product-card">
   <h3>{product.href ? <a href={product.href}>{product.name}</a> : product.name}</h3>
   <p>{product.description}</p>
-  <div>{product.price && <strong>{product.price}</strong>}<PriceStatusBadge state={product.priceState} observedAt={product.observedAt} /></div>
+  <div>
+    {product.price && <strong>{product.price}</strong>}
+    {product.priceState === 'observed' || product.priceState === 'stale'
+      ? <PriceStatusBadge state={product.priceState} observedAt={product.observedAt} />
+      : <PriceStatusBadge state={product.priceState} />}
+  </div>
   {product.source && <small>Source: {product.source}</small>}
 </article>
