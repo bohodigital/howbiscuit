@@ -14,6 +14,8 @@ Documentation candidate transferred to Pi: `433c8a23b0f34b31fb5c6c16ca62ab839d99
 
 Blocking-review reconciliation candidate validated on Pi: `d3bcea21a983e4fb4fbe9dd731f2d55b6583446c`
 
+Post-review route-boundary and contrast correction validated on Pi: `253f1d23921048bffee71c56108cb489ea233b79`
+
 ## Phase boundary and status
 
 Phase B replaces Starlight's public rendering and shell responsibilities with a custom Astro implementation. This document describes an implementation candidate; it is not by itself an acceptance decision or production release.
@@ -179,7 +181,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 
 - LaTeX compilation: passed for one canonical article.
 - Contract-scoped TypeScript: passed.
-- Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
+- Astro diagnostics: 74 files, 0 errors, 0 warnings, 0 hints.
 - Node tests: 44 passed, 0 failed.
 - Content lint: passed for 25 MDX sources and 33 built files.
 - Static build: 26 pages.
@@ -206,7 +208,7 @@ Fresh-context OpenAI/Codex re-reviews of the exact reconciled completion candida
 
 ### Raspberry Pi
 
-The reconciliation candidate `d3bcea21a983e4fb4fbe9dd731f2d55b6583446c` was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`.
+The post-review correction candidate `253f1d23921048bffee71c56108cb489ea233b79` was transferred through `/srv/local1/git/howbiscuit-site.git` and fast-forwarded into the clean worktree at `/srv/local1/worktrees/howbiscuit-h1-b-custom-astro-shell`. `main` remained at `99732e1c494e468df92fab22ed71c7da4ead39c5`.
 
 Pi validation passed:
 
@@ -214,7 +216,7 @@ Pi validation passed:
 - Runtime: Node `v24.18.0`, npm `11.16.0`.
 - `npm ci`: passed; the same six audit findings were reported.
 - `npm run qa:pi`: passed.
-- Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
+- Astro diagnostics: 74 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 26 pages.
 - Node tests: 44 passed, 0 failed.
 - Content lint: 25 MDX sources and 32 Pi-built files.
