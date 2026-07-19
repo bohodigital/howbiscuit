@@ -5,7 +5,8 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
-import { createPublicSiteRegistry } from '../src/lib/public-content/model.mjs';
+import { createPublicSiteRegistry, isPublishablePublicRecord } from '../src/lib/public-content/model.mjs';
+import { pagefindMetadataForRecord } from '../src/lib/public-content/pagefind-policy.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -16,7 +17,8 @@ const publicRegistry = createPublicSiteRegistry({
   sources: discoverTrackedPublicSources(root, { taxonomy }),
   taxonomy,
 });
-const PHASE_C_DOCUMENT_ROUTES = publicRegistry.map(({ route }) => route);
+const publishableRegistry = publicRegistry.filter(isPublishablePublicRecord);
+const PHASE_C_DOCUMENT_ROUTES = publishableRegistry.map(({ route }) => route);
 const RETIRED_DOCUMENT_ROUTES = taxonomy.TARGET_ROUTE_CONTRACTS
   .filter(({ route, outcome }) => !route.includes('*') && ['redirect', 'terminal'].includes(outcome))
   .map(({ route }) => route);
@@ -44,6 +46,10 @@ function jsonLd(html) {
   return JSON.parse(match[1]);
 }
 
+function htmlText(value) {
+  return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+}
+
 const pages = new Map(collectHtml(dist).map((file) => [routeFor(file), readFileSync(file, 'utf8')]));
 
 test('built artifact contains exactly the active Phase C routes plus the custom 404', () => {
@@ -60,6 +66,26 @@ test('built artifact contains exactly the active Phase C routes plus the custom 
     });
     assert.match(html, new RegExp('href="https://howbiscuit\\.com' + route.replaceAll('/', '\\/') + '"'));
   }
+});
+
+test('built article semantics and public Pagefind labels match the normalized registry', () => {
+  for (const record of publishableRegistry) {
+    const html = pages.get(record.route);
+    const expected = pagefindMetadataForRecord(record, taxonomy);
+    assert.match(html, new RegExp(`data-pagefind-filter="category">${htmlText(expected.filters.category)}<`), record.route);
+    assert.match(html, new RegExp(`data-pagefind-filter="type">${htmlText(expected.filters.type)}<`), record.route);
+  }
+  const salt = pages.get('/articles/why-salt-melts-ice/');
+  assert.equal((salt.match(/<article\b/g) ?? []).length, 1);
+  assert.equal((salt.match(/<h1\b/g) ?? []).length, 1);
+  assert.match(salt, /<div class="hb-latex-paper"/);
+  assert.ok(salt.indexOf('<h1') < salt.indexOf('<p class="hb-direct-answer"'));
+  assert.ok(salt.indexOf('<p class="hb-direct-answer"') < salt.indexOf('<nav class="hb-latex-outline"'));
+  assert.ok(salt.indexOf('<nav class="hb-latex-outline"') < salt.indexOf('<div class="hb-latex-paper"'));
+  const breadcrumb = jsonLd(salt).find((entry) => entry['@type'] === 'BreadcrumbList');
+  const topicCrumb = breadcrumb.itemListElement.find((item) => item.name === 'Heating & Cooling');
+  assert.equal(topicCrumb.item, 'https://howbiscuit.com/home/#topic-heating-cooling');
+  assert.doesNotMatch(pages.get('/tools/'), /href="\/tools\/">View the Tools category/);
 });
 
 test('homepage uses registry-driven sections in the governed conceptual order', () => {

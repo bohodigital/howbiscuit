@@ -30,6 +30,8 @@ test('compiles canonical Phase C metadata and accessible math without duplicatin
     '/articles/why-are-some-answers-better-than-others/',
   ]);
   assert.match(article.html, /class="hb-latex-paper"/);
+  assert.match(article.html, /^<div class="hb-latex-paper"/);
+  assert.doesNotMatch(article.html, /<article\b|<h1\b/);
   assert.match(article.html, /class="katex-mathml"/);
   assert.match(article.html, /id="the-short-answer"/);
   assert.match(article.html, /aria-label="Equation 1"/);

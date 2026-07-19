@@ -11,14 +11,17 @@ import {
   createPublicContentRegistry,
   createPublicSiteRegistry,
   isPublishableGuide,
+  isPublishablePublicRecord,
   orderFeaturedContent,
   orderHomepageContent,
   orderLatestContent,
   selectRelatedContent,
   topicMigrationDestinationForRegistry,
+  topicNavigationDestinationForRegistry,
   topicPublicationModeForRegistry,
 } from '../src/lib/public-content/model.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
+import { createPublicPageCatalog } from '../src/lib/public-content/site-registry.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src/config/public-taxonomy.ts'));
@@ -224,6 +227,36 @@ test('one normalized public registry owns every document and eligibility decisio
   assert.equal(privacy.provenance.eligibility, 'normalized-source-state');
 });
 
+test('runtime route eligibility fails closed for every nonpublishable state', () => {
+  const record = publicRegistry.find(({ route }) => route === '/articles/why-salt-melts-ice/');
+  assert.equal(isPublishablePublicRecord(record), true);
+  for (const excluded of [
+    { draft: true, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { preview: true, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { thin: true, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { redirectState: { to: '/home/' }, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { retirementState: { allowedStatuses: [404, 410] }, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+  ]) {
+    assert.equal(isPublishablePublicRecord({ ...record, ...excluded }), false);
+  }
+  const draftRecord = {
+    ...record,
+    route: '/articles/draft-probe/',
+    draft: true,
+    searchEligible: false,
+    sitemapEligible: false,
+    llmsEligible: false,
+  };
+  const catalog = createPublicPageCatalog([
+    { id: 'articles/why-salt-melts-ice.mdx', data: { kind: 'article' } },
+    { id: 'articles/draft-probe.mdx', data: { kind: 'article' } },
+  ], { publicRegistry: [record, draftRecord] });
+  assert.deepEqual(catalog.map(({ route }) => route), ['/articles/why-salt-melts-ice/']);
+  const routeSource = readFileSync(path.join(root, 'src/pages/[...slug].astro'), 'utf8');
+  assert.match(routeSource, /return createPublicPageCatalog\(entries, siteData\)\.map/);
+  assert.doesNotMatch(routeSource, /const pages[^=]*= entries\.map/);
+});
+
 test('current data exposes only two category filters and no standalone topic pages', () => {
   assert.equal(topicPublicationModeForRegistry({ registry, categoryId: 'home', topicId: 'heating-cooling', taxonomy }), 'filter');
   assert.equal(topicPublicationModeForRegistry({ registry, categoryId: 'kitchen', topicId: 'food-science', taxonomy }), 'filter');
@@ -242,6 +275,18 @@ test('current data exposes only two category filters and no standalone topic pag
   }]), registry);
   assert.equal(topicMigrationDestinationForRegistry({
     legacyRef: 'home-tech/streaming-tvs', registry: withThreeStreamingGuides, taxonomy,
+  }), '/home-tech/tvs-streaming/');
+  assert.equal(topicNavigationDestinationForRegistry({
+    registry,
+    categoryId: 'home',
+    topicId: 'heating-cooling',
+    taxonomy,
+  }), '/home/#topic-heating-cooling');
+  assert.equal(topicNavigationDestinationForRegistry({
+    registry: withThreeStreamingGuides,
+    categoryId: 'home-tech',
+    topicId: 'tvs-streaming',
+    taxonomy,
   }), '/home-tech/tvs-streaming/');
 });
 

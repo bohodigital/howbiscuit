@@ -703,20 +703,18 @@ function assertNoForbiddenCommands(source, sourcePath) {
 }
 
 function articleHtml(metadata, parsed) {
-  const title = renderInline(metadata.title, '').html;
   const author = renderInline(metadata.author, '').html;
   const date = renderInline(metadata.displayDate, '').html;
   return [
-    '<article class="hb-latex-paper" data-article-format="latex">',
+    '<div class="hb-latex-paper" data-article-format="latex">',
     '  <header class="hb-latex-masthead">',
     '    <p class="hb-latex-kicker">How Biscuit field paper</p>',
-    `    <h1 data-pagefind-meta="title">${title}</h1>`,
     `    <p class="hb-latex-author">${author}</p>`,
     `    <p class="hb-latex-date">${date}</p>`,
     `    <section class="hb-latex-abstract" aria-labelledby="latex-abstract"><h2 id="latex-abstract">Abstract</h2>${parsed.abstractHtml}</section>`,
     '  </header>',
     `  <div class="hb-latex-copy">${parsed.bodyHtml}</div>`,
-    '</article>',
+    '</div>',
   ].join('\n');
 }
 

@@ -25,6 +25,8 @@ const publishable = {
   categoryId: 'home',
   articleType: 'guide',
   searchEligible: true,
+  sitemapEligible: true,
+  llmsEligible: true,
   draft: false,
   preview: false,
   thin: false,
@@ -33,31 +35,37 @@ const publishable = {
 };
 
 test('eligible records receive complete Pagefind metadata', () => {
-  assert.deepEqual(pagefindMetadataForRecord(publishable), {
+  assert.deepEqual(pagefindMetadataForRecord(publishable, taxonomy), {
     include: true,
-    filters: { category: 'home', type: 'guide' },
+    filters: { category: 'Home & Apartment', type: 'Guide' },
     meta: {
       title: publishable.title,
       description: publishable.description,
       route: publishable.route,
     },
   });
-  assert.deepEqual(pagefindAttributesForPage({ searchEligible: true }), { 'data-pagefind-body': '' });
+  assert.deepEqual(pagefindAttributesForPage(publishable), { 'data-pagefind-body': '' });
 });
 
 test('draft, preview, thin, redirected, and retired records are excluded fail closed', () => {
   for (const exclusion of [
-    { draft: true, searchEligible: false },
-    { preview: true, searchEligible: false },
-    { thin: true, searchEligible: false },
-    { redirectState: { to: '/elsewhere/' }, searchEligible: false },
-    { retirementState: { allowedStatuses: [404, 410] }, searchEligible: false },
+    { draft: true, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { preview: true, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { thin: true, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { redirectState: { to: '/elsewhere/' }, searchEligible: false, sitemapEligible: false, llmsEligible: false },
+    { retirementState: { allowedStatuses: [404, 410] }, searchEligible: false, sitemapEligible: false, llmsEligible: false },
   ]) {
     const record = { ...publishable, ...exclusion };
-    assert.deepEqual(pagefindMetadataForRecord(record), { include: false });
+    assert.deepEqual(pagefindMetadataForRecord(record, taxonomy), { include: false });
     assert.deepEqual(pagefindAttributesForPage(record), { 'data-pagefind-ignore': 'all' });
   }
-  assert.throws(() => pagefindMetadataForRecord({ ...publishable, draft: true }), /contradictory Pagefind eligibility/i);
+  assert.throws(() => pagefindMetadataForRecord({ ...publishable, draft: true }, taxonomy), /contradictory Pagefind eligibility/i);
+  assert.throws(() => pagefindMetadataForRecord({ ...publishable, sitemapEligible: false }, taxonomy), /contradictory Pagefind eligibility/i);
+});
+
+test('eligible Pagefind records fail closed on internal category or content-type identifiers', () => {
+  assert.throws(() => pagefindMetadataForRecord({ ...publishable, categoryId: 'internal-only' }, taxonomy), /Unknown Pagefind category/);
+  assert.throws(() => pagefindMetadataForRecord({ ...publishable, articleType: 'internal-only' }, taxonomy), /Unknown Pagefind content type/);
 });
 
 test('the normalized registry owns active routes and stays disjoint from inactive route contracts', () => {

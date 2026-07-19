@@ -5,7 +5,7 @@ import EvidenceBadge from '../components/EvidenceBadge.astro';
 import RelatedShelf from '../components/RelatedShelf.astro';
 import SourceNotes from '../components/SourceNotes.astro';
 import TestingBadge from '../components/TestingBadge.astro';
-import { selectRelatedContent } from '../lib/public-content/model.mjs';
+import { selectRelatedContent, topicNavigationDestinationForRegistry } from '../lib/public-content/model.mjs';
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
 import BaseLayout from './BaseLayout.astro';
 
@@ -41,7 +41,11 @@ const { title, description, canonical, record, headings = [] } = Astro.props;
 interface TaxonomyTopic { id: string; label: string }
 interface TaxonomyCategory { id: string; label: string; route: string; topics: readonly TaxonomyTopic[] }
 const { taxonomy, registry } = getPublicSiteData() as {
-  taxonomy: { PUBLIC_CATEGORIES: readonly TaxonomyCategory[] };
+  taxonomy: {
+    PUBLIC_CATEGORIES: readonly TaxonomyCategory[];
+    hasTargetTopic: (categoryId: string, topicId: string) => boolean;
+    topicPublicationMode: (count: number) => 'hidden' | 'filter' | 'standalone';
+  };
   registry: readonly ArticleRecord[];
 };
 const category = record.categoryId ? taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === record.categoryId) : null;
@@ -49,10 +53,18 @@ const topic = category?.topics.find(({ id }) => id === record.topicId) ?? null;
 const categoryLabel = category?.label ?? 'Editorial standard';
 const articleTypeLabel = record.articleType === 'editorial-standard' ? 'Editorial standard' : 'Guide';
 const outline = headings.filter(({ depth }) => depth === 2 || depth === 3);
+const topicHref = category && topic
+  ? topicNavigationDestinationForRegistry({
+      registry,
+      categoryId: category.id,
+      topicId: topic.id,
+      taxonomy,
+    })
+  : null;
 const breadcrumbItems = [
   { label: 'Home', href: '/' },
   ...(category ? [{ label: category.label, href: category.route }] : [{ label: 'All Guides', href: '/articles/' }]),
-  ...(topic ? [{ label: topic.label, href: category?.route + '#topic-' + topic.id }] : []),
+  ...(topic && topicHref ? [{ label: topic.label, href: topicHref }] : []),
   { label: title },
 ];
 const site = Astro.site ?? new URL('https://howbiscuit.com');
@@ -107,7 +119,7 @@ const testingLabels: Record<string, string> = {
         {topic && <span>{topic.label}</span>}
         <span>{articleTypeLabel}</span>
       </div>
-      {record.articleFormat !== 'latex' && <h1>{title}</h1>}
+      <h1>{title}</h1>
       <p class="hb-direct-answer">{record.answerSummary}</p>
       <div class="hb-article-meta">
         {formattedDate && <span>{dateLabel} <time datetime={date ?? undefined}>{formattedDate}</time></span>}

@@ -59,13 +59,14 @@ const structuredData = [
   ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [pageSchema]),
 ];
 const pagefindRoute = new URL(canonical, site).pathname;
+const publicSiteData = getPublicSiteData();
 const pagefindRecord = searchEligible
-  ? getPublicSiteData().publicRegistry.find((record: { route: string }) => record.route === pagefindRoute)
+  ? publicSiteData.publicRegistry.find((record: { route: string }) => record.route === pagefindRoute)
   : null;
 if (searchEligible && !pagefindRecord) {
   throw new Error(`Pagefind-eligible route is missing from the normalized public registry: ${pagefindRoute}`);
 }
-const pagefindMetadata = pagefindMetadataForRecord(pagefindRecord ?? { searchEligible: false });
+const pagefindMetadata = pagefindMetadataForRecord(pagefindRecord ?? { searchEligible: false }, publicSiteData.taxonomy);
 const pagefindAttributes = pagefindAttributesForPage(pagefindRecord ?? { searchEligible: false });
 ---
 

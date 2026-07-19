@@ -30,7 +30,7 @@ interface RegistryRecord {
 }
 interface PublicRecord {
   kind: string; route: string; title: string; description: string;
-  categoryId: string | null; searchEligible: boolean;
+  categoryId: string | null; topicId: string | null; searchEligible: boolean;
 }
 interface TopicView {
   id: string; route: string; label: string; description: string; mode: 'filter' | 'standalone';
@@ -49,27 +49,29 @@ interface SiteData {
 export async function getStaticPaths() {
   const entries = await getCollection('docs');
   const siteData = getPublicSiteData() as SiteData;
-  createPublicPageCatalog(entries, siteData);
-  const pages: Array<{ params: { slug: string | undefined }; props: PageProps }> = entries.map((entry) => {
-    const route = routeFromEntryId(entry.id);
-    return {
-      params: { slug: route.slice(1, -1) || undefined },
-      props: { entry, route },
-    };
-  });
-  const { categoryViews } = siteData;
-  for (const category of categoryViews) {
-    for (const topic of category.topics.filter(({ mode }) => mode === 'standalone')) {
-      pages.push({
-        params: { slug: topic.route.slice(1, -1) },
+  const entryByRoute = new Map(entries.map((entry) => [routeFromEntryId(entry.id), entry]));
+  return createPublicPageCatalog(entries, siteData).map((record: PublicRecord) => {
+    if (record.kind === 'topic') {
+      const category = siteData.categoryViews.find(({ id }) => id === record.categoryId);
+      const topic = category?.topics.find(({ id, route }) => id === record.topicId && route === record.route);
+      if (!category || !topic || topic.mode !== 'standalone') {
+        throw new Error('Generated topic route is missing its standalone category view: ' + record.route);
+      }
+      return {
+        params: { slug: record.route.slice(1, -1) },
         props: {
-          route: topic.route,
+          route: record.route,
           topic: { categoryId: category.id, id: topic.id, label: topic.label, description: topic.description },
         },
-      });
+      };
     }
-  }
-  return pages;
+    const entry = entryByRoute.get(record.route);
+    if (!entry) throw new Error('Publishable public record has no content entry: ' + record.route);
+    return {
+      params: { slug: record.route.slice(1, -1) || undefined },
+      props: { entry, route: record.route },
+    };
+  });
 }
 
 const page = Astro.props as PageProps;
@@ -167,7 +169,7 @@ const categoryAccent = categoryView?.id === 'home'
 
     <section aria-labelledby="category-tools-title">
       <h2 id="category-tools-title">Relevant tools</h2>
-      <EmptyState title="No approved tool is attached to this category" message="Calculators, converters, checklists, and price tools appear here only after a real route and transparent method exist." actionHref="/tools/" actionLabel="View the Tools category" />
+      <EmptyState title="No approved tool is attached to this category" message="Calculators, converters, checklists, and price tools appear here only after a real route and transparent method exist." actionHref={categoryView.id === 'tools' ? '/articles/' : '/tools/'} actionLabel={categoryView.id === 'tools' ? 'Browse All Guides' : 'View the Tools category'} />
     </section>
 
     {categoryView.id === 'shop' && (

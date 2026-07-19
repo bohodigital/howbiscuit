@@ -371,10 +371,9 @@ export function createPublicDocumentRegistry({ sources, taxonomy }) {
   return Object.freeze(registry);
 }
 
-export function isPublishableGuide(content) {
-  return content.articleType === 'guide'
-    && content.categoryId !== null
-    && content.topicId !== null
+export function isPublishablePublicRecord(content) {
+  return content !== null
+    && typeof content === 'object'
     && content.draft !== true
     && content.preview !== true
     && content.thin !== true
@@ -383,6 +382,13 @@ export function isPublishableGuide(content) {
     && content.searchEligible === true
     && content.sitemapEligible === true
     && content.llmsEligible === true;
+}
+
+export function isPublishableGuide(content) {
+  return content.articleType === 'guide'
+    && content.categoryId !== null
+    && content.topicId !== null
+    && isPublishablePublicRecord(content);
 }
 
 export function topicPublicationModeForRegistry({ registry, categoryId, topicId, taxonomy }) {
@@ -395,6 +401,17 @@ export function topicPublicationModeForRegistry({ registry, categoryId, topicId,
     && content.topicId === topicId
   )).length;
   return taxonomy.topicPublicationMode(count);
+}
+
+export function topicNavigationDestinationForRegistry({ registry, categoryId, topicId, taxonomy }) {
+  if (!taxonomy.hasTargetTopic(categoryId, topicId)) {
+    throw new Error(`Unknown topic ${categoryId}/${topicId}`);
+  }
+  const category = taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === categoryId);
+  const topic = category?.topics.find(({ id }) => id === topicId);
+  if (!category || !topic) throw new Error(`Incomplete canonical topic: ${categoryId}/${topicId}`);
+  const mode = topicPublicationModeForRegistry({ registry, categoryId, topicId, taxonomy });
+  return mode === 'standalone' ? topic.route : `${category.route}#topic-${topic.id}`;
 }
 
 export function topicMigrationDestinationForRegistry({ legacyRef, registry, taxonomy }) {

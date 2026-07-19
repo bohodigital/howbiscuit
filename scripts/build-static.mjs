@@ -11,7 +11,7 @@ import {
   assertPiPagefindSkipAllowed,
 } from './lib/pagefind-platform-policy.mjs';
 import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
-import { createPublicSiteRegistry } from '../src/lib/public-content/model.mjs';
+import { createPublicSiteRegistry, isPublishablePublicRecord } from '../src/lib/public-content/model.mjs';
 import { pagefindMetadataForRecord } from '../src/lib/public-content/pagefind-policy.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
@@ -152,7 +152,7 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
     routeFromHtml(filePath, artifactRoot),
     readFileSync(filePath, 'utf8'),
   ]));
-  const acceptedRecords = normalizedPublicRegistry.filter(({ searchEligible }) => searchEligible === true);
+  const acceptedRecords = normalizedPublicRegistry.filter(isPublishablePublicRecord);
   const acceptedRoutes = new Set(acceptedRecords.map(({ route }) => route));
   const expectedHtmlRoutes = new Set([...acceptedRoutes, '/404.html']);
   assertSetsEqual(expectedHtmlRoutes, new Set(htmlByRoute.keys()), `${label} HTML route set`);
@@ -216,7 +216,7 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   invariant(fragmentByRoute.size === fragments.length, `${label} has duplicate Pagefind route fragments.`);
   assertSetsEqual(eligibleRoutes, indexedRoutes, `${label} indexed Pagefind route set`);
   for (const record of acceptedRecords) {
-    const expected = pagefindMetadataForRecord(record);
+    const expected = pagefindMetadataForRecord(record, taxonomy);
     const payload = fragmentByRoute.get(record.route);
     invariant(payload, `${label} has no Pagefind fragment for ${record.route}.`);
     invariant(

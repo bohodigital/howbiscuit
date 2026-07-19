@@ -194,7 +194,7 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - Native Pagefind remains unavailable on the Pi ARM64/16 KiB environment. The Pi validation artifact must omit Pagefind only after the platform guard passes. Every release artifact still requires the full x64 Pagefind build.
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
-- The pinned lockfile is unchanged. A fresh npm 11.7.0 audit on 2026-07-18 reported ten inherited findings (three low, five moderate, and two high); no forced audit rewrite or unrelated dependency change was applied in Phase C.
+- Phase C intentionally removed `@astrojs/sitemap` and its lockfile entries. Subsequent exact `npm ci` runs did not mutate the candidate lockfile. A fresh npm 11.7.0 audit on 2026-07-18 reported ten inherited findings (three low, five moderate, and two high); no forced audit rewrite or unrelated dependency change was applied in Phase C.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 - The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 

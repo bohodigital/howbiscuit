@@ -3,6 +3,7 @@ import { buildPublicNavigation } from './public-navigation.mjs';
 import {
   createPublicSiteRegistry,
   isPublishableGuide,
+  isPublishablePublicRecord,
   orderFeaturedContent,
   orderLatestContent,
   topicPublicationModeForRegistry,
@@ -53,7 +54,9 @@ export function getPublicSiteData(root = process.cwd()) {
     sources: discoverTrackedPublicSources(root, { taxonomy }),
     taxonomy,
   });
-  const registry = Object.freeze(publicRegistry.filter(({ kind }) => kind === 'article'));
+  const registry = Object.freeze(publicRegistry.filter((record) => (
+    record.kind === 'article' && isPublishablePublicRecord(record)
+  )));
   const categoryViews = buildCategoryViews(registry);
   cachedRoot = root;
   cachedValue = Object.freeze({
@@ -90,7 +93,7 @@ export function createPublicPageCatalog(entries, siteData = getPublicSiteData())
       throw new Error(`Generated topic route collides with a content entry: ${record.route}`);
     }
   }
-  return siteData.publicRegistry;
+  return Object.freeze(siteData.publicRegistry.filter(isPublishablePublicRecord));
 }
 
 export { routeFromEntryId };
