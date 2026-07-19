@@ -113,6 +113,10 @@ test('normal build and QA lanes run the explicit Pagefind build and reject skip 
   assert.match(buildScript, /assertSetsEqual\(new Set\(articleRoutes\), feedRoutes/);
   assert.match(buildScript, /assertSetsEqual\(expectedEligibleRoutes, llmsRoutes/);
   assert.match(buildScript, /_headers differs byte-for-byte/);
+  assert.match(buildScript, /writeProductionPagesWorker/);
+  assert.match(buildScript, /_worker\.js/);
+  assert.match(buildScript, /production Cloudflare Pages Worker/);
+  assert.match(buildScript, /must not expose the production _worker\.js as a client asset/);
 
   assert.doesNotThrow(() => assertFullPagefindLane({ skipRequested: false, lane: 'build' }));
   assert.throws(
@@ -137,9 +141,11 @@ test('the Pagefind skip is restricted to Linux ARM64 with a 16 KiB page size', (
   }
 });
 
-test('the Sites worker owns host and legacy redirects before delegating static assets', async () => {
+test('the production Pages and Sites worker owns host and legacy redirects before delegating static assets', async () => {
   const redirectSource = readFileSync(path.join(root, 'public', '_redirects'), 'utf8');
+  const headerSource = readFileSync(path.join(root, 'public', '_headers'), 'utf8');
   const rules = taxonomy.parseSitesRedirectRules(redirectSource);
+  const securityHeaders = taxonomy.parseWorkerSecurityHeaders(headerSource);
   assert.throws(
     () => taxonomy.parseSitesRedirectRules('https://www.howbiscuit.com/* /home/ 301'),
     /root-relative path/i,
@@ -156,7 +162,16 @@ test('the Sites worker owns host and legacy redirects before delegating static a
     () => taxonomy.parseSitesRedirectRules('/legacy/* /home/ 302'),
     /permanent 301/i,
   );
-  const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
+  assert.deepEqual(securityHeaders, [
+    { name: 'X-Content-Type-Options', value: 'nosniff' },
+    { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+    { name: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+  ]);
+  assert.throws(() => taxonomy.parseWorkerSecurityHeaders('/private/*\n  X-Test: value'), /one global/);
+  assert.throws(() => taxonomy.parseWorkerSecurityHeaders('/*\nX-Test: value'), /indented/);
+  assert.throws(() => taxonomy.parseWorkerSecurityHeaders('/*\n  X-Test: one\n  x-test: two'), /duplicated/);
+  const workerSource = taxonomy.buildSitesWorkerSource(redirectSource, headerSource);
+  assert.equal(readFileSync(path.join(root, 'dist', '_worker.js'), 'utf8'), workerSource);
   const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
   const assetRequests = [];
   const env = {
@@ -172,9 +187,11 @@ test('the Sites worker owns host and legacy redirects before delegating static a
     const response = await workerModule.default.fetch(new Request(requestUrl), env);
     assert.equal(response.status, 301, requestUrl);
     assert.equal(response.headers.get('location'), expectedLocation, requestUrl);
+    for (const { name, value } of securityHeaders) assert.equal(response.headers.get(name), value, `${requestUrl} ${name}`);
     const follow = await workerModule.default.fetch(new Request(expectedLocation), env);
     assert.equal(follow.status, 200, `${requestUrl} must reach an asset after one redirect`);
     assert.equal(follow.headers.get('location'), null, `${requestUrl} must not redirect twice`);
+    for (const { name, value } of securityHeaders) assert.equal(follow.headers.get(name), value, `${expectedLocation} ${name}`);
   }
 
   assert.equal(rules.length, 12);

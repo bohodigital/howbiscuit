@@ -67,7 +67,9 @@ const expectedRedirectLines = taxonomy.TARGET_ROUTE_CONTRACTS
   .map(({ route, canonicalRoute, redirectCode }) => `${route} ${canonicalRoute} ${redirectCode}`);
 invariant(JSON.stringify(redirectLines) === JSON.stringify(expectedRedirectLines), 'The deployed redirect matrix differs from the exact Phase C contract.');
 const redirectSource = readFileSync(path.join(root, 'public', '_redirects'), 'utf8');
+const headerSource = readFileSync(path.join(root, 'public', '_headers'), 'utf8');
 const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
+const securityHeaders = taxonomy.parseWorkerSecurityHeaders(headerSource);
 const exactTargets = new Map(redirectLines.flatMap((line) => {
   const [from, to] = line.split(/\s+/);
   return from.startsWith('/') && !from.includes('*') ? [[from, to]] : [];
@@ -97,7 +99,7 @@ for (const { from, destination } of topicRedirectExpectations) {
   }
 }
 
-const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
+const workerSource = taxonomy.buildSitesWorkerSource(redirectSource, headerSource);
 const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
 const assetRequests = [];
 const workerEnv = {
@@ -112,8 +114,14 @@ async function assertSingleHop(requestUrl, expectedLocation) {
   const response = await workerModule.default.fetch(new Request(requestUrl), workerEnv);
   invariant(response.status === 301, `${requestUrl} must return 301.`);
   invariant(response.headers.get('location') === expectedLocation, `${requestUrl} returned the wrong Location header.`);
+  for (const { name, value } of securityHeaders) {
+    invariant(response.headers.get(name) === value, `${requestUrl} is missing ${name}.`);
+  }
   const follow = await workerModule.default.fetch(new Request(expectedLocation), workerEnv);
   invariant(follow.status === 200 && follow.headers.get('location') === null, `${requestUrl} must reach static assets after one redirect.`);
+  for (const { name, value } of securityHeaders) {
+    invariant(follow.headers.get(name) === value, `${expectedLocation} is missing ${name}.`);
+  }
 }
 for (const { from, to } of redirectRules) {
   const sourcePath = from.replace('*', 'contract-probe/');

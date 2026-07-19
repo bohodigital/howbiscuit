@@ -136,7 +136,7 @@ test('route migration resolves directly to real Phase C destinations', () => {
   assert.ok(migrationRecord.includes('| `https://www.howbiscuit.com/*` |'));
 });
 
-test('the deployed redirect artifact and Worker exactly match the direct Phase C matrix', async () => {
+test('the production Pages redirect artifact and Worker exactly match the direct Phase C matrix', async () => {
   const expected = [
     ['/make-do/', '/home/', '301'],
     ['/cook/', '/kitchen/', '301'],
@@ -161,16 +161,21 @@ test('the deployed redirect artifact and Worker exactly match the direct Phase C
   )));
   assert.deepEqual([...exactTargets].filter(([, to]) => exactTargets.has(to)), []);
 
-  const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
+  const headerSource = readFileSync(path.join(root, 'public/_headers'), 'utf8');
+  const securityHeaders = taxonomy.parseWorkerSecurityHeaders(headerSource);
+  const workerSource = taxonomy.buildSitesWorkerSource(redirectSource, headerSource);
+  assert.equal(readFileSync(path.join(root, 'dist', '_worker.js'), 'utf8'), workerSource);
   const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
   const env = { ASSETS: { fetch: () => new Response('asset', { status: 200 }) } };
   async function assertSingleHop(requestUrl, expectedLocation) {
     const response = await workerModule.default.fetch(new Request(requestUrl), env);
     assert.equal(response.status, 301, requestUrl);
     assert.equal(response.headers.get('location'), expectedLocation, requestUrl);
+    for (const { name, value } of securityHeaders) assert.equal(response.headers.get(name), value, `${requestUrl} ${name}`);
     const follow = await workerModule.default.fetch(new Request(expectedLocation), env);
     assert.equal(follow.status, 200, `${requestUrl} must terminate after one redirect`);
     assert.equal(follow.headers.get('location'), null, `${requestUrl} must not redirect twice`);
+    for (const { name, value } of securityHeaders) assert.equal(follow.headers.get(name), value, `${expectedLocation} ${name}`);
   }
   for (const { from, to } of rules) {
     const sourcePath = from.replace('*', 'contract-probe/');

@@ -1,5 +1,5 @@
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { gunzipSync } from 'node:zlib';
@@ -251,11 +251,79 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   return { htmlCount: htmlByRoute.size, eligibleCount: eligibleRoutes.size, fragmentCount: fragments.length };
 }
 
+function writeProductionPagesWorker() {
+  const artifactRoot = path.join(root, 'dist');
+  const redirectSource = readFileSync(path.join(artifactRoot, '_redirects'), 'utf8');
+  const headerSource = readFileSync(path.join(artifactRoot, '_headers'), 'utf8');
+  const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
+  const workerPath = path.join(artifactRoot, '_worker.js');
+  writeFileSync(workerPath, taxonomy.buildSitesWorkerSource(redirectSource, headerSource));
+  return { headerSource, redirectSource, redirectRules, workerPath };
+}
+
+async function verifyRedirectWorker({ workerPath, redirectSource, headerSource, label }) {
+  const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
+  const securityHeaders = taxonomy.parseWorkerSecurityHeaders(headerSource);
+  const worker = readFileSync(workerPath, 'utf8');
+  invariant(worker === taxonomy.buildSitesWorkerSource(redirectSource, headerSource), `${label} differs from the canonical redirect compiler output.`);
+  invariant(worker.includes('env.ASSETS.fetch(request)'), `${label} must delegate requests to the ASSETS binding.`);
+  invariant(worker.includes('www.howbiscuit.com'), `${label} must implement www canonicalization.`);
+  invariant(worker.includes('Response.redirect(location, 301)'), `${label} must emit permanent redirects before asset delegation.`);
+  invariant(worker.includes('withSecurityHeaders(response)'), `${label} must attach the governed security headers.`);
+
+  const workerModule = await import(`${pathToFileURL(workerPath).href}?verify=${Date.now()}`);
+  const assetRequests = [];
+  const env = {
+    ASSETS: {
+      fetch(request) {
+        assetRequests.push(request.url);
+        return new Response('asset', { status: 200 });
+      },
+    },
+  };
+  async function assertSingleHop(requestUrl, expectedLocation) {
+    const response = await workerModule.default.fetch(new Request(requestUrl), env);
+    invariant(response.status === 301, `${requestUrl} must return 301 in ${label}.`);
+    invariant(response.headers.get('location') === expectedLocation, `${requestUrl} returned the wrong ${label} Location header.`);
+    for (const { name, value } of securityHeaders) {
+      invariant(response.headers.get(name) === value, `${requestUrl} is missing ${name} in ${label}.`);
+    }
+    const follow = await workerModule.default.fetch(new Request(expectedLocation), env);
+    invariant(follow.status === 200 && follow.headers.get('location') === null, `${requestUrl} must reach delegated static assets after one redirect in ${label}.`);
+    for (const { name, value } of securityHeaders) {
+      invariant(follow.headers.get(name) === value, `${expectedLocation} is missing ${name} in ${label}.`);
+    }
+  }
+  for (const { from, to } of redirectRules) {
+    const sourcePath = from.replace('*', 'package-probe/');
+    await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=artifact`, `https://howbiscuit.com${to}?ref=artifact`);
+    await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=artifact`, `https://howbiscuit.com${to}?ref=artifact`);
+  }
+  await assertSingleHop(
+    'https://www.howbiscuit.com/articles/?ref=artifact',
+    'https://howbiscuit.com/articles/?ref=artifact',
+  );
+  await assertSingleHop(
+    'https://preview.example.test/make-do/?ref=artifact',
+    'https://preview.example.test/home/?ref=artifact',
+  );
+  const ordinaryUrl = 'https://howbiscuit.com/articles/?ref=artifact';
+  const ordinaryResponse = await workerModule.default.fetch(new Request(ordinaryUrl), env);
+  invariant(ordinaryResponse.status === 200 && ordinaryResponse.headers.get('location') === null, `${label} must delegate a current apex route without redirecting.`);
+  invariant(assetRequests.includes(ordinaryUrl), `${label} did not delegate a current route to static assets.`);
+  return redirectRules.length;
+}
+
 function finalizeSitesPackage() {
   const serverRoot = path.join(root, 'dist', 'server');
   const redirectSource = readFileSync(path.join(root, 'dist', 'client', '_redirects'), 'utf8');
+  const headerSource = readFileSync(path.join(root, 'dist', 'client', '_headers'), 'utf8');
   const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
-  writeFileSync(path.join(serverRoot, 'index.js'), taxonomy.buildSitesWorkerSource(redirectSource));
+  const workerSource = taxonomy.buildSitesWorkerSource(redirectSource, headerSource);
+  const clientWorkerPath = path.join(root, 'dist', 'client', '_worker.js');
+  invariant(readFileSync(clientWorkerPath, 'utf8') === workerSource, 'Sites preparation changed the production redirect Worker.');
+  rmSync(clientWorkerPath);
+  writeFileSync(path.join(serverRoot, 'index.js'), workerSource);
   const wranglerPath = path.join(serverRoot, 'wrangler.json');
   const wrangler = JSON.parse(readFileSync(wranglerPath, 'utf8'));
   invariant(wrangler.assets?.binding === 'ASSETS', 'Sites finalization requires the accepted ASSETS binding.');
@@ -271,10 +339,7 @@ async function verifySitesPackage() {
   });
   const serverRoot = path.join(root, 'dist', 'server');
   const workerPath = path.join(serverRoot, 'index.js');
-  const worker = readFileSync(workerPath, 'utf8');
-  invariant(worker.includes('env.ASSETS.fetch(request)'), 'Sites worker must delegate requests to the ASSETS binding.');
-  invariant(worker.includes('www.howbiscuit.com'), 'Sites worker must implement www canonicalization.');
-  invariant(worker.includes('Response.redirect(location, 301)'), 'Sites worker must emit permanent redirects before asset delegation.');
+  invariant(!existsSync(path.join(root, 'dist', 'client', '_worker.js')), 'Sites must not expose the production _worker.js as a client asset.');
   const wrangler = JSON.parse(readFileSync(path.join(serverRoot, 'wrangler.json'), 'utf8'));
   invariant(wrangler.main === 'index.js', 'Sites wrangler main must be index.js.');
   invariant(wrangler.assets?.directory === '../client', 'Sites assets directory must be ../client.');
@@ -287,45 +352,13 @@ async function verifySitesPackage() {
   invariant(hostingCopy === hostingSource, 'Sites package hosting metadata differs from the tracked source.');
   const hosting = JSON.parse(hostingCopy);
   invariant(typeof hosting.project_id === 'string' && hosting.project_id.length > 0, 'Sites package has no project_id.');
-  const headerSource = readFileSync(path.join(root, 'public', '_headers'));
-  const headerCopy = readFileSync(path.join(root, 'dist', 'client', '_headers'));
-  invariant(headerCopy.equals(headerSource), 'Sites package _headers differs byte-for-byte from the tracked source.');
+  const headerSourceBytes = readFileSync(path.join(root, 'public', '_headers'));
+  const headerCopyBytes = readFileSync(path.join(root, 'dist', 'client', '_headers'));
+  invariant(headerCopyBytes.equals(headerSourceBytes), 'Sites package _headers differs byte-for-byte from the tracked source.');
 
   const redirectSource = readFileSync(path.join(root, 'dist', 'client', '_redirects'), 'utf8');
-  const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
-  const workerModule = await import(`${pathToFileURL(workerPath).href}?verify=${Date.now()}`);
-  const assetRequests = [];
-  const env = {
-    ASSETS: {
-      fetch(request) {
-        assetRequests.push(request.url);
-        return new Response('asset', { status: 200 });
-      },
-    },
-  };
-  async function assertSingleHop(requestUrl, expectedLocation) {
-    const response = await workerModule.default.fetch(new Request(requestUrl), env);
-    invariant(response.status === 301, `${requestUrl} must return 301 in the packaged Worker.`);
-    invariant(response.headers.get('location') === expectedLocation, `${requestUrl} returned the wrong packaged Location header.`);
-    const follow = await workerModule.default.fetch(new Request(expectedLocation), env);
-    invariant(follow.status === 200 && follow.headers.get('location') === null, `${requestUrl} must reach packaged static assets after one redirect.`);
-  }
-  for (const { from, to } of redirectRules) {
-    const sourcePath = from.replace('*', 'package-probe/');
-    await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=sites`, `https://howbiscuit.com${to}?ref=sites`);
-    await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=sites`, `https://howbiscuit.com${to}?ref=sites`);
-  }
-  await assertSingleHop(
-    'https://www.howbiscuit.com/articles/?ref=sites',
-    'https://howbiscuit.com/articles/?ref=sites',
-  );
-  await assertSingleHop(
-    'https://preview.example.test/make-do/?ref=sites',
-    'https://preview.example.test/home/?ref=sites',
-  );
-  const ordinaryResponse = await workerModule.default.fetch(new Request('https://howbiscuit.com/articles/?ref=sites'), env);
-  invariant(ordinaryResponse.status === 200 && ordinaryResponse.headers.get('location') === null, 'The packaged Worker must delegate a current apex route without redirecting.');
-  invariant(assetRequests.includes('https://howbiscuit.com/articles/?ref=sites'), 'The packaged Worker did not delegate a current route to static assets.');
+  const headerSource = headerCopyBytes.toString('utf8');
+  await verifyRedirectWorker({ workerPath, redirectSource, headerSource, label: 'the Sites packaged Worker' });
   return result;
 }
 
@@ -347,6 +380,14 @@ if (sitesPackageFinalizationRequested) {
   }
 
   runNode(path.join(root, 'node_modules', 'astro', 'bin', 'astro.mjs'), ['build']);
+  const productionWorker = writeProductionPagesWorker();
+  await verifyRedirectWorker({
+    workerPath: productionWorker.workerPath,
+    redirectSource: productionWorker.redirectSource,
+    headerSource: productionWorker.headerSource,
+    label: 'the production Cloudflare Pages Worker',
+  });
+  console.log(`Generated and verified the production Cloudflare Pages Worker with ${productionWorker.redirectRules.length} path rules and www canonicalization.`);
 
   if (piSkipRequested) {
     const result = verifyStaticArtifact(path.join(root, 'dist'), { requirePagefind: false, label: 'Guarded Pi artifact' });

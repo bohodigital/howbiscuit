@@ -383,6 +383,11 @@ export type SitesRedirectRule = Readonly<{
   code: 301;
 }>;
 
+export type WorkerSecurityHeader = Readonly<{
+  name: string;
+  value: string;
+}>;
+
 export function parseSitesRedirectRules(source: string): readonly SitesRedirectRule[] {
   const lines = source.split(/\r?\n/).map((line) => line.trim()).filter((line) => line && !line.startsWith('#'));
   return Object.freeze(lines.map((line, index) => {
@@ -407,8 +412,28 @@ export function parseSitesRedirectRules(source: string): readonly SitesRedirectR
   }));
 }
 
-export function buildSitesWorkerSource(redirectSource: string): string {
+export function parseWorkerSecurityHeaders(source: string): readonly WorkerSecurityHeader[] {
+  const lines = source.split(/\r?\n/).filter((line) => line.trim() && !line.trim().startsWith('#'));
+  if (lines.shift()?.trim() !== '/*') {
+    throw new Error('Worker security headers must use one global /* rule.');
+  }
+  if (lines.length === 0) throw new Error('Worker security headers must not be empty.');
+  const seen = new Set<string>();
+  return Object.freeze(lines.map((line, index) => {
+    if (!/^\s+/.test(line)) throw new Error(`Worker security header line ${index + 2} must be indented.`);
+    const match = line.trim().match(/^([A-Za-z0-9-]+):\s*(\S(?:.*\S)?)$/);
+    if (!match) throw new Error(`Worker security header line ${index + 2} is invalid.`);
+    const [, name, value] = match;
+    const normalizedName = name.toLowerCase();
+    if (seen.has(normalizedName)) throw new Error(`Worker security header ${name} is duplicated.`);
+    seen.add(normalizedName);
+    return Object.freeze({ name, value });
+  }));
+}
+
+export function buildSitesWorkerSource(redirectSource: string, headerSource: string): string {
   const rules = parseSitesRedirectRules(redirectSource);
+  const securityHeaders = parseWorkerSecurityHeaders(headerSource).map(({ name, value }) => [name, value]);
   const exactRules = rules.filter(({ from }) => !from.includes('*')).map(({ from, to }) => [from, to]);
   const wildcardRules = rules.filter(({ from }) => from.endsWith('*')).map(({ from, to }) => [from.slice(0, -1), to]);
   return [
@@ -416,6 +441,7 @@ export function buildSitesWorkerSource(redirectSource: string): string {
     `const WWW_HOST = ${JSON.stringify(HOST_CONTRACT.host)};`,
     `const EXACT_REDIRECTS = new Map(${JSON.stringify(exactRules)});`,
     `const WILDCARD_REDIRECTS = Object.freeze(${JSON.stringify(wildcardRules)});`,
+    `const SECURITY_HEADERS = Object.freeze(${JSON.stringify(securityHeaders)});`,
     'function migratedPath(pathname) {',
     '  const exact = EXACT_REDIRECTS.get(pathname);',
     '  if (exact) return exact;',
@@ -437,11 +463,16 @@ export function buildSitesWorkerSource(redirectSource: string): string {
     '  if (destinationPath) url.pathname = destinationPath;',
     '  return url.toString();',
     '}',
+    'function withSecurityHeaders(response) {',
+    '  const headers = new Headers(response.headers);',
+    '  for (const [name, value] of SECURITY_HEADERS) headers.set(name, value);',
+    '  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });',
+    '}',
     'export default {',
     '  async fetch(request, env) {',
     '    const location = redirectLocation(request);',
-    '    if (location) return Response.redirect(location, 301);',
-    '    return env.ASSETS.fetch(request);',
+    '    const response = location ? Response.redirect(location, 301) : await env.ASSETS.fetch(request);',
+    '    return withSecurityHeaders(response);',
     '  },',
     '};',
     '',
