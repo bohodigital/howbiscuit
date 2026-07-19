@@ -2,10 +2,13 @@
 interface Props { state: string; label?: string }
 const { state, label } = Astro.props;
 const labels: Record<string, string> = {
-  tested: 'Tested',
-  declared: 'Testing declared',
-  'not-declared': 'Testing not declared',
+  'hands-on-tested': 'Hands-on tested',
+  'owner-experience': 'Owner experience',
+  'not-hands-on-tested': 'Not hands-on tested',
+  'not-applicable': 'Testing not applicable',
+  unavailable: 'Testing status unavailable',
 };
-const text = label ?? labels[state] ?? 'Testing status unavailable';
+const normalizedState = Object.hasOwn(labels, state) ? state : 'unavailable';
+const text = label ?? labels[normalizedState];
 ---
-<span class="hb-badge hb-testing-badge" data-state={state}>{text}</span>
+<span class="hb-badge hb-testing-badge" data-state={normalizedState}>{text}</span>

@@ -284,6 +284,9 @@ async function verifySitesPackage() {
   invariant(hostingCopy === hostingSource, 'Sites package hosting metadata differs from the tracked source.');
   const hosting = JSON.parse(hostingCopy);
   invariant(typeof hosting.project_id === 'string' && hosting.project_id.length > 0, 'Sites package has no project_id.');
+  const headerSource = readFileSync(path.join(root, 'public', '_headers'));
+  const headerCopy = readFileSync(path.join(root, 'dist', 'client', '_headers'));
+  invariant(headerCopy.equals(headerSource), 'Sites package _headers differs byte-for-byte from the tracked source.');
 
   const redirectSource = readFileSync(path.join(root, 'dist', 'client', '_redirects'), 'utf8');
   const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);

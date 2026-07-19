@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import semver from 'semver';
 
 import {
   assertFullPagefindLane,
@@ -26,20 +27,18 @@ test('Phase C declares every active build integration as a direct dependency', (
 });
 
 test('the declared Node ranges match the default native TypeScript-loading contract', () => {
-  const expectedRange = '^22.18.0 || >=24.0.0';
-  const policyAllows = (version) => {
-    const [major, minor, patch] = version.split('.').map(Number);
-    assert.ok([major, minor, patch].every(Number.isInteger), `invalid test version: ${version}`);
-    return (major === 22 && (minor > 18 || (minor === 18 && patch >= 0))) || major >= 24;
-  };
+  const expectedRange = '^22.18.0 || ^24.0.0';
 
   assert.equal(packageJson.engines.node, expectedRange);
   assert.equal(packageLock.packages[''].engines.node, packageJson.engines.node);
+  assert.equal(packageJson.devDependencies.semver, '7.8.5');
+  assert.equal(packageLock.packages[''].devDependencies.semver, packageJson.devDependencies.semver);
+  assert.equal(packageLock.packages['node_modules/semver'].version, packageJson.devDependencies.semver);
   assert.doesNotMatch(packageJson.scripts.test, /experimental-strip-types/);
   assert.deepEqual(
     Object.fromEntries(
-      ['22.17.99', '22.18.0', '22.99.0', '23.0.0', '23.6.0', '23.99.0', '24.0.0', '25.0.0'].map(
-        (version) => [version, policyAllows(version)],
+      ['22.17.99', '22.18.0', '22.99.0', '23.0.0', '23.99.0', '24.0.0', '24.99.0', '25.0.0', '26.0.0'].map(
+        (version) => [version, semver.satisfies(version, expectedRange)],
       ),
     ),
     {
@@ -47,10 +46,11 @@ test('the declared Node ranges match the default native TypeScript-loading contr
       '22.18.0': true,
       '22.99.0': true,
       '23.0.0': false,
-      '23.6.0': false,
       '23.99.0': false,
       '24.0.0': true,
-      '25.0.0': true,
+      '24.99.0': true,
+      '25.0.0': false,
+      '26.0.0': false,
     },
   );
 });
@@ -75,6 +75,7 @@ test('normal build and QA lanes run the explicit Pagefind build and reject skip 
   );
   assert.match(buildScript, /sitemap route set/);
   assert.match(buildScript, /llms\.txt/);
+  assert.match(buildScript, /_headers differs byte-for-byte/);
 
   assert.doesNotThrow(() => assertFullPagefindLane({ skipRequested: false, lane: 'build' }));
   assert.throws(

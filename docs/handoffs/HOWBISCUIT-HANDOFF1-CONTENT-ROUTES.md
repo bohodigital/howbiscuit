@@ -204,14 +204,15 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - Native Pagefind remains unavailable on the Pi ARM64/16 KiB environment. The Pi validation artifact must omit Pagefind only after the platform guard passes. Every release artifact still requires the full x64 Pagefind build.
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
-- Three older standard-article components still emit unnamed complementary landmarks. The LaTeX generator is corrected in this candidate, but expanding the Phase C path budget for nonblocking component cleanup is intentionally deferred.
+- Standard and generated LaTeX article asides now carry accessible names. Generic classification, topic-label, and search-result containers use explicit nameable roles, and article evidence/testing badges expose the normalized source-owned values rather than generic declared states.
+- The supported runtime is deliberately bounded to the validated Node 22 and Node 24 majors (`^22.18.0 || ^24.0.0`). The regression uses npm's pinned `semver` implementation and proves Node 23 and future majors fail closed.
 - Phase C intentionally removed `@astrojs/sitemap` and its lockfile entries. A later exact cold install refreshed npm's advisory data and reported ten findings, including two high-severity Astro advisories affecting `6.4.2`. Phase C therefore took the narrow compatible patch from Astro `6.4.2` to `6.4.6`; the post-update cold npm 11.7.0 install reports seven remaining findings (three low and four moderate) and no high or critical finding. `npm audit fix --package-lock-only --dry-run` proposed no lockfile change; resolving the residual toolchain advisories would require broader major-version work, so no forced audit rewrite was applied.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 - The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 
 ## Changed-file scope
 
-The candidate changes exactly 66 paths from the accepted Phase B parent. A manager-reviewed one-path exception above the original 65-path ceiling is recorded in Bohopi because `src/styles/biscuit.css` was outside the prior delta but is the exact globally shipped file that caused Phase D's P2 rejection. All 66 paths remain within the Phase C allowlist; the repair introduces no new feature or system. The canonical work-order report records the exact sorted inventory and diff proof.
+The candidate changes exactly 70 paths from the accepted Phase B parent. A manager-reviewed five-path exception above the original 65-path ceiling is recorded in Bohopi: `src/styles/biscuit.css` removes the globally shipped retired architecture that caused Phase D's rejection, while `src/components/BiscuitBox.astro`, `src/components/RelatedShelf.astro`, `src/components/EvidenceBadge.astro`, and `src/components/TestingBadge.astro` resolve the exact-SHA accessibility and evidence-truth review findings. All 70 paths remain within the Phase C allowlist; the repair introduces no new feature or system. The canonical work-order report records the exact sorted inventory and diff proof.
 
 ## Rollback
 

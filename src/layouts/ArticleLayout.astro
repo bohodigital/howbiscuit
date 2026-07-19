@@ -114,7 +114,7 @@ const testingLabels: Record<string, string> = {
   <article class:list={['hb-article-shell', record.articleFormat === 'latex' && 'hb-latex-article']}>
     <Breadcrumbs items={breadcrumbItems} />
     <header class:list={['hb-article-title', record.articleFormat === 'latex' && 'hb-latex-site-context']}>
-      <div class="hb-article-labels" aria-label="Article classification">
+      <div class="hb-article-labels" role="group" aria-label="Article classification">
         <span>{categoryLabel}</span>
         {topic && <span>{topic.label}</span>}
         <span>{articleTypeLabel}</span>
@@ -124,8 +124,8 @@ const testingLabels: Record<string, string> = {
       <div class="hb-article-meta">
         {formattedDate && <span>{dateLabel} <time datetime={date ?? undefined}>{formattedDate}</time></span>}
         {record.readTime && <span>{record.readTime}</span>}
-        {record.evidence && <EvidenceBadge value="Researched" label={record.evidence} />}
-        <TestingBadge state="declared" label={testingLabels[record.testing.state] ?? 'Testing status unavailable'} />
+        {record.evidence && <EvidenceBadge value={record.evidence} />}
+        <TestingBadge state={record.testing.state} label={testingLabels[record.testing.state] ?? 'Testing status unavailable'} />
       </div>
     </header>
     <DisclosureBanner disclosure={record.disclosure} />

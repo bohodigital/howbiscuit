@@ -13,9 +13,10 @@ const { variant = 'short-answer', title } = Astro.props as {
   variant?: Variant;
   title?: string;
 };
+const accessibleName = title ?? labels[variant];
 ---
 
-<aside class="hb-box" data-variant={variant}>
-  <p class="hb-box-label">{title ?? labels[variant]}</p>
+<aside class="hb-box" data-variant={variant} aria-label={accessibleName}>
+  <p class="hb-box-label">{accessibleName}</p>
   <slot />
 </aside>

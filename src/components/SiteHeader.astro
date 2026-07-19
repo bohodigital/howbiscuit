@@ -39,7 +39,7 @@ const navigationState = resolvePublicNavigationState({ currentPath, navigation, 
           <div class="hb-category-panel">
             <div class="hb-category-intro"><a href={category.href}><strong>{category.label}</strong><span>Open category →</span></a><p>{category.description}</p></div>
             {category.topicLabels.length > 0 && (
-              <div class="hb-topic-labels" aria-label={`${category.label} published topics`}>
+              <div class="hb-topic-labels" role="group" aria-label={`${category.label} published topics`}>
                 {category.topicLabels.map((topic) => <a href={topic.href} aria-label={`${topic.label}, ${topic.count} published guide${topic.count === 1 ? '' : 's'}`}>{topic.label}<span aria-hidden="true">{topic.count}</span></a>)}
               </div>
             )}
@@ -109,7 +109,7 @@ const navigationState = resolvePublicNavigationState({ currentPath, navigation, 
       <div><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" /><button type="submit">Search</button></div>
     </form>
     <p class="hb-search-status" role="status" aria-live="polite">Enter a word or phrase to search.</p>
-    <div class="hb-search-results" aria-label="Search results"></div>
+    <div class="hb-search-results" role="region" aria-label="Search results"></div>
   </div>
 </dialog>
 

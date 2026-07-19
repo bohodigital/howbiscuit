@@ -211,9 +211,15 @@ test('All Guides, RSS, sitemap, llms.txt, and article related services share the
     assert.ok(llms.includes('https://howbiscuit.com' + route));
     const article = pages.get(route);
     assert.match(article, /hb-sources/);
-    assert.match(article, /hb-related/);
+    assert.match(article, /<aside class="hb-related" aria-label="Related guides">/);
     assert.match(article, /Report a correction/);
     assert.match(article, /no affiliate links, sponsored placements, paid reviews, or product placements/i);
+    assert.match(article, /class="hb-article-labels" role="group" aria-label="Article classification"/);
+    assert.match(article, /class="hb-badge hb-evidence hb-evidence-label" data-evidence="(?:researched|editorial-standard)"/);
+    assert.match(article, /class="hb-badge hb-testing-badge" data-state="(?:not-hands-on-tested|not-applicable)"/);
+    for (const [aside] of article.matchAll(/(<aside\b[^>]*>)/g)) {
+      assert.match(aside, /aria-(?:label|labelledby)="[^"]+"/, `${route} has an unnamed complementary landmark`);
+    }
     const tocNavigation = article.match(/<nav\b(?=[^>]*\bclass="[^"]*\bhb-article-toc\b[^"]*")(?=[^>]*\baria-labelledby="article-toc-title")[^>]*>/);
     if (tocNavigation) {
       ordinaryTocCount += 1;
@@ -258,6 +264,8 @@ test('trust, recovery, redirects, navigation, and framework removal are truthful
   assert.match(header, /resolvePublicNavigationState/);
   assert.match(header, /summary aria-current=\{navigationState\.categories\[category\.id\]\}/);
   assert.match(header, /published guide\$\{topic\.count === 1 \? '' : 's'\}/);
+  assert.match(header, /class="hb-topic-labels" role="group" aria-label=/);
+  assert.match(header, /class="hb-search-results" role="region" aria-label="Search results"/);
   assert.match(pages.get('/home/'), /<summary aria-current="page"[^>]*>Home &amp; Apartment/);
   assert.match(pages.get('/articles/why-salt-melts-ice/'), /<summary aria-current="true"[^>]*>Home &amp; Apartment/);
   assert.match(pages.get('/articles/'), /class="hb-all-guides-link"[^>]*aria-current="page"/);
