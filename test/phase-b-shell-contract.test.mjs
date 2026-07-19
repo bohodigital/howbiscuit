@@ -63,6 +63,26 @@ function contrastRatio(foreground, background) {
   return (lighter + 0.05) / (darker + 0.05);
 }
 
+function runGaBootstrap(html, hostname) {
+  const inlineScript = html.match(/<script\b[^>]*data-hb-ga-bootstrap[^>]*>([\s\S]*?)<\/script>/i);
+  assert.ok(inlineScript, 'GA bootstrap is missing');
+  const appendedScripts = [];
+  const window = { location: { hostname } };
+  vm.runInNewContext(inlineScript[1], {
+    window,
+    document: {
+      createElement(tagName) {
+        assert.equal(tagName, 'script');
+        return {};
+      },
+      head: {
+        appendChild(script) { appendedScripts.push(script); },
+      },
+    },
+  });
+  return { appendedScripts, dataLayer: window.dataLayer };
+}
+
 const pages = new Map(collectHtml(dist).map((file) => [routeFor(file), readFileSync(file, 'utf8')]));
 
 test('theme bootstrap preserves dark system preference when storage is denied', () => {
@@ -79,6 +99,32 @@ test('theme bootstrap preserves dark system preference when storage is denied', 
     },
   });
   assert.deepEqual({ ...documentElement.dataset }, { themePreference: 'system', theme: 'dark' });
+});
+
+test('GA4 initializes only on exact public hosts and stays inert on previews', () => {
+  const home = pages.get('/');
+  for (const hostname of ['howbiscuit.com', 'www.howbiscuit.com']) {
+    const result = runGaBootstrap(home, hostname);
+    assert.equal(result.appendedScripts.length, 1, hostname);
+    assert.equal(result.appendedScripts[0].async, true, hostname);
+    assert.equal(result.appendedScripts[0].src, 'https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH', hostname);
+    assert.equal(result.dataLayer.length, 2, hostname);
+    assert.equal(result.dataLayer[0][0], 'js', hostname);
+    assert.equal(result.dataLayer[1][0], 'config', hostname);
+    assert.equal(result.dataLayer[1][1], 'G-NG0NQMVFEH', hostname);
+    assert.equal(result.dataLayer[1][2].anonymize_ip, true, hostname);
+  }
+  for (const hostname of [
+    'howbiscuit-field-guide.mankopoppi.chatgpt.site',
+    'preview.example.test',
+    'localhost',
+    'howbiscuit.com.example.test',
+  ]) {
+    const result = runGaBootstrap(home, hostname);
+    assert.equal(result.appendedScripts.length, 0, hostname);
+    assert.equal(result.dataLayer, undefined, hostname);
+  }
+  assert.doesNotMatch(pages.get('/404.html'), /data-hb-ga-bootstrap/);
 });
 
 test('built artifact contains exactly the active Phase C routes plus the custom 404', () => {

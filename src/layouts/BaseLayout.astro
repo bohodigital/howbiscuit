@@ -119,12 +119,19 @@ const pagefindAttributes = pagefindAttributesForPage(pagefindRecord ?? { searchE
     {analytics && (
       <Fragment>
         <script is:inline defer src="https://analytics.bohodigitalservices.com/script.js" data-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-domains="howbiscuit.com,www.howbiscuit.com" data-do-not-track="true" data-exclude-search="true"></script>
-        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH"></script>
-        <script is:inline>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-NG0NQMVFEH', { anonymize_ip: true });
+        <script is:inline data-hb-ga-bootstrap>
+          (() => {
+            const publicHosts = new Set(['howbiscuit.com', 'www.howbiscuit.com']);
+            if (!publicHosts.has(window.location.hostname.toLowerCase())) return;
+            const loader = document.createElement('script');
+            loader.async = true;
+            loader.src = 'https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH';
+            document.head.appendChild(loader);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NG0NQMVFEH', { anonymize_ip: true });
+          })();
         </script>
       </Fragment>
     )}
