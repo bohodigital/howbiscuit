@@ -10,9 +10,10 @@ import '../styles/shell.css';
 interface Props {
   title: string;
   description: string;
-  canonical?: string;
+  canonical?: string | null;
   robots?: string;
   image?: string;
+  ogType?: 'website' | 'article';
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
   searchEligible?: boolean;
   analytics?: boolean;
@@ -25,13 +26,14 @@ const {
   canonical = Astro.url.pathname,
   robots = 'index, follow',
   image = '/og.png',
+  ogType = 'website',
   jsonLd,
   searchEligible = true,
   analytics = true,
   mainClass = '',
 } = Astro.props;
 const site = Astro.site ?? new URL('https://howbiscuit.com');
-const canonicalUrl = new URL(canonical, site).toString();
+const canonicalUrl = canonical === null ? null : new URL(canonical, site).toString();
 const imageUrl = new URL(image, site).toString();
 const pageTitle = title === 'How Biscuit' ? title : `${title} | How Biscuit`;
 const webSiteSchema = {
@@ -42,7 +44,7 @@ const webSiteSchema = {
   url: site.toString(),
   publisher: { '@type': 'Organization', name: 'How Biscuit' },
 };
-const pageSchema = {
+const pageSchema = canonicalUrl === null ? null : {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: title,
@@ -56,9 +58,12 @@ const pageSchema = {
 };
 const structuredData = [
   webSiteSchema,
-  ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [pageSchema]),
+  ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : (pageSchema ? [pageSchema] : [])),
 ];
-const pagefindRoute = new URL(canonical, site).pathname;
+if (searchEligible && canonical === null) {
+  throw new Error('A Pagefind-eligible page must declare a canonical route.');
+}
+const pagefindRoute = canonical === null ? Astro.url.pathname : new URL(canonical, site).pathname;
 const publicSiteData = getPublicSiteData();
 const pagefindRecord = searchEligible
   ? publicSiteData.publicRegistry.find((record: { route: string }) => record.route === pagefindRoute)
@@ -95,14 +100,14 @@ const pagefindAttributes = pagefindAttributesForPage(pagefindRecord ?? { searchE
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
     <meta name="theme-color" content="#fff8e7" />
-    <link rel="canonical" href={canonicalUrl} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml" />
     <link rel="sitemap" href="/sitemap.xml" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="How Biscuit" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalUrl} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
     <meta property="og:image" content={imageUrl} />
     <meta property="og:image:alt" content="How Biscuit practical guides and troubleshooting." />
     <meta name="twitter:card" content="summary_large_image" />

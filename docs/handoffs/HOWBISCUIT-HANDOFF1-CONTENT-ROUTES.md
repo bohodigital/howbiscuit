@@ -1,14 +1,14 @@
 # How Biscuit Handoff 1: Phase C Content and Routes
 
-Date: 2026-07-18
+Date: 2026-07-19
 
 Work order: `WO-2026-07-17-HOWBISCUIT-HANDOFF1-CONTENT-ROUTES-003`
 
 Accepted parent: `8158b1ec432fed60c424d97c84d9ff046f0505bb`
 
-Working branch: `repair/howbiscuit-h1-c-node-engine-contract`
+Working branch: `repair/howbiscuit-h1-c-retired-architecture`
 
-Exact candidate commit: the commit containing this report. The canonical external work-order report records its resolved Git SHA because a tracked commit cannot self-reference its own SHA. The direct repair predecessor is `576ef1c659b95a32cdf087dd9ee9ed1b2b773553`; no verdict or owner acceptance transfers from that predecessor.
+Exact candidate commit: the commit containing this report. The canonical external work-order report records its resolved Git SHA because a tracked commit cannot self-reference its own SHA. The direct repair predecessor is `0cf652059498d576334c27255ad73b56e2c0bb4a`; no verdict or owner acceptance transfers from that predecessor.
 
 ## Phase boundary and status
 
@@ -18,6 +18,12 @@ Phase C moves the public content, category routes, route migrations, trust copy,
 - Phase D remains blocked until the owner accepts the exact Phase C completion commit through Bohopi.
 - `main` and public production remain outside this branch.
 - No DNS, Cloudflare-account, analytics-property, credential, external-account, production D1/R2, merchant, affiliate, or spending action is included.
+
+### Phase D rejection and bounded repair
+
+Fresh Phase D independent acceptance rejected predecessor `0cf652059498d576334c27255ad73b56e2c0bb4a` on two P2 defects. First, the globally imported public stylesheet still shipped unused `.hb-topic-directory` and `.hb-hub-title` architecture, including retired division identifiers, while a stale Phase B test required those selectors. Second, the shared 404 artifact advertised `https://howbiscuit.com/404/` as the canonical and Open Graph URL for every terminal or unknown route even though the governed route matrix declares no canonical destination.
+
+This replacement removes the dead stylesheet architecture and reverses its stale test assertion. A nullable canonical contract now makes the custom 404 omit `rel=canonical`, `og:url`, and `WebPage` structured data while retaining `noindex, nofollow`, recovery content, and Pagefind exclusion. The static-build verifier and built-artifact tests fail closed if that behavior regresses. The same bounded repair gives generated LaTeX biscuit-box landmarks accessible names, restores the approved **Browse All Guides** CTA, and emits `og:type=article` on article pages. These changes do not alter taxonomy, redirects, public eligibility, article canonicals, analytics, or LaTeX safety.
 
 ## Taxonomy
 
@@ -139,6 +145,7 @@ The specialized LaTeX paper retains its paper body and outline while sharing all
 - About and Affiliate Disclosure truthfully state that the current build contains no affiliate links, sponsored placements, paid reviews, or product placements.
 - Editorial Policy publishes the governed evidence vocabulary and does not call specification review testing.
 - The recovery 404 links `/math/` visitors to BetterGrades.
+- The recovery 404 has no canonical URL, Open Graph URL, or `WebPage` schema because terminal and unknown requests have no governed canonical destination.
 - Every page footer exposes the five registry-owned category routes plus All Guides before the trust and discovery links.
 
 ## Generated public surfaces
@@ -175,7 +182,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
 - Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, exact normalized title, description, route, and type metadata in every fragment, and a public category filter only where canonical source metadata provides one.
-- Node tests: 47 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards, adding executable primary-navigation state coverage, and enforcing the supported Node-range boundaries.
+- Node tests: 47 passed, 0 failed, including fail-closed guards for retired stylesheet architecture, canonical-free 404 metadata, named complementary landmarks, article Open Graph type, primary-navigation state, and supported Node-range boundaries.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.
@@ -186,7 +193,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - That lineage's search dialog focused its input, returned six Pagefind results for `salt`, closed deterministically, and returned focus to its trigger.
 - That lineage's mobile category and article passed at 390 by 844 CSS pixels with no horizontal overflow; mobile navigation opened with focus on Close, closed deterministically, and returned focus to the mobile trigger.
 - Exact repaired-tree tests verify heading-level continuity, standalone-topic H1/H2/H3 order, truthful omission of category filters from categoryless records, all threshold-dependent redirect transitions, guide-only homepage shelves, current category/section state across desktop, mobile, and no-JavaScript primary navigation, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
-- Exact repaired-SHA interactive replay remains required when the in-app browser backend becomes available; the backend returned unavailable during the first repaired-candidate review attempt.
+- The in-app browser rejected both loopback and private-LAN HTTP preview URLs during this repair's pre-commit validation. Exact-SHA interactive replay therefore remains a Phase D requirement against the owner-restricted HTTPS Sites preview; no local-browser success is claimed here.
 
 ### Raspberry Pi
 
@@ -197,13 +204,14 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - Native Pagefind remains unavailable on the Pi ARM64/16 KiB environment. The Pi validation artifact must omit Pagefind only after the platform guard passes. Every release artifact still requires the full x64 Pagefind build.
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
+- Three older standard-article components still emit unnamed complementary landmarks. The LaTeX generator is corrected in this candidate, but expanding the Phase C path budget for nonblocking component cleanup is intentionally deferred.
 - Phase C intentionally removed `@astrojs/sitemap` and its lockfile entries. A later exact cold install refreshed npm's advisory data and reported ten findings, including two high-severity Astro advisories affecting `6.4.2`. Phase C therefore took the narrow compatible patch from Astro `6.4.2` to `6.4.6`; the post-update cold npm 11.7.0 install reports seven remaining findings (three low and four moderate) and no high or critical finding. `npm audit fix --package-lock-only --dry-run` proposed no lockfile change; resolving the residual toolchain advisories would require broader major-version work, so no forced audit rewrite was applied.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 - The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 
 ## Changed-file scope
 
-The candidate changes exactly 65 paths, meeting the Phase C work-order ceiling. All paths are within the Phase C allowlist. The canonical work-order report records the exact sorted inventory and diff proof.
+The candidate changes exactly 66 paths from the accepted Phase B parent. A manager-reviewed one-path exception above the original 65-path ceiling is recorded in Bohopi because `src/styles/biscuit.css` was outside the prior delta but is the exact globally shipped file that caused Phase D's P2 rejection. All 66 paths remain within the Phase C allowlist; the repair introduces no new feature or system. The canonical work-order report records the exact sorted inventory and diff proof.
 
 ## Rollback
 

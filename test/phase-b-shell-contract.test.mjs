@@ -78,6 +78,10 @@ test('built artifact contains exactly the active Phase C routes plus the custom 
     });
     assert.match(html, new RegExp('href="https://howbiscuit\\.com' + route.replaceAll('/', '\\/') + '"'));
   }
+  const notFound = pages.get('/404.html');
+  assert.doesNotMatch(notFound, /<link\b[^>]*rel="canonical"/i);
+  assert.doesNotMatch(notFound, /<meta\b[^>]*property="og:url"/i);
+  assert.equal(jsonLd(notFound).some((entry) => entry['@type'] === 'WebPage'), false);
 });
 
 test('built article semantics and public Pagefind labels match the normalized registry', () => {
@@ -134,8 +138,7 @@ test('WCAG text, non-text, and reviewed selector contrast guards remain fail clo
   assert.match(biscuitCss, /:root\[data-theme='dark'\][\s\S]*--hb-ink-soft:\s*#c6c9c4/);
   assert.match(biscuitCss, /a:focus-visible,[\s\S]*button:focus-visible\s*\{[^}]*outline:\s*3px solid var\(--hb-blue\)/);
   assert.match(biscuitCss, /\.hb-panic-strip a:hover\s*\{[^}]*background:\s*var\(--hb-tomato\);[^}]*color:\s*#142432/);
-  assert.match(biscuitCss, /\.hb-topic-directory a:hover p\s*\{[^}]*color:\s*#142432/);
-  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-hub-title\[data-division='home-tech'\]\s*\{[^}]*color:\s*#142432/);
+  assert.doesNotMatch(biscuitCss, /\.hb-topic-directory\b|\.hb-hub-title\b|\[data-division=/);
   assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-panic-strip > p\s*\{[^}]*color:\s*#142432/);
   assert.match(biscuitCss, /\.hb-panic-strip a:focus-visible\s*\{[^}]*outline-color:\s*var\(--hb-paper\)/);
   assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-latex-paper a:focus-visible\s*\{[^}]*outline-color:\s*#315ee8/);
@@ -164,6 +167,8 @@ test('homepage uses registry-driven sections in the governed conceptual order', 
   assert.match(home, /Kitchen/);
   assert.match(home, /Shop Smarter/);
   assert.match(home, /Tools/);
+  assert.match(home, /href="\/articles\/">Browse All Guides<\/a>/);
+  assert.doesNotMatch(home, /View all guides/i);
   assert.doesNotMatch(home, /Why Are Some Answers Better Than Others/);
   assert.doesNotMatch(home, /Check Local Prices<\/a>/);
 });
@@ -221,10 +226,12 @@ test('All Guides, RSS, sitemap, llms.txt, and article related services share the
 test('structured data contains WebSite globally and Article plus BreadcrumbList on articles', () => {
   assert.ok(jsonLd(pages.get('/')).some((entry) => entry['@type'] === 'WebSite'));
   for (const route of PHASE_C_DOCUMENT_ROUTES.filter((item) => item.startsWith('/articles/') && item !== '/articles/')) {
-    const types = jsonLd(pages.get(route)).map((entry) => entry['@type']);
+    const articleHtml = pages.get(route);
+    const types = jsonLd(articleHtml).map((entry) => entry['@type']);
     assert.ok(types.includes('WebSite'), route);
     assert.ok(types.includes('Article'), route);
     assert.ok(types.includes('BreadcrumbList'), route);
+    assert.match(articleHtml, /<meta property="og:type" content="article"/);
   }
 });
 

@@ -658,7 +658,8 @@ class BodyParser {
         } else if (environment === 'biscuitbox') {
           const title = readBraced(remainder, 0, this.sourcePath);
           if (remainder.slice(title.end).trim()) fail('biscuitbox accepts one title argument.', this.sourcePath);
-          blocks.push(`<aside class="hb-latex-box"><h2>${renderInline(title.value, this.sourcePath).html}</h2>${this.renderParagraphs(content)}</aside>`);
+          const renderedTitle = renderInline(title.value, this.sourcePath);
+          blocks.push(`<aside class="hb-latex-box" aria-label="${escapeHtml(renderedTitle.plain)}"><h2>${renderedTitle.html}</h2>${this.renderParagraphs(content)}</aside>`);
         } else if (environment === 'sourcenotes') {
           if (remainder) fail('sourcenotes takes no argument.', this.sourcePath);
           blocks.push(this.renderSources(content));

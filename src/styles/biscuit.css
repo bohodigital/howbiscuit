@@ -207,15 +207,6 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-panic-strip span { font-size: 1rem; font-weight: 850; }
 .hb-panic-strip b { font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; }
 
-.hb-topic-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0 3rem; }
-.hb-topic-directory a { display: flex; min-height: 11rem; flex-direction: column; border: 1.5px solid var(--hb-ink); border-radius: 0.75rem; padding: 1.15rem; background: var(--hb-white); color: var(--hb-ink); text-decoration: none; }
-.hb-topic-directory a:hover { background: var(--hb-honey); color: #142432; }
-.hb-topic-directory a[aria-current='page'] { border-width: 3px; }
-.hb-topic-directory h3 { margin: 0 0 0.6rem; color: inherit; font-size: 1.1rem; letter-spacing: -0.02em; }
-.hb-topic-directory p { margin: 0; color: var(--hb-ink-soft); font-size: 0.8rem; line-height: 1.5; }
-.hb-topic-directory a:hover p { color: #142432; }
-.hb-topic-directory span { margin-top: auto; padding-top: 1rem; color: inherit; font-size: 0.68rem; font-weight: 850; text-transform: uppercase; }
-
 .hb-guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
 .hb-guide-card { min-height: 23rem; display: flex; flex-direction: column; border: 2px solid var(--hb-ink); border-radius: 1rem; padding: 1.5rem; background: var(--hb-white); box-shadow: 0 0 0 transparent; }
 .hb-guide-card[data-accent='tomato'] { --guide-accent: var(--hb-tomato); }
@@ -246,19 +237,6 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
 .hb-trust-band > a { color: var(--hb-ink); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; }
 
 /* Article template */
-
-.hb-hub-title { position: relative; overflow: hidden; margin: 1.2rem 0 3rem; border: 2px solid var(--hb-ink); border-radius: 1rem; padding: clamp(2rem, 6vw, 4.5rem); background: var(--hb-honey); color: #142432; box-shadow: 8px 8px 0 var(--hb-ink); }
-.hb-hub-title[data-division='research-writing'] { background: var(--hb-lilac); }
-.hb-hub-title[data-division='cook'] { background: var(--hb-tomato); }
-.hb-hub-title[data-division='home-tech'] { background: var(--hb-blue); color: #fff; }
-:root[data-theme='dark'] .hb-hub-title[data-division='home-tech'] { color: #142432; }
-.hb-hub-title[data-division='make-do'] { background: var(--hb-mint); }
-.hb-hub-title[data-division='tools'] { background: var(--hb-honey); }
-.hb-hub-title[data-division='articles'] { background: linear-gradient(135deg, var(--hb-lilac), var(--hb-tomato)); }
-.hb-hub-title::after { content: '?'; position: absolute; right: -0.04em; bottom: -0.36em; color: rgb(255 255 255 / 0.25); font-family: Georgia, serif; font-size: 12rem; font-style: italic; font-weight: 900; line-height: 1; transform: rotate(8deg); }
-.hb-hub-title > span { position: relative; z-index: 1; font-size: 0.65rem; font-weight: 950; letter-spacing: 0.09em; text-transform: uppercase; }
-.hb-hub-title h1 { position: relative; z-index: 1; margin: 1rem 0 0.8rem; color: inherit; font-size: clamp(3.3rem, 7vw, 6rem); line-height: 0.88; }
-.hb-hub-title p { position: relative; z-index: 1; max-width: 40rem; margin: 0; color: inherit; font-family: Georgia, serif; font-size: 1.12rem; line-height: 1.55; }
 
 .hb-article-title { margin: 1.5rem 0 2rem; padding-bottom: 2.5rem; border-bottom: 2px solid var(--hb-ink); }
 .hb-back-link { display: inline-block; margin-bottom: 3.2rem; color: var(--hb-ink-soft); font-size: 0.68rem; font-weight: 850; letter-spacing: 0.06em; text-decoration: none; text-transform: uppercase; }
@@ -459,7 +437,6 @@ button:focus-visible { outline: 3px solid var(--hb-blue); outline-offset: 4px; }
   .hb-brand i { display: none; }
   .hb-hero-actions { display: grid; }
   .hb-button { width: 100%; }
-  .hb-topic-directory { grid-template-columns: 1fr; }
   .hb-panic-strip > div { grid-template-columns: 1fr; }
   .hb-panic-strip a { border-right: 0; border-bottom: 1px solid color-mix(in srgb, var(--hb-paper), transparent 70%); }
   .hb-panic-strip a:last-child { border-bottom: 0; }

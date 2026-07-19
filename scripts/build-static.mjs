@@ -100,17 +100,24 @@ function pagefindPayloadFromFragment(filePath) {
 
 function verifyPageHtml(route, html) {
   const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
-  invariant((html.match(/<link\b[^>]*rel="canonical"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one canonical link.`);
+  const isNotFound = route === '/404.html';
+  const expectedCanonicalCount = isNotFound ? 0 : 1;
+  invariant((html.match(/<link\b[^>]*rel="canonical"[^>]*>/gi) ?? []).length === expectedCanonicalCount, `${route} must emit exactly ${expectedCanonicalCount} canonical links.`);
   invariant((html.match(/<meta\b[^>]*name="robots"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one robots directive.`);
   invariant((html.match(/<meta\b[^>]*property="og:title"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Open Graph title.`);
   invariant((html.match(/<meta\b[^>]*property="og:image"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Open Graph image.`);
   invariant((html.match(/<meta\b[^>]*name="twitter:card"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Twitter card.`);
   invariant(jsonLd.length === 1, `${route} must emit exactly one JSON-LD payload.`);
-  JSON.parse(jsonLd[0][1]);
+  const structuredData = JSON.parse(jsonLd[0][1]);
   invariant((html.match(/<h1\b/gi) ?? []).length === 1, `${route} must render exactly one H1.`);
 
-  const canonicalRoute = route === '/404.html' ? '/404/' : route;
-  invariant(html.includes(`href="https://howbiscuit.com${canonicalRoute}"`), `${route} has the wrong canonical URL.`);
+  if (isNotFound) {
+    invariant(!html.includes('property="og:url"'), 'The 404 artifact must not advertise an Open Graph canonical URL.');
+    invariant(!JSON.stringify(structuredData).includes('"@type":"WebPage"'), 'The 404 artifact must not advertise WebPage structured data.');
+  } else {
+    invariant(html.includes(`href="https://howbiscuit.com${route}"`), `${route} has the wrong canonical URL.`);
+    invariant((html.match(/<meta\b[^>]*property="og:url"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one Open Graph URL.`);
+  }
 
   const analyticsCounts = {
     umamiLoader: countText(html, 'https://analytics.bohodigitalservices.com/script.js'),
@@ -118,12 +125,12 @@ function verifyPageHtml(route, html) {
     gaLoader: countText(html, 'https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH'),
     gaConfig: countText(html, "gtag('config', 'G-NG0NQMVFEH'"),
   };
-  const expectedAnalyticsCount = route === '/404.html' ? 0 : 1;
+  const expectedAnalyticsCount = isNotFound ? 0 : 1;
   for (const [name, count] of Object.entries(analyticsCounts)) {
     invariant(count === expectedAnalyticsCount, `${route} has ${count} ${name} occurrences; expected ${expectedAnalyticsCount}.`);
   }
 
-  if (route === '/404.html') {
+  if (isNotFound) {
     invariant(html.includes('content="noindex, nofollow"'), 'The 404 artifact must be noindex, nofollow.');
     invariant(html.includes('data-pagefind-ignore="all"'), 'The 404 artifact must be excluded from Pagefind.');
   } else {

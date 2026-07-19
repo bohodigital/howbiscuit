@@ -35,6 +35,7 @@ test('compiles canonical Phase C metadata and accessible math without duplicatin
   assert.match(article.html, /class="katex-mathml"/);
   assert.match(article.html, /id="the-short-answer"/);
   assert.match(article.html, /aria-label="Equation 1"/);
+  assert.match(article.html, /<aside class="hb-latex-box" aria-label="[^"]+">/);
   assert.doesNotMatch(article.html, /hb-latex-sources|hb-latex-related/);
   assert.equal(article.outline.filter((item) => item.depth === 2).length, 4);
 });

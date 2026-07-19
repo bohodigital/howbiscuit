@@ -110,7 +110,7 @@ const testingLabels: Record<string, string> = {
 };
 ---
 
-<BaseLayout title={title} description={description} canonical={canonical} searchEligible={record.searchEligible} jsonLd={[articleSchema, breadcrumbSchema]} mainClass="hb-article-page">
+<BaseLayout title={title} description={description} canonical={canonical} searchEligible={record.searchEligible} jsonLd={[articleSchema, breadcrumbSchema]} ogType="article" mainClass="hb-article-page">
   <article class:list={['hb-article-shell', record.articleFormat === 'latex' && 'hb-latex-article']}>
     <Breadcrumbs items={breadcrumbItems} />
     <header class:list={['hb-article-title', record.articleFormat === 'latex' && 'hb-latex-site-context']}>
