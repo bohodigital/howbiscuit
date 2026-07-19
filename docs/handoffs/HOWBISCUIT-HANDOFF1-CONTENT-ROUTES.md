@@ -8,7 +8,7 @@ Accepted parent: `8158b1ec432fed60c424d97c84d9ff046f0505bb`
 
 Working branch: `repair/howbiscuit-h1-c-retired-architecture`
 
-Exact candidate commit: the commit containing this report. The canonical external work-order report records its resolved Git SHA because a tracked commit cannot self-reference its own SHA. The direct Git parent is `aa754f607721c17735ea5f59053c93e1761ce644`; `0cf652059498d576334c27255ad73b56e2c0bb4a` is the last owner-accepted Phase C candidate and the Phase D repair base. No verdict or owner acceptance transfers from either predecessor to the commit containing this report.
+Exact candidate commit: the commit containing this report. The canonical external work-order report records its resolved Git SHA and direct parent because a tracked commit cannot self-reference either value without changing the value it tries to name. Commit `0cf652059498d576334c27255ad73b56e2c0bb4a` is the last owner-accepted Phase C candidate and the Phase D repair base. No verdict or owner acceptance transfers from that earlier candidate to the commit containing this report.
 
 ## Phase boundary and status
 
