@@ -13,12 +13,15 @@ import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs'
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const packageJson = JSON.parse(readFileSync(path.join(root, 'package.json'), 'utf8'));
+const packageLock = JSON.parse(readFileSync(path.join(root, 'package-lock.json'), 'utf8'));
 const taxonomy = await loadTypeScriptModule(path.join(root, 'src/config/public-taxonomy.ts'));
 
 test('Phase C declares every active build integration as a direct dependency', () => {
   for (const dependency of ['@astrojs/mdx', '@astrojs/rss', 'pagefind']) {
     assert.ok(Object.hasOwn(packageJson.dependencies, dependency), `${dependency} must be a direct dependency`);
   }
+  assert.equal(packageJson.dependencies.astro, '6.4.6');
+  assert.equal(packageLock.packages['node_modules/astro'].version, '6.4.6');
   assert.equal(Object.hasOwn(packageJson.dependencies, '@astrojs/sitemap'), false);
 });
 
