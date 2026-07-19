@@ -50,6 +50,18 @@ function htmlText(value) {
   return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 }
 
+function contrastRatio(foreground, background) {
+  const luminance = (hex) => {
+    const channels = hex.match(/[a-f\d]{2}/gi).map((value) => Number.parseInt(value, 16) / 255);
+    const linear = channels.map((value) => (
+      value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4
+    ));
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+  };
+  const [lighter, darker] = [luminance(foreground), luminance(background)].sort((a, b) => b - a);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
 const pages = new Map(collectHtml(dist).map((file) => [routeFor(file), readFileSync(file, 'utf8')]));
 
 test('built artifact contains exactly the active Phase C routes plus the custom 404', () => {
@@ -86,6 +98,47 @@ test('built article semantics and public Pagefind labels match the normalized re
   const topicCrumb = breadcrumb.itemListElement.find((item) => item.name === 'Heating & Cooling');
   assert.equal(topicCrumb.item, 'https://howbiscuit.com/home/#topic-heating-cooling');
   assert.doesNotMatch(pages.get('/tools/'), /href="\/tools\/">View the Tools category/);
+});
+
+test('WCAG text, non-text, and reviewed selector contrast guards remain fail closed', () => {
+  const biscuitCss = read('src/styles/biscuit.css');
+  const shellCss = read('src/styles/shell.css');
+  for (const [foreground, background, minimum, label] of [
+    ['#b43a22', '#fff8e7', 4.5, 'light tomato text'],
+    ['#ff7759', '#111b23', 4.5, 'dark tomato text'],
+    ['#142432', '#ef6547', 4.5, 'light tomato hover text'],
+    ['#142432', '#ff7759', 4.5, 'dark tomato hover text'],
+    ['#142432', '#f7c94b', 4.5, 'light honey text'],
+    ['#142432', '#ffd05b', 4.5, 'dark honey text'],
+    ['#ffffff', '#315ee8', 4.5, 'light Home Tech title'],
+    ['#142432', '#7190ff', 4.5, 'dark Home Tech title'],
+    ['#f7c94b', '#142432', 4.5, 'light panic-strip label'],
+    ['#142432', '#fff7e5', 4.5, 'dark panic-strip label'],
+    ['#4e5b64', '#fff8e7', 4.5, 'light secondary text'],
+    ['#c6c9c4', '#111b23', 4.5, 'dark secondary text'],
+    ['#164aa8', '#f6f2e8', 4.5, 'LaTeX link text'],
+    ['#fff8e7', '#142432', 3, 'light panic-strip focus indicator'],
+    ['#111b23', '#fff7e5', 3, 'dark panic-strip focus indicator'],
+    ['#315ee8', '#f6f2e8', 3, 'dark LaTeX focus indicator'],
+    ['#315ee8', '#fff8e7', 3, 'light global focus indicator'],
+    ['#7190ff', '#111b23', 3, 'dark global focus indicator'],
+  ]) {
+    assert.ok(contrastRatio(foreground, background) >= minimum, `${label} must meet WCAG contrast`);
+  }
+  assert.match(biscuitCss, /--hb-tomato-text:\s*#b43a22/);
+  assert.match(biscuitCss, /--hb-ink-soft:\s*#4e5b64/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\][\s\S]*--hb-ink-soft:\s*#c6c9c4/);
+  assert.match(biscuitCss, /a:focus-visible,[\s\S]*button:focus-visible\s*\{[^}]*outline:\s*3px solid var\(--hb-blue\)/);
+  assert.match(biscuitCss, /\.hb-panic-strip a:hover\s*\{[^}]*background:\s*var\(--hb-tomato\);[^}]*color:\s*#142432/);
+  assert.match(biscuitCss, /\.hb-topic-directory a:hover p\s*\{[^}]*color:\s*#142432/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-hub-title\[data-division='home-tech'\]\s*\{[^}]*color:\s*#142432/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-panic-strip > p\s*\{[^}]*color:\s*#142432/);
+  assert.match(biscuitCss, /\.hb-panic-strip a:focus-visible\s*\{[^}]*outline-color:\s*var\(--hb-paper\)/);
+  assert.match(biscuitCss, /:root\[data-theme='dark'\] \.hb-latex-paper a:focus-visible\s*\{[^}]*outline-color:\s*#315ee8/);
+  assert.match(biscuitCss, /\.hb-latex-paper a\s*\{[^}]*color:\s*#164aa8/);
+  assert.match(shellCss, /\.hb-menu-guides a:hover small\s*\{[^}]*color:\s*#142432/);
+  assert.match(shellCss, /\.hb-disclosure a\s*\{[^}]*color:\s*#142432/);
+  assert.match(shellCss, /\.hb-disclosure a:focus-visible\s*\{[^}]*outline-color:\s*#142432/);
 });
 
 test('homepage uses registry-driven sections in the governed conceptual order', () => {

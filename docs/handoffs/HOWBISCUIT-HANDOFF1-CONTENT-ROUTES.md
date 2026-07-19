@@ -47,7 +47,7 @@ This is the complete Phase C migration matrix. “Included” refers to the fina
 
 ### Owner-approved resolution: Streaming TVs legacy route
 
-The governing handoff's exact row sends `/home-tech/streaming-tvs/` to `/home-tech/tvs-streaming/`, but that canonical topic is required to remain a 404 until it has at least three publishable guides. Sending visitors there now would therefore conflict with the same handoff's no-dead-destination and no-thin-topic rules. On 2026-07-18, the owner explicitly approved the safe one-hop recovery route `/home-tech/` while the topic is below threshold. A deterministic contract check requires the redirect to change atomically to `/home-tech/tvs-streaming/` once three real guides qualify. The decision is recorded in Bohopi on this Phase C work order; it resolves this route contradiction but does not accept the eventual Phase C completion commit.
+The governing handoff's exact row sends `/home-tech/streaming-tvs/` to `/home-tech/tvs-streaming/`, but that canonical topic is required to remain a 404 until it has at least three publishable guides. Sending visitors there now would therefore conflict with the same handoff's no-dead-destination and no-thin-topic rules. On 2026-07-18, the owner explicitly approved the safe one-hop recovery route `/home-tech/` while the topic is below threshold. At three real guides, the canonical threshold function computes `/home-tech/tvs-streaming/` and the deterministic build gate fails until `public/_redirects` is atomically updated to that destination. The decision is recorded in Bohopi on this Phase C work order; it resolves this route contradiction but does not accept the eventual Phase C completion commit.
 
 | Previous or requested route | New route or terminal status | Redirect code | Canonical destination | Sitemap | Pagefind | Reason |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ The governing handoff's exact row sends `/home-tech/streaming-tvs/` to `/home-te
 | `/home-tech/tvs-streaming/` | 404 while below threshold | — | None while hidden | Excluded | Excluded | The canonical topic needs three publishable guides before it becomes a 200 index. |
 | `/home-tech/gaming-pcs/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while Computers & Laptops is below threshold. |
 | `/home-tech/laptops/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Recover at the final category while Computers & Laptops is below threshold. |
-| `/home-tech/streaming-tvs/` | `/home-tech/` while below threshold; `/home-tech/tvs-streaming/` at three guides | 301 | Threshold-selected final destination | Source excluded; destination included | Source excluded; destination included | Owner-approved Phase C resolution: recover at the final category now, then switch atomically to the standalone topic when it becomes real. |
+| `/home-tech/streaming-tvs/` | `/home-tech/` while below threshold; `/home-tech/tvs-streaming/` at three guides | 301 | Threshold-selected final destination | Source excluded; destination included | Source excluded; destination included | Owner-approved Phase C resolution: recover at the final category now; at the threshold, the build gate requires an atomic redirect-artifact update to the real standalone topic. |
 | `/home-tech/wifi-routers/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
 | `/home-tech/smart-home/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
 | `/home-tech/privacy-security/` | `/home-tech/` | 301 | `/home-tech/` | Source excluded; destination included | Source excluded; destination included | Keep the zero-guide topic hidden and recover at its category. |
@@ -172,7 +172,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
 - Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, and exact normalized title, description, route, category, and type metadata in every fragment.
-- Node tests: 41 passed, 0 failed.
+- Node tests: 45 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.
@@ -194,7 +194,7 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - Native Pagefind remains unavailable on the Pi ARM64/16 KiB environment. The Pi validation artifact must omit Pagefind only after the platform guard passes. Every release artifact still requires the full x64 Pagefind build.
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
-- Phase C intentionally removed `@astrojs/sitemap` and its lockfile entries. Subsequent exact `npm ci` runs did not mutate the candidate lockfile. A fresh npm 11.7.0 audit on 2026-07-18 reported ten inherited findings (three low, five moderate, and two high); no forced audit rewrite or unrelated dependency change was applied in Phase C.
+- Phase C intentionally removed `@astrojs/sitemap` and its lockfile entries. Subsequent exact `npm ci` runs did not mutate the candidate lockfile. The final cold-install npm 11.7.0 snapshot on 2026-07-18 reported six findings (one low, four moderate, and one high); this supersedes the earlier ten-finding snapshot recorded before the final exact install. No forced audit rewrite or unrelated dependency change was applied in Phase C.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 - The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 
