@@ -244,6 +244,20 @@ const TOPIC_COMPATIBILITY: Readonly<Record<string, readonly [PublicCategoryId, s
   'home-diy/organization-storage': null,
 });
 
+export interface TopicRedirectMigration {
+  from: string;
+  topicRef: string;
+}
+
+export const TOPIC_REDIRECT_MIGRATIONS: readonly TopicRedirectMigration[] = Object.freeze([
+  Object.freeze({ from: '/home-tech/gaming-pcs/', topicRef: 'home-tech/gaming-pcs' }),
+  Object.freeze({ from: '/home-tech/laptops/', topicRef: 'home-tech/laptops' }),
+  Object.freeze({ from: '/home-tech/streaming-tvs/', topicRef: 'home-tech/streaming-tvs' }),
+  Object.freeze({ from: '/home-tech/wifi-routers/', topicRef: 'home-tech/wifi-routers' }),
+  Object.freeze({ from: '/home-tech/smart-home/', topicRef: 'home-tech/smart-home' }),
+  Object.freeze({ from: '/home-tech/privacy-security/', topicRef: 'home-tech/privacy-security' }),
+]);
+
 export function targetCategoryFor(id: string): { categoryId: PublicCategoryId; implemented: true } | null {
   if (!(id in CATEGORY_COMPATIBILITY)) return null;
   const categoryId = CATEGORY_COMPATIBILITY[id];

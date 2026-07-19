@@ -219,10 +219,17 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
     const expected = pagefindMetadataForRecord(record, taxonomy);
     const payload = fragmentByRoute.get(record.route);
     invariant(payload, `${label} has no Pagefind fragment for ${record.route}.`);
-    invariant(
-      payload.filters?.category?.includes(expected.filters.category),
-      `${label} Pagefind category filter differs for ${record.route}.`,
-    );
+    if (expected.filters.category) {
+      invariant(
+        payload.filters?.category?.includes(expected.filters.category),
+        `${label} Pagefind category filter differs for ${record.route}.`,
+      );
+    } else {
+      invariant(
+        !payload.filters?.category || payload.filters.category.length === 0,
+        `${label} invents a Pagefind category filter for ${record.route}.`,
+      );
+    }
     invariant(
       payload.filters?.type?.includes(expected.filters.type),
       `${label} Pagefind type filter differs for ${record.route}.`,

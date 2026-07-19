@@ -11,7 +11,7 @@ const PUBLIC_TYPE_LABELS = Object.freeze({
 });
 
 function publicCategoryLabel(record, taxonomy) {
-  if (record.categoryId === null || record.categoryId === undefined) return 'Editorial';
+  if (record.categoryId === null || record.categoryId === undefined) return null;
   const category = taxonomy?.PUBLIC_CATEGORIES?.find(({ id }) => id === record.categoryId);
   if (!category) throw new Error(`Unknown Pagefind category ${record.categoryId} for ${record.route}.`);
   return category.label;
@@ -35,10 +35,11 @@ export function pagefindMetadataForRecord(record, taxonomy) {
   }
   if (!publishable) return Object.freeze({ include: false });
 
+  const category = publicCategoryLabel(record, taxonomy);
   return Object.freeze({
     include: true,
     filters: Object.freeze({
-      category: publicCategoryLabel(record, taxonomy),
+      ...(category ? { category } : {}),
       type: publicTypeLabel(record),
     }),
     meta: Object.freeze({

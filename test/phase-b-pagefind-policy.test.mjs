@@ -44,6 +44,22 @@ test('eligible records receive complete Pagefind metadata', () => {
       route: publishable.route,
     },
   });
+  assert.deepEqual(pagefindMetadataForRecord({
+    ...publishable,
+    route: '/privacy/',
+    kind: 'trust',
+    articleType: 'trust',
+    categoryId: null,
+    topicId: null,
+  }, taxonomy), {
+    include: true,
+    filters: { type: 'Trust' },
+    meta: {
+      title: publishable.title,
+      description: publishable.description,
+      route: '/privacy/',
+    },
+  });
   assert.deepEqual(pagefindAttributesForPage(publishable), { 'data-pagefind-body': '' });
 });
 

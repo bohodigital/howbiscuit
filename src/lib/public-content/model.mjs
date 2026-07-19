@@ -429,6 +429,44 @@ export function topicMigrationDestinationForRegistry({ legacyRef, registry, taxo
   return mode === 'standalone' ? topic.route : category.route;
 }
 
+export function topicRedirectDestinationForRegistry({ sourceRoute, topicRef, registry, taxonomy }) {
+  if (
+    !isNonEmptyString(sourceRoute)
+    || !sourceRoute.startsWith('/')
+    || !sourceRoute.endsWith('/')
+    || sourceRoute.includes('*')
+  ) {
+    throw new Error(`Topic redirect sources must be exact trailing-slash routes: ${sourceRoute ?? 'missing'}`);
+  }
+  const destination = topicMigrationDestinationForRegistry({
+    legacyRef: topicRef,
+    registry,
+    taxonomy,
+  });
+  return destination === sourceRoute ? null : destination;
+}
+
+export function topicRedirectExpectationsForRegistry({ registry, taxonomy }) {
+  if (!Array.isArray(taxonomy?.TOPIC_REDIRECT_MIGRATIONS)) {
+    throw new Error('Canonical topic redirect migrations are missing.');
+  }
+  const seen = new Set();
+  return Object.freeze(taxonomy.TOPIC_REDIRECT_MIGRATIONS.map(({ from, topicRef }) => {
+    if (seen.has(from)) throw new Error(`Duplicate topic redirect source: ${from}`);
+    seen.add(from);
+    return Object.freeze({
+      from,
+      topicRef,
+      destination: topicRedirectDestinationForRegistry({
+        sourceRoute: from,
+        topicRef,
+        registry,
+        taxonomy,
+      }),
+    });
+  }));
+}
+
 function createTopicPageRecord({ category, topic, guides }) {
   return Object.freeze({
     kind: 'topic',

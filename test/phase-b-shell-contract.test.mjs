@@ -84,7 +84,11 @@ test('built article semantics and public Pagefind labels match the normalized re
   for (const record of publishableRegistry) {
     const html = pages.get(record.route);
     const expected = pagefindMetadataForRecord(record, taxonomy);
-    assert.match(html, new RegExp(`data-pagefind-filter="category">${htmlText(expected.filters.category)}<`), record.route);
+    if (expected.filters.category) {
+      assert.match(html, new RegExp(`data-pagefind-filter="category">${htmlText(expected.filters.category)}<`), record.route);
+    } else {
+      assert.doesNotMatch(html, /data-pagefind-filter="category"/, record.route);
+    }
     assert.match(html, new RegExp(`data-pagefind-filter="type">${htmlText(expected.filters.type)}<`), record.route);
   }
   const salt = pages.get('/articles/why-salt-melts-ice/');

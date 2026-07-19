@@ -187,9 +187,12 @@ const categoryAccent = categoryView?.id === 'home'
 ) : page.topic && topicView ? (
   <CategoryLayout title={pageRecord.title} description={pageRecord.description} canonical={page.route} searchEligible={pageRecord.searchEligible} sectionLabel="Topic">
     <p>This standalone index exists because the normalized registry contains at least three publishable guides for this topic.</p>
-    <div class="hb-guide-grid">
-      {topicView.guides.map((item) => <GuideCard label={item.evidence} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
-    </div>
+    <section aria-labelledby="topic-guides-title">
+      <h2 id="topic-guides-title">Guides</h2>
+      <div class="hb-guide-grid">
+        {topicView.guides.map((item) => <GuideCard label={item.evidence} title={item.title} description={item.description} href={item.route} meta={[item.readTime, item.evidence].filter(Boolean).join(' · ')} />)}
+      </div>
+    </section>
   </CategoryLayout>
 ) : null}
 

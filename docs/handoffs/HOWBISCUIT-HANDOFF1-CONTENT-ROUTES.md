@@ -49,6 +49,8 @@ This is the complete Phase C migration matrix. “Included” refers to the fina
 
 The governing handoff's exact row sends `/home-tech/streaming-tvs/` to `/home-tech/tvs-streaming/`, but that canonical topic is required to remain a 404 until it has at least three publishable guides. Sending visitors there now would therefore conflict with the same handoff's no-dead-destination and no-thin-topic rules. On 2026-07-18, the owner explicitly approved the safe one-hop recovery route `/home-tech/` while the topic is below threshold. At three real guides, the canonical threshold function computes `/home-tech/tvs-streaming/` and the deterministic build gate fails until `public/_redirects` is atomically updated to that destination. The decision is recorded in Bohopi on this Phase C work order; it resolves this route contradiction but does not accept the eventual Phase C completion commit.
 
+The same fail-closed transition contract covers every legacy or canonical Home Tech topic redirect declared by `TOPIC_REDIRECT_MIGRATIONS`. At the standalone threshold, an alias must redirect to its real topic route, while a redirect whose source is the canonical topic route must be removed so the generated page can be reached. The build gate rejects a stale redirect artifact or route contract; runtime code never mutates either tracked source.
+
 | Previous or requested route | New route or terminal status | Redirect code | Canonical destination | Sitemap | Pagefind | Reason |
 | --- | --- | --- | --- | --- | --- | --- |
 | `/` | Preserve 200 | — | `/` | Included | Included | Preserve the homepage. |
@@ -126,7 +128,7 @@ Every article uses the normalized record for:
 - structured source notes and deterministic related guides;
 - correction route;
 - Article and BreadcrumbList JSON-LD;
-- Pagefind title, description, category, and type metadata.
+- Pagefind title, description, route, human-readable type, and source-owned category metadata when a category exists.
 
 The specialized LaTeX paper retains its paper body and outline while sharing all of these global services.
 
@@ -146,6 +148,7 @@ One normalized registry contains all 16 public documents, while the same registr
 - homepage featured and latest guides;
 - category featured and latest guides;
 - topic visibility and future standalone topic indexes;
+- threshold-aware redirect destinations and canonical-topic redirect removal;
 - All Guides;
 - related guides;
 - RSS;
@@ -171,7 +174,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - TypeScript contract: passed.
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
-- Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, and exact normalized title, description, route, category, and type metadata in every fragment.
+- Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, exact normalized title, description, route, and type metadata in every fragment, and a public category filter only where canonical source metadata provides one.
 - Node tests: 45 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
@@ -182,7 +185,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - On the candidate lineage before the final blocking-review repairs, the desktop homepage, Home & Apartment category, and LaTeX article rendered from the built x64 artifact.
 - That lineage's search dialog focused its input, returned six Pagefind results for `salt`, closed deterministically, and returned focus to its trigger.
 - That lineage's mobile category and article passed at 390 by 844 CSS pixels with no horizontal overflow; mobile navigation opened with focus on Close, closed deterministically, and returned focus to the mobile trigger.
-- Exact repaired-tree artifact tests verify heading-level continuity, public category labels, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
+- Exact repaired-tree tests verify heading-level continuity, standalone-topic H1/H2/H3 order, truthful omission of category filters from categoryless records, all threshold-dependent redirect transitions, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
 - Exact repaired-SHA interactive replay remains required when the in-app browser backend becomes available; the backend returned unavailable during the first repaired-candidate review attempt.
 
 ### Raspberry Pi

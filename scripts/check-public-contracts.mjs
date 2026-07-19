@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
 import {
   createPublicSiteRegistry,
-  topicMigrationDestinationForRegistry,
   topicPublicationModeForRegistry,
+  topicRedirectExpectationsForRegistry,
 } from '../src/lib/public-content/model.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 
@@ -62,20 +62,9 @@ invariant(topicModes['kitchen/food-science'] === 'filter', 'Baking powder must a
 invariant(Object.entries(topicModes).every(([ref, mode]) => ['home/heating-cooling', 'kitchen/food-science'].includes(ref) ? mode === 'filter' : mode === 'hidden'), 'Zero-guide topics must remain hidden.');
 
 const redirectLines = readFileSync(path.join(root, 'public', '_redirects'), 'utf8').trim().split(/\r?\n/).filter(Boolean);
-const expectedRedirectLines = [
-  '/make-do/ /home/ 301',
-  '/cook/ /kitchen/ 301',
-  '/buying-guides/ /shop/ 301',
-  '/research-writing/ /editorial-policy/ 301',
-  '/home-tech/gaming-pcs/ /home-tech/ 301',
-  '/home-tech/laptops/ /home-tech/ 301',
-  '/home-tech/streaming-tvs/ /home-tech/ 301',
-  '/home-tech/wifi-routers/ /home-tech/ 301',
-  '/home-tech/smart-home/ /home-tech/ 301',
-  '/home-tech/privacy-security/ /home-tech/ 301',
-  '/cooking/* /kitchen/ 301',
-  '/make-do-lab/* /home/ 301',
-];
+const expectedRedirectLines = taxonomy.TARGET_ROUTE_CONTRACTS
+  .filter(({ outcome }) => outcome === 'redirect')
+  .map(({ route, canonicalRoute, redirectCode }) => `${route} ${canonicalRoute} ${redirectCode}`);
 invariant(JSON.stringify(redirectLines) === JSON.stringify(expectedRedirectLines), 'The deployed redirect matrix differs from the exact Phase C contract.');
 const redirectSource = readFileSync(path.join(root, 'public', '_redirects'), 'utf8');
 const redirectRules = taxonomy.parseSitesRedirectRules(redirectSource);
@@ -86,15 +75,27 @@ const exactTargets = new Map(redirectLines.flatMap((line) => {
 for (const [from, to] of exactTargets) {
   invariant(!exactTargets.has(to), `The deployed redirect matrix contains a chain: ${from} -> ${to}.`);
 }
-const streamingMigrationDestination = topicMigrationDestinationForRegistry({
-  legacyRef: 'home-tech/streaming-tvs',
+const topicRedirectExpectations = topicRedirectExpectationsForRegistry({
   registry,
   taxonomy,
 });
-invariant(
-  exactTargets.get('/home-tech/streaming-tvs/') === streamingMigrationDestination,
-  'The legacy Streaming TVs redirect must track the canonical topic publication threshold.',
-);
+for (const { from, destination } of topicRedirectExpectations) {
+  const routeContract = taxonomy.TARGET_ROUTE_CONTRACTS.find(({ route }) => route === from);
+  invariant(routeContract, `The topic migration ${from} is missing its route contract.`);
+  if (destination === null) {
+    invariant(!exactTargets.has(from), `${from} must stop redirecting when its standalone topic becomes publishable.`);
+    invariant(
+      routeContract.outcome !== 'redirect' && routeContract.canonicalRoute === from,
+      `${from} must become a canonical topic route atomically with redirect removal.`,
+    );
+  } else {
+    invariant(exactTargets.get(from) === destination, `${from} does not track its canonical topic threshold destination.`);
+    invariant(
+      routeContract.outcome === 'redirect' && routeContract.canonicalRoute === destination,
+      `${from} route contract does not match its threshold-selected redirect destination.`,
+    );
+  }
+}
 
 const workerSource = taxonomy.buildSitesWorkerSource(redirectSource);
 const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
@@ -145,5 +146,5 @@ console.log(JSON.stringify({
   workerRedirectRules: redirectRules.length,
   workerHostCanonicalization: 'www-to-apex',
   classifications: 'canonical-source-metadata',
-  streamingMigrationDestination,
+  topicRedirectExpectations: Object.fromEntries(topicRedirectExpectations.map(({ from, destination }) => [from, destination])),
 }, null, 2));

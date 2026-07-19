@@ -19,6 +19,7 @@ import {
   topicMigrationDestinationForRegistry,
   topicNavigationDestinationForRegistry,
   topicPublicationModeForRegistry,
+  topicRedirectExpectationsForRegistry,
 } from '../src/lib/public-content/model.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
 import { createPublicPageCatalog } from '../src/lib/public-content/site-registry.mjs';
@@ -68,6 +69,14 @@ test('Phase C taxonomy activates exactly five categories and 31 threshold-gated 
     baselineLabels: ['All Articles', 'Articles'],
     implemented: true,
   });
+  assert.deepEqual(taxonomy.TOPIC_REDIRECT_MIGRATIONS, [
+    { from: '/home-tech/gaming-pcs/', topicRef: 'home-tech/gaming-pcs' },
+    { from: '/home-tech/laptops/', topicRef: 'home-tech/laptops' },
+    { from: '/home-tech/streaming-tvs/', topicRef: 'home-tech/streaming-tvs' },
+    { from: '/home-tech/wifi-routers/', topicRef: 'home-tech/wifi-routers' },
+    { from: '/home-tech/smart-home/', topicRef: 'home-tech/smart-home' },
+    { from: '/home-tech/privacy-security/', topicRef: 'home-tech/privacy-security' },
+  ]);
 });
 
 test('topic thresholds remain contiguous and fail closed', () => {
@@ -266,13 +275,14 @@ test('current data exposes only two category filters and no standalone topic pag
     legacyRef: 'home-tech/streaming-tvs', registry, taxonomy,
   }), '/home-tech/');
   const template = registry.find(({ articleType }) => articleType === 'guide');
-  const withThreeStreamingGuides = [0, 1, 2].reduce((items, index) => ([...items, {
+  const withThreeGuides = (categoryId, topicId) => [0, 1, 2].reduce((items, index) => ([...items, {
     ...template,
-    route: `/articles/streaming-threshold-${index}/`,
-    slug: `streaming-threshold-${index}`,
-    categoryId: 'home-tech',
-    topicId: 'tvs-streaming',
+    route: `/articles/${categoryId}-${topicId}-threshold-${index}/`,
+    slug: `${categoryId}-${topicId}-threshold-${index}`,
+    categoryId,
+    topicId,
   }]), registry);
+  const withThreeStreamingGuides = withThreeGuides('home-tech', 'tvs-streaming');
   assert.equal(topicMigrationDestinationForRegistry({
     legacyRef: 'home-tech/streaming-tvs', registry: withThreeStreamingGuides, taxonomy,
   }), '/home-tech/tvs-streaming/');
@@ -288,6 +298,28 @@ test('current data exposes only two category filters and no standalone topic pag
     topicId: 'tvs-streaming',
     taxonomy,
   }), '/home-tech/tvs-streaming/');
+
+  assert.deepEqual(
+    topicRedirectExpectationsForRegistry({ registry, taxonomy }).map(({ from, destination }) => [from, destination]),
+    taxonomy.TOPIC_REDIRECT_MIGRATIONS.map(({ from }) => [from, '/home-tech/']),
+  );
+  for (const migration of taxonomy.TOPIC_REDIRECT_MIGRATIONS) {
+    const target = taxonomy.targetTopicFor(migration.topicRef);
+    assert.ok(target, migration.topicRef);
+    const category = taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === target.categoryId);
+    const topic = category.topics.find(({ id }) => id === target.topicId);
+    const thresholdRegistry = withThreeGuides(target.categoryId, target.topicId);
+    const expectation = topicRedirectExpectationsForRegistry({ registry: thresholdRegistry, taxonomy })
+      .find(({ from }) => from === migration.from);
+    assert.equal(expectation.destination, migration.from === topic.route ? null : topic.route, migration.from);
+  }
+
+  const routeSource = readFileSync(path.join(root, 'src/pages/[...slug].astro'), 'utf8');
+  const topicBranchStart = routeSource.indexOf(') : page.topic && topicView ? (');
+  assert.ok(topicBranchStart >= 0, 'The standalone topic branch is missing.');
+  const topicBranch = routeSource.slice(topicBranchStart);
+  assert.match(topicBranch, /<h2 id="topic-guides-title">Guides<\/h2>/);
+  assert.ok(topicBranch.indexOf('<h2 id="topic-guides-title">') < topicBranch.indexOf('<GuideCard'));
 });
 
 test('homepage, latest, featured, and related ordering are deterministic', () => {

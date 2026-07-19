@@ -129,7 +129,9 @@ const pagefindAttributes = pagefindAttributesForPage(pagefindRecord ?? { searchE
     <main id="main-content" class:list={['hb-main', mainClass]} {...pagefindAttributes}>
       {pagefindMetadata.include && (
         <Fragment>
-          <span hidden aria-hidden="true" data-pagefind-filter="category">{pagefindMetadata.filters.category}</span>
+          {pagefindMetadata.filters.category && (
+            <span hidden aria-hidden="true" data-pagefind-filter="category">{pagefindMetadata.filters.category}</span>
+          )}
           <span hidden aria-hidden="true" data-pagefind-filter="type">{pagefindMetadata.filters.type}</span>
           <span hidden aria-hidden="true" data-pagefind-meta="title">{pagefindMetadata.meta.title}</span>
           <span hidden aria-hidden="true" data-pagefind-meta="description">{pagefindMetadata.meta.description}</span>
