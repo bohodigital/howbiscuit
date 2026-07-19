@@ -6,9 +6,9 @@ Work order: `WO-2026-07-17-HOWBISCUIT-HANDOFF1-CONTENT-ROUTES-003`
 
 Accepted parent: `8158b1ec432fed60c424d97c84d9ff046f0505bb`
 
-Working branch: `feature/howbiscuit-h1-c-content-routes`
+Working branch: `repair/howbiscuit-h1-c-node-engine-contract`
 
-Exact candidate commit: the commit containing this report. The canonical work-order report records its resolved Git SHA because a commit cannot reliably name itself.
+Exact candidate commit: the commit containing this report. The canonical external work-order report records its resolved Git SHA because a tracked commit cannot self-reference its own SHA. The direct repair predecessor is `576ef1c659b95a32cdf087dd9ee9ed1b2b773553`; no verdict or owner acceptance transfers from that predecessor.
 
 ## Phase boundary and status
 
@@ -163,7 +163,7 @@ The generated artifact contains 17 HTML files: the exact 16 Phase C document rou
 
 Starlight remains fully absent from the public runtime, content schema, integrations, source tree, package manifest, and lockfile. The custom catch-all renderer owns the exact Phase C route boundary.
 
-No dependency was added. The redundant `@astrojs/sitemap` integration and package were removed so the registry-owned sitemap endpoint is the sole sitemap generator.
+No dependency was added. The redundant `@astrojs/sitemap` integration and package were removed so the registry-owned sitemap endpoint is the sole sitemap generator. The declared Node policy supports the default native TypeScript-loading boundary on Node 22 from `22.18.0`, intentionally excludes the non-LTS Node 23 major, and supports Node 24 and later from `24.0.0`.
 
 ## Validation evidence
 
@@ -175,7 +175,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
 - Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, exact normalized title, description, route, and type metadata in every fragment, and a public category filter only where canonical source metadata provides one.
-- Node tests: 46 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards and adding executable primary-navigation state coverage.
+- Node tests: 47 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards, adding executable primary-navigation state coverage, and enforcing the supported Node-range boundaries.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.

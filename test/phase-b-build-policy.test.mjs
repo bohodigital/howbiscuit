@@ -25,10 +25,34 @@ test('Phase C declares every active build integration as a direct dependency', (
   assert.equal(Object.hasOwn(packageJson.dependencies, '@astrojs/sitemap'), false);
 });
 
-test('the declared Node floor matches the native TypeScript-loading contract', () => {
-  assert.equal(packageJson.engines.node, '>=22.18.0');
+test('the declared Node ranges match the default native TypeScript-loading contract', () => {
+  const expectedRange = '^22.18.0 || >=24.0.0';
+  const policyAllows = (version) => {
+    const [major, minor, patch] = version.split('.').map(Number);
+    assert.ok([major, minor, patch].every(Number.isInteger), `invalid test version: ${version}`);
+    return (major === 22 && (minor > 18 || (minor === 18 && patch >= 0))) || major >= 24;
+  };
+
+  assert.equal(packageJson.engines.node, expectedRange);
   assert.equal(packageLock.packages[''].engines.node, packageJson.engines.node);
   assert.doesNotMatch(packageJson.scripts.test, /experimental-strip-types/);
+  assert.deepEqual(
+    Object.fromEntries(
+      ['22.17.99', '22.18.0', '22.99.0', '23.0.0', '23.6.0', '23.99.0', '24.0.0', '25.0.0'].map(
+        (version) => [version, policyAllows(version)],
+      ),
+    ),
+    {
+      '22.17.99': false,
+      '22.18.0': true,
+      '22.99.0': true,
+      '23.0.0': false,
+      '23.6.0': false,
+      '23.99.0': false,
+      '24.0.0': true,
+      '25.0.0': true,
+    },
+  );
 });
 
 test('normal build and QA lanes run the explicit Pagefind build and reject skip leakage', () => {
