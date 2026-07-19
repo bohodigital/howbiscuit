@@ -25,6 +25,12 @@ test('Phase C declares every active build integration as a direct dependency', (
   assert.equal(Object.hasOwn(packageJson.dependencies, '@astrojs/sitemap'), false);
 });
 
+test('the declared Node floor matches the native TypeScript-loading contract', () => {
+  assert.equal(packageJson.engines.node, '>=22.18.0');
+  assert.equal(packageLock.packages[''].engines.node, packageJson.engines.node);
+  assert.doesNotMatch(packageJson.scripts.test, /experimental-strip-types/);
+});
+
 test('normal build and QA lanes run the explicit Pagefind build and reject skip leakage', () => {
   assert.match(packageJson.scripts.build, /scripts\/build-static\.mjs/);
   assert.match(packageJson.scripts.test, /npm run build/);

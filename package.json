@@ -5,7 +5,7 @@
   "type": "module",
   "description": "How Biscuit publishing shell built with custom Astro components.",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.18.0"
   },
   "scripts": {
     "latex:compile": "node scripts/compile-latex-articles.mjs",
