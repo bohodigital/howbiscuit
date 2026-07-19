@@ -266,12 +266,6 @@ function normalizeContent(source, taxonomy) {
     thin,
     redirectState,
     retirementState,
-    legacy: Object.freeze({
-      division: source.legacyDivision,
-      subtopic: source.legacySubtopic,
-      sourceKind: source.sourceKind,
-      sourcePath: source.sourcePath,
-    }),
     provenance: Object.freeze({
       title: 'source',
       description: 'source',
@@ -337,7 +331,6 @@ function normalizePublicPage(source, taxonomy) {
     thin,
     redirectState,
     retirementState,
-    legacy: Object.freeze({ sourceKind: source.sourceKind, sourcePath: source.sourcePath }),
     provenance: Object.freeze({
       title: 'source',
       description: 'source',
@@ -491,7 +484,6 @@ function createTopicPageRecord({ category, topic, guides }) {
     thin: false,
     redirectState: null,
     retirementState: null,
-    legacy: Object.freeze({ sourceKind: 'generated-topic', sourcePath: null }),
     provenance: Object.freeze({
       title: 'taxonomy',
       description: 'taxonomy',

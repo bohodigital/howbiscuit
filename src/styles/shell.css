@@ -87,8 +87,8 @@ button, input { font: inherit; }
 .hb-category-menu summary > span {
   width: 0.42rem;
   height: 0.42rem;
-  border-right: 2px solid var(--hb-tomato);
-  border-bottom: 2px solid var(--hb-tomato);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: translateY(-0.1rem) rotate(45deg);
 }
 .hb-category-menu[open] summary,

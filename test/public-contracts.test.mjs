@@ -378,4 +378,16 @@ test('legacy adapters are absent from the source tree', () => {
   assert.equal(existsSync(path.join(root, 'src/data/site-taxonomy.mjs')), false);
   assert.equal(existsSync(path.join(root, 'src/lib/public-content/classification-manifest.mjs')), false);
   assert.doesNotMatch(readFileSync(path.join(root, 'astro.config.mjs'), 'utf8'), /starlight|sitemap\(/i);
+  assert.doesNotMatch(
+    readFileSync(path.join(root, 'src/config/public-taxonomy.ts'), 'utf8'),
+    /BASELINE_LEGACY_NAVIGATION|OBSERVED_ROUTE_CONTRACTS|resolveObservedRoute/,
+  );
+  assert.doesNotMatch(
+    readFileSync(path.join(root, 'src/lib/public-content/source-adapter.mjs'), 'utf8'),
+    /legacyDivision|legacySubtopic|data\.division|data\.subtopic/,
+  );
+  assert.doesNotMatch(
+    readFileSync(path.join(root, 'src/lib/public-content/model.mjs'), 'utf8'),
+    /\blegacy:\s*Object\.freeze/,
+  );
 });

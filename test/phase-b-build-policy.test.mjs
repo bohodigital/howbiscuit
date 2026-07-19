@@ -1,10 +1,15 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import semver from 'semver';
 
+import {
+  assertSupportedNodeVersion,
+  SUPPORTED_NODE_RANGE,
+} from '../scripts/check-node-version.mjs';
 import {
   assertFullPagefindLane,
   assertPiPagefindSkipAllowed,
@@ -30,10 +35,12 @@ test('the declared Node ranges match the default native TypeScript-loading contr
   const expectedRange = '^22.18.0 || ^24.0.0';
 
   assert.equal(packageJson.engines.node, expectedRange);
+  assert.equal(SUPPORTED_NODE_RANGE, expectedRange);
   assert.equal(packageLock.packages[''].engines.node, packageJson.engines.node);
-  assert.equal(packageJson.devDependencies.semver, '7.8.5');
-  assert.equal(packageLock.packages[''].devDependencies.semver, packageJson.devDependencies.semver);
-  assert.equal(packageLock.packages['node_modules/semver'].version, packageJson.devDependencies.semver);
+  assert.equal(packageJson.dependencies.semver, '7.8.5');
+  assert.equal(packageLock.packages[''].dependencies.semver, packageJson.dependencies.semver);
+  assert.equal(packageLock.packages['node_modules/semver'].version, packageJson.dependencies.semver);
+  assert.equal(Object.hasOwn(packageJson.devDependencies ?? {}, 'semver'), false);
   assert.doesNotMatch(packageJson.scripts.test, /experimental-strip-types/);
   assert.deepEqual(
     Object.fromEntries(
@@ -53,6 +60,35 @@ test('the declared Node ranges match the default native TypeScript-loading contr
       '26.0.0': false,
     },
   );
+  for (const version of ['22.18.0', '22.99.0', '24.0.0', '24.99.0']) {
+    assert.equal(assertSupportedNodeVersion(version), version);
+  }
+  for (const version of ['22.17.99', '23.0.0', '23.99.0', '25.0.0', '26.0.0']) {
+    assert.throws(() => assertSupportedNodeVersion(version), /Unsupported Node\.js/);
+  }
+  assert.equal(packageJson.scripts.preinstall, 'node scripts/check-node-version.mjs');
+  for (const scriptName of [
+    'latex:compile',
+    'latex:check',
+    'contracts:check',
+    'typecheck:contracts',
+    'dev',
+    'build',
+    'build:sites',
+    'preview',
+    'check',
+    'test',
+    'lint:content',
+    'qa',
+    'qa:pi',
+    'qa:pi:inner',
+  ]) {
+    assert.match(packageJson.scripts[scriptName], /^npm run runtime:check && /, `${scriptName} must fail closed first`);
+  }
+  assert.doesNotThrow(() => execFileSync(process.execPath, [path.join(root, 'scripts', 'check-node-version.mjs')], {
+    cwd: root,
+    stdio: 'pipe',
+  }));
 });
 
 test('normal build and QA lanes run the explicit Pagefind build and reject skip leakage', () => {
@@ -74,7 +110,8 @@ test('normal build and QA lanes run the explicit Pagefind build and reject skip 
     /prepare-sites-build\.mjs.*--finalize-sites-package.*--verify-sites-package/,
   );
   assert.match(buildScript, /sitemap route set/);
-  assert.match(buildScript, /llms\.txt/);
+  assert.match(buildScript, /assertSetsEqual\(new Set\(articleRoutes\), feedRoutes/);
+  assert.match(buildScript, /assertSetsEqual\(expectedEligibleRoutes, llmsRoutes/);
   assert.match(buildScript, /_headers differs byte-for-byte/);
 
   assert.doesNotThrow(() => assertFullPagefindLane({ skipRequested: false, lane: 'build' }));

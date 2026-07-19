@@ -25,6 +25,8 @@ Fresh Phase D independent acceptance rejected predecessor `0cf652059498d576334c2
 
 This replacement removes the dead stylesheet architecture and reverses its stale test assertion. A nullable canonical contract now makes the custom 404 omit `rel=canonical`, `og:url`, and `WebPage` structured data while retaining `noindex, nofollow`, recovery content, and Pagefind exclusion. The static-build verifier and built-artifact tests fail closed if that behavior regresses. The same bounded repair gives generated LaTeX biscuit-box landmarks accessible names, restores the approved **Browse All Guides** CTA, and emits `og:type=article` on article pages. These changes do not alter taxonomy, redirects, public eligibility, article canonicals, analytics, or LaTeX safety.
 
+The first replacement review then found five further P2 defects: the bounded Node policy was declarative rather than executable, retired observed-route and division/subtopic data structures remained exported, storage denial bypassed dark system preference during theme bootstrap, the categoryless editorial standard rendered duplicate classifications and a fabricated `articleSection`, and the custom disclosure chevron fell below 3:1 contrast on honey states. This final bounded repair adds an executable Node guard to install and every governed npm entrypoint, removes the unused retired structures, deterministically tests storage-denied system theme resolution, renders explicitly named category/topic/type classifications without inventing a category, and makes the chevron inherit the high-contrast text color. RSS and `llms.txt` artifact checks now reject both missing and unexpected canonical routes.
+
 ## Taxonomy
 
 The active public categories are:
@@ -170,7 +172,7 @@ The generated artifact contains 17 HTML files: the exact 16 Phase C document rou
 
 Starlight remains fully absent from the public runtime, content schema, integrations, source tree, package manifest, and lockfile. The custom catch-all renderer owns the exact Phase C route boundary.
 
-No dependency was added. The redundant `@astrojs/sitemap` integration and package were removed so the registry-owned sitemap endpoint is the sole sitemap generator. The declared Node policy supports the default native TypeScript-loading boundary on Node 22 from `22.18.0`, intentionally excludes the non-LTS Node 23 major, and supports Node 24 and later from `24.0.0`.
+The redundant `@astrojs/sitemap` integration and package were removed so the registry-owned sitemap endpoint is the sole sitemap generator. Pinned `semver@7.8.5` is now a direct runtime dependency of the fail-closed Node guard. The declared Node policy supports the default native TypeScript-loading boundary on Node 22 from `22.18.0`, intentionally excludes the non-LTS Node 23 major, supports the Node 24 major from `24.0.0`, and rejects Node 25 and later until those majors receive their own governed validation.
 
 ## Validation evidence
 
@@ -179,10 +181,10 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - LaTeX deterministic compile and check: passed for one canonical article.
 - Normalized public contract: 5 categories, 31 topics, 3 articles, 16 document routes, 2 category-filter topics, 0 standalone topic indexes, and 0 redirect chains.
 - TypeScript contract: passed.
-- Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
+- Astro diagnostics: 73 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
-- Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, exact normalized title, description, route, and type metadata in every fragment, and a public category filter only where canonical source metadata provides one.
-- Node tests: 47 passed, 0 failed, including fail-closed guards for retired stylesheet architecture, canonical-free 404 metadata, named complementary landmarks, article Open Graph type, primary-navigation state, and supported Node-range boundaries.
+- Pagefind: 16 eligible pages, 16 real indexed fragments, 1,019 indexed words, 2 populated filters, exact normalized title, description, route, and type metadata in every fragment, and a public category filter only where canonical source metadata provides one.
+- Node tests: 48 passed, 0 failed, including fail-closed guards for retired source and stylesheet architecture, canonical-free 404 metadata, named complementary landmarks, article Open Graph type, primary-navigation state, exact RSS/`llms.txt` route sets, storage-denied system-theme resolution, truthful categoryless classification, and executable supported-Node boundaries.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.
@@ -192,7 +194,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - On the candidate lineage before the final blocking-review repairs, the desktop homepage, Home & Apartment category, and LaTeX article rendered from the built x64 artifact.
 - That lineage's search dialog focused its input, returned six Pagefind results for `salt`, closed deterministically, and returned focus to its trigger.
 - That lineage's mobile category and article passed at 390 by 844 CSS pixels with no horizontal overflow; mobile navigation opened with focus on Close, closed deterministically, and returned focus to the mobile trigger.
-- Exact repaired-tree tests verify heading-level continuity, standalone-topic H1/H2/H3 order, truthful omission of category filters from categoryless records, all threshold-dependent redirect transitions, guide-only homepage shelves, current category/section state across desktop, mobile, and no-JavaScript primary navigation, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
+- Exact repaired-tree tests verify heading-level continuity, standalone-topic H1/H2/H3 order, truthful omission of category filters from categoryless records, all threshold-dependent redirect transitions, guide-only homepage shelves, current category/section state across desktop, mobile, and no-JavaScript primary navigation, storage-denied dark-system theme bootstrap, high-contrast disclosure indicators, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
 - The in-app browser rejected both loopback and private-LAN HTTP preview URLs during this repair's pre-commit validation. Exact-SHA interactive replay therefore remains a Phase D requirement against the owner-restricted HTTPS Sites preview; no local-browser success is claimed here.
 
 ### Raspberry Pi
@@ -205,18 +207,18 @@ The canonical work-order report records the exact clean candidate SHA, Pi transf
 - The current registry has only three real articles. Twenty-nine zero-guide topics remain hidden, two one-guide topics remain category filters, and no standalone topic index exists yet.
 - Shop Smarter has no verified product dataset, rankings, deals, live prices, or merchant data. Its state is explicit and non-transactional.
 - Standard and generated LaTeX article asides now carry accessible names. Generic classification, topic-label, and search-result containers use explicit nameable roles, and article evidence/testing badges expose the normalized source-owned values rather than generic declared states.
-- The supported runtime is deliberately bounded to the validated Node 22 and Node 24 majors (`^22.18.0 || ^24.0.0`). The regression uses npm's pinned `semver` implementation and proves Node 23 and future majors fail closed.
+- The supported runtime is deliberately bounded to the validated Node 22 and Node 24 majors (`^22.18.0 || ^24.0.0`). Install and every governed npm entrypoint execute the pinned-semver guard before work begins; regressions prove Node 23 and future majors fail closed.
 - Phase C intentionally removed `@astrojs/sitemap` and its lockfile entries. A later exact cold install refreshed npm's advisory data and reported ten findings, including two high-severity Astro advisories affecting `6.4.2`. Phase C therefore took the narrow compatible patch from Astro `6.4.2` to `6.4.6`; the post-update cold npm 11.7.0 install reports seven remaining findings (three low and four moderate) and no high or critical finding. `npm audit fix --package-lock-only --dry-run` proposed no lockfile change; resolving the residual toolchain advisories would require broader major-version work, so no forced audit rewrite was applied.
 - Browser evidence is local candidate-lineage evidence rather than final repaired-SHA or public-production evidence. Production remains unchanged.
 - The packaged Worker contains the supported `www`-to-apex behavior, but the public host remains unchanged until the separately approved release lane deploys and verifies it live.
 
 ## Changed-file scope
 
-The candidate changes exactly 70 paths from the accepted Phase B parent. A manager-reviewed five-path exception above the original 65-path ceiling is recorded in Bohopi: `src/styles/biscuit.css` removes the globally shipped retired architecture that caused Phase D's rejection, while `src/components/BiscuitBox.astro`, `src/components/RelatedShelf.astro`, `src/components/EvidenceBadge.astro`, and `src/components/TestingBadge.astro` resolve the exact-SHA accessibility and evidence-truth review findings. All 70 paths remain within the Phase C allowlist; the repair introduces no new feature or system. The canonical work-order report records the exact sorted inventory and diff proof.
+The candidate changes exactly 72 paths from the accepted Phase B parent. A manager-reviewed seven-path exception above the original 65-path ceiling is recorded in Bohopi: `src/styles/biscuit.css` removes the globally shipped retired architecture that caused Phase D's rejection; `src/components/BiscuitBox.astro`, `src/components/RelatedShelf.astro`, `src/components/EvidenceBadge.astro`, and `src/components/TestingBadge.astro` resolve exact-SHA accessibility and evidence-truth findings; `src/styles/shell.css` repairs the reviewed disclosure-indicator contrast defect; and `scripts/check-node-version.mjs` makes the already-approved runtime boundary executable. All 72 paths remain within the Phase C allowlist; the repair introduces no new feature or system. The canonical work-order report records the exact sorted inventory and diff proof.
 
 ## Rollback
 
-Before merge, restore the accepted Phase B parent by reverting or removing the complete range `8158b1ec432fed60c424d97c84d9ff046f0505bb..candidate` newest-to-oldest, then reinstall with the pinned lockfile and rerun the accepted Phase B x64 QA lane. If Phase C is later squash-merged, revert that squash commit instead. Any production rollback remains a separate owner-approved release action.
+Before merge, abandon this isolated branch/worktree and recreate it from exact accepted Phase B commit `8158b1ec432fed60c424d97c84d9ff046f0505bb`; the accepted parent remains immutable, so no source-history mutation is required. If a retained candidate branch instead needs a reverse commit, run `git revert --no-commit 8158b1ec432fed60c424d97c84d9ff046f0505bb..HEAD`, inspect the staged reversal, commit it, reinstall from the pinned lockfile, and rerun the accepted Phase B x64 QA lane. If Phase C is later squash-merged, revert that exact squash commit. Any production rollback remains a separate owner-approved release action.
 
 ## Acceptance gate
 

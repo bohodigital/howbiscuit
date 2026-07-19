@@ -3,6 +3,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import vm from 'node:vm';
 
 import { loadTypeScriptModule } from '../scripts/lib/load-typescript-module.mjs';
 import { createPublicSiteRegistry, isPublishablePublicRecord } from '../src/lib/public-content/model.mjs';
@@ -64,6 +65,22 @@ function contrastRatio(foreground, background) {
 
 const pages = new Map(collectHtml(dist).map((file) => [routeFor(file), readFileSync(file, 'utf8')]));
 
+test('theme bootstrap preserves dark system preference when storage is denied', () => {
+  const layoutSource = read('src/layouts/BaseLayout.astro');
+  const inlineScript = layoutSource.match(/<script is:inline>\s*([\s\S]*?)\s*<\/script>/);
+  assert.ok(inlineScript, 'theme bootstrap is missing');
+  const documentElement = { classList: { add() {} }, dataset: {} };
+  vm.runInNewContext(inlineScript[1], {
+    document: { documentElement },
+    localStorage: { getItem() { throw new Error('storage denied'); } },
+    matchMedia(query) {
+      assert.equal(query, '(prefers-color-scheme: dark)');
+      return { matches: true };
+    },
+  });
+  assert.deepEqual({ ...documentElement.dataset }, { themePreference: 'system', theme: 'dark' });
+});
+
 test('built artifact contains exactly the active Phase C routes plus the custom 404', () => {
   assert.deepEqual([...pages.keys()].sort(), [...PHASE_C_DOCUMENT_ROUTES, '/404.html'].sort());
   for (const route of RETIRED_DOCUMENT_ROUTES) assert.equal(pages.has(route), false, route);
@@ -106,6 +123,16 @@ test('built article semantics and public Pagefind labels match the normalized re
   const topicCrumb = breadcrumb.itemListElement.find((item) => item.name === 'Heating & Cooling');
   assert.equal(topicCrumb.item, 'https://howbiscuit.com/home/#topic-heating-cooling');
   assert.doesNotMatch(pages.get('/tools/'), /href="\/tools\/">View the Tools category/);
+
+  const editorial = pages.get('/articles/why-are-some-answers-better-than-others/');
+  const classification = editorial.match(/<div class="hb-article-labels"[^>]*>([\s\S]*?)<\/div>/);
+  assert.ok(classification);
+  assert.equal((classification[1].match(/Editorial standard/g) ?? []).length, 1);
+  assert.doesNotMatch(classification[1], /Category:/);
+  assert.match(classification[1], /Type: Editorial standard/);
+  const editorialSchema = jsonLd(editorial).find((entry) => entry['@type'] === 'Article');
+  assert.equal(Object.hasOwn(editorialSchema, 'articleSection'), false);
+  assert.equal(editorialSchema.about, 'Editorial standard');
 });
 
 test('WCAG text, non-text, and reviewed selector contrast guards remain fail closed', () => {
@@ -146,6 +173,7 @@ test('WCAG text, non-text, and reviewed selector contrast guards remain fail clo
   assert.match(shellCss, /\.hb-menu-guides a:hover small\s*\{[^}]*color:\s*#142432/);
   assert.match(shellCss, /\.hb-disclosure a\s*\{[^}]*color:\s*#142432/);
   assert.match(shellCss, /\.hb-disclosure a:focus-visible\s*\{[^}]*outline-color:\s*#142432/);
+  assert.match(shellCss, /\.hb-category-menu summary > span\s*\{[^}]*border-right:\s*2px solid currentColor;[^}]*border-bottom:\s*2px solid currentColor/);
 });
 
 test('homepage uses registry-driven sections in the governed conceptual order', () => {

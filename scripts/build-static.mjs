@@ -194,14 +194,17 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   const articleRoutes = acceptedRecords
     .filter(({ kind, feedEligible }) => kind === 'article' && feedEligible === true)
     .map(({ route }) => route);
-  for (const route of articleRoutes) {
-    invariant(feed.includes(`https://howbiscuit.com${route}`), `${label} feed is missing ${route}.`);
-  }
+  const feedRoutes = new Set(
+    [...feed.matchAll(/<item>[\s\S]*?<link>(?:<!\[CDATA\[)?https:\/\/howbiscuit\.com(\/[^<\]]+)(?:\]\]>)?<\/link>[\s\S]*?<\/item>/g)]
+      .map((match) => match[1]),
+  );
+  assertSetsEqual(new Set(articleRoutes), feedRoutes, `${label} feed route set`);
 
   const llms = readFileSync(path.join(artifactRoot, 'llms.txt'), 'utf8');
-  for (const route of expectedEligibleRoutes) {
-    invariant(llms.includes(`https://howbiscuit.com${route}`), `${label} llms.txt is missing ${route}.`);
-  }
+  const llmsRoutes = new Set(
+    [...llms.matchAll(/https:\/\/howbiscuit\.com(\/[^\s)]*)/g)].map((match) => match[1]),
+  );
+  assertSetsEqual(expectedEligibleRoutes, llmsRoutes, `${label} llms.txt route set`);
   invariant(llms.includes('hello@howbiscuit.com'), `${label} llms.txt is missing the public contact route.`);
 
   const pagefindRoot = path.join(artifactRoot, 'pagefind');

@@ -50,7 +50,6 @@ const { taxonomy, registry } = getPublicSiteData() as {
 };
 const category = record.categoryId ? taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === record.categoryId) : null;
 const topic = category?.topics.find(({ id }) => id === record.topicId) ?? null;
-const categoryLabel = category?.label ?? 'Editorial standard';
 const articleTypeLabel = record.articleType === 'editorial-standard' ? 'Editorial standard' : 'Guide';
 const outline = headings.filter(({ depth }) => depth === 2 || depth === 3);
 const topicHref = category && topic
@@ -87,7 +86,7 @@ const articleSchema = {
   url: absoluteUrl,
   datePublished: record.publishedDate ?? undefined,
   dateModified: record.updatedDate ?? record.publishedDate ?? undefined,
-  articleSection: categoryLabel,
+  ...(category ? { articleSection: category.label } : {}),
   about: topic?.label ?? articleTypeLabel,
   author: { '@type': 'Organization', name: 'How Biscuit' },
   publisher: { '@type': 'Organization', name: 'How Biscuit' },
@@ -115,9 +114,9 @@ const testingLabels: Record<string, string> = {
     <Breadcrumbs items={breadcrumbItems} />
     <header class:list={['hb-article-title', record.articleFormat === 'latex' && 'hb-latex-site-context']}>
       <div class="hb-article-labels" role="group" aria-label="Article classification">
-        <span>{categoryLabel}</span>
-        {topic && <span>{topic.label}</span>}
-        <span>{articleTypeLabel}</span>
+        {category && <span>Category: {category.label}</span>}
+        {topic && <span>Topic: {topic.label}</span>}
+        <span>Type: {articleTypeLabel}</span>
       </div>
       <h1>{title}</h1>
       <p class="hb-direct-answer">{record.answerSummary}</p>

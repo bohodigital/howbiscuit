@@ -286,13 +286,6 @@ export function hasTargetCategory(categoryId: string): categoryId is PublicCateg
   return categoryById.has(categoryId as PublicCategoryId);
 }
 
-export const BASELINE_LEGACY_NAVIGATION = Object.freeze({
-  sourceFile: 'src/data/site-taxonomy.mjs',
-  state: 'removed-in-phase-c',
-  targetAuthoritative: false,
-  removalWorkOrder: 'WO-2026-07-17-HOWBISCUIT-HANDOFF1-CONTENT-ROUTES-003',
-});
-
 interface RouteContract {
   route: string;
   outcome: 'serve' | 'preserve' | 'create' | 'redirect' | 'terminal' | 'threshold-gated';
@@ -305,73 +298,6 @@ interface RouteContract {
   reason: string;
   implemented?: boolean;
 }
-
-const observedServe = (route: string, reason: string): RouteContract => ({
-  route,
-  outcome: 'serve',
-  status: 200,
-  canonicalRoute: route,
-  redirectCode: null,
-  evidence: 'built-and-live',
-  reason,
-});
-
-export const OBSERVED_ROUTE_CONTRACTS: readonly RouteContract[] = Object.freeze([
-  observedServe('/', 'Existing homepage.'),
-  observedServe('/home-tech/', 'Existing Starlight category page.'),
-  observedServe('/tools/', 'Existing Starlight category page.'),
-  observedServe('/articles/', 'Existing article index; current labels are All Articles and Articles.'),
-  observedServe('/make-do/', 'Existing legacy Home and DIY category page.'),
-  observedServe('/cook/', 'Existing legacy Cooking category page.'),
-  observedServe('/buying-guides/', 'Existing legacy Buying Guides category page.'),
-  observedServe('/research-writing/', 'Existing legacy Research and Writing page.'),
-  observedServe('/science/', 'Existing legacy Everyday Science page.'),
-  observedServe('/glossary/', 'Existing legacy Glossary page.'),
-  observedServe('/home-tech/gaming-pcs/', 'Existing thin Home Tech topic page.'),
-  observedServe('/home-tech/laptops/', 'Existing thin Home Tech topic page.'),
-  observedServe('/home-tech/privacy-security/', 'Existing Home Tech topic page.'),
-  observedServe('/home-tech/smart-home/', 'Existing Home Tech topic page.'),
-  observedServe('/home-tech/streaming-tvs/', 'Existing thin Home Tech topic page.'),
-  observedServe('/home-tech/wifi-routers/', 'Existing Home Tech topic page.'),
-  ...[
-    '/articles/why-salt-melts-ice/',
-    '/articles/how-does-baking-powder-work/',
-    '/articles/why-are-some-answers-better-than-others/',
-    '/about/',
-    '/affiliate-disclosure/',
-    '/contact/',
-    '/corrections/',
-    '/editorial-policy/',
-    '/privacy/',
-  ].map((route) => observedServe(route, 'Existing canonical content route.')),
-  {
-    route: '/math/',
-    outcome: 'terminal',
-    status: 404,
-    canonicalRoute: null,
-    redirectCode: null,
-    evidence: 'live-http',
-    reason: 'No current source route exists.',
-  },
-  {
-    route: '/cooking/*',
-    outcome: 'redirect',
-    status: 301,
-    canonicalRoute: '/cook/:splat',
-    redirectCode: 301,
-    evidence: 'source-redirects',
-    reason: 'Current legacy wildcard declared in public/_redirects.',
-  },
-  {
-    route: '/make-do-lab/*',
-    outcome: 'redirect',
-    status: 301,
-    canonicalRoute: '/make-do/:splat',
-    redirectCode: 301,
-    evidence: 'source-redirects',
-    reason: 'Current legacy wildcard declared in public/_redirects.',
-  },
-]);
 
 const target = (
   route: string,
@@ -601,10 +527,6 @@ function resolveRoute(contracts: readonly RouteContract[], requestedRoute: strin
     redirectChain: chain,
     ...(typeof contract.implemented === 'boolean' ? { implemented: contract.implemented } : {}),
   };
-}
-
-export function resolveObservedRoute(route: string): Record<string, unknown> {
-  return resolveRoute(OBSERVED_ROUTE_CONTRACTS, route);
 }
 
 export function resolveTargetRoute(route: string): Record<string, unknown> {
