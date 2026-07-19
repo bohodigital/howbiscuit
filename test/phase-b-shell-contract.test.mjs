@@ -164,6 +164,7 @@ test('homepage uses registry-driven sections in the governed conceptual order', 
   assert.match(home, /Kitchen/);
   assert.match(home, /Shop Smarter/);
   assert.match(home, /Tools/);
+  assert.doesNotMatch(home, /Why Are Some Answers Better Than Others/);
   assert.doesNotMatch(home, /Check Local Prices<\/a>/);
 });
 
@@ -247,7 +248,13 @@ test('trust, recovery, redirects, navigation, and framework removal are truthful
   ]) assert.ok(redirects.includes(line), line);
   const header = read('src/components/SiteHeader.astro');
   assert.match(header, /href=\{category\.href\}/);
+  assert.match(header, /resolvePublicNavigationState/);
+  assert.match(header, /summary aria-current=\{navigationState\.categories\[category\.id\]\}/);
   assert.match(header, /published guide\$\{topic\.count === 1 \? '' : 's'\}/);
+  assert.match(pages.get('/home/'), /<summary aria-current="page"[^>]*>Home &amp; Apartment/);
+  assert.match(pages.get('/articles/why-salt-melts-ice/'), /<summary aria-current="true"[^>]*>Home &amp; Apartment/);
+  assert.match(pages.get('/articles/'), /class="hb-all-guides-link"[^>]*aria-current="page"/);
+  assert.match(pages.get('/articles/why-are-some-answers-better-than-others/'), /class="hb-all-guides-link"[^>]*aria-current="true"/);
   assert.equal(existsSync(path.join(root, 'src/data/site-taxonomy.mjs')), false);
   assert.equal(existsSync(path.join(root, 'src/lib/public-content/classification-manifest.mjs')), false);
   assert.doesNotMatch(read('package.json'), /@astrojs\/starlight|@astrojs\/sitemap/);

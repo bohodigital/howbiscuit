@@ -30,3 +30,32 @@ export function buildPublicNavigation({ taxonomy, categoryViews }) {
     allGuides: Object.freeze({ label: taxonomy.ALL_GUIDES_TARGET.label, href: taxonomy.ALL_GUIDES_TARGET.route }),
   });
 }
+
+export function resolvePublicNavigationState({ currentPath, navigation, registry }) {
+  if (typeof currentPath !== 'string' || !currentPath.startsWith('/')) {
+    throw new Error('A root-relative current path is required.');
+  }
+  if (!navigation || !Array.isArray(navigation.categories) || !navigation.allGuides) {
+    throw new Error('Normalized public navigation is required.');
+  }
+  if (!Array.isArray(registry)) throw new Error('The normalized article registry is required.');
+
+  const path = currentPath === '/' || currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+  const currentArticle = registry.find((record) => record.route === path);
+  const categoryRoute = navigation.categories.find((category) => category.href === path);
+  const topicCategory = navigation.categories.find((category) => category.topicLabels.some((topic) => (
+    topic.mode === 'standalone' && topic.href === path
+  )));
+  const activeCategoryId = categoryRoute?.id ?? topicCategory?.id ?? currentArticle?.categoryId ?? null;
+
+  return Object.freeze({
+    home: path === '/' ? 'page' : undefined,
+    allGuides: path === navigation.allGuides.href
+      ? 'page'
+      : currentArticle && activeCategoryId === null ? 'true' : undefined,
+    categories: Object.freeze(Object.fromEntries(navigation.categories.map((category) => [
+      category.id,
+      category.id === activeCategoryId ? (path === category.href ? 'page' : 'true') : undefined,
+    ]))),
+  });
+}

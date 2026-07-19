@@ -143,9 +143,9 @@ The specialized LaTeX paper retains its paper body and outline while sharing all
 
 ## Generated public surfaces
 
-One normalized registry contains all 16 public documents, while the same registry's article subset drives guide-only surfaces. One shared eligibility rule drives:
+One normalized registry contains all 16 public documents. Its article subset drives article-wide surfaces, while `isPublishableGuide` narrows every guide-labeled shelf to categorized guide records. One shared eligibility rule drives:
 
-- homepage featured and latest guides;
+- homepage featured and latest guide-only shelves;
 - category featured and latest guides;
 - topic visibility and future standalone topic indexes;
 - threshold-aware redirect destinations and canonical-topic redirect removal;
@@ -175,7 +175,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - Astro diagnostics: 72 files, 0 errors, 0 warnings, 0 hints.
 - Static build: 17 HTML files.
 - Pagefind: 16 eligible pages, 16 real indexed fragments, 2 populated filters, exact normalized title, description, route, and type metadata in every fragment, and a public category filter only where canonical source metadata provides one.
-- Node tests: 45 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards.
+- Node tests: 46 passed, 0 failed after restoring the accepted WCAG text/non-text contrast and selector regression guards and adding executable primary-navigation state coverage.
 - Content lint: 16 MDX pages and 22 built files.
 - Sites package: 17 HTML files, 16 eligible pages, 16 Pagefind fragments.
 - Loopback: home, All Guides, and the representative LaTeX article returned 200; a missing route returned 404.
@@ -185,7 +185,7 @@ No dependency was added. The redundant `@astrojs/sitemap` integration and packag
 - On the candidate lineage before the final blocking-review repairs, the desktop homepage, Home & Apartment category, and LaTeX article rendered from the built x64 artifact.
 - That lineage's search dialog focused its input, returned six Pagefind results for `salt`, closed deterministically, and returned focus to its trigger.
 - That lineage's mobile category and article passed at 390 by 844 CSS pixels with no horizontal overflow; mobile navigation opened with focus on Close, closed deterministically, and returned focus to the mobile trigger.
-- Exact repaired-tree tests verify heading-level continuity, standalone-topic H1/H2/H3 order, truthful omission of category filters from categoryless records, all threshold-dependent redirect transitions, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
+- Exact repaired-tree tests verify heading-level continuity, standalone-topic H1/H2/H3 order, truthful omission of category filters from categoryless records, all threshold-dependent redirect transitions, guide-only homepage shelves, current category/section state across desktop, mobile, and no-JavaScript primary navigation, the count-aware topic-link name, and that an ordinary article's table-of-contents navigation precedes its body in mobile DOM order.
 - Exact repaired-SHA interactive replay remains required when the in-app browser backend becomes available; the backend returned unavailable during the first repaired-candidate review attempt.
 
 ### Raspberry Pi

@@ -1,5 +1,6 @@
 ---
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
+import { resolvePublicNavigationState } from '../lib/public-content/public-navigation.mjs';
 
 interface Props { currentPath?: string }
 interface NavigationTopic { id: string; label: string; mode: 'filter' | 'standalone'; count: number; href: string }
@@ -16,20 +17,25 @@ interface NavigationModel {
   categories: readonly NavigationCategory[];
   allGuides: { label: string; href: string };
 }
+interface ArticleRecord { route: string; categoryId: string | null }
 const { currentPath = '/' } = Astro.props;
-const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
+const { navigation, registry } = getPublicSiteData() as {
+  navigation: NavigationModel;
+  registry: readonly ArticleRecord[];
+};
+const navigationState = resolvePublicNavigationState({ currentPath, navigation, registry });
 ---
 
 <header class="hb-custom-header" data-pagefind-ignore="all">
   <div class="hb-header-inner">
-    <a class="hb-brand" href="/" aria-label="How Biscuit home" aria-current={currentPath === '/' ? 'page' : undefined}>
+    <a class="hb-brand" href="/" aria-label="How Biscuit home" aria-current={navigationState.home}>
       <span>HOW BISCUIT</span><b aria-hidden="true">?</b><i>Practical guides</i>
     </a>
 
     <nav class="hb-desktop-nav" aria-label="Primary navigation">
       {navigation.categories.map((category) => (
         <details class="hb-category-menu" name="hb-primary-navigation" data-category={category.id}>
-          <summary>{category.label}<span aria-hidden="true"></span></summary>
+          <summary aria-current={navigationState.categories[category.id]}>{category.label}<span aria-hidden="true"></span></summary>
           <div class="hb-category-panel">
             <div class="hb-category-intro"><a href={category.href}><strong>{category.label}</strong><span>Open category →</span></a><p>{category.description}</p></div>
             {category.topicLabels.length > 0 && (
@@ -47,7 +53,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
           </div>
         </details>
       ))}
-      <a class="hb-all-guides-link" href={navigation.allGuides.href} aria-current={currentPath === '/articles/' ? 'page' : undefined}>{navigation.allGuides.label}</a>
+      <a class="hb-all-guides-link" href={navigation.allGuides.href} aria-current={navigationState.allGuides}>{navigation.allGuides.label}</a>
       <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog">Search</button>
       <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light.">Theme: System</button>
     </nav>
@@ -66,11 +72,11 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     <nav aria-label="Primary navigation without JavaScript">
       {navigation.categories.map((category) => (
         <div>
-          <a href={category.href}><strong>{category.label}</strong></a>
+          <a href={category.href} aria-current={navigationState.categories[category.id]}><strong>{category.label}</strong></a>
           {category.guideLinks.map((guide) => <a href={guide.href}>{guide.title}</a>)}
         </div>
       ))}
-      <a class="hb-mobile-all-guides" href={navigation.allGuides.href}>{navigation.allGuides.label}</a>
+      <a class="hb-mobile-all-guides" href={navigation.allGuides.href} aria-current={navigationState.allGuides}>{navigation.allGuides.label}</a>
     </nav>
   </details>
 </noscript>
@@ -81,7 +87,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
     <nav aria-label="Mobile navigation">
       {navigation.categories.map((category) => (
         <details class="hb-mobile-category">
-          <summary>{category.label}<span aria-hidden="true">+</span></summary>
+          <summary aria-current={navigationState.categories[category.id]}>{category.label}<span aria-hidden="true">+</span></summary>
           <div>
             <a class="hb-mobile-category-link" href={category.href}>Open {category.label} →</a>
             <p>{category.description}</p>
@@ -90,7 +96,7 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
           </div>
         </details>
       ))}
-      <a class="hb-mobile-all-guides" href={navigation.allGuides.href}>{navigation.allGuides.label}</a>
+      <a class="hb-mobile-all-guides" href={navigation.allGuides.href} aria-current={navigationState.allGuides}>{navigation.allGuides.label}</a>
     </nav>
   </div>
 </dialog>
@@ -108,6 +114,18 @@ const { navigation } = getPublicSiteData() as { navigation: NavigationModel };
 </dialog>
 
 <style>
+  .hb-category-menu summary[aria-current],
+  .hb-all-guides-link[aria-current] {
+    border-color: var(--hb-ink);
+    background: var(--hb-honey);
+    color: #142432;
+  }
+  .hb-mobile-category summary[aria-current] {
+    background: var(--hb-honey);
+    color: #142432;
+  }
+  .hb-mobile-all-guides[aria-current],
+  .hb-noscript-navigation a[aria-current] { box-shadow: inset 0 0 0 2px var(--hb-ink); }
   .hb-category-intro a {
     display: flex;
     align-items: baseline;

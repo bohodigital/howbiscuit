@@ -4,6 +4,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 import { getPublicSiteData } from '../src/lib/public-content/site-registry.mjs';
+import { resolvePublicNavigationState } from '../src/lib/public-content/public-navigation.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const { navigation, registry } = getPublicSiteData(root);
@@ -35,4 +36,31 @@ test('one-guide topics remain category filters and zero-guide topics stay hidden
     href: '/kitchen/#topic-food-science',
   }]);
   assert.deepEqual(homeTech.topicLabels, []);
+});
+
+test('primary navigation exposes one truthful current category or section', () => {
+  const state = (currentPath, overrides = {}) => resolvePublicNavigationState({
+    currentPath,
+    navigation: overrides.navigation ?? navigation,
+    registry: overrides.registry ?? registry,
+  });
+  assert.deepEqual(state('/').home, 'page');
+  assert.equal(state('/articles/').allGuides, 'page');
+  assert.equal(state('/home/').categories.home, 'page');
+  assert.equal(state('/articles/why-salt-melts-ice/').categories.home, 'true');
+  assert.equal(state('/articles/how-does-baking-powder-work/').categories.kitchen, 'true');
+  assert.equal(state('/articles/why-are-some-answers-better-than-others/').allGuides, 'true');
+  assert.ok(Object.values(state('/about/').categories).every((value) => value === undefined));
+
+  const homeTech = navigation.categories.find(({ id }) => id === 'home-tech');
+  const standaloneNavigation = {
+    ...navigation,
+    categories: navigation.categories.map((category) => category.id === 'home-tech' ? {
+      ...category,
+      topicLabels: [{ id: 'tvs-streaming', label: 'TVs & Streaming', mode: 'standalone', count: 3, href: '/home-tech/tvs-streaming/' }],
+    } : category),
+  };
+  assert.ok(homeTech);
+  assert.equal(state('/home-tech/tvs-streaming/', { navigation: standaloneNavigation }).categories['home-tech'], 'true');
+  assert.throws(() => state('articles/'), /root-relative current path/);
 });

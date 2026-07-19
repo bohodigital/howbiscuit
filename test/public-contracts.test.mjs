@@ -334,6 +334,15 @@ test('homepage, latest, featured, and related ordering are deterministic', () =>
     'how-does-baking-powder-work',
     'why-are-some-answers-better-than-others',
   ]);
+  const guideRegistry = registry.filter(isPublishableGuide);
+  assert.deepEqual(orderLatestContent(guideRegistry).map(({ slug }) => slug), [
+    'why-salt-melts-ice',
+    'how-does-baking-powder-work',
+  ]);
+  assert.deepEqual(orderHomepageContent(guideRegistry).map(({ slug }) => slug), [
+    'why-salt-melts-ice',
+    'how-does-baking-powder-work',
+  ]);
   assert.deepEqual(selectRelatedContent(bySlug['why-salt-melts-ice'], registry, 3).map(({ slug }) => slug), [
     'how-does-baking-powder-work',
     'why-are-some-answers-better-than-others',

@@ -2,7 +2,7 @@
 import EmptyState from './EmptyState.astro';
 import GuideCard from './GuideCard.astro';
 import PathCard from './PathCard.astro';
-import { orderHomepageContent, orderLatestContent } from '../lib/public-content/model.mjs';
+import { isPublishableGuide, orderHomepageContent, orderLatestContent } from '../lib/public-content/model.mjs';
 import { getPublicSiteData } from '../lib/public-content/site-registry.mjs';
 
 interface ArticleRecord {
@@ -17,9 +17,10 @@ const { categoryViews, registry } = getPublicSiteData() as {
   categoryViews: readonly CategoryView[];
   registry: readonly ArticleRecord[];
 };
-const homepageOrder = orderHomepageContent(registry) as ArticleRecord[];
+const guides = registry.filter(isPublishableGuide) as ArticleRecord[];
+const homepageOrder = orderHomepageContent(guides) as ArticleRecord[];
 const featured = homepageOrder.filter(({ featured }) => featured).slice(0, 3);
-const latest = (orderLatestContent(registry) as ArticleRecord[]).slice(0, 6);
+const latest = (orderLatestContent(guides) as ArticleRecord[]).slice(0, 6);
 const problems = homepageOrder.filter(({ problemLabel }) => problemLabel);
 const accentByCategory: Record<string, string> = {
   'home-tech': 'honey',
@@ -32,7 +33,7 @@ const categoryLabelById = new Map(categoryViews.map(({ id, label }) => [id, labe
 const guideCategoryLabel = (guide: ArticleRecord) => (
   guide.categoryId ? categoryLabelById.get(guide.categoryId) ?? 'Editorial standard' : 'Editorial standard'
 );
-const updatedDates = registry.map(({ updatedDate, publishedDate }) => updatedDate ?? publishedDate).filter(Boolean).sort();
+const updatedDates = guides.map(({ updatedDate, publishedDate }) => updatedDate ?? publishedDate).filter(Boolean).sort();
 const latestUpdate = updatedDates.at(-1);
 ---
 
