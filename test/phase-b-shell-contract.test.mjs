@@ -34,6 +34,26 @@ function collectHtml(directory) {
   return files;
 }
 
+function collectCss(directory) {
+  const files = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const full = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...collectCss(full));
+    else if (entry.name.endsWith('.css')) files.push(full);
+  }
+  return files;
+}
+
+function assertTargetSizeRule(css, label) {
+  const match = css.match(/\.hb-article-toc a\s*,\s*\.hb-global-footer a\s*\{([^}]*)\}/);
+  assert.ok(match, `${label}: shared TOC/footer target-size rule is missing`);
+  assert.match(match[1], /display:\s*inline-flex/, `${label}: targets must use inline-flex`);
+  assert.match(match[1], /align-items:\s*center/, `${label}: target contents must stay vertically aligned`);
+  assert.match(match[1], /min-inline-size:\s*24px/, `${label}: targets must be at least 24 CSS pixels wide`);
+  assert.match(match[1], /min-block-size:\s*24px/, `${label}: targets must be at least 24 CSS pixels tall`);
+  assert.match(match[1], /max-inline-size:\s*100%/, `${label}: targets must remain wrappable in their container`);
+}
+
 function routeFor(file) {
   const relative = path.relative(dist, file).replaceAll('\\', '/');
   if (relative === 'index.html') return '/';
@@ -220,6 +240,14 @@ test('WCAG text, non-text, and reviewed selector contrast guards remain fail clo
   assert.match(shellCss, /\.hb-disclosure a\s*\{[^}]*color:\s*#142432/);
   assert.match(shellCss, /\.hb-disclosure a:focus-visible\s*\{[^}]*outline-color:\s*#142432/);
   assert.match(shellCss, /\.hb-category-menu summary > span\s*\{[^}]*border-right:\s*2px solid currentColor;[^}]*border-bottom:\s*2px solid currentColor/);
+});
+
+test('standalone article TOC and footer links enforce the WCAG 2.2 target-size minimum', () => {
+  assertTargetSizeRule(read('src/styles/shell.css'), 'source CSS');
+  const builtCss = collectCss(dist).map((file) => readFileSync(file, 'utf8')).join('\n');
+  assertTargetSizeRule(builtCss, 'built CSS');
+  assert.match(pages.get('/articles/how-does-baking-powder-work/'), /<nav class="hb-article-toc"[^>]*>[\s\S]*?<a href="#/);
+  assert.match(pages.get('/'), /<footer class="hb-global-footer"[\s\S]*?<a href="\/home-tech\/"/);
 });
 
 test('homepage uses registry-driven sections in the governed conceptual order', () => {

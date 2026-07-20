@@ -196,6 +196,14 @@ html:not(.js) .hb-desktop-nav .hb-header-action { display: none; }
 .hb-article-toc ol { display: grid; gap: 0.38rem; margin: 0; padding: 0; list-style: none; }
 .hb-article-toc li[data-depth='3'] { padding-left: 0.7rem; }
 .hb-article-toc a { color: var(--hb-ink-soft); font-size: 0.72rem; line-height: 1.35; }
+.hb-article-toc a,
+.hb-global-footer a {
+  max-inline-size: 100%;
+  min-inline-size: 24px;
+  min-block-size: 24px;
+  display: inline-flex;
+  align-items: center;
+}
 .hb-disclosure { margin: 1.5rem 0; border: 2px solid var(--hb-ink); border-radius: 0.7rem; padding: 1rem; background: var(--hb-honey); color: #142432; }
 .hb-disclosure p { margin: 0.35rem 0 0; }
 .hb-disclosure a { color: #142432; }
