@@ -298,14 +298,11 @@ async function verifyRedirectWorker({ workerPath, redirectSource, headerSource, 
     const sourcePath = from.replace('*', 'package-probe/');
     await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=artifact`, `https://howbiscuit.com${to}?ref=artifact`);
     await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=artifact`, `https://howbiscuit.com${to}?ref=artifact`);
+    await assertSingleHop(`https://preview.example.test${sourcePath}?ref=artifact`, `https://preview.example.test${to}?ref=artifact`);
   }
   await assertSingleHop(
     'https://www.howbiscuit.com/articles/?ref=artifact',
     'https://howbiscuit.com/articles/?ref=artifact',
-  );
-  await assertSingleHop(
-    'https://preview.example.test/make-do/?ref=artifact',
-    'https://preview.example.test/home/?ref=artifact',
   );
   const ordinaryUrl = 'https://howbiscuit.com/articles/?ref=artifact';
   const ordinaryResponse = await workerModule.default.fetch(new Request(ordinaryUrl), env);

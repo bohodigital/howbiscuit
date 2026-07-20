@@ -127,14 +127,11 @@ for (const { from, to } of redirectRules) {
   const sourcePath = from.replace('*', 'contract-probe/');
   await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
   await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
+  await assertSingleHop(`https://preview.example.test${sourcePath}?ref=contract`, `https://preview.example.test${to}?ref=contract`);
 }
 await assertSingleHop(
   'https://www.howbiscuit.com/articles/?ref=contract',
   'https://howbiscuit.com/articles/?ref=contract',
-);
-await assertSingleHop(
-  'https://preview.example.test/make-do/?ref=contract',
-  'https://preview.example.test/home/?ref=contract',
 );
 const ordinaryResponse = await workerModule.default.fetch(
   new Request('https://howbiscuit.com/articles/?ref=contract'),

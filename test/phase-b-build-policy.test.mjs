@@ -205,17 +205,16 @@ test('the production Pages and Sites worker owns host and legacy redirects befor
       `https://www.howbiscuit.com${sourcePath}?ref=phase-c`,
       `https://howbiscuit.com${to}?ref=phase-c`,
     );
+    await assertSingleHop(
+      `https://preview.example.test${sourcePath}?ref=phase-c`,
+      `https://preview.example.test${to}?ref=phase-c`,
+    );
   }
 
   await assertSingleHop(
     'https://www.howbiscuit.com/articles/?ref=phase-c',
     'https://howbiscuit.com/articles/?ref=phase-c',
   );
-  await assertSingleHop(
-    'https://preview.example.test/make-do/?ref=phase-c',
-    'https://preview.example.test/home/?ref=phase-c',
-  );
-
   const ordinary = await workerModule.default.fetch(
     new Request('https://howbiscuit.com/articles/?ref=phase-c'),
     env,

@@ -181,6 +181,7 @@ test('the production Pages redirect artifact and Worker exactly match the direct
     const sourcePath = from.replace('*', 'contract-probe/');
     await assertSingleHop(`https://howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
     await assertSingleHop(`https://www.howbiscuit.com${sourcePath}?ref=contract`, `https://howbiscuit.com${to}?ref=contract`);
+    await assertSingleHop(`https://preview.example.test${sourcePath}?ref=contract`, `https://preview.example.test${to}?ref=contract`);
   }
   await assertSingleHop(
     'https://www.howbiscuit.com/articles/?ref=contract',
