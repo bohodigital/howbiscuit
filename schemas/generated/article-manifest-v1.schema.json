@@ -20,12 +20,13 @@
     "featured",
     "editorialPriority",
     "authors",
+    "ideaId",
+    "briefId",
+    "approvalId",
     "evidence",
-    "testing",
     "workflow",
     "disclosure",
     "sourceIds",
-    "sourceNotes",
     "testingIds",
     "mediaIds",
     "productIds",
@@ -151,6 +152,25 @@
         "minLength": 1
       }
     },
+    "ideaId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "briefId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "approvalId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "evidence": {
       "type": "object",
       "additionalProperties": false,
@@ -172,32 +192,6 @@
         "label": {
           "type": "string",
           "minLength": 1
-        }
-      }
-    },
-    "testing": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "state",
-        "notes"
-      ],
-      "properties": {
-        "state": {
-          "enum": [
-            "hands-on-tested",
-            "owner-experience",
-            "not-hands-on-tested",
-            "not-applicable"
-          ]
-        },
-        "notes": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
         }
       }
     },
@@ -275,37 +269,6 @@
         "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
       },
       "uniqueItems": true
-    },
-    "sourceNotes": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "id",
-          "title",
-          "publisher",
-          "href"
-        ],
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-          },
-          "title": {
-            "type": "string",
-            "minLength": 1
-          },
-          "publisher": {
-            "type": "string",
-            "minLength": 1
-          },
-          "href": {
-            "type": "string",
-            "minLength": 1
-          }
-        }
-      }
     },
     "testingIds": {
       "type": "array",

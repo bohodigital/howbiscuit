@@ -1,0 +1,19 @@
+schemaVersion: 1.0.0
+id: brief-how-does-baking-powder-work
+ideaId: idea-how-does-baking-powder-work
+intendedArticleId: how-does-baking-powder-work
+researchQuestion: What triggers baking powder, what commonly prevents lift, and how can a reader test freshness safely?
+userIntent: Understand the mechanism and decide whether the can or recipe process is the likely problem.
+scope: [acid-base mechanism, double-acting behavior, common failure modes, hot-water freshness test]
+exclusions: [medical claims, brand rankings, universal substitution ratios]
+requiredClaims: [baking powder contains acid and base, moisture starts gas release, heat drives a second release in double-acting powder]
+prohibitedClaims: [more powder always produces more height, baking powder and soda are interchangeable]
+requiredSourceTypes: [university]
+candidateSourceIds: [usu-cooking-food-storage, penn-state-storing-staple-ingredients, usu-ingredient-substitutions]
+testingNeeds: [No first-hand test required; label the guide researched.]
+mediaNeeds: []
+productNeeds: []
+safetyConsiderations: [Keep substitutions recipe-specific.]
+unresolvedQuestions: []
+recommendation: Publish as a researched mechanism and troubleshooting guide.
+status: approved

@@ -1,0 +1,16 @@
+schemaVersion: 1.0.0
+id: testing-why-are-some-answers-better-than-others
+articleId: why-are-some-answers-better-than-others
+testedSubject: How Biscuit editorial answer-quality standard
+productIds: []
+tester: How Biscuit editorial desk
+dates: ["2026-07-10"]
+environment: Internal editorial-policy review.
+method: Checked the article against the registered editorial policy and writing guidance.
+measurements: []
+observations: []
+limitations: [This page defines an editorial standard rather than reporting a hands-on test.]
+evidenceArtifacts: []
+claimState: not-applicable
+supportsFirstHandClaims: false
+status: active

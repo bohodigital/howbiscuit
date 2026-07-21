@@ -118,12 +118,12 @@ function generatedArticleSources(root, generatedArticles = null) {
     throw new Error('Generated publishing output must use NormalizedPublicArticleV1.');
   }
   return new Map(payload.articles.map((article) => {
-    if (article?.kind !== 'article' || article?.sourceKind !== 'article-package') {
+    if (article?.kind !== 'article' || !['article-package', 'latex-article'].includes(article?.sourceKind)) {
       throw new Error('Generated publishing output contains an unsupported record.');
     }
     return [article.route, Object.freeze({
       kind: 'article',
-      sourceKind: 'article-package',
+      sourceKind: article.sourceKind,
       sourcePath: article.bodySourcePath,
       route: article.route,
       slug: article.slug,
@@ -167,11 +167,13 @@ export function discoverTrackedPublicSources(root, { taxonomy, generatedArticles
   ], { cwd: root, encoding: 'utf8' });
   const paths = output.trim().split(/\r?\n/).filter(Boolean);
   const generated = generatedArticleSources(root, generatedArticles);
+  const generatedBySourcePath = new Map([...generated.values()].map((source) => [source.sourcePath, source]));
   const sources = [];
   for (const relativePath of paths) {
     const route = relativePath.endsWith('.mdx') ? routeFromMdxPath(relativePath) : null;
-    const source = route && generated.has(route)
-      ? generated.get(route)
+    const generatedSource = (route ? generated.get(route) : null) ?? generatedBySourcePath.get(relativePath);
+    const source = generatedSource
+      ? generatedSource
       : relativePath.endsWith('.tex')
       ? latexSource(root, relativePath, taxonomy)
       : relativePath.endsWith('.mdx')
@@ -199,7 +201,7 @@ export function discoverTrackedPublicSources(root, { taxonomy, generatedArticles
   if (!sources.length) throw new Error('No tracked public sources were discovered.');
   return Object.freeze(sources.map((source) => Object.freeze({
     ...source,
-    ...(source.kind === 'article' ? { classificationProvenance: source.sourceKind === 'article-package' ? 'normalized-article-package' : 'canonical-source-metadata' } : {}),
+    ...(source.kind === 'article' ? { classificationProvenance: ['article-package', 'latex-article'].includes(source.sourceKind) ? 'normalized-article-package' : 'canonical-source-metadata' } : {}),
   })));
 }
 

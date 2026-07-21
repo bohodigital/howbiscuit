@@ -32,16 +32,6 @@ function safeEditorialUrl(value) {
 const id = z.string().regex(idPattern);
 const date = z.string().regex(datePattern);
 const stringList = z.array(id).default([]);
-const testing = z.object({
-  state: z.enum(['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable']),
-  notes: z.array(z.string().min(1)).min(1),
-}).strict();
-const sourceNote = z.object({
-  id,
-  title: z.string().min(1),
-  publisher: z.string().min(1),
-  href: z.string().min(1).refine(safeEditorialUrl, 'Source URLs must use HTTP(S) or an absolute site path.'),
-}).strict();
 const presentationText = z.string().min(1).refine((value) => !/[<>{}\u0000-\u001f\u007f]/.test(value), 'Presentation text must be plain, non-executable text.');
 const presentationBlock = z.discriminatedUnion('kind', [
   z.object({
@@ -85,11 +75,13 @@ export function createArticleManifestSchema(taxonomy) {
     featured: z.boolean().default(false),
     editorialPriority: z.number().int().default(0),
     authors: z.array(z.string().min(1)).min(1),
+    ideaId: id,
+    briefId: id,
+    approvalId: id.nullable(),
     evidence: z.object({
       level: z.enum(['hands-on-tested', 'owner-experience', 'specification-reviewed', 'researched', 'price-listing-only', 'editorial-standard']),
       label: z.string().min(1),
     }).strict(),
-    testing,
     workflow: z.object({
       state: z.enum(['draft', 'review', 'approved', 'published', 'retired']),
       history: z.array(z.object({ state: z.string().min(1), at: date, actor: z.string().min(1) }).strict()).min(1),
@@ -100,7 +92,6 @@ export function createArticleManifestSchema(taxonomy) {
       href: z.literal('/affiliate-disclosure/'),
     }).strict(),
     sourceIds: stringList,
-    sourceNotes: z.array(sourceNote),
     testingIds: stringList,
     mediaIds: stringList,
     productIds: stringList,
@@ -127,11 +118,6 @@ export function createArticleManifestSchema(taxonomy) {
     } else if (data.categoryId !== null || data.topicIds.length !== 0) {
       context.addIssue({ code: 'custom', path: ['categoryId'], message: 'Editorial standards must remain categoryless.' });
     }
-    const noteIds = data.sourceNotes.map(({ id: sourceId }) => sourceId).sort();
-    const declaredIds = [...data.sourceIds].sort();
-    if (JSON.stringify(noteIds) !== JSON.stringify(declaredIds)) {
-      context.addIssue({ code: 'custom', path: ['sourceIds'], message: 'Every sourceId must have exactly one sourceNotes entry.' });
-    }
     const presentationIds = data.presentationBlocks.map(({ id: blockId }) => blockId);
     if (new Set(presentationIds).size !== presentationIds.length) {
       context.addIssue({ code: 'custom', path: ['presentationBlocks'], message: 'Presentation block IDs must be unique.' });
@@ -150,7 +136,7 @@ export function createArticleManifestJsonSchema(taxonomy) {
     title: 'How Biscuit article package manifest v1',
     type: 'object',
     additionalProperties: false,
-    required: ['schemaVersion', 'id', 'slug', 'title', 'description', 'articleType', 'categoryId', 'topicIds', 'problemLabels', 'directAnswer', 'publishedAt', 'updatedAt', 'featured', 'editorialPriority', 'authors', 'evidence', 'testing', 'workflow', 'disclosure', 'sourceIds', 'sourceNotes', 'testingIds', 'mediaIds', 'productIds', 'productGroupIds', 'linkPreviewIds', 'destinationIds', 'relatedArticleIds', 'priceClaims', 'recommendationClaims', 'presentationBlocks'],
+    required: ['schemaVersion', 'id', 'slug', 'title', 'description', 'articleType', 'categoryId', 'topicIds', 'problemLabels', 'directAnswer', 'publishedAt', 'updatedAt', 'featured', 'editorialPriority', 'authors', 'ideaId', 'briefId', 'approvalId', 'evidence', 'workflow', 'disclosure', 'sourceIds', 'testingIds', 'mediaIds', 'productIds', 'productGroupIds', 'linkPreviewIds', 'destinationIds', 'relatedArticleIds', 'priceClaims', 'recommendationClaims', 'presentationBlocks'],
     properties: {
       schemaVersion: { const: ARTICLE_PACKAGE_SCHEMA_VERSION },
       id: idSchema,
@@ -167,12 +153,13 @@ export function createArticleManifestJsonSchema(taxonomy) {
       featured: { type: 'boolean' },
       editorialPriority: { type: 'integer' },
       authors: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } },
+      ideaId: idSchema,
+      briefId: idSchema,
+      approvalId: { anyOf: [idSchema, { type: 'null' }] },
       evidence: { type: 'object', additionalProperties: false, required: ['level', 'label'], properties: { level: { enum: ['hands-on-tested', 'owner-experience', 'specification-reviewed', 'researched', 'price-listing-only', 'editorial-standard'] }, label: { type: 'string', minLength: 1 } } },
-      testing: { type: 'object', additionalProperties: false, required: ['state', 'notes'], properties: { state: { enum: ['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable'] }, notes: { type: 'array', minItems: 1, items: { type: 'string', minLength: 1 } } } },
       workflow: { type: 'object', additionalProperties: false, required: ['state', 'history'], properties: { state: { enum: ['draft', 'review', 'approved', 'published', 'retired'] }, history: { type: 'array', minItems: 1, items: { type: 'object', additionalProperties: false, required: ['state', 'at', 'actor'], properties: { state: { type: 'string', minLength: 1 }, at: { type: 'string', pattern: datePattern.source }, actor: { type: 'string', minLength: 1 } } } } } },
       disclosure: { type: 'object', additionalProperties: false, required: ['state', 'text', 'href'], properties: { state: { const: 'no-paid-links' }, text: { type: 'string', minLength: 1 }, href: { const: '/affiliate-disclosure/' } } },
       sourceIds: idArray,
-      sourceNotes: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['id', 'title', 'publisher', 'href'], properties: { id: idSchema, title: { type: 'string', minLength: 1 }, publisher: { type: 'string', minLength: 1 }, href: { type: 'string', minLength: 1 } } } },
       testingIds: idArray,
       mediaIds: idArray,
       productIds: idArray,

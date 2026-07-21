@@ -1,0 +1,9 @@
+schemaVersion: 1.0.0
+id: approval-why-salt-melts-ice-baseline
+articleId: why-salt-melts-ice
+approvingActor: direct-owner-order-baseline-migration
+timestamp: "2026-07-20T19:00:00-05:00"
+packageDigest: 71d61cdc64e922bd74a9210b266553c97e31208fab121aa7727d1e72e66748a7
+approvedState: published
+note: Migration approval authorized for the Handoff 1 public article at baseline 8382c6e.
+status: active

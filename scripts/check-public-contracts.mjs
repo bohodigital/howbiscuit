@@ -46,9 +46,7 @@ for (const record of registry) {
   const classification = expected.get(record.route);
   invariant(classification, `Unexpected article route: ${record.route}`);
   invariant(record.categoryId === classification[0] && record.topicId === classification[1] && record.articleType === classification[2], `Classification mismatch: ${record.route}`);
-  const expectedProvenance = record.route === '/articles/how-does-baking-powder-work/'
-    ? 'normalized-article-package'
-    : 'canonical-source-metadata';
+  const expectedProvenance = 'normalized-article-package';
   invariant(record.provenance.categoryId === expectedProvenance, `Classification is not owned by its canonical source: ${record.route}`);
   invariant(record.answerSummary.length >= 40, `Direct answer is missing: ${record.route}`);
   invariant(record.sourceNotes.state === 'structured' && record.sourceNotes.items.length > 0, `Structured sources are missing: ${record.route}`);

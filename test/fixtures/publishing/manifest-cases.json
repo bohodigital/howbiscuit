@@ -6,8 +6,8 @@
     { "name": "invalid category", "patch": { "categoryId": "cooking" } },
     { "name": "invalid topic", "patch": { "topicIds": ["chemistry"] } },
     { "name": "path traversal slug", "patch": { "id": "../escape", "slug": "../escape" } },
-    { "name": "unsafe source URL", "sourceHref": "javascript:alert(1)" },
+    { "name": "unsafe source identifier", "patch": { "sourceIds": ["../source"] } },
     { "name": "unknown manifest property", "patch": { "inventedField": true } },
-    { "name": "missing source resolution", "patch": { "sourceIds": ["missing-source"] } }
+    { "name": "invalid approval identifier", "patch": { "approvalId": "../approval" } }
   ]
 }

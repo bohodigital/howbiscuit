@@ -1,0 +1,21 @@
+schemaVersion: 1.0.0
+articleId: why-salt-melts-ice
+ideaId: idea-why-salt-melts-ice
+briefId: brief-why-salt-melts-ice
+approvalId: approval-why-salt-melts-ice-baseline
+sourceIds: [openstax-colligative-properties, openstax-water-properties, epa-salt-resources]
+testingIds: [testing-why-salt-melts-ice]
+mediaIds: []
+productIds: []
+productGroupIds: []
+linkPreviewIds: []
+destinationIds: []
+priceClaims: []
+recommendationClaims: []
+workflow:
+  state: published
+  history:
+    - { state: draft, at: "2026-07-01", actor: baseline-history }
+    - { state: review, at: "2026-07-08", actor: baseline-history }
+    - { state: approved, at: "2026-07-12", actor: direct-owner-order-baseline-migration }
+    - { state: published, at: "2026-07-13", actor: baseline-history }

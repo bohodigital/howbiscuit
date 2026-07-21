@@ -1,0 +1,16 @@
+schemaVersion: 1.0.0
+id: testing-how-does-baking-powder-work
+articleId: how-does-baking-powder-work
+testedSubject: Baking-powder mechanism and freshness guidance
+productIds: []
+tester: How Biscuit editorial desk
+dates: ["2026-07-10"]
+environment: Source-based editorial review; no controlled kitchen test.
+method: Compared claims against the registered university extension sources.
+measurements: []
+observations: []
+limitations: [How Biscuit did not run a controlled product test for this mechanism guide.]
+evidenceArtifacts: []
+claimState: not-hands-on-tested
+supportsFirstHandClaims: false
+status: active

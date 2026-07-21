@@ -44,7 +44,7 @@
       "testing": {
         "state": "not-hands-on-tested",
         "notes": [
-          "This mechanism guide was researched from university extension sources; How Biscuit did not run a controlled product test."
+          "How Biscuit did not run a controlled product test for this mechanism guide."
         ]
       },
       "sourceIds": [
@@ -75,7 +75,9 @@
           }
         ]
       },
-      "testingIds": [],
+      "testingIds": [
+        "testing-how-does-baking-powder-work"
+      ],
       "mediaIds": [],
       "productIds": [],
       "productGroupIds": [],
@@ -163,9 +165,24 @@
         "state": "published",
         "history": [
           {
+            "state": "draft",
+            "at": "2026-06-24",
+            "actor": "baseline-history"
+          },
+          {
+            "state": "review",
+            "at": "2026-06-28",
+            "actor": "baseline-history"
+          },
+          {
+            "state": "approved",
+            "at": "2026-06-30",
+            "actor": "direct-owner-order-baseline-migration"
+          },
+          {
             "state": "published",
             "at": "2026-07-01",
-            "actor": "owner-baseline-migration"
+            "actor": "baseline-history"
           }
         ]
       },
@@ -205,7 +222,386 @@
       "citations": [],
       "media": [],
       "bodyDigest": "b44890fcd97798b9c42006ce09fe45559d71a8815bb5e4f3064f88b951d1e140",
-      "packageDigest": "60b247b9f7f3cddb4808c86381b7d3d952e38e0e80632b7f77944a73be9945f0",
+      "packageDigest": "9ccafe081cff0f1492cadd79928cb781bc299b1cf0d211995df63ab50d08341d",
+      "approvalDigest": "ab2f4eca81d18a6a2e1f0100a3f65abba4655b90c154a8e06e37823df7927f68",
+      "approvalId": "approval-how-does-baking-powder-work-baseline",
+      "draft": false,
+      "preview": false,
+      "thin": false,
+      "redirectState": null,
+      "retirementState": null
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "kind": "article",
+      "sourceKind": "article-package",
+      "sourcePath": "content/articles/why-are-some-answers-better-than-others",
+      "bodySourcePath": "content/articles/why-are-some-answers-better-than-others/article.md",
+      "generatedContentPath": "src/content/docs/articles/why-are-some-answers-better-than-others/index.mdx",
+      "id": "why-are-some-answers-better-than-others",
+      "slug": "why-are-some-answers-better-than-others",
+      "route": "/articles/why-are-some-answers-better-than-others/",
+      "canonicalRoute": "/articles/why-are-some-answers-better-than-others/",
+      "pagefindRoute": "/articles/why-are-some-answers-better-than-others/",
+      "rssIdentity": "/articles/why-are-some-answers-better-than-others/",
+      "sitemapIdentity": "/articles/why-are-some-answers-better-than-others/",
+      "title": "Why Are Some Answers Better Than Others?",
+      "description": "A useful answer addresses the real question, explains its reasoning, shows the next move, and makes the limits of its evidence visible.",
+      "categoryId": null,
+      "topicId": null,
+      "topicIds": [],
+      "articleType": "editorial-standard",
+      "editorialClassification": "editorial-standard",
+      "articleFormat": "standard",
+      "answerSummary": "A better answer addresses the real question early, exposes its reasoning and evidence, gives the reader a usable next step, and states where its confidence ends.",
+      "problemLabel": null,
+      "problemLabels": [],
+      "publishedDate": "2026-07-01",
+      "updatedDate": "2026-07-10",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "editorialPriority": 10,
+      "readTime": "3 min read",
+      "evidence": "Editorial standard",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "This page defines an editorial standard rather than reporting a hands-on test."
+        ]
+      },
+      "sourceIds": [
+        "purdue-paragraph-organization-flow",
+        "how-biscuit-editorial-policy"
+      ],
+      "sourceNotes": {
+        "state": "structured",
+        "items": [
+          {
+            "id": "purdue-paragraph-organization-flow",
+            "title": "Paragraph Organization and Flow: evidence, analysis, and clear development",
+            "publisher": "Purdue Online Writing Lab",
+            "href": "https://owl.purdue.edu/owl/graduate_writing/documents/IWE_2020_Paragraphs_Organization-and-Flow_Transcript.doc.pdf"
+          },
+          {
+            "id": "how-biscuit-editorial-policy",
+            "title": "How Biscuit Editorial Policy",
+            "publisher": "How Biscuit",
+            "href": "/editorial-policy/"
+          }
+        ]
+      },
+      "testingIds": [
+        "testing-why-are-some-answers-better-than-others"
+      ],
+      "mediaIds": [],
+      "productIds": [],
+      "productGroupIds": [],
+      "linkPreviewIds": [],
+      "destinationIds": [],
+      "priceClaims": [],
+      "recommendationClaims": [],
+      "presentationBlocks": [
+        {
+          "id": "four-part-test",
+          "kind": "mechanism",
+          "steps": [
+            {
+              "title": "Does it answer the real question?",
+              "body": "A useful response identifies what the reader is actually trying to decide, understand, or fix—and says the answer before wandering into background."
+            },
+            {
+              "title": "Can you follow the reason?",
+              "body": "Rules become reusable when the mechanism, logic, or evidence is visible. “Because I said so” is not a portable skill."
+            },
+            {
+              "title": "Is the next move obvious?",
+              "body": "Examples, steps, checks, and stop conditions turn information into something a reader can use."
+            },
+            {
+              "title": "Can you see the limits?",
+              "body": "Strong answers separate facts from judgment, link important sources, and admit uncertainty instead of decorating it with confidence."
+            }
+          ]
+        },
+        {
+          "id": "weak-answer",
+          "kind": "callout",
+          "variant": "common-mistake",
+          "title": "Weak answer",
+          "body": "It probably expired. Buy a new one."
+        },
+        {
+          "id": "better-answer",
+          "kind": "callout",
+          "variant": "short-answer",
+          "title": "Better answer",
+          "body": "Moisture and time can reduce baking powder’s activity. Test one teaspoon in one-third cup of hot water: vigorous foam means it still has rising power. If the reaction is weak, replace the can. Store the next one dry and covered."
+        },
+        {
+          "id": "answer-failures",
+          "kind": "mistake-grid",
+          "items": [
+            {
+              "title": "The throat-clearing essay",
+              "body": "The response spends three paragraphs on framing before it reaches the sentence the reader needed.",
+              "fix": "Move the direct answer to the top, then add only the context that helps."
+            },
+            {
+              "title": "The confident shrug",
+              "body": "The answer sounds certain but shows no source, mechanism, calculation, or test.",
+              "fix": "Expose the reasoning and label uncertainty."
+            },
+            {
+              "title": "The fact pile",
+              "body": "The information may be accurate, but no one explains how it changes the reader’s decision.",
+              "fix": "Connect each important fact to the question."
+            },
+            {
+              "title": "The one-size fix",
+              "body": "A recommendation ignores cost, skill, safety, context, or the point where a reader should stop.",
+              "fix": "Name assumptions and stop conditions."
+            }
+          ]
+        },
+        {
+          "id": "editorial-rule",
+          "kind": "callout",
+          "variant": "source-note",
+          "title": "Our editorial rule",
+          "body": "If an answer cannot show its reasoning, evidence, or limits, it is not ready to borrow the reader’s confidence."
+        }
+      ],
+      "relatedArticleIds": [
+        "how-does-baking-powder-work",
+        "why-salt-melts-ice"
+      ],
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-does-baking-powder-work/",
+          "/articles/why-salt-melts-ice/"
+        ]
+      },
+      "disclosure": {
+        "state": "no-paid-links",
+        "text": "This editorial standard contains no affiliate links, sponsored placements, paid reviews, or product placements.",
+        "href": "/affiliate-disclosure/"
+      },
+      "workflow": {
+        "state": "published",
+        "history": [
+          {
+            "state": "draft",
+            "at": "2026-06-24",
+            "actor": "baseline-history"
+          },
+          {
+            "state": "review",
+            "at": "2026-06-28",
+            "actor": "baseline-history"
+          },
+          {
+            "state": "approved",
+            "at": "2026-06-30",
+            "actor": "direct-owner-order-baseline-migration"
+          },
+          {
+            "state": "published",
+            "at": "2026-07-01",
+            "actor": "baseline-history"
+          }
+        ]
+      },
+      "authors": [
+        "How Biscuit"
+      ],
+      "directives": [
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "four-part-test"
+          },
+          "line": 5
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "weak-answer"
+          },
+          "line": 11
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "better-answer"
+          },
+          "line": 15
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "answer-failures"
+          },
+          "line": 27
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "editorial-rule"
+          },
+          "line": 33
+        }
+      ],
+      "citations": [],
+      "media": [],
+      "bodyDigest": "c91846d48abf30436cbe903bc99c97db47c931156a213ccc4b9bc80977604428",
+      "packageDigest": "d68810f50e772c81df15c64f1f9fcab116c6fa7d21d0b624c3f35d7cda69d990",
+      "approvalDigest": "6962f990ddcb3b2925d27a7c17866f718f08e7d21e5d76e1f5e68c2a721bca27",
+      "approvalId": "approval-why-are-some-answers-better-than-others-baseline",
+      "draft": false,
+      "preview": false,
+      "thin": false,
+      "redirectState": null,
+      "retirementState": null
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "kind": "article",
+      "sourceKind": "latex-article",
+      "sourcePath": "content/latex/articles/why-salt-melts-ice.tex",
+      "bodySourcePath": "content/latex/articles/why-salt-melts-ice.tex",
+      "generatedContentPath": "src/content/docs/articles/why-salt-melts-ice.mdx",
+      "id": "why-salt-melts-ice",
+      "slug": "why-salt-melts-ice",
+      "route": "/articles/why-salt-melts-ice/",
+      "canonicalRoute": "/articles/why-salt-melts-ice/",
+      "pagefindRoute": "/articles/why-salt-melts-ice/",
+      "rssIdentity": "/articles/why-salt-melts-ice/",
+      "sitemapIdentity": "/articles/why-salt-melts-ice/",
+      "title": "Why Salt Melts Ice (and When It Stops Working)",
+      "description": "A plain-English field guide to freezing-point depression, brine, the limits of rock salt, and the least-wasteful way to de-ice a walk.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "topicIds": [
+        "heating-cooling"
+      ],
+      "articleType": "guide",
+      "editorialClassification": "guide",
+      "articleFormat": "latex",
+      "answerSummary": "Salt lowers the freezing point of the thin water layer touching ice, creating brine that can melt more ice until temperature, concentration, or available liquid water reaches a practical limit.",
+      "problemLabel": "I need to clear ice safely",
+      "problemLabels": [
+        "I need to clear ice safely"
+      ],
+      "publishedDate": "2026-07-13",
+      "updatedDate": "2026-07-13",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": true,
+      "editorialPriority": 30,
+      "readTime": "8 min read",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "How Biscuit did not run a controlled product or pavement test for this guide."
+        ]
+      },
+      "sourceIds": [
+        "openstax-colligative-properties",
+        "openstax-water-properties",
+        "epa-salt-resources"
+      ],
+      "sourceNotes": {
+        "state": "structured",
+        "items": [
+          {
+            "id": "openstax-colligative-properties",
+            "title": "Colligative Properties",
+            "publisher": "OpenStax Chemistry 2e",
+            "href": "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties"
+          },
+          {
+            "id": "openstax-water-properties",
+            "title": "Water Properties",
+            "publisher": "OpenStax Chemistry 2e",
+            "href": "https://openstax.org/books/chemistry-2e/pages/e-water-properties"
+          },
+          {
+            "id": "epa-salt-resources",
+            "title": "Salt Resources",
+            "publisher": "U.S. Environmental Protection Agency",
+            "href": "https://www.epa.gov/risk/salt-resources"
+          }
+        ]
+      },
+      "testingIds": [
+        "testing-why-salt-melts-ice"
+      ],
+      "mediaIds": [],
+      "productIds": [],
+      "productGroupIds": [],
+      "linkPreviewIds": [],
+      "destinationIds": [],
+      "priceClaims": [],
+      "recommendationClaims": [],
+      "presentationBlocks": [],
+      "relatedArticleIds": [
+        "how-does-baking-powder-work",
+        "why-are-some-answers-better-than-others"
+      ],
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-does-baking-powder-work/",
+          "/articles/why-are-some-answers-better-than-others/"
+        ]
+      },
+      "disclosure": {
+        "state": "no-paid-links",
+        "text": "This guide contains no affiliate links, sponsored placements, paid reviews, or product placements.",
+        "href": "/affiliate-disclosure/"
+      },
+      "workflow": {
+        "state": "published",
+        "history": [
+          {
+            "state": "draft",
+            "at": "2026-07-01",
+            "actor": "baseline-history"
+          },
+          {
+            "state": "review",
+            "at": "2026-07-08",
+            "actor": "baseline-history"
+          },
+          {
+            "state": "approved",
+            "at": "2026-07-12",
+            "actor": "direct-owner-order-baseline-migration"
+          },
+          {
+            "state": "published",
+            "at": "2026-07-13",
+            "actor": "baseline-history"
+          }
+        ]
+      },
+      "authors": [
+        "How Biscuit"
+      ],
+      "directives": [],
+      "citations": [],
+      "media": [],
+      "bodyDigest": "21de7c6d423d27b33fdfd27719f8af5c0a648e4be3964588ea88a250e53d1265",
+      "packageDigest": "51241e8135ba7fa0ab50d217bf2e061f1421cba8c959a23e4a6d2c26c70673be",
+      "approvalDigest": "71d61cdc64e922bd74a9210b266553c97e31208fab121aa7727d1e72e66748a7",
+      "approvalId": "approval-why-salt-melts-ice-baseline",
       "draft": false,
       "preview": false,
       "thin": false,

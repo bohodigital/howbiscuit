@@ -1,0 +1,9 @@
+schemaVersion: 1.0.0
+id: approval-how-does-baking-powder-work-baseline
+articleId: how-does-baking-powder-work
+approvingActor: direct-owner-order-baseline-migration
+timestamp: "2026-07-20T19:00:00-05:00"
+packageDigest: ab2f4eca81d18a6a2e1f0100a3f65abba4655b90c154a8e06e37823df7927f68
+approvedState: published
+note: Migration approval authorized for the Handoff 1 public article at baseline 8382c6e.
+status: active

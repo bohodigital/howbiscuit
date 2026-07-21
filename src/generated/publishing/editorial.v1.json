@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": {
+    "ideas": [
+      {
+        "schemaVersion": "1.0.0",
+        "id": "idea-how-does-baking-powder-work",
+        "title": "How baking powder works and why it fails",
+        "proposedCategory": "kitchen",
+        "proposedTopics": [
+          "food-science"
+        ],
+        "userProblem": "The reader needs to understand or diagnose baking powder that is not producing lift.",
+        "intendedAudience": "Home cooks and bakers troubleshooting quick breads, cakes, or biscuits.",
+        "durability": "The acid-base mechanism and freshness test are durable reference information.",
+        "productRelevance": "Low; the answer does not require a product recommendation.",
+        "evidenceFeasibility": "University extension sources directly cover the mechanism and freshness test.",
+        "competitionOpportunity": "A concise mechanism-first guide can outperform thin expiration-only answers.",
+        "productionEffort": "Low because the claims and safe diagnostic steps are bounded.",
+        "risk": "Low when substitutions are kept recipe-specific and claims remain sourced.",
+        "scoreComponents": {
+          "durability": 5,
+          "productRelevance": 2,
+          "evidenceFeasibility": 5,
+          "opportunity": 4,
+          "productionEffort": 2,
+          "risk": 2
+        },
+        "totalScore": 24,
+        "status": "published",
+        "notes": [
+          "Migrated from the publicly released Handoff 1 article."
+        ],
+        "recordDigest": "17ae1055851d00356288057ae07d4cab82b28d3e998fc41602676ada2242d8b3"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "idea-why-are-some-answers-better-than-others",
+        "title": "Why some practical answers are better than others",
+        "proposedCategory": null,
+        "proposedTopics": [],
+        "userProblem": "The reader needs a transparent standard for judging the usefulness and evidence of an answer.",
+        "intendedAudience": "Readers evaluating How Biscuit guidance and writers applying its editorial standard.",
+        "durability": "Clear reasoning, traceability, useful next steps, and visible limits are durable principles.",
+        "productRelevance": "None; this is an editorial standard rather than shopping guidance.",
+        "evidenceFeasibility": "The standard is internally governed and supported by established writing guidance.",
+        "competitionOpportunity": "Publishing the standard creates trust and a clear accountability surface.",
+        "productionEffort": "Low because the article explains a bounded internal policy.",
+        "risk": "Very low when it is labeled as an editorial standard rather than empirical research.",
+        "scoreComponents": {
+          "durability": 5,
+          "productRelevance": 1,
+          "evidenceFeasibility": 5,
+          "opportunity": 3,
+          "productionEffort": 2,
+          "risk": 1
+        },
+        "totalScore": 23,
+        "status": "published",
+        "notes": [
+          "Migrated from the publicly released Handoff 1 article."
+        ],
+        "recordDigest": "e4c67b7edcde70344830b423ec81ef2a9bff68999d00b492df37f6d2c67f87f0"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "idea-why-salt-melts-ice",
+        "title": "Why salt melts ice and when it stops working",
+        "proposedCategory": "home",
+        "proposedTopics": [
+          "heating-cooling"
+        ],
+        "userProblem": "The reader needs to de-ice a surface effectively without wasting salt or overstating temperature performance.",
+        "intendedAudience": "Homeowners and renters managing winter ice on walks and steps.",
+        "durability": "Freezing-point depression and chloride tradeoffs are durable scientific and practical topics.",
+        "productRelevance": "Moderate because de-icing products exist, but the article makes no product recommendation.",
+        "evidenceFeasibility": "Textbook chemistry and government environmental sources support the claims.",
+        "competitionOpportunity": "A mechanism plus low-waste routine is more useful than a generic temperature chart.",
+        "productionEffort": "Moderate because accessible math and safety context require careful rendering.",
+        "risk": "Moderate because misuse can affect surfaces, pets, plants, and waterways.",
+        "scoreComponents": {
+          "durability": 5,
+          "productRelevance": 3,
+          "evidenceFeasibility": 5,
+          "opportunity": 4,
+          "productionEffort": 3,
+          "risk": 3
+        },
+        "totalScore": 23,
+        "status": "published",
+        "notes": [
+          "The trusted LaTeX source remains canonical."
+        ],
+        "recordDigest": "a6e9fd7c731c45bd4ca6b4294937aac30b48b59584655e8436b5678db944738c"
+      }
+    ],
+    "briefs": [
+      {
+        "schemaVersion": "1.0.0",
+        "id": "brief-how-does-baking-powder-work",
+        "ideaId": "idea-how-does-baking-powder-work",
+        "intendedArticleId": "how-does-baking-powder-work",
+        "researchQuestion": "What triggers baking powder, what commonly prevents lift, and how can a reader test freshness safely?",
+        "userIntent": "Understand the mechanism and decide whether the can or recipe process is the likely problem.",
+        "scope": [
+          "acid-base mechanism",
+          "double-acting behavior",
+          "common failure modes",
+          "hot-water freshness test"
+        ],
+        "exclusions": [
+          "medical claims",
+          "brand rankings",
+          "universal substitution ratios"
+        ],
+        "requiredClaims": [
+          "baking powder contains acid and base",
+          "moisture starts gas release",
+          "heat drives a second release in double-acting powder"
+        ],
+        "prohibitedClaims": [
+          "more powder always produces more height",
+          "baking powder and soda are interchangeable"
+        ],
+        "requiredSourceTypes": [
+          "university"
+        ],
+        "candidateSourceIds": [
+          "usu-cooking-food-storage",
+          "penn-state-storing-staple-ingredients",
+          "usu-ingredient-substitutions"
+        ],
+        "testingNeeds": [
+          "No first-hand test required; label the guide researched."
+        ],
+        "mediaNeeds": [],
+        "productNeeds": [],
+        "safetyConsiderations": [
+          "Keep substitutions recipe-specific."
+        ],
+        "unresolvedQuestions": [],
+        "recommendation": "Publish as a researched mechanism and troubleshooting guide.",
+        "status": "approved",
+        "recordDigest": "38d6d246dbae519d9b48ad7f9549b7064a713b4a49556f93f37ddf64f5fc43df"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "brief-why-are-some-answers-better-than-others",
+        "ideaId": "idea-why-are-some-answers-better-than-others",
+        "intendedArticleId": "why-are-some-answers-better-than-others",
+        "researchQuestion": "What minimum qualities make a practical answer useful, traceable, and honest about limits?",
+        "userIntent": "Understand the editorial standard applied to How Biscuit answers.",
+        "scope": [
+          "direct answers",
+          "reasoning",
+          "evidence",
+          "next actions",
+          "uncertainty"
+        ],
+        "exclusions": [
+          "claims that the standard is universally optimal",
+          "academic grading rubrics"
+        ],
+        "requiredClaims": [
+          "useful answers expose reasoning and limits",
+          "important factual claims need traceability"
+        ],
+        "prohibitedClaims": [
+          "length alone determines quality",
+          "citations replace analysis"
+        ],
+        "requiredSourceTypes": [
+          "editorial-policy",
+          "university"
+        ],
+        "candidateSourceIds": [
+          "purdue-paragraph-organization-flow",
+          "how-biscuit-editorial-policy"
+        ],
+        "testingNeeds": [
+          "Not applicable to an editorial standard."
+        ],
+        "mediaNeeds": [],
+        "productNeeds": [],
+        "safetyConsiderations": [
+          "Label judgment as an editorial standard."
+        ],
+        "unresolvedQuestions": [],
+        "recommendation": "Publish as a categoryless editorial standard.",
+        "status": "approved",
+        "recordDigest": "696676f623550f2e7b4971aff5d744afe4fe1af572869fb7aef442f0f8730b5a"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "brief-why-salt-melts-ice",
+        "ideaId": "idea-why-salt-melts-ice",
+        "intendedArticleId": "why-salt-melts-ice",
+        "researchQuestion": "Why does salt melt ice, what limits sodium chloride, and what routine reduces waste?",
+        "userIntent": "Understand the mechanism and clear bonded ice with the least practical chloride use.",
+        "scope": [
+          "freezing-point depression",
+          "brine formation",
+          "idealized calculation",
+          "practical temperature limits",
+          "chloride tradeoffs"
+        ],
+        "exclusions": [
+          "brand rankings",
+          "universal application rates",
+          "guarantees for a specific driveway"
+        ],
+        "requiredClaims": [
+          "dissolved particles lower freezing point",
+          "salt needs liquid water to form brine",
+          "chloride runoff has environmental costs"
+        ],
+        "prohibitedClaims": [
+          "salt warms ice",
+          "laboratory eutectic temperature guarantees field performance"
+        ],
+        "requiredSourceTypes": [
+          "textbook",
+          "government"
+        ],
+        "candidateSourceIds": [
+          "openstax-colligative-properties",
+          "openstax-water-properties",
+          "epa-salt-resources"
+        ],
+        "testingNeeds": [
+          "No first-hand product test required; retain researched label."
+        ],
+        "mediaNeeds": [],
+        "productNeeds": [],
+        "safetyConsiderations": [
+          "Follow product labels and keep excess away from drains",
+          "plants",
+          "and pet traffic."
+        ],
+        "unresolvedQuestions": [],
+        "recommendation": "Keep the trusted LaTeX article with accessible KaTeX and MathML.",
+        "status": "approved",
+        "recordDigest": "f6fe17d99816a2528c1a60f067465f2f0b11bb00478f2faebfd45bd3c97aa198"
+      }
+    ],
+    "sources": [
+      {
+        "schemaVersion": "1.0.0",
+        "id": "epa-salt-resources",
+        "title": "Salt Resources",
+        "publisher": "U.S. Environmental Protection Agency",
+        "author": null,
+        "canonicalUrl": "https://www.epa.gov/risk/salt-resources",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "government",
+        "authorityNotes": "Government resource collection on road salt, chloride, environmental effects, and mitigation.",
+        "archiveNotes": [],
+        "rightsRestrictions": "Public government guidance; paraphrase and link to current agency context.",
+        "status": "active",
+        "recordDigest": "57d6176f97a8bc078f740fcebbbd6baf4413941d2282b51008c4121891c6e533"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "how-biscuit-editorial-policy",
+        "title": "How Biscuit Editorial Policy",
+        "publisher": "How Biscuit",
+        "author": "How Biscuit",
+        "canonicalUrl": "/editorial-policy/",
+        "publicationIdentity": null,
+        "publicationDate": "2026-07-01",
+        "accessedDate": "2026-07-20",
+        "sourceType": "editorial-policy",
+        "authorityNotes": "First-party statement of the site editorial policy.",
+        "archiveNotes": [],
+        "rightsRestrictions": "Repository-owned policy; quote only when useful to the reader.",
+        "status": "active",
+        "recordDigest": "ca9a4ee7ae7e3c3037ece8ca6942cd2e56a33424ef2e4b8f2716a6a65ae17fb5"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "openstax-colligative-properties",
+        "title": "Colligative Properties",
+        "publisher": "OpenStax Chemistry 2e",
+        "author": null,
+        "canonicalUrl": "https://openstax.org/books/chemistry-2e/pages/11-4-colligative-properties",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "textbook",
+        "authorityNotes": "Open textbook treatment of freezing-point depression and the idealized equation.",
+        "archiveNotes": [],
+        "rightsRestrictions": "Attribute and link; paraphrase except for necessary formulas and terms.",
+        "status": "active",
+        "recordDigest": "a3d84726f68960a59ea501de82b3176cfba283de418d24ce97f721f56e698bea"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "openstax-water-properties",
+        "title": "Water Properties",
+        "publisher": "OpenStax Chemistry 2e",
+        "author": null,
+        "canonicalUrl": "https://openstax.org/books/chemistry-2e/pages/e-water-properties",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "textbook",
+        "authorityNotes": "Open textbook reference for water properties used in the explanation.",
+        "archiveNotes": [],
+        "rightsRestrictions": "Attribute and link; paraphrase except for necessary scientific terms.",
+        "status": "active",
+        "recordDigest": "b45a142dc12822c2fe1b374b8348a64a11cb60803f3d8e7a2008246fa74b83a1"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "penn-state-storing-staple-ingredients",
+        "title": "Storing Staple Ingredients in the Kitchen: freshness test",
+        "publisher": "Penn State Extension",
+        "author": null,
+        "canonicalUrl": "https://extension.psu.edu/storing-staple-ingredients-in-the-kitchen",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "university",
+        "authorityNotes": "University extension guidance for the hot-water baking-powder freshness test.",
+        "archiveNotes": [],
+        "rightsRestrictions": "Paraphrase conservatively and link to the source; no long quotation.",
+        "status": "active",
+        "recordDigest": "041f7210200e9b97e12a770032f6686906f422fa60674496ef5baa0ca97f27fe"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "purdue-paragraph-organization-flow",
+        "title": "Paragraph Organization and Flow: evidence, analysis, and clear development",
+        "publisher": "Purdue Online Writing Lab",
+        "author": null,
+        "canonicalUrl": "https://owl.purdue.edu/owl/graduate_writing/documents/IWE_2020_Paragraphs_Organization-and-Flow_Transcript.doc.pdf",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "university",
+        "authorityNotes": "University writing guidance on evidence, analysis, and paragraph development.",
+        "archiveNotes": [
+          "The canonical source is a publisher-hosted PDF transcript."
+        ],
+        "rightsRestrictions": "Paraphrase conservatively and link to the source; no long quotation.",
+        "status": "active",
+        "recordDigest": "8ade36391627af1636eb4e5c840d5fec797715b7a1b9219e75dc4cc8b75c6a28"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "usu-cooking-food-storage",
+        "title": "Cooking Food Storage: baking powder activity and double-acting acids",
+        "publisher": "Utah State University Extension",
+        "author": null,
+        "canonicalUrl": "https://extension.usu.edu/preserve-the-harvest/research/cooking-food-storage",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "university",
+        "authorityNotes": "University extension guidance on baking powder activity and double-acting acids.",
+        "archiveNotes": [],
+        "rightsRestrictions": "Paraphrase conservatively and link to the source; no long quotation.",
+        "status": "active",
+        "recordDigest": "15b74562b7ee3255892bd620b0450ac5c1b2d625acf6684e620e2ebf03fb2126"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "usu-ingredient-substitutions",
+        "title": "Ingredient Substitutions for Cooking and Baking",
+        "publisher": "Utah State University Extension",
+        "author": null,
+        "canonicalUrl": "https://extension.usu.edu/archive/list-of-ingredient-substitutions-for-cooking-and-baking",
+        "publicationIdentity": null,
+        "publicationDate": null,
+        "accessedDate": "2026-07-20",
+        "sourceType": "university",
+        "authorityNotes": "University extension reference for bounded baking-powder substitution context.",
+        "archiveNotes": [
+          "The source is in the publisher archive path."
+        ],
+        "rightsRestrictions": "Paraphrase conservatively and link to the source; no long quotation.",
+        "status": "active",
+        "recordDigest": "c90e18f5ee1586023c53e789db391ef48c15d0c0c27408a64f3ef56675257c78"
+      }
+    ],
+    "testing": [
+      {
+        "schemaVersion": "1.0.0",
+        "id": "testing-how-does-baking-powder-work",
+        "articleId": "how-does-baking-powder-work",
+        "testedSubject": "Baking-powder mechanism and freshness guidance",
+        "productIds": [],
+        "tester": "How Biscuit editorial desk",
+        "dates": [
+          "2026-07-10"
+        ],
+        "environment": "Source-based editorial review; no controlled kitchen test.",
+        "method": "Compared claims against the registered university extension sources.",
+        "measurements": [],
+        "observations": [],
+        "limitations": [
+          "How Biscuit did not run a controlled product test for this mechanism guide."
+        ],
+        "evidenceArtifacts": [],
+        "claimState": "not-hands-on-tested",
+        "supportsFirstHandClaims": false,
+        "status": "active",
+        "recordDigest": "25c929730523a818a268d9c12f0dd5035a6e2eebae31e1d9e61c75493ae4cd9e"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "testing-why-are-some-answers-better-than-others",
+        "articleId": "why-are-some-answers-better-than-others",
+        "testedSubject": "How Biscuit editorial answer-quality standard",
+        "productIds": [],
+        "tester": "How Biscuit editorial desk",
+        "dates": [
+          "2026-07-10"
+        ],
+        "environment": "Internal editorial-policy review.",
+        "method": "Checked the article against the registered editorial policy and writing guidance.",
+        "measurements": [],
+        "observations": [],
+        "limitations": [
+          "This page defines an editorial standard rather than reporting a hands-on test."
+        ],
+        "evidenceArtifacts": [],
+        "claimState": "not-applicable",
+        "supportsFirstHandClaims": false,
+        "status": "active",
+        "recordDigest": "5309dc3abfce387173f2bb2625893d1f46677a972cd23c281a685c60390f2119"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "testing-why-salt-melts-ice",
+        "articleId": "why-salt-melts-ice",
+        "testedSubject": "Freezing-point depression and low-waste de-icing guidance",
+        "productIds": [],
+        "tester": "How Biscuit editorial desk",
+        "dates": [
+          "2026-07-13"
+        ],
+        "environment": "Source-based editorial review; no controlled de-icer test.",
+        "method": "Checked scientific and environmental claims against registered textbook and government sources.",
+        "measurements": [],
+        "observations": [],
+        "limitations": [
+          "How Biscuit did not run a controlled product or pavement test for this guide."
+        ],
+        "evidenceArtifacts": [],
+        "claimState": "not-hands-on-tested",
+        "supportsFirstHandClaims": false,
+        "status": "active",
+        "recordDigest": "16a811e194c580abc4fcb80e5e486aff1f4c0a40095d0b80c743f86341e11178"
+      }
+    ],
+    "mediaRights": [],
+    "linkPreviews": [],
+    "approvals": [
+      {
+        "schemaVersion": "1.0.0",
+        "id": "approval-how-does-baking-powder-work-baseline",
+        "articleId": "how-does-baking-powder-work",
+        "approvingActor": "direct-owner-order-baseline-migration",
+        "timestamp": "2026-07-20T19:00:00-05:00",
+        "packageDigest": "ab2f4eca81d18a6a2e1f0100a3f65abba4655b90c154a8e06e37823df7927f68",
+        "approvedState": "published",
+        "note": "Migration approval authorized for the Handoff 1 public article at baseline 8382c6e.",
+        "status": "active",
+        "recordDigest": "7a672b6b332c828b6c1954a6f0be68d6615d8b98b5faa05ec629cb897e0e5d52"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "approval-why-are-some-answers-better-than-others-baseline",
+        "articleId": "why-are-some-answers-better-than-others",
+        "approvingActor": "direct-owner-order-baseline-migration",
+        "timestamp": "2026-07-20T19:00:00-05:00",
+        "packageDigest": "6962f990ddcb3b2925d27a7c17866f718f08e7d21e5d76e1f5e68c2a721bca27",
+        "approvedState": "published",
+        "note": "Migration approval authorized for the Handoff 1 public article at baseline 8382c6e.",
+        "status": "active",
+        "recordDigest": "53749e760397d0ae679d8b1804afed5c370803d440a85f4c56602e88a8f11287"
+      },
+      {
+        "schemaVersion": "1.0.0",
+        "id": "approval-why-salt-melts-ice-baseline",
+        "articleId": "why-salt-melts-ice",
+        "approvingActor": "direct-owner-order-baseline-migration",
+        "timestamp": "2026-07-20T19:00:00-05:00",
+        "packageDigest": "71d61cdc64e922bd74a9210b266553c97e31208fab121aa7727d1e72e66748a7",
+        "approvedState": "published",
+        "note": "Migration approval authorized for the Handoff 1 public article at baseline 8382c6e.",
+        "status": "active",
+        "recordDigest": "ecb70a05a0b3439d61c3deb9e9af26c29a1687e03f475afc149823e5fddfa1f2"
+      }
+    ]
+  }
+}

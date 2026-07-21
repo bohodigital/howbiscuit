@@ -20,6 +20,7 @@ import { visit } from 'unist-util-visit';
 
 import { loadTypeScriptModule } from '../lib/load-typescript-module.mjs';
 import { discoverTrackedPublicSources } from '../../src/lib/public-content/source-adapter.mjs';
+import { compileLatexArticle } from '../../src/lib/latex/article-compiler.mjs';
 import {
   ARTICLE_PACKAGE_SCHEMA_VERSION,
   NORMALIZED_PUBLIC_ARTICLE_SCHEMA_VERSION,
@@ -28,6 +29,13 @@ import {
   isSafeEditorialUrl,
   normalizedArticleRoute,
 } from './contracts.mjs';
+import {
+  loadEditorialRecords,
+  publicationDigest,
+  resolveActiveRecords,
+  validateFirstHandClaims,
+  validateWorkflow,
+} from './editorial-records.mjs';
 import { stableJson } from './stable-json.mjs';
 
 const scriptsRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -231,7 +239,7 @@ function compiledMdx(normalizedArticle, markdown) {
     editorialClassification: normalizedArticle.editorialClassification,
     editorialPriority: normalizedArticle.editorialPriority,
     answerSummary: normalizedArticle.answerSummary,
-    problemLabel: normalizedArticle.problemLabel,
+    ...(normalizedArticle.problemLabel === null ? {} : { problemLabel: normalizedArticle.problemLabel }),
     evidence: normalizedArticle.evidence,
     readTime: normalizedArticle.readTime,
     feed: normalizedArticle.feedEligible,
@@ -263,6 +271,7 @@ function compiledMdx(normalizedArticle, markdown) {
 
 export async function createPublishingContext(root = repositoryRoot) {
   const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
+  const editorial = await loadEditorialRecords(root, taxonomy);
   const manifestSchema = createArticleManifestSchema(taxonomy);
   const jsonSchema = createArticleManifestJsonSchema(taxonomy);
   const ajv = new Ajv2020({ allErrors: true, strict: true });
@@ -273,10 +282,6 @@ export async function createPublishingContext(root = repositoryRoot) {
     validate(enabled, data) {
       if (!enabled || !data || typeof data !== 'object') return true;
       if (data.id !== data.slug || data.updatedAt < data.publishedAt) return false;
-      const noteIds = Array.isArray(data.sourceNotes) ? data.sourceNotes.map(({ id }) => id).sort() : [];
-      const sourceIds = Array.isArray(data.sourceIds) ? [...data.sourceIds].sort() : [];
-      if (JSON.stringify(noteIds) !== JSON.stringify(sourceIds)) return false;
-      if (data.sourceNotes?.some(({ href }) => !isSafeEditorialUrl(href))) return false;
       const presentationIds = Array.isArray(data.presentationBlocks) ? data.presentationBlocks.map(({ id }) => id) : [];
       if (new Set(presentationIds).size !== presentationIds.length) return false;
       if (data.articleType === 'guide') {
@@ -289,7 +294,7 @@ export async function createPublishingContext(root = repositoryRoot) {
     },
   });
   const validateJsonSchema = ajv.compile(jsonSchema);
-  return Object.freeze({ root, taxonomy, manifestSchema, jsonSchema, validateJsonSchema });
+  return Object.freeze({ root, taxonomy, editorial, manifestSchema, jsonSchema, validateJsonSchema });
 }
 
 export function validateManifestParity(rawManifest, context, sourceLabel = 'manifest.yaml') {
@@ -304,6 +309,76 @@ export function validateManifestParity(rawManifest, context, sourceLabel = 'mani
     throw new Error(`${sourceLabel}: invalid manifest\n${[...runtimeMessages, ...schemaMessages].join('\n')}`);
   }
   return runtime.data;
+}
+
+function resolveEditorialGovernance(governance, files, media, context, label, claimText) {
+  validateWorkflow(governance.workflow, label);
+  const { editorial } = context;
+  const idea = editorial.ideas.get(governance.ideaId);
+  assert(idea?.status === 'published', `${label}: idea ${governance.ideaId} must resolve to a published record`);
+  const brief = editorial.briefs.get(governance.briefId);
+  assert(brief?.status === 'approved', `${label}: brief ${governance.briefId} must resolve to an approved record`);
+  assert(brief.ideaId === idea.id && brief.intendedArticleId === governance.id, `${label}: brief linkage does not match article and idea`);
+  const sources = resolveActiveRecords(governance.sourceIds, editorial.sources, 'source', label);
+  const testingRecords = resolveActiveRecords(governance.testingIds, editorial.testing, 'testing record', label);
+  assert(testingRecords.length === 1, `${label}: schema v1 requires exactly one testing record`);
+  for (const testing of testingRecords) assert(testing.articleId === governance.id, `${label}: testing record ${testing.id} belongs to another article`);
+  validateFirstHandClaims(claimText, testingRecords, label);
+
+  const mediaRecords = resolveActiveRecords(governance.mediaIds, editorial.mediaRights, 'media-rights record', label);
+  const registeredMediaPaths = new Set();
+  for (const mediaRecord of mediaRecords) {
+    assert(mediaRecord.articleId === governance.id, `${label}: media ${mediaRecord.id} belongs to another article`);
+    const relativeMediaPath = mediaRecord.packageRelativePath.replace(/^media\//, '');
+    assert(!registeredMediaPaths.has(relativeMediaPath), `${label}: duplicate media-rights path ${relativeMediaPath}`);
+    registeredMediaPaths.add(relativeMediaPath);
+    const mediaFile = media.find(({ path: filePath }) => filePath === relativeMediaPath);
+    assert(mediaFile, `${label}: media ${mediaRecord.id} file is missing`);
+    assert(mediaFile.hash === mediaRecord.contentHash, `${label}: media ${mediaRecord.id} hash mismatch`);
+  }
+  for (const mediaFile of media) {
+    assert(registeredMediaPaths.has(mediaFile.path), `${label}: media file ${mediaFile.path} has no rights record`);
+  }
+  assert(media.length === registeredMediaPaths.size, `${label}: every package media file must have exactly one rights record`);
+
+  const linkPreviews = resolveActiveRecords(governance.linkPreviewIds, editorial.linkPreviews, 'link-preview record', label);
+  for (const preview of linkPreviews) {
+    assert(sources.some(({ id }) => id === preview.sourceId), `${label}: link preview ${preview.id} source ${preview.sourceId} is not governed by the article`);
+    if (preview.mediaId !== null) {
+      assert(mediaRecords.some(({ id }) => id === preview.mediaId), `${label}: link preview ${preview.id} media ${preview.mediaId} is not governed by the article`);
+    }
+  }
+  const referencedRecords = [
+    { kind: 'idea', record: idea },
+    { kind: 'brief', record: brief },
+    ...sources.map((record) => ({ kind: 'source', record })),
+    ...testingRecords.map((record) => ({ kind: 'testing', record })),
+    ...mediaRecords.map((record) => ({ kind: 'media-rights', record })),
+    ...linkPreviews.map((record) => ({ kind: 'link-preview', record })),
+  ];
+  const expectedDigest = publicationDigest({ articleId: governance.id, files, referencedRecords });
+  const approval = governance.approvalId === null ? null : editorial.approvals.get(governance.approvalId);
+  const published = governance.workflow.state === 'published';
+  if (published) {
+    assert(approval?.status === 'active', `${label}: publication requires an active owner approval`);
+    assert(approval.articleId === governance.id && approval.approvedState === 'published', `${label}: approval is for another article or state`);
+    assert(approval.packageDigest === expectedDigest, `${label}: stale approval digest; expected ${expectedDigest}`);
+  }
+  const sourceNotes = sources.map((source) => {
+    assert(source.canonicalUrl !== null, `${label}: public source ${source.id} requires a canonical URL`);
+    return Object.freeze({ id: source.id, title: source.title, publisher: source.publisher, href: source.canonicalUrl });
+  });
+  const testing = testingRecords[0];
+  return Object.freeze({
+    published,
+    idea,
+    brief,
+    approval,
+    expectedDigest,
+    sourceNotes: Object.freeze(sourceNotes),
+    testing: Object.freeze({ state: testing.claimState, notes: Object.freeze([...testing.limitations]) }),
+    referencedRecords: Object.freeze(referencedRecords),
+  });
 }
 
 export function validateArticlePackage(packagePath, context) {
@@ -321,6 +396,19 @@ export function validateArticlePackage(packagePath, context) {
   const packageBytes = Buffer.byteLength(manifestSource) + Buffer.byteLength(markdown) + media.reduce((total, item) => total + item.size, 0);
   assert(packageBytes <= MAX_PACKAGE_BYTES, `${relativeFromRoot(packagePath)}: package exceeds ${MAX_PACKAGE_BYTES} bytes`);
   const markdownAnalysis = validateMarkdown(markdown, manifest, relativeFromRoot(articlePath));
+  const publicationFiles = Object.fromEntries([
+    ['manifest.yaml', manifestSource],
+    ['article.md', markdown],
+    ...media.map((item) => [`media/${item.path}`, `sha256:${item.hash}`]),
+  ]);
+  const governance = resolveEditorialGovernance(
+    manifest,
+    publicationFiles,
+    media,
+    context,
+    relativeFromRoot(packagePath),
+    `${markdown}\n${stableJson(manifest)}`,
+  );
   const route = normalizedArticleRoute(manifest.slug);
   const bodyDigest = sha256(markdown);
   const packageDigest = sha256(stableJson({ manifest, markdown, media }));
@@ -353,17 +441,17 @@ export function validateArticlePackage(packagePath, context) {
     problemLabels: manifest.problemLabels,
     publishedDate: manifest.publishedAt,
     updatedDate: manifest.updatedAt,
-    feedEligible: manifest.workflow.state === 'published',
-    searchEligible: manifest.workflow.state === 'published',
-    sitemapEligible: manifest.workflow.state === 'published',
-    llmsEligible: manifest.workflow.state === 'published',
+    feedEligible: governance.published,
+    searchEligible: governance.published,
+    sitemapEligible: governance.published,
+    llmsEligible: governance.published,
     featured: manifest.featured,
     editorialPriority: manifest.editorialPriority,
     readTime: `${Math.max(1, Math.ceil(words / 200))} min read`,
     evidence: manifest.evidence.label,
-    testing: manifest.testing,
+    testing: governance.testing,
     sourceIds: manifest.sourceIds,
-    sourceNotes: Object.freeze({ state: 'structured', items: manifest.sourceNotes }),
+    sourceNotes: Object.freeze({ state: 'structured', items: governance.sourceNotes }),
     testingIds: manifest.testingIds,
     mediaIds: manifest.mediaIds,
     productIds: manifest.productIds,
@@ -383,11 +471,13 @@ export function validateArticlePackage(packagePath, context) {
     media,
     bodyDigest,
     packageDigest,
+    approvalDigest: governance.expectedDigest,
+    approvalId: manifest.approvalId,
     draft: manifest.workflow.state === 'draft',
     preview: ['review', 'approved'].includes(manifest.workflow.state),
     thin: false,
     redirectState: null,
-    retirementState: null,
+    retirementState: manifest.workflow.state === 'retired' ? Object.freeze({ allowedStatuses: Object.freeze([404, 410]) }) : null,
   });
   return Object.freeze({ manifest, markdown, normalizedArticle, generatedMdx: compiledMdx(normalizedArticle, markdown) });
 }
@@ -398,6 +488,111 @@ export function validateNormalizedArticleUniqueness(articles) {
     assert(new Set(values).size === values.length, `Duplicate article ${field}: ${values.join(', ')}`);
   }
   return true;
+}
+
+function compileLatexArticles(root, context) {
+  const sourceRoot = path.join(root, 'content', 'latex', 'articles');
+  const governanceRoot = path.join(root, 'content', 'latex-governance');
+  const files = readdirSync(sourceRoot, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.tex'))
+    .sort((left, right) => left.name.localeCompare(right.name, 'en'));
+  return files.map((entry) => {
+    const sourcePath = path.join(sourceRoot, entry.name);
+    const source = safeRead(sourcePath, 2 * 1024 * 1024);
+    const article = compileLatexArticle(source, { sourcePath: relativeFromRoot(sourcePath), taxonomy: context.taxonomy });
+    const governancePath = path.join(governanceRoot, `${article.metadata.slug}.yaml`);
+    const governanceSource = safeRead(governancePath, MAX_MANIFEST_BYTES);
+    const parsedGovernance = context.editorial.schemas.latexGovernance.parse(parseYaml(governanceSource));
+    assert(parsedGovernance.articleId === article.metadata.slug, `${relativeFromRoot(governancePath)}: articleId must match the LaTeX slug`);
+    const governance = Object.freeze({ ...parsedGovernance, id: parsedGovernance.articleId });
+    const resolved = resolveEditorialGovernance(
+      governance,
+      { [relativeFromRoot(sourcePath)]: source, [relativeFromRoot(governancePath)]: governanceSource },
+      [],
+      context,
+      relativeFromRoot(sourcePath),
+      source
+        .replace(/\\hbproblem\{[^}]*\}/g, '')
+        .replace(/\\related\{[^}]*\}\{[^}]*\}\{[^}]*\}/g, ''),
+    );
+    assert(article.metadata.sourceNotes.items.length === resolved.sourceNotes.length, `${relativeFromRoot(sourcePath)}: LaTeX source-note count does not match governed source IDs`);
+    for (const sourceNote of article.metadata.sourceNotes.items) {
+      const governed = resolved.sourceNotes.find(({ href }) => href === sourceNote.href);
+      assert(governed && governed.title === sourceNote.title && governed.publisher === sourceNote.publisher, `${relativeFromRoot(sourcePath)}: LaTeX source note does not match its canonical source record`);
+    }
+    const route = normalizedArticleRoute(article.metadata.slug);
+    const relatedArticleIds = article.metadata.relatedContent.routes.map((relatedRoute) => {
+      const match = relatedRoute.match(/^\/articles\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/);
+      assert(match, `${relativeFromRoot(sourcePath)}: invalid related route ${relatedRoute}`);
+      return match[1];
+    });
+    const normalizedArticle = Object.freeze({
+      schemaVersion: NORMALIZED_PUBLIC_ARTICLE_SCHEMA_VERSION,
+      kind: 'article',
+      sourceKind: 'latex-article',
+      sourcePath: relativeFromRoot(sourcePath),
+      bodySourcePath: relativeFromRoot(sourcePath),
+      generatedContentPath: `src/content/docs/articles/${article.metadata.slug}.mdx`,
+      id: article.metadata.slug,
+      slug: article.metadata.slug,
+      route,
+      canonicalRoute: route,
+      pagefindRoute: route,
+      rssIdentity: route,
+      sitemapIdentity: route,
+      title: article.metadata.title,
+      description: article.metadata.description,
+      categoryId: article.metadata.categoryId,
+      topicId: article.metadata.topicId,
+      topicIds: [article.metadata.topicId],
+      articleType: article.metadata.articleType,
+      editorialClassification: article.metadata.editorialClassification,
+      articleFormat: 'latex',
+      answerSummary: article.metadata.answerSummary,
+      problemLabel: article.metadata.problemLabel ?? null,
+      problemLabels: article.metadata.problemLabel ? [article.metadata.problemLabel] : [],
+      publishedDate: article.metadata.pubDate,
+      updatedDate: article.metadata.updatedDate,
+      feedEligible: resolved.published && article.metadata.feed,
+      searchEligible: resolved.published,
+      sitemapEligible: resolved.published,
+      llmsEligible: resolved.published,
+      featured: resolved.published && article.metadata.featured,
+      editorialPriority: article.metadata.editorialPriority,
+      readTime: article.metadata.readTime,
+      evidence: article.metadata.evidence,
+      testing: resolved.testing,
+      sourceIds: governance.sourceIds,
+      sourceNotes: Object.freeze({ state: 'structured', items: resolved.sourceNotes }),
+      testingIds: governance.testingIds,
+      mediaIds: governance.mediaIds,
+      productIds: governance.productIds,
+      productGroupIds: governance.productGroupIds,
+      linkPreviewIds: governance.linkPreviewIds,
+      destinationIds: governance.destinationIds,
+      priceClaims: governance.priceClaims,
+      recommendationClaims: governance.recommendationClaims,
+      presentationBlocks: [],
+      relatedArticleIds,
+      relatedContent: Object.freeze({ state: 'structured', routes: article.metadata.relatedContent.routes }),
+      disclosure: article.metadata.disclosure,
+      workflow: governance.workflow,
+      authors: [article.metadata.author],
+      directives: [],
+      citations: [],
+      media: [],
+      bodyDigest: sha256(source),
+      packageDigest: sha256(stableJson({ source, governance })),
+      approvalDigest: resolved.expectedDigest,
+      approvalId: governance.approvalId,
+      draft: governance.workflow.state === 'draft',
+      preview: ['review', 'approved'].includes(governance.workflow.state),
+      thin: false,
+      redirectState: null,
+      retirementState: governance.workflow.state === 'retired' ? Object.freeze({ allowedStatuses: Object.freeze([404, 410]) }) : null,
+    });
+    return Object.freeze({ governance, article, normalizedArticle });
+  });
 }
 
 function validateRelatedArticleReferences(compiled, canonicalRoutes) {
@@ -418,15 +613,17 @@ export async function compileArticlePackages({ root = repositoryRoot } = {}) {
   assert(packageDirectories.length > 0, 'At least one canonical article package is required.');
   assert(packageDirectories.every((entry) => entry.isDirectory() && !entry.isSymbolicLink()), 'Article-package root may contain only real package directories.');
   const compiled = packageDirectories.map((entry) => validateArticlePackage(path.join(articleRoot, entry.name), context));
-  validateNormalizedArticleUniqueness(compiled.map(({ normalizedArticle }) => normalizedArticle));
-  const generatedArticles = compiled.map(({ normalizedArticle }) => normalizedArticle);
+  const latexCompiled = compileLatexArticles(root, context);
+  const allCompiled = [...compiled, ...latexCompiled];
+  validateNormalizedArticleUniqueness(allCompiled.map(({ normalizedArticle }) => normalizedArticle));
+  const generatedArticles = allCompiled.map(({ normalizedArticle }) => normalizedArticle);
   const canonicalSources = discoverTrackedPublicSources(root, {
     taxonomy: context.taxonomy,
     generatedArticles,
     expectedGeneratedRoutes: generatedArticles.map(({ route }) => route),
   });
-  validateRelatedArticleReferences(compiled, new Set(canonicalSources.filter(({ kind }) => kind === 'article').map(({ route }) => route)));
-  return Object.freeze({ context, compiled: Object.freeze(compiled) });
+  validateRelatedArticleReferences(allCompiled, new Set(canonicalSources.filter(({ kind }) => kind === 'article').map(({ route }) => route)));
+  return Object.freeze({ context, compiled: Object.freeze(compiled), latexCompiled: Object.freeze(latexCompiled), allCompiled: Object.freeze(allCompiled) });
 }
 
 function assertOrWrite(filePath, expected, check) {
@@ -465,13 +662,13 @@ function compilerOwnedArticleOutputs(generatedRoot) {
 }
 
 export async function emitCompiledArticles({ root = repositoryRoot, check = false } = {}) {
-  const { context, compiled } = await compileArticlePackages({ root });
+  const { context, compiled, latexCompiled, allCompiled } = await compileArticlePackages({ root });
   const normalizedOutputPath = path.join(root, 'src', 'generated', 'publishing', 'articles.v1.json');
   const generatedSchemaPath = path.join(root, 'schemas', 'generated', 'article-manifest-v1.schema.json');
   const normalized = Object.freeze({
     schemaVersion: NORMALIZED_PUBLIC_ARTICLE_SCHEMA_VERSION,
     taxonomyVersion: context.taxonomy.PUBLIC_TAXONOMY_CONTRACT_VERSION,
-    articles: compiled.map(({ normalizedArticle }) => normalizedArticle),
+    articles: allCompiled.map(({ normalizedArticle }) => normalizedArticle).sort((left, right) => left.route.localeCompare(right.route, 'en')),
   });
   let changed = false;
   changed = assertOrWrite(normalizedOutputPath, stableJson(normalized), check) || changed;
@@ -492,7 +689,7 @@ export async function emitCompiledArticles({ root = repositoryRoot, check = fals
     const outputPath = path.join(root, item.normalizedArticle.generatedContentPath);
     changed = assertOrWrite(outputPath, item.generatedMdx, check) || changed;
   }
-  return Object.freeze({ changed, normalized, compiled });
+  return Object.freeze({ changed, normalized, compiled, latexCompiled, allCompiled });
 }
 
 export { ARTICLE_PACKAGE_SCHEMA_VERSION };

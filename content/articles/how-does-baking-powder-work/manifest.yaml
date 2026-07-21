@@ -16,19 +16,19 @@ featured: false
 editorialPriority: 20
 authors:
   - How Biscuit
+ideaId: idea-how-does-baking-powder-work
+briefId: brief-how-does-baking-powder-work
+approvalId: approval-how-does-baking-powder-work-baseline
 evidence:
   level: researched
   label: Researched
-testing:
-  state: not-hands-on-tested
-  notes:
-    - This mechanism guide was researched from university extension sources; How Biscuit did not run a controlled product test.
 workflow:
   state: published
   history:
-    - state: published
-      at: "2026-07-01"
-      actor: owner-baseline-migration
+    - { state: draft, at: "2026-06-24", actor: baseline-history }
+    - { state: review, at: "2026-06-28", actor: baseline-history }
+    - { state: approved, at: "2026-06-30", actor: direct-owner-order-baseline-migration }
+    - { state: published, at: "2026-07-01", actor: baseline-history }
 disclosure:
   state: no-paid-links
   text: This guide contains no affiliate links, sponsored placements, paid reviews, or product placements.
@@ -37,20 +37,8 @@ sourceIds:
   - usu-cooking-food-storage
   - penn-state-storing-staple-ingredients
   - usu-ingredient-substitutions
-sourceNotes:
-  - id: usu-cooking-food-storage
-    title: "Cooking Food Storage: baking powder activity and double-acting acids"
-    publisher: Utah State University Extension
-    href: https://extension.usu.edu/preserve-the-harvest/research/cooking-food-storage
-  - id: penn-state-storing-staple-ingredients
-    title: "Storing Staple Ingredients in the Kitchen: freshness test"
-    publisher: Penn State Extension
-    href: https://extension.psu.edu/storing-staple-ingredients-in-the-kitchen
-  - id: usu-ingredient-substitutions
-    title: Ingredient Substitutions for Cooking and Baking
-    publisher: Utah State University Extension
-    href: https://extension.usu.edu/archive/list-of-ingredient-substitutions-for-cooking-and-baking
-testingIds: []
+testingIds:
+  - testing-how-does-baking-powder-work
 mediaIds: []
 productIds: []
 productGroupIds: []

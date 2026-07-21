@@ -14,7 +14,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
-import { load as parseYaml } from 'js-yaml';
+import { dump as dumpYaml, load as parseYaml } from 'js-yaml';
 
 import {
   compileArticlePackages,
@@ -44,6 +44,17 @@ function tempPackage() {
   return { parent, target };
 }
 
+function makeDraftPackage(target) {
+  const manifestPath = path.join(target, 'manifest.yaml');
+  const manifest = parseYaml(readFileSync(manifestPath, 'utf8'));
+  manifest.approvalId = null;
+  manifest.workflow = {
+    state: 'draft',
+    history: [{ state: 'draft', at: '2026-07-20', actor: 'test' }],
+  };
+  writeFileSync(manifestPath, dumpYaml(manifest, { noRefs: true, lineWidth: 120, sortKeys: false }));
+}
+
 test('shared manifest fixtures keep JSON Schema and runtime validation in parity', () => {
   for (const relativePath of manifestCases.valid) {
     const manifest = parseYaml(readFileSync(path.join(root, relativePath), 'utf8'));
@@ -52,7 +63,6 @@ test('shared manifest fixtures keep JSON Schema and runtime validation in parity
   for (const fixture of manifestCases.invalid) {
     const manifest = clone(baseManifest);
     Object.assign(manifest, fixture.patch ?? {});
-    if (fixture.sourceHref) manifest.sourceNotes[0].href = fixture.sourceHref;
     const jsonResult = context.validateJsonSchema(manifest);
     const runtimeResult = context.manifestSchema.safeParse(manifest).success;
     assert.equal(jsonResult, runtimeResult, fixture.name);
@@ -60,9 +70,19 @@ test('shared manifest fixtures keep JSON Schema and runtime validation in parity
   }
 });
 
-test('the first package compiles into NormalizedPublicArticleV1 without route drift', async () => {
-  const { compiled } = await compileArticlePackages({ root });
-  assert.equal(compiled.length, 1);
+test('all governed sources compile into NormalizedPublicArticleV1 without route drift', async () => {
+  const { compiled, allCompiled } = await compileArticlePackages({ root });
+  assert.equal(compiled.length, 2);
+  assert.equal(allCompiled.length, 3);
+  assert.deepEqual(allCompiled.map(({ normalizedArticle }) => [
+    normalizedArticle.route,
+    normalizedArticle.sourceKind,
+    normalizedArticle.approvalId,
+  ]), [
+    ['/articles/how-does-baking-powder-work/', 'article-package', 'approval-how-does-baking-powder-work-baseline'],
+    ['/articles/why-are-some-answers-better-than-others/', 'article-package', 'approval-why-are-some-answers-better-than-others-baseline'],
+    ['/articles/why-salt-melts-ice/', 'latex-article', 'approval-why-salt-melts-ice-baseline'],
+  ]);
   const article = compiled[0].normalizedArticle;
   assert.equal(article.schemaVersion, '1.0.0');
   assert.equal(article.route, '/articles/how-does-baking-powder-work/');
@@ -174,6 +194,7 @@ test('generated publishing output is current and deterministic', async () => {
 
 test('citations and presentation blocks compile to governed accessible MDX', () => {
   const fixture = tempPackage();
+  makeDraftPackage(fixture.target);
   const bodyPath = path.join(fixture.target, 'article.md');
   writeFileSync(bodyPath, `${readFileSync(bodyPath, 'utf8')}\n\nEvidence citation.[@usu-cooking-food-storage]\n`);
   const item = validateArticlePackage(fixture.target, context);
@@ -187,12 +208,11 @@ test('citations and presentation blocks compile to governed accessible MDX', () 
 
 test('callout presentation bodies render as escaped text props rather than executable MDX', () => {
   const fixture = tempPackage();
+  makeDraftPackage(fixture.target);
   const manifestPath = path.join(fixture.target, 'manifest.yaml');
-  const manifestSource = readFileSync(manifestPath, 'utf8').replace(
-    'body: Too much can make a bake rise quickly and then collapse before the structure is strong enough to hold it. It can also leave an unpleasant chemical or bitter taste. Measure the recipe amount; the can is not a volume knob.',
-    'body: Click [here](javascript:alert(1))',
-  );
-  writeFileSync(manifestPath, manifestSource);
+  const manifest = parseYaml(readFileSync(manifestPath, 'utf8'));
+  manifest.presentationBlocks.find(({ id }) => id === 'more-is-not-more').body = 'Click [here](javascript:alert(1))';
+  writeFileSync(manifestPath, dumpYaml(manifest, { noRefs: true, lineWidth: 120, sortKeys: false }));
   const item = validateArticlePackage(fixture.target, context);
   assert.match(item.generatedMdx, /body="Click \[here\]\(javascript:alert\(1\)\)"/);
   assert.doesNotMatch(item.generatedMdx, /href="javascript:/);

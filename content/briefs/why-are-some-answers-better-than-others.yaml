@@ -1,0 +1,19 @@
+schemaVersion: 1.0.0
+id: brief-why-are-some-answers-better-than-others
+ideaId: idea-why-are-some-answers-better-than-others
+intendedArticleId: why-are-some-answers-better-than-others
+researchQuestion: What minimum qualities make a practical answer useful, traceable, and honest about limits?
+userIntent: Understand the editorial standard applied to How Biscuit answers.
+scope: [direct answers, reasoning, evidence, next actions, uncertainty]
+exclusions: [claims that the standard is universally optimal, academic grading rubrics]
+requiredClaims: [useful answers expose reasoning and limits, important factual claims need traceability]
+prohibitedClaims: [length alone determines quality, citations replace analysis]
+requiredSourceTypes: [editorial-policy, university]
+candidateSourceIds: [purdue-paragraph-organization-flow, how-biscuit-editorial-policy]
+testingNeeds: [Not applicable to an editorial standard.]
+mediaNeeds: []
+productNeeds: []
+safetyConsiderations: [Label judgment as an editorial standard.]
+unresolvedQuestions: []
+recommendation: Publish as a categoryless editorial standard.
+status: approved

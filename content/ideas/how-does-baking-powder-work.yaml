@@ -1,0 +1,18 @@
+schemaVersion: 1.0.0
+id: idea-how-does-baking-powder-work
+title: How baking powder works and why it fails
+proposedCategory: kitchen
+proposedTopics: [food-science]
+userProblem: The reader needs to understand or diagnose baking powder that is not producing lift.
+intendedAudience: Home cooks and bakers troubleshooting quick breads, cakes, or biscuits.
+durability: The acid-base mechanism and freshness test are durable reference information.
+productRelevance: Low; the answer does not require a product recommendation.
+evidenceFeasibility: University extension sources directly cover the mechanism and freshness test.
+competitionOpportunity: A concise mechanism-first guide can outperform thin expiration-only answers.
+productionEffort: Low because the claims and safe diagnostic steps are bounded.
+risk: Low when substitutions are kept recipe-specific and claims remain sourced.
+scoreComponents: { durability: 5, productRelevance: 2, evidenceFeasibility: 5, opportunity: 4, productionEffort: 2, risk: 2 }
+totalScore: 24
+status: published
+notes:
+  - Migrated from the publicly released Handoff 1 article.

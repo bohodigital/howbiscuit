@@ -1,0 +1,84 @@
+schemaVersion: 1.0.0
+id: why-are-some-answers-better-than-others
+slug: why-are-some-answers-better-than-others
+title: Why Are Some Answers Better Than Others?
+description: A useful answer addresses the real question, explains its reasoning, shows the next move, and makes the limits of its evidence visible.
+articleType: editorial-standard
+categoryId: null
+topicIds: []
+problemLabels: []
+directAnswer: A better answer addresses the real question early, exposes its reasoning and evidence, gives the reader a usable next step, and states where its confidence ends.
+publishedAt: "2026-07-01"
+updatedAt: "2026-07-10"
+featured: false
+editorialPriority: 10
+authors: [How Biscuit]
+ideaId: idea-why-are-some-answers-better-than-others
+briefId: brief-why-are-some-answers-better-than-others
+approvalId: approval-why-are-some-answers-better-than-others-baseline
+evidence:
+  level: editorial-standard
+  label: Editorial standard
+workflow:
+  state: published
+  history:
+    - { state: draft, at: "2026-06-24", actor: baseline-history }
+    - { state: review, at: "2026-06-28", actor: baseline-history }
+    - { state: approved, at: "2026-06-30", actor: direct-owner-order-baseline-migration }
+    - { state: published, at: "2026-07-01", actor: baseline-history }
+disclosure:
+  state: no-paid-links
+  text: This editorial standard contains no affiliate links, sponsored placements, paid reviews, or product placements.
+  href: /affiliate-disclosure/
+sourceIds: [purdue-paragraph-organization-flow, how-biscuit-editorial-policy]
+testingIds: [testing-why-are-some-answers-better-than-others]
+mediaIds: []
+productIds: []
+productGroupIds: []
+linkPreviewIds: []
+destinationIds: []
+relatedArticleIds: [how-does-baking-powder-work, why-salt-melts-ice]
+priceClaims: []
+recommendationClaims: []
+presentationBlocks:
+  - id: four-part-test
+    kind: mechanism
+    steps:
+      - title: Does it answer the real question?
+        body: A useful response identifies what the reader is actually trying to decide, understand, or fix—and says the answer before wandering into background.
+      - title: Can you follow the reason?
+        body: Rules become reusable when the mechanism, logic, or evidence is visible. “Because I said so” is not a portable skill.
+      - title: Is the next move obvious?
+        body: Examples, steps, checks, and stop conditions turn information into something a reader can use.
+      - title: Can you see the limits?
+        body: Strong answers separate facts from judgment, link important sources, and admit uncertainty instead of decorating it with confidence.
+  - id: weak-answer
+    kind: callout
+    variant: common-mistake
+    title: Weak answer
+    body: It probably expired. Buy a new one.
+  - id: better-answer
+    kind: callout
+    variant: short-answer
+    title: Better answer
+    body: "Moisture and time can reduce baking powder’s activity. Test one teaspoon in one-third cup of hot water: vigorous foam means it still has rising power. If the reaction is weak, replace the can. Store the next one dry and covered."
+  - id: answer-failures
+    kind: mistake-grid
+    items:
+      - title: The throat-clearing essay
+        body: The response spends three paragraphs on framing before it reaches the sentence the reader needed.
+        fix: Move the direct answer to the top, then add only the context that helps.
+      - title: The confident shrug
+        body: The answer sounds certain but shows no source, mechanism, calculation, or test.
+        fix: Expose the reasoning and label uncertainty.
+      - title: The fact pile
+        body: The information may be accurate, but no one explains how it changes the reader’s decision.
+        fix: Connect each important fact to the question.
+      - title: The one-size fix
+        body: A recommendation ignores cost, skill, safety, context, or the point where a reader should stop.
+        fix: Name assumptions and stop conditions.
+  - id: editorial-rule
+    kind: callout
+    variant: source-note
+    title: Our editorial rule
+    body: If an answer cannot show its reasoning, evidence, or limits, it is not ready to borrow the reader’s confidence.

@@ -1,0 +1,18 @@
+schemaVersion: 1.0.0
+id: idea-why-are-some-answers-better-than-others
+title: Why some practical answers are better than others
+proposedCategory: null
+proposedTopics: []
+userProblem: The reader needs a transparent standard for judging the usefulness and evidence of an answer.
+intendedAudience: Readers evaluating How Biscuit guidance and writers applying its editorial standard.
+durability: Clear reasoning, traceability, useful next steps, and visible limits are durable principles.
+productRelevance: None; this is an editorial standard rather than shopping guidance.
+evidenceFeasibility: The standard is internally governed and supported by established writing guidance.
+competitionOpportunity: Publishing the standard creates trust and a clear accountability surface.
+productionEffort: Low because the article explains a bounded internal policy.
+risk: Very low when it is labeled as an editorial standard rather than empirical research.
+scoreComponents: { durability: 5, productRelevance: 1, evidenceFeasibility: 5, opportunity: 3, productionEffort: 2, risk: 1 }
+totalScore: 23
+status: published
+notes:
+  - Migrated from the publicly released Handoff 1 article.

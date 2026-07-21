@@ -1,0 +1,9 @@
+schemaVersion: 1.0.0
+id: approval-why-are-some-answers-better-than-others-baseline
+articleId: why-are-some-answers-better-than-others
+approvingActor: direct-owner-order-baseline-migration
+timestamp: "2026-07-20T19:00:00-05:00"
+packageDigest: 6962f990ddcb3b2925d27a7c17866f718f08e7d21e5d76e1f5e68c2a721bca27
+approvedState: published
+note: Migration approval authorized for the Handoff 1 public article at baseline 8382c6e.
+status: active

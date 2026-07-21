@@ -1,0 +1,18 @@
+schemaVersion: 1.0.0
+id: idea-why-salt-melts-ice
+title: Why salt melts ice and when it stops working
+proposedCategory: home
+proposedTopics: [heating-cooling]
+userProblem: The reader needs to de-ice a surface effectively without wasting salt or overstating temperature performance.
+intendedAudience: Homeowners and renters managing winter ice on walks and steps.
+durability: Freezing-point depression and chloride tradeoffs are durable scientific and practical topics.
+productRelevance: Moderate because de-icing products exist, but the article makes no product recommendation.
+evidenceFeasibility: Textbook chemistry and government environmental sources support the claims.
+competitionOpportunity: A mechanism plus low-waste routine is more useful than a generic temperature chart.
+productionEffort: Moderate because accessible math and safety context require careful rendering.
+risk: Moderate because misuse can affect surfaces, pets, plants, and waterways.
+scoreComponents: { durability: 5, productRelevance: 3, evidenceFeasibility: 5, opportunity: 4, productionEffort: 3, risk: 3 }
+totalScore: 23
+status: published
+notes:
+  - The trusted LaTeX source remains canonical.

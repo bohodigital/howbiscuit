@@ -1,0 +1,19 @@
+schemaVersion: 1.0.0
+id: brief-why-salt-melts-ice
+ideaId: idea-why-salt-melts-ice
+intendedArticleId: why-salt-melts-ice
+researchQuestion: Why does salt melt ice, what limits sodium chloride, and what routine reduces waste?
+userIntent: Understand the mechanism and clear bonded ice with the least practical chloride use.
+scope: [freezing-point depression, brine formation, idealized calculation, practical temperature limits, chloride tradeoffs]
+exclusions: [brand rankings, universal application rates, guarantees for a specific driveway]
+requiredClaims: [dissolved particles lower freezing point, salt needs liquid water to form brine, chloride runoff has environmental costs]
+prohibitedClaims: [salt warms ice, laboratory eutectic temperature guarantees field performance]
+requiredSourceTypes: [textbook, government]
+candidateSourceIds: [openstax-colligative-properties, openstax-water-properties, epa-salt-resources]
+testingNeeds: [No first-hand product test required; retain researched label.]
+mediaNeeds: []
+productNeeds: []
+safetyConsiderations: [Follow product labels and keep excess away from drains, plants, and pet traffic.]
+unresolvedQuestions: []
+recommendation: Keep the trusted LaTeX article with accessible KaTeX and MathML.
+status: approved
