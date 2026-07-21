@@ -4,10 +4,12 @@ import { getCollection, render } from 'astro:content';
 
 import EmptyState from '../components/EmptyState.astro';
 import GuideCard from '../components/GuideCard.astro';
+import ProductShelf from '../components/ProductShelf.astro';
 import ArticleLayout from '../layouts/ArticleLayout.astro';
 import CategoryLayout from '../layouts/CategoryLayout.astro';
 import HomeLayout from '../layouts/HomeLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
+import productCatalogJson from '../generated/publishing/products.v1.json';
 import { orderLatestContent } from '../lib/public-content/model.mjs';
 import { createPublicPageCatalog, getPublicSiteData, routeFromEntryId } from '../lib/public-content/site-registry.mjs';
 
@@ -44,6 +46,12 @@ interface SiteData {
   registry: readonly RegistryRecord[];
   publicRegistry: readonly PublicRecord[];
   categoryViews: readonly CategoryView[];
+}
+interface ProductCatalog {
+  products: readonly { id: string; displayName: string; exactVariant: string; description: string; provenanceLabel: string }[];
+  productGroups: readonly { id: string; title: string; purpose: string; memberProductIds: readonly string[]; reviewDate: string | null; reviewHorizon: string | null }[];
+  merchantDestinations: readonly { id: string; productId: string; merchant: string; exactUrl: string; capturedDate: string; relationship: 'unpaid' }[];
+  priceClaims: readonly { id: string; productId: string; renderedText: string; observedDate: string }[];
 }
 
 export async function getStaticPaths() {
@@ -101,6 +109,8 @@ const categoryLabelById = new Map(siteData.categoryViews.map(({ id, label }) => 
 const guideCategoryLabel = (guide: RegistryRecord) => (
   guide.categoryId ? categoryLabelById.get(guide.categoryId) ?? 'Editorial standard' : 'Editorial standard'
 );
+const productCatalog = productCatalogJson as ProductCatalog;
+const productById = new Map(productCatalog.products.map((product) => [product.id, product]));
 const categoryAccent = categoryView?.id === 'home'
   ? 'mint'
   : categoryView?.id === 'kitchen'
@@ -175,7 +185,26 @@ const categoryAccent = categoryView?.id === 'home'
     {categoryView.id === 'shop' && (
       <section aria-labelledby="product-groups-title">
         <h2 id="product-groups-title">Product groups</h2>
-        <EmptyState title="No product group is published" message="How Biscuit has not activated product rankings, live prices, deals, or merchant claims in this phase." />
+        {productCatalog.productGroups.length === 0 ? (
+          <EmptyState title="No verified product group is published" message="The repository-owned catalog is active but intentionally empty. How Biscuit will not publish filler products, unverified purchase buttons, unsupported rankings, affiliate links, live prices, or availability claims." />
+        ) : (
+          <div class="hb-product-groups">
+            {productCatalog.productGroups.map((group) => (
+              <ProductShelf
+                title={group.title}
+                purpose={group.purpose}
+                review={group.reviewDate ?? group.reviewHorizon ?? 'Not scheduled'}
+                products={group.memberProductIds.map((productId) => {
+                    const product = productById.get(productId);
+                    if (!product) throw new Error(`Published group ${group.id} lost product ${productId}`);
+                    const destination = productCatalog.merchantDestinations.find((item) => item.productId === product.id);
+                    const price = productCatalog.priceClaims.find((item) => item.productId === product.id);
+                    return { ...product, ...(destination ? { destination } : {}), ...(price ? { price } : {}) };
+                  })}
+              />
+            ))}
+          </div>
+        )}
       </section>
     )}
 

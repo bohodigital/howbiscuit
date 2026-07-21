@@ -1,0 +1,577 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": {
+    "product": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "brand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exactVariant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "productType": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "manufacturerIdentifiers": {
+          "type": "object",
+          "properties": {
+            "gtin": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{8}(?:\\d{4}|\\d{5}|\\d{6})?$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "upc": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{12}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ean": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(?:\\d{8}|\\d{13})$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "mpn": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]{0,63}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "asin": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9]{10}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "retailerSkus": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "merchant": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sku": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]{0,127}$"
+                  }
+                },
+                "required": [
+                  "merchant",
+                  "sku"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "gtin",
+            "upc",
+            "ean",
+            "mpn",
+            "asin"
+          ],
+          "additionalProperties": false
+        },
+        "variantAttributes": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "description": {
+          "type": "string",
+          "minLength": 40
+        },
+        "sourceIds": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "mediaIds": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "type": "string",
+              "enum": [
+                "tested",
+                "personally-used",
+                "researched",
+                "listed-without-recommendation"
+              ]
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "state",
+            "notes"
+          ],
+          "additionalProperties": false
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "published",
+            "retired"
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "displayName",
+        "brand",
+        "model",
+        "exactVariant",
+        "productType",
+        "manufacturerIdentifiers",
+        "variantAttributes",
+        "description",
+        "provenance",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "productGroup": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 40
+        },
+        "memberProductIds": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "inclusionCriteria": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "exclusionCriteria": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "methodology": {
+          "type": "string",
+          "minLength": 40
+        },
+        "evidenceBasis": {
+          "type": "string",
+          "minLength": 40
+        },
+        "testingIds": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "sourceIds": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "recommendationState": {
+          "type": "string",
+          "enum": [
+            "listed-only",
+            "researched",
+            "recommended",
+            "best"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "published",
+            "retired"
+          ]
+        },
+        "reviewDate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reviewHorizon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "title",
+        "purpose",
+        "memberProductIds",
+        "inclusionCriteria",
+        "exclusionCriteria",
+        "methodology",
+        "evidenceBasis",
+        "recommendationState",
+        "status",
+        "reviewDate",
+        "reviewHorizon"
+      ],
+      "additionalProperties": false
+    },
+    "merchantDestination": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "productId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "exactVariant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "merchant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exactUrl": {
+          "type": "string"
+        },
+        "market": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}(?:-[A-Z0-9]{2,8})?$"
+        },
+        "relationship": {
+          "type": "string",
+          "enum": [
+            "unpaid",
+            "future-affiliate"
+          ]
+        },
+        "capturedDate": {
+          "type": "string"
+        },
+        "verificationNotes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "published",
+            "retired"
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "productId",
+        "exactVariant",
+        "merchant",
+        "exactUrl",
+        "market",
+        "relationship",
+        "capturedDate",
+        "verificationNotes",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "priceClaim": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "productId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "destinationId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observedDate": {
+          "type": "string"
+        },
+        "displayWording": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewDate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "published",
+            "retired"
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "amount",
+        "currency",
+        "productId",
+        "destinationId",
+        "sourceId",
+        "observedDate",
+        "displayWording",
+        "context",
+        "reviewDate",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "recommendationClaim": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "productGroupId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "evaluatedProductIds": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "methodology": {
+          "type": "string",
+          "minLength": 40
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 40
+        },
+        "testingIds": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "sourceIds": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "reviewDate": {
+          "type": "string"
+        },
+        "limitations": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "wording": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "published",
+            "retired"
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "productGroupId",
+        "evaluatedProductIds",
+        "methodology",
+        "evidence",
+        "reviewDate",
+        "limitations",
+        "wording",
+        "status"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

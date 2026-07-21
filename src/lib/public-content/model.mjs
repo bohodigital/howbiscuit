@@ -18,7 +18,6 @@ function isSafePublicHref(value) {
   return ['https:', 'http:'].includes(parsed.protocol) && !parsed.username && !parsed.password;
 }
 
-const PRICE_BADGE_STATES = new Set(['observed', 'estimate', 'unavailable', 'stale']);
 const EVIDENCE_LABELS = new Set([
   'Hands-on tested',
   'Owner experience',
@@ -29,43 +28,39 @@ const EVIDENCE_LABELS = new Set([
 ]);
 const TESTING_STATES = new Set(['hands-on-tested', 'owner-experience', 'not-hands-on-tested', 'not-applicable']);
 
-export function assertValidPriceBadgeProps({ state, observedAt } = {}) {
-  if (!PRICE_BADGE_STATES.has(state)) {
-    throw new Error('Price badges require a recognized price state.');
+export function assertValidPriceBadgeProps({ observedAt } = {}) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(observedAt ?? '')) {
+    throw new Error('Static price badges require an observation date in YYYY-MM-DD form.');
   }
-  if ((state === 'observed' || state === 'stale') && !isNonEmptyString(observedAt)) {
-    throw new Error(`${state} price badges require an observation date.`);
-  }
-  if ((state === 'estimate' || state === 'unavailable') && observedAt !== undefined) {
-    throw new Error(`${state} price badges must not claim an observation date.`);
-  }
-  return { state, observedAt };
+  return { observedAt };
 }
 
 export function assertValidProductEvidence(product) {
   if (!product || typeof product !== 'object' || Array.isArray(product)) {
     throw new Error('Product evidence must be an object.');
   }
-  if (!isNonEmptyString(product.name) || !isNonEmptyString(product.description)) {
-    throw new Error('Product cards require a non-empty name and description.');
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(product.id ?? '') || !isNonEmptyString(product.displayName)
+    || !isNonEmptyString(product.exactVariant) || !isNonEmptyString(product.description)) {
+    throw new Error('Product cards require canonical identity, display name, exact variant, and description.');
   }
-  if (product.priceState === 'observed' || product.priceState === 'stale') {
-    if (!isNonEmptyString(product.price) || !isNonEmptyString(product.observedAt) || !isNonEmptyString(product.source)) {
-      throw new Error(`${product.priceState} product prices require price, observedAt, and source evidence.`);
+  const provenanceLabels = new Set([
+    'Tested by How Biscuit',
+    'Personally used by How Biscuit',
+    'Researched by How Biscuit',
+    'Listed for reference; not a recommendation',
+  ]);
+  if (!provenanceLabels.has(product.provenanceLabel)) throw new Error('Product cards require a canonical provenance label.');
+  if (product.destination !== undefined) {
+    if (product.destination.relationship !== 'unpaid' || !isSafePublicHref(product.destination.exactUrl)
+      || !isNonEmptyString(product.destination.merchant) || !/^\d{4}-\d{2}-\d{2}$/.test(product.destination.capturedDate ?? '')) {
+      throw new Error('Shopping actions require a verified, dated, unpaid destination.');
     }
-  } else if (product.priceState === 'estimate') {
-    if (!isNonEmptyString(product.price) || !isNonEmptyString(product.source)) {
-      throw new Error('Estimated product prices require price and source evidence.');
+  }
+  if (product.price !== undefined) {
+    assertValidPriceBadgeProps({ observedAt: product.price.observedDate });
+    if (!isNonEmptyString(product.price.renderedText) || !product.price.renderedText.includes(`as of ${product.price.observedDate}`)) {
+      throw new Error('Static product prices require governed as-of wording.');
     }
-    if (product.observedAt !== undefined) {
-      throw new Error('Estimated product prices must not claim an observation date.');
-    }
-  } else if (product.priceState === 'unavailable') {
-    if (product.price !== undefined || product.observedAt !== undefined) {
-      throw new Error('Unavailable products must not imply a price observation.');
-    }
-  } else {
-    throw new Error('Product cards require a recognized price state.');
   }
   return product;
 }

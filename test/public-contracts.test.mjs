@@ -371,16 +371,17 @@ test('normalizer rejects unclassified, unsafe, or contradictory records', () => 
   }], taxonomy }), /credential-free HTTP\(S\)/i);
 });
 
-test('price and product evidence states stay strict for later shopping phases', () => {
-  assert.deepEqual(assertValidPriceBadgeProps({ state: 'observed', observedAt: '2026-07-18' }), { state: 'observed', observedAt: '2026-07-18' });
-  assert.throws(() => assertValidPriceBadgeProps({ state: 'observed' }), /observation date/);
-  assert.throws(() => assertValidPriceBadgeProps({ state: 'estimate', observedAt: '2026-07-18' }), /must not claim/);
+test('static product views preserve canonical identity, provenance, dates, and unpaid destinations', () => {
+  assert.deepEqual(assertValidPriceBadgeProps({ observedAt: '2026-07-18' }), { observedAt: '2026-07-18' });
+  assert.throws(() => assertValidPriceBadgeProps({}), /observation date/);
   assert.doesNotThrow(() => assertValidProductEvidence({
-    name: 'Example', description: 'A real product description', priceState: 'unavailable',
+    id: 'example-product', displayName: 'Example', exactVariant: 'Black, 1 liter', description: 'A real product description',
+    provenanceLabel: 'Listed for reference; not a recommendation',
   }));
   assert.throws(() => assertValidProductEvidence({
-    name: 'Example', description: 'A real product description', priceState: 'observed', price: '$10',
-  }), /require price, observedAt, and source evidence/);
+    id: 'example-product', displayName: 'Example', exactVariant: 'Black, 1 liter', description: 'A real product description',
+    provenanceLabel: 'Researched by How Biscuit', destination: { relationship: 'future-affiliate', merchant: 'Example', exactUrl: 'https://example.test/product', capturedDate: '2026-07-18' },
+  }), /dated, unpaid destination/);
 });
 
 test('legacy adapters are absent from the source tree', () => {

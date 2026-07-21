@@ -1,12 +1,8 @@
 ---
 import { assertValidPriceBadgeProps } from '../lib/public-content/model.mjs';
 
-type PriceState = 'observed' | 'estimate' | 'unavailable' | 'stale';
-type Props =
-  | { state: 'observed' | 'stale'; observedAt: string }
-  | { state: 'estimate' | 'unavailable'; observedAt?: never };
-const { state, observedAt } = Astro.props;
-const labels: Record<PriceState, string> = { observed: 'Price observed', estimate: 'Price estimate', unavailable: 'Price unavailable', stale: 'Price may be stale' };
-assertValidPriceBadgeProps({ state, observedAt });
+interface Props { observedAt: string }
+const { observedAt } = Astro.props;
+assertValidPriceBadgeProps({ observedAt });
 ---
-<span class="hb-badge hb-price-status" data-state={state}>{labels[state]}{observedAt && ` · ${observedAt}`}</span>
+<span class="hb-badge hb-price-status" data-state="observed">Price observed as of {observedAt}</span>

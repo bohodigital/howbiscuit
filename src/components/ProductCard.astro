@@ -1,28 +1,27 @@
 ---
 import PriceStatusBadge from './PriceStatusBadge.astro';
 import { assertValidProductEvidence } from '../lib/public-content/model.mjs';
-interface ProductCore {
-  name: string;
+
+interface Product {
+  id: string;
+  displayName: string;
+  exactVariant: string;
   description: string;
-  href?: string;
+  provenanceLabel: string;
+  destination?: { relationship: 'unpaid'; merchant: string; exactUrl: string; capturedDate: string };
+  price?: { renderedText: string; observedDate: string };
 }
-type Product = ProductCore & (
-  | { priceState: 'observed' | 'stale'; price: string; observedAt: string; source: string }
-  | { priceState: 'estimate'; price: string; observedAt?: never; source: string }
-  | { priceState: 'unavailable'; price?: never; observedAt?: never; source?: string }
-);
 interface Props { product: Product }
 const { product } = Astro.props;
 assertValidProductEvidence(product);
 ---
 <article class="hb-product-card">
-  <h3>{product.href ? <a href={product.href}>{product.name}</a> : product.name}</h3>
+  <h3>{product.displayName}</h3>
+  <p><strong>Exact variant:</strong> {product.exactVariant}</p>
   <p>{product.description}</p>
-  <div>
-    {product.price && <strong>{product.price}</strong>}
-    {product.priceState === 'observed' || product.priceState === 'stale'
-      ? <PriceStatusBadge state={product.priceState} observedAt={product.observedAt} />
-      : <PriceStatusBadge state={product.priceState} />}
-  </div>
-  {product.source && <small>Source: {product.source}</small>}
+  <p><small>{product.provenanceLabel}</small></p>
+  {product.price && <><p>{product.price.renderedText}</p><PriceStatusBadge observedAt={product.price.observedDate} /></>}
+  {product.destination
+    ? <p><a href={product.destination.exactUrl}>View the unpaid {product.destination.merchant} listing</a> <small>(captured {product.destination.capturedDate}; How Biscuit receives no compensation)</small></p>
+    : <p><small>No verified shopping destination is available.</small></p>}
 </article>

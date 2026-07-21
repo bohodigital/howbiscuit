@@ -85,6 +85,14 @@
       "destinationIds": [],
       "priceClaims": [],
       "recommendationClaims": [],
+      "commerce": {
+        "products": [],
+        "groups": [],
+        "destinations": [],
+        "prices": [],
+        "recommendations": [],
+        "dependencies": []
+      },
       "presentationBlocks": [
         {
           "id": "rise-mechanism",
@@ -303,6 +311,14 @@
       "destinationIds": [],
       "priceClaims": [],
       "recommendationClaims": [],
+      "commerce": {
+        "products": [],
+        "groups": [],
+        "destinations": [],
+        "prices": [],
+        "recommendations": [],
+        "dependencies": []
+      },
       "presentationBlocks": [
         {
           "id": "four-part-test",
@@ -550,6 +566,14 @@
       "destinationIds": [],
       "priceClaims": [],
       "recommendationClaims": [],
+      "commerce": {
+        "products": [],
+        "groups": [],
+        "destinations": [],
+        "prices": [],
+        "recommendations": [],
+        "dependencies": []
+      },
       "presentationBlocks": [],
       "relatedArticleIds": [
         "how-does-baking-powder-work",

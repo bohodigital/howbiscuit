@@ -1,17 +1,19 @@
 ---
 import EmptyState from './EmptyState.astro';
 import ProductCard from './ProductCard.astro';
-interface ProductCore { name: string; description: string; href?: string }
-type Product = ProductCore & (
-  | { priceState: 'observed' | 'stale'; price: string; observedAt: string; source: string }
-  | { priceState: 'estimate'; price: string; observedAt?: never; source: string }
-  | { priceState: 'unavailable'; price?: never; observedAt?: never; source?: string }
-);
-interface Props { title: string; products: Product[] }
-const { title, products } = Astro.props;
+
+interface Product {
+  id: string; displayName: string; exactVariant: string; description: string; provenanceLabel: string;
+  destination?: { relationship: 'unpaid'; merchant: string; exactUrl: string; capturedDate: string };
+  price?: { renderedText: string; observedDate: string };
+}
+interface Props { title: string; purpose: string; review: string; products: Product[] }
+const { title, purpose, review, products } = Astro.props;
 const shelfId = `product-shelf-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'products'}`;
 ---
 <section class="hb-product-shelf" aria-labelledby={shelfId}>
-  <h2 id={shelfId}>{title}</h2>
-  {products.length > 0 ? <div>{products.map((product) => <ProductCard {product} />)}</div> : <EmptyState title="No verified products" message="No evidence-backed product records are available for this shelf." />}
+  <h3 id={shelfId}>{title}</h3>
+  <p>{purpose}</p>
+  <p><small>Review: {review}</small></p>
+  {products.length > 0 ? <div class="hb-guide-grid">{products.map((product) => <ProductCard {product} />)}</div> : <EmptyState title="No verified products" message="No evidence-backed product records are available for this group." />}
 </section>

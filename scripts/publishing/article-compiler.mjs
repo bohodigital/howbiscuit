@@ -36,6 +36,11 @@ import {
   validateFirstHandClaims,
   validateWorkflow,
 } from './editorial-records.mjs';
+import {
+  loadProductRecords,
+  renderCommerceDirective,
+  resolveArticleCommerce,
+} from './product-records.mjs';
 import { stableJson } from './stable-json.mjs';
 
 const scriptsRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -211,15 +216,14 @@ function compileCitations(line, normalizedArticle) {
   });
 }
 
-function compileDirectiveLine(line, presentationById) {
+function compileDirectiveLine(line, presentationById, commerce) {
   if (!line.trim().startsWith('::')) return line;
   const match = line.trim().match(/^::([a-z-]+)\{(.*)\}$/);
   const attributes = parseDirectiveAttributes(match[2], 'validated directive');
-  if (match[1] === 'product') return `> Product reference: ${attributes.product} (${attributes.destination})`;
-  if (match[1] === 'product-group') return `> Product group: ${attributes.group}`;
+  const commerceOutput = renderCommerceDirective(match[1], attributes, commerce);
+  if (commerceOutput !== null) return commerceOutput;
   if (match[1] === 'media') return `> Registered media: ${attributes.media}`;
   if (match[1] === 'link-preview') return `> Link preview: ${attributes.preview}`;
-  if (match[1] === 'price') return `> Dated price claim: ${attributes.claim}`;
   const block = presentationById.get(attributes.block);
   if (block.kind === 'mechanism') return `<MechanismSteps steps={${JSON.stringify(block.steps)}} />`;
   if (block.kind === 'mistake-grid') return `<MistakeGrid items={${JSON.stringify(block.items)}} />`;
@@ -262,7 +266,7 @@ function compiledMdx(normalizedArticle, markdown) {
     componentKinds.has('callout') ? "import BiscuitBox from '../../../../components/BiscuitBox.astro';" : null,
   ].filter(Boolean).join('\n');
   const body = markdown.split('\n')
-    .map((line) => compileDirectiveLine(line, presentationById))
+    .map((line) => compileDirectiveLine(line, presentationById, normalizedArticle.commerce))
     .map((line) => compileCitations(line, normalizedArticle))
     .join('\n')
     .trimEnd();
@@ -272,6 +276,7 @@ function compiledMdx(normalizedArticle, markdown) {
 export async function createPublishingContext(root = repositoryRoot) {
   const taxonomy = await loadTypeScriptModule(path.join(root, 'src', 'config', 'public-taxonomy.ts'));
   const editorial = await loadEditorialRecords(root, taxonomy);
+  const commerce = await loadProductRecords(root, editorial);
   const manifestSchema = createArticleManifestSchema(taxonomy);
   const jsonSchema = createArticleManifestJsonSchema(taxonomy);
   const ajv = new Ajv2020({ allErrors: true, strict: true });
@@ -294,7 +299,7 @@ export async function createPublishingContext(root = repositoryRoot) {
     },
   });
   const validateJsonSchema = ajv.compile(jsonSchema);
-  return Object.freeze({ root, taxonomy, editorial, manifestSchema, jsonSchema, validateJsonSchema });
+  return Object.freeze({ root, taxonomy, editorial, commerce, manifestSchema, jsonSchema, validateJsonSchema });
 }
 
 export function validateManifestParity(rawManifest, context, sourceLabel = 'manifest.yaml') {
@@ -348,6 +353,7 @@ function resolveEditorialGovernance(governance, files, media, context, label, cl
       assert(mediaRecords.some(({ id }) => id === preview.mediaId), `${label}: link preview ${preview.id} media ${preview.mediaId} is not governed by the article`);
     }
   }
+  const commerce = resolveArticleCommerce(governance, context.commerce, editorial, label, claimText);
   const referencedRecords = [
     { kind: 'idea', record: idea },
     { kind: 'brief', record: brief },
@@ -355,6 +361,7 @@ function resolveEditorialGovernance(governance, files, media, context, label, cl
     ...testingRecords.map((record) => ({ kind: 'testing', record })),
     ...mediaRecords.map((record) => ({ kind: 'media-rights', record })),
     ...linkPreviews.map((record) => ({ kind: 'link-preview', record })),
+    ...commerce.dependencies,
   ];
   const expectedDigest = publicationDigest({ articleId: governance.id, files, referencedRecords });
   const approval = governance.approvalId === null ? null : editorial.approvals.get(governance.approvalId);
@@ -377,6 +384,7 @@ function resolveEditorialGovernance(governance, files, media, context, label, cl
     expectedDigest,
     sourceNotes: Object.freeze(sourceNotes),
     testing: Object.freeze({ state: testing.claimState, notes: Object.freeze([...testing.limitations]) }),
+    commerce,
     referencedRecords: Object.freeze(referencedRecords),
   });
 }
@@ -460,6 +468,7 @@ export function validateArticlePackage(packagePath, context) {
     destinationIds: manifest.destinationIds,
     priceClaims: manifest.priceClaims,
     recommendationClaims: manifest.recommendationClaims,
+    commerce: governance.commerce,
     presentationBlocks: manifest.presentationBlocks,
     relatedArticleIds: manifest.relatedArticleIds,
     relatedContent: Object.freeze({ state: 'structured', routes: relatedRoutes }),
@@ -572,6 +581,7 @@ function compileLatexArticles(root, context) {
       destinationIds: governance.destinationIds,
       priceClaims: governance.priceClaims,
       recommendationClaims: governance.recommendationClaims,
+      commerce: resolved.commerce,
       presentationBlocks: [],
       relatedArticleIds,
       relatedContent: Object.freeze({ state: 'structured', routes: article.metadata.relatedContent.routes }),

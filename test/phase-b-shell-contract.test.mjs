@@ -284,7 +284,7 @@ test('categories expose honest topic thresholds, empty states, and neighboring r
     assert.match(pages.get(route), /No topic has enough published guides yet/);
     assert.match(pages.get(route), /No publishable guides in this category/);
   }
-  assert.match(pages.get('/shop/'), /No product group is published/);
+  assert.match(pages.get('/shop/'), /No verified product group is published/);
 });
 
 test('All Guides, RSS, sitemap, llms.txt, and article related services share the three real articles', () => {
