@@ -1,0 +1,14 @@
+schemaVersion: 1.0.0
+id: source-example
+title: Replace with the source title
+publisher: Replace with the publisher
+author: null
+canonicalUrl: https://example.invalid/source
+publicationIdentity: null
+publicationDate: null
+accessedDate: "2026-07-20"
+sourceType: first-party
+authorityNotes: Explain why this source supports the bounded claim.
+archiveNotes: []
+rightsRestrictions: Record quotation, reuse, and archive limits.
+status: draft

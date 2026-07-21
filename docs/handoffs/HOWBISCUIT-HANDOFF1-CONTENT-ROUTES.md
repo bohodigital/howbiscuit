@@ -1,5 +1,7 @@
 # How Biscuit Handoff 1: Phase C Content and Routes
 
+> Current status (2026-07-20): Handoff 1 completed at `8382c6e90ae7c3a489eafec5a23abf34f510aa74`, and Handoff 2 started from that exact baseline. Candidate-era statements below that Phase C or Phase D remained blocked are retained as historical decision evidence, not current project status.
+
 Date: 2026-07-19
 
 Work order: `WO-2026-07-17-HOWBISCUIT-HANDOFF1-CONTENT-ROUTES-003`

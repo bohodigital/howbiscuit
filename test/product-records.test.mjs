@@ -224,6 +224,17 @@ test('canonical text cannot inject HTML or executable MDX and Markdown is escape
 });
 
 test('canonical identity and identifier formats fail closed', async () => {
+  const duplicateRoot = mkdtempSync(path.join(os.tmpdir(), 'hb-products-duplicate-id-'));
+  try {
+    const productDirectory = path.join(duplicateRoot, 'content', 'products');
+    mkdirSync(productDirectory, { recursive: true });
+    const duplicate = validRecords().products[0];
+    writeFileSync(path.join(productDirectory, 'first.yaml'), dumpYaml(duplicate, { noRefs: true }), 'utf8');
+    writeFileSync(path.join(productDirectory, 'second.yaml'), dumpYaml(duplicate, { noRefs: true }), 'utf8');
+    await assert.rejects(() => loadProductRecords(duplicateRoot, editorial), /Duplicate products ID/);
+  } finally {
+    rmSync(duplicateRoot, { recursive: true, force: true });
+  }
   await assert.rejects(() => withRecords((records) => {
     const duplicate = structuredClone(records.products[0]);
     duplicate.id = 'same-kettle-second-authority';

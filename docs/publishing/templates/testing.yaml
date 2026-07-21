@@ -1,0 +1,16 @@
+schemaVersion: 1.0.0
+id: testing-example-article
+articleId: example-article
+testedSubject: Replace with the tested or reviewed subject
+productIds: []
+tester: Replace with the responsible person or desk
+dates: ["2026-07-20"]
+environment: Describe the environment, including when this is source-only review.
+method: Describe a reproducible method.
+measurements: []
+observations: []
+limitations: [State what this work did not establish.]
+evidenceArtifacts: []
+claimState: not-hands-on-tested
+supportsFirstHandClaims: false
+status: draft

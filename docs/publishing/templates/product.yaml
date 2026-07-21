@@ -1,0 +1,22 @@
+schemaVersion: 1.0.0
+id: example-product-black-one-liter
+displayName: Example Product
+brand: Example Brand
+model: EX-100
+exactVariant: Black, one liter, revision A
+productType: example-product-type
+manufacturerIdentifiers:
+  gtin: null
+  upc: null
+  ean: null
+  mpn: EX-100-BLK-1L-A
+  asin: null
+  retailerSkus: []
+variantAttributes: { color: Black, capacity: one liter, revision: A }
+description: Replace with a factual description of at least forty characters that does not imply testing or recommendation.
+sourceIds: [source-example]
+mediaIds: []
+provenance:
+  state: researched
+  notes: Replace with bounded provenance notes tied to registered evidence.
+status: draft

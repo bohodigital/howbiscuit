@@ -1,0 +1,17 @@
+schemaVersion: 1.0.0
+id: idea-example-article
+title: Replace with a durable reader problem
+proposedCategory: kitchen
+proposedTopics: [food-science]
+userProblem: Replace with the problem the reader is trying to solve.
+intendedAudience: Replace with the specific intended reader.
+durability: Explain why the answer remains useful.
+productRelevance: Explain whether products are relevant.
+evidenceFeasibility: Identify credible evidence that can be registered.
+competitionOpportunity: Explain the useful gap this article fills.
+productionEffort: Describe the bounded effort and dependencies.
+risk: Describe safety, trust, and claim risks.
+scoreComponents: { durability: 4, productRelevance: 1, evidenceFeasibility: 4, opportunity: 3, productionEffort: 2, risk: 2 }
+totalScore: 20
+status: candidate
+notes: [Replace before moving the idea through workflow.]

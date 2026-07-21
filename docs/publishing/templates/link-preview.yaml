@@ -1,0 +1,11 @@
+schemaVersion: 1.0.0
+id: preview-source-example
+destinationUrl: https://example.invalid/source
+title: Replace with the captured page title
+description: Replace with a factual captured description.
+siteLabel: Example publisher
+capturedDate: "2026-07-20"
+sourceId: source-example
+mediaId: null
+rightsStatus: not-required
+status: draft

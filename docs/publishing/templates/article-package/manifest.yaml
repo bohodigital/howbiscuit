@@ -1,0 +1,38 @@
+schemaVersion: 1.0.0
+id: example-article
+slug: example-article
+title: Replace with the article title
+description: Replace with a specific description of at least forty characters for search and sharing.
+articleType: guide
+categoryId: kitchen
+topicIds: [food-science]
+problemLabels: [Replace with the reader problem]
+directAnswer: Replace with a direct, useful answer of at least forty characters that does not overstate the evidence.
+publishedAt: "2026-07-20"
+updatedAt: "2026-07-20"
+featured: false
+editorialPriority: 0
+authors: [How Biscuit]
+ideaId: idea-example-article
+briefId: brief-example-article
+approvalId: null
+evidence: { level: researched, label: Researched }
+workflow:
+  state: draft
+  history:
+    - { state: draft, at: "2026-07-20", actor: replace-with-editor }
+disclosure:
+  state: no-paid-links
+  text: This draft contains no affiliate links, sponsored placements, paid reviews, or product placements.
+  href: /affiliate-disclosure/
+sourceIds: [source-example]
+testingIds: [testing-example-article]
+mediaIds: []
+productIds: []
+productGroupIds: []
+linkPreviewIds: []
+destinationIds: []
+relatedArticleIds: []
+priceClaims: []
+recommendationClaims: []
+presentationBlocks: []

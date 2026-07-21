@@ -1,0 +1,15 @@
+schemaVersion: 1.0.0
+id: example-product-group
+title: Example documented product group
+purpose: Replace with a purpose of at least forty characters explaining the user decision this group supports.
+memberProductIds: [example-product-black-one-liter]
+inclusionCriteria: [State a criterion applied equally to every member.]
+exclusionCriteria: [State what is excluded and why.]
+methodology: Replace with a repeatable comparison method of at least forty characters for all declared members.
+evidenceBasis: Replace with an evidence basis of at least forty characters tied to registered sources or testing.
+testingIds: []
+sourceIds: [source-example]
+recommendationState: researched
+status: draft
+reviewDate: null
+reviewHorizon: Review before any publication decision.

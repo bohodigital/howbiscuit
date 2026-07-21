@@ -74,8 +74,8 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-function relativeFromRoot(filePath) {
-  return path.relative(repositoryRoot, filePath).replaceAll('\\', '/');
+function relativeFromRoot(filePath, root = repositoryRoot) {
+  return path.relative(root, filePath).replaceAll('\\', '/');
 }
 
 function safeRead(filePath, maximumBytes) {
@@ -508,39 +508,39 @@ function compileLatexArticles(root, context) {
   return files.map((entry) => {
     const sourcePath = path.join(sourceRoot, entry.name);
     const source = safeRead(sourcePath, 2 * 1024 * 1024);
-    const article = compileLatexArticle(source, { sourcePath: relativeFromRoot(sourcePath), taxonomy: context.taxonomy });
+    const article = compileLatexArticle(source, { sourcePath: relativeFromRoot(sourcePath, root), taxonomy: context.taxonomy });
     const governancePath = path.join(governanceRoot, `${article.metadata.slug}.yaml`);
     const governanceSource = safeRead(governancePath, MAX_MANIFEST_BYTES);
     const parsedGovernance = context.editorial.schemas.latexGovernance.parse(parseYaml(governanceSource));
-    assert(parsedGovernance.articleId === article.metadata.slug, `${relativeFromRoot(governancePath)}: articleId must match the LaTeX slug`);
+    assert(parsedGovernance.articleId === article.metadata.slug, `${relativeFromRoot(governancePath, root)}: articleId must match the LaTeX slug`);
     const governance = Object.freeze({ ...parsedGovernance, id: parsedGovernance.articleId });
     const resolved = resolveEditorialGovernance(
       governance,
-      { [relativeFromRoot(sourcePath)]: source, [relativeFromRoot(governancePath)]: governanceSource },
+      { [relativeFromRoot(sourcePath, root)]: source, [relativeFromRoot(governancePath, root)]: governanceSource },
       [],
       context,
-      relativeFromRoot(sourcePath),
+      relativeFromRoot(sourcePath, root),
       source
         .replace(/\\hbproblem\{[^}]*\}/g, '')
         .replace(/\\related\{[^}]*\}\{[^}]*\}\{[^}]*\}/g, ''),
     );
-    assert(article.metadata.sourceNotes.items.length === resolved.sourceNotes.length, `${relativeFromRoot(sourcePath)}: LaTeX source-note count does not match governed source IDs`);
+    assert(article.metadata.sourceNotes.items.length === resolved.sourceNotes.length, `${relativeFromRoot(sourcePath, root)}: LaTeX source-note count does not match governed source IDs`);
     for (const sourceNote of article.metadata.sourceNotes.items) {
       const governed = resolved.sourceNotes.find(({ href }) => href === sourceNote.href);
-      assert(governed && governed.title === sourceNote.title && governed.publisher === sourceNote.publisher, `${relativeFromRoot(sourcePath)}: LaTeX source note does not match its canonical source record`);
+      assert(governed && governed.title === sourceNote.title && governed.publisher === sourceNote.publisher, `${relativeFromRoot(sourcePath, root)}: LaTeX source note does not match its canonical source record`);
     }
     const route = normalizedArticleRoute(article.metadata.slug);
     const relatedArticleIds = article.metadata.relatedContent.routes.map((relatedRoute) => {
       const match = relatedRoute.match(/^\/articles\/([a-z0-9]+(?:-[a-z0-9]+)*)\/$/);
-      assert(match, `${relativeFromRoot(sourcePath)}: invalid related route ${relatedRoute}`);
+      assert(match, `${relativeFromRoot(sourcePath, root)}: invalid related route ${relatedRoute}`);
       return match[1];
     });
     const normalizedArticle = Object.freeze({
       schemaVersion: NORMALIZED_PUBLIC_ARTICLE_SCHEMA_VERSION,
       kind: 'article',
       sourceKind: 'latex-article',
-      sourcePath: relativeFromRoot(sourcePath),
-      bodySourcePath: relativeFromRoot(sourcePath),
+      sourcePath: relativeFromRoot(sourcePath, root),
+      bodySourcePath: relativeFromRoot(sourcePath, root),
       generatedContentPath: `src/content/docs/articles/${article.metadata.slug}.mdx`,
       id: article.metadata.slug,
       slug: article.metadata.slug,
@@ -687,7 +687,7 @@ export async function emitCompiledArticles({ root = repositoryRoot, check = fals
   const generatedRoot = path.join(root, 'src', 'content', 'docs', 'articles');
   const staleOutputs = compilerOwnedArticleOutputs(generatedRoot).filter((outputPath) => !expectedSlugs.has(path.basename(path.dirname(outputPath))));
   if (check) {
-    assert(staleOutputs.length === 0, `Stale compiler-owned article output: ${staleOutputs.map(relativeFromRoot).join(', ')}`);
+    assert(staleOutputs.length === 0, `Stale compiler-owned article output: ${staleOutputs.map((outputPath) => relativeFromRoot(outputPath)).join(', ')}`);
   } else {
     for (const outputPath of staleOutputs) {
       const parent = path.dirname(outputPath);

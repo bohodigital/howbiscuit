@@ -1,0 +1,11 @@
+schemaVersion: 1.0.0
+id: example-product-unpaid-us
+productId: example-product-black-one-liter
+exactVariant: Black, one liter, revision A
+merchant: Example Merchant
+exactUrl: https://merchant.example.invalid/products/example-product
+market: US
+relationship: unpaid
+capturedDate: "2026-07-20"
+verificationNotes: Replace with how the exact variant and unpaid relationship were verified.
+status: draft

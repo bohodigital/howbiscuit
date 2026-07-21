@@ -1,0 +1,15 @@
+schemaVersion: 1.0.0
+id: media-example-article-primary
+articleId: example-article
+packageRelativePath: media/example.webp
+contentHash: "0000000000000000000000000000000000000000000000000000000000000000"
+type: image/webp
+creator: Replace with the creator
+source: Replace with the source or private permission record
+rightsBasis: Replace with owned, licensed, or permission basis
+license: null
+permissionDetails: Record the exact permission and retained evidence.
+attribution: Replace with required public attribution or state none.
+altText: Replace with meaningful alternative text.
+restrictions: []
+status: draft
