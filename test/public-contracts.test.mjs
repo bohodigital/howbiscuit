@@ -215,7 +215,10 @@ test('registry discovers exactly three source-owned, publishable records', () =>
     assert.equal(record.feedEligible, true);
     assert.equal(record.sitemapEligible, true);
     assert.equal(record.llmsEligible, true);
-    assert.equal(record.provenance.categoryId, 'canonical-source-metadata');
+    assert.equal(
+      record.provenance.categoryId,
+      record.route === '/articles/how-does-baking-powder-work/' ? 'normalized-article-package' : 'canonical-source-metadata',
+    );
     assert.equal(record.sourceNotes.state, 'structured');
     assert.ok(record.sourceNotes.items.length > 0);
     assert.equal(record.disclosure.state, 'no-paid-links');

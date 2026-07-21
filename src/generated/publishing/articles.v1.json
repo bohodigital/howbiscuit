@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyVersion": "2026-07-18.handoff1.phase-c",
+  "articles": [
+    {
+      "schemaVersion": "1.0.0",
+      "kind": "article",
+      "sourceKind": "article-package",
+      "sourcePath": "content/articles/how-does-baking-powder-work",
+      "bodySourcePath": "content/articles/how-does-baking-powder-work/article.md",
+      "generatedContentPath": "src/content/docs/articles/how-does-baking-powder-work/index.mdx",
+      "id": "how-does-baking-powder-work",
+      "slug": "how-does-baking-powder-work",
+      "route": "/articles/how-does-baking-powder-work/",
+      "canonicalRoute": "/articles/how-does-baking-powder-work/",
+      "pagefindRoute": "/articles/how-does-baking-powder-work/",
+      "rssIdentity": "/articles/how-does-baking-powder-work/",
+      "sitemapIdentity": "/articles/how-does-baking-powder-work/",
+      "title": "How Does Baking Powder Work?",
+      "description": "Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "topicIds": [
+        "food-science"
+      ],
+      "articleType": "guide",
+      "editorialClassification": "guide",
+      "articleFormat": "standard",
+      "answerSummary": "Baking powder combines a dry acid and base that release carbon dioxide after liquid is added; heat expands those bubbles while the batter or dough sets around them.",
+      "problemLabel": "My baking powder is not working",
+      "problemLabels": [
+        "My baking powder is not working"
+      ],
+      "publishedDate": "2026-07-01",
+      "updatedDate": "2026-07-10",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "editorialPriority": 20,
+      "readTime": "3 min read",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This mechanism guide was researched from university extension sources; How Biscuit did not run a controlled product test."
+        ]
+      },
+      "sourceIds": [
+        "usu-cooking-food-storage",
+        "penn-state-storing-staple-ingredients",
+        "usu-ingredient-substitutions"
+      ],
+      "sourceNotes": {
+        "state": "structured",
+        "items": [
+          {
+            "id": "usu-cooking-food-storage",
+            "title": "Cooking Food Storage: baking powder activity and double-acting acids",
+            "publisher": "Utah State University Extension",
+            "href": "https://extension.usu.edu/preserve-the-harvest/research/cooking-food-storage"
+          },
+          {
+            "id": "penn-state-storing-staple-ingredients",
+            "title": "Storing Staple Ingredients in the Kitchen: freshness test",
+            "publisher": "Penn State Extension",
+            "href": "https://extension.psu.edu/storing-staple-ingredients-in-the-kitchen"
+          },
+          {
+            "id": "usu-ingredient-substitutions",
+            "title": "Ingredient Substitutions for Cooking and Baking",
+            "publisher": "Utah State University Extension",
+            "href": "https://extension.usu.edu/archive/list-of-ingredient-substitutions-for-cooking-and-baking"
+          }
+        ]
+      },
+      "testingIds": [],
+      "mediaIds": [],
+      "productIds": [],
+      "productGroupIds": [],
+      "linkPreviewIds": [],
+      "destinationIds": [],
+      "priceClaims": [],
+      "recommendationClaims": [],
+      "presentationBlocks": [
+        {
+          "id": "rise-mechanism",
+          "kind": "mechanism",
+          "steps": [
+            {
+              "title": "Liquid starts the reaction",
+              "body": "Water lets the dry acid and base dissolve and meet. Their reaction releases carbon dioxide into the batter or dough."
+            },
+            {
+              "title": "Bubbles get trapped",
+              "body": "The gas fills existing air pockets in the mixture. Mixing method and batter structure decide how well those pockets hold."
+            },
+            {
+              "title": "Heat expands, then sets",
+              "body": "In the oven, gas expands and double-acting powder releases another round. Proteins and starches then set the final structure."
+            }
+          ]
+        },
+        {
+          "id": "more-is-not-more",
+          "kind": "callout",
+          "variant": "dont-be-fooled",
+          "title": "More baking powder does not mean more height",
+          "body": "Too much can make a bake rise quickly and then collapse before the structure is strong enough to hold it. It can also leave an unpleasant chemical or bitter taste. Measure the recipe amount; the can is not a volume knob."
+        },
+        {
+          "id": "failure-grid",
+          "kind": "mistake-grid",
+          "items": [
+            {
+              "title": "The can is tired",
+              "body": "Moisture and time reduce its useful activity.",
+              "fix": "Test a teaspoon in one-third cup of hot water. Vigorous foaming means it still has rising power."
+            },
+            {
+              "title": "The batter waited",
+              "body": "The first gas release began at mixing, then escaped while the bowl sat.",
+              "fix": "Preheat the oven and prepare the pan before adding the wet ingredients."
+            },
+            {
+              "title": "The amount drifted",
+              "body": "A heaped spoon or a confused substitution changed the acid-base balance.",
+              "fix": "Use a level measuring spoon and keep baking soda substitutions recipe-specific."
+            },
+            {
+              "title": "The bubbles got bullied",
+              "body": "Aggressive mixing can damage the structure that needs to hold expanding gas.",
+              "fix": "For tender quick breads and biscuits, mix only until the dry streaks disappear."
+            }
+          ]
+        },
+        {
+          "id": "cheap-safe-version",
+          "kind": "callout",
+          "variant": "cheap-safe",
+          "title": "The cheap safe version",
+          "body": "Test the can before buying another one. If it fails, replace it rather than improvising a large amount of baking soda. A small can costs less than a pan of dense, metallic-tasting cake."
+        }
+      ],
+      "relatedArticleIds": [
+        "why-are-some-answers-better-than-others",
+        "why-salt-melts-ice"
+      ],
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-are-some-answers-better-than-others/",
+          "/articles/why-salt-melts-ice/"
+        ]
+      },
+      "disclosure": {
+        "state": "no-paid-links",
+        "text": "This guide contains no affiliate links, sponsored placements, paid reviews, or product placements.",
+        "href": "/affiliate-disclosure/"
+      },
+      "workflow": {
+        "state": "published",
+        "history": [
+          {
+            "state": "published",
+            "at": "2026-07-01",
+            "actor": "owner-baseline-migration"
+          }
+        ]
+      },
+      "authors": [
+        "How Biscuit"
+      ],
+      "directives": [
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "rise-mechanism"
+          },
+          "line": 13
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "more-is-not-more"
+          },
+          "line": 21
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "failure-grid"
+          },
+          "line": 25
+        },
+        {
+          "kind": "presentation",
+          "attributes": {
+            "block": "cheap-safe-version"
+          },
+          "line": 48
+        }
+      ],
+      "citations": [],
+      "media": [],
+      "bodyDigest": "b44890fcd97798b9c42006ce09fe45559d71a8815bb5e4f3064f88b951d1e140",
+      "packageDigest": "60b247b9f7f3cddb4808c86381b7d3d952e38e0e80632b7f77944a73be9945f0",
+      "draft": false,
+      "preview": false,
+      "thin": false,
+      "redirectState": null,
+      "retirementState": null
+    }
+  ]
+}

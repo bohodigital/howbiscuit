@@ -2,6 +2,8 @@ import { existsSync } from 'node:fs';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 
+import { load as parseYaml } from 'js-yaml';
+
 const root = process.cwd();
 const docsRoot = path.join(root, 'src', 'content', 'docs');
 const distRoot = path.join(root, 'dist');
@@ -195,10 +197,14 @@ const feedArticles = [
 for (const { articlePath, pubDate } of feedArticles) {
   const source = await readFile(articlePath, 'utf8');
   const frontmatter = frontmatterFor(source, path.relative(root, articlePath));
-  if (!/feed:\s*true/.test(frontmatter)) {
+  const data = parseYaml(frontmatter);
+  if (data?.feed !== true) {
     errors.push(`Article is not in RSS feed: ${path.relative(root, articlePath)}`);
   }
-  if (!new RegExp(`pubDate:\\s*${pubDate}`).test(frontmatter)) {
+  const actualPubDate = data?.pubDate instanceof Date
+    ? data.pubDate.toISOString().slice(0, 10)
+    : data?.pubDate;
+  if (actualPubDate !== pubDate) {
     errors.push(`Article publication date changed unexpectedly: ${path.relative(root, articlePath)}`);
   }
 }

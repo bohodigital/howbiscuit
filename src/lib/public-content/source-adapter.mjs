@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { load as parseYaml } from 'js-yaml';
@@ -108,7 +108,57 @@ function latexSource(root, relativePath, taxonomy) {
   });
 }
 
-export function discoverTrackedPublicSources(root, { taxonomy } = {}) {
+function generatedArticleSources(root, generatedArticles = null) {
+  const generatedPath = path.join(root, 'src', 'generated', 'publishing', 'articles.v1.json');
+  if (generatedArticles === null && !existsSync(generatedPath)) return new Map();
+  const payload = generatedArticles === null
+    ? JSON.parse(readFileSync(generatedPath, 'utf8'))
+    : { schemaVersion: '1.0.0', articles: generatedArticles };
+  if (payload?.schemaVersion !== '1.0.0' || !Array.isArray(payload.articles)) {
+    throw new Error('Generated publishing output must use NormalizedPublicArticleV1.');
+  }
+  return new Map(payload.articles.map((article) => {
+    if (article?.kind !== 'article' || article?.sourceKind !== 'article-package') {
+      throw new Error('Generated publishing output contains an unsupported record.');
+    }
+    return [article.route, Object.freeze({
+      kind: 'article',
+      sourceKind: 'article-package',
+      sourcePath: article.bodySourcePath,
+      route: article.route,
+      slug: article.slug,
+      title: article.title,
+      description: article.description,
+      categoryId: article.categoryId,
+      topicId: article.topicId,
+      articleType: article.articleType,
+      editorialClassification: article.editorialClassification,
+      articleFormat: article.articleFormat,
+      answerSummary: article.answerSummary,
+      problemLabel: article.problemLabel,
+      publishedDate: article.publishedDate,
+      updatedDate: article.updatedDate,
+      feed: article.feedEligible,
+      featured: article.featured,
+      editorialPriority: article.editorialPriority,
+      readTime: article.readTime,
+      evidence: article.evidence,
+      testing: article.testing,
+      sourceNotes: article.sourceNotes,
+      relatedContent: article.relatedContent,
+      disclosure: article.disclosure,
+      draft: article.draft,
+      preview: article.preview,
+      thin: article.thin,
+      redirectState: article.redirectState,
+      retirementState: article.retirementState,
+      normalizedSchemaVersion: article.schemaVersion,
+      packageDigest: article.packageDigest,
+    })];
+  }));
+}
+
+export function discoverTrackedPublicSources(root, { taxonomy, generatedArticles = null, expectedGeneratedRoutes = [] } = {}) {
   const output = execFileSync('git', [
     'ls-files',
     '--',
@@ -116,14 +166,29 @@ export function discoverTrackedPublicSources(root, { taxonomy } = {}) {
     'content/latex/articles',
   ], { cwd: root, encoding: 'utf8' });
   const paths = output.trim().split(/\r?\n/).filter(Boolean);
+  const generated = generatedArticleSources(root, generatedArticles);
   const sources = [];
   for (const relativePath of paths) {
-    const source = relativePath.endsWith('.tex')
+    const route = relativePath.endsWith('.mdx') ? routeFromMdxPath(relativePath) : null;
+    const source = route && generated.has(route)
+      ? generated.get(route)
+      : relativePath.endsWith('.tex')
       ? latexSource(root, relativePath, taxonomy)
       : relativePath.endsWith('.mdx')
         ? mdxSource(root, relativePath)
         : null;
     if (source) sources.push(source);
+  }
+
+  const discoveredRoutes = new Set(sources.map(({ route }) => route));
+  const expected = new Set(expectedGeneratedRoutes);
+  for (const route of generated.keys()) {
+    if (!discoveredRoutes.has(route) && expected.has(route)) {
+      sources.push(generated.get(route));
+      discoveredRoutes.add(route);
+    } else if (!discoveredRoutes.has(route)) {
+      throw new Error(`Generated article has no renderable content entry: ${route}`);
+    }
   }
 
   sources.sort((left, right) => asciiCompare(left.route, right.route));
@@ -134,7 +199,7 @@ export function discoverTrackedPublicSources(root, { taxonomy } = {}) {
   if (!sources.length) throw new Error('No tracked public sources were discovered.');
   return Object.freeze(sources.map((source) => Object.freeze({
     ...source,
-    ...(source.kind === 'article' ? { classificationProvenance: 'canonical-source-metadata' } : {}),
+    ...(source.kind === 'article' ? { classificationProvenance: source.sourceKind === 'article-package' ? 'normalized-article-package' : 'canonical-source-metadata' } : {}),
   })));
 }
 

@@ -1,0 +1,13 @@
+{
+  "valid": [
+    "content/articles/how-does-baking-powder-work/manifest.yaml"
+  ],
+  "invalid": [
+    { "name": "invalid category", "patch": { "categoryId": "cooking" } },
+    { "name": "invalid topic", "patch": { "topicIds": ["chemistry"] } },
+    { "name": "path traversal slug", "patch": { "id": "../escape", "slug": "../escape" } },
+    { "name": "unsafe source URL", "sourceHref": "javascript:alert(1)" },
+    { "name": "unknown manifest property", "patch": { "inventedField": true } },
+    { "name": "missing source resolution", "patch": { "sourceIds": ["missing-source"] } }
+  ]
+}

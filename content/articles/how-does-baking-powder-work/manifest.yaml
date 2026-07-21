@@ -1,0 +1,98 @@
+schemaVersion: 1.0.0
+id: how-does-baking-powder-work
+slug: how-does-baking-powder-work
+title: How Does Baking Powder Work?
+description: Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.
+articleType: guide
+categoryId: kitchen
+topicIds:
+  - food-science
+problemLabels:
+  - My baking powder is not working
+directAnswer: Baking powder combines a dry acid and base that release carbon dioxide after liquid is added; heat expands those bubbles while the batter or dough sets around them.
+publishedAt: "2026-07-01"
+updatedAt: "2026-07-10"
+featured: false
+editorialPriority: 20
+authors:
+  - How Biscuit
+evidence:
+  level: researched
+  label: Researched
+testing:
+  state: not-hands-on-tested
+  notes:
+    - This mechanism guide was researched from university extension sources; How Biscuit did not run a controlled product test.
+workflow:
+  state: published
+  history:
+    - state: published
+      at: "2026-07-01"
+      actor: owner-baseline-migration
+disclosure:
+  state: no-paid-links
+  text: This guide contains no affiliate links, sponsored placements, paid reviews, or product placements.
+  href: /affiliate-disclosure/
+sourceIds:
+  - usu-cooking-food-storage
+  - penn-state-storing-staple-ingredients
+  - usu-ingredient-substitutions
+sourceNotes:
+  - id: usu-cooking-food-storage
+    title: "Cooking Food Storage: baking powder activity and double-acting acids"
+    publisher: Utah State University Extension
+    href: https://extension.usu.edu/preserve-the-harvest/research/cooking-food-storage
+  - id: penn-state-storing-staple-ingredients
+    title: "Storing Staple Ingredients in the Kitchen: freshness test"
+    publisher: Penn State Extension
+    href: https://extension.psu.edu/storing-staple-ingredients-in-the-kitchen
+  - id: usu-ingredient-substitutions
+    title: Ingredient Substitutions for Cooking and Baking
+    publisher: Utah State University Extension
+    href: https://extension.usu.edu/archive/list-of-ingredient-substitutions-for-cooking-and-baking
+testingIds: []
+mediaIds: []
+productIds: []
+productGroupIds: []
+linkPreviewIds: []
+destinationIds: []
+relatedArticleIds:
+  - why-are-some-answers-better-than-others
+  - why-salt-melts-ice
+priceClaims: []
+recommendationClaims: []
+presentationBlocks:
+  - id: rise-mechanism
+    kind: mechanism
+    steps:
+      - title: Liquid starts the reaction
+        body: Water lets the dry acid and base dissolve and meet. Their reaction releases carbon dioxide into the batter or dough.
+      - title: Bubbles get trapped
+        body: The gas fills existing air pockets in the mixture. Mixing method and batter structure decide how well those pockets hold.
+      - title: Heat expands, then sets
+        body: In the oven, gas expands and double-acting powder releases another round. Proteins and starches then set the final structure.
+  - id: more-is-not-more
+    kind: callout
+    variant: dont-be-fooled
+    title: More baking powder does not mean more height
+    body: Too much can make a bake rise quickly and then collapse before the structure is strong enough to hold it. It can also leave an unpleasant chemical or bitter taste. Measure the recipe amount; the can is not a volume knob.
+  - id: failure-grid
+    kind: mistake-grid
+    items:
+      - title: The can is tired
+        body: Moisture and time reduce its useful activity.
+        fix: Test a teaspoon in one-third cup of hot water. Vigorous foaming means it still has rising power.
+      - title: The batter waited
+        body: The first gas release began at mixing, then escaped while the bowl sat.
+        fix: Preheat the oven and prepare the pan before adding the wet ingredients.
+      - title: The amount drifted
+        body: A heaped spoon or a confused substitution changed the acid-base balance.
+        fix: Use a level measuring spoon and keep baking soda substitutions recipe-specific.
+      - title: The bubbles got bullied
+        body: Aggressive mixing can damage the structure that needs to hold expanding gas.
+        fix: For tender quick breads and biscuits, mix only until the dry streaks disappear.
+  - id: cheap-safe-version
+    kind: callout
+    variant: cheap-safe
+    title: The cheap safe version
+    body: Test the can before buying another one. If it fails, replace it rather than improvising a large amount of baking soda. A small can costs less than a pan of dense, metallic-tasting cake.

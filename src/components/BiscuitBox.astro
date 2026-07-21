@@ -9,14 +9,15 @@ const labels: Record<Variant, string> = {
   'source-note': 'Source note',
 };
 
-const { variant = 'short-answer', title } = Astro.props as {
+const { variant = 'short-answer', title, body } = Astro.props as {
   variant?: Variant;
   title?: string;
+  body?: string;
 };
 const accessibleName = title ?? labels[variant];
 ---
 
 <aside class="hb-box" data-variant={variant} aria-label={accessibleName}>
   <p class="hb-box-label">{accessibleName}</p>
-  <slot />
+  {body === undefined ? <slot /> : <p>{body}</p>}
 </aside>

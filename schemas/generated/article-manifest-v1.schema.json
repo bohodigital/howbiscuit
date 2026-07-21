@@ -1,0 +1,576 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://howbiscuit.com/schemas/article-manifest-v1.schema.json",
+  "title": "How Biscuit article package manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "slug",
+    "title",
+    "description",
+    "articleType",
+    "categoryId",
+    "topicIds",
+    "problemLabels",
+    "directAnswer",
+    "publishedAt",
+    "updatedAt",
+    "featured",
+    "editorialPriority",
+    "authors",
+    "evidence",
+    "testing",
+    "workflow",
+    "disclosure",
+    "sourceIds",
+    "sourceNotes",
+    "testingIds",
+    "mediaIds",
+    "productIds",
+    "productGroupIds",
+    "linkPreviewIds",
+    "destinationIds",
+    "relatedArticleIds",
+    "priceClaims",
+    "recommendationClaims",
+    "presentationBlocks"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 40
+    },
+    "articleType": {
+      "enum": [
+        "guide",
+        "editorial-standard"
+      ]
+    },
+    "categoryId": {
+      "anyOf": [
+        {
+          "enum": [
+            "home-tech",
+            "home",
+            "kitchen",
+            "shop",
+            "tools"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "topicIds": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "wifi-routers",
+          "computers-laptops",
+          "smart-home",
+          "tvs-streaming",
+          "privacy-security",
+          "power-cooling-storage",
+          "repairs-maintenance",
+          "apartment-comfort",
+          "heating-cooling",
+          "cleaning",
+          "tools-materials",
+          "utilities-energy",
+          "kitchen-appliances",
+          "cookware-tools",
+          "food-science",
+          "ingredient-substitutions",
+          "cheap-meals",
+          "troubleshooting-safety",
+          "product-comparisons",
+          "local-prices",
+          "used-refurbished",
+          "total-cost-ownership",
+          "deals-worth-considering",
+          "products-to-avoid",
+          "product-index",
+          "calculators",
+          "converters",
+          "price-checkers",
+          "checklists",
+          "decision-tools",
+          "templates"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "problemLabels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "directAnswer": {
+      "type": "string",
+      "minLength": 40
+    },
+    "publishedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "updatedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "editorialPriority": {
+      "type": "integer"
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "label"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "hands-on-tested",
+            "owner-experience",
+            "specification-reviewed",
+            "researched",
+            "price-listing-only",
+            "editorial-standard"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "testing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "notes"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "hands-on-tested",
+            "owner-experience",
+            "not-hands-on-tested",
+            "not-applicable"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "history"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "draft",
+            "review",
+            "approved",
+            "published",
+            "retired"
+          ]
+        },
+        "history": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "state",
+              "at",
+              "actor"
+            ],
+            "properties": {
+              "state": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "actor": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "disclosure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "text",
+        "href"
+      ],
+      "properties": {
+        "state": {
+          "const": "no-paid-links"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "href": {
+          "const": "/affiliate-disclosure/"
+        }
+      }
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "sourceNotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "publisher",
+          "href"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "href": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "testingIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "mediaIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "productIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "productGroupIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "linkPreviewIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "destinationIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "relatedArticleIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "priceClaims": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "recommendationClaims": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "presentationBlocks": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "kind",
+              "steps"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "kind": {
+                "const": "mechanism"
+              },
+              "steps": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "title",
+                    "body"
+                  ],
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+                    },
+                    "body": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "kind",
+              "items"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "kind": {
+                "const": "mistake-grid"
+              },
+              "items": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "title",
+                    "body"
+                  ],
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+                    },
+                    "body": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+                    },
+                    "fix": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "kind",
+              "variant",
+              "title",
+              "body"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "kind": {
+                "const": "callout"
+              },
+              "variant": {
+                "enum": [
+                  "short-answer",
+                  "common-mistake",
+                  "cheap-safe",
+                  "dont-be-fooled",
+                  "source-note"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^<>{}\\u0000-\\u001f\\u007f]+$"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "articleType": {
+            "const": "guide"
+          }
+        },
+        "required": [
+          "articleType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "categoryId": {
+            "type": "string",
+            "enum": [
+              "home-tech",
+              "home",
+              "kitchen",
+              "shop",
+              "tools"
+            ]
+          },
+          "topicIds": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "articleType": {
+            "const": "editorial-standard"
+          }
+        },
+        "required": [
+          "articleType"
+        ]
+      },
+      "then": {
+        "properties": {
+          "categoryId": {
+            "type": "null"
+          },
+          "topicIds": {
+            "type": "array",
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "x-hb-manifest-cross-fields": true,
+  "$comment": "Generated from canonical taxonomy 2026-07-18.handoff1.phase-c; do not hand-edit taxonomy enums."
+}

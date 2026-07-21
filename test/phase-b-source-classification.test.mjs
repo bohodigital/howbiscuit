@@ -23,7 +23,11 @@ test('Phase C classifications and global article-service metadata are source-own
     '/articles/why-are-some-answers-better-than-others/': [null, null, 'editorial-standard', 10],
     '/articles/why-salt-melts-ice/': ['home', 'heating-cooling', 'guide', 30],
   });
-  assert.ok(sources.every(({ classificationProvenance }) => classificationProvenance === 'canonical-source-metadata'));
+  assert.deepEqual(Object.fromEntries(sources.map(({ route, classificationProvenance }) => [route, classificationProvenance])), {
+    '/articles/how-does-baking-powder-work/': 'normalized-article-package',
+    '/articles/why-are-some-answers-better-than-others/': 'canonical-source-metadata',
+    '/articles/why-salt-melts-ice/': 'canonical-source-metadata',
+  });
   assert.ok(sources.every(({ answerSummary, sourceNotes, relatedContent, disclosure, testing }) => (
     answerSummary.length >= 40
     && sourceNotes.state === 'structured'
