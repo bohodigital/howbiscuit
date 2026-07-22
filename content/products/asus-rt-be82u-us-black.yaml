@@ -1,0 +1,28 @@
+schemaVersion: 1.0.0
+id: asus-rt-be82u-us-black
+displayName: ASUS RT-BE82U
+brand: ASUS
+model: RT-BE82U
+exactVariant: Black, US-market RT-BE82U, one-router package with US power adapter
+productType: wifi-router
+manufacturerIdentifiers:
+  gtin: null
+  upc: null
+  ean: null
+  mpn: RT-BE82U
+  asin: null
+  retailerSkus:
+    - merchant: Best Buy
+      sku: "6618209"
+variantAttributes:
+  color: Black
+  market: US
+  package: One router
+  power-adapter: US 12V 3A
+description: Dual-band BE6500 Wi-Fi 7 router sold as one black US-market unit with the documented RT-BE82U model number.
+sourceIds: [manufacturer-asus-rt-be82u, retailer-best-buy-6618209]
+mediaIds: []
+provenance:
+  state: researched
+  notes: Exact model, package, power adapter, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; no hands-on claim is made.
+status: published

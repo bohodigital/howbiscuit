@@ -60,7 +60,7 @@ test('canonical editorial records load with deterministic idea scores', async ()
     ['mediaRights', records.mediaRights.size],
     ['linkPreviews', records.linkPreviews.size],
     ['approvals', records.approvals.size],
-  ]), { ideas: 3, briefs: 3, sources: 8, testing: 3, mediaRights: 0, linkPreviews: 0, approvals: 3 });
+  ]), { ideas: 3, briefs: 3, sources: 18, testing: 3, mediaRights: 0, linkPreviews: 0, approvals: 3 });
   assert.deepEqual(scoreIdeas(records.ideas), [
     { id: 'idea-how-does-baking-powder-work', totalScore: 24 },
     { id: 'idea-why-are-some-answers-better-than-others', totalScore: 23 },

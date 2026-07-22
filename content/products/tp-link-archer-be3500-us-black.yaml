@@ -1,0 +1,28 @@
+schemaVersion: 1.0.0
+id: tp-link-archer-be3500-us-black
+displayName: TP-Link Archer BE3500
+brand: TP-Link
+model: Archer BE3500
+exactVariant: Black, US-market Archer BE3500, one-router retail package; hardware revision not specified by retailer
+productType: wifi-router
+manufacturerIdentifiers:
+  gtin: null
+  upc: null
+  ean: null
+  mpn: null
+  asin: null
+  retailerSkus:
+    - merchant: Best Buy
+      sku: "6642157"
+variantAttributes:
+  color: Black
+  market: US
+  package: One router
+  hardware-revision: Not specified by retailer
+description: Dual-band BE3500 Wi-Fi 7 router sold as one black US-market unit under the exact governed retailer SKU recorded here.
+sourceIds: [manufacturer-tp-link-archer-be3500, retailer-best-buy-6642157]
+mediaIds: []
+provenance:
+  state: researched
+  notes: Model, US power specification, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; the retailer does not identify a hardware revision and no hands-on claim is made.
+status: published

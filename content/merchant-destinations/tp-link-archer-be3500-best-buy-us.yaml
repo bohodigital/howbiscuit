@@ -1,0 +1,11 @@
+schemaVersion: 1.0.0
+id: tp-link-archer-be3500-best-buy-us
+productId: tp-link-archer-be3500-us-black
+exactVariant: Black, US-market Archer BE3500, one-router retail package; hardware revision not specified by retailer
+merchant: Best Buy
+exactUrl: https://www.bestbuy.com/product/tp-link-archer-be3500-dual-band-wi-fi-7-router-black/J39T6X2WTY/sku/6642157
+market: US
+relationship: unpaid
+capturedDate: "2026-07-22"
+verificationNotes: Current merchant evidence identifies the exact governed model and retailer SKU mapping; it does not identify a hardware revision and the destination has no query parameters.
+status: published

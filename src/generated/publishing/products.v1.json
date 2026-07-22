@@ -1,8 +1,285 @@
 {
   "schemaVersion": "1.0.0",
-  "products": [],
+  "products": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "asus-rt-be82u-us-black",
+      "displayName": "ASUS RT-BE82U",
+      "brand": "ASUS",
+      "model": "RT-BE82U",
+      "exactVariant": "Black, US-market RT-BE82U, one-router package with US power adapter",
+      "productType": "wifi-router",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": "RT-BE82U",
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Best Buy",
+            "sku": "6618209"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "color": "Black",
+        "market": "US",
+        "package": "One router",
+        "power-adapter": "US 12V 3A"
+      },
+      "description": "Dual-band BE6500 Wi-Fi 7 router sold as one black US-market unit with the documented RT-BE82U model number.",
+      "sourceIds": [
+        "manufacturer-asus-rt-be82u",
+        "retailer-best-buy-6618209"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Exact model, package, power adapter, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; no hands-on claim is made."
+      },
+      "status": "published",
+      "recordDigest": "813f7571f639041d9e48e2244c9f0745383c9c0200bd4751cfa8f2597ab82ffe",
+      "provenanceLabel": "Researched by How Biscuit"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "netgear-nighthawk-rs100-us-black",
+      "displayName": "NETGEAR Nighthawk RS100",
+      "brand": "NETGEAR",
+      "model": "RS100",
+      "exactVariant": "Black, US-market RS100-100NAS, one-router package with US power adapter",
+      "productType": "wifi-router",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": "RS100-100NAS",
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Best Buy",
+            "sku": "6612969"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "color": "Black",
+        "market": "US",
+        "package": "One router",
+        "power-adapter": "US 12V 1.5A"
+      },
+      "description": "Dual-band BE3600 Wi-Fi 7 router sold as one black US-market unit with the documented RS100-100NAS model number.",
+      "sourceIds": [
+        "manufacturer-netgear-rs100",
+        "retailer-best-buy-6612969"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Exact model, package, power adapter, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; no hands-on claim is made."
+      },
+      "status": "published",
+      "recordDigest": "fc846428d1c6f46e4d8856dc86bae179400015f25bf19f365fe5427c54005a30",
+      "provenanceLabel": "Researched by How Biscuit"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "netgear-nighthawk-rs150-us-black",
+      "displayName": "NETGEAR Nighthawk RS150",
+      "brand": "NETGEAR",
+      "model": "RS150",
+      "exactVariant": "Black, US-market RS150-100NAS, one-router package with US power adapter",
+      "productType": "wifi-router",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": "RS150-100NAS",
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Best Buy",
+            "sku": "6634695"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "color": "Black",
+        "market": "US",
+        "package": "One router",
+        "power-adapter": "US 12V 2.5A"
+      },
+      "description": "Dual-band BE5000 Wi-Fi 7 router sold as one black US-market unit with the documented RS150-100NAS model number.",
+      "sourceIds": [
+        "manufacturer-netgear-rs150",
+        "retailer-best-buy-6634695"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Exact model, package, power adapter, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; no hands-on claim is made."
+      },
+      "status": "published",
+      "recordDigest": "bebc2cd4039a942ebc46b5dd013540e7787ebbd18f5bd6cb7fc0fe705ee7dd95",
+      "provenanceLabel": "Researched by How Biscuit"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "netgear-nighthawk-rs200-us-black",
+      "displayName": "NETGEAR Nighthawk RS200",
+      "brand": "NETGEAR",
+      "model": "RS200",
+      "exactVariant": "Black, US-market RS200-100NAS, one-router package with US power adapter",
+      "productType": "wifi-router",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": "RS200-100NAS",
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Best Buy",
+            "sku": "6598712"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "color": "Black",
+        "market": "US",
+        "package": "One router",
+        "power-adapter": "US 12V 3.5A"
+      },
+      "description": "Dual-band BE6500 Wi-Fi 7 router sold as one black US-market unit with the documented RS200-100NAS model number.",
+      "sourceIds": [
+        "manufacturer-netgear-rs200",
+        "retailer-best-buy-6598712"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Exact model, package, power adapter, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; no hands-on claim is made."
+      },
+      "status": "published",
+      "recordDigest": "63dbd933c97fc18f347e6b8b6ec8ae1a35b9f46244897842e59d2a8b86a0245f",
+      "provenanceLabel": "Researched by How Biscuit"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "tp-link-archer-be3500-us-black",
+      "displayName": "TP-Link Archer BE3500",
+      "brand": "TP-Link",
+      "model": "Archer BE3500",
+      "exactVariant": "Black, US-market Archer BE3500, one-router retail package; hardware revision not specified by retailer",
+      "productType": "wifi-router",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": null,
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Best Buy",
+            "sku": "6642157"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "color": "Black",
+        "market": "US",
+        "package": "One router",
+        "hardware-revision": "Not specified by retailer"
+      },
+      "description": "Dual-band BE3500 Wi-Fi 7 router sold as one black US-market unit under the exact governed retailer SKU recorded here.",
+      "sourceIds": [
+        "manufacturer-tp-link-archer-be3500",
+        "retailer-best-buy-6642157"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Model, US power specification, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; the retailer does not identify a hardware revision and no hands-on claim is made."
+      },
+      "status": "published",
+      "recordDigest": "8bb5a18abb273300bbef2aa88cd457c18adb633e301b3d58aded9f609716d4a2",
+      "provenanceLabel": "Researched by How Biscuit"
+    }
+  ],
   "productGroups": [],
-  "merchantDestinations": [],
+  "merchantDestinations": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "asus-rt-be82u-best-buy-us",
+      "productId": "asus-rt-be82u-us-black",
+      "exactVariant": "Black, US-market RT-BE82U, one-router package with US power adapter",
+      "merchant": "Best Buy",
+      "exactUrl": "https://www.bestbuy.com/site/asus-rt-be82u-be6500-dual-band-wi-fi-7-router-black/6618209.p",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed model and retailer SKU mapping; this is an ordinary unpaid destination with no query parameters.",
+      "status": "published",
+      "recordDigest": "2fc81a741898fc367c9f2329fd7efc13823957b419587be580f0cdd12e44e9bc"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "netgear-nighthawk-rs100-best-buy-us",
+      "productId": "netgear-nighthawk-rs100-us-black",
+      "exactVariant": "Black, US-market RS100-100NAS, one-router package with US power adapter",
+      "merchant": "Best Buy",
+      "exactUrl": "https://www.bestbuy.com/product/netgear-nighthawk-be3600-dual-band-wi-fi-7-router-black/6612969",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed model and retailer SKU mapping; this is an ordinary unpaid destination with no query parameters.",
+      "status": "published",
+      "recordDigest": "33bae2aa0839d072f939a5e0872c9808e9ecacde3a4882795ed0a4ae3b7291c2"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "netgear-nighthawk-rs150-best-buy-us",
+      "productId": "netgear-nighthawk-rs150-us-black",
+      "exactVariant": "Black, US-market RS150-100NAS, one-router package with US power adapter",
+      "merchant": "Best Buy",
+      "exactUrl": "https://www.bestbuy.com/product/netgear-nighthawk-be5000-dual-band-wi-fi-7-router-black/J2VY7Y57V2/sku/6634695",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed model and retailer SKU mapping; this is an ordinary unpaid destination with no query parameters.",
+      "status": "published",
+      "recordDigest": "71795d238c7bac9089dc68b9ff51986d85641e77247a61249e4043811732b0f0"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "netgear-nighthawk-rs200-best-buy-us",
+      "productId": "netgear-nighthawk-rs200-us-black",
+      "exactVariant": "Black, US-market RS200-100NAS, one-router package with US power adapter",
+      "merchant": "Best Buy",
+      "exactUrl": "https://www.bestbuy.com/site/netgear-nighthawk-be6500-dual-band-wi-fi-7-router-black/6598712.p",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed model and retailer SKU mapping; this is an ordinary unpaid destination with no query parameters.",
+      "status": "published",
+      "recordDigest": "3549bc4a3c2d1b851ab39049dc6fc9e09132733eba95efe2e581806112619e88"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "tp-link-archer-be3500-best-buy-us",
+      "productId": "tp-link-archer-be3500-us-black",
+      "exactVariant": "Black, US-market Archer BE3500, one-router retail package; hardware revision not specified by retailer",
+      "merchant": "Best Buy",
+      "exactUrl": "https://www.bestbuy.com/product/tp-link-archer-be3500-dual-band-wi-fi-7-router-black/J39T6X2WTY/sku/6642157",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed model and retailer SKU mapping; it does not identify a hardware revision and the destination has no query parameters.",
+      "status": "published",
+      "recordDigest": "584bb61a37a80620516c0e91c55813321b516f92579fdcb5f264d0669f65e1bb"
+    }
+  ],
   "priceClaims": [],
   "recommendationClaims": []
 }

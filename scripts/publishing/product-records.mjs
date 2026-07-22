@@ -338,7 +338,7 @@ export async function loadProductRecords(root, editorial) {
     const productRecord = requireRecord(records.products, destination.productId, `Merchant destination ${destination.id}`);
     if (destination.exactVariant !== productRecord.exactVariant) throw new Error(`Merchant destination ${destination.id}: exact variant does not match product ${productRecord.id}`);
     if (destination.status === 'published' && productRecord.status !== 'published') throw new Error(`Merchant destination ${destination.id}: publishable destination requires a publishable product`);
-    assertNoUngovernedCommerceText(`${destination.merchant} ${destination.verificationNotes}`, `Merchant destination ${destination.id}`);
+    assertNoUngovernedCommerceText(destination.verificationNotes, `Merchant destination ${destination.id}`);
   }
   for (const claim of records.priceClaims.values()) {
     const productRecord = requireRecord(records.products, claim.productId, `Price claim ${claim.id}`);

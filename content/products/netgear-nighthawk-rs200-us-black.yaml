@@ -1,0 +1,28 @@
+schemaVersion: 1.0.0
+id: netgear-nighthawk-rs200-us-black
+displayName: NETGEAR Nighthawk RS200
+brand: NETGEAR
+model: RS200
+exactVariant: Black, US-market RS200-100NAS, one-router package with US power adapter
+productType: wifi-router
+manufacturerIdentifiers:
+  gtin: null
+  upc: null
+  ean: null
+  mpn: RS200-100NAS
+  asin: null
+  retailerSkus:
+    - merchant: Best Buy
+      sku: "6598712"
+variantAttributes:
+  color: Black
+  market: US
+  package: One router
+  power-adapter: US 12V 3.5A
+description: Dual-band BE6500 Wi-Fi 7 router sold as one black US-market unit with the documented RS200-100NAS model number.
+sourceIds: [manufacturer-netgear-rs200, retailer-best-buy-6598712]
+mediaIds: []
+provenance:
+  state: researched
+  notes: Exact model, package, power adapter, color, and retailer SKU were checked against current manufacturer and retailer records on 2026-07-22; no hands-on claim is made.
+status: published

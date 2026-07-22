@@ -179,6 +179,13 @@ test('publishable affiliate destinations and affiliate parameters are rejected',
   }
 });
 
+test('structured merchant names are not misread as editorial ranking or price claims', async () => {
+  const records = await withRecords((fixture) => {
+    fixture.merchantDestinations[0].merchant = 'Best Buy';
+  });
+  assert.equal(records.merchantDestinations.get('example-kettle-unpaid-us').merchant, 'Best Buy');
+});
+
 test('undated prices and live availability fields are rejected', () => {
   const schemas = createProductSchemas();
   const claim = validRecords().priceClaims[0];

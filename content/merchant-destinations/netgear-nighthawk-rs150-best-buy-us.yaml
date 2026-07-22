@@ -1,0 +1,11 @@
+schemaVersion: 1.0.0
+id: netgear-nighthawk-rs150-best-buy-us
+productId: netgear-nighthawk-rs150-us-black
+exactVariant: Black, US-market RS150-100NAS, one-router package with US power adapter
+merchant: Best Buy
+exactUrl: https://www.bestbuy.com/product/netgear-nighthawk-be5000-dual-band-wi-fi-7-router-black/J2VY7Y57V2/sku/6634695
+market: US
+relationship: unpaid
+capturedDate: "2026-07-22"
+verificationNotes: Current merchant evidence identifies the exact governed model and retailer SKU mapping; this is an ordinary unpaid destination with no query parameters.
+status: published
