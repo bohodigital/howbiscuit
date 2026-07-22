@@ -1,0 +1,144 @@
+- schemaVersion: 1.0.0
+  metroSlug: chicago
+  displayName: Chicago
+  cbsaCodes: ["16980"]
+  geographicScope: "Chicago-Naperville-Elgin is treated as a multi-state statistical metro, not as the City of Chicago boundary and not as a promise that every ZIP resolves to only one county or retail market."
+  shoppingContext: ["Retail access varies between the urban core, suburban corridors, and communities across Illinois, Indiana, and Wisconsin; a ZIP lookup supplies coarse regional context but never proves stock.", "Electronics, grocery, and fuel coverage will remain source-specific and disabled until each lawful adapter is approved; ordinary page loads use only this static context."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: new-york
+  displayName: New York
+  cbsaCodes: ["35620"]
+  geographicScope: "New York-Newark-Jersey City spans multiple states, counties, municipalities, and retail systems; the profile is regional statistical context rather than a city-limit or delivery-area definition."
+  shoppingContext: ["Store density and fulfillment options differ sharply among the five boroughs, northern New Jersey, Long Island, and outlying counties, so results must be tied to a supported ZIP or selected store.", "No retailer, grocery, or fuel source is implied by inclusion in this metro list; each source will report its own coverage and freshness when separately approved."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: los-angeles
+  displayName: Los Angeles
+  cbsaCodes: ["31080"]
+  geographicScope: "Los Angeles-Long Beach-Anaheim is represented as a broad statistical metro; it does not equate Los Angeles city, county, ZIP delivery areas, and retailer service regions."
+  shoppingContext: ["Travel time, store access, delivery, and pickup availability can vary substantially across the basin and surrounding counties, so broad metro averages cannot substitute for a store-level check.", "Static regional guidance loads without external calls; any later local price or fuel request must be explicit, source-labeled, expiring, and separately budgeted."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: dallas-fort-worth
+  displayName: Dallas-Fort Worth
+  cbsaCodes: ["19100"]
+  geographicScope: "Dallas-Fort Worth-Arlington covers a large multi-county North Texas region; its CBSA definition is not a retailer trade area, municipality boundary, or exact ZIP assignment."
+  shoppingContext: ["Retail corridors and pickup distances vary across Dallas, Fort Worth, Arlington, and surrounding communities, so the interface must disclose the selected store and supported radius.", "Until adapters are lawfully activated, this profile provides only static geographic caveats and cannot claim current prices, inventory, or whole-market coverage."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: houston
+  displayName: Houston
+  cbsaCodes: ["26420"]
+  geographicScope: "Houston-Pasadena-The Woodlands is a multi-county statistical region; the profile does not reduce the area to Houston city limits or assume one county and metro for every ZIP."
+  shoppingContext: ["Long travel distances and uneven store distribution make exact store selection important for pickup claims, while delivery and shipping must remain distinct fulfillment states.", "Regional context is static and unpaid; current offers, fuel results, or grocery inventory will appear only after explicit requests to separately approved sources."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: atlanta
+  displayName: Atlanta
+  cbsaCodes: ["12060"]
+  geographicScope: "Atlanta-Sandy Springs-Roswell is a broad multi-county statistical metro; Atlanta city, postal ZIPs, county boundaries, and retailer coverage remain separate concepts."
+  shoppingContext: ["Retail access differs between the urban core, inner suburbs, and outer counties, so results should name the supported source, selected store when relevant, and observation time.", "This static profile makes no live availability claim and performs no paid lookup during ordinary page load; unsupported areas must remain visibly unsupported."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: phoenix
+  displayName: Phoenix
+  cbsaCodes: ["38060"]
+  geographicScope: "Phoenix-Mesa-Chandler is represented by its statistical CBSA rather than a single municipal or postal boundary, and local coverage can vary across a very large developed area."
+  shoppingContext: ["Distance, heat, and dispersed retail corridors can affect practical pickup choices, but the platform must not infer inventory or suitability from regional geography alone.", "The page remains static until the user requests a governed lookup; each future result must disclose its source, timestamp, expiration, and supported geographic scope."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: seattle
+  displayName: Seattle
+  cbsaCodes: ["42660"]
+  geographicScope: "Seattle-Tacoma-Bellevue spans multiple cities and counties around Puget Sound; it is statistical context and not an exact delivery, ferry, store, or ZIP service boundary."
+  shoppingContext: ["Water crossings, travel patterns, and distinct retail corridors can make a nearby straight-line store impractical, so pickup results must remain tied to a named supported location.", "No live source is contacted during page load, and future price or availability results must fail back to ordinary static merchant links when a source is unavailable."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: denver
+  displayName: Denver
+  cbsaCodes: ["19740"]
+  geographicScope: "Denver-Aurora-Centennial is treated as a multi-county statistical metro, not a statement that mountain communities, municipalities, ZIPs, and retailer service areas align."
+  shoppingContext: ["Elevation, weather, and travel distance may affect practical shopping choices, but those factors do not justify inferring local inventory, shipping cost, or delivery timing.", "The current profile is static and source-neutral; any later offer must be exact-product matched, time-bounded, and accompanied by honest coverage limitations."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: boston
+  displayName: Boston
+  cbsaCodes: ["14460"]
+  geographicScope: "Boston-Cambridge-Newton crosses state, county, and municipal boundaries; this statistical profile does not treat postal ZIPs as exact city or county polygons."
+  shoppingContext: ["Dense neighborhoods, suburban corridors, and cross-state communities can have different store access and fulfillment choices, requiring explicit store and source disclosure.", "Ordinary rendering is independent of the location and offer Workers; a failed or disabled service leaves static guidance intact and makes no stale-price claim."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: washington-dc
+  displayName: Washington, DC
+  cbsaCodes: ["47900"]
+  geographicScope: "Washington-Arlington-Alexandria spans the District of Columbia, Maryland, Virginia, and West Virginia; the CBSA is not a single tax, delivery, county, or retail market."
+  shoppingContext: ["Cross-jurisdiction travel and store distribution mean a metro label cannot establish pickup convenience, product availability, or final checkout cost without a supported store lookup.", "The static page triggers no paid request; later regional and local data must remain clearly separated, attributed, expiring where required, and privacy bounded."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex
+- schemaVersion: 1.0.0
+  metroSlug: miami
+  displayName: Miami
+  cbsaCodes: ["33100"]
+  geographicScope: "Miami-Fort Lauderdale-West Palm Beach covers a long, multi-county South Florida corridor; the profile is not equivalent to Miami city, a ZIP boundary, or one retailer market."
+  shoppingContext: ["Travel distance, coastal geography, and distinct county retail corridors make source and store specificity essential for any pickup or availability statement.", "This profile contains no live inventory and launches no external request on load; future fuel and offer lookups must be explicit, attributed, and disabled when budgets or terms expire."]
+  supportedRetailers: []
+  supportedCategories: []
+  censusVintage: "2025"
+  hudVintage: "pending-owner-authorized-import"
+  lastStaticUpdate: 2026-07-22
+  indexStatus: draft-noindex

@@ -12,6 +12,6 @@ Every response sets `Cache-Control: no-store`. CORS is restricted to `https://ho
 
 Internal catalog synchronization is implemented as a library operation using prepared D1 statements and as a deterministic CLI check/dry-run. Production mutation requires a separately authenticated operational runner and is not exposed by the public Worker.
 
-`npm run offers:worker-build` creates the edge-only deployment artifact at `dist/offers-worker/index.mjs`. The build targets the browser/Worker runtime and fails if a Node-only import reaches the bundle. Provisioning a Worker route, D1 database, credentials, or a live source is deliberately outside 3A and remains separately approval-gated.
+`npm run offers:worker-build` creates edge-only Offer, Location, and Events artifacts under `dist/h3-workers/`. The build targets the browser/Worker runtime and fails if a Node-only import reaches any bundle. Provisioning a Worker route, D1 database, credentials, or a live source remains separately approval-gated.
 
 Cloudflare implementation follows the current module Worker `fetch(request, env, ctx)` model and D1 prepared-statement/batch APIs. Queue consumers must treat delivery as at least once and use message IDs as idempotency keys.

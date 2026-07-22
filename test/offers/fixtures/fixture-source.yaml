@@ -2,6 +2,9 @@ schemaVersion: 1.0.0
 sourceId: fixture-store
 adapterId: fixture-store-v1
 displayName: Nonpublic fixture store
+scope:
+  merchantIds:
+    - fixture-store
 enabledByDefault: false
 publicActivationApproved: true
 legalBasis:

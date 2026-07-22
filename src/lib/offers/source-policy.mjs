@@ -21,6 +21,9 @@ export const sourcePolicySchema = z.object({
   sourceId: identifier,
   adapterId: identifier,
   displayName: z.string().trim().min(1).max(120),
+  scope: z.object({
+    merchantIds: z.array(identifier).min(1).max(20),
+  }).strict(),
   enabledByDefault: z.literal(false),
   publicActivationApproved: z.boolean(),
   legalBasis: z.object({

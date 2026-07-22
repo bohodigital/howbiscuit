@@ -1,0 +1,33 @@
+---
+interface MetroProfileView {
+  metroSlug: string;
+  displayName: string;
+  geographicScope: string;
+  shoppingContext: string[];
+  censusVintage: string;
+  hudVintage: string;
+  lastStaticUpdate: string;
+}
+const { profile } = Astro.props as { profile: MetroProfileView };
+---
+
+<article class="metro-profile" data-metro={profile.metroSlug}>
+  <header>
+    <p class="eyebrow">Regional shopping context</p>
+    <h1>{profile.displayName}</h1>
+    <p>{profile.geographicScope}</p>
+  </header>
+  <section aria-labelledby="coverage-heading">
+    <h2 id="coverage-heading">Coverage and limitations</h2>
+    {profile.shoppingContext.map((paragraph) => <p>{paragraph}</p>)}
+    <p><strong>Current live retailer coverage:</strong> None activated. Static How Biscuit guidance remains available.</p>
+  </section>
+  <section aria-labelledby="location-heading">
+    <h2 id="location-heading">ZIP lookup privacy</h2>
+    <p>A future explicit lookup accepts a five-digit ZIP, reduces it to coarse statistical geography, and retains no full address, raw IP identity, or persistent exact location.</p>
+    <p>ZIP codes are USPS delivery constructs. ZCTAs and weighted county or metro relationships are approximations and can cross boundaries.</p>
+  </section>
+  <footer>
+    <p>Static data labels: Census {profile.censusVintage}; HUD {profile.hudVintage}; updated {profile.lastStaticUpdate}.</p>
+  </footer>
+</article>

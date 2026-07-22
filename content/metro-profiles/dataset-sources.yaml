@@ -1,0 +1,13 @@
+schemaVersion: 1.0.0
+sources:
+  - sourceId: census-2025-gazetteer
+    publisher: U.S. Census Bureau
+    sourceUrl: https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2025.html
+    plannedArtifacts: [zcta, county, place, cbsa]
+    boundaryNotice: ZCTAs are statistical approximations based on 2020 Census blocks and are not exact USPS delivery boundaries.
+  - sourceId: hud-usps-crosswalk
+    publisher: HUD USER
+    sourceUrl: https://www.huduser.gov/portal/dataset/uspszip-api.html
+    plannedArtifacts: [zip-county, zip-cbsa]
+    accessStatus: owner-access-token-required
+    boundaryNotice: Residential-address ratios preserve many-to-many ZIP relationships; they do not establish an exclusive county or metro.

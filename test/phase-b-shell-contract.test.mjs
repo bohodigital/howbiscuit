@@ -147,8 +147,9 @@ test('GA4 initializes only on exact public hosts and stays inert on previews', (
   assert.doesNotMatch(pages.get('/404.html'), /data-hb-ga-bootstrap/);
 });
 
-test('built artifact contains exactly the active Phase C routes plus the custom 404', () => {
-  assert.deepEqual([...pages.keys()].sort(), [...PHASE_C_DOCUMENT_ROUTES, '/404.html'].sort());
+test('built artifact contains exactly the active Phase C routes, governed draft metros, and custom 404', () => {
+  const metroDraftRoutes = ['atlanta', 'boston', 'chicago', 'dallas-fort-worth', 'denver', 'houston', 'los-angeles', 'miami', 'new-york', 'phoenix', 'seattle', 'washington-dc'].map((slug) => `/metro/${slug}/`);
+  assert.deepEqual([...pages.keys()].sort(), [...PHASE_C_DOCUMENT_ROUTES, ...metroDraftRoutes, '/404.html'].sort());
   for (const route of RETIRED_DOCUMENT_ROUTES) assert.equal(pages.has(route), false, route);
   for (const route of PHASE_C_DOCUMENT_ROUTES) {
     const html = pages.get(route);
@@ -160,6 +161,15 @@ test('built artifact contains exactly the active Phase C routes plus the custom 
       assert.ok(level <= headingLevels[index] + 1, `${route} skips from H${headingLevels[index]} to H${level}`);
     });
     assert.match(html, new RegExp('href="https://howbiscuit\\.com' + route.replaceAll('/', '\\/') + '"'));
+  }
+  for (const route of metroDraftRoutes) {
+    const html = pages.get(route);
+    assert.match(html, /content="noindex, nofollow"/);
+    assert.match(html, /data-pagefind-ignore="all"/);
+    assert.doesNotMatch(html, /data-pagefind-body/);
+    assert.equal((html.match(/<h1\b/g) ?? []).length, 1, route);
+    assert.doesNotMatch(html, /data-hb-ga-bootstrap/);
+    assert.doesNotMatch(html, /api\/v1\/|fetch\(/);
   }
   const notFound = pages.get('/404.html');
   assert.doesNotMatch(notFound, /<link\b[^>]*rel="canonical"/i);

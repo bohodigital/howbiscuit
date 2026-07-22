@@ -1,0 +1,21 @@
+---
+import MetroPage from '../../components/location/MetroPage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { compileMetroProfiles } from '../../lib/location/metro-profiles.mjs';
+
+interface Profile {
+  metroSlug: string; displayName: string; geographicScope: string; shoppingContext: string[];
+  censusVintage: string; hudVintage: string; lastStaticUpdate: string;
+}
+export function getStaticPaths() {
+  const profiles = compileMetroProfiles(new URL('../../../content/metro-profiles/profiles.yaml', import.meta.url));
+  return profiles.map((profile) => ({ params: { slug: profile.metroSlug }, props: { profile } }));
+}
+const { profile } = Astro.props as { profile: Profile };
+const canonical = `/metro/${profile.metroSlug}/`;
+const description = `Static regional shopping context and coverage limitations for ${profile.displayName}.`;
+---
+
+<BaseLayout title={`${profile.displayName} shopping context`} {description} {canonical} robots="noindex, nofollow" searchEligible={false} analytics={false} mainClass="hb-metro-page">
+  <div class="hb-page-shell"><MetroPage {profile} /></div>
+</BaseLayout>

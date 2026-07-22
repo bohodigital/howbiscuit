@@ -14,6 +14,7 @@ import { loadTypeScriptModule } from './lib/load-typescript-module.mjs';
 import { createPublicSiteRegistry, isPublishablePublicRecord } from '../src/lib/public-content/model.mjs';
 import { pagefindMetadataForRecord } from '../src/lib/public-content/pagefind-policy.mjs';
 import { discoverTrackedPublicSources } from '../src/lib/public-content/source-adapter.mjs';
+import { compileMetroProfiles } from '../src/lib/location/metro-profiles.mjs';
 
 const root = process.cwd();
 const piSkipRequested = process.argv.includes('--pi-pagefind-skip');
@@ -25,6 +26,10 @@ const normalizedPublicRegistry = createPublicSiteRegistry({
   sources: discoverTrackedPublicSources(root, { taxonomy }),
   taxonomy,
 });
+const draftMetroRoutes = new Set(
+  compileMetroProfiles(path.join(root, 'content', 'metro-profiles', 'profiles.yaml'))
+    .map(({ metroSlug }) => `/metro/${metroSlug}/`),
+);
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -101,6 +106,7 @@ function pagefindPayloadFromFragment(filePath) {
 function verifyPageHtml(route, html) {
   const jsonLd = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
   const isNotFound = route === '/404.html';
+  const isDraftMetro = draftMetroRoutes.has(route);
   const expectedCanonicalCount = isNotFound ? 0 : 1;
   invariant((html.match(/<link\b[^>]*rel="canonical"[^>]*>/gi) ?? []).length === expectedCanonicalCount, `${route} must emit exactly ${expectedCanonicalCount} canonical links.`);
   invariant((html.match(/<meta\b[^>]*name="robots"[^>]*>/gi) ?? []).length === 1, `${route} must emit exactly one robots directive.`);
@@ -125,14 +131,15 @@ function verifyPageHtml(route, html) {
     gaLoader: countText(html, 'https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH'),
     gaConfig: countText(html, "gtag('config', 'G-NG0NQMVFEH'"),
   };
-  const expectedAnalyticsCount = isNotFound ? 0 : 1;
+  const expectedAnalyticsCount = isNotFound || isDraftMetro ? 0 : 1;
   for (const [name, count] of Object.entries(analyticsCounts)) {
     invariant(count === expectedAnalyticsCount, `${route} has ${count} ${name} occurrences; expected ${expectedAnalyticsCount}.`);
   }
 
-  if (isNotFound) {
-    invariant(html.includes('content="noindex, nofollow"'), 'The 404 artifact must be noindex, nofollow.');
-    invariant(html.includes('data-pagefind-ignore="all"'), 'The 404 artifact must be excluded from Pagefind.');
+  if (isNotFound || isDraftMetro) {
+    invariant(html.includes('content="noindex, nofollow"'), `${route} must be noindex, nofollow.`);
+    invariant(html.includes('data-pagefind-ignore="all"'), `${route} must be excluded from Pagefind.`);
+    invariant(!html.includes('data-pagefind-body'), `${route} must not expose a Pagefind body.`);
   } else {
     invariant(html.includes('content="index, follow"'), `${route} must remain index, follow.`);
   }
@@ -161,7 +168,7 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   ]));
   const acceptedRecords = normalizedPublicRegistry.filter(isPublishablePublicRecord);
   const acceptedRoutes = new Set(acceptedRecords.map(({ route }) => route));
-  const expectedHtmlRoutes = new Set([...acceptedRoutes, '/404.html']);
+  const expectedHtmlRoutes = new Set([...acceptedRoutes, ...draftMetroRoutes, '/404.html']);
   assertSetsEqual(expectedHtmlRoutes, new Set(htmlByRoute.keys()), `${label} HTML route set`);
   for (const [route, html] of htmlByRoute) verifyPageHtml(route, html);
 
