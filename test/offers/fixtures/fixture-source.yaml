@@ -1,0 +1,63 @@
+schemaVersion: 1.0.0
+sourceId: fixture-store
+adapterId: fixture-store-v1
+displayName: Nonpublic fixture store
+enabledByDefault: false
+publicActivationApproved: true
+legalBasis:
+  type: fixture
+  termsUrl: null
+  documentationUrl: null
+  termsExpiresAt: null
+  accountApprovalRequired: false
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: automated-fixture
+  reviewDueAt: 2099-01-01
+  evidenceIds:
+    - fixture-policy-evidence
+  comparisonStatus: approved
+credentials:
+  required: false
+  secretNames: []
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: true, maximumSeconds: null }
+  storeIdentifier: { allowed: true, maximumSeconds: null }
+  price: { allowed: true, maximumSeconds: 3600 }
+  availability: { allowed: true, maximumSeconds: 900 }
+  image: { allowed: false, maximumSeconds: 0 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: true
+  logoRequired: false
+  affiliateDisclosureRequired: relationship-dependent
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 900
+  hardExpirySeconds: 3600
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 100
+  applicationDailyBudget: 50
+  applicationMonthlyBudget: 500
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - exact-retailer-sku
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: check-current-price-link
+  automaticDisableAfterConsecutiveFailures: 3
+  cooldownSeconds: 60
+  maximumRetryCount: 2
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: FIXTURE_STORE_ENABLED
+  databaseDisableAllowed: true
