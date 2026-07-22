@@ -1,0 +1,89 @@
+{
+  "product": {
+    "sku": 6612969,
+    "modelNumber": "RS100-100NAS",
+    "name": "Sanitized exact router fixture",
+    "salePrice": 123.45,
+    "regularPrice": 150,
+    "onlineAvailability": true,
+    "inStoreAvailability": true,
+    "inStorePickup": true
+  },
+  "unknownAvailability": {
+    "sku": 6612969,
+    "modelNumber": "RS100-100NAS",
+    "name": "Sanitized exact router fixture",
+    "salePrice": 123.45,
+    "onlineAvailability": null
+  },
+  "nearSku": {
+    "sku": 6612968,
+    "modelNumber": "RS100-100NAS",
+    "salePrice": 123.45,
+    "onlineAvailability": true
+  },
+  "wrongModel": {
+    "sku": 6612969,
+    "modelNumber": "RS150-100NAS",
+    "salePrice": 123.45,
+    "onlineAvailability": true
+  },
+  "wrongBundle": {
+    "sku": 6612969,
+    "modelNumber": "RS100-100NAS",
+    "bundle": "Two routers",
+    "salePrice": 123.45,
+    "onlineAvailability": true
+  },
+  "wrongMarket": {
+    "sku": 6612969,
+    "modelNumber": "RS100-100NAS",
+    "market": "CA",
+    "salePrice": 123.45,
+    "onlineAvailability": true
+  },
+  "wrongCondition": {
+    "sku": 6612969,
+    "modelNumber": "RS100-100NAS",
+    "condition": "refurbished",
+    "salePrice": 123.45,
+    "onlineAvailability": true
+  },
+  "missingPrice": {
+    "sku": 6612969,
+    "modelNumber": "RS100-100NAS",
+    "onlineAvailability": true
+  },
+  "stores": {
+    "ispuEligible": true,
+    "stores": [
+      {
+        "storeID": "281",
+        "name": "Sanitized Store",
+        "address": "REMOVED BEFORE NORMALIZATION",
+        "postalCode": "00000",
+        "lowStock": false
+      },
+      {
+        "storeID": "282",
+        "name": "Sanitized Store Two",
+        "address": "REMOVED BEFORE NORMALIZATION",
+        "postalCode": "00000",
+        "lowStock": true
+      }
+    ]
+  },
+  "openBox": {
+    "results": [
+      {
+        "sku": "6612969",
+        "offers": [
+          { "condition": "excellent", "prices": { "current": 98.76, "regular": 123.45 } },
+          { "condition": "certified", "prices": { "current": 101.23, "regular": 123.45 } }
+        ]
+      }
+    ]
+  },
+  "emptyOpenBox": { "results": [] },
+  "malformedOpenBox": { "results": [{ "sku": "6612969", "offers": [{ "condition": "fair", "prices": { "current": 90 } }] }] }
+}

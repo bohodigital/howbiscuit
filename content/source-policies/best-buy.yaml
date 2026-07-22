@@ -1,0 +1,68 @@
+schemaVersion: 1.0.0
+sourceId: best-buy
+adapterId: best-buy-products-v1
+displayName: Best Buy
+scope:
+  merchantIds:
+    - best-buy
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: official-api
+  termsUrl: https://developer.bestbuy.com/legal
+  documentationUrl: https://bestbuyapis.github.io/api-documentation/
+  termsExpiresAt: 2026-08-22
+  accountApprovalRequired: true
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2026-08-22
+  evidenceIds:
+    - best-buy-terms-review-2026-07-22
+    - best-buy-api-docs-review-2026-07-22
+  comparisonStatus: requires-review
+credentials:
+  required: true
+  secretNames:
+    - BEST_BUY_API_KEY
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: true, maximumSeconds: null }
+  storeIdentifier: { allowed: true, maximumSeconds: null }
+  price: { allowed: true, maximumSeconds: 3600 }
+  availability: { allowed: true, maximumSeconds: 900 }
+  image: { allowed: provider-rules, maximumSeconds: 259200 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: true
+  logoRequired: provider-rules
+  affiliateDisclosureRequired: relationship-dependent
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 900
+  hardExpirySeconds: 3600
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 5
+  requestsPerDay: 50000
+  applicationDailyBudget: 500
+  applicationMonthlyBudget: 10000
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - exact-retailer-sku
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: check-current-price-link
+  automaticDisableAfterConsecutiveFailures: 5
+  cooldownSeconds: 900
+  maximumRetryCount: 2
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: BEST_BUY_ENABLED
+  databaseDisableAllowed: true
