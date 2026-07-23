@@ -190,8 +190,13 @@ def refresh(record: dict[str, Any], provider: str) -> int:
 
 def scan(record: dict[str, Any]) -> int:
     secrets_by_provider: dict[str, list[bytes]] = {}
+    invalid_providers: set[str] = set()
     for field_id, (provider, _binding) in FIELD_BINDINGS.items():
-        secrets_by_provider.setdefault(provider, []).append(record["fields"][field_id].encode())
+        value = record["fields"][field_id]
+        if value.strip().lower() in INVALID_SENTINELS:
+            invalid_providers.add(provider)
+            continue
+        secrets_by_provider.setdefault(provider, []).append(value.encode())
     counts = {provider: {"repository": 0, "runtime": 0, "systemd": 0} for provider in secrets_by_provider}
     for root in SCAN_ROOTS:
         if not root.exists():
@@ -213,7 +218,11 @@ def scan(record: dict[str, Any]) -> int:
         "ok": passed,
         "reference": REFERENCE,
         "providers": {
-            provider: {"fileClasses": file_counts, "pass": not any(file_counts.values())}
+            provider: {
+                "fileClasses": file_counts,
+                "pass": not any(file_counts.values()),
+                **({"credentialStatus": "invalid-placeholder"} if provider in invalid_providers else {}),
+            }
             for provider, file_counts in sorted(counts.items())
         },
     }, separators=(",", ":")))
