@@ -28,6 +28,7 @@ FIELD_BINDINGS = {
     "kroger_oauth_client_id": ("kroger", "HOWBISCUIT_KROGER_CLIENT_ID"),
     "kroger_oauth_client_secret": ("kroger", "HOWBISCUIT_KROGER_CLIENT_SECRET"),
 }
+INVALID_SENTINELS = {"null", "none", "undefined", "placeholder", "changeme"}
 SCAN_ROOTS = (
     REPO_PATH,
     Path("/srv/local1/runtime/howbiscuit"),
@@ -115,7 +116,8 @@ def doctor(record: dict[str, Any]) -> int:
     providers = {}
     for field_id, (provider, _binding) in FIELD_BINDINGS.items():
         providers.setdefault(provider, True)
-        providers[provider] = providers[provider] and bool(fields.get(field_id))
+        value = fields.get(field_id)
+        providers[provider] = providers[provider] and bool(value) and value.strip().lower() not in INVALID_SENTINELS
     print(json.dumps({
         "ok": all(providers.values()),
         "reference": REFERENCE,
@@ -128,6 +130,16 @@ def doctor(record: dict[str, Any]) -> int:
 
 
 def smoke(record: dict[str, Any], provider: str) -> int:
+    selected = set(FIELD_BINDINGS[field_id][0] for field_id in FIELD_BINDINGS) if provider == "all" else {provider}
+    for field_id, (field_provider, _binding) in FIELD_BINDINGS.items():
+        value = record["fields"][field_id]
+        if field_provider in selected and value.strip().lower() in INVALID_SENTINELS:
+            print(json.dumps({
+                "ok": False,
+                "provider": field_provider,
+                "errorCategory": "credential-invalid",
+            }, separators=(",", ":")))
+            return 1
     environment, secrets = clean_environment(record)
     args = ["node", "scripts/providers/smoke.mjs"]
     args.extend(["--all"] if provider == "all" else ["--provider", provider])

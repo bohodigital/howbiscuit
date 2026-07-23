@@ -5,10 +5,12 @@ import yaml from 'js-yaml';
 import {
   bestBuyMappingsFromCatalog,
   bestBuyProductRequest,
+  classifyBestBuyFailure,
   normalizeBestBuyProduct,
 } from '../../src/lib/offers/adapters/best-buy.mjs';
 import {
   KROGER_SELECTED_STORE_ID,
+  classifyKrogerFailure,
   krogerLocationSearchRequest,
   krogerMappingsFromCatalog,
   krogerProductRequest,
@@ -218,7 +220,11 @@ export async function smokeBestBuy({ environment = process.env, fetchImpl = fetc
       pathname: spec.pathname,
       query: { ...spec.query, apiKey },
     });
-    normalizeBestBuyProduct(payload, mapping, policy, new Date());
+    try {
+      normalizeBestBuyProduct(payload, mapping, policy, new Date());
+    } catch (error) {
+      throw new ProviderSmokeError(classifyBestBuyFailure(error));
+    }
     accepted += 1;
   }
   return result('best-buy', started, mappings.size, accepted);
@@ -273,7 +279,11 @@ export async function smokeKroger({ environment = process.env, fetchImpl = fetch
       query: spec.query,
       headers: auth,
     });
-    normalizeKrogerProduct(payload, mapping, selectedStore, policy, new Date());
+    try {
+      normalizeKrogerProduct(payload, mapping, selectedStore, policy, new Date());
+    } catch (error) {
+      throw new ProviderSmokeError(classifyKrogerFailure(error));
+    }
     accepted += 1;
   }
   return result('kroger', started, mappings.size + 2, accepted, {
