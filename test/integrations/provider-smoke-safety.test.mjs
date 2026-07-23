@@ -90,3 +90,17 @@ test('the live smoke CLI refuses ordinary execution without broker provenance', 
   assert.deepEqual(output.results, []);
   assert.equal(result.stderr, '');
 });
+
+test('the refresh CLI refuses direct execution before any provider call or write', () => {
+  const result = spawnSync(process.execPath, ['scripts/providers/refresh.mjs', '--provider', 'eia'], {
+    cwd: process.cwd(),
+    env: { HOWBISCUIT_PROVIDER_RUNTIME: '/path-that-must-not-be-created' },
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 1);
+  assert.deepEqual(JSON.parse(result.stdout), {
+    ok: false,
+    errorCategory: 'broker-execution-required',
+  });
+  assert.equal(result.stderr, '');
+});

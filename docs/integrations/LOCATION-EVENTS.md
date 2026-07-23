@@ -15,3 +15,16 @@ Each manifest records publisher, dataset, vintage, retrieval date, official URL,
 Manual offers are produced only by `reviewManualOffer`. It requires a published canonical product, an approved reviewed-manual source policy explicitly scoped to that merchant, current terms, active exact mapping, named reviewer, evidence ID, and an expiration bounded by both hard expiry and field-specific storage ceilings. It cannot turn unverified availability into stock and persists through parameterized D1 statements whose relational and normalized identities update together.
 
 No source, route, D1 database, credential, or paid lookup is activated by this packet.
+
+## 2026-07-23 HUD USER validation
+
+The Pi broker record `local1.public-data-provider-credentials.primary` maps its
+HUD field to the server-only `HOWBISCUIT_HUD_USPS_ACCESS_TOKEN` binding. Six
+bounded live requests authenticated successfully: ZIP-to-county and
+ZIP-to-CBSA responses for three representative Illinois and Indiana ZIP Codes.
+The normalizer preserves every residential-ratio row and never silently chooses
+the first geography.
+
+The source policy is default-off behind `HUD_USPS_ENABLED`. Raw API envelopes,
+authorization headers, street addresses, and raw IP addresses are not retained.
+The controlled metro pages include HUD USER's required non-endorsement notice.

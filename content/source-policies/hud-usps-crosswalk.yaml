@@ -1,38 +1,39 @@
 schemaVersion: 1.0.0
-sourceId: eia-weekly-gasoline
-adapterId: eia-weekly-gasoline-import-v1
-displayName: U.S. Energy Information Administration weekly gasoline benchmarks
+sourceId: hud-usps-crosswalk
+adapterId: hud-usps-crosswalk-import-v1
+displayName: HUD USER USPS ZIP Code Crosswalk
 scope:
   merchantIds:
-    - eia
+    - hud-usps
 enabledByDefault: false
 publicActivationApproved: true
 legalBasis:
-  type: reviewed-public-dataset
-  termsUrl: https://www.eia.gov/about/copyrights_reuse.php
-  documentationUrl: https://www.eia.gov/opendata/browser/petroleum/pri/gnd
-  termsExpiresAt: 2027-07-22
-  accountApprovalRequired: false
+  type: official-api
+  termsUrl: https://www.huduser.gov/portal/dataset/uspszip-api.html
+  documentationUrl: https://www.huduser.gov/portal/dataset/uspszip-api.html
+  termsExpiresAt: 2027-07-23
+  accountApprovalRequired: true
 review:
-  reviewedAt: 2026-07-22
-  reviewedBy: codex-provider-review
-  reviewDueAt: 2027-07-22
+  reviewedAt: 2026-07-23
+  reviewedBy: codex-provider-activation
+  reviewDueAt: 2027-07-23
   evidenceIds:
-    - eia-weekly-gasoline-table-review-2026-07-22
-    - eia-open-data-review-2026-07-22
+    - hud-usps-api-docs-review-2026-07-23
+    - hud-usps-live-contract-review-2026-07-23
+    - hud-usps-privacy-review-2026-07-23
   comparisonStatus: approved
 credentials:
   required: true
   secretNames:
-    - HOWBISCUIT_EIA_API_KEY
+    - HOWBISCUIT_HUD_USPS_ACCESS_TOKEN
   clientExposureAllowed: false
 storage:
   productIdentifier: { allowed: false, maximumSeconds: 0 }
   storeIdentifier: { allowed: false, maximumSeconds: 0 }
-  price: { allowed: true, maximumSeconds: 31536000 }
+  price: { allowed: false, maximumSeconds: 0 }
   availability: { allowed: false, maximumSeconds: 0 }
   image: { allowed: false, maximumSeconds: 0 }
-  rawResponse: { allowed: true, maximumSeconds: 31536000 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
 display:
   attributionRequired: true
   timestampRequired: true
@@ -41,14 +42,14 @@ display:
   affiliateDisclosureRequired: false
   directLinkRequired: true
 refresh:
-  normalTtlSeconds: 604800
-  hardExpirySeconds: 1209600
+  normalTtlSeconds: 2592000
+  hardExpirySeconds: 10368000
   staleWhileRevalidateAllowed: false
 limits:
-  requestsPerSecond: 1
-  requestsPerDay: 24
-  applicationDailyBudget: 2
-  applicationMonthlyBudget: 10
+  requestsPerSecond: 0.5
+  requestsPerDay: 100
+  applicationDailyBudget: 20
+  applicationMonthlyBudget: 60
   paidMonthlyCeilingUsd: 0
 matching:
   acceptedConfidence:
@@ -59,10 +60,10 @@ failure:
   fallback: no-price
   automaticDisableAfterConsecutiveFailures: 3
   cooldownSeconds: 3600
-  maximumRetryCount: 2
+  maximumRetryCount: 1
   disableOnTermsExpiry: true
   disableOnAuthenticationFailure: true
   disableOnBudgetExhaustion: true
 killSwitch:
-  environmentVariable: EIA_CONTEXT_ENABLED
+  environmentVariable: HUD_USPS_ENABLED
   databaseDisableAllowed: true

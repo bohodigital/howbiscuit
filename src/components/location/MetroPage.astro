@@ -1,4 +1,6 @@
 ---
+import eiaTrends from '../../generated/fuel/eia-regional-trends.v1.json';
+
 interface MetroProfileView {
   metroSlug: string;
   displayName: string;
@@ -9,6 +11,13 @@ interface MetroProfileView {
   lastStaticUpdate: string;
 }
 const { profile } = Astro.props as { profile: MetroProfileView };
+const eiaSeries = profile.metroSlug === 'chicago'
+  ? eiaTrends.series
+  : eiaTrends.series.filter((series) => series.seriesId === 'us');
+const eiaLatest = eiaSeries.map((series) => ({
+  area: series.area,
+  observation: series.values.at(-1)!,
+}));
 ---
 
 <article class="metro-profile" data-metro={profile.metroSlug}>
@@ -26,6 +35,23 @@ const { profile } = Astro.props as { profile: MetroProfileView };
     <h2 id="location-heading">ZIP lookup privacy</h2>
     <p>A future explicit lookup accepts a five-digit ZIP, reduces it to coarse statistical geography, and retains no full address, raw IP identity, or persistent exact location.</p>
     <p>ZIP codes are USPS delivery constructs. ZCTAs and weighted county or metro relationships are approximations and can cross boundaries.</p>
+    <p>This product uses the HUD User Data API but is not endorsed or certified by HUD User.</p>
+  </section>
+  <section aria-labelledby="fuel-heading">
+    <h2 id="fuel-heading">Regional fuel benchmark</h2>
+    <p>{eiaTrends.disclosure}</p>
+    <dl>
+      {eiaLatest.map(({ area, observation }) => (
+        <>
+          <dt>{area}</dt>
+          <dd>${observation.value.toFixed(3)} per gallon, including taxes, for the week ending {observation.period}</dd>
+        </>
+      ))}
+    </dl>
+    <p>
+      Source: <a href={eiaTrends.sourceUrl}>U.S. Energy Information Administration</a>.
+      Data as of {eiaTrends.releaseDate}; weekly regular gasoline aggregate.
+    </p>
   </section>
   <footer>
     <p>Static data labels: Census {profile.censusVintage}; HUD {profile.hudVintage}; updated {profile.lastStaticUpdate}.</p>

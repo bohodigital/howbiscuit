@@ -145,8 +145,7 @@ function eiaRows(payload, definition) {
   return { seriesId: definition.id, area: definition.area, scope: definition.scope, values: rows };
 }
 
-export async function smokeEia({ environment = process.env, fetchImpl = fetch } = {}) {
-  const started = performance.now();
+export async function collectEiaDataset({ environment = process.env, fetchImpl = fetch } = {}) {
   const apiKey = requireSecret(environment, 'HOWBISCUIT_EIA_API_KEY');
   const series = [];
   for (const definition of EIA_SERIES) {
@@ -167,7 +166,7 @@ export async function smokeEia({ environment = process.env, fetchImpl = fetch } 
   const releaseDate = latest;
   const nextRelease = new Date(`${releaseDate}T00:00:00Z`);
   nextRelease.setUTCDate(nextRelease.getUTCDate() + 8);
-  compileEiaRegionalTrends({
+  const dataset = {
     schemaVersion: '1.0.0',
     sourceId: 'eia-weekly-gasoline',
     sourceUrl: 'https://www.eia.gov/dnav/pet/pet_pri_gnd_a_epmr_pte_dpgal_w.htm',
@@ -177,15 +176,25 @@ export async function smokeEia({ environment = process.env, fetchImpl = fetch } 
     frequency: 'weekly',
     unit: 'dollars-per-gallon-including-taxes',
     series,
-  });
-  return result('eia', started, EIA_SERIES.length, series.length, { freshnessTimestamp: latest });
+  };
+  compileEiaRegionalTrends(dataset);
+  return Object.freeze({ dataset, calls: EIA_SERIES.length, accepted: series.length, freshnessTimestamp: latest });
 }
 
-export async function smokeHud({ environment = process.env, fetchImpl = fetch } = {}) {
+export async function smokeEia(options = {}) {
   const started = performance.now();
+  const collected = await collectEiaDataset(options);
+  return result('eia', started, collected.calls, collected.accepted, {
+    freshnessTimestamp: collected.freshnessTimestamp,
+  });
+}
+
+export async function collectHudPilot({ environment = process.env, fetchImpl = fetch } = {}) {
   const token = requireSecret(environment, 'HOWBISCUIT_HUD_USPS_ACCESS_TOKEN');
   let accepted = 0;
   let freshnessTimestamp = null;
+  const countyRows = [];
+  const cbsaRows = [];
   for (const zip of HUD_TEST_ZIPS) {
     for (const type of [2, 3]) {
       const payload = await fetchJson({
@@ -200,12 +209,34 @@ export async function smokeHud({ environment = process.env, fetchImpl = fetch } 
       if (!rows.length || rows.some((row) => row.zip !== zip)) {
         throw new ProviderSmokeError('mapping-error');
       }
+      (type === 2 ? countyRows : cbsaRows).push(...rows);
       accepted += rows.length;
       const envelope = Array.isArray(payload?.data) ? payload.data[0] : payload?.data;
       if (envelope?.year && envelope?.quarter) freshnessTimestamp = `${envelope.year}-${envelope.quarter}`;
     }
   }
-  return result('hud-usps', started, HUD_TEST_ZIPS.length * 2, accepted, { freshnessTimestamp });
+  return Object.freeze({
+    dataset: {
+      schemaVersion: '1.0.0',
+      sourceId: 'hud-usps-crosswalk',
+      coverage: 'fixed-validation-pilot',
+      requestedZips: [...HUD_TEST_ZIPS],
+      countyRows,
+      cbsaRows,
+      sourceEdition: freshnessTimestamp,
+    },
+    calls: HUD_TEST_ZIPS.length * 2,
+    accepted,
+    freshnessTimestamp,
+  });
+}
+
+export async function smokeHud(options = {}) {
+  const started = performance.now();
+  const collected = await collectHudPilot(options);
+  return result('hud-usps', started, collected.calls, collected.accepted, {
+    freshnessTimestamp: collected.freshnessTimestamp,
+  });
 }
 
 async function loadCatalogAndPolicy(policyName) {

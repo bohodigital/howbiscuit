@@ -27,6 +27,7 @@
     "providers:smoke": "npm run runtime:check && node scripts/providers/smoke.mjs",
     "providers:broker-doctor": "python3 scripts/providers/run-with-broker.py doctor",
     "providers:broker-smoke": "python3 scripts/providers/run-with-broker.py smoke",
+    "providers:broker-refresh": "python3 scripts/providers/run-with-broker.py refresh",
     "providers:secret-scan": "python3 scripts/providers/run-with-broker.py scan",
     "location:normalize": "npm run runtime:check && node scripts/data-import/normalize-location-sources.mjs",
     "location:import": "npm run runtime:check && node scripts/data-import/location-import.mjs",

@@ -165,6 +165,29 @@ def smoke(record: dict[str, Any], provider: str) -> int:
     return result.returncode
 
 
+def refresh(record: dict[str, Any], provider: str) -> int:
+    if provider not in {"eia", "hud-usps"}:
+        raise BrokerConsumerError("only passing data-source refreshes are enabled")
+    environment, secrets = clean_environment(record)
+    switch = "EIA_CONTEXT_ENABLED" if provider == "eia" else "HUD_USPS_ENABLED"
+    environment[switch] = "true"
+    result = subprocess.run(
+        ["node", "scripts/providers/refresh.mjs", "--provider", provider],
+        cwd=REPO_PATH,
+        env=environment,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        timeout=180,
+        check=False,
+    )
+    output = sanitize(result.stdout, secrets).strip()
+    print(output or json.dumps({"ok": False, "errorCategory": "refresh-runner-failed"}, separators=(",", ":")))
+    record.clear()
+    secrets.clear()
+    return result.returncode
+
+
 def scan(record: dict[str, Any]) -> int:
     secrets_by_provider: dict[str, list[bytes]] = {}
     for field_id, (provider, _binding) in FIELD_BINDINGS.items():
@@ -203,6 +226,8 @@ def parse_args() -> argparse.Namespace:
     subparsers.add_parser("doctor")
     smoke_parser = subparsers.add_parser("smoke")
     smoke_parser.add_argument("--provider", choices=("eia", "hud-usps", "best-buy", "kroger", "all"), required=True)
+    refresh_parser = subparsers.add_parser("refresh")
+    refresh_parser.add_argument("--provider", choices=("eia", "hud-usps"), required=True)
     subparsers.add_parser("scan")
     return parser.parse_args()
 
@@ -215,6 +240,8 @@ def main() -> int:
             return doctor(record)
         if args.mode == "scan":
             return scan(record)
+        if args.mode == "refresh":
+            return refresh(record, args.provider)
         return smoke(record, args.provider)
     except (BrokerConsumerError, OSError, subprocess.TimeoutExpired):
         print(json.dumps({"ok": False, "errorCategory": "broker-unavailable"}, separators=(",", ":")))

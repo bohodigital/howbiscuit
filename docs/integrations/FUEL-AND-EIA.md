@@ -17,3 +17,16 @@ The versioned input `data/eia/weekly-regular-gasoline-2026-07-20.json` records s
 Every output states that values are EIA aggregate benchmarks in U.S. dollars per gallon including taxes. They are not station prices, availability, or purchase quotes. The SVG includes an accessible title and description, exact plotted values, source release date, and the same non-station disclosure. The EIA source policy remains production-disabled pending owner release approval; the static artifacts make no external call.
 
 Kill switches: `GLOBAL_OFFERS_ENABLED`, `GOOGLE_FUEL_ENABLED`, the Google source database flag, and `EIA_CONTEXT_ENABLED`. On any Google failure, the public contract returns only a generic unavailable response and points to regional context; it never substitutes an EIA aggregate for a station price.
+
+## 2026-07-23 live EIA validation
+
+The Pi broker record `local1.public-data-provider-credentials.primary` maps its
+EIA field to the server-only `HOWBISCUIT_EIA_API_KEY` binding. A bounded
+three-call live check authenticated successfully and validated the exact U.S.,
+Midwest PADD 2, and Chicago weekly regular-gasoline series through 2026-07-20.
+The controlled metro fallback displays only aggregate values, units,
+observation dates, source attribution, and the explicit non-station limitation.
+
+The policy remains default-off and requires `EIA_CONTEXT_ENABLED=true` plus the
+runtime database enable gate. The existing stricter application request budget
+is retained. Google Places fuel remains disabled and is not a substitute source.
