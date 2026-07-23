@@ -1,0 +1,70 @@
+{
+  "locations": {
+    "data": [
+      {
+        "locationId": "53100516",
+        "chain": "MARIANOS",
+        "name": "Marianos Bucktown",
+        "address": { "addressLine1": "REMOVED", "zipCode": "60614" },
+        "geolocationDetails": { "latitude": 41.9, "longitude": -87.6 },
+        "departments": [{ "departmentId": "94", "name": "Pickup" }]
+      },
+      {
+        "locationId": "53100534",
+        "chain": "MARIANOS",
+        "name": "Marianos New City",
+        "address": { "addressLine1": "REMOVED", "zipCode": "60610" },
+        "departments": []
+      }
+    ]
+  },
+  "locationsWithoutSelectedStore": {
+    "data": [
+      {
+        "locationId": "53100534",
+        "chain": "MARIANOS",
+        "name": "Marianos New City",
+        "address": { "addressLine1": "REMOVED", "zipCode": "60610" },
+        "departments": [{ "departmentId": "94", "name": "Pickup" }]
+      }
+    ]
+  },
+  "cocaCola": {
+    "data": {
+      "productId": "0004900002890",
+      "upc": "0004900002890",
+      "brand": "Coca-Cola",
+      "description": "Coca-Cola Original Taste Soda Cans",
+      "items": [
+        {
+          "itemId": "0004900002890",
+          "size": "12 pk / 12 fl oz",
+          "price": { "regular": 11.99, "promo": 9.99 },
+          "inventory": { "stockLevel": "LOW" },
+          "fulfillment": { "curbside": true, "delivery": false, "shipToHome": false, "inStore": true }
+        }
+      ],
+      "aisleLocations": [
+        { "description": "Aisle", "number": "5", "bayNumber": "REMOVED", "side": "REMOVED", "numberOfFacings": 8 }
+      ]
+    }
+  },
+  "kraft": {
+    "data": {
+      "productId": "0002100065883",
+      "upc": "0002100065883",
+      "brand": "Kraft",
+      "description": "Kraft Original Mac & Cheese",
+      "items": [
+        {
+          "itemId": "0002100065883",
+          "size": "7.25 oz",
+          "price": { "regular": 1.29, "promo": null },
+          "inventory": { "stockLevel": null },
+          "fulfillment": { "curbside": true, "delivery": true, "shipToHome": false, "inStore": true }
+        }
+      ],
+      "aisleLocations": [{ "description": "Aisle", "number": "7" }]
+    }
+  }
+}

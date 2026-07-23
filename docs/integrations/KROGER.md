@@ -1,0 +1,11 @@
+# Kroger adapter
+
+Status: `production-disabled`; public activation is not approved.
+
+The adapter is bound to two exact canonical grocery variants and the governed selected-store profile `53100516` for Mariano's Bucktown. The store is selected by its exact Kroger location ID after a ZIP-scoped Locations API result; it is never inferred from distance, and a missing selected store produces no price. Normalized output retains only the store ID, banner, name, pickup support, high-level aisle label, and exact product observation. Provider addresses, coordinates, phone numbers, raw responses, promotions, ratings, reviews, and images are not retained.
+
+Kroger's verified public API workspace documents client-credential access, product lookup by product ID or UPC, store-specific price and aisle fields when `filter.locationId` is supplied, a Products API daily limit of 10,000 calls, and a Locations API limit of 1,600 calls per day per endpoint. The source policy uses the lower 1,600-call ceiling across the combined adapter, plus stricter How Biscuit budgets of 200 calls per day and 4,000 per month. Because the public documentation does not state a per-second provider ceiling, the encoded one-request-per-second value is a conservative How Biscuit safety limit, not a claim about Kroger's contract.
+
+The current general Kroger website terms and official API documentation were reviewed on 2026-07-22, but API-specific comparison, retention, and attribution authority is not yet proven. `comparisonStatus` therefore remains `requires-review`, so policy enforcement disables the source before control reservation, token exchange, location lookup, or product lookup. Registration approval, an owner-held client ID and client secret, API-specific terms confirmation, attribution evidence, and explicit owner activation remain required.
+
+Request specifications use only the fixed `https://api.kroger.com` origin and validated product, location, ZIP, radius, and limit values. A future approved transport must inject OAuth Basic authentication and bearer tokens server-side and redact authorization data from logs and errors. Kill switches are `GLOBAL_OFFERS_ENABLED`, `KROGER_ENABLED`, and the source-policy database flag. Ordinary unpaid Kroger product destinations remain available when all runtime switches are off.

@@ -1,0 +1,70 @@
+schemaVersion: 1.0.0
+sourceId: kroger
+adapterId: kroger-public-products-v1
+displayName: Kroger family stores
+scope:
+  merchantIds:
+    - kroger
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: official-api
+  termsUrl: https://www.kroger.com/i/terms/website-and-app
+  documentationUrl: https://www.postman.com/kroger/the-kroger-co-s-public-workspace/documentation/ki6utqb/kroger-public-apis
+  termsExpiresAt: 2026-08-22
+  accountApprovalRequired: true
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2026-08-22
+  evidenceIds:
+    - kroger-public-api-docs-review-2026-07-22
+    - kroger-website-terms-review-2026-07-22
+    - kroger-marianos-store-review-2026-07-22
+  comparisonStatus: requires-review
+credentials:
+  required: true
+  secretNames:
+    - KROGER_CLIENT_ID
+    - KROGER_CLIENT_SECRET
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: true, maximumSeconds: null }
+  storeIdentifier: { allowed: true, maximumSeconds: null }
+  price: { allowed: true, maximumSeconds: 900 }
+  availability: { allowed: true, maximumSeconds: 300 }
+  image: { allowed: false, maximumSeconds: 0 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: true
+  logoRequired: provider-rules
+  affiliateDisclosureRequired: relationship-dependent
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 300
+  hardExpirySeconds: 900
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 1600
+  applicationDailyBudget: 200
+  applicationMonthlyBudget: 4000
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - exact-retailer-sku
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: check-current-price-link
+  automaticDisableAfterConsecutiveFailures: 5
+  cooldownSeconds: 900
+  maximumRetryCount: 2
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: KROGER_ENABLED
+  databaseDisableAllowed: true
