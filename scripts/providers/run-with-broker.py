@@ -197,7 +197,10 @@ def scan(record: dict[str, Any]) -> int:
             invalid_providers.add(provider)
             continue
         secrets_by_provider.setdefault(provider, []).append(value.encode())
-    counts = {provider: {"repository": 0, "runtime": 0, "systemd": 0} for provider in secrets_by_provider}
+    counts = {
+        provider: {"repository": 0, "runtime": 0, "systemd": 0}
+        for provider in secrets_by_provider.keys() | invalid_providers
+    }
     for root in SCAN_ROOTS:
         if not root.exists():
             continue

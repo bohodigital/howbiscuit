@@ -127,6 +127,63 @@ Set `GLOBAL_OFFERS_ENABLED=false` to stop offer execution. Per-source switches a
 
 Production deployment ID: not created. Immutable preview URL: not created. Public production URL: unchanged and not deployed from this branch. Live release marker: not created. Previous rollback deployment: not modified or re-verified by this code packet. Explicit owner public-activation approval: absent. The code lane is implementation-complete and production-disabled; external activation is intentionally deferred rather than implied complete.
 
+## 2026-07-23 free-provider activation pass
+
+The accepted starting point for this pass is analytics-safe Handoff 3 main
+`622958c3a76437db51b1f8e5d6047009b1f21d8a`, which retains
+`10c86fade0e2b473b55aeb9cd333a75e0a2c927a` as an ancestor. The provider work
+uses the fixed encrypted broker reference
+`local1.public-data-provider-credentials.primary`. Its field-to-process mapping
+is recorded in `config/provider-secret-bindings.json`; values, value-derived
+hashes, lengths, request URLs containing keys, authorization headers, OAuth
+tokens, and raw provider payloads are deliberately absent.
+
+The opt-in harness can run only with both broker provenance and the explicit
+live-test flag. It uses fixed provider origins and routes, strict timeouts, and
+credential-free failure categories. Direct execution, missing credentials,
+HTTP errors, malformed payloads, response-body leakage, URL leakage, and
+environment-independent operation are covered by regression tests. A
+broker-local exact-value scan covers repository/build files, provider runtime
+files, and systemd definitions.
+
+| Provider | Credential/authentication | Bounded calls | Contract result | Policy result |
+| --- | --- | ---: | --- | --- |
+| EIA | broker field valid; authentication passed | 6 total: 3 smoke, 3 first refresh | three exact aggregate series accepted through 2026-07-20 | public activation approved, default-off, gated by `EIA_CONTEXT_ENABLED` and database state |
+| HUD USER USPS | broker field valid; bearer authentication passed | 12 total: 6 smoke, 6 first refresh | county and CBSA rows for three fixed pilot ZIP Codes accepted with residential weights | public activation approved, default-off, gated by `HUD_USPS_ENABLED` and database state |
+| Best Buy | stored field is an invalid placeholder; first request rejected authentication | 1 | no SKU record accepted | remains `requires-review`, unapproved, and disabled |
+| Kroger | client-credentials OAuth and selected-store lookup passed | 12 across four bounded diagnostics | first exact seeded product rejected because the live description did not satisfy the governed canonical model check | remains `requires-review`, unapproved, and disabled |
+
+The Best Buy and Kroger failures are independent external/data-contract
+blockers. They did not weaken exact matching, trigger alternate products, or
+activate either source. Best Buy requires a real replacement developer key.
+Kroger requires a separately reviewed canonical alias/evidence update or a
+provider-side description change; the current implementation will not infer
+equivalence from title similarity.
+
+The first successful EIA and HUD refreshes wrote only normalized, private,
+atomic runtime files under `/srv/local1/runtime/howbiscuit/providers`. The EIA
+file contains the three governed aggregate series. The HUD file is explicitly a
+fixed validation pilot, not a nationwide crosswalk and not a public arbitrary
+ZIP resolver. Systemd source definitions schedule EIA daily with randomized
+delay and HUD monthly with randomized delay; they invoke the broker at runtime
+and contain no secret values. They must not be installed/enabled until this
+branch is accepted on canonical main.
+
+The controlled metro fallback now shows attributed EIA aggregate context and
+the required HUD non-endorsement notice while retaining draft/noindex,
+Pagefind-excluded, analytics-disabled status. No Best Buy or Kroger price is
+published. Affiliate tracking, Amazon, eBay, Google Places fuel, Best Buy
+Commerce, Kroger Identity, Kroger Cart, Kroger Partner APIs, paid APIs, and paid
+infrastructure remain disabled.
+
+Production deployment remains blocked. The provider work order requires all
+four live authentication and exact-contract gates before preview or production;
+Best Buy and Kroger do not pass. The separate Local1 hub remediation adds a
+literal-commit, digest-pinned archive deployer with safe extraction, complete
+inventory verification, and a pre-existing immutable release marker. No
+Cloudflare credential was accessed and no preview or production deployment was
+attempted in this pass.
+
 ## Commit lineage
 
 - Handoff 2 baseline: `73b934d60f4803b2f7766c410a3651bfd0bd2a76`

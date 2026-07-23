@@ -151,7 +151,7 @@ test('EIA import produces three aggregate series and an accessible chart without
   assert.match(svg, /EIA aggregate benchmarks — not station prices/);
 });
 
-test('EIA importer rejects duplicate periods, missing aggregates, and station-like scope', () => {
+test('EIA importer rejects duplicate periods, missing aggregates, and station-like scope while runtime stays gated', () => {
   const duplicate = structuredClone(eiaFixture);
   duplicate.series[0].values[1].period = duplicate.series[0].values[0].period;
   assert.throws(() => compileEiaRegionalTrends(duplicate), /periods must increase/);
@@ -161,5 +161,8 @@ test('EIA importer rejects duplicate periods, missing aggregates, and station-li
   const station = structuredClone(eiaFixture);
   station.series[0].scope = 'station-price';
   assert.throws(() => compileEiaRegionalTrends(station));
-  assert.equal(eiaPolicy.publicActivationApproved, false);
+  assert.equal(eiaPolicy.publicActivationApproved, true);
+  assert.equal(eiaPolicy.enabledByDefault, false);
+  assert.equal(eiaPolicy.credentials.required, true);
+  assert.deepEqual(eiaPolicy.credentials.secretNames, ['HOWBISCUIT_EIA_API_KEY']);
 });
