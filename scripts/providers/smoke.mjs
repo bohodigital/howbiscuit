@@ -32,6 +32,7 @@ async function main() {
         accepted: 0,
         rejected: 0,
         errorCategory: error instanceof ProviderSmokeError ? error.category : 'validation-failed',
+        ...(error instanceof ProviderSmokeError && error.stage ? { errorStage: error.stage } : {}),
         pass: false,
       });
     }

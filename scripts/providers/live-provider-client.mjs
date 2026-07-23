@@ -32,10 +32,11 @@ const EIA_SERIES = Object.freeze([
 ]);
 
 export class ProviderSmokeError extends Error {
-  constructor(category) {
+  constructor(category, stage = null) {
     super(category);
     this.name = 'ProviderSmokeError';
     this.category = category;
+    this.stage = stage;
   }
 }
 
@@ -265,7 +266,7 @@ export async function smokeKroger({ environment = process.env, fetchImpl = fetch
   });
   const stores = normalizeKrogerLocations(locationPayload);
   const selectedStore = selectKrogerStore(stores, KROGER_SELECTED_STORE_ID, 'MARIANOS');
-  if (!selectedStore) throw new ProviderSmokeError('mapping-error');
+  if (!selectedStore) throw new ProviderSmokeError('mapping-error', 'selected-store');
 
   const { catalog, policy } = await loadCatalogAndPolicy('kroger');
   const mappings = krogerMappingsFromCatalog(catalog);
@@ -282,7 +283,7 @@ export async function smokeKroger({ environment = process.env, fetchImpl = fetch
     try {
       normalizeKrogerProduct(payload, mapping, selectedStore, policy, new Date());
     } catch (error) {
-      throw new ProviderSmokeError(classifyKrogerFailure(error));
+      throw new ProviderSmokeError(classifyKrogerFailure(error), 'exact-product');
     }
     accepted += 1;
   }
