@@ -37,19 +37,21 @@ export function parseCensusGazetteer(rawText) {
 
 function hudResults(rawText) {
   const document = JSON.parse(String(rawText));
-  const envelopes = Array.isArray(document) ? document : [document];
+  const documents = Array.isArray(document) ? document : [document];
+  const envelopes = documents.flatMap((entry) => Array.isArray(entry?.data) ? entry.data : [entry?.data ?? entry]);
   return envelopes.flatMap((envelope) => {
     const results = envelope?.data?.results ?? envelope?.results;
     if (!Array.isArray(results)) throw new Error('HUD crosswalk response is missing data.results.');
-    return results;
+    const inputZip = envelope.input ?? envelope.query ?? null;
+    return results.map((row) => ({ row, inputZip }));
   });
 }
 
 export function parseHudCrosswalk(rawText, kind) {
   if (!['county', 'cbsa'].includes(kind)) throw new Error('HUD crosswalk kind must be county or cbsa.');
   const codeKey = kind === 'county' ? 'countyFips' : 'cbsa';
-  const rows = hudResults(rawText).map((row, rowIndex) => {
-    const zip = zipCodeSchema.parse(String(row.zip ?? row.ZIP ?? '').padStart(5, '0'));
+  const rows = hudResults(rawText).map(({ row, inputZip }, rowIndex) => {
+    const zip = zipCodeSchema.parse(String(row.zip ?? row.ZIP ?? inputZip ?? '').padStart(5, '0'));
     const code = String(row.geoid ?? row.GEOID ?? row[codeKey] ?? '').padStart(5, '0');
     if (!/^\d{5}$/.test(code)) throw new Error(`HUD ${kind} row ${rowIndex + 1} has an invalid GEOID.`);
     const ratio = Number(row.res_ratio ?? row.RES_RATIO ?? row.weight);

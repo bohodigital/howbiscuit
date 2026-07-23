@@ -25,3 +25,22 @@ test('raw normalizers reject malformed coordinates, codes, and ratios', () => {
   assert.throws(() => parseHudCrosswalk(JSON.stringify({ data: { results: [{ zip: '60614', geoid: 'x', res_ratio: 1 }] } }), 'county'), /invalid GEOID/);
   assert.throws(() => parseHudCrosswalk(JSON.stringify({ data: { results: [{ zip: '60614', geoid: '17031', res_ratio: 2 }] } }), 'county'), /residential ratio/);
 });
+
+test('HUD live API envelopes inherit the requested ZIP without inventing one', () => {
+  const payload = JSON.stringify({
+    data: [{
+      year: '2026',
+      quarter: 'Q2',
+      input: '60614',
+      crosswalk_type: 'zip-cbsa',
+      results: [
+        { geoid: '16980', res_ratio: 0.91, bus_ratio: 0.8, oth_ratio: 0.7, tot_ratio: 0.89 },
+        { geoid: '99999', res_ratio: 0.09, bus_ratio: 0.2, oth_ratio: 0.3, tot_ratio: 0.11 },
+      ],
+    }],
+  });
+  assert.deepEqual(parseHudCrosswalk(payload, 'cbsa'), [
+    { zip: '60614', cbsa: '16980', res_ratio: 0.91 },
+    { zip: '60614', cbsa: '99999', res_ratio: 0.09 },
+  ]);
+});
