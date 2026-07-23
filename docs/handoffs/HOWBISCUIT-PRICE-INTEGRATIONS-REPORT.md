@@ -96,7 +96,7 @@ Twelve static draft/noindex metro profiles exist: Chicago, New York, Los Angeles
 
 ## Validation evidence
 
-The H3F pre-commit Pi gate passed 161/161 tests, six source policies, 24 D1 tables, seven-product catalog projection, EIA reproducibility, 136 Astro files with zero errors/warnings/hints, a 29-route build with 16 Pagefind-eligible routes, four edge Worker bundles, and content lint for 16 MDX pages and 33 built files. Focused H3F coverage proves automatic relationship-driven disclosures, instant global/provider disablement, unpaid fallback, exact identity binding, approved-host enforcement, future-evidence rejection, malformed-policy rejection, and missing-proof rejection.
+The exact H3F implementation commit `0ddf9d63580be4be2151b4bec53d32d56e91501b` passed 161/161 tests, six source policies, 24 D1 tables, a seven-product catalog projection with digest `6542d8b918e1fb453df4eee7fcc8be78b03373bb16af8fedf63e86dd07cbbdbe`, EIA reproducibility, 136 Astro files with zero errors/warnings/hints, a 29-route build with 16 Pagefind-eligible routes, four edge Worker bundles, and content lint for 16 MDX pages and 33 built files. Focused H3F coverage proves automatic relationship-driven disclosures, instant global/provider disablement, unpaid fallback, exact identity binding, approved-host enforcement, future-evidence rejection, malformed-policy rejection, and missing-proof rejection.
 
 Match rejection covers near SKU/model/bundle/market/condition, Kroger identifier/brand/model/pack/unit-size mismatches, unknown canonical products, probable confidence, stale catalog projections, and malformed provider data. Failure tests cover authentication, quota, budget, circuit opening, provider outage, mapping, malformed responses, replay, and D1 persistence failure. Quota and paid-budget exhaustion stop before provider execution. The public static build remains functional with the entire runtime layer absent.
 
@@ -137,4 +137,4 @@ Production deployment ID: not created. Immutable preview URL: not created. Publi
 - Handoff 3D seed: `43984b68194359d2d3ba1c0f3b60289cd0d2d6ab`
 - Handoff 3D Kroger: `e0ca5e36662d1ddb03e2e531b563ab3c99a160fa`
 - Handoff 3E fuel/EIA: `0e4305c2cf5854aa9ab4b7ebb8d08677d2b14dfe`
-- Handoff 3F affiliate governance: exact implementation commit is recorded in the final Pi branch ref and Bohopi event after commit creation.
+- Handoff 3F affiliate governance: `0ddf9d63580be4be2151b4bec53d32d56e91501b` (parent `0e4305c2cf5854aa9ab4b7ebb8d08677d2b14dfe`, tree `0a0c7f8422fe7abafba30ac4df89797b25a0d433`)
