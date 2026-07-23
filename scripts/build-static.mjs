@@ -126,10 +126,11 @@ function verifyPageHtml(route, html) {
   }
 
   const analyticsCounts = {
+    bootstrapLoader: countText(html, '/analytics-bootstrap.js'),
     umamiLoader: countText(html, 'https://analytics.bohodigitalservices.com/script.js'),
     umamiSite: countText(html, 'fefef93c-b1d6-4d04-95d3-064af3d38a41'),
-    gaLoader: countText(html, 'https://www.googletagmanager.com/gtag/js?id=G-NG0NQMVFEH'),
-    gaConfig: countText(html, "gtag('config', 'G-NG0NQMVFEH'"),
+    gaConfig: countText(html, 'data-ga-id="G-NG0NQMVFEH"'),
+    gaHosts: countText(html, 'data-ga-public-hosts="howbiscuit.com,www.howbiscuit.com"'),
   };
   const expectedAnalyticsCount = isNotFound || isDraftMetro ? 0 : 1;
   for (const [name, count] of Object.entries(analyticsCounts)) {
