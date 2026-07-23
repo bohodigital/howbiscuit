@@ -13,7 +13,11 @@ from typing import Any
 
 
 REFERENCE = "local1.public-data-provider-credentials.primary"
-REPO_PATH = Path("/srv/local1/repos/sites/howbiscuit-site")
+REPO_PATH = Path(__file__).resolve().parents[2]
+ALLOWED_REPO_ROOTS = (
+    Path("/srv/local1/repos/sites/howbiscuit-site"),
+    Path("/srv/local1/worktrees"),
+)
 VAULT_PATH = Path("/srv/local1/secrets/broker/local1-agent-secrets.kdbx")
 KEY_FILE_PATH = Path("/srv/local1/secrets/broker/local1-agent-secrets.keyfile")
 KEEPASSXC_CLI = "/usr/bin/keepassxc-cli"
@@ -41,6 +45,10 @@ class BrokerConsumerError(RuntimeError):
 
 
 def read_record() -> dict[str, Any]:
+    if not any(REPO_PATH == root or REPO_PATH.is_relative_to(root) for root in ALLOWED_REPO_ROOTS):
+        raise BrokerConsumerError("provider wrapper is outside an approved Pi checkout")
+    if not (REPO_PATH / ".git").exists():
+        raise BrokerConsumerError("provider wrapper is not inside a Git checkout")
     result = subprocess.run(
         [
             KEEPASSXC_CLI,
