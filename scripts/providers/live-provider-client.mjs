@@ -32,12 +32,21 @@ const EIA_SERIES = Object.freeze([
 ]);
 
 export class ProviderSmokeError extends Error {
-  constructor(category, stage = null) {
+  constructor(category, stage = null, detail = null) {
     super(category);
     this.name = 'ProviderSmokeError';
     this.category = category;
     this.stage = stage;
+    this.detail = detail;
   }
+}
+
+function krogerMappingDetail(error) {
+  const message = String(error?.message || '');
+  for (const detail of ['brand', 'model', 'identifier', 'package-size', 'unit-size', 'pack-count']) {
+    if (message.toLowerCase().includes(detail)) return detail;
+  }
+  return null;
 }
 
 function requireSecret(environment, name) {
@@ -283,7 +292,7 @@ export async function smokeKroger({ environment = process.env, fetchImpl = fetch
     try {
       normalizeKrogerProduct(payload, mapping, selectedStore, policy, new Date());
     } catch (error) {
-      throw new ProviderSmokeError(classifyKrogerFailure(error), 'exact-product');
+      throw new ProviderSmokeError(classifyKrogerFailure(error), 'exact-product', krogerMappingDetail(error));
     }
     accepted += 1;
   }
