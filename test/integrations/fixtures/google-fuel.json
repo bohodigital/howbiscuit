@@ -1,0 +1,27 @@
+{
+  "id": "ChIJFuelStation123",
+  "displayName": { "text": "Fixture Fuel Station" },
+  "googleMapsUri": "https://www.google.com/maps/place/?q=place_id:ChIJFuelStation123",
+  "fuelOptions": {
+    "fuelPrices": [
+      {
+        "type": "REGULAR_UNLEADED",
+        "price": { "currencyCode": "USD", "units": "3", "nanos": 899000000 },
+        "updateTime": "2026-07-22T18:45:00Z"
+      },
+      {
+        "type": "DIESEL",
+        "price": { "currencyCode": "USD", "units": "4", "nanos": 199000000 },
+        "updateTime": "2026-07-22T18:40:00Z"
+      }
+    ]
+  },
+  "attributions": [
+    {
+      "provider": "Fixture data provider",
+      "providerUri": "https://www.google.com/maps/place/?q=place_id:ChIJFuelStation123"
+    }
+  ],
+  "formattedAddress": "REMOVED",
+  "location": { "latitude": 41.9, "longitude": -87.6 }
+}

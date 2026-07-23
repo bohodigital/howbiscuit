@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetType": "regional-fuel-benchmark",
+  "sourceId": "eia-weekly-gasoline",
+  "sourceUrl": "https://www.eia.gov/dnav/pet/pet_pri_gnd_a_epmr_pte_dpgal_w.htm",
+  "releaseDate": "2026-07-21",
+  "nextReleaseDate": "2026-07-28",
+  "title": "EIA weekly regular gasoline benchmarks",
+  "product": "Regular gasoline",
+  "frequency": "weekly",
+  "unit": "dollars-per-gallon-including-taxes",
+  "unitLabel": "U.S. dollars per gallon, including all taxes",
+  "disclosure": "These are EIA aggregate benchmarks. They are not station prices, local availability, or a quote for any purchase.",
+  "chart": {
+    "type": "line",
+    "minimumValue": 3.5,
+    "maximumValue": 4.3,
+    "xAxisLabel": "Week",
+    "yAxisLabel": "Dollars per gallon, including taxes",
+    "accessibleSummary": "Six weekly observations compare the U.S., Midwest PADD 2, and Chicago aggregate regular gasoline benchmarks."
+  },
+  "series": [
+    {
+      "seriesId": "chicago",
+      "area": "Chicago",
+      "scope": "city-average",
+      "values": [
+        {
+          "period": "2026-06-15",
+          "value": 4.258,
+          "status": "reported"
+        },
+        {
+          "period": "2026-06-22",
+          "value": 4.079,
+          "status": "reported"
+        },
+        {
+          "period": "2026-06-29",
+          "value": 4.016,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-06",
+          "value": 3.893,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-13",
+          "value": 3.982,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-20",
+          "value": 4.032,
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "seriesId": "midwest-padd-2",
+      "area": "Midwest (PADD 2)",
+      "scope": "regional-average",
+      "values": [
+        {
+          "period": "2026-06-15",
+          "value": 3.861,
+          "status": "reported"
+        },
+        {
+          "period": "2026-06-22",
+          "value": 3.723,
+          "status": "reported"
+        },
+        {
+          "period": "2026-06-29",
+          "value": 3.625,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-06",
+          "value": 3.531,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-13",
+          "value": 3.662,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-20",
+          "value": 3.78,
+          "status": "reported"
+        }
+      ]
+    },
+    {
+      "seriesId": "us",
+      "area": "U.S.",
+      "scope": "national-average",
+      "values": [
+        {
+          "period": "2026-06-15",
+          "value": 4.052,
+          "status": "reported"
+        },
+        {
+          "period": "2026-06-22",
+          "value": 3.914,
+          "status": "reported"
+        },
+        {
+          "period": "2026-06-29",
+          "value": 3.831,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-06",
+          "value": 3.777,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-13",
+          "value": 3.855,
+          "status": "reported"
+        },
+        {
+          "period": "2026-07-20",
+          "value": 4.001,
+          "status": "reported"
+        }
+      ]
+    }
+  ]
+}

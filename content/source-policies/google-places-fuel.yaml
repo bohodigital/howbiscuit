@@ -1,0 +1,70 @@
+schemaVersion: 1.0.0
+sourceId: google-places-fuel
+adapterId: google-places-fuel-v1
+displayName: Google Maps fuel prices
+scope:
+  merchantIds:
+    - google-maps
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: official-api
+  termsUrl: https://developers.google.com/maps/documentation/places/web-service/policies
+  documentationUrl: https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places
+  termsExpiresAt: 2026-08-22
+  accountApprovalRequired: true
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2026-08-22
+  evidenceIds:
+    - google-places-fuel-fields-review-2026-07-22
+    - google-places-storage-policy-review-2026-07-22
+    - google-places-attribution-review-2026-07-22
+    - google-places-billing-review-2026-07-22
+  comparisonStatus: approved
+credentials:
+  required: true
+  secretNames:
+    - GOOGLE_PLACES_API_KEY
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: false, maximumSeconds: 0 }
+  storeIdentifier: { allowed: true, maximumSeconds: null }
+  price: { allowed: ephemeral-only, maximumSeconds: 0 }
+  availability: { allowed: false, maximumSeconds: 0 }
+  image: { allowed: false, maximumSeconds: 0 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: true
+  logoRequired: provider-rules
+  affiliateDisclosureRequired: false
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 60
+  hardExpirySeconds: 300
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 25
+  applicationDailyBudget: 10
+  applicationMonthlyBudget: 100
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - verified-model-variant
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: regional-context-only
+  automaticDisableAfterConsecutiveFailures: 3
+  cooldownSeconds: 1800
+  maximumRetryCount: 1
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: GOOGLE_FUEL_ENABLED
+  databaseDisableAllowed: true

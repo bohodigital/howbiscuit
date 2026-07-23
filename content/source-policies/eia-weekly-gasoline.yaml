@@ -1,0 +1,67 @@
+schemaVersion: 1.0.0
+sourceId: eia-weekly-gasoline
+adapterId: eia-weekly-gasoline-import-v1
+displayName: U.S. Energy Information Administration weekly gasoline benchmarks
+scope:
+  merchantIds:
+    - eia
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: reviewed-public-dataset
+  termsUrl: https://www.eia.gov/about/copyrights_reuse.php
+  documentationUrl: https://www.eia.gov/opendata/browser/petroleum/pri/gnd
+  termsExpiresAt: 2027-07-22
+  accountApprovalRequired: false
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2027-07-22
+  evidenceIds:
+    - eia-weekly-gasoline-table-review-2026-07-22
+    - eia-open-data-review-2026-07-22
+  comparisonStatus: approved
+credentials:
+  required: false
+  secretNames: []
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: false, maximumSeconds: 0 }
+  storeIdentifier: { allowed: false, maximumSeconds: 0 }
+  price: { allowed: true, maximumSeconds: 31536000 }
+  availability: { allowed: false, maximumSeconds: 0 }
+  image: { allowed: false, maximumSeconds: 0 }
+  rawResponse: { allowed: true, maximumSeconds: 31536000 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: false
+  logoRequired: false
+  affiliateDisclosureRequired: false
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 604800
+  hardExpirySeconds: 1209600
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 24
+  applicationDailyBudget: 2
+  applicationMonthlyBudget: 10
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - verified-model-variant
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: no-price
+  automaticDisableAfterConsecutiveFailures: 3
+  cooldownSeconds: 3600
+  maximumRetryCount: 2
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: EIA_CONTEXT_ENABLED
+  databaseDisableAllowed: true

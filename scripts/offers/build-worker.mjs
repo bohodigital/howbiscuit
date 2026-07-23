@@ -11,6 +11,7 @@ const result = await build({
     offers: 'workers/offers/src/index.mjs',
     location: 'workers/location/src/index.mjs',
     events: 'workers/events/src/index.mjs',
+    gas: 'workers/gas/src/index.mjs',
   },
   outdir: outputDirectory,
   bundle: true,
@@ -22,7 +23,7 @@ const result = await build({
   metafile: true,
 });
 
-for (const worker of ['offers', 'location', 'events']) {
+for (const worker of ['offers', 'location', 'events', 'gas']) {
   const output = path.join(outputDirectory, `${worker}.js`);
   const bundle = await readFile(output, 'utf8');
   if (/\bnode:/.test(bundle)) throw new Error(`${worker} Worker bundle contains a Node-only import.`);
