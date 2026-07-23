@@ -16,7 +16,11 @@ function compact(value) {
 }
 
 function folded(value) {
-  return compact(value).toLocaleLowerCase('en-US').replaceAll('®', '').replaceAll('&', 'and');
+  return compact(value)
+    .toLocaleLowerCase('en-US')
+    .replaceAll('®', '')
+    .replaceAll('&', 'and')
+    .replace(/['’]/g, '');
 }
 
 function safeText(value, label, maximum = 120) {

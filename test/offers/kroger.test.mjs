@@ -89,6 +89,20 @@ test('store lookup discards address and coordinates and requires exact selected-
   assert.match(disclosure.disclosure, /limited to selected store/);
 });
 
+test('selected store banner comparison tolerates official apostrophe typography only', () => {
+  const stores = [{
+    storeId: KROGER_SELECTED_STORE_ID,
+    name: "Mariano's Bucktown",
+    chain: "MARIANO'S",
+    pickupSupported: true,
+  }];
+  assert.equal(selectKrogerStore(stores, KROGER_SELECTED_STORE_ID, 'MARIANOS')?.storeId, KROGER_SELECTED_STORE_ID);
+  assert.throws(
+    () => selectKrogerStore(stores, KROGER_SELECTED_STORE_ID, 'KROGER'),
+    /banner does not match/,
+  );
+});
+
 test('store-specific price, fulfillment, availability, and aisle output retain exact identity', () => {
   const offer = normalizeKrogerProduct(fixtures.cocaCola, cocaCola, selectedStore, policy, now);
   assert.equal(offer.storeId, KROGER_SELECTED_STORE_ID);
