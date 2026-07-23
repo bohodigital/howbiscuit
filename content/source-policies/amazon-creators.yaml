@@ -1,0 +1,71 @@
+schemaVersion: 1.0.0
+sourceId: amazon-creators
+adapterId: amazon-creators-deferred-v1
+displayName: Amazon Creators API
+scope:
+  merchantIds:
+    - amazon
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: official-api
+  termsUrl: https://affiliate-program.amazon.com/help/operating/agreement/
+  documentationUrl: https://affiliate-program.amazon.com/creatorsapi/docs/
+  termsExpiresAt: 2026-08-22
+  accountApprovalRequired: true
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2026-08-22
+  evidenceIds:
+    - amazon-associates-operating-agreement-review-2026-07-22
+    - amazon-creators-api-eligibility-review-2026-07-22
+    - amazon-affiliate-disclosure-review-2026-07-22
+  comparisonStatus: requires-review
+credentials:
+  required: true
+  secretNames:
+    - AMAZON_CREATORS_CLIENT_ID
+    - AMAZON_CREATORS_CLIENT_SECRET
+    - AMAZON_ASSOCIATES_PARTNER_TAG
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: provider-rules, maximumSeconds: null }
+  storeIdentifier: { allowed: false, maximumSeconds: 0 }
+  price: { allowed: provider-rules, maximumSeconds: 300 }
+  availability: { allowed: provider-rules, maximumSeconds: 300 }
+  image: { allowed: provider-rules, maximumSeconds: 300 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: true
+  logoRequired: provider-rules
+  affiliateDisclosureRequired: true
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 300
+  hardExpirySeconds: 300
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 100
+  applicationDailyBudget: 25
+  applicationMonthlyBudget: 500
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - exact-asin-child
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: check-current-price-link
+  automaticDisableAfterConsecutiveFailures: 3
+  cooldownSeconds: 900
+  maximumRetryCount: 1
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: AMAZON_ENABLED
+  databaseDisableAllowed: true

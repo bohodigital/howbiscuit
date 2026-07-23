@@ -1,0 +1,72 @@
+schemaVersion: 1.0.0
+sourceId: ebay-browse
+adapterId: ebay-browse-deferred-v1
+displayName: eBay Browse API
+scope:
+  merchantIds:
+    - ebay
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: official-api
+  termsUrl: https://partnernetwork.ebay.com/page/network-agreement
+  documentationUrl: https://developer.ebay.com/api-docs/buy/buy-requirements.html
+  termsExpiresAt: 2026-08-22
+  accountApprovalRequired: true
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2026-08-22
+  evidenceIds:
+    - ebay-network-agreement-review-2026-07-22
+    - ebay-buy-api-production-requirements-review-2026-07-22
+    - ebay-affiliate-disclosure-review-2026-07-22
+  comparisonStatus: requires-review
+credentials:
+  required: true
+  secretNames:
+    - EBAY_CLIENT_ID
+    - EBAY_CLIENT_SECRET
+    - EBAY_EPN_CAMPAIGN_ID
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: provider-rules, maximumSeconds: 900 }
+  storeIdentifier: { allowed: false, maximumSeconds: 0 }
+  price: { allowed: provider-rules, maximumSeconds: 300 }
+  availability: { allowed: provider-rules, maximumSeconds: 300 }
+  image: { allowed: provider-rules, maximumSeconds: 300 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: true
+  logoRequired: provider-rules
+  affiliateDisclosureRequired: true
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 300
+  hardExpirySeconds: 900
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 100
+  applicationDailyBudget: 25
+  applicationMonthlyBudget: 500
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - exact-gtin
+    - verified-model-variant
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: check-current-price-link
+  automaticDisableAfterConsecutiveFailures: 3
+  cooldownSeconds: 900
+  maximumRetryCount: 1
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: EBAY_ENABLED
+  databaseDisableAllowed: true
