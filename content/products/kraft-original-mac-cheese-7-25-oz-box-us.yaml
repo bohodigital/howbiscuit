@@ -1,0 +1,28 @@
+schemaVersion: 1.0.0
+id: kraft-original-mac-cheese-7-25-oz-box-us
+displayName: Kraft Original Mac & Cheese
+brand: Kraft
+model: Original Mac & Cheese
+exactVariant: US-market single 7.25-ounce box, original flavor
+productType: macaroni-and-cheese
+manufacturerIdentifiers:
+  gtin: null
+  upc: null
+  ean: null
+  mpn: null
+  asin: null
+  retailerSkus:
+    - merchant: Kroger
+      sku: "0002100065883"
+variantAttributes:
+  flavor: Original
+  market: US
+  package: One box
+  net-weight: 7.25 ounces
+description: Kraft Original Mac & Cheese sold as one US-market 7.25-ounce box rather than a cup, multipack, or different package size.
+sourceIds: [retailer-kroger-0002100065883]
+mediaIds: []
+provenance:
+  state: researched
+  notes: Exact brand, flavor, package form, net weight, and Kroger product identifier were checked against the current retailer record on 2026-07-22; no hands-on or recommendation claim is made.
+status: published

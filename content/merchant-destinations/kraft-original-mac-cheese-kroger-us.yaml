@@ -1,0 +1,11 @@
+schemaVersion: 1.0.0
+id: kraft-original-mac-cheese-kroger-us
+productId: kraft-original-mac-cheese-7-25-oz-box-us
+exactVariant: US-market single 7.25-ounce box, original flavor
+merchant: Kroger
+exactUrl: https://www.kroger.com/p/kraft-original-mac-cheese-macaroni-and-cheese-dinner-box/0002100065883
+market: US
+relationship: unpaid
+capturedDate: "2026-07-22"
+verificationNotes: Current merchant evidence identifies the exact governed flavor, package form, net weight, and Kroger product identifier; this is an ordinary unpaid destination without query parameters.
+status: published

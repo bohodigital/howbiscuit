@@ -44,6 +44,86 @@
     },
     {
       "schemaVersion": "1.0.0",
+      "id": "coca-cola-original-12-pack-12-fl-oz-cans-us",
+      "displayName": "Coca-Cola Original Taste Soda Cans",
+      "brand": "Coca-Cola",
+      "model": "Original Taste",
+      "exactVariant": "US-market 12-pack of 12-fluid-ounce cans, original cola flavor",
+      "productType": "soda",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": null,
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Kroger",
+            "sku": "0004900002890"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "flavor": "Original cola",
+        "market": "US",
+        "package": "12 cans",
+        "unit-size": "12 fluid ounces"
+      },
+      "description": "Original Coca-Cola sold as one US-market package containing twelve individual 12-fluid-ounce cans.",
+      "sourceIds": [
+        "retailer-kroger-0004900002890"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Exact brand, flavor, package count, unit size, and Kroger product identifier were checked against the current retailer record on 2026-07-22; no hands-on or recommendation claim is made."
+      },
+      "status": "published",
+      "recordDigest": "e76c187f71cffc407585b075da40245d51041a563bc70526d8fec17e20357aa4",
+      "provenanceLabel": "Researched by How Biscuit"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "kraft-original-mac-cheese-7-25-oz-box-us",
+      "displayName": "Kraft Original Mac & Cheese",
+      "brand": "Kraft",
+      "model": "Original Mac & Cheese",
+      "exactVariant": "US-market single 7.25-ounce box, original flavor",
+      "productType": "macaroni-and-cheese",
+      "manufacturerIdentifiers": {
+        "gtin": null,
+        "upc": null,
+        "ean": null,
+        "mpn": null,
+        "asin": null,
+        "retailerSkus": [
+          {
+            "merchant": "Kroger",
+            "sku": "0002100065883"
+          }
+        ]
+      },
+      "variantAttributes": {
+        "flavor": "Original",
+        "market": "US",
+        "package": "One box",
+        "net-weight": "7.25 ounces"
+      },
+      "description": "Kraft Original Mac & Cheese sold as one US-market 7.25-ounce box rather than a cup, multipack, or different package size.",
+      "sourceIds": [
+        "retailer-kroger-0002100065883"
+      ],
+      "mediaIds": [],
+      "provenance": {
+        "state": "researched",
+        "notes": "Exact brand, flavor, package form, net weight, and Kroger product identifier were checked against the current retailer record on 2026-07-22; no hands-on or recommendation claim is made."
+      },
+      "status": "published",
+      "recordDigest": "addbb1be352b241642bcc6f7cc1bbad81d5a12c3e73aba8ba8be55a62a0439ac",
+      "provenanceLabel": "Researched by How Biscuit"
+    },
+    {
+      "schemaVersion": "1.0.0",
       "id": "netgear-nighthawk-rs100-us-black",
       "displayName": "NETGEAR Nighthawk RS100",
       "brand": "NETGEAR",
@@ -222,6 +302,34 @@
       "verificationNotes": "Current merchant evidence identifies the exact governed model and retailer SKU mapping; this is an ordinary unpaid destination with no query parameters.",
       "status": "published",
       "recordDigest": "2fc81a741898fc367c9f2329fd7efc13823957b419587be580f0cdd12e44e9bc"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "coca-cola-original-12-pack-kroger-us",
+      "productId": "coca-cola-original-12-pack-12-fl-oz-cans-us",
+      "exactVariant": "US-market 12-pack of 12-fluid-ounce cans, original cola flavor",
+      "merchant": "Kroger",
+      "exactUrl": "https://www.kroger.com/p/coca-cola-soda-cans-limits-may-apply/0004900002890",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed flavor, package count, unit size, and Kroger product identifier; this is an ordinary unpaid destination without query parameters.",
+      "status": "published",
+      "recordDigest": "edff37e8ae26bf33af5024cf5865aab22ea913443087deb96763b37d8a2d965d"
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "kraft-original-mac-cheese-kroger-us",
+      "productId": "kraft-original-mac-cheese-7-25-oz-box-us",
+      "exactVariant": "US-market single 7.25-ounce box, original flavor",
+      "merchant": "Kroger",
+      "exactUrl": "https://www.kroger.com/p/kraft-original-mac-cheese-macaroni-and-cheese-dinner-box/0002100065883",
+      "market": "US",
+      "relationship": "unpaid",
+      "capturedDate": "2026-07-22",
+      "verificationNotes": "Current merchant evidence identifies the exact governed flavor, package form, net weight, and Kroger product identifier; this is an ordinary unpaid destination without query parameters.",
+      "status": "published",
+      "recordDigest": "69729745a9dee213ef59ad495f952f48a79040fc80940e13b434923dbeebf2e3"
     },
     {
       "schemaVersion": "1.0.0",

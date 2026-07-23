@@ -1,0 +1,28 @@
+schemaVersion: 1.0.0
+id: coca-cola-original-12-pack-12-fl-oz-cans-us
+displayName: Coca-Cola Original Taste Soda Cans
+brand: Coca-Cola
+model: Original Taste
+exactVariant: US-market 12-pack of 12-fluid-ounce cans, original cola flavor
+productType: soda
+manufacturerIdentifiers:
+  gtin: null
+  upc: null
+  ean: null
+  mpn: null
+  asin: null
+  retailerSkus:
+    - merchant: Kroger
+      sku: "0004900002890"
+variantAttributes:
+  flavor: Original cola
+  market: US
+  package: 12 cans
+  unit-size: 12 fluid ounces
+description: Original Coca-Cola sold as one US-market package containing twelve individual 12-fluid-ounce cans.
+sourceIds: [retailer-kroger-0004900002890]
+mediaIds: []
+provenance:
+  state: researched
+  notes: Exact brand, flavor, package count, unit size, and Kroger product identifier were checked against the current retailer record on 2026-07-22; no hands-on or recommendation claim is made.
+status: published

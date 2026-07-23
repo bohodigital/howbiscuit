@@ -1,0 +1,11 @@
+schemaVersion: 1.0.0
+id: coca-cola-original-12-pack-kroger-us
+productId: coca-cola-original-12-pack-12-fl-oz-cans-us
+exactVariant: US-market 12-pack of 12-fluid-ounce cans, original cola flavor
+merchant: Kroger
+exactUrl: https://www.kroger.com/p/coca-cola-soda-cans-limits-may-apply/0004900002890
+market: US
+relationship: unpaid
+capturedDate: "2026-07-22"
+verificationNotes: Current merchant evidence identifies the exact governed flavor, package count, unit size, and Kroger product identifier; this is an ordinary unpaid destination without query parameters.
+status: published
