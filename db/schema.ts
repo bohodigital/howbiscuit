@@ -41,6 +41,7 @@ export interface AffiliateSpecialLink {
 
 export const H3_D1_BINDING = 'DB' as const;
 export const H3_SCHEMA_VERSION = '1.0.0' as const;
+export const H3_CONTENT_DATA_SCHEMA_VERSION = '1.0.0' as const;
 
 // Runtime tables are created by the ordered migrations under drizzle/. This
 // file is deliberately dependency-free so the static Astro build does not

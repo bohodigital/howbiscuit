@@ -21,6 +21,14 @@ export const sourcePolicySchema = z.object({
   sourceId: identifier,
   adapterId: identifier,
   displayName: z.string().trim().min(1).max(120),
+  lifecycle: z.enum(['active', 'excluded', 'deferred']).default('active'),
+  internalResearchApproved: z.boolean().default(false),
+  releaseMembership: z.boolean().default(false),
+  datasets: z.array(identifier).max(50).default([]),
+  claimPolicy: z.object({
+    permitted: z.array(z.string().trim().min(1).max(240)).max(30),
+    forbidden: z.array(z.string().trim().min(1).max(240)).max(30),
+  }).strict().default({ permitted: [], forbidden: [] }),
   scope: z.object({
     merchantIds: z.array(identifier).min(1).max(20),
   }).strict(),
@@ -96,10 +104,18 @@ export const sourcePolicySchema = z.object({
   if (policy.refresh.hardExpirySeconds < policy.refresh.normalTtlSeconds) context.addIssue({ code: 'custom', path: ['refresh', 'hardExpirySeconds'], message: 'Hard expiry cannot be shorter than normal TTL.' });
   if (policy.credentials.required !== (policy.credentials.secretNames.length > 0)) context.addIssue({ code: 'custom', path: ['credentials', 'secretNames'], message: 'Required credentials must declare secret names and credential-free policies must not.' });
   if (policy.legalBasis.type !== 'fixture' && (!policy.legalBasis.termsUrl || !policy.legalBasis.documentationUrl || !policy.legalBasis.termsExpiresAt)) context.addIssue({ code: 'custom', path: ['legalBasis'], message: 'Non-fixture sources require current terms, documentation, and an explicit review expiry.' });
+  if (policy.lifecycle === 'excluded' && (policy.internalResearchApproved || policy.publicActivationApproved || policy.releaseMembership)) {
+    context.addIssue({ code: 'custom', path: ['lifecycle'], message: 'Excluded sources cannot be enabled for research, public activation, or release membership.' });
+  }
+  if (policy.releaseMembership && !policy.internalResearchApproved) {
+    context.addIssue({ code: 'custom', path: ['releaseMembership'], message: 'Release members require internal research approval.' });
+  }
 });
 
 export function evaluateSourcePolicy(policyInput, runtime = {}, now = new Date()) {
   const policy = sourcePolicySchema.parse(policyInput);
+  if (policy.lifecycle === 'excluded') return 'retired';
+  if (policy.lifecycle !== 'active') return 'policy-disabled';
   if (runtime.retired) return 'retired';
   if (policy.review.comparisonStatus !== 'approved') return 'policy-disabled';
   if (policy.legalBasis.termsExpiresAt && policy.legalBasis.termsExpiresAt < now.toISOString().slice(0, 10)) return 'terms-review-required';

@@ -1,4 +1,6 @@
-# Best Buy adapter
+# Best Buy adapter — excluded
+
+Handoff 3 owner direction excludes Best Buy from the content-data release. It has no credential, smoke-test, refresh, catalog-growth, coverage, acceptance, or deployment dependency. The material below is retained only as historical design context; it does not describe an active source.
 
 Status: `production-disabled`; public activation is not approved.
 

@@ -2,6 +2,17 @@ schemaVersion: 1.0.0
 sourceId: hud-usps-crosswalk
 adapterId: hud-usps-crosswalk-import-v1
 displayName: HUD USER USPS ZIP Code Crosswalk
+lifecycle: active
+internalResearchApproved: true
+releaseMembership: true
+datasets:
+  - zip-county
+  - zip-cbsa
+claimPolicy:
+  permitted:
+    - ZIP-to-county and ZIP-to-CBSA residential-address relationships with source date
+  forbidden:
+    - Exact household location or precise user-location claims
 scope:
   merchantIds:
     - hud-usps

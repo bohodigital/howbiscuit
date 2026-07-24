@@ -52,6 +52,7 @@
         "penn-state-storing-staple-ingredients",
         "usu-ingredient-substitutions"
       ],
+      "researchPacketIds": [],
       "sourceNotes": {
         "state": "structured",
         "items": [
@@ -230,7 +231,7 @@
       "citations": [],
       "media": [],
       "bodyDigest": "b44890fcd97798b9c42006ce09fe45559d71a8815bb5e4f3064f88b951d1e140",
-      "packageDigest": "9ccafe081cff0f1492cadd79928cb781bc299b1cf0d211995df63ab50d08341d",
+      "packageDigest": "8081423db658a9429d6da9fb0bfab2b2cf463166f1ded2f97a818eb1c7821008",
       "approvalDigest": "ab2f4eca81d18a6a2e1f0100a3f65abba4655b90c154a8e06e37823df7927f68",
       "approvalId": "approval-how-does-baking-powder-work-baseline",
       "draft": false,
@@ -284,6 +285,7 @@
         "purdue-paragraph-organization-flow",
         "how-biscuit-editorial-policy"
       ],
+      "researchPacketIds": [],
       "sourceNotes": {
         "state": "structured",
         "items": [
@@ -474,7 +476,7 @@
       "citations": [],
       "media": [],
       "bodyDigest": "c91846d48abf30436cbe903bc99c97db47c931156a213ccc4b9bc80977604428",
-      "packageDigest": "d68810f50e772c81df15c64f1f9fcab116c6fa7d21d0b624c3f35d7cda69d990",
+      "packageDigest": "0abea34e26293f7c9de32d95fed33e9094aa6da021b31f61f42f554da40b8cb8",
       "approvalDigest": "6962f990ddcb3b2925d27a7c17866f718f08e7d21e5d76e1f5e68c2a721bca27",
       "approvalId": "approval-why-are-some-answers-better-than-others-baseline",
       "draft": false,
@@ -533,6 +535,7 @@
         "openstax-water-properties",
         "epa-salt-resources"
       ],
+      "researchPacketIds": [],
       "sourceNotes": {
         "state": "structured",
         "items": [

@@ -1,5 +1,7 @@
 # Fuel and regional context
 
+The unified EIA source now covers weekly gasoline context plus monthly residential electricity and natural-gas benchmarks for Illinois, Indiana, and the United States. Every observation carries series, geography, period, value, unit, and frequency. These are regional historical benchmarks, not live fuel prices, utility quotes, or household bills.
+
 Status: Google Places fuel is `production-disabled`; EIA regional context is compiled but not production-activated.
 
 ## Google Places fuel

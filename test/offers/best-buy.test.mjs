@@ -115,8 +115,8 @@ test('authentication, quota, provider, mapping, and malformed failures remain so
   }
 });
 
-test('current legal review keeps Best Buy disabled before transport, quota, or cost use', async () => {
-  assert.equal(evaluateSourcePolicy(policy, { databaseEnabled: true, killSwitchEnabled: true }, now), 'policy-disabled');
+test('Handoff 3 exclusion retires Best Buy before transport, quota, or cost use', async () => {
+  assert.equal(evaluateSourcePolicy(policy, { databaseEnabled: true, killSwitchEnabled: true }, now), 'retired');
   let adapterCalls = 0;
   const response = await lookupOffers({
     query: { productId: mapping.canonicalProductId },
@@ -130,5 +130,5 @@ test('current legal review keeps Best Buy disabled before transport, quota, or c
     mode: 'approved-sources',
   });
   assert.equal(adapterCalls, 0);
-  assert.deepEqual(response.coverage, [{ sourceId: 'best-buy', status: 'policy-disabled' }]);
+  assert.deepEqual(response.coverage, [{ sourceId: 'best-buy', status: 'retired' }]);
 });

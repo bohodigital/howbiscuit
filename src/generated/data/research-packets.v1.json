@@ -1,0 +1,435 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseId": "h3-content-data-2026-07-24",
+  "packets": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "chicago-energy-context",
+      "title": "Chicago household-energy benchmarks",
+      "question": "Explain how Chicago-area electricity and natural-gas benchmarks differ from a bill.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline",
+        "hud-usps-crosswalk"
+      ],
+      "recordIds": [
+        "hud-60614-cbsa",
+        "eia-electricity-residential-il-2026-05",
+        "eia-natural-gas-residential-il-2026-04"
+      ],
+      "claimCandidates": [
+        "Explain how Chicago-area electricity and natural-gas benchmarks differ from a bill."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "northwest-indiana-energy-context",
+      "title": "Northwest Indiana energy context",
+      "question": "Pair ZIP-to-metro context with Indiana residential energy benchmarks.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline",
+        "hud-usps-crosswalk"
+      ],
+      "recordIds": [
+        "hud-46402-cbsa",
+        "eia-electricity-residential-in-2026-05",
+        "eia-natural-gas-residential-in-2026-04"
+      ],
+      "claimCandidates": [
+        "Pair ZIP-to-metro context with Indiana residential energy benchmarks."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "electricity-il-vs-us",
+      "title": "Illinois versus U.S. electricity",
+      "question": "Compare official residential electricity series on the same unit and month.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ],
+      "recordIds": [
+        "eia-electricity-residential-il-2026-05",
+        "eia-electricity-residential-us-2026-05"
+      ],
+      "claimCandidates": [
+        "Compare official residential electricity series on the same unit and month."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "electricity-in-vs-us",
+      "title": "Indiana versus U.S. electricity",
+      "question": "Compare official residential electricity series on the same unit and month.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ],
+      "recordIds": [
+        "eia-electricity-residential-in-2026-05",
+        "eia-electricity-residential-us-2026-05"
+      ],
+      "claimCandidates": [
+        "Compare official residential electricity series on the same unit and month."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "natural-gas-il-vs-us",
+      "title": "Illinois versus U.S. natural gas",
+      "question": "Compare official residential natural-gas series on the same unit and month.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ],
+      "recordIds": [
+        "eia-natural-gas-residential-il-2026-04",
+        "eia-natural-gas-residential-us-2026-04"
+      ],
+      "claimCandidates": [
+        "Compare official residential natural-gas series on the same unit and month."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "natural-gas-in-vs-us",
+      "title": "Indiana versus U.S. natural gas",
+      "question": "Compare official residential natural-gas series on the same unit and month.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ],
+      "recordIds": [
+        "eia-natural-gas-residential-in-2026-04",
+        "eia-natural-gas-residential-us-2026-04"
+      ],
+      "claimCandidates": [
+        "Compare official residential natural-gas series on the same unit and month."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "baking-staples-identities",
+      "title": "Baking staple identities",
+      "question": "Provide stable USDA food identities for flour, sugar, salt, soda, and powder.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-fooddata-central"
+      ],
+      "recordIds": [
+        "fdc-789890",
+        "fdc-746784",
+        "fdc-173468",
+        "fdc-175040",
+        "fdc-172804"
+      ],
+      "claimCandidates": [
+        "Provide stable USDA food identities for flour, sugar, salt, soda, and powder."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "dairy-staples-identities",
+      "title": "Dairy staple identities",
+      "question": "Provide stable USDA food identities for butter, milk, and egg.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-fooddata-central"
+      ],
+      "recordIds": [
+        "fdc-173410",
+        "fdc-746782",
+        "fdc-171287"
+      ],
+      "claimCandidates": [
+        "Provide stable USDA food identities for butter, milk, and egg."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "pantry-staples-identities",
+      "title": "Pantry staple identities",
+      "question": "Provide stable USDA food identities for rice, oats, pasta, beans, tomatoes, and cocoa.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-fooddata-central"
+      ],
+      "recordIds": [
+        "fdc-168877",
+        "fdc-173904",
+        "fdc-2758998",
+        "fdc-175188",
+        "fdc-170051",
+        "fdc-169593"
+      ],
+      "claimCandidates": [
+        "Provide stable USDA food identities for rice, oats, pasta, beans, tomatoes, and cocoa."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "butter-market-basis",
+      "title": "Central U.S. butter basis",
+      "question": "Explain the reported first-sales basis without treating it as a shelf price.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-mymarketnews"
+      ],
+      "recordIds": [
+        "mmn-1089",
+        "mmn-1089-2026-07-20"
+      ],
+      "claimCandidates": [
+        "Explain the reported first-sales basis without treating it as a shelf price."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "egg-inventory-context",
+      "title": "Midwest egg inventory",
+      "question": "Explain the inventory unit and why it is not a consumer price.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-mymarketnews"
+      ],
+      "recordIds": [
+        "mmn-1427",
+        "mmn-1427-midwest-2026-07-20"
+      ],
+      "claimCandidates": [
+        "Explain the inventory unit and why it is not a consumer price."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rice-market-context",
+      "title": "Rice market context",
+      "question": "Pair a USDA weekly market report definition with annual crop production.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-mymarketnews",
+        "usda-nass-quickstats"
+      ],
+      "recordIds": [
+        "mmn-1655",
+        "nass-rice-2025"
+      ],
+      "claimCandidates": [
+        "Pair a USDA weekly market report definition with annual crop production."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "corn-production-trend",
+      "title": "U.S. corn production trend",
+      "question": "Summarize annual production with year, unit, and revision caveats.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "recordIds": [
+        "nass-corn-2021",
+        "nass-corn-2022",
+        "nass-corn-2023",
+        "nass-corn-2024",
+        "nass-corn-2025"
+      ],
+      "claimCandidates": [
+        "Summarize annual production with year, unit, and revision caveats."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "rice-production-trend",
+      "title": "U.S. rice production trend",
+      "question": "Summarize annual production with year, unit, and revision caveats.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "recordIds": [
+        "nass-rice-2021",
+        "nass-rice-2022",
+        "nass-rice-2023",
+        "nass-rice-2024",
+        "nass-rice-2025"
+      ],
+      "claimCandidates": [
+        "Summarize annual production with year, unit, and revision caveats."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "wheat-production-trend",
+      "title": "U.S. wheat production trend",
+      "question": "Summarize annual production with year, unit, and revision caveats.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "recordIds": [
+        "nass-wheat-2021",
+        "nass-wheat-2022",
+        "nass-wheat-2023",
+        "nass-wheat-2024",
+        "nass-wheat-2025"
+      ],
+      "claimCandidates": [
+        "Summarize annual production with year, unit, and revision caveats."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "kroger-exact-mapping",
+      "title": "Exact Kroger product mappings",
+      "question": "Document the two approved exact merchant mappings and exclusion of probable matches.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "kroger"
+      ],
+      "recordIds": [
+        "kroger-kraft-mac-cheese",
+        "kroger-coca-cola-alias"
+      ],
+      "claimCandidates": [
+        "Document the two approved exact merchant mappings and exclusion of probable matches."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "zip-metro-method",
+      "title": "ZIP-to-metro method",
+      "question": "Explain residential-address weighting using representative national ZIPs.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ],
+      "recordIds": [
+        "hud-60614-cbsa",
+        "hud-46802-cbsa",
+        "hud-10001-cbsa",
+        "hud-90012-cbsa"
+      ],
+      "claimCandidates": [
+        "Explain residential-address weighting using representative national ZIPs."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "source-boundaries",
+      "title": "Six-source claim boundaries",
+      "question": "State what each active source may support and what it cannot support.",
+      "generatedAt": "2026-07-24T01:44:18Z",
+      "releaseId": "h3-content-data-2026-07-24",
+      "sourceIds": [
+        "eia-weekly-gasoline",
+        "hud-usps-crosswalk",
+        "kroger",
+        "usda-fooddata-central",
+        "usda-mymarketnews",
+        "usda-nass-quickstats"
+      ],
+      "recordIds": [
+        "hud-60614-county",
+        "eia-electricity-residential-us-2026-05",
+        "fdc-789890",
+        "mmn-1089",
+        "nass-corn-2025",
+        "kroger-kraft-mac-cheese"
+      ],
+      "claimCandidates": [
+        "State what each active source may support and what it cannot support."
+      ],
+      "limitations": [
+        "Provider observations are historical context, not live quotes or personalized advice."
+      ],
+      "disclosure": "Sources and retrieval times must accompany any published claim."
+    }
+  ]
+}

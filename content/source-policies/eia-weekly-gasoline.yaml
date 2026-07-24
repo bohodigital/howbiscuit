@@ -2,6 +2,18 @@ schemaVersion: 1.0.0
 sourceId: eia-weekly-gasoline
 adapterId: eia-weekly-gasoline-import-v1
 displayName: U.S. Energy Information Administration weekly gasoline benchmarks
+lifecycle: active
+internalResearchApproved: true
+releaseMembership: true
+datasets:
+  - weekly-gasoline
+  - monthly-electricity
+  - monthly-natural-gas
+claimPolicy:
+  permitted:
+    - Historical regional energy benchmarks with period and unit
+  forbidden:
+    - Live station price, utility quote, or household bill claims
 scope:
   merchantIds:
     - eia

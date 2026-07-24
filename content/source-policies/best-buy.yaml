@@ -2,6 +2,14 @@ schemaVersion: 1.0.0
 sourceId: best-buy
 adapterId: best-buy-products-v1
 displayName: Best Buy
+lifecycle: excluded
+internalResearchApproved: false
+releaseMembership: false
+datasets: []
+claimPolicy:
+  permitted: []
+  forbidden:
+    - Any Best Buy offer, price, availability, or catalog claim
 scope:
   merchantIds:
     - best-buy

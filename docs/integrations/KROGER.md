@@ -1,5 +1,7 @@
 # Kroger adapter
 
+Handoff 3 uses only Kroger Public API operations routed through Local1’s server-managed broker. Exact merchant SKU or GTIN evidence is required. The 2026-07-24 starter release retains two reviewed mappings, including a narrowly approved Coca-Cola merchant alias; matcher rules were not loosened. The catalog target is 50, but unproved candidates remain unresolved rather than being promoted to meet a count.
+
 Status: `production-disabled`; public activation is not approved.
 
 The adapter is bound to two exact canonical grocery variants and the governed selected-store profile `53100516` for Mariano's Bucktown. The store is selected by its exact Kroger location ID after a ZIP-scoped Locations API result; it is never inferred from distance, and a missing selected store produces no price. Normalized output retains only the store ID, banner, name, pickup support, high-level aisle label, and exact product observation. Provider addresses, coordinates, phone numbers, raw responses, promotions, ratings, reviews, and images are not retained.

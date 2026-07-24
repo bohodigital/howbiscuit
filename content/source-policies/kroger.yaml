@@ -2,6 +2,17 @@ schemaVersion: 1.0.0
 sourceId: kroger
 adapterId: kroger-public-products-v1
 displayName: Kroger family stores
+lifecycle: active
+internalResearchApproved: true
+releaseMembership: true
+datasets:
+  - public-locations
+  - public-products
+claimPolicy:
+  permitted:
+    - Exact merchant product identity and explicitly observed offer facts
+  forbidden:
+    - Probable product matches or stale price and availability claims
 scope:
   merchantIds:
     - kroger
@@ -25,8 +36,8 @@ review:
 credentials:
   required: true
   secretNames:
-    - KROGER_CLIENT_ID
-    - KROGER_CLIENT_SECRET
+    - HOWBISCUIT_KROGER_CLIENT_ID
+    - HOWBISCUIT_KROGER_CLIENT_SECRET
   clientExposureAllowed: false
 storage:
   productIdentifier: { allowed: true, maximumSeconds: null }

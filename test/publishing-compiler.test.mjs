@@ -110,6 +110,7 @@ test('controlled directives and source citations accept only declared grammar', 
     mediaIds: ['whisk-photo'],
     linkPreviewIds: ['extension-guide'],
     priceClaims: ['mixer-price'],
+    researchPacketIds: ['baking-staples-identities'],
     presentationBlocks: [],
   });
   const accepted = validateMarkdown([
@@ -119,8 +120,9 @@ test('controlled directives and source citations accept only declared grammar', 
     '::media{media="whisk-photo"}',
     '::link-preview{preview="extension-guide"}',
     '::price{claim="mixer-price"}',
+    '::research{packet="baking-staples-identities"}',
   ].join('\n'), directiveManifest, 'fixture.md');
-  assert.equal(accepted.directives.length, 5);
+  assert.equal(accepted.directives.length, 6);
   assert.deepEqual(accepted.citations, ['usu-cooking-food-storage']);
 });
 

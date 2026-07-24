@@ -15,6 +15,9 @@ if (locationCount.count !== 22) throw new Error(`Expected 22 Handoff 3B runtime 
 database.exec(readFileSync(path.join(root, 'drizzle', '0003_h3_affiliate_governance.sql'), 'utf8'));
 const { count } = database.prepare("SELECT count(*) AS count FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'").get();
 if (count !== 24) throw new Error(`Expected 24 Handoff 3 runtime tables, found ${count}.`);
+database.exec(readFileSync(path.join(root, 'drizzle', '0004_h3_content_data.sql'), 'utf8'));
+const { contentCount } = database.prepare("SELECT count(*) AS contentCount FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'").get();
+if (contentCount !== 39) throw new Error(`Expected 39 Handoff 3 content-data tables, found ${contentCount}.`);
 const { triggerCount } = database.prepare("SELECT count(*) AS triggerCount FROM sqlite_master WHERE type='trigger' AND name LIKE 'outbound_link_events_session_%'").get();
 if (triggerCount !== 2) throw new Error(`Expected 2 outbound-event session triggers, found ${triggerCount}.`);
 database.exec(`
@@ -53,4 +56,4 @@ try {
 }
 if (!invalidRelationshipRejected) throw new Error('Affiliate relationship accepted public activation without an enablement time.');
 database.close();
-process.stdout.write(`D1 migration check passed: ${count} runtime tables.\n`);
+process.stdout.write(`D1 migration check passed: ${contentCount} runtime tables.\n`);

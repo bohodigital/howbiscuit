@@ -49,6 +49,7 @@ export const ARTICLE_PACKAGE_ROOT = path.join(repositoryRoot, 'content', 'articl
 export const NORMALIZED_OUTPUT_PATH = path.join(repositoryRoot, 'src', 'generated', 'publishing', 'articles.v1.json');
 export const GENERATED_SCHEMA_PATH = path.join(repositoryRoot, 'schemas', 'generated', 'article-manifest-v1.schema.json');
 export const GENERATED_ARTICLE_ROOT = path.join(repositoryRoot, 'src', 'content', 'docs', 'articles');
+const RESEARCH_PACKET_BUNDLE_PATH = path.join(repositoryRoot, 'src', 'generated', 'data', 'research-packets.v1.json');
 
 const MAX_MANIFEST_BYTES = 256 * 1024;
 const MAX_ARTICLE_BYTES = 1024 * 1024;
@@ -62,6 +63,7 @@ const DIRECTIVE_CONTRACTS = Object.freeze({
   'link-preview': Object.freeze(['preview']),
   price: Object.freeze(['claim']),
   presentation: Object.freeze(['block']),
+  research: Object.freeze(['packet']),
 });
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const GENERATED_BY = 'howbiscuit-article-package-compiler-v1';
@@ -161,6 +163,7 @@ export function validateMarkdown(markdown, manifest, sourceLabel = 'article.md')
     ['link-preview', [{ attribute: 'preview', field: 'linkPreviewIds' }]],
     ['price', [{ attribute: 'claim', field: 'priceClaims' }]],
     ['presentation', [{ attribute: 'block', field: 'presentationBlocks', project: (block) => block.id }]],
+    ['research', [{ attribute: 'packet', field: 'researchPacketIds' }]],
   ]);
   for (const [kind, contracts] of references) {
     const matching = directives.filter((directive) => directive.kind === kind);
@@ -224,6 +227,7 @@ function compileDirectiveLine(line, presentationById, commerce) {
   if (commerceOutput !== null) return commerceOutput;
   if (match[1] === 'media') return `> Registered media: ${attributes.media}`;
   if (match[1] === 'link-preview') return `> Link preview: ${attributes.preview}`;
+  if (match[1] === 'research') return `> Research packet: ${attributes.packet}`;
   const block = presentationById.get(attributes.block);
   if (block.kind === 'mechanism') return `<MechanismSteps steps={${JSON.stringify(block.steps)}} />`;
   if (block.kind === 'mistake-grid') return `<MistakeGrid items={${JSON.stringify(block.items)}} />`;
@@ -325,6 +329,10 @@ function resolveEditorialGovernance(governance, files, media, context, label, cl
   assert(brief?.status === 'approved', `${label}: brief ${governance.briefId} must resolve to an approved record`);
   assert(brief.ideaId === idea.id && brief.intendedArticleId === governance.id, `${label}: brief linkage does not match article and idea`);
   const sources = resolveActiveRecords(governance.sourceIds, editorial.sources, 'source', label);
+  const researchPacketIds = new Set(JSON.parse(readFileSync(RESEARCH_PACKET_BUNDLE_PATH, 'utf8')).packets.map(({id})=>id));
+  for (const packetId of governance.researchPacketIds ?? []) {
+    assert(researchPacketIds.has(packetId), `${label}: unresolved research packet ${packetId}`);
+  }
   const testingRecords = resolveActiveRecords(governance.testingIds, editorial.testing, 'testing record', label);
   assert(testingRecords.length === 1, `${label}: schema v1 requires exactly one testing record`);
   for (const testing of testingRecords) assert(testing.articleId === governance.id, `${label}: testing record ${testing.id} belongs to another article`);
@@ -459,6 +467,7 @@ export function validateArticlePackage(packagePath, context) {
     evidence: manifest.evidence.label,
     testing: governance.testing,
     sourceIds: manifest.sourceIds,
+    researchPacketIds: manifest.researchPacketIds,
     sourceNotes: Object.freeze({ state: 'structured', items: governance.sourceNotes }),
     testingIds: manifest.testingIds,
     mediaIds: manifest.mediaIds,
@@ -572,6 +581,7 @@ function compileLatexArticles(root, context) {
       evidence: article.metadata.evidence,
       testing: resolved.testing,
       sourceIds: governance.sourceIds,
+      researchPacketIds: governance.researchPacketIds ?? [],
       sourceNotes: Object.freeze({ state: 'structured', items: resolved.sourceNotes }),
       testingIds: governance.testingIds,
       mediaIds: governance.mediaIds,

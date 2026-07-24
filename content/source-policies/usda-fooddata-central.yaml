@@ -1,0 +1,40 @@
+schemaVersion: 1.0.0
+sourceId: usda-fooddata-central
+adapterId: usda-fooddata-central-import-v1
+displayName: USDA FoodData Central
+lifecycle: active
+internalResearchApproved: true
+releaseMembership: true
+datasets: [food-search, food-details]
+claimPolicy:
+  permitted: [Food identity and nutrient observations with food and nutrient identifiers]
+  forbidden: [Medical advice or nutrient claims without an explicit unit and food basis]
+scope: { merchantIds: [usda-fdc] }
+enabledByDefault: false
+publicActivationApproved: false
+legalBasis:
+  type: reviewed-public-dataset
+  termsUrl: https://www.ars.usda.gov/docs/quality-of-information/
+  documentationUrl: https://fdc.nal.usda.gov/api-guide/
+  termsExpiresAt: 2027-07-23
+  accountApprovalRequired: false
+review:
+  reviewedAt: 2026-07-23
+  reviewedBy: codex-provider-activation
+  reviewDueAt: 2027-07-23
+  evidenceIds: [usda-fdc-api-review-2026-07-23]
+  comparisonStatus: approved
+credentials: { required: true, secretNames: [HOWBISCUIT_DATA_GOV_API_KEY], clientExposureAllowed: false }
+storage:
+  productIdentifier: { allowed: true, maximumSeconds: null }
+  storeIdentifier: { allowed: false, maximumSeconds: 0 }
+  price: { allowed: false, maximumSeconds: 0 }
+  availability: { allowed: false, maximumSeconds: 0 }
+  image: { allowed: false, maximumSeconds: 0 }
+  rawResponse: { allowed: false, maximumSeconds: 0 }
+display: { attributionRequired: true, timestampRequired: true, merchantNameRequired: false, logoRequired: false, affiliateDisclosureRequired: false, directLinkRequired: true }
+refresh: { normalTtlSeconds: 2592000, hardExpirySeconds: 31536000, staleWhileRevalidateAllowed: false }
+limits: { requestsPerSecond: 1, requestsPerDay: 1000, applicationDailyBudget: 100, applicationMonthlyBudget: 2000, paidMonthlyCeilingUsd: 0 }
+matching: { acceptedConfidence: [exact-retailer-sku], probableMayCompare: false }
+failure: { showStalePrice: false, fallback: no-price, automaticDisableAfterConsecutiveFailures: 3, cooldownSeconds: 3600, maximumRetryCount: 2, disableOnTermsExpiry: true, disableOnAuthenticationFailure: true, disableOnBudgetExhaustion: true }
+killSwitch: { environmentVariable: USDA_FDC_ENABLED, databaseDisableAllowed: true }
