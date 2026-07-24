@@ -4,6 +4,7 @@ import test from 'node:test';
 import {
   normalizeEia, normalizeFdc, normalizeHud, normalizeKrogerMapping, normalizeMmn, normalizeNass,
 } from '../../src/lib/data/contracts.mjs';
+import { buildBrokerEnvelope } from '../../scripts/data/broker-envelope.mjs';
 import { validateBrokerEnvelope } from '../../scripts/data/release-lib.mjs';
 
 const release=JSON.parse(readFileSync(new URL('../../src/generated/data/release.v1.json',import.meta.url),'utf8'));
@@ -58,6 +59,33 @@ test('provider-specific boundaries retain ambiguity, forecast status, exact matc
   assert.ok(release.datasets.agriculturalStatistics.some(row=>row.classification==='forecast'));
   assert.ok(release.datasets.agriculturalStatistics.some(row=>row.classification==='final'));
   assert.ok(release.datasets.merchantMappings.filter(row=>row.approved&&row.matchConfidence.startsWith('exact-')).length>=25);
+  assert.ok(release.datasets.offerObservations.length>=25);
+  assert.ok(release.datasets.offerObservations.every(row=>row.publicationState==='internal-only'));
   assert.ok(release.datasets.offerObservations.every(row=>row.priceAmount!==null||row.availability==='unknown'));
+  assert.ok(release.datasets.foodNutrients.length>=75);
   assert.ok(release.datasets.foodNutrients.every(row=>row.nutrientName&&row.unit&&row.basis));
+});
+
+test('broker exports flatten allowlisted FoodData nutrient and Kroger item fields',()=>{
+  const food=buildBrokerEnvelope('fooddata',Array.from({length:15},(_,index)=>({
+    api_id:'data_gov',operation:'fooddata_get',status:'ok',
+    records:[{fdcId:100+index,description:`Food ${index}`,dataType:'Foundation',publicationDate:'4/1/2020',foodCategory:{description:'Staples'},foodNutrients:[{nutrientId:1003,nutrientName:'Protein',unitName:'g',amount:1+index,basis:'per 100 g'},{nutrientId:9999,nutrientName:'Omitted',unitName:'g',amount:1,basis:'per 100 g'}]}],
+    source:{retrieved_at:'2026-07-24T05:00:00Z',attribution:'USDA',docs_url:'https://example.gov'},
+    quota:{status:'reported',remaining:100},warnings:[],truncated:false,error:null,
+  })));
+  assert.equal(food.records.filter(({recordType})=>recordType==='food').length,15);
+  assert.equal(food.records.filter(({recordType})=>recordType==='nutrient').length,15);
+  assert.ok(food.records.every(record=>Object.values(record).every(value=>value===null||['string','number','boolean'].includes(typeof value))));
+
+  const products=Array.from({length:25},(_,index)=>{
+    const id=String(index+1).padStart(13,'0');
+    return {productId:id,upc:id,brand:'Kroger',description:`Product ${index}`,items:[{itemId:id,size:'1 lb',price:{regular:2.99},fulfillment:{curbside:true,delivery:true,inStore:true,shipToHome:false},inventory:{stockLevel:'HIGH'}}]};
+  });
+  const kroger=buildBrokerEnvelope('kroger',[{
+    api_id:'kroger',operation:'search_products',status:'ok',records:products,
+    source:{retrieved_at:'2026-07-24T05:00:00Z',attribution:'Kroger',docs_url:'https://example.com'},
+    quota:{status:'not_reported',remaining:null},warnings:[],truncated:false,error:null,
+  }]);
+  assert.equal(kroger.records.length,25);
+  assert.ok(kroger.records.every(record=>record.regularPrice===2.99&&record.stockLevel==='HIGH'));
 });

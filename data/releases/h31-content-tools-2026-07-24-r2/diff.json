@@ -1,0 +1,95 @@
+{
+  "datasets": [
+    {
+      "change": 0,
+      "datasetId": "geographyRelationships",
+      "from": 55,
+      "fromDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af",
+      "to": 55,
+      "toDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af"
+    },
+    {
+      "change": 0,
+      "datasetId": "energyObservations",
+      "from": 99,
+      "fromDigest": "3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f",
+      "to": 99,
+      "toDigest": "3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f"
+    },
+    {
+      "change": 2,
+      "datasetId": "foods",
+      "from": 15,
+      "fromDigest": "c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d",
+      "to": 17,
+      "toDigest": "3f9a7875b3981e1d238d3f5eede859bdb9bc803f11567cfc16ec8891e5054274"
+    },
+    {
+      "change": 165,
+      "datasetId": "foodNutrients",
+      "from": 0,
+      "fromDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "to": 165,
+      "toDigest": "34fb44947ea5713f3ca79bbdde3bc6727232ad49744ed83360aa8a24cf40afab"
+    },
+    {
+      "change": 0,
+      "datasetId": "marketReports",
+      "from": 4,
+      "fromDigest": "ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d",
+      "to": 4,
+      "toDigest": "ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d"
+    },
+    {
+      "change": 0,
+      "datasetId": "marketObservations",
+      "from": 11,
+      "fromDigest": "5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4",
+      "to": 11,
+      "toDigest": "5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4"
+    },
+    {
+      "change": 0,
+      "datasetId": "agriculturalStatistics",
+      "from": 33,
+      "fromDigest": "3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea",
+      "to": 33,
+      "toDigest": "3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea"
+    },
+    {
+      "change": 0,
+      "datasetId": "merchantLocations",
+      "from": 1,
+      "fromDigest": "4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf",
+      "to": 1,
+      "toDigest": "4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf"
+    },
+    {
+      "change": 0,
+      "datasetId": "merchantMappings",
+      "from": 29,
+      "fromDigest": "528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050",
+      "to": 29,
+      "toDigest": "a27070126268f7947b6dc28855931fa14bc15f1b62868704eab141ba0df3be3a"
+    },
+    {
+      "change": 0,
+      "datasetId": "offerObservations",
+      "from": 29,
+      "fromDigest": "0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56",
+      "to": 29,
+      "toDigest": "29b33ac39c03ad9a311770331a1c0f94a4b15f6a54753ed15cf0f1ac348bf14c"
+    },
+    {
+      "change": 0,
+      "datasetId": "unresolvedMappings",
+      "from": 2,
+      "fromDigest": "e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "to": 2,
+      "toDigest": "e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af"
+    }
+  ],
+  "from": "h31-content-tools-2026-07-24",
+  "schemaVersion": "1.0.0",
+  "to": "h31-content-tools-2026-07-24-r2"
+}

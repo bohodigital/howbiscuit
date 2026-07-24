@@ -12,13 +12,26 @@ npm run data:refresh -- --provider eia
 npm run data:refresh:all
 ```
 
-Execute a plan only through the Local1 public-data broker. Save its sanitized response envelope outside Git, then validate it into isolated staging:
+Execute a plan only through the Local1 public-data broker. Save the broker's
+sanitized result array outside Git, flatten only the provider-specific
+allowlisted fields into the strict envelope, then validate it into isolated
+staging:
 
 ```sh
-npm run data:import -- --provider eia --envelope /safe/path/envelope.json --release h31-YYYY-MM-DD-sequence
+npm run data:broker-envelope -- --provider fooddata --input /safe/path/results.json --output /safe/path/envelope.json
+npm run data:import -- --provider fooddata --envelope /safe/path/envelope.json --release h31-YYYY-MM-DD-sequence
+npm run data:finalize -- --release h31-YYYY-MM-DD-sequence
 ```
 
-The importer rejects unknown fields, nested fields, credentials, private customer data, missing attribution, malformed dates, invalid digests, and more than 2,000 records. It never changes the accepted pointer. Complete provider normalization, manifests, human review, and owner/editorial approval in the new release directory before promotion.
+The envelope builder understands only the governed FoodData and Kroger response
+shapes. The importer rejects unknown fields, nesting after flattening,
+credentials, private customer data, missing attribution, malformed dates,
+invalid digests, and more than 2,000 records. Import writes only to isolated
+staging. Finalization clones the accepted release into a temporary build,
+normalizes the staged sources, regenerates source and dataset manifests,
+Research Packet release references, machine and Markdown diffs, validates the
+complete candidate, and atomically renames it to its immutable release ID. None
+of these steps changes the accepted pointer.
 
 ## Validate, compare, promote, and roll back
 
@@ -30,6 +43,10 @@ npm run data:compile
 npm run data:d1-sync -- --release <candidate> --database /safe/runtime/content.db
 npm run data:d1-verify -- --release <candidate> --database /safe/runtime/content.db
 ```
+
+Review both `diff.json` and `diff.md` inside the candidate release before
+promotion. A package-size mismatch, absent exact Kroger product, incomplete
+nutrient, digest change, or evidence reference failure rejects finalization.
 
 Promotion takes an exclusive lock, validates every dataset and source digest, writes a temporary pointer, and renames it atomically. It cannot expose a partial release. If the process stops before rename, remove only a confirmed stale `.promotion.lock` after verifying no promotion process remains.
 

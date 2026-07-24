@@ -2,7 +2,7 @@
   "packets": [
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -53,7 +53,7 @@
         "eia-electricity-residential-il-2026-05",
         "eia-natural-gas-residential-il-2026-04"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "16980",
       "id": "chicago-energy-context",
       "intendedTopics": [
@@ -66,7 +66,7 @@
         "2026-05-01"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Explain how Chicago-area electricity and natural-gas benchmarks differ from a bill.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -81,7 +81,7 @@
         "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -113,7 +113,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -164,7 +164,7 @@
         "eia-electricity-residential-in-2026-05",
         "eia-natural-gas-residential-in-2026-04"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "16980",
       "id": "northwest-indiana-energy-context",
       "intendedTopics": [
@@ -177,7 +177,7 @@
         "2026-05-01"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Pair ZIP-to-metro context with Indiana residential energy benchmarks.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -192,7 +192,7 @@
         "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -224,7 +224,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -265,7 +265,7 @@
         "eia-electricity-residential-il-2026-05",
         "eia-electricity-residential-us-2026-05"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "IL",
       "id": "electricity-il-vs-us",
       "intendedTopics": [
@@ -276,7 +276,7 @@
         "2026-05-01"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Compare official residential electricity series on the same unit and month.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -287,7 +287,7 @@
         "eia-residential-electricity": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -318,7 +318,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -359,7 +359,7 @@
         "eia-electricity-residential-in-2026-05",
         "eia-electricity-residential-us-2026-05"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "IN",
       "id": "electricity-in-vs-us",
       "intendedTopics": [
@@ -370,7 +370,7 @@
         "2026-05-01"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Compare official residential electricity series on the same unit and month.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -381,7 +381,7 @@
         "eia-residential-electricity": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -412,7 +412,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -453,7 +453,7 @@
         "eia-natural-gas-residential-il-2026-04",
         "eia-natural-gas-residential-us-2026-04"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "IL",
       "id": "natural-gas-il-vs-us",
       "intendedTopics": [
@@ -464,7 +464,7 @@
         "2026-04-01"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Compare official residential natural-gas series on the same unit and month.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -475,7 +475,7 @@
         "eia-residential-natural-gas": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -506,7 +506,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -547,7 +547,7 @@
         "eia-natural-gas-residential-in-2026-04",
         "eia-natural-gas-residential-us-2026-04"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "IN",
       "id": "natural-gas-in-vs-us",
       "intendedTopics": [
@@ -558,7 +558,7 @@
         "2026-04-01"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Compare official residential natural-gas series on the same unit and month.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -569,7 +569,7 @@
         "eia-residential-natural-gas": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -600,32 +600,48 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
       "charts": [],
       "citationNotes": [
         {
-          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "note": "usda-fooddata-central data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "usda-fooddata-central"
         }
       ],
       "claims": [
         {
-          "classification": "food-identity",
+          "classification": "food-composition",
           "evidenceRecordIds": [
             "fdc-789890",
             "fdc-746784",
             "fdc-173468",
             "fdc-175040",
-            "fdc-172804"
+            "fdc-172804",
+            "fdc-172804-nutrient-1003",
+            "fdc-172804-nutrient-1008",
+            "fdc-172804-nutrient-1093",
+            "fdc-173468-nutrient-1003",
+            "fdc-173468-nutrient-1008",
+            "fdc-173468-nutrient-1093",
+            "fdc-175040-nutrient-1003",
+            "fdc-175040-nutrient-1008",
+            "fdc-175040-nutrient-1093",
+            "fdc-746784-nutrient-1003",
+            "fdc-746784-nutrient-1008",
+            "fdc-746784-nutrient-1093",
+            "fdc-789890-nutrient-1003",
+            "fdc-789890-nutrient-1008",
+            "fdc-789890-nutrient-1093"
           ],
           "id": "baking-staples-identities-claim-1",
           "limitations": [
-            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary.",
+            "FoodData nutrient amounts are generic food-composition values per 100 g, not branded-product or serving claims."
           ],
-          "text": "USDA FoodData Central identifies Flour, wheat, all-purpose, enriched, bleached (FDC 789890); Sugars, granulated (FDC 746784); Salt, table (FDC 173468); Leavening agents, baking soda (FDC 175040); these identities do not establish retail price or availability."
+          "text": "USDA FoodData Central identifies Flour, wheat, all-purpose, enriched, bleached (FDC 789890); Sugars, granulated (FDC 746784); Salt, table (FDC 173468); Leavening agents, baking soda (FDC 175040); these identities do not establish retail price or availability. Complete energy, protein, and sodium observations are labeled per 100 g."
         }
       ],
       "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
@@ -634,9 +650,24 @@
         "fdc-746784",
         "fdc-173468",
         "fdc-175040",
-        "fdc-172804"
+        "fdc-172804",
+        "fdc-172804-nutrient-1003",
+        "fdc-172804-nutrient-1008",
+        "fdc-172804-nutrient-1093",
+        "fdc-173468-nutrient-1003",
+        "fdc-173468-nutrient-1008",
+        "fdc-173468-nutrient-1093",
+        "fdc-175040-nutrient-1003",
+        "fdc-175040-nutrient-1008",
+        "fdc-175040-nutrient-1093",
+        "fdc-746784-nutrient-1003",
+        "fdc-746784-nutrient-1008",
+        "fdc-746784-nutrient-1093",
+        "fdc-789890-nutrient-1003",
+        "fdc-789890-nutrient-1008",
+        "fdc-789890-nutrient-1093"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "baking-staples-identities",
       "intendedTopics": [
@@ -644,7 +675,7 @@
       ],
       "observationDates": [],
       "productScope": "generic USDA food identities",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Provide stable USDA food identities for flour, sugar, salt, soda, and powder.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -652,33 +683,41 @@
         "usda-fooddata-central"
       ],
       "sourceRetrievalDates": {
-        "usda-fooddata-central": "2026-07-24T03:53:57Z"
+        "usda-fooddata-central": "2026-07-24T05:10:41Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
       "tables": [
         {
           "columns": [
-            "id",
-            "period",
-            "value",
+            "foodId",
+            "nutrientName",
+            "amount",
             "unit",
-            "description",
-            "geography",
-            "residentialRatio"
+            "basis"
           ],
-          "id": "evidence",
+          "id": "nutrients",
           "recordIds": [
-            "fdc-789890",
-            "fdc-746784",
-            "fdc-173468",
-            "fdc-175040",
-            "fdc-172804"
+            "fdc-172804-nutrient-1003",
+            "fdc-172804-nutrient-1008",
+            "fdc-172804-nutrient-1093",
+            "fdc-173468-nutrient-1003",
+            "fdc-173468-nutrient-1008",
+            "fdc-173468-nutrient-1093",
+            "fdc-175040-nutrient-1003",
+            "fdc-175040-nutrient-1008",
+            "fdc-175040-nutrient-1093",
+            "fdc-746784-nutrient-1003",
+            "fdc-746784-nutrient-1008",
+            "fdc-746784-nutrient-1093",
+            "fdc-789890-nutrient-1003",
+            "fdc-789890-nutrient-1008",
+            "fdc-789890-nutrient-1093"
           ],
-          "title": "Baking staple identities evidence"
+          "title": "Baking staple identities nutrient evidence"
         }
       ],
       "title": "Baking staple identities",
@@ -689,39 +728,58 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
       "charts": [],
       "citationNotes": [
         {
-          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "note": "usda-fooddata-central data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "usda-fooddata-central"
         }
       ],
       "claims": [
         {
-          "classification": "food-identity",
+          "classification": "food-composition",
           "evidenceRecordIds": [
             "fdc-173410",
-            "fdc-746782",
-            "fdc-171287"
+            "fdc-171265",
+            "fdc-171287",
+            "fdc-171265-nutrient-1003",
+            "fdc-171265-nutrient-1008",
+            "fdc-171265-nutrient-1093",
+            "fdc-171287-nutrient-1003",
+            "fdc-171287-nutrient-1008",
+            "fdc-171287-nutrient-1093",
+            "fdc-173410-nutrient-1003",
+            "fdc-173410-nutrient-1008",
+            "fdc-173410-nutrient-1093"
           ],
           "id": "dairy-staples-identities-claim-1",
           "limitations": [
-            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary.",
+            "FoodData nutrient amounts are generic food-composition values per 100 g, not branded-product or serving claims."
           ],
-          "text": "USDA FoodData Central identifies Butter, salted (FDC 173410); Milk, whole, 3.25% milkfat, with added vitamin D (FDC 746782); Egg, whole, raw, fresh (FDC 171287); these identities do not establish retail price or availability."
+          "text": "USDA FoodData Central identifies Butter, salted (FDC 173410); Milk, whole, 3.25% milkfat, with added vitamin D (FDC 171265); Egg, whole, raw, fresh (FDC 171287); these identities do not establish retail price or availability. Complete energy, protein, and sodium observations are labeled per 100 g."
         }
       ],
       "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
       "evidenceRecordIds": [
         "fdc-173410",
-        "fdc-746782",
-        "fdc-171287"
+        "fdc-171265",
+        "fdc-171287",
+        "fdc-171265-nutrient-1003",
+        "fdc-171265-nutrient-1008",
+        "fdc-171265-nutrient-1093",
+        "fdc-171287-nutrient-1003",
+        "fdc-171287-nutrient-1008",
+        "fdc-171287-nutrient-1093",
+        "fdc-173410-nutrient-1003",
+        "fdc-173410-nutrient-1008",
+        "fdc-173410-nutrient-1093"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "dairy-staples-identities",
       "intendedTopics": [
@@ -729,7 +787,7 @@
       ],
       "observationDates": [],
       "productScope": "generic USDA food identities",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Provide stable USDA food identities for butter, milk, and egg.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -737,31 +795,35 @@
         "usda-fooddata-central"
       ],
       "sourceRetrievalDates": {
-        "usda-fooddata-central": "2026-07-24T03:53:57Z"
+        "usda-fooddata-central": "2026-07-24T05:10:41Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
       "tables": [
         {
           "columns": [
-            "id",
-            "period",
-            "value",
+            "foodId",
+            "nutrientName",
+            "amount",
             "unit",
-            "description",
-            "geography",
-            "residentialRatio"
+            "basis"
           ],
-          "id": "evidence",
+          "id": "nutrients",
           "recordIds": [
-            "fdc-173410",
-            "fdc-746782",
-            "fdc-171287"
+            "fdc-171265-nutrient-1003",
+            "fdc-171265-nutrient-1008",
+            "fdc-171265-nutrient-1093",
+            "fdc-171287-nutrient-1003",
+            "fdc-171287-nutrient-1008",
+            "fdc-171287-nutrient-1093",
+            "fdc-173410-nutrient-1003",
+            "fdc-173410-nutrient-1008",
+            "fdc-173410-nutrient-1093"
           ],
-          "title": "Dairy staple identities evidence"
+          "title": "Dairy staple identities nutrient evidence"
         }
       ],
       "title": "Dairy staple identities",
@@ -772,45 +834,82 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
       "charts": [],
       "citationNotes": [
         {
-          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "note": "usda-fooddata-central data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "usda-fooddata-central"
         }
       ],
       "claims": [
         {
-          "classification": "food-identity",
+          "classification": "food-composition",
           "evidenceRecordIds": [
             "fdc-168877",
             "fdc-173904",
-            "fdc-2758998",
+            "fdc-169736",
             "fdc-175188",
             "fdc-170051",
-            "fdc-169593"
+            "fdc-169593",
+            "fdc-168877-nutrient-1003",
+            "fdc-168877-nutrient-1008",
+            "fdc-168877-nutrient-1093",
+            "fdc-169593-nutrient-1003",
+            "fdc-169593-nutrient-1008",
+            "fdc-169593-nutrient-1093",
+            "fdc-169736-nutrient-1003",
+            "fdc-169736-nutrient-1008",
+            "fdc-169736-nutrient-1093",
+            "fdc-170051-nutrient-1003",
+            "fdc-170051-nutrient-1008",
+            "fdc-170051-nutrient-1093",
+            "fdc-173904-nutrient-1003",
+            "fdc-173904-nutrient-1008",
+            "fdc-173904-nutrient-1093",
+            "fdc-175188-nutrient-1003",
+            "fdc-175188-nutrient-1008",
+            "fdc-175188-nutrient-1093"
           ],
           "id": "pantry-staples-identities-claim-1",
           "limitations": [
-            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary.",
+            "FoodData nutrient amounts are generic food-composition values per 100 g, not branded-product or serving claims."
           ],
-          "text": "USDA FoodData Central identifies Rice, white, long-grain, regular, raw, enriched (FDC 168877); Oats (FDC 173904); Pasta, spaghetti, dry, enriched (FDC 2758998); Beans, black turtle, canned (FDC 175188); these identities do not establish retail price or availability."
+          "text": "USDA FoodData Central identifies Rice, white, long-grain, regular, raw, enriched (FDC 168877); Oats (FDC 173904); Pasta, dry, enriched (FDC 169736); Beans, black turtle, canned (FDC 175188); these identities do not establish retail price or availability. Complete energy, protein, and sodium observations are labeled per 100 g."
         }
       ],
       "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
       "evidenceRecordIds": [
         "fdc-168877",
         "fdc-173904",
-        "fdc-2758998",
+        "fdc-169736",
         "fdc-175188",
         "fdc-170051",
-        "fdc-169593"
+        "fdc-169593",
+        "fdc-168877-nutrient-1003",
+        "fdc-168877-nutrient-1008",
+        "fdc-168877-nutrient-1093",
+        "fdc-169593-nutrient-1003",
+        "fdc-169593-nutrient-1008",
+        "fdc-169593-nutrient-1093",
+        "fdc-169736-nutrient-1003",
+        "fdc-169736-nutrient-1008",
+        "fdc-169736-nutrient-1093",
+        "fdc-170051-nutrient-1003",
+        "fdc-170051-nutrient-1008",
+        "fdc-170051-nutrient-1093",
+        "fdc-173904-nutrient-1003",
+        "fdc-173904-nutrient-1008",
+        "fdc-173904-nutrient-1093",
+        "fdc-175188-nutrient-1003",
+        "fdc-175188-nutrient-1008",
+        "fdc-175188-nutrient-1093"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "pantry-staples-identities",
       "intendedTopics": [
@@ -818,7 +917,7 @@
       ],
       "observationDates": [],
       "productScope": "generic USDA food identities",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Provide stable USDA food identities for rice, oats, pasta, beans, tomatoes, and cocoa.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -826,34 +925,44 @@
         "usda-fooddata-central"
       ],
       "sourceRetrievalDates": {
-        "usda-fooddata-central": "2026-07-24T03:53:57Z"
+        "usda-fooddata-central": "2026-07-24T05:10:41Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
       "tables": [
         {
           "columns": [
-            "id",
-            "period",
-            "value",
+            "foodId",
+            "nutrientName",
+            "amount",
             "unit",
-            "description",
-            "geography",
-            "residentialRatio"
+            "basis"
           ],
-          "id": "evidence",
+          "id": "nutrients",
           "recordIds": [
-            "fdc-168877",
-            "fdc-173904",
-            "fdc-2758998",
-            "fdc-175188",
-            "fdc-170051",
-            "fdc-169593"
+            "fdc-168877-nutrient-1003",
+            "fdc-168877-nutrient-1008",
+            "fdc-168877-nutrient-1093",
+            "fdc-169593-nutrient-1003",
+            "fdc-169593-nutrient-1008",
+            "fdc-169593-nutrient-1093",
+            "fdc-169736-nutrient-1003",
+            "fdc-169736-nutrient-1008",
+            "fdc-169736-nutrient-1093",
+            "fdc-170051-nutrient-1003",
+            "fdc-170051-nutrient-1008",
+            "fdc-170051-nutrient-1093",
+            "fdc-173904-nutrient-1003",
+            "fdc-173904-nutrient-1008",
+            "fdc-173904-nutrient-1093",
+            "fdc-175188-nutrient-1003",
+            "fdc-175188-nutrient-1008",
+            "fdc-175188-nutrient-1093"
           ],
-          "title": "Pantry staple identities evidence"
+          "title": "Pantry staple identities nutrient evidence"
         }
       ],
       "title": "Pantry staple identities",
@@ -864,7 +973,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -894,7 +1003,7 @@
         "mmn-1089",
         "mmn-1089-2026-07-20"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "Central U.S.",
       "id": "butter-market-basis",
       "intendedTopics": [
@@ -904,7 +1013,7 @@
         "2026-07-20"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Explain the reported first-sales basis without treating it as a shelf price.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -915,7 +1024,7 @@
         "usda-mymarketnews": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -946,7 +1055,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -976,7 +1085,7 @@
         "mmn-1427",
         "mmn-1427-midwest-2026-07-20"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "Midwest",
       "id": "egg-inventory-context",
       "intendedTopics": [
@@ -986,7 +1095,7 @@
         "2026-07-20"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Explain the inventory unit and why it is not a consumer price.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -997,7 +1106,7 @@
         "usda-mymarketnews": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1028,7 +1137,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1062,7 +1171,7 @@
         "mmn-1655",
         "nass-rice-2025"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "rice-market-context",
       "intendedTopics": [
@@ -1073,7 +1182,7 @@
         "2026-07-20"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Pair a USDA weekly market report definition with annual crop production.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1086,7 +1195,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1117,7 +1226,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1167,7 +1276,7 @@
         "nass-corn-2024",
         "nass-corn-2025"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "corn-production-trend",
       "intendedTopics": [
@@ -1181,7 +1290,7 @@
         "2025"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Summarize annual production with year, unit, and revision caveats.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1192,7 +1301,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1226,7 +1335,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1276,7 +1385,7 @@
         "nass-rice-2024",
         "nass-rice-2025"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "rice-production-trend",
       "intendedTopics": [
@@ -1290,7 +1399,7 @@
         "2025"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Summarize annual production with year, unit, and revision caveats.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1301,7 +1410,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1335,7 +1444,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1385,7 +1494,7 @@
         "nass-wheat-2024",
         "nass-wheat-2025"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "wheat-production-trend",
       "intendedTopics": [
@@ -1399,7 +1508,7 @@
         "2025"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Summarize annual production with year, unit, and revision caveats.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1410,7 +1519,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1444,14 +1553,14 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
       "charts": [],
       "citationNotes": [
         {
-          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "note": "kroger data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "kroger"
         }
       ],
@@ -1474,7 +1583,7 @@
         "kroger-kraft-mac-cheese",
         "kroger-coca-cola-alias"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "kroger-exact-mapping",
       "intendedTopics": [
@@ -1482,7 +1591,7 @@
       ],
       "observationDates": [],
       "productScope": "governed exact Kroger identities",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Document the two approved exact merchant mappings and exclusion of probable matches.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1490,10 +1599,10 @@
         "kroger"
       ],
       "sourceRetrievalDates": {
-        "kroger": "2026-07-24T03:53:57Z"
+        "kroger": "2026-07-24T05:10:41Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1524,7 +1633,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1558,7 +1667,7 @@
         "hud-10001-cbsa",
         "hud-90012-cbsa"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "16980",
       "id": "zip-metro-method",
       "intendedTopics": [
@@ -1566,7 +1675,7 @@
       ],
       "observationDates": [],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Explain residential-address weighting using representative national ZIPs.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1577,7 +1686,7 @@
         "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1610,7 +1719,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1636,11 +1745,11 @@
           "sourceId": "hud-usps-crosswalk"
         },
         {
-          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "note": "kroger data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "kroger"
         },
         {
-          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "note": "usda-fooddata-central data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -1679,7 +1788,7 @@
         "nass-corn-2025",
         "kroger-kraft-mac-cheese"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "17031",
       "id": "source-boundaries",
       "intendedTopics": [
@@ -1692,7 +1801,7 @@
         "2026-07-20"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "State what each active source may support and what it cannot support.",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1707,13 +1816,13 @@
       "sourceRetrievalDates": {
         "eia-residential-electricity": "2026-07-24T03:53:57Z",
         "hud-usps-crosswalk": "2026-07-24T03:53:57Z",
-        "kroger": "2026-07-24T03:53:57Z",
-        "usda-fooddata-central": "2026-07-24T03:53:57Z",
+        "kroger": "2026-07-24T05:10:41Z",
+        "usda-fooddata-central": "2026-07-24T05:10:41Z",
         "usda-mymarketnews": "2026-07-24T03:53:57Z",
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1748,7 +1857,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1780,7 +1889,7 @@
         "hud-60010-county-17097",
         "hud-60010-cbsa-16980"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "17031",
       "id": "hud-weighted-ambiguity",
       "intendedTopics": [
@@ -1788,7 +1897,7 @@
       ],
       "observationDates": [],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "How should a ZIP spanning counties be described?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1799,7 +1908,7 @@
         "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1831,7 +1940,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1881,7 +1990,7 @@
         "nass-soybeans-2024",
         "nass-soybeans-2025"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "soybean-production-trend",
       "intendedTopics": [
@@ -1895,7 +2004,7 @@
         "2025"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "What changed in final U.S. soybean production?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -1906,7 +2015,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -1940,7 +2049,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -1993,7 +2102,7 @@
         "nass-oats-2025",
         "nass-oats-2026"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "oat-production-trend",
       "intendedTopics": [
@@ -2008,7 +2117,7 @@
         "2026"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "What changed in final U.S. oat production?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2019,7 +2128,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -2054,7 +2163,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -2104,7 +2213,7 @@
         "nass-potatoes-2024",
         "nass-potatoes-2025"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "potato-production-trend",
       "intendedTopics": [
@@ -2118,7 +2227,7 @@
         "2025"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "What changed in final U.S. potato production?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2129,7 +2238,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -2163,7 +2272,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -2204,7 +2313,7 @@
         "nass-soybeans-2025",
         "nass-soybeans-2025-nov-forecast"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "US",
       "id": "nass-final-vs-forecast",
       "intendedTopics": [
@@ -2214,7 +2323,7 @@
         "2025"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "How are final and forecast statistics kept distinct?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2225,7 +2334,7 @@
         "usda-nass-quickstats": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -2256,14 +2365,14 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
       "charts": [],
       "citationNotes": [
         {
-          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "note": "kroger data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "kroger"
         }
       ],
@@ -2302,7 +2411,7 @@
         "kroger-0001111085451",
         "kroger-0001111086116"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "kroger-staple-basket",
       "intendedTopics": [
@@ -2310,7 +2419,7 @@
       ],
       "observationDates": [],
       "productScope": "governed exact Kroger identities",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "Which exact staple identities were verified for the governed store?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2318,10 +2427,10 @@
         "kroger"
       ],
       "sourceRetrievalDates": {
-        "kroger": "2026-07-24T03:53:57Z"
+        "kroger": "2026-07-24T05:10:41Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -2360,20 +2469,20 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
       "charts": [],
       "citationNotes": [
         {
-          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "note": "kroger data retrieved 2026-07-24T05:10:41Z.",
           "sourceId": "kroger"
         }
       ],
       "claims": [
         {
-          "classification": "identity-only",
+          "classification": "retailer-price-observation",
           "evidenceRecordIds": [
             "kroger-observation-53100516-0001111001129-2026-07-24",
             "kroger-observation-53100516-0001111004807-2026-07-24",
@@ -2383,9 +2492,9 @@
           ],
           "id": "kroger-availability-boundary-claim-1",
           "limitations": [
-            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+            "One governed store and one observation time; this is not a current public availability or price-comparison claim."
           ],
-          "text": "The governed Kroger observations retain price and availability as unknown because the broker omitted the nested item fields; missing evidence is not treated as out of stock."
+          "text": "At 2026-07-24T05:10:41Z, the governed Kroger refresh returned explicit store-scoped price, fulfillment, and inventory fields for 29 exact mappings. These dated observations remain internal-only; missing or unsupported fields remain unknown."
         }
       ],
       "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
@@ -2396,15 +2505,17 @@
         "kroger-observation-53100516-0001111011888-2026-07-24",
         "kroger-observation-53100516-0001111011889-2026-07-24"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "kroger-availability-boundary",
       "intendedTopics": [
         "kroger-availability-boundary"
       ],
-      "observationDates": [],
+      "observationDates": [
+        "2026-07-24T05:10:41Z"
+      ],
       "productScope": "governed exact Kroger identities",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "What can the current broker evidence support about availability?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2412,25 +2523,25 @@
         "kroger"
       ],
       "sourceRetrievalDates": {
-        "kroger": "2026-07-24T03:53:57Z"
+        "kroger": "2026-07-24T05:10:41Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
       "tables": [
         {
           "columns": [
-            "id",
-            "period",
-            "value",
-            "unit",
-            "description",
-            "geography",
-            "residentialRatio"
+            "mappingId",
+            "observedAt",
+            "priceAmount",
+            "currency",
+            "availability",
+            "fulfillmentModes",
+            "itemSize"
           ],
-          "id": "evidence",
+          "id": "observations",
           "recordIds": [
             "kroger-observation-53100516-0001111001129-2026-07-24",
             "kroger-observation-53100516-0001111004807-2026-07-24",
@@ -2438,7 +2549,7 @@
             "kroger-observation-53100516-0001111011888-2026-07-24",
             "kroger-observation-53100516-0001111011889-2026-07-24"
           ],
-          "title": "Kroger availability boundary evidence"
+          "title": "Kroger dated internal observations"
         }
       ],
       "title": "Kroger availability boundary",
@@ -2449,7 +2560,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -2477,7 +2588,7 @@
       "evidenceRecordIds": [
         "mmn-1662"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "not-applicable",
       "id": "shipping-point-boundary",
       "intendedTopics": [
@@ -2487,7 +2598,7 @@
         "2026-07-20"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "What does a shipping-point report not establish?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2498,7 +2609,7 @@
         "usda-mymarketnews": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -2528,7 +2639,7 @@
     },
     {
       "approval": {
-        "approvedAt": "2026-07-24T04:00:00Z",
+        "approvedAt": "2026-07-24T05:10:41Z",
         "reviewer": "howbiscuit-h3.1-work-order",
         "state": "approved"
       },
@@ -2566,7 +2677,7 @@
         "mmn-1427-northwest-jumbo-2026-07-20",
         "mmn-1427-six-area-misc-2026-07-20"
       ],
-      "generatedAt": "2026-07-24T03:53:57Z",
+      "generatedAt": "2026-07-24T05:10:41Z",
       "geography": "Midwest",
       "id": "egg-regional-inventory",
       "intendedTopics": [
@@ -2576,7 +2687,7 @@
         "2026-07-20"
       ],
       "productScope": "not-applicable",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "researchQuestion": "How did the selected regional wholesale inventories differ?",
       "reviewDueAt": "2026-10-24T00:00:00Z",
       "schemaVersion": "2.0.0",
@@ -2587,7 +2698,7 @@
         "usda-mymarketnews": "2026-07-24T03:53:57Z"
       },
       "staleness": {
-        "assessedAt": "2026-07-24T03:53:57Z",
+        "assessedAt": "2026-07-24T05:10:41Z",
         "state": "current"
       },
       "status": "validated",
@@ -2621,7 +2732,7 @@
       "updateCadence": "quarterly"
     }
   ],
-  "releaseDigest": "247e73890d3581ed0273dfc95fe03993008ddd3b625d6a038b090cae6ff69576",
-  "releaseId": "h31-content-tools-2026-07-24",
+  "releaseDigest": "daf8d23dc338b209179a769805f8a6182bbd842e8206cd9d694a0d7428da0b7a",
+  "releaseId": "h31-content-tools-2026-07-24-r2",
   "schemaVersion": "2.0.0"
 }

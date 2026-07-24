@@ -1,0 +1,22 @@
+{
+  "contentDigest": "bb930517c7b3efd9d8306bd2f816045a1b469b56ea9d166026aada47095f21ac",
+  "operation": "series_observations",
+  "parameters": {
+    "areas": "Chicago,Midwest,US",
+    "datasets": "weekly-gasoline"
+  },
+  "providerId": "eia",
+  "quota": {
+    "remaining": null,
+    "state": "broker-managed"
+  },
+  "records": [],
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "attribution": "U.S. Energy Information Administration",
+    "documentationUrl": "https://www.eia.gov/opendata/"
+  },
+  "truncated": false,
+  "warnings": []
+}

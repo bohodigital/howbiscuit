@@ -17,6 +17,7 @@ import {
   validateRelease,
   withPromotionLock,
 } from './release-lib.mjs';
+import { finalizeStagedRelease } from './finalize-release.mjs';
 
 const [command = 'status', ...args] = process.argv.slice(2);
 const valueFor = (flag) => {
@@ -56,7 +57,7 @@ if (command === 'status') {
     `${d.marketReports.length} Market News definitions and ${d.marketObservations.length} observations`,
     `${d.agriculturalStatistics.length} NASS statistics`,
     `${d.merchantMappings.filter(({ approved }) => approved).length} approved exact Kroger mappings`,
-    `${d.merchantLocations.length} governed Kroger location and ${d.offerObservations.length} internal unknown-state observations`,
+    `${d.merchantLocations.length} governed Kroger location and ${d.offerObservations.length} internal observations (${d.offerObservations.filter(({ priceAmount }) => priceAmount !== null).length} priced; ${d.offerObservations.filter(({ availability }) => availability === 'available').length} available; ${d.offerObservations.filter(({ availability }) => availability === 'unavailable').length} unavailable; ${d.offerObservations.filter(({ availability }) => availability === 'unknown').length} unknown)`,
     `${release.packets.length}/25 Research Packet v2 records`,
     'Best Buy: explicitly excluded',
     '',
@@ -79,7 +80,9 @@ if (command === 'status') {
   if (!release.datasets.agriculturalStatistics.some(({ classification }) => classification === 'forecast')) throw new Error('NASS forecast classification missing.');
   if (!release.datasets.agriculturalStatistics.some(({ classification }) => classification === 'final')) throw new Error('NASS final classification missing.');
   if (release.datasets.merchantMappings.filter(({ approved, matchConfidence }) => approved && matchConfidence.startsWith('exact-')).length < 25) throw new Error('At least 25 exact Kroger mappings required.');
-  if (release.datasets.offerObservations.some(({ priceAmount, availability }) => priceAmount === null && availability !== 'unknown')) throw new Error('Missing Kroger fields must normalize to unknown.');
+  const availabilityStates = new Set(['available', 'unavailable', 'unknown', 'product-absent', 'fulfillment-unsupported', 'provider-error', 'mapping-rejected', 'stale']);
+  if (release.datasets.offerObservations.some(({ availability }) => !availabilityStates.has(availability))) throw new Error('Unsupported Kroger availability state.');
+  if (release.datasets.offerObservations.some(({ availability, providerInventoryState }) => availability === 'unavailable' && !providerInventoryState)) throw new Error('Kroger unavailable state requires explicit provider inventory evidence.');
   if (active.length < release.manifest.sources.length) throw new Error('Release source policies are incomplete.');
   process.stdout.write(`Data validation passed for ${release.manifest.releaseId}: ${active.length} active source policies, ${release.packets.length} packets, Best Buy excluded.\n`);
 } else if (command === 'plan') {
@@ -104,6 +107,10 @@ if (command === 'status') {
   writeFileSync(path.join(staging, 'source-envelope.json'), stableJson(envelope), { flag: 'wx' });
   writeFileSync(path.join(staging, 'import-receipt.json'), stableJson({ schemaVersion: '1.0.0', provider, operation: envelope.operation, envelopeDigest: digest(envelope), importedAt: envelope.retrievedAt, state: 'validated-staging' }), { flag: 'wx' });
   process.stdout.write(`Validated ${provider} envelope into isolated staging for ${releaseId}; no accepted release was mutated.\n`);
+} else if (command === 'finalize') {
+  const releaseId = valueFor('--release');
+  if (!releaseId) throw new Error('Usage: data:finalize -- --release <new-release-id>');
+  process.stdout.write(`${stableJson(finalizeStagedRelease(releaseId))}`);
 } else if (command === 'refresh' || command === 'refresh-all') {
   const provider = command === 'refresh' ? valueFor('--provider') : null;
   if (provider && !ALLOWED_PROVIDERS.includes(provider)) throw new Error(`Unknown provider: ${provider}`);
@@ -146,5 +153,5 @@ if (command === 'status') {
   });
   process.stdout.write(`${stableJson(pointer)}`);
 } else {
-  throw new Error('Usage: cli.mjs status|coverage|list-sources|validate|plan|import|refresh|refresh-all|diff|promote|rollback');
+  throw new Error('Usage: cli.mjs status|coverage|list-sources|validate|plan|import|finalize|refresh|refresh-all|diff|promote|rollback');
 }

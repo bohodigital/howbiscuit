@@ -11,6 +11,10 @@ npm run kroger:research -- packet-candidate --packet kroger-staple-basket
 
 The query-plan command accepts only a bounded safe term and a governed location, specifies the allowlisted response fields, forbids customer authorization, and performs no provider call. Execute the plan through the Local1 broker. Ingest the sanitized envelope into a new immutable release.
 
-Approval remains exact-match-only: retailer SKU or GTIN, title, brand where applicable, and exact package size. Probable or rejected candidates stay in `unresolvedMappings`. Missing price, fulfillment, or inventory becomes `unknown`, never “out of stock.” Canonical product creation remains a separate explicit approval action.
+Approval remains exact-match-only: retailer SKU or GTIN, title, brand where applicable, and exact package size. Probable or rejected candidates stay in `unresolvedMappings`. Missing price, fulfillment, or inventory becomes `unknown`; unavailable requires an explicit provider inventory state. Canonical product creation remains a separate explicit approval action.
 
-The current broker omits nested Kroger item price, fulfillment, and inventory fields. Public live Kroger price comparison therefore remains disabled. Existing ordinary unpaid Kroger destinations remain separate from this internal research workflow.
+The accepted release contains dated store-scoped price, fulfillment, and
+inventory observations for the governed exact mappings. They remain
+`internal-only`; public live Kroger price comparison remains disabled. Existing
+ordinary unpaid Kroger destinations remain separate from this internal research
+workflow.

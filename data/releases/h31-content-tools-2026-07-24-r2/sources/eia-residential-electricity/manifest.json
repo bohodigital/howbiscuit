@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "7a32ab530f6fdd84b5f66c77ceb554d702795a022c72d2a42534e5550e0ba8a4",
+  "envelopePath": "sources/eia-residential-electricity/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "647552804f0aa505e628890636e0091ab1e4a9cbb527169aea8561ef5f8e6cbc",
+  "operation": "series_observations",
+  "providerId": "eia",
+  "recordCount": 51,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "eia",
+  "sourceId": "eia-residential-electricity"
+}

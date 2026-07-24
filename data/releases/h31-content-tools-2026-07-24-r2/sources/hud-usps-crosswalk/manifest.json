@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "491d598b474b5072530ed2dd42b20d1ba2b2e05fbcefbf8bc13b9765495a851c",
+  "envelopePath": "sources/hud-usps-crosswalk/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af",
+  "operation": "zip-crosswalk",
+  "providerId": "hud",
+  "recordCount": 55,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "hud",
+  "sourceId": "hud-usps-crosswalk"
+}

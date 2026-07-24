@@ -1,0 +1,11 @@
+{
+  "brokerOnly": true,
+  "maximumRecords": 2000,
+  "operation": "zip-crosswalk",
+  "parameters": {
+    "limit": 100,
+    "zips": "approved-static-set"
+  },
+  "providerId": "hud",
+  "schemaVersion": "1.0.0"
+}

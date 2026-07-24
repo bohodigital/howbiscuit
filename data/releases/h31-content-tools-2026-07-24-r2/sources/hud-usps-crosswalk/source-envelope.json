@@ -1,0 +1,573 @@
+{
+  "contentDigest": "55f05aba6ba526c375bc411a708aaeaa397739c3d4700be4fee503cfdbdaf613",
+  "operation": "zip-crosswalk",
+  "parameters": {
+    "limit": 100,
+    "zips": "approved-static-set"
+  },
+  "providerId": "hud",
+  "quota": {
+    "remaining": null,
+    "state": "broker-managed"
+  },
+  "records": [
+    {
+      "city": "BOSTON",
+      "geographyId": "14460",
+      "geographyType": "cbsa",
+      "id": "hud-02108-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "MA",
+      "zip": "02108"
+    },
+    {
+      "city": "BOSTON",
+      "geographyId": "25025",
+      "geographyType": "county",
+      "id": "hud-02108-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "MA",
+      "zip": "02108"
+    },
+    {
+      "city": "NEW YORK",
+      "geographyId": "35620",
+      "geographyType": "cbsa",
+      "id": "hud-10001-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "NY",
+      "zip": "10001"
+    },
+    {
+      "city": "NEW YORK",
+      "geographyId": "36061",
+      "geographyType": "county",
+      "id": "hud-10001-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "NY",
+      "zip": "10001"
+    },
+    {
+      "city": "WASHINGTON",
+      "geographyId": "47900",
+      "geographyType": "cbsa",
+      "id": "hud-20001-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "DC",
+      "zip": "20001"
+    },
+    {
+      "city": "WASHINGTON",
+      "geographyId": "11001",
+      "geographyType": "county",
+      "id": "hud-20001-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "DC",
+      "zip": "20001"
+    },
+    {
+      "city": "ATLANTA",
+      "geographyId": "12060",
+      "geographyType": "cbsa",
+      "id": "hud-30303-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "GA",
+      "zip": "30303"
+    },
+    {
+      "city": "ATLANTA",
+      "geographyId": "13121",
+      "geographyType": "county",
+      "id": "hud-30303-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "GA",
+      "zip": "30303"
+    },
+    {
+      "city": "MIAMI",
+      "geographyId": "33100",
+      "geographyType": "cbsa",
+      "id": "hud-33130-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "FL",
+      "zip": "33130"
+    },
+    {
+      "city": "MIAMI",
+      "geographyId": "12086",
+      "geographyType": "county",
+      "id": "hud-33130-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "FL",
+      "zip": "33130"
+    },
+    {
+      "city": "EAST CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46312-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46312"
+    },
+    {
+      "city": "EAST CHICAGO",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46312-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46312"
+    },
+    {
+      "city": "HAMMOND",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46320-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46320"
+    },
+    {
+      "city": "HAMMOND",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46320-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46320"
+    },
+    {
+      "city": "PORTAGE",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46368-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46368"
+    },
+    {
+      "city": "PORTAGE",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46368-county-18089",
+      "residentialRatio": 0.000050787201625190454,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46368"
+    },
+    {
+      "city": "PORTAGE",
+      "geographyId": "18127",
+      "geographyType": "county",
+      "id": "hud-46368-county-18127",
+      "residentialRatio": 0.9999492127983748,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46368"
+    },
+    {
+      "city": "GARY",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46402-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46402"
+    },
+    {
+      "city": "GARY",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46402-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46402"
+    },
+    {
+      "city": "FORT WAYNE",
+      "geographyId": "23060",
+      "geographyType": "cbsa",
+      "id": "hud-46802-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46802"
+    },
+    {
+      "city": "FORT WAYNE",
+      "geographyId": "18003",
+      "geographyType": "county",
+      "id": "hud-46802-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46802"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60010-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60010-county-17031",
+      "residentialRatio": 0.41789608723540733,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17089",
+      "geographyType": "county",
+      "id": "hud-60010-county-17089",
+      "residentialRatio": 0.0025657472738935213,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17097",
+      "geographyType": "county",
+      "id": "hud-60010-county-17097",
+      "residentialRatio": 0.527421423989737,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17111",
+      "geographyType": "county",
+      "id": "hud-60010-county-17111",
+      "residentialRatio": 0.052116741500962155,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "EVANSTON",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60201-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60201"
+    },
+    {
+      "city": "EVANSTON",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60201-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60201"
+    },
+    {
+      "city": "CALUMET CITY",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60409-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60409"
+    },
+    {
+      "city": "CALUMET CITY",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60409-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60409"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60439-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60439-county-17031",
+      "residentialRatio": 0.9239031494629528,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "17043",
+      "geographyType": "county",
+      "id": "hud-60439-county-17043",
+      "residentialRatio": 0.05843801201529219,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "17197",
+      "geographyType": "county",
+      "id": "hud-60439-county-17197",
+      "residentialRatio": 0.017658838521754962,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "WILLOWBROOK",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60527-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60527"
+    },
+    {
+      "city": "WILLOWBROOK",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60527-county-17031",
+      "residentialRatio": 0.14210309843707156,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60527"
+    },
+    {
+      "city": "WILLOWBROOK",
+      "geographyId": "17043",
+      "geographyType": "county",
+      "id": "hud-60527-county-17043",
+      "residentialRatio": 0.8578969015629284,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60527"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60601-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60601"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60601-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60601"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60614-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60614"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60614-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60614"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60647-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60647"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60647-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60647"
+    },
+    {
+      "city": "DALLAS",
+      "geographyId": "19100",
+      "geographyType": "cbsa",
+      "id": "hud-75201-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "75201"
+    },
+    {
+      "city": "DALLAS",
+      "geographyId": "48113",
+      "geographyType": "county",
+      "id": "hud-75201-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "75201"
+    },
+    {
+      "city": "HOUSTON",
+      "geographyId": "26420",
+      "geographyType": "cbsa",
+      "id": "hud-77002-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "77002"
+    },
+    {
+      "city": "HOUSTON",
+      "geographyId": "48201",
+      "geographyType": "county",
+      "id": "hud-77002-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "77002"
+    },
+    {
+      "city": "DENVER",
+      "geographyId": "19740",
+      "geographyType": "cbsa",
+      "id": "hud-80202-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "CO",
+      "zip": "80202"
+    },
+    {
+      "city": "DENVER",
+      "geographyId": "08031",
+      "geographyType": "county",
+      "id": "hud-80202-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "CO",
+      "zip": "80202"
+    },
+    {
+      "city": "PHOENIX",
+      "geographyId": "38060",
+      "geographyType": "cbsa",
+      "id": "hud-85004-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "AZ",
+      "zip": "85004"
+    },
+    {
+      "city": "PHOENIX",
+      "geographyId": "04013",
+      "geographyType": "county",
+      "id": "hud-85004-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "AZ",
+      "zip": "85004"
+    },
+    {
+      "city": "LOS ANGELES",
+      "geographyId": "31080",
+      "geographyType": "cbsa",
+      "id": "hud-90012-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "CA",
+      "zip": "90012"
+    },
+    {
+      "city": "LOS ANGELES",
+      "geographyId": "06037",
+      "geographyType": "county",
+      "id": "hud-90012-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "CA",
+      "zip": "90012"
+    },
+    {
+      "city": "SEATTLE",
+      "geographyId": "42660",
+      "geographyType": "cbsa",
+      "id": "hud-98101-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "WA",
+      "zip": "98101"
+    },
+    {
+      "city": "SEATTLE",
+      "geographyId": "53033",
+      "geographyType": "county",
+      "id": "hud-98101-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "WA",
+      "zip": "98101"
+    }
+  ],
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "attribution": "HUD USER USPS ZIP Code Crosswalk",
+    "documentationUrl": "https://www.huduser.gov/portal/dataset/uspszip-api.html"
+  },
+  "truncated": false,
+  "warnings": []
+}

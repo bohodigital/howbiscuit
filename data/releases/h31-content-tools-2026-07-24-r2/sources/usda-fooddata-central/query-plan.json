@@ -1,0 +1,16 @@
+{
+  "brokerOnly": true,
+  "execution": {
+    "brokerApiId": "data_gov",
+    "brokerOperation": "fooddata_get",
+    "parameterName": "fdc_id"
+  },
+  "maximumRecords": 2000,
+  "operation": "fooddata_get",
+  "parameters": {
+    "fdcIds": "168877,169593,169736,170051,170393,171265,171287,171413,172804,173410,173468,173904,175040,175188,746784,789890,1750340",
+    "perRequestLimit": 1
+  },
+  "providerId": "fooddata",
+  "schemaVersion": "1.0.0"
+}

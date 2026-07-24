@@ -1,0 +1,20 @@
+[
+  {
+    "candidateProductId": "baking-soda-generic",
+    "createdAt": "2026-07-24T03:50:39Z",
+    "decision": "rejected",
+    "id": "kroger-unresolved-baking-powder-as-soda",
+    "merchantProductId": "0003997803392",
+    "reason": "Rejected: product title identifies baking powder, not baking soda.",
+    "sourceId": "kroger"
+  },
+  {
+    "candidateProductId": "large-eggs-generic",
+    "createdAt": "2026-07-24T03:50:39Z",
+    "decision": "review",
+    "id": "kroger-unresolved-egg-title-singular",
+    "merchantProductId": "0071514150349",
+    "reason": "Exact package identity retained, but title grammar alone is insufficient for a generic food equivalence claim.",
+    "sourceId": "kroger"
+  }
+]

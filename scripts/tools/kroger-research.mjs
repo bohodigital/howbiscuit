@@ -31,8 +31,8 @@ if (command === 'status') {
     schemaVersion: '1.0.0',
     brokerOnly: true,
     providerId: 'kroger',
-    operation: 'product_search',
-    parameters: { term, locationId: locationRecord.merchantLocationId, limit: 20 },
+    operation: 'search_products',
+    parameters: { term, location_id: locationRecord.merchantLocationId, limit: 20 },
     allowedResponseFields: ['productId', 'upc', 'brand', 'description', 'size', 'price', 'fulfillment', 'inventory'],
     customerAuthorization: false,
     writesCanonicalProducts: false,
@@ -46,7 +46,7 @@ if (command === 'status') {
     rules: [
       'Approve only exact retailer SKU or exact GTIN identity.',
       'Never relax a probable match into an approval.',
-      'Missing price or inventory remains unknown, never out of stock.',
+      'Missing price or inventory remains unknown; unavailable requires an explicit provider inventory state.',
       'Canonical product creation requires a separate explicit approval record.',
     ],
   })}`);

@@ -1,10 +1,10 @@
 # U.S. rice production trend
 
 Packet ID: `rice-production-trend`
-Release: `h31-content-tools-2026-07-24`
+Release: `h31-content-tools-2026-07-24-r2`
 Status: **validated / approved**
 Reviewer: `howbiscuit-h3.1-work-order`
-Generated: 2026-07-24T03:53:57Z
+Generated: 2026-07-24T05:10:41Z
 Review due: 2026-10-24T00:00:00Z
 
 ## Research question
@@ -43,7 +43,7 @@ Limitations: Historical aggregate or identity evidence only; retain the stated g
 
 ## Freshness and disclosure
 
-Cadence: quarterly. Staleness: current as of 2026-07-24T03:53:57Z.
+Cadence: quarterly. Staleness: current as of 2026-07-24T05:10:41Z.
 
 This static research packet uses approved historical source records and makes no provider call during page load.
 

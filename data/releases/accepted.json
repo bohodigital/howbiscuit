@@ -1,8 +1,8 @@
 {
-  "previousReleaseId": null,
-  "promotedAt": "2026-07-24T04:00:00Z",
+  "previousReleaseId": "h31-content-tools-2026-07-24",
+  "promotedAt": "2026-07-24T05:10:41Z",
   "reason": "validated-release-promotion",
-  "releaseDigest": "247e73890d3581ed0273dfc95fe03993008ddd3b625d6a038b090cae6ff69576",
-  "releaseId": "h31-content-tools-2026-07-24",
+  "releaseDigest": "daf8d23dc338b209179a769805f8a6182bbd842e8206cd9d694a0d7428da0b7a",
+  "releaseId": "h31-content-tools-2026-07-24-r2",
   "schemaVersion": "1.0.0"
 }

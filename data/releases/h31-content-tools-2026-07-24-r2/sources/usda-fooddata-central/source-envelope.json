@@ -1,0 +1,1826 @@
+{
+  "contentDigest": "10d29e2d1f188c7dd76be40a30d96e53cda54da8295edc87159e32a09902a74a",
+  "operation": "fooddata_get_batch",
+  "parameters": {
+    "fdcIds": "168877,169593,169736,170051,170393,171265,171287,171413,172804,173410,173468,173904,175040,175188,746784,789890,1750340",
+    "perRequestLimit": 1
+  },
+  "providerId": "fooddata",
+  "quota": {
+    "remaining": 3560,
+    "state": "reported"
+  },
+  "records": [
+    {
+      "dataType": "SR Legacy",
+      "description": "Rice, white, long-grain, regular, raw, enriched",
+      "fdcId": 168877,
+      "foodCategory": "Cereal Grains and Pasta",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:34Z"
+    },
+    {
+      "amount": 365,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 7.13,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.66,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 79.95,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1.3,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.12,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 28,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 4.31,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 115,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 5,
+      "basis": "100 g",
+      "fdcId": 168877,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Cocoa, dry powder, unsweetened",
+      "fdcId": 169593,
+      "foodCategory": "Sweets",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:33Z"
+    },
+    {
+      "amount": 228,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 19.6,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 13.7,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 57.9,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 37,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1.75,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 128,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 13.86,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 1524,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 21,
+      "basis": "100 g",
+      "fdcId": 169593,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:33Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Tomatoes, red, ripe, canned, packed in tomato juice",
+      "fdcId": 170051,
+      "foodCategory": "Vegetables and Vegetable Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:35Z"
+    },
+    {
+      "amount": 16,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0.79,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.25,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 3.47,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1.9,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 2.55,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 33,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.57,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 191,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 115,
+      "basis": "100 g",
+      "fdcId": 170051,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:35Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Egg, whole, raw, fresh",
+      "fdcId": 171287,
+      "foodCategory": "Dairy and Egg Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:34Z"
+    },
+    {
+      "amount": 143,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 12.56,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 9.51,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.72,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.37,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 56,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 1.75,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 138,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 142,
+      "basis": "100 g",
+      "fdcId": 171287,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:34Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Oil, olive, salad or cooking",
+      "fdcId": 171413,
+      "foodCategory": "Fats and Oils",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:45Z"
+    },
+    {
+      "amount": 884,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 100,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.56,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 1,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 2,
+      "basis": "100 g",
+      "fdcId": 171413,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:45Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Leavening agents, baking powder, double-acting, straight phosphate",
+      "fdcId": 172804,
+      "foodCategory": "Baked Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:42Z"
+    },
+    {
+      "amount": 51,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0.1,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 24.1,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.2,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 7364,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 11.27,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 5,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 7893,
+      "basis": "100 g",
+      "fdcId": 172804,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:42Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Butter, salted",
+      "fdcId": 173410,
+      "foodCategory": "Dairy and Egg Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:39Z"
+    },
+    {
+      "amount": 717,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0.85,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 81.11,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.06,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.06,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 24,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.02,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 24,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 643,
+      "basis": "100 g",
+      "fdcId": 173410,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:39Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Salt, table",
+      "fdcId": 173468,
+      "foodCategory": "Spices and Herbs",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:40Z"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 24,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.33,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 8,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 38758,
+      "basis": "100 g",
+      "fdcId": 173468,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:40Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Cereals, oats, regular and quick, not fortified, dry",
+      "fdcId": 173904,
+      "foodCategory": "Breakfast Cereals",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:49Z"
+    },
+    {
+      "amount": 379,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 13.15,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 6.52,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 67.7,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 10.1,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.99,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 52,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 4.25,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 362,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 6,
+      "basis": "100 g",
+      "fdcId": 173904,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Leavening agents, baking soda",
+      "fdcId": 175040,
+      "foodCategory": "Baked Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:49Z"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 27360,
+      "basis": "100 g",
+      "fdcId": 175040,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:49Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Beans, black turtle, mature seeds, canned",
+      "fdcId": 175188,
+      "foodCategory": "Legumes and Legume Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:54Z"
+    },
+    {
+      "amount": 91,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 6.03,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.29,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 16.55,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 6.9,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.23,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 35,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 1.9,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 308,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 384,
+      "basis": "100 g",
+      "fdcId": 175188,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:54Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Pasta, dry, enriched",
+      "fdcId": 169736,
+      "foodCategory": "Cereal Grains and Pasta",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:07:51Z"
+    },
+    {
+      "amount": 371,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 13.04,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1.51,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 74.67,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 3.2,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 2.67,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 21,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 3.3,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 223,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 6,
+      "basis": "100 g",
+      "fdcId": 169736,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:07:51Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "Foundation",
+      "description": "Sugars, granulated",
+      "fdcId": 746784,
+      "foodCategory": "Sweets",
+      "publicationDate": "2019-12-16",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:08:07Z"
+    },
+    {
+      "amount": 385,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.32,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 99.6,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.05,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 2,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 1,
+      "basis": "100 g",
+      "fdcId": 746784,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:07Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "Foundation",
+      "description": "Flour, wheat, all-purpose, enriched, bleached",
+      "fdcId": 789890,
+      "foodCategory": "Cereal Grains and Pasta",
+      "publicationDate": "2020-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:08:03Z"
+    },
+    {
+      "amount": 366,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 10.9,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 1.48,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 77.3,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 19,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 5.62,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 136,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 2,
+      "basis": "100 g",
+      "fdcId": 789890,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:03Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "Foundation",
+      "description": "Apples, fuji, with skin, raw",
+      "fdcId": 1750340,
+      "foodCategory": "Fruits and Fruit Juices",
+      "publicationDate": "2020-10-30",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:08:01Z"
+    },
+    {
+      "amount": 0.1484375,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.1625,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 15.6511625,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 2.075,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 13.33,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 5.975,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.015,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 103.8,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 1.013,
+      "basis": "100 g",
+      "fdcId": 1750340,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:01Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Carrots, raw",
+      "fdcId": 170393,
+      "foodCategory": "Vegetables and Vegetable Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:08:11Z"
+    },
+    {
+      "amount": 41,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 0.93,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0.24,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 9.58,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 2.8,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 4.74,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 33,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.3,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 320,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 69,
+      "basis": "100 g",
+      "fdcId": 170393,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:08:11Z",
+      "unitName": "mg"
+    },
+    {
+      "dataType": "SR Legacy",
+      "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "fdcId": 171265,
+      "foodCategory": "Dairy and Egg Products",
+      "publicationDate": "2019-04-01",
+      "recordType": "food",
+      "retrievedAt": "2026-07-24T05:10:39Z"
+    },
+    {
+      "amount": 61,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1008,
+      "nutrientName": "Energy",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "kcal"
+    },
+    {
+      "amount": 3.15,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1003,
+      "nutrientName": "Protein",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 3.25,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1004,
+      "nutrientName": "Total lipid (fat)",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 4.8,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1005,
+      "nutrientName": "Carbohydrate, by difference",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 0,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1079,
+      "nutrientName": "Fiber, total dietary",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 5.05,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 2000,
+      "nutrientName": "Total Sugars",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "g"
+    },
+    {
+      "amount": 113,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1087,
+      "nutrientName": "Calcium, Ca",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 0.03,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1089,
+      "nutrientName": "Iron, Fe",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 132,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1092,
+      "nutrientName": "Potassium, K",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "mg"
+    },
+    {
+      "amount": 43,
+      "basis": "100 g",
+      "fdcId": 171265,
+      "nutrientId": 1093,
+      "nutrientName": "Sodium, Na",
+      "recordType": "nutrient",
+      "retrievedAt": "2026-07-24T05:10:39Z",
+      "unitName": "mg"
+    }
+  ],
+  "retrievedAt": "2026-07-24T05:10:39Z",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "attribution": "USDA FoodData Central",
+    "documentationUrl": "https://fdc.nal.usda.gov/api-guide.html"
+  },
+  "truncated": false,
+  "warnings": []
+}

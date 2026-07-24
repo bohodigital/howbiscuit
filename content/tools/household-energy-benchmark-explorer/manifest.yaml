@@ -12,7 +12,7 @@ approval:
   reviewer: howbiscuit-h3.1-work-order
   approvedAt: 2026-07-23
 sourceReleaseIds:
-  - h31-content-tools-2026-07-24
+  - h31-content-tools-2026-07-24-r2
 researchPacketIds:
   - electricity-il-vs-us
   - electricity-in-vs-us

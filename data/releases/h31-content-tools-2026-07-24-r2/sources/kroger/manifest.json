@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "96843a37f6f7578a432b84a0a7abcfd65228bb5415556d5e6ce71e1dd85faeea",
+  "envelopePath": "sources/kroger/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "d9cfcb38452ebd1ba79ead149c0d552b80179ddd6232818ee1310fbd5738fe8f",
+  "operation": "search_products",
+  "providerId": "kroger",
+  "recordCount": 61,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T05:10:41Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "kroger",
+  "sourceId": "kroger"
+}

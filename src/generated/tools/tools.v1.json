@@ -1,5 +1,5 @@
 {
-  "releaseId": "h31-content-tools-2026-07-24",
+  "releaseId": "h31-content-tools-2026-07-24-r2",
   "schemaVersion": "1.0.0",
   "tools": [
     {
@@ -113,7 +113,7 @@
       "inputPrivacy": "bounded-public-enum-not-recorded",
       "kind": "tool",
       "noJavaScriptFallback": "complete-static-table",
-      "packageDigest": "6fc664be4d7db59274b20223150e71cf8ac135d2f795e0ebb8ffeaa6795b37b0",
+      "packageDigest": "41a5dfc95a021b896b82e0ff6eb3f8a55e618a80b95a70dd09912437a2147ede",
       "preview": false,
       "publicationStatus": "published",
       "redirectState": null,
@@ -123,8 +123,8 @@
       "relatedTools": [
         "/tools/us-crop-production-trend-explorer/"
       ],
-      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:3f9a7875b3981e1d238d3f5eede859bdb9bc803f11567cfc16ec8891e5054274:34fb44947ea5713f3ca79bbdde3bc6727232ad49744ed83360aa8a24cf40afab:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:a27070126268f7947b6dc28855931fa14bc15f1b62868704eab141ba0df3be3a:29b33ac39c03ad9a311770331a1c0f94a4b15f6a54753ed15cf0f1ac348bf14c:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "requiresJavaScript": false,
       "researchPacketIds": [
         "butter-market-basis",
@@ -352,7 +352,7 @@
       ],
       "sourcePath": "content/tools/agricultural-market-context-browser/manifest.yaml",
       "sourceReleaseIds": [
-        "h31-content-tools-2026-07-24"
+        "h31-content-tools-2026-07-24-r2"
       ],
       "thin": false,
       "title": "Agricultural Market Context Browser",
@@ -472,7 +472,7 @@
       "inputPrivacy": "bounded-public-enum-not-recorded",
       "kind": "tool",
       "noJavaScriptFallback": "complete-static-table",
-      "packageDigest": "604038c32ddd3fb1328e8579e924c7be68048b331e5fa073c8cd08f8723f55fe",
+      "packageDigest": "fe960d8c24e3fe6611c2446271ea41c16154255d0ea3f1acaec2f727cf33ccd4",
       "preview": false,
       "publicationStatus": "published",
       "redirectState": null,
@@ -482,8 +482,8 @@
       "relatedTools": [
         "/tools/zip-to-metro-relationship-explainer/"
       ],
-      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:3f9a7875b3981e1d238d3f5eede859bdb9bc803f11567cfc16ec8891e5054274:34fb44947ea5713f3ca79bbdde3bc6727232ad49744ed83360aa8a24cf40afab:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:a27070126268f7947b6dc28855931fa14bc15f1b62868704eab141ba0df3be3a:29b33ac39c03ad9a311770331a1c0f94a4b15f6a54753ed15cf0f1ac348bf14c:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "requiresJavaScript": false,
       "researchPacketIds": [
         "electricity-il-vs-us",
@@ -1805,7 +1805,7 @@
       ],
       "sourcePath": "content/tools/household-energy-benchmark-explorer/manifest.yaml",
       "sourceReleaseIds": [
-        "h31-content-tools-2026-07-24"
+        "h31-content-tools-2026-07-24-r2"
       ],
       "thin": false,
       "title": "Household Energy Benchmark Explorer",
@@ -1917,7 +1917,7 @@
       "inputPrivacy": "bounded-public-enum-not-recorded",
       "kind": "tool",
       "noJavaScriptFallback": "complete-static-table",
-      "packageDigest": "b427b2136f79275784c5ebb16b9f8b2efc21fc3fdab42e528e9f1e9974df2f67",
+      "packageDigest": "5b89d5b9f2bce9de6581b76e59e5328665443560fe5dc0d67a4ee54bbab92013",
       "preview": false,
       "publicationStatus": "published",
       "redirectState": null,
@@ -1927,8 +1927,8 @@
       "relatedTools": [
         "/tools/agricultural-market-context-browser/"
       ],
-      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:3f9a7875b3981e1d238d3f5eede859bdb9bc803f11567cfc16ec8891e5054274:34fb44947ea5713f3ca79bbdde3bc6727232ad49744ed83360aa8a24cf40afab:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:a27070126268f7947b6dc28855931fa14bc15f1b62868704eab141ba0df3be3a:29b33ac39c03ad9a311770331a1c0f94a4b15f6a54753ed15cf0f1ac348bf14c:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "requiresJavaScript": false,
       "researchPacketIds": [
         "corn-production-trend",
@@ -2488,7 +2488,7 @@
       ],
       "sourcePath": "content/tools/us-crop-production-trend-explorer/manifest.yaml",
       "sourceReleaseIds": [
-        "h31-content-tools-2026-07-24"
+        "h31-content-tools-2026-07-24-r2"
       ],
       "thin": false,
       "title": "U.S. Crop Production Trend Explorer",
@@ -2525,21 +2525,23 @@
             "label": "Approved food identity",
             "maximumOptions": 100,
             "options": [
-              "Beans, black turtle, canned",
+              "Apples, fuji, with skin, raw",
+              "Beans, black turtle, mature seeds, canned",
               "Butter, salted",
+              "Carrots, raw",
+              "Cereals, oats, regular and quick, not fortified, dry",
               "Cocoa, dry powder, unsweetened",
               "Egg, whole, raw, fresh",
               "Flour, wheat, all-purpose, enriched, bleached",
-              "Leavening agents, baking powder",
+              "Leavening agents, baking powder, double-acting, straight phosphate",
               "Leavening agents, baking soda",
               "Milk, whole, 3.25% milkfat, with added vitamin D",
-              "Oats",
               "Oil, olive, salad or cooking",
-              "Pasta, spaghetti, dry, enriched",
+              "Pasta, dry, enriched",
               "Rice, white, long-grain, regular, raw, enriched",
               "Salt, table",
               "Sugars, granulated",
-              "Tomatoes, canned, packed in tomato juice"
+              "Tomatoes, red, ripe, canned, packed in tomato juice"
             ],
             "sensitive": false,
             "type": "select"
@@ -2598,7 +2600,7 @@
       "inputPrivacy": "bounded-public-enum-not-recorded",
       "kind": "tool",
       "noJavaScriptFallback": "complete-static-table",
-      "packageDigest": "cf23a43b4559b90cba65dd09dfb2868babe3c46650e499bc0888c3826691d4cb",
+      "packageDigest": "d6822f55f6f17c710bc180276bf9cd0025f73d23327163576a72c3adf0d2a601",
       "preview": false,
       "publicationStatus": "published",
       "redirectState": null,
@@ -2608,8 +2610,8 @@
       "relatedTools": [
         "/tools/agricultural-market-context-browser/"
       ],
-      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:3f9a7875b3981e1d238d3f5eede859bdb9bc803f11567cfc16ec8891e5054274:34fb44947ea5713f3ca79bbdde3bc6727232ad49744ed83360aa8a24cf40afab:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:a27070126268f7947b6dc28855931fa14bc15f1b62868704eab141ba0df3be3a:29b33ac39c03ad9a311770331a1c0f94a4b15f6a54753ed15cf0f1ac348bf14c:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "requiresJavaScript": false,
       "researchPacketIds": [
         "baking-staples-identities",
@@ -2624,10 +2626,11 @@
           "dataType": "SR Legacy",
           "description": "Rice, white, long-grain, regular, raw, enriched",
           "fdcId": 168877,
+          "foodCategory": "Cereal Grains and Pasta",
           "id": "fdc-168877",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 7.13 g per 100 g; Total lipid (fat): 0.66 g per 100 g; Carbohydrate, by difference: 79.95 g per 100 g; Energy: 365 kcal per 100 g; Fiber, total dietary: 1.3 g per 100 g; Calcium, Ca: 28 mg per 100 g; Iron, Fe: 4.31 mg per 100 g; Potassium, K: 115 mg per 100 g; Sodium, Na: 5 mg per 100 g; Total Sugars: 0.12 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:34Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2635,21 +2638,59 @@
           "dataType": "SR Legacy",
           "description": "Cocoa, dry powder, unsweetened",
           "fdcId": 169593,
+          "foodCategory": "Sweets",
           "id": "fdc-169593",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 19.6 g per 100 g; Total lipid (fat): 13.7 g per 100 g; Carbohydrate, by difference: 57.9 g per 100 g; Energy: 228 kcal per 100 g; Fiber, total dietary: 37 g per 100 g; Calcium, Ca: 128 mg per 100 g; Iron, Fe: 13.86 mg per 100 g; Potassium, K: 1524 mg per 100 g; Sodium, Na: 21 mg per 100 g; Total Sugars: 1.75 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:33Z",
           "sourceId": "usda-fooddata-central"
         },
         {
           "classification": "generic",
           "dataType": "SR Legacy",
-          "description": "Tomatoes, canned, packed in tomato juice",
+          "description": "Pasta, dry, enriched",
+          "fdcId": 169736,
+          "foodCategory": "Cereal Grains and Pasta",
+          "id": "fdc-169736",
+          "nutrients": "Protein: 13.04 g per 100 g; Total lipid (fat): 1.51 g per 100 g; Carbohydrate, by difference: 74.67 g per 100 g; Energy: 371 kcal per 100 g; Fiber, total dietary: 3.2 g per 100 g; Calcium, Ca: 21 mg per 100 g; Iron, Fe: 3.3 mg per 100 g; Potassium, K: 223 mg per 100 g; Sodium, Na: 6 mg per 100 g; Total Sugars: 2.67 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:51Z",
+          "sourceId": "usda-fooddata-central"
+        },
+        {
+          "classification": "generic",
+          "dataType": "SR Legacy",
+          "description": "Tomatoes, red, ripe, canned, packed in tomato juice",
           "fdcId": 170051,
+          "foodCategory": "Vegetables and Vegetable Products",
           "id": "fdc-170051",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0.79 g per 100 g; Total lipid (fat): 0.25 g per 100 g; Carbohydrate, by difference: 3.47 g per 100 g; Energy: 16 kcal per 100 g; Fiber, total dietary: 1.9 g per 100 g; Calcium, Ca: 33 mg per 100 g; Iron, Fe: 0.57 mg per 100 g; Potassium, K: 191 mg per 100 g; Sodium, Na: 115 mg per 100 g; Total Sugars: 2.55 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:35Z",
+          "sourceId": "usda-fooddata-central"
+        },
+        {
+          "classification": "generic",
+          "dataType": "SR Legacy",
+          "description": "Carrots, raw",
+          "fdcId": 170393,
+          "foodCategory": "Vegetables and Vegetable Products",
+          "id": "fdc-170393",
+          "nutrients": "Protein: 0.93 g per 100 g; Total lipid (fat): 0.24 g per 100 g; Carbohydrate, by difference: 9.58 g per 100 g; Energy: 41 kcal per 100 g; Fiber, total dietary: 2.8 g per 100 g; Calcium, Ca: 33 mg per 100 g; Iron, Fe: 0.3 mg per 100 g; Potassium, K: 320 mg per 100 g; Sodium, Na: 69 mg per 100 g; Total Sugars: 4.74 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:08:11Z",
+          "sourceId": "usda-fooddata-central"
+        },
+        {
+          "classification": "generic",
+          "dataType": "SR Legacy",
+          "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+          "fdcId": 171265,
+          "foodCategory": "Dairy and Egg Products",
+          "id": "fdc-171265",
+          "nutrients": "Protein: 3.15 g per 100 g; Total lipid (fat): 3.25 g per 100 g; Carbohydrate, by difference: 4.8 g per 100 g; Energy: 61 kcal per 100 g; Fiber, total dietary: 0 g per 100 g; Calcium, Ca: 113 mg per 100 g; Iron, Fe: 0.03 mg per 100 g; Potassium, K: 132 mg per 100 g; Sodium, Na: 43 mg per 100 g; Total Sugars: 5.05 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:10:39Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2657,10 +2698,11 @@
           "dataType": "SR Legacy",
           "description": "Egg, whole, raw, fresh",
           "fdcId": 171287,
+          "foodCategory": "Dairy and Egg Products",
           "id": "fdc-171287",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 12.56 g per 100 g; Total lipid (fat): 9.51 g per 100 g; Carbohydrate, by difference: 0.72 g per 100 g; Energy: 143 kcal per 100 g; Fiber, total dietary: 0 g per 100 g; Calcium, Ca: 56 mg per 100 g; Iron, Fe: 1.75 mg per 100 g; Potassium, K: 138 mg per 100 g; Sodium, Na: 142 mg per 100 g; Total Sugars: 0.37 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:34Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2668,21 +2710,23 @@
           "dataType": "SR Legacy",
           "description": "Oil, olive, salad or cooking",
           "fdcId": 171413,
+          "foodCategory": "Fats and Oils",
           "id": "fdc-171413",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0 g per 100 g; Total lipid (fat): 100 g per 100 g; Carbohydrate, by difference: 0 g per 100 g; Energy: 884 kcal per 100 g; Fiber, total dietary: 0 g per 100 g; Calcium, Ca: 1 mg per 100 g; Iron, Fe: 0.56 mg per 100 g; Potassium, K: 1 mg per 100 g; Sodium, Na: 2 mg per 100 g; Total Sugars: 0 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:45Z",
           "sourceId": "usda-fooddata-central"
         },
         {
           "classification": "generic",
           "dataType": "SR Legacy",
-          "description": "Leavening agents, baking powder",
+          "description": "Leavening agents, baking powder, double-acting, straight phosphate",
           "fdcId": 172804,
+          "foodCategory": "Baked Products",
           "id": "fdc-172804",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0.1 g per 100 g; Total lipid (fat): 0 g per 100 g; Carbohydrate, by difference: 24.1 g per 100 g; Energy: 51 kcal per 100 g; Fiber, total dietary: 0.2 g per 100 g; Calcium, Ca: 7364 mg per 100 g; Iron, Fe: 11.27 mg per 100 g; Potassium, K: 5 mg per 100 g; Sodium, Na: 7893 mg per 100 g; Total Sugars: 0 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:42Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2690,10 +2734,11 @@
           "dataType": "SR Legacy",
           "description": "Butter, salted",
           "fdcId": 173410,
+          "foodCategory": "Dairy and Egg Products",
           "id": "fdc-173410",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0.85 g per 100 g; Total lipid (fat): 81.11 g per 100 g; Carbohydrate, by difference: 0.06 g per 100 g; Energy: 717 kcal per 100 g; Fiber, total dietary: 0 g per 100 g; Calcium, Ca: 24 mg per 100 g; Iron, Fe: 0.02 mg per 100 g; Potassium, K: 24 mg per 100 g; Sodium, Na: 643 mg per 100 g; Total Sugars: 0.06 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:39Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2701,21 +2746,23 @@
           "dataType": "SR Legacy",
           "description": "Salt, table",
           "fdcId": 173468,
+          "foodCategory": "Spices and Herbs",
           "id": "fdc-173468",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0 g per 100 g; Total lipid (fat): 0 g per 100 g; Carbohydrate, by difference: 0 g per 100 g; Energy: 0 kcal per 100 g; Fiber, total dietary: 0 g per 100 g; Calcium, Ca: 24 mg per 100 g; Iron, Fe: 0.33 mg per 100 g; Potassium, K: 8 mg per 100 g; Sodium, Na: 38758 mg per 100 g; Total Sugars: 0 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:40Z",
           "sourceId": "usda-fooddata-central"
         },
         {
           "classification": "generic",
           "dataType": "SR Legacy",
-          "description": "Oats",
+          "description": "Cereals, oats, regular and quick, not fortified, dry",
           "fdcId": 173904,
+          "foodCategory": "Breakfast Cereals",
           "id": "fdc-173904",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 13.15 g per 100 g; Total lipid (fat): 6.52 g per 100 g; Carbohydrate, by difference: 67.7 g per 100 g; Energy: 379 kcal per 100 g; Fiber, total dietary: 10.1 g per 100 g; Calcium, Ca: 52 mg per 100 g; Iron, Fe: 4.25 mg per 100 g; Potassium, K: 362 mg per 100 g; Sodium, Na: 6 mg per 100 g; Total Sugars: 0.99 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:49Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2723,43 +2770,23 @@
           "dataType": "SR Legacy",
           "description": "Leavening agents, baking soda",
           "fdcId": 175040,
+          "foodCategory": "Baked Products",
           "id": "fdc-175040",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0 g per 100 g; Total lipid (fat): 0 g per 100 g; Carbohydrate, by difference: 0 g per 100 g; Energy: 0 kcal per 100 g; Fiber, total dietary: 0 g per 100 g; Calcium, Ca: 0 mg per 100 g; Iron, Fe: 0 mg per 100 g; Potassium, K: 0 mg per 100 g; Sodium, Na: 27360 mg per 100 g; Total Sugars: 0 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:49Z",
           "sourceId": "usda-fooddata-central"
         },
         {
           "classification": "generic",
           "dataType": "SR Legacy",
-          "description": "Beans, black turtle, canned",
+          "description": "Beans, black turtle, mature seeds, canned",
           "fdcId": 175188,
+          "foodCategory": "Legumes and Legume Products",
           "id": "fdc-175188",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
-          "sourceId": "usda-fooddata-central"
-        },
-        {
-          "classification": "generic",
-          "dataType": "Foundation",
-          "description": "Pasta, spaghetti, dry, enriched",
-          "fdcId": 2758998,
-          "id": "fdc-2758998",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
-          "sourceId": "usda-fooddata-central"
-        },
-        {
-          "classification": "generic",
-          "dataType": "Foundation",
-          "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
-          "fdcId": 746782,
-          "id": "fdc-746782",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 6.03 g per 100 g; Total lipid (fat): 0.29 g per 100 g; Carbohydrate, by difference: 16.55 g per 100 g; Energy: 91 kcal per 100 g; Fiber, total dietary: 6.9 g per 100 g; Calcium, Ca: 35 mg per 100 g; Iron, Fe: 1.9 mg per 100 g; Potassium, K: 308 mg per 100 g; Sodium, Na: 384 mg per 100 g; Total Sugars: 0.23 g per 100 g",
+          "publicationDate": "2019-04-01",
+          "retrievedAt": "2026-07-24T05:07:54Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2767,10 +2794,11 @@
           "dataType": "Foundation",
           "description": "Sugars, granulated",
           "fdcId": 746784,
+          "foodCategory": "Sweets",
           "id": "fdc-746784",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 0 g per 100 g; Total lipid (fat): 0.32 g per 100 g; Carbohydrate, by difference: 99.6 g per 100 g; Energy: 385 kcal per 100 g; Calcium, Ca: 1 mg per 100 g; Iron, Fe: 0.05 mg per 100 g; Potassium, K: 2 mg per 100 g; Sodium, Na: 1 mg per 100 g",
+          "publicationDate": "2019-12-16",
+          "retrievedAt": "2026-07-24T05:08:07Z",
           "sourceId": "usda-fooddata-central"
         },
         {
@@ -2778,10 +2806,23 @@
           "dataType": "Foundation",
           "description": "Flour, wheat, all-purpose, enriched, bleached",
           "fdcId": 789890,
+          "foodCategory": "Cereal Grains and Pasta",
           "id": "fdc-789890",
-          "nutrients": "No complete nutrient rows available",
-          "publicationDate": "Not supplied",
-          "retrievedAt": "2026-07-24T03:48:11Z",
+          "nutrients": "Protein: 10.9 g per 100 g; Total lipid (fat): 1.48 g per 100 g; Carbohydrate, by difference: 77.3 g per 100 g; Energy: 366 kcal per 100 g; Calcium, Ca: 19 mg per 100 g; Iron, Fe: 5.62 mg per 100 g; Potassium, K: 136 mg per 100 g; Sodium, Na: 2 mg per 100 g",
+          "publicationDate": "2020-04-01",
+          "retrievedAt": "2026-07-24T05:08:03Z",
+          "sourceId": "usda-fooddata-central"
+        },
+        {
+          "classification": "generic",
+          "dataType": "Foundation",
+          "description": "Apples, fuji, with skin, raw",
+          "fdcId": 1750340,
+          "foodCategory": "Fruits and Fruit Juices",
+          "id": "fdc-1750340",
+          "nutrients": "Protein: 0.1484375 g per 100 g; Total lipid (fat): 0.1625 g per 100 g; Carbohydrate, by difference: 15.6511625 g per 100 g; Fiber, total dietary: 2.075 g per 100 g; Calcium, Ca: 5.975 mg per 100 g; Iron, Fe: 0.015 mg per 100 g; Potassium, K: 103.8 mg per 100 g; Sodium, Na: 1.013 mg per 100 g; Total Sugars: 13.33 g per 100 g",
+          "publicationDate": "2020-10-30",
+          "retrievedAt": "2026-07-24T05:08:01Z",
           "sourceId": "usda-fooddata-central"
         }
       ],
@@ -2795,14 +2836,14 @@
       "sourceNotes": [
         {
           "href": "https://fdc.nal.usda.gov/api-guide.html",
-          "retrievedAt": "2026-07-24T03:53:57Z",
+          "retrievedAt": "2026-07-24T05:10:39Z",
           "sourceId": "usda-fooddata-central",
           "title": "USDA FoodData Central"
         }
       ],
       "sourcePath": "content/tools/usda-staple-food-identity-explorer/manifest.yaml",
       "sourceReleaseIds": [
-        "h31-content-tools-2026-07-24"
+        "h31-content-tools-2026-07-24-r2"
       ],
       "thin": false,
       "title": "USDA Staple Food Identity Explorer",
@@ -2924,7 +2965,7 @@
       "inputPrivacy": "bounded-public-enum-not-recorded",
       "kind": "tool",
       "noJavaScriptFallback": "complete-static-table",
-      "packageDigest": "b684c88bf8521858e8398698b572583ebcc14f7480e6383f4ada0efd62f7a21f",
+      "packageDigest": "42f22960f9f841335bd6c55c719da6df40e43c4d6f9d0eb25a5b4197a185fc74",
       "preview": false,
       "publicationStatus": "published",
       "redirectState": null,
@@ -2934,8 +2975,8 @@
       "relatedTools": [
         "/tools/household-energy-benchmark-explorer/"
       ],
-      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
-      "releaseId": "h31-content-tools-2026-07-24",
+      "releaseDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af:3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f:3f9a7875b3981e1d238d3f5eede859bdb9bc803f11567cfc16ec8891e5054274:34fb44947ea5713f3ca79bbdde3bc6727232ad49744ed83360aa8a24cf40afab:ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d:5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4:3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea:4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf:a27070126268f7947b6dc28855931fa14bc15f1b62868704eab141ba0df3be3a:29b33ac39c03ad9a311770331a1c0f94a4b15f6a54753ed15cf0f1ac348bf14c:e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "releaseId": "h31-content-tools-2026-07-24-r2",
       "requiresJavaScript": false,
       "researchPacketIds": [
         "zip-metro-method",
@@ -3622,7 +3663,7 @@
       ],
       "sourcePath": "content/tools/zip-to-metro-relationship-explainer/manifest.yaml",
       "sourceReleaseIds": [
-        "h31-content-tools-2026-07-24"
+        "h31-content-tools-2026-07-24-r2"
       ],
       "thin": false,
       "title": "ZIP-to-Metro Relationship Explainer",

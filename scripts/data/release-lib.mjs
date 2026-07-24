@@ -159,6 +159,12 @@ export function validateRelease(releaseId, { requireAccepted = false } = {}) {
     const envelopePath = path.join(target, source.envelopePath);
     const envelope = validateBrokerEnvelope(JSON.parse(readFileSync(envelopePath, 'utf8')), `${releaseId}/${source.sourceId}`);
     assert(source.envelopeDigest === digest(envelope), `${releaseId}: ${source.sourceId} envelope digest mismatch`);
+    const normalized = JSON.parse(readFileSync(path.join(target, 'sources', source.sourceId, 'normalized.json'), 'utf8'));
+    assert(Array.isArray(normalized), `${releaseId}: ${source.sourceId} normalized records must be an array`);
+    assert(source.normalizedDigest === digest(normalized), `${releaseId}: ${source.sourceId} normalized digest mismatch`);
+    assert(source.recordCount === normalized.length, `${releaseId}: ${source.sourceId} normalized row-count mismatch`);
+    const sourceManifest = JSON.parse(readFileSync(path.join(target, 'sources', source.sourceId, 'manifest.json'), 'utf8'));
+    assert(canonicalJson(sourceManifest) === canonicalJson(source), `${releaseId}: ${source.sourceId} manifest differs from release membership`);
     assert(source.releaseMembership === true && source.approvalState === 'approved', `${releaseId}: inactive source in manifest`);
   }
   assert(Array.isArray(packets) && packets.length >= 25, `${releaseId}: at least 25 research packets required`);

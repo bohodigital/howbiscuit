@@ -1,0 +1,189 @@
+[
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Rice, white, long-grain, regular, raw, enriched",
+    "fdcId": 168877,
+    "foodCategory": "Cereal Grains and Pasta",
+    "id": "fdc-168877",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:34Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Cocoa, dry powder, unsweetened",
+    "fdcId": 169593,
+    "foodCategory": "Sweets",
+    "id": "fdc-169593",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:33Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Pasta, dry, enriched",
+    "fdcId": 169736,
+    "foodCategory": "Cereal Grains and Pasta",
+    "id": "fdc-169736",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:51Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Tomatoes, red, ripe, canned, packed in tomato juice",
+    "fdcId": 170051,
+    "foodCategory": "Vegetables and Vegetable Products",
+    "id": "fdc-170051",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:35Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Carrots, raw",
+    "fdcId": 170393,
+    "foodCategory": "Vegetables and Vegetable Products",
+    "id": "fdc-170393",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:08:11Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "fdcId": 171265,
+    "foodCategory": "Dairy and Egg Products",
+    "id": "fdc-171265",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:10:39Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Egg, whole, raw, fresh",
+    "fdcId": 171287,
+    "foodCategory": "Dairy and Egg Products",
+    "id": "fdc-171287",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:34Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Oil, olive, salad or cooking",
+    "fdcId": 171413,
+    "foodCategory": "Fats and Oils",
+    "id": "fdc-171413",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:45Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Leavening agents, baking powder, double-acting, straight phosphate",
+    "fdcId": 172804,
+    "foodCategory": "Baked Products",
+    "id": "fdc-172804",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:42Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Butter, salted",
+    "fdcId": 173410,
+    "foodCategory": "Dairy and Egg Products",
+    "id": "fdc-173410",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:39Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Salt, table",
+    "fdcId": 173468,
+    "foodCategory": "Spices and Herbs",
+    "id": "fdc-173468",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:40Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Cereals, oats, regular and quick, not fortified, dry",
+    "fdcId": 173904,
+    "foodCategory": "Breakfast Cereals",
+    "id": "fdc-173904",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:49Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Leavening agents, baking soda",
+    "fdcId": 175040,
+    "foodCategory": "Baked Products",
+    "id": "fdc-175040",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:49Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "SR Legacy",
+    "description": "Beans, black turtle, mature seeds, canned",
+    "fdcId": 175188,
+    "foodCategory": "Legumes and Legume Products",
+    "id": "fdc-175188",
+    "publicationDate": "2019-04-01",
+    "retrievedAt": "2026-07-24T05:07:54Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "Foundation",
+    "description": "Sugars, granulated",
+    "fdcId": 746784,
+    "foodCategory": "Sweets",
+    "id": "fdc-746784",
+    "publicationDate": "2019-12-16",
+    "retrievedAt": "2026-07-24T05:08:07Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "Foundation",
+    "description": "Flour, wheat, all-purpose, enriched, bleached",
+    "fdcId": 789890,
+    "foodCategory": "Cereal Grains and Pasta",
+    "id": "fdc-789890",
+    "publicationDate": "2020-04-01",
+    "retrievedAt": "2026-07-24T05:08:03Z",
+    "sourceId": "usda-fooddata-central"
+  },
+  {
+    "classification": "generic",
+    "dataType": "Foundation",
+    "description": "Apples, fuji, with skin, raw",
+    "fdcId": 1750340,
+    "foodCategory": "Fruits and Fruit Juices",
+    "id": "fdc-1750340",
+    "publicationDate": "2020-10-30",
+    "retrievedAt": "2026-07-24T05:08:01Z",
+    "sourceId": "usda-fooddata-central"
+  }
+]
