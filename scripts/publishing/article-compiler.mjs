@@ -64,6 +64,10 @@ const DIRECTIVE_CONTRACTS = Object.freeze({
   price: Object.freeze(['claim']),
   presentation: Object.freeze(['block']),
   research: Object.freeze(['packet']),
+  'research-summary': Object.freeze(['packet']),
+  'research-table': Object.freeze(['packet', 'table']),
+  'research-chart': Object.freeze(['packet', 'chart']),
+  'research-source-note': Object.freeze(['packet']),
 });
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const GENERATED_BY = 'howbiscuit-article-package-compiler-v1';
@@ -163,7 +167,6 @@ export function validateMarkdown(markdown, manifest, sourceLabel = 'article.md')
     ['link-preview', [{ attribute: 'preview', field: 'linkPreviewIds' }]],
     ['price', [{ attribute: 'claim', field: 'priceClaims' }]],
     ['presentation', [{ attribute: 'block', field: 'presentationBlocks', project: (block) => block.id }]],
-    ['research', [{ attribute: 'packet', field: 'researchPacketIds' }]],
   ]);
   for (const [kind, contracts] of references) {
     const matching = directives.filter((directive) => directive.kind === kind);
@@ -175,6 +178,16 @@ export function validateMarkdown(markdown, manifest, sourceLabel = 'article.md')
       assert(JSON.stringify([...used].sort()) === JSON.stringify([...declared].sort()), `${sourceLabel}: declared ${contract.field} must be used exactly once`);
     }
   }
+  const researchDirectives = directives.filter(({ kind }) => kind === 'research' || kind.startsWith('research-'));
+  const declaredPackets = manifest.researchPacketIds ?? [];
+  for (const directive of researchDirectives) {
+    assert(declaredPackets.includes(directive.attributes.packet), `${sourceLabel}: unresolved ${directive.kind} packet reference ${directive.attributes.packet}`);
+  }
+  for (const packetId of declaredPackets) {
+    assert(researchDirectives.some(({ attributes }) => attributes.packet === packetId), `${sourceLabel}: declared researchPacketIds must be rendered at least once (${packetId})`);
+  }
+  const researchKeys = researchDirectives.map(({ kind, attributes }) => `${kind}:${attributes.packet}:${attributes.table ?? attributes.chart ?? ''}`);
+  assert(new Set(researchKeys).size === researchKeys.length, `${sourceLabel}: duplicate research rendering directive`);
 
   const citations = [...normalized.matchAll(/\[@([a-z0-9]+(?:-[a-z0-9]+)*)\]/g)].map((match) => match[1]);
   for (const sourceId of citations) {
@@ -219,7 +232,7 @@ function compileCitations(line, normalizedArticle) {
   });
 }
 
-function compileDirectiveLine(line, presentationById, commerce) {
+export function compileDirectiveLine(line, presentationById = new Map(), commerce = { products: [], productGroups: [], destinations: [], priceClaims: [] }) {
   if (!line.trim().startsWith('::')) return line;
   const match = line.trim().match(/^::([a-z-]+)\{(.*)\}$/);
   const attributes = parseDirectiveAttributes(match[2], 'validated directive');
@@ -227,7 +240,10 @@ function compileDirectiveLine(line, presentationById, commerce) {
   if (commerceOutput !== null) return commerceOutput;
   if (match[1] === 'media') return `> Registered media: ${attributes.media}`;
   if (match[1] === 'link-preview') return `> Link preview: ${attributes.preview}`;
-  if (match[1] === 'research') return `> Research packet: ${attributes.packet}`;
+  if (match[1] === 'research' || match[1] === 'research-summary') return `<ResearchBlock kind="summary" packetId="${attributes.packet}" />`;
+  if (match[1] === 'research-table') return `<ResearchBlock kind="table" packetId="${attributes.packet}" blockId="${attributes.table}" />`;
+  if (match[1] === 'research-chart') return `<ResearchBlock kind="chart" packetId="${attributes.packet}" blockId="${attributes.chart}" />`;
+  if (match[1] === 'research-source-note') return `<ResearchBlock kind="source-note" packetId="${attributes.packet}" />`;
   const block = presentationById.get(attributes.block);
   if (block.kind === 'mechanism') return `<MechanismSteps steps={${JSON.stringify(block.steps)}} />`;
   if (block.kind === 'mistake-grid') return `<MistakeGrid items={${JSON.stringify(block.items)}} />`;
@@ -264,10 +280,12 @@ function compiledMdx(normalizedArticle, markdown) {
   };
   const presentationById = new Map(normalizedArticle.presentationBlocks.map((block) => [block.id, block]));
   const componentKinds = new Set(normalizedArticle.presentationBlocks.map((block) => block.kind));
+  const hasResearch = normalizedArticle.directives.some(({ kind }) => kind === 'research' || kind.startsWith('research-'));
   const imports = [
     componentKinds.has('mechanism') ? "import MechanismSteps from '../../../../components/MechanismSteps.astro';" : null,
     componentKinds.has('mistake-grid') ? "import MistakeGrid from '../../../../components/MistakeGrid.astro';" : null,
     componentKinds.has('callout') ? "import BiscuitBox from '../../../../components/BiscuitBox.astro';" : null,
+    hasResearch ? "import ResearchBlock from '../../../../components/data/ResearchBlock.astro';" : null,
   ].filter(Boolean).join('\n');
   const body = markdown.split('\n')
     .map((line) => compileDirectiveLine(line, presentationById, normalizedArticle.commerce))
@@ -275,6 +293,29 @@ function compiledMdx(normalizedArticle, markdown) {
     .join('\n')
     .trimEnd();
   return `---\n${dumpYaml(frontmatter, { noRefs: true, lineWidth: 120, sortKeys: false }).trimEnd()}\n---\n${imports ? `\n${imports}\n` : ''}\n${body}\n`;
+}
+
+export function validateResearchDirectives(directives, manifest, sourceLabel = 'article.md') {
+  const packetPayload = JSON.parse(readFileSync(RESEARCH_PACKET_BUNDLE_PATH, 'utf8'));
+  const packetById = new Map(packetPayload.packets.map((packet) => [packet.id, packet]));
+  const researchDirectives = directives.filter(({ kind }) => kind === 'research' || kind.startsWith('research-'));
+  for (const directive of researchDirectives) {
+    const packet = packetById.get(directive.attributes.packet);
+    assert(packet, `${sourceLabel}: missing research packet ${directive.attributes.packet}`);
+    assert(packet.status === 'validated' && packet.approval?.state === 'approved', `${sourceLabel}: draft, retired, or unapproved research packet ${packet.id}`);
+    assert(packet.staleness?.state === 'current', `${sourceLabel}: stale research packet ${packet.id}`);
+    assert(packet.claims?.length > 0 && packet.claims.every((claim) => claim.evidenceRecordIds?.length && claim.classification !== 'unsupported'), `${sourceLabel}: missing or unsupported evidence in ${packet.id}`);
+    if (directive.kind === 'research-table') assert(packet.tables.some(({ id }) => id === directive.attributes.table), `${sourceLabel}: missing research table ${directive.attributes.table}`);
+    if (directive.kind === 'research-chart') assert(packet.charts.some(({ id }) => id === directive.attributes.chart), `${sourceLabel}: missing research chart ${directive.attributes.chart}`);
+    if (packet.claims.some(({ classification }) => classification === 'retailer-price-observation')) {
+      assert(packet.geography !== 'not-applicable' && packet.observationDates.length > 0, `${sourceLabel}: Kroger price packet lacks store and observation scope`);
+    }
+    if (packet.claims.some(({ classification }) => classification === 'food-composition')) {
+      assert(packet.claims.every((claim) => claim.classification !== 'food-composition' || claim.text.match(/\b(?:g|mg|µg|kcal)\b/i)), `${sourceLabel}: food-composition claim lacks unit`);
+    }
+  }
+  for (const packetId of manifest.researchPacketIds ?? []) assert(packetById.has(packetId), `${sourceLabel}: unresolved research packet ${packetId}`);
+  return true;
 }
 
 export async function createPublishingContext(root = repositoryRoot) {
@@ -412,6 +453,7 @@ export function validateArticlePackage(packagePath, context) {
   const packageBytes = Buffer.byteLength(manifestSource) + Buffer.byteLength(markdown) + media.reduce((total, item) => total + item.size, 0);
   assert(packageBytes <= MAX_PACKAGE_BYTES, `${relativeFromRoot(packagePath)}: package exceeds ${MAX_PACKAGE_BYTES} bytes`);
   const markdownAnalysis = validateMarkdown(markdown, manifest, relativeFromRoot(articlePath));
+  validateResearchDirectives(markdownAnalysis.directives, manifest, relativeFromRoot(articlePath));
   const publicationFiles = Object.fromEntries([
     ['manifest.yaml', manifestSource],
     ['article.md', markdown],

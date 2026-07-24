@@ -7,11 +7,9 @@ internalResearchApproved: true
 releaseMembership: true
 datasets:
   - weekly-gasoline
-  - monthly-electricity
-  - monthly-natural-gas
 claimPolicy:
   permitted:
-    - Historical regional energy benchmarks with period and unit
+    - Historical regional weekly gasoline benchmarks with period and unit
   forbidden:
     - Live station price, utility quote, or household bill claims
 scope:

@@ -11,10 +11,13 @@ const command=process.argv[2]??'doctor';
 
 if(command==='doctor'){
   const policies=compileSourcePolicies(root).policies;
-  const active=policies.filter(p=>p.lifecycle==='active'&&p.releaseMembership).map(p=>p.sourceId).sort();
+  const activePolicies=policies.filter(p=>p.lifecycle==='active'&&p.releaseMembership);
+  const active=activePolicies.map(p=>p.sourceId).sort();
+  const providerFamilyBySource=(sourceId)=>sourceId.startsWith('eia-')?'eia':sourceId==='hud-usps-crosswalk'?'hud_usps':sourceId==='usda-fooddata-central'?'data_gov':sourceId==='usda-mymarketnews'?'usda_mymarketnews':sourceId==='usda-nass-quickstats'?'nass':sourceId;
+  const providerFamilies=[...new Set(active.map(providerFamilyBySource))].sort();
   const bestBuy=policies.find(p=>p.sourceId==='best-buy');
-  if(active.length!==6||bestBuy?.lifecycle!=='excluded') throw new Error('Broker policy membership is invalid.');
-  process.stdout.write(`${JSON.stringify({ok:true,broker:'local1-public-api-tools',credentialHandling:'server-managed',activeSources:active,excludedSources:['best-buy']})}\n`);
+  if(providerFamilies.length!==6||active.length!==8||bestBuy?.lifecycle!=='excluded') throw new Error('Broker policy membership is invalid.');
+  process.stdout.write(`${JSON.stringify({ok:true,broker:'local1-public-api-tools',credentialHandling:'server-managed',providerFamilies,activeSources:active,excludedSources:['best-buy']})}\n`);
 }else if(command==='validate-response'){
   const input=JSON.parse(readFileSync(0,'utf8'));
   if(!activeApiIds.has(input.api_id)) throw new Error('Response uses a source outside this release.');

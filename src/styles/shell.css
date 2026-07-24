@@ -244,7 +244,13 @@ html:not(.js) .hb-desktop-nav .hb-header-action { display: none; }
     padding: 0.8rem;
     background: var(--hb-paper);
   }
-  .hb-noscript-navigation > summary { cursor: pointer; font-weight: 900; }
+  .hb-noscript-navigation > summary {
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 900;
+  }
   .hb-noscript-navigation nav { display: grid; gap: 0.8rem; margin-top: 0.8rem; }
   .hb-noscript-navigation nav > div { display: grid; gap: 0.35rem; }
   .hb-noscript-navigation nav > div a { color: var(--hb-ink); }

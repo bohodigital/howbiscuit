@@ -1,0 +1,1 @@
+Use the bounded controls to narrow the approved static release. Electricity and natural gas use different units, so compare values only within the same series and unit. The full source table remains visible without JavaScript.

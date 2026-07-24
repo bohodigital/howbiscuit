@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly How Biscuit Market News query-plan reminder
+
+[Timer]
+OnCalendar=Mon *-*-* 07:00:00 UTC
+Persistent=true
+Unit=howbiscuit-data-plan@mymarketnews.service
+
+[Install]
+WantedBy=timers.target

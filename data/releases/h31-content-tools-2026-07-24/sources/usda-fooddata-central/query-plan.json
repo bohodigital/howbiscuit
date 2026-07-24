@@ -1,0 +1,11 @@
+{
+  "brokerOnly": true,
+  "maximumRecords": 2000,
+  "operation": "fooddata_get",
+  "parameters": {
+    "fdcIds": "168877,169593,170051,171287,171413,172804,173410,173468,173904,175040,175188,2758998,746782,746784,789890",
+    "pageSize": 15
+  },
+  "providerId": "fooddata",
+  "schemaVersion": "1.0.0"
+}

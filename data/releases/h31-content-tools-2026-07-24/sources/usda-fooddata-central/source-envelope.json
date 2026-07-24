@@ -1,0 +1,175 @@
+{
+  "contentDigest": "7033e56cf038cfa53618ce0dd7c6c3e6e7e8b6636ac692c75df236b2f4d20d87",
+  "operation": "fooddata_get",
+  "parameters": {
+    "fdcIds": "168877,169593,170051,171287,171413,172804,173410,173468,173904,175040,175188,2758998,746782,746784,789890",
+    "pageSize": 15
+  },
+  "providerId": "fooddata",
+  "quota": {
+    "remaining": null,
+    "state": "broker-managed"
+  },
+  "records": [
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Rice, white, long-grain, regular, raw, enriched",
+      "fdcId": 168877,
+      "id": "fdc-168877",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Cocoa, dry powder, unsweetened",
+      "fdcId": 169593,
+      "id": "fdc-169593",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Tomatoes, canned, packed in tomato juice",
+      "fdcId": 170051,
+      "id": "fdc-170051",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Egg, whole, raw, fresh",
+      "fdcId": 171287,
+      "id": "fdc-171287",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Oil, olive, salad or cooking",
+      "fdcId": 171413,
+      "id": "fdc-171413",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Leavening agents, baking powder",
+      "fdcId": 172804,
+      "id": "fdc-172804",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Butter, salted",
+      "fdcId": 173410,
+      "id": "fdc-173410",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Salt, table",
+      "fdcId": 173468,
+      "id": "fdc-173468",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Oats",
+      "fdcId": 173904,
+      "id": "fdc-173904",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Leavening agents, baking soda",
+      "fdcId": 175040,
+      "id": "fdc-175040",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "SR Legacy",
+      "description": "Beans, black turtle, canned",
+      "fdcId": 175188,
+      "id": "fdc-175188",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "Foundation",
+      "description": "Pasta, spaghetti, dry, enriched",
+      "fdcId": 2758998,
+      "id": "fdc-2758998",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "Foundation",
+      "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "fdcId": 746782,
+      "id": "fdc-746782",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "Foundation",
+      "description": "Sugars, granulated",
+      "fdcId": 746784,
+      "id": "fdc-746784",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "classification": "generic",
+      "dataType": "Foundation",
+      "description": "Flour, wheat, all-purpose, enriched, bleached",
+      "fdcId": 789890,
+      "id": "fdc-789890",
+      "publicationDate": null,
+      "retrievedAt": "2026-07-24T03:48:11Z",
+      "sourceId": "usda-fooddata-central"
+    }
+  ],
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "attribution": "USDA FoodData Central",
+    "documentationUrl": "https://fdc.nal.usda.gov/api-guide.html"
+  },
+  "truncated": false,
+  "warnings": [
+    "Food nutrient names and units were redacted by the broker; incomplete nutrient rows were rejected."
+  ]
+}

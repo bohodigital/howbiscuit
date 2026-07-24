@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "d1f10a2fdf4681af0df748efde97c4b69bd81e57a9d901ff749f7cf80b470f93",
+  "envelopePath": "sources/eia-weekly-gasoline/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "operation": "series_observations",
+  "providerId": "eia",
+  "recordCount": 0,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "eia",
+  "sourceId": "eia-weekly-gasoline"
+}

@@ -1,0 +1,35 @@
+schemaVersion: 1.0.0
+id: zip-to-metro-relationship-explainer
+slug: zip-to-metro-relationship-explainer
+title: ZIP-to-Metro Relationship Explainer
+description: Inspect approved HUD ZIP-to-county and ZIP-to-CBSA relationships, including residential weights and honest ambiguity instead of neighborhood guesses.
+category: tools
+topic: decision-tools
+toolType: explainer
+publicationStatus: published
+approval:
+  state: approved
+  reviewer: howbiscuit-h3.1-work-order
+  approvedAt: 2026-07-23
+sourceReleaseIds:
+  - h31-content-tools-2026-07-24
+researchPacketIds:
+  - zip-metro-method
+  - hud-weighted-ambiguity
+datasetIds:
+  - geographyRelationships
+visibility: public
+requiresJavaScript: false
+noJavaScriptFallback: complete-static-table
+analyticsEventPolicy: page-view-only
+inputPrivacy: bounded-public-enum-not-recorded
+canonicalRoute: /tools/zip-to-metro-relationship-explainer/
+social:
+  title: ZIP-to-Metro Relationship Explainer
+  description: See bounded HUD county and metro relationships with residential weights and an explicit explanation of ambiguous ZIP codes.
+relatedArticles:
+  - /articles/why-are-some-answers-better-than-others/
+relatedTools:
+  - /tools/household-energy-benchmark-explorer/
+updatedDate: 2026-07-23
+reviewDate: 2026-10-23

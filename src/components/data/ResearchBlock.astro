@@ -1,0 +1,94 @@
+---
+import packetPayload from '../../generated/data/research-packets.v1.json';
+import releasePayload from '../../generated/data/release.v1.json';
+
+type Kind = 'summary' | 'table' | 'chart' | 'source-note';
+const { kind, packetId, blockId } = Astro.props as { kind: Kind; packetId: string; blockId?: string };
+const packet = packetPayload.packets.find((candidate) => candidate.id === packetId);
+if (!packet) throw new Error(`Missing research packet ${packetId}`);
+if (packet.status !== 'validated' || packet.approval.state !== 'approved' || packet.staleness.state !== 'current') {
+  throw new Error(`Research packet ${packetId} is not publishable`);
+}
+const records = Object.values(releasePayload.datasets).flat() as unknown as Record<string, unknown>[];
+const recordById = new Map(records.map((record) => [record.id, record]));
+const sourceById = new Map(Object.entries(releasePayload.sources));
+const table = kind === 'table' ? packet.tables.find((candidate) => candidate.id === blockId) : null;
+const chart = kind === 'chart' ? packet.charts.find((candidate) => candidate.id === blockId) : null;
+if (kind === 'table' && !table) throw new Error(`Missing research table ${packetId}/${blockId}`);
+if (kind === 'chart' && !chart) throw new Error(`Missing research chart ${packetId}/${blockId}`);
+const tableRecords = table ? table.recordIds.map((id) => recordById.get(id)).filter((record): record is Record<string, unknown> => Boolean(record)) : [];
+const tableColumns = table ? table.columns.filter((column) => tableRecords.some((record) => record[column] !== undefined)) : [];
+const chartRecords = chart ? chart.recordIds.map((id) => recordById.get(id)).filter((record): record is Record<string, unknown> => record !== undefined && typeof record[chart.yField] === 'number') : [];
+const chartValues = chartRecords.map((record) => Number(record[chart!.yField]));
+const minimum = chartValues.length ? Math.min(...chartValues) : 0;
+const maximum = chartValues.length ? Math.max(...chartValues) : 1;
+const range = maximum - minimum || 1;
+const point = (value: number, index: number) => `${55 + (index / Math.max(1, chartValues.length - 1)) * 590},${205 - ((value - minimum) / range) * 145}`;
+const displayValue = (value: unknown) => value === null || value === undefined || value === ''
+  ? 'Not reported'
+  : typeof value === 'number'
+    ? value.toLocaleString('en-US', { maximumFractionDigits: 6 })
+    : String(value);
+---
+
+{kind === 'summary' && (
+  <aside class="hb-research-block hb-research-summary" aria-labelledby={`${packet.id}-summary-title`}>
+    <span>Approved research summary</span>
+    <h2 id={`${packet.id}-summary-title`}>{packet.title}</h2>
+    {packet.claims.map((claim) => <div><p>{claim.text}</p><small>{claim.classification} · Evidence: {claim.evidenceRecordIds.join(', ')}</small><p class="hb-research-limitation">{claim.limitations.join(' ')}</p></div>)}
+    <p class="hb-research-date">Observations: {packet.observationDates.join(', ') || 'identity record'} · Generated {packet.generatedAt} · Review due {packet.reviewDueAt}</p>
+  </aside>
+)}
+
+{kind === 'table' && table && (
+  <figure class="hb-research-block hb-research-table">
+    <div tabindex="0" aria-label="Scrollable research table">
+      <table>
+        <caption>{table.title}</caption>
+        <thead><tr>{tableColumns.map((column) => <th scope="col">{column}</th>)}</tr></thead>
+        <tbody>{tableRecords.map((record) => <tr>{tableColumns.map((column, index) => index === 0 ? <th scope="row">{displayValue(record?.[column])}</th> : <td>{displayValue(record?.[column])}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+    <figcaption>{packet.claims[0].limitations.join(' ')} Retrieved {Object.values(packet.sourceRetrievalDates).join(', ')}.</figcaption>
+  </figure>
+)}
+
+{kind === 'chart' && chart && chartValues.length > 1 && (
+  <figure class="hb-research-block hb-research-chart">
+    <svg viewBox="0 0 700 250" role="img" aria-labelledby={`${packet.id}-${chart.id}-title ${packet.id}-${chart.id}-desc`}>
+      <title id={`${packet.id}-${chart.id}-title`}>{chart.title}</title>
+      <desc id={`${packet.id}-${chart.id}-desc`}>{packet.claims[0].text} Exact values and limitations follow in the accessible text alternative.</desc>
+      <rect width="700" height="250" rx="10" fill="#fffdf6" />
+      <line x1="55" y1="205" x2="645" y2="205" stroke="#142432" stroke-width="2" />
+      <line x1="55" y1="60" x2="55" y2="205" stroke="#142432" stroke-width="2" />
+      <polyline points={chartValues.map(point).join(' ')} fill="none" stroke="#ac321f" stroke-width="5" />
+      {chartValues.map((value, index) => <circle cx={point(value, index).split(',')[0]} cy={point(value, index).split(',')[1]} r="5" fill="#142432"><title>{displayValue(value)}</title></circle>)}
+    </svg>
+    <figcaption>{packet.claims[0].text} {packet.claims[0].limitations.join(' ')}</figcaption>
+    <details><summary>Chart data</summary><ul>{chartRecords.map((record) => <li>{displayValue(record?.[chart.xField])}: {displayValue(record?.[chart.yField])}</li>)}</ul></details>
+  </figure>
+)}
+
+{kind === 'source-note' && (
+  <aside class="hb-research-block hb-research-sources" aria-labelledby={`${packet.id}-sources-title`}>
+    <h2 id={`${packet.id}-sources-title`}>Research sources and boundaries</h2>
+    <ul>{packet.citationNotes.map((note) => {
+      const source = sourceById.get(note.sourceId);
+      return <li><a href={source?.url} rel="external">{source?.provider ?? note.sourceId}</a> — retrieved {source?.retrievedAt}. {note.note}</li>;
+    })}</ul>
+    <p>{packet.disclosure}</p>
+  </aside>
+)}
+
+<style>
+  .hb-research-block { max-width: 100%; margin: 2rem 0; border: 2px solid var(--hb-ink); padding: clamp(1rem, 4vw, 1.6rem); background: var(--hb-white); box-shadow: 6px 6px 0 var(--hb-honey); }
+  .hb-research-block > span { color: var(--hb-tomato-text); font-size: .7rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+  .hb-research-block h2 { margin: .5rem 0 1rem; font-size: 1.45rem; }
+  .hb-research-limitation, .hb-research-date, figcaption { color: var(--hb-ink-soft); font-size: .82rem; line-height: 1.5; }
+  .hb-research-table > div { max-width: 100%; overflow-x: auto; }
+  table { width: 100%; min-width: 560px; border-collapse: collapse; }
+  caption { margin-bottom: .6rem; font-weight: 900; text-align: left; }
+  th, td { border: 1px solid color-mix(in srgb, var(--hb-ink), transparent 65%); padding: .65rem; text-align: left; }
+  thead th { background: var(--hb-ink); color: var(--hb-white); }
+  svg { display: block; width: 100%; height: auto; }
+</style>

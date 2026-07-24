@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "b19942f98053095744fc6e4a8fa4c2294625bd655c02053e430069f89415410f",
+  "envelopePath": "sources/usda-nass-quickstats/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea",
+  "operation": "quickstats_query",
+  "providerId": "nass",
+  "recordCount": 33,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "nass",
+  "sourceId": "usda-nass-quickstats"
+}

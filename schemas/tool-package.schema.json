@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://howbiscuit.com/schemas/tool-package.schema.json",
+  "title": "How Biscuit Tool Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest", "definition", "content"],
+  "properties": {
+    "manifest": { "type": "object" },
+    "definition": { "type": "object" },
+    "content": { "type": "string", "minLength": 40 }
+  }
+}

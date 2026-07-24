@@ -11,6 +11,7 @@ The suite uses canonical migrated records, documented draft templates, and isola
 | Unresolved source, testing, media, product, group, destination | editorial, compiler, and product resolution tests |
 | Missing rights and alt text | duplicate/unregistered media tests and media-rights schema fixture rejection |
 | Duplicate article ID/slug/route and product ID | compiler uniqueness and product-record load tests |
+| Approved Research Packet v2 summary, table, chart, source-note rendering and missing-block rejection | `research-rendering.test.mjs`; `research-rendering.md` |
 | Invalid taxonomy and workflow | public contract and editorial workflow tests |
 | Missing or stale approval | editorial digest tests and ingest stale-publication rejection |
 | False testing/personal-use claims | editorial first-hand and product provenance tests |

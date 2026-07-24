@@ -8,6 +8,7 @@ const PUBLIC_TYPE_LABELS = Object.freeze({
   'guide-index': 'All Guides',
   trust: 'Trust',
   topic: 'Topic',
+  tool: 'Tool',
 });
 
 function publicCategoryLabel(record, taxonomy) {

@@ -1,0 +1,214 @@
+{
+  "approval": {
+    "approvedAt": "2026-07-24T04:00:00Z",
+    "reviewer": "howbiscuit-h3.1-work-order",
+    "state": "approved"
+  },
+  "createdAt": "2026-07-24T03:53:57Z",
+  "datasets": [
+    {
+      "contentDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af",
+      "datasetId": "geographyRelationships",
+      "filename": "datasets/geography-relationships.json",
+      "recordCount": 55
+    },
+    {
+      "contentDigest": "3c20deae3db0627f3c0ba720f9fc1fea520eb10b7ebbf770e83a3962d727362f",
+      "datasetId": "energyObservations",
+      "filename": "datasets/energy-observations.json",
+      "recordCount": 99
+    },
+    {
+      "contentDigest": "c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d",
+      "datasetId": "foods",
+      "filename": "datasets/food-identities.json",
+      "recordCount": 15
+    },
+    {
+      "contentDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "datasetId": "foodNutrients",
+      "filename": "datasets/food-nutrients.json",
+      "recordCount": 0
+    },
+    {
+      "contentDigest": "ffaac307d9656cfe3efe36fd0750f7a3c48af1e02db941e618a74769e766e78d",
+      "datasetId": "marketReports",
+      "filename": "datasets/market-report-definitions.json",
+      "recordCount": 4
+    },
+    {
+      "contentDigest": "5b8cc8177b93234017282635fa34e7ba733dda0ce94a04746dd1e6a2558b71c4",
+      "datasetId": "marketObservations",
+      "filename": "datasets/market-report-observations.json",
+      "recordCount": 11
+    },
+    {
+      "contentDigest": "3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea",
+      "datasetId": "agriculturalStatistics",
+      "filename": "datasets/agricultural-statistics.json",
+      "recordCount": 33
+    },
+    {
+      "contentDigest": "528f2192ebdfdfc81dc64a24e3c158466e2dc34f93e0887c08c00e361bf57050",
+      "datasetId": "merchantMappings",
+      "filename": "datasets/merchant-product-mappings.json",
+      "recordCount": 29
+    },
+    {
+      "contentDigest": "4795c273257576c4d9fd997767f9221e3960fe9e1c69900d34ae16c413be64bf",
+      "datasetId": "merchantLocations",
+      "filename": "datasets/merchant-locations.json",
+      "recordCount": 1
+    },
+    {
+      "contentDigest": "0f0921a30bb592953d987448eae02ca19a44ff81f02dc5a63d5947f261695a56",
+      "datasetId": "offerObservations",
+      "filename": "datasets/retailer-offer-observations.json",
+      "recordCount": 29
+    },
+    {
+      "contentDigest": "e8e0cba6c9d2506917e02f8deb72ad7977c22de36860712f5ec290e91e7432af",
+      "datasetId": "unresolvedMappings",
+      "filename": "datasets/unresolved-mapping-candidates.json",
+      "recordCount": 2
+    }
+  ],
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "limitations": [
+    "FoodData nutrient rows remain empty until the broker exposes bounded nutrient id, name, unit, amount, and basis fields.",
+    "Kroger public live prices remain disabled; broker-redacted price and inventory fields are retained as unknown."
+  ],
+  "previousReleaseId": "h3-content-data-2026-07-24",
+  "releaseId": "h31-content-tools-2026-07-24",
+  "research": {
+    "contentDigest": "d7decaa6084d0b3d7048382fb52dc2dcbb62922561cb3227814329fec84df597",
+    "packetCount": 27
+  },
+  "rollbackReleaseId": "h3-content-data-2026-07-24",
+  "schemaVersion": "2.0.0",
+  "sourceCommit": "135ffed5d797ff652721ca36ed832ff8d652f625",
+  "sources": [
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "491d598b474b5072530ed2dd42b20d1ba2b2e05fbcefbf8bc13b9765495a851c",
+      "envelopePath": "sources/hud-usps-crosswalk/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "6ce460727fde2c86a0c6e34f94eb39d7d2fe0944f53623c1aea1a967a0a911af",
+      "operation": "zip-crosswalk",
+      "providerId": "hud",
+      "recordCount": 55,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "hud",
+      "sourceId": "hud-usps-crosswalk"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "7a32ab530f6fdd84b5f66c77ceb554d702795a022c72d2a42534e5550e0ba8a4",
+      "envelopePath": "sources/eia-residential-electricity/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "647552804f0aa505e628890636e0091ab1e4a9cbb527169aea8561ef5f8e6cbc",
+      "operation": "series_observations",
+      "providerId": "eia",
+      "recordCount": 51,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "eia",
+      "sourceId": "eia-residential-electricity"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "fdbbf3c7553057c5a2b77564c1f47f15c83b24173cb33a11d30a73e81cb26faa",
+      "envelopePath": "sources/eia-residential-natural-gas/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "7e951cb74ed8c4f9c04cacdb5cd97c8694578305b1219ccccb00a9a11f0d36d0",
+      "operation": "series_observations",
+      "providerId": "eia",
+      "recordCount": 48,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "eia",
+      "sourceId": "eia-residential-natural-gas"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "d1f10a2fdf4681af0df748efde97c4b69bd81e57a9d901ff749f7cf80b470f93",
+      "envelopePath": "sources/eia-weekly-gasoline/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "operation": "series_observations",
+      "providerId": "eia",
+      "recordCount": 0,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "eia",
+      "sourceId": "eia-weekly-gasoline"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "200e6e6d504b1436cf8741ef263c636b2398809b8b811b442fa203d18809143a",
+      "envelopePath": "sources/usda-fooddata-central/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d",
+      "operation": "fooddata_get",
+      "providerId": "fooddata",
+      "recordCount": 15,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "fooddata",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "4057c1cb4deb20e5ba875d426e7f1f6ba382124e93c11e14deb3206a3f046c97",
+      "envelopePath": "sources/usda-mymarketnews/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "864bc29ee1b18a8875524cd76700667b64d7e5a9f881dac8965f22540b13977c",
+      "operation": "report-details-volumes",
+      "providerId": "mymarketnews",
+      "recordCount": 15,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "mymarketnews",
+      "sourceId": "usda-mymarketnews"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "b19942f98053095744fc6e4a8fa4c2294625bd655c02053e430069f89415410f",
+      "envelopePath": "sources/usda-nass-quickstats/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "3519e824a0685928d9918b415592fa7c7227845d3cee4f4fd61e080d3d85d3ea",
+      "operation": "quickstats_query",
+      "providerId": "nass",
+      "recordCount": 33,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "nass",
+      "sourceId": "usda-nass-quickstats"
+    },
+    {
+      "approvalState": "approved",
+      "envelopeDigest": "d438452a2f29b1936c770dc0ffc9c9b13c8df73214f29aed1871c6a609a24b01",
+      "envelopePath": "sources/kroger/source-envelope.json",
+      "importerVersion": "howbiscuit-data-importer-v2",
+      "normalizedDigest": "b19b383348e506f9da7bd463d399d711700a56f88c7daa2f34bb5b09b11bbb52",
+      "operation": "product_search",
+      "providerId": "kroger",
+      "recordCount": 61,
+      "releaseMembership": true,
+      "retrievedAt": "2026-07-24T03:53:57Z",
+      "schemaVersion": "1.0.0",
+      "sourceFamilyId": "kroger",
+      "sourceId": "kroger"
+    }
+  ],
+  "status": "published",
+  "validatedAt": "2026-07-24T04:00:00Z"
+}

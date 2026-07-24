@@ -1,0 +1,39 @@
+schemaVersion: 1.0.0
+id: agricultural-market-context-browser
+slug: agricultural-market-context-browser
+title: Agricultural Market Context Browser
+description: Browse selected USDA Market News observations with commodity, geography, period, unit basis, narrative context, and the wholesale boundary kept prominent.
+category: tools
+topic: decision-tools
+toolType: browser
+publicationStatus: published
+approval:
+  state: approved
+  reviewer: howbiscuit-h3.1-work-order
+  approvedAt: 2026-07-23
+sourceReleaseIds:
+  - h31-content-tools-2026-07-24
+researchPacketIds:
+  - butter-market-basis
+  - egg-inventory-context
+  - rice-market-context
+  - shipping-point-boundary
+  - egg-regional-inventory
+datasetIds:
+  - marketReports
+  - marketObservations
+visibility: public
+requiresJavaScript: false
+noJavaScriptFallback: complete-static-table
+analyticsEventPolicy: page-view-only
+inputPrivacy: bounded-public-enum-not-recorded
+canonicalRoute: /tools/agricultural-market-context-browser/
+social:
+  title: Agricultural Market Context Browser
+  description: Explore selected Market News wholesale observations without turning basis, inventory, or shipping-point data into retail claims.
+relatedArticles:
+  - /articles/how-does-baking-powder-work/
+relatedTools:
+  - /tools/us-crop-production-trend-explorer/
+updatedDate: 2026-07-23
+reviewDate: 2026-10-23

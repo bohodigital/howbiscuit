@@ -1,0 +1,77 @@
+schemaVersion: 1.0.0
+sourceId: eia-residential-electricity
+adapterId: eia-residential-electricity-import-v1
+displayName: U.S. Energy Information Administration residential electricity benchmarks
+lifecycle: active
+internalResearchApproved: true
+releaseMembership: true
+datasets:
+  - monthly-electricity
+claimPolicy:
+  permitted:
+    - Historical aggregate residential electricity benchmarks with geography, period, and cents-per-kilowatt-hour unit
+  forbidden:
+    - Individual utility quote, tariff, household bill, or live price claim
+scope:
+  merchantIds:
+    - eia
+enabledByDefault: false
+publicActivationApproved: true
+legalBasis:
+  type: reviewed-public-dataset
+  termsUrl: https://www.eia.gov/about/copyrights_reuse.php
+  documentationUrl: https://www.eia.gov/opendata/
+  termsExpiresAt: 2027-07-22
+  accountApprovalRequired: false
+review:
+  reviewedAt: 2026-07-22
+  reviewedBy: codex-provider-review
+  reviewDueAt: 2027-07-22
+  evidenceIds:
+    - eia-residential-electricity-review-2026-07-22
+  comparisonStatus: approved
+credentials:
+  required: true
+  secretNames:
+    - HOWBISCUIT_EIA_API_KEY
+  clientExposureAllowed: false
+storage:
+  productIdentifier: { allowed: false, maximumSeconds: 0 }
+  storeIdentifier: { allowed: false, maximumSeconds: 0 }
+  price: { allowed: true, maximumSeconds: 31536000 }
+  availability: { allowed: false, maximumSeconds: 0 }
+  image: { allowed: false, maximumSeconds: 0 }
+  rawResponse: { allowed: true, maximumSeconds: 31536000 }
+display:
+  attributionRequired: true
+  timestampRequired: true
+  merchantNameRequired: false
+  logoRequired: false
+  affiliateDisclosureRequired: false
+  directLinkRequired: true
+refresh:
+  normalTtlSeconds: 2678400
+  hardExpirySeconds: 5356800
+  staleWhileRevalidateAllowed: false
+limits:
+  requestsPerSecond: 1
+  requestsPerDay: 24
+  applicationDailyBudget: 2
+  applicationMonthlyBudget: 10
+  paidMonthlyCeilingUsd: 0
+matching:
+  acceptedConfidence:
+    - verified-model-variant
+  probableMayCompare: false
+failure:
+  showStalePrice: false
+  fallback: regional-context-only
+  automaticDisableAfterConsecutiveFailures: 3
+  cooldownSeconds: 3600
+  maximumRetryCount: 2
+  disableOnTermsExpiry: true
+  disableOnAuthenticationFailure: true
+  disableOnBudgetExhaustion: true
+killSwitch:
+  environmentVariable: EIA_ELECTRICITY_CONTEXT_ENABLED
+  databaseDisableAllowed: true

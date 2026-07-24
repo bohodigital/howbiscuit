@@ -158,6 +158,35 @@ function generatedArticleSources(root, generatedArticles = null) {
   }));
 }
 
+function generatedToolSources(root) {
+  const generatedPath = path.join(root, 'src', 'generated', 'tools', 'tools.v1.json');
+  if (!existsSync(generatedPath)) return [];
+  const payload = JSON.parse(readFileSync(generatedPath, 'utf8'));
+  if (payload?.schemaVersion !== '1.0.0' || !Array.isArray(payload.tools)) {
+    throw new Error('Generated tools output is invalid.');
+  }
+  return payload.tools
+    .filter((tool) => tool.visibility === 'public')
+    .map((tool) => Object.freeze({
+      kind: 'tool',
+      sourceKind: 'tool-package',
+      sourcePath: tool.sourcePath,
+      route: tool.canonicalRoute,
+      slug: tool.slug,
+      title: tool.title,
+      description: tool.description,
+      categoryId: 'tools',
+      topicId: tool.topic,
+      publishedDate: tool.approval.approvedAt,
+      updatedDate: tool.updatedDate,
+      draft: tool.draft,
+      preview: tool.preview,
+      thin: tool.thin,
+      redirectState: tool.redirectState,
+      retirementState: tool.retirementState,
+    }));
+}
+
 export function discoverTrackedPublicSources(root, { taxonomy, generatedArticles = null, expectedGeneratedRoutes = [] } = {}) {
   const output = execFileSync('git', [
     'ls-files',
@@ -191,6 +220,11 @@ export function discoverTrackedPublicSources(root, { taxonomy, generatedArticles
     } else if (!discoveredRoutes.has(route)) {
       throw new Error(`Generated article has no renderable content entry: ${route}`);
     }
+  }
+  for (const source of generatedToolSources(root)) {
+    if (discoveredRoutes.has(source.route)) throw new Error(`Generated tool route collides with public content: ${source.route}`);
+    sources.push(source);
+    discoveredRoutes.add(source.route);
   }
 
   sources.sort((left, right) => asciiCompare(left.route, right.route));

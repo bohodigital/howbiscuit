@@ -1,0 +1,279 @@
+{
+  "$defs": {
+    "__schema0": {
+      "const": "1.0.0",
+      "type": "string"
+    },
+    "__schema1": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "type": "string"
+    },
+    "__schema10": {
+      "items": {
+        "$ref": "#/$defs/__schema1"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "type": "array"
+    },
+    "__schema11": {
+      "items": {
+        "$ref": "#/$defs/__schema12"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "__schema12": {
+      "enum": [
+        "geographyRelationships",
+        "energyObservations",
+        "foods",
+        "foodNutrients",
+        "marketReports",
+        "marketObservations",
+        "agriculturalStatistics"
+      ],
+      "type": "string"
+    },
+    "__schema13": {
+      "enum": [
+        "public",
+        "internal"
+      ],
+      "type": "string"
+    },
+    "__schema14": {
+      "type": "boolean"
+    },
+    "__schema15": {
+      "const": "complete-static-table",
+      "type": "string"
+    },
+    "__schema16": {
+      "const": "page-view-only",
+      "type": "string"
+    },
+    "__schema17": {
+      "const": "bounded-public-enum-not-recorded",
+      "type": "string"
+    },
+    "__schema18": {
+      "pattern": "^\\/tools\\/[a-z0-9]+(?:-[a-z0-9]+)*\\/$",
+      "type": "string"
+    },
+    "__schema19": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 40,
+          "type": "string"
+        },
+        "title": {
+          "minLength": 8,
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ],
+      "type": "object"
+    },
+    "__schema2": {
+      "maxLength": 100,
+      "minLength": 8,
+      "type": "string"
+    },
+    "__schema20": {
+      "items": {
+        "$ref": "#/$defs/__schema21"
+      },
+      "maxItems": 10,
+      "type": "array"
+    },
+    "__schema21": {
+      "pattern": "^\\/articles\\/[a-z0-9]+(?:-[a-z0-9]+)*\\/$",
+      "type": "string"
+    },
+    "__schema22": {
+      "items": {
+        "$ref": "#/$defs/__schema18"
+      },
+      "maxItems": 10,
+      "type": "array"
+    },
+    "__schema3": {
+      "maxLength": 240,
+      "minLength": 40,
+      "type": "string"
+    },
+    "__schema4": {
+      "const": "tools",
+      "type": "string"
+    },
+    "__schema5": {
+      "enum": [
+        "explorer",
+        "browser",
+        "explainer"
+      ],
+      "type": "string"
+    },
+    "__schema6": {
+      "enum": [
+        "published",
+        "draft",
+        "retired"
+      ],
+      "type": "string"
+    },
+    "__schema7": {
+      "additionalProperties": false,
+      "properties": {
+        "approvedAt": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/__schema8"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reviewer": {
+          "maxLength": 120,
+          "minLength": 2,
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "approved",
+            "pending"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "reviewer",
+        "approvedAt"
+      ],
+      "type": "object"
+    },
+    "__schema8": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "type": "string"
+    },
+    "__schema9": {
+      "items": {
+        "$ref": "#/$defs/__schema1"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "analyticsEventPolicy": {
+      "$ref": "#/$defs/__schema16"
+    },
+    "approval": {
+      "$ref": "#/$defs/__schema7"
+    },
+    "canonicalRoute": {
+      "$ref": "#/$defs/__schema18"
+    },
+    "category": {
+      "$ref": "#/$defs/__schema4"
+    },
+    "datasetIds": {
+      "$ref": "#/$defs/__schema11"
+    },
+    "description": {
+      "$ref": "#/$defs/__schema3"
+    },
+    "id": {
+      "$ref": "#/$defs/__schema1"
+    },
+    "inputPrivacy": {
+      "$ref": "#/$defs/__schema17"
+    },
+    "noJavaScriptFallback": {
+      "$ref": "#/$defs/__schema15"
+    },
+    "publicationStatus": {
+      "$ref": "#/$defs/__schema6"
+    },
+    "relatedArticles": {
+      "$ref": "#/$defs/__schema20"
+    },
+    "relatedTools": {
+      "$ref": "#/$defs/__schema22"
+    },
+    "requiresJavaScript": {
+      "$ref": "#/$defs/__schema14"
+    },
+    "researchPacketIds": {
+      "$ref": "#/$defs/__schema10"
+    },
+    "reviewDate": {
+      "$ref": "#/$defs/__schema8"
+    },
+    "schemaVersion": {
+      "$ref": "#/$defs/__schema0"
+    },
+    "slug": {
+      "$ref": "#/$defs/__schema1"
+    },
+    "social": {
+      "$ref": "#/$defs/__schema19"
+    },
+    "sourceReleaseIds": {
+      "$ref": "#/$defs/__schema9"
+    },
+    "title": {
+      "$ref": "#/$defs/__schema2"
+    },
+    "toolType": {
+      "$ref": "#/$defs/__schema5"
+    },
+    "topic": {
+      "$ref": "#/$defs/__schema1"
+    },
+    "updatedDate": {
+      "$ref": "#/$defs/__schema8"
+    },
+    "visibility": {
+      "$ref": "#/$defs/__schema13"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "slug",
+    "title",
+    "description",
+    "category",
+    "topic",
+    "toolType",
+    "publicationStatus",
+    "approval",
+    "sourceReleaseIds",
+    "researchPacketIds",
+    "datasetIds",
+    "visibility",
+    "requiresJavaScript",
+    "noJavaScriptFallback",
+    "analyticsEventPolicy",
+    "inputPrivacy",
+    "canonicalRoute",
+    "social",
+    "relatedArticles",
+    "relatedTools",
+    "updatedDate",
+    "reviewDate"
+  ],
+  "type": "object"
+}

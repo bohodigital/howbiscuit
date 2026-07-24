@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "200e6e6d504b1436cf8741ef263c636b2398809b8b811b442fa203d18809143a",
+  "envelopePath": "sources/usda-fooddata-central/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "c5c9cfe5eba59507d88c1231a7d46e7569929e1f7dd0f8b93051a5b65d37c69d",
+  "operation": "fooddata_get",
+  "providerId": "fooddata",
+  "recordCount": 15,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "fooddata",
+  "sourceId": "usda-fooddata-central"
+}

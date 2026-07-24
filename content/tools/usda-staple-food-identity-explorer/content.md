@@ -1,0 +1,1 @@
+These are stable food identities, not silently inferred retail products. The current broker output did not expose complete nutrient names and units, so the release correctly publishes no nutrient amounts.

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "mmn-1089",
+    "marketType": "Point of Sale - Dairy",
+    "narrative": "Cream availability was lighter in parts of the Central region; the published range describes first sales F.O.B. and is not a retail shelf price.",
+    "publicationDate": "2026-07-22",
+    "reportDate": "2026-07-20",
+    "sourceId": "usda-mymarketnews",
+    "status": "final",
+    "title": "Butter - Central U.S.",
+    "unitBasis": "Basis pricing, dollars per pound"
+  },
+  {
+    "id": "mmn-1427",
+    "marketType": "Inventory",
+    "narrative": "Regional shell-egg inventories are wholesale inventory context, not consumer availability.",
+    "publicationDate": "2026-07-20",
+    "reportDate": "2026-07-20",
+    "sourceId": "usda-mymarketnews",
+    "status": "final",
+    "title": "National Weekly Shell Egg Inventory",
+    "unitBasis": "Thousand 30-dozen cases"
+  },
+  {
+    "id": "mmn-1655",
+    "marketType": "Narrative summary",
+    "narrative": "Long- and medium-grain milled rice, second heads, brewers, and byproducts were reported steady in the South and California.",
+    "publicationDate": "2026-07-20",
+    "reportDate": "2026-07-20",
+    "sourceId": "usda-mymarketnews",
+    "status": "final",
+    "title": "National Weekly Rice Summary",
+    "unitBasis": "Qualitative market direction"
+  },
+  {
+    "id": "mmn-1662",
+    "marketType": "Shipping point trends",
+    "narrative": "Volumes and first-handler F.O.B. prices describe shipping-point markets, not retail shelf conditions.",
+    "publicationDate": "2026-07-20",
+    "reportDate": "2026-07-20",
+    "sourceId": "usda-mymarketnews",
+    "status": "final",
+    "title": "National Shipping Point Trends Report",
+    "unitBasis": "First-handler F.O.B."
+  }
+]

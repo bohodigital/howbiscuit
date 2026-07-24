@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "timezone": "UTC",
+  "brokerOnly": true,
+  "schedules": [
+    { "provider": "hud", "cadence": "quarterly", "calendar": "2026-01,04,07,10-05 06:15:00", "action": "generate-query-plan" },
+    { "provider": "eia", "cadence": "monthly", "calendar": "*-*-08 06:30:00", "action": "generate-query-plan" },
+    { "provider": "fooddata", "cadence": "quarterly", "calendar": "2026-01,04,07,10-06 06:45:00", "action": "generate-query-plan" },
+    { "provider": "mymarketnews", "cadence": "weekly", "calendar": "Mon *-*-* 07:00:00", "action": "generate-query-plan" },
+    { "provider": "nass", "cadence": "monthly", "calendar": "*-*-12 07:15:00", "action": "generate-query-plan" },
+    { "provider": "kroger", "cadence": "manual-on-demand", "calendar": null, "action": "governed-private-research-only" }
+  ],
+  "failurePolicy": {
+    "mutateAcceptedRelease": false,
+    "automaticPromotion": false,
+    "retryCount": 0,
+    "operatorReviewRequired": true,
+    "rollbackCommand": "npm run data:rollback -- --release <previous-release-id>"
+  }
+}

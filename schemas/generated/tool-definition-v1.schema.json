@@ -1,0 +1,177 @@
+{
+  "$defs": {
+    "__schema0": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "pattern": "^[A-Za-z][A-Za-z0-9]*$",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 80,
+          "minLength": 2,
+          "type": "string"
+        },
+        "maximumOptions": {
+          "maximum": 200,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "sensitive": {
+          "const": false,
+          "type": "boolean"
+        },
+        "type": {
+          "const": "select",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "type",
+        "field",
+        "maximumOptions",
+        "sensitive"
+      ],
+      "type": "object"
+    },
+    "__schema1": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "pattern": "^[A-Za-z][A-Za-z0-9]*$",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 80,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "label"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "chart": {
+      "additionalProperties": false,
+      "properties": {
+        "accessibleSummary": {
+          "maxLength": 240,
+          "minLength": 20,
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "xField": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "yField": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9]*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "enabled",
+        "xField",
+        "yField",
+        "accessibleSummary"
+      ],
+      "type": "object"
+    },
+    "inputs": {
+      "items": {
+        "$ref": "#/$defs/__schema0"
+      },
+      "maxItems": 5,
+      "type": "array"
+    },
+    "kind": {
+      "enum": [
+        "energy-benchmark",
+        "zip-relationship",
+        "food-identity",
+        "crop-production",
+        "market-context"
+      ],
+      "type": "string"
+    },
+    "limitation": {
+      "maxLength": 500,
+      "minLength": 40,
+      "type": "string"
+    },
+    "providerCallsOnPageLoad": {
+      "const": false,
+      "type": "boolean"
+    },
+    "schemaVersion": {
+      "const": "1.0.0",
+      "type": "string"
+    },
+    "table": {
+      "additionalProperties": false,
+      "properties": {
+        "caption": {
+          "maxLength": 180,
+          "minLength": 10,
+          "type": "string"
+        },
+        "columns": {
+          "items": {
+            "$ref": "#/$defs/__schema1"
+          },
+          "maxItems": 12,
+          "minItems": 2,
+          "type": "array"
+        }
+      },
+      "required": [
+        "caption",
+        "columns"
+      ],
+      "type": "object"
+    },
+    "transmitsInput": {
+      "const": false,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "kind",
+    "inputs",
+    "table",
+    "chart",
+    "limitation",
+    "providerCallsOnPageLoad",
+    "transmitsInput"
+  ],
+  "type": "object"
+}

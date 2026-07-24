@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "fdbbf3c7553057c5a2b77564c1f47f15c83b24173cb33a11d30a73e81cb26faa",
+  "envelopePath": "sources/eia-residential-natural-gas/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "7e951cb74ed8c4f9c04cacdb5cd97c8694578305b1219ccccb00a9a11f0d36d0",
+  "operation": "series_observations",
+  "providerId": "eia",
+  "recordCount": 48,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "eia",
+  "sourceId": "eia-residential-natural-gas"
+}

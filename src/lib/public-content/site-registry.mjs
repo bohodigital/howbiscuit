@@ -86,7 +86,7 @@ export function createPublicPageCatalog(entries, siteData = getPublicSiteData())
     }
   }
   for (const record of siteData.publicRegistry) {
-    if (record.kind !== 'topic' && !entryByRoute.has(record.route)) {
+    if (!['topic', 'tool'].includes(record.kind) && !entryByRoute.has(record.route)) {
       throw new Error(`Normalized public record has no content entry: ${record.route}`);
     }
     if (record.kind === 'topic' && entryByRoute.has(record.route)) {

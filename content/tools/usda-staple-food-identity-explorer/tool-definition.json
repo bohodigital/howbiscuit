@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "food-identity",
+  "inputs": [
+    { "id": "food", "label": "Approved food identity", "type": "select", "field": "description", "maximumOptions": 100, "sensitive": false },
+    { "id": "data-type", "label": "FoodData data type", "type": "select", "field": "dataType", "maximumOptions": 10, "sensitive": false }
+  ],
+  "table": {
+    "caption": "Approved USDA FoodData Central staple identities",
+    "columns": [
+      { "field": "fdcId", "label": "FDC ID" },
+      { "field": "description", "label": "Description" },
+      { "field": "dataType", "label": "Data type" },
+      { "field": "classification", "label": "Classification" },
+      { "field": "publicationDate", "label": "Publication date" },
+      { "field": "nutrients", "label": "Complete nutrients" }
+    ]
+  },
+  "chart": {
+    "enabled": false,
+    "xField": null,
+    "yField": null,
+    "accessibleSummary": "The approved food identity records are provided as a complete accessible table."
+  },
+  "limitation": "FoodData identity is not a store listing, current price, or availability claim. Nutrients appear only when name, amount, unit, and basis are all present.",
+  "providerCallsOnPageLoad": false,
+  "transmitsInput": false
+}

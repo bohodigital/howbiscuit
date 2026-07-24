@@ -238,6 +238,7 @@ test('one normalized public registry owns every document and eligibility decisio
   assert.deepEqual(publicRegistry.map(({ kind }) => kind), [
     'home', 'trust', 'trust', 'guide-index', 'article', 'article', 'article', 'trust',
     'trust', 'trust', 'category', 'category', 'category', 'trust', 'category', 'category',
+    'tool', 'tool', 'tool', 'tool', 'tool',
   ]);
   const privacy = publicRegistry.find(({ route }) => route === '/privacy/');
   assert.equal(privacy.updatedDate, null);

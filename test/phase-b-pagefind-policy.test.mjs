@@ -89,7 +89,7 @@ test('the normalized registry owns active routes and stays disjoint from inactiv
   const inactiveRoutes = taxonomy.TARGET_ROUTE_CONTRACTS
     .filter(({ route, outcome }) => !route.includes('*') && ['redirect', 'terminal'].includes(outcome))
     .map(({ route }) => route);
-  assert.equal(activeRoutes.length, 16);
+  assert.equal(activeRoutes.length, 21);
   assert.equal(new Set(activeRoutes).size, activeRoutes.length);
   assert.ok(inactiveRoutes.every((route) => !activeRoutes.includes(route)));
 });

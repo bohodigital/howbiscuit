@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "zip-relationship",
+  "inputs": [
+    { "id": "zip", "label": "Approved ZIP code", "type": "select", "field": "zip", "maximumOptions": 100, "sensitive": false },
+    { "id": "relationship", "label": "Relationship type", "type": "select", "field": "geographyType", "maximumOptions": 2, "sensitive": false }
+  ],
+  "table": {
+    "caption": "HUD USPS ZIP Code Crosswalk relationships",
+    "columns": [
+      { "field": "zip", "label": "ZIP code" },
+      { "field": "geographyType", "label": "Relationship" },
+      { "field": "geographyId", "label": "Geography ID" },
+      { "field": "city", "label": "Postal city label" },
+      { "field": "state", "label": "State" },
+      { "field": "residentialWeight", "label": "Residential weight" },
+      { "field": "ambiguous", "label": "Multiple relationships" }
+    ]
+  },
+  "chart": {
+    "enabled": false,
+    "xField": null,
+    "yField": null,
+    "accessibleSummary": "The complete weighted relationship data is presented in the accessible table."
+  },
+  "limitation": "A postal ZIP is not a neighborhood, and a ZIP can relate to multiple counties. ZIP relationships also differ from Census ZCTA approximations.",
+  "providerCallsOnPageLoad": false,
+  "transmitsInput": false
+}

@@ -1,202 +1,808 @@
 {
-  "schemaVersion": "1.0.0",
-  "releaseId": "h3-content-data-2026-07-24",
   "packets": [
     {
-      "schemaVersion": "1.0.0",
-      "id": "chicago-energy-context",
-      "title": "Chicago household-energy benchmarks",
-      "question": "Explain how Chicago-area electricity and natural-gas benchmarks differ from a bill.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "eia-weekly-gasoline",
-        "hud-usps-crosswalk"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-electricity-residential-il-2026-05",
+            "eia-natural-gas-residential-il-2026-04"
+          ],
+          "title": "Chicago household-energy benchmarks trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-electricity"
+        },
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-natural-gas"
+        },
+        {
+          "note": "hud data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "hud-usps-crosswalk"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "aggregate-energy-benchmark",
+          "evidenceRecordIds": [
+            "hud-60614-cbsa",
+            "eia-electricity-residential-il-2026-05",
+            "eia-natural-gas-residential-il-2026-04"
+          ],
+          "id": "chicago-energy-context-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "For May 2026, EIA reported an Illinois residential electricity average of 23.85 cents per kilowatt-hour; this aggregate is context, not an individual Chicago household bill."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "hud-60614-cbsa",
         "eia-electricity-residential-il-2026-05",
         "eia-natural-gas-residential-il-2026-04"
       ],
-      "claimCandidates": [
-        "Explain how Chicago-area electricity and natural-gas benchmarks differ from a bill."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "16980",
+      "id": "chicago-energy-context",
+      "intendedTopics": [
+        "chicago-energy-context"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-04",
+        "2026-04-01",
+        "2026-05",
+        "2026-05-01"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
-    },
-    {
-      "schemaVersion": "1.0.0",
-      "id": "northwest-indiana-energy-context",
-      "title": "Northwest Indiana energy context",
-      "question": "Pair ZIP-to-metro context with Indiana residential energy benchmarks.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Explain how Chicago-area electricity and natural-gas benchmarks differ from a bill.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
-        "eia-weekly-gasoline",
+        "eia-residential-electricity",
+        "eia-residential-natural-gas",
         "hud-usps-crosswalk"
       ],
-      "recordIds": [
+      "sourceRetrievalDates": {
+        "eia-residential-electricity": "2026-07-24T03:53:57Z",
+        "eia-residential-natural-gas": "2026-07-24T03:53:57Z",
+        "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "hud-60614-cbsa",
+            "eia-electricity-residential-il-2026-05",
+            "eia-natural-gas-residential-il-2026-04"
+          ],
+          "title": "Chicago household-energy benchmarks evidence"
+        }
+      ],
+      "title": "Chicago household-energy benchmarks",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "monthly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-electricity-residential-in-2026-05",
+            "eia-natural-gas-residential-in-2026-04"
+          ],
+          "title": "Northwest Indiana energy context trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-electricity"
+        },
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-natural-gas"
+        },
+        {
+          "note": "hud data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "hud-usps-crosswalk"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "aggregate-energy-benchmark",
+          "evidenceRecordIds": [
+            "hud-46402-cbsa",
+            "eia-electricity-residential-in-2026-05",
+            "eia-natural-gas-residential-in-2026-04"
+          ],
+          "id": "northwest-indiana-energy-context-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "The selected approved source record hud-46402-cbsa provides bounded historical context and does not support a live, personalized, or retail claim."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "hud-46402-cbsa",
         "eia-electricity-residential-in-2026-05",
         "eia-natural-gas-residential-in-2026-04"
       ],
-      "claimCandidates": [
-        "Pair ZIP-to-metro context with Indiana residential energy benchmarks."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "16980",
+      "id": "northwest-indiana-energy-context",
+      "intendedTopics": [
+        "northwest-indiana-energy-context"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-04",
+        "2026-04-01",
+        "2026-05",
+        "2026-05-01"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Pair ZIP-to-metro context with Indiana residential energy benchmarks.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "eia-residential-electricity",
+        "eia-residential-natural-gas",
+        "hud-usps-crosswalk"
+      ],
+      "sourceRetrievalDates": {
+        "eia-residential-electricity": "2026-07-24T03:53:57Z",
+        "eia-residential-natural-gas": "2026-07-24T03:53:57Z",
+        "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "hud-46402-cbsa",
+            "eia-electricity-residential-in-2026-05",
+            "eia-natural-gas-residential-in-2026-04"
+          ],
+          "title": "Northwest Indiana energy context evidence"
+        }
+      ],
+      "title": "Northwest Indiana energy context",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "monthly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "electricity-il-vs-us",
-      "title": "Illinois versus U.S. electricity",
-      "question": "Compare official residential electricity series on the same unit and month.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "eia-weekly-gasoline"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-electricity-residential-il-2026-05",
+            "eia-electricity-residential-us-2026-05"
+          ],
+          "title": "Illinois versus U.S. electricity trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-electricity"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "aggregate-energy-benchmark",
+          "evidenceRecordIds": [
+            "eia-electricity-residential-il-2026-05",
+            "eia-electricity-residential-us-2026-05"
+          ],
+          "id": "electricity-il-vs-us-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "For May 2026, EIA reported 23.85 cents per kilowatt-hour for Illinois residential electricity and 18.44 cents nationally."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "eia-electricity-residential-il-2026-05",
         "eia-electricity-residential-us-2026-05"
       ],
-      "claimCandidates": [
-        "Compare official residential electricity series on the same unit and month."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "IL",
+      "id": "electricity-il-vs-us",
+      "intendedTopics": [
+        "electricity-il-vs-us"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-05",
+        "2026-05-01"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Compare official residential electricity series on the same unit and month.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "eia-residential-electricity"
+      ],
+      "sourceRetrievalDates": {
+        "eia-residential-electricity": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "eia-electricity-residential-il-2026-05",
+            "eia-electricity-residential-us-2026-05"
+          ],
+          "title": "Illinois versus U.S. electricity evidence"
+        }
+      ],
+      "title": "Illinois versus U.S. electricity",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "monthly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "electricity-in-vs-us",
-      "title": "Indiana versus U.S. electricity",
-      "question": "Compare official residential electricity series on the same unit and month.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "eia-weekly-gasoline"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-electricity-residential-in-2026-05",
+            "eia-electricity-residential-us-2026-05"
+          ],
+          "title": "Indiana versus U.S. electricity trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-electricity"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "aggregate-energy-benchmark",
+          "evidenceRecordIds": [
+            "eia-electricity-residential-in-2026-05",
+            "eia-electricity-residential-us-2026-05"
+          ],
+          "id": "electricity-in-vs-us-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "For May 2026, EIA reported 18.15 cents per kilowatt-hour for Indiana residential electricity and 18.44 cents nationally."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "eia-electricity-residential-in-2026-05",
         "eia-electricity-residential-us-2026-05"
       ],
-      "claimCandidates": [
-        "Compare official residential electricity series on the same unit and month."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "IN",
+      "id": "electricity-in-vs-us",
+      "intendedTopics": [
+        "electricity-in-vs-us"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-05",
+        "2026-05-01"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Compare official residential electricity series on the same unit and month.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "eia-residential-electricity"
+      ],
+      "sourceRetrievalDates": {
+        "eia-residential-electricity": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "eia-electricity-residential-in-2026-05",
+            "eia-electricity-residential-us-2026-05"
+          ],
+          "title": "Indiana versus U.S. electricity evidence"
+        }
+      ],
+      "title": "Indiana versus U.S. electricity",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "monthly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "natural-gas-il-vs-us",
-      "title": "Illinois versus U.S. natural gas",
-      "question": "Compare official residential natural-gas series on the same unit and month.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "eia-weekly-gasoline"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-natural-gas-residential-il-2026-04",
+            "eia-natural-gas-residential-us-2026-04"
+          ],
+          "title": "Illinois versus U.S. natural gas trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-natural-gas"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "aggregate-energy-benchmark",
+          "evidenceRecordIds": [
+            "eia-natural-gas-residential-il-2026-04",
+            "eia-natural-gas-residential-us-2026-04"
+          ],
+          "id": "natural-gas-il-vs-us-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "For April 2026, EIA reported $14.29 per thousand cubic feet for Illinois residential natural gas and $18.17 nationally."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "eia-natural-gas-residential-il-2026-04",
         "eia-natural-gas-residential-us-2026-04"
       ],
-      "claimCandidates": [
-        "Compare official residential natural-gas series on the same unit and month."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "IL",
+      "id": "natural-gas-il-vs-us",
+      "intendedTopics": [
+        "natural-gas-il-vs-us"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-04",
+        "2026-04-01"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Compare official residential natural-gas series on the same unit and month.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ],
+      "sourceRetrievalDates": {
+        "eia-residential-natural-gas": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "eia-natural-gas-residential-il-2026-04",
+            "eia-natural-gas-residential-us-2026-04"
+          ],
+          "title": "Illinois versus U.S. natural gas evidence"
+        }
+      ],
+      "title": "Illinois versus U.S. natural gas",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "monthly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "natural-gas-in-vs-us",
-      "title": "Indiana versus U.S. natural gas",
-      "question": "Compare official residential natural-gas series on the same unit and month.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "eia-weekly-gasoline"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-natural-gas-residential-in-2026-04",
+            "eia-natural-gas-residential-us-2026-04"
+          ],
+          "title": "Indiana versus U.S. natural gas trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-natural-gas"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "aggregate-energy-benchmark",
+          "evidenceRecordIds": [
+            "eia-natural-gas-residential-in-2026-04",
+            "eia-natural-gas-residential-us-2026-04"
+          ],
+          "id": "natural-gas-in-vs-us-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "For April 2026, EIA reported $14.45 per thousand cubic feet for Indiana residential natural gas and $18.17 nationally."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "eia-natural-gas-residential-in-2026-04",
         "eia-natural-gas-residential-us-2026-04"
       ],
-      "claimCandidates": [
-        "Compare official residential natural-gas series on the same unit and month."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "IN",
+      "id": "natural-gas-in-vs-us",
+      "intendedTopics": [
+        "natural-gas-in-vs-us"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-04",
+        "2026-04-01"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Compare official residential natural-gas series on the same unit and month.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ],
+      "sourceRetrievalDates": {
+        "eia-residential-natural-gas": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "eia-natural-gas-residential-in-2026-04",
+            "eia-natural-gas-residential-us-2026-04"
+          ],
+          "title": "Indiana versus U.S. natural gas evidence"
+        }
+      ],
+      "title": "Indiana versus U.S. natural gas",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "monthly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "baking-staples-identities",
-      "title": "Baking staple identities",
-      "question": "Provide stable USDA food identities for flour, sugar, salt, soda, and powder.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "usda-fooddata-central"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-fooddata-central"
+        }
       ],
-      "recordIds": [
+      "claims": [
+        {
+          "classification": "food-identity",
+          "evidenceRecordIds": [
+            "fdc-789890",
+            "fdc-746784",
+            "fdc-173468",
+            "fdc-175040",
+            "fdc-172804"
+          ],
+          "id": "baking-staples-identities-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA FoodData Central identifies Flour, wheat, all-purpose, enriched, bleached (FDC 789890); Sugars, granulated (FDC 746784); Salt, table (FDC 173468); Leavening agents, baking soda (FDC 175040); these identities do not establish retail price or availability."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "fdc-789890",
         "fdc-746784",
         "fdc-173468",
         "fdc-175040",
         "fdc-172804"
       ],
-      "claimCandidates": [
-        "Provide stable USDA food identities for flour, sugar, salt, soda, and powder."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "baking-staples-identities",
+      "intendedTopics": [
+        "baking-staples-identities"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
-      ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
-    },
-    {
-      "schemaVersion": "1.0.0",
-      "id": "dairy-staples-identities",
-      "title": "Dairy staple identities",
-      "question": "Provide stable USDA food identities for butter, milk, and egg.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "observationDates": [],
+      "productScope": "generic USDA food identities",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Provide stable USDA food identities for flour, sugar, salt, soda, and powder.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
         "usda-fooddata-central"
       ],
-      "recordIds": [
+      "sourceRetrievalDates": {
+        "usda-fooddata-central": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "fdc-789890",
+            "fdc-746784",
+            "fdc-173468",
+            "fdc-175040",
+            "fdc-172804"
+          ],
+          "title": "Baking staple identities evidence"
+        }
+      ],
+      "title": "Baking staple identities",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-fooddata-central"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "food-identity",
+          "evidenceRecordIds": [
+            "fdc-173410",
+            "fdc-746782",
+            "fdc-171287"
+          ],
+          "id": "dairy-staples-identities-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA FoodData Central identifies Butter, salted (FDC 173410); Milk, whole, 3.25% milkfat, with added vitamin D (FDC 746782); Egg, whole, raw, fresh (FDC 171287); these identities do not establish retail price or availability."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "fdc-173410",
         "fdc-746782",
         "fdc-171287"
       ],
-      "claimCandidates": [
-        "Provide stable USDA food identities for butter, milk, and egg."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "dairy-staples-identities",
+      "intendedTopics": [
+        "dairy-staples-identities"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
-      ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
-    },
-    {
-      "schemaVersion": "1.0.0",
-      "id": "pantry-staples-identities",
-      "title": "Pantry staple identities",
-      "question": "Provide stable USDA food identities for rice, oats, pasta, beans, tomatoes, and cocoa.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "observationDates": [],
+      "productScope": "generic USDA food identities",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Provide stable USDA food identities for butter, milk, and egg.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
         "usda-fooddata-central"
       ],
-      "recordIds": [
+      "sourceRetrievalDates": {
+        "usda-fooddata-central": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "fdc-173410",
+            "fdc-746782",
+            "fdc-171287"
+          ],
+          "title": "Dairy staple identities evidence"
+        }
+      ],
+      "title": "Dairy staple identities",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-fooddata-central"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "food-identity",
+          "evidenceRecordIds": [
+            "fdc-168877",
+            "fdc-173904",
+            "fdc-2758998",
+            "fdc-175188",
+            "fdc-170051",
+            "fdc-169593"
+          ],
+          "id": "pantry-staples-identities-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA FoodData Central identifies Rice, white, long-grain, regular, raw, enriched (FDC 168877); Oats (FDC 173904); Pasta, spaghetti, dry, enriched (FDC 2758998); Beans, black turtle, canned (FDC 175188); these identities do not establish retail price or availability."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "fdc-168877",
         "fdc-173904",
         "fdc-2758998",
@@ -204,218 +810,868 @@
         "fdc-170051",
         "fdc-169593"
       ],
-      "claimCandidates": [
-        "Provide stable USDA food identities for rice, oats, pasta, beans, tomatoes, and cocoa."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "pantry-staples-identities",
+      "intendedTopics": [
+        "pantry-staples-identities"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [],
+      "productScope": "generic USDA food identities",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Provide stable USDA food identities for rice, oats, pasta, beans, tomatoes, and cocoa.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-fooddata-central"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "sourceRetrievalDates": {
+        "usda-fooddata-central": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "fdc-168877",
+            "fdc-173904",
+            "fdc-2758998",
+            "fdc-175188",
+            "fdc-170051",
+            "fdc-169593"
+          ],
+          "title": "Pantry staple identities evidence"
+        }
+      ],
+      "title": "Pantry staple identities",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "butter-market-basis",
-      "title": "Central U.S. butter basis",
-      "question": "Explain the reported first-sales basis without treating it as a shelf price.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "usda-mymarketnews"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "mymarketnews data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-mymarketnews"
+        }
       ],
-      "recordIds": [
+      "claims": [
+        {
+          "classification": "wholesale-market-context",
+          "evidenceRecordIds": [
+            "mmn-1089",
+            "mmn-1089-2026-07-20"
+          ],
+          "id": "butter-market-basis-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "For the week of July 20, 2026, the Central U.S. Grade AA butter first-sales basis range was -$0.03 to $0.02 per pound; this wholesale basis is not a shelf price."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "mmn-1089",
         "mmn-1089-2026-07-20"
       ],
-      "claimCandidates": [
-        "Explain the reported first-sales basis without treating it as a shelf price."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "Central U.S.",
+      "id": "butter-market-basis",
+      "intendedTopics": [
+        "butter-market-basis"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-07-20"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
-    },
-    {
-      "schemaVersion": "1.0.0",
-      "id": "egg-inventory-context",
-      "title": "Midwest egg inventory",
-      "question": "Explain the inventory unit and why it is not a consumer price.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Explain the reported first-sales basis without treating it as a shelf price.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
         "usda-mymarketnews"
       ],
-      "recordIds": [
+      "sourceRetrievalDates": {
+        "usda-mymarketnews": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "mmn-1089",
+            "mmn-1089-2026-07-20"
+          ],
+          "title": "Central U.S. butter basis evidence"
+        }
+      ],
+      "title": "Central U.S. butter basis",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "mymarketnews data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-mymarketnews"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "wholesale-market-context",
+          "evidenceRecordIds": [
+            "mmn-1427",
+            "mmn-1427-midwest-2026-07-20"
+          ],
+          "id": "egg-inventory-context-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA’s July 20, 2026 shell-egg inventory report measured regional inventory in thousand 30-dozen cases, a wholesale inventory unit that does not establish store availability."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "mmn-1427",
         "mmn-1427-midwest-2026-07-20"
       ],
-      "claimCandidates": [
-        "Explain the inventory unit and why it is not a consumer price."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "Midwest",
+      "id": "egg-inventory-context",
+      "intendedTopics": [
+        "egg-inventory-context"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2026-07-20"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Explain the inventory unit and why it is not a consumer price.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-mymarketnews"
+      ],
+      "sourceRetrievalDates": {
+        "usda-mymarketnews": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "mmn-1427",
+            "mmn-1427-midwest-2026-07-20"
+          ],
+          "title": "Midwest egg inventory evidence"
+        }
+      ],
+      "title": "Midwest egg inventory",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
     },
     {
-      "schemaVersion": "1.0.0",
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "mymarketnews data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-mymarketnews"
+        },
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "wholesale-market-context",
+          "evidenceRecordIds": [
+            "mmn-1655",
+            "nass-rice-2025"
+          ],
+          "id": "rice-market-context-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA Market News describes first-handler or wholesale market conditions; the selected records do not support a consumer shelf-price claim."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "mmn-1655",
+        "nass-rice-2025"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
       "id": "rice-market-context",
-      "title": "Rice market context",
-      "question": "Pair a USDA weekly market report definition with annual crop production.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "intendedTopics": [
+        "rice-market-context"
+      ],
+      "observationDates": [
+        "2025",
+        "2026-07-20"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Pair a USDA weekly market report definition with annual crop production.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
         "usda-mymarketnews",
         "usda-nass-quickstats"
       ],
-      "recordIds": [
-        "mmn-1655",
-        "nass-rice-2025"
+      "sourceRetrievalDates": {
+        "usda-mymarketnews": "2026-07-24T03:53:57Z",
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "mmn-1655",
+            "nass-rice-2025"
+          ],
+          "title": "Rice market context evidence"
+        }
       ],
-      "claimCandidates": [
-        "Pair a USDA weekly market report definition with annual crop production."
+      "title": "Rice market context",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
-      ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "updateCadence": "quarterly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "corn-production-trend",
-      "title": "U.S. corn production trend",
-      "question": "Summarize annual production with year, unit, and revision caveats.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "usda-nass-quickstats"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-corn-2021",
+            "nass-corn-2022",
+            "nass-corn-2023",
+            "nass-corn-2024",
+            "nass-corn-2025"
+          ],
+          "title": "U.S. corn production trend trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-corn-2021",
+            "nass-corn-2022",
+            "nass-corn-2023",
+            "nass-corn-2024",
+            "nass-corn-2025"
+          ],
+          "id": "corn-production-trend-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. corn production of 17,020,549,000 BU for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "nass-corn-2021",
         "nass-corn-2022",
         "nass-corn-2023",
         "nass-corn-2024",
         "nass-corn-2025"
       ],
-      "claimCandidates": [
-        "Summarize annual production with year, unit, and revision caveats."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "corn-production-trend",
+      "intendedTopics": [
+        "corn-production-trend"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
-    },
-    {
-      "schemaVersion": "1.0.0",
-      "id": "rice-production-trend",
-      "title": "U.S. rice production trend",
-      "question": "Summarize annual production with year, unit, and revision caveats.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Summarize annual production with year, unit, and revision caveats.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
         "usda-nass-quickstats"
       ],
-      "recordIds": [
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-corn-2021",
+            "nass-corn-2022",
+            "nass-corn-2023",
+            "nass-corn-2024",
+            "nass-corn-2025"
+          ],
+          "title": "U.S. corn production trend evidence"
+        }
+      ],
+      "title": "U.S. corn production trend",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-rice-2021",
+            "nass-rice-2022",
+            "nass-rice-2023",
+            "nass-rice-2024",
+            "nass-rice-2025"
+          ],
+          "title": "U.S. rice production trend trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-rice-2021",
+            "nass-rice-2022",
+            "nass-rice-2023",
+            "nass-rice-2024",
+            "nass-rice-2025"
+          ],
+          "id": "rice-production-trend-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. rice production of 206,707,000 CWT for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "nass-rice-2021",
         "nass-rice-2022",
         "nass-rice-2023",
         "nass-rice-2024",
         "nass-rice-2025"
       ],
-      "claimCandidates": [
-        "Summarize annual production with year, unit, and revision caveats."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "rice-production-trend",
+      "intendedTopics": [
+        "rice-production-trend"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
-    },
-    {
-      "schemaVersion": "1.0.0",
-      "id": "wheat-production-trend",
-      "title": "U.S. wheat production trend",
-      "question": "Summarize annual production with year, unit, and revision caveats.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Summarize annual production with year, unit, and revision caveats.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
       "sourceIds": [
         "usda-nass-quickstats"
       ],
-      "recordIds": [
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-rice-2021",
+            "nass-rice-2022",
+            "nass-rice-2023",
+            "nass-rice-2024",
+            "nass-rice-2025"
+          ],
+          "title": "U.S. rice production trend evidence"
+        }
+      ],
+      "title": "U.S. rice production trend",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-wheat-2021",
+            "nass-wheat-2022",
+            "nass-wheat-2023",
+            "nass-wheat-2024",
+            "nass-wheat-2025"
+          ],
+          "title": "U.S. wheat production trend trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-wheat-2021",
+            "nass-wheat-2022",
+            "nass-wheat-2023",
+            "nass-wheat-2024",
+            "nass-wheat-2025"
+          ],
+          "id": "wheat-production-trend-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. wheat production of 1,984,537,000 BU for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "nass-wheat-2021",
         "nass-wheat-2022",
         "nass-wheat-2023",
         "nass-wheat-2024",
         "nass-wheat-2025"
       ],
-      "claimCandidates": [
-        "Summarize annual production with year, unit, and revision caveats."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "wheat-production-trend",
+      "intendedTopics": [
+        "wheat-production-trend"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Summarize annual production with year, unit, and revision caveats.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-wheat-2021",
+            "nass-wheat-2022",
+            "nass-wheat-2023",
+            "nass-wheat-2024",
+            "nass-wheat-2025"
+          ],
+          "title": "U.S. wheat production trend evidence"
+        }
+      ],
+      "title": "U.S. wheat production trend",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "kroger-exact-mapping",
-      "title": "Exact Kroger product mappings",
-      "question": "Document the two approved exact merchant mappings and exclusion of probable matches.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "kroger"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "kroger"
+        }
       ],
-      "recordIds": [
+      "claims": [
+        {
+          "classification": "identity-only",
+          "evidenceRecordIds": [
+            "kroger-kraft-mac-cheese",
+            "kroger-coca-cola-alias"
+          ],
+          "id": "kroger-exact-mapping-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "The governed Kroger research set contains 2 exact item-ID mappings scoped to internal research; public live price comparison remains disabled."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "kroger-kraft-mac-cheese",
         "kroger-coca-cola-alias"
       ],
-      "claimCandidates": [
-        "Document the two approved exact merchant mappings and exclusion of probable matches."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "kroger-exact-mapping",
+      "intendedTopics": [
+        "kroger-exact-mapping"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [],
+      "productScope": "governed exact Kroger identities",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Document the two approved exact merchant mappings and exclusion of probable matches.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "kroger"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "sourceRetrievalDates": {
+        "kroger": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "kroger-kraft-mac-cheese",
+            "kroger-coca-cola-alias"
+          ],
+          "title": "Exact Kroger product mappings evidence"
+        }
+      ],
+      "title": "Exact Kroger product mappings",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "manual-on-demand"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "zip-metro-method",
-      "title": "ZIP-to-metro method",
-      "question": "Explain residential-address weighting using representative national ZIPs.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "hud-usps-crosswalk"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "hud data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "hud-usps-crosswalk"
+        }
       ],
-      "recordIds": [
+      "claims": [
+        {
+          "classification": "weighted-geographic-relationship",
+          "evidenceRecordIds": [
+            "hud-60614-cbsa",
+            "hud-46802-cbsa",
+            "hud-10001-cbsa",
+            "hud-90012-cbsa"
+          ],
+          "id": "zip-metro-method-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "The selected approved source record hud-60614-cbsa provides bounded historical context and does not support a live, personalized, or retail claim."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "hud-60614-cbsa",
         "hud-46802-cbsa",
         "hud-10001-cbsa",
         "hud-90012-cbsa"
       ],
-      "claimCandidates": [
-        "Explain residential-address weighting using representative national ZIPs."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "16980",
+      "id": "zip-metro-method",
+      "intendedTopics": [
+        "zip-metro-method"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Explain residential-address weighting using representative national ZIPs.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "hud-usps-crosswalk"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "sourceRetrievalDates": {
+        "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "hud-60614-cbsa",
+            "hud-46802-cbsa",
+            "hud-10001-cbsa",
+            "hud-90012-cbsa"
+          ],
+          "title": "ZIP-to-metro method evidence"
+        }
+      ],
+      "title": "ZIP-to-metro method",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
     },
     {
-      "schemaVersion": "1.0.0",
-      "id": "source-boundaries",
-      "title": "Six-source claim boundaries",
-      "question": "State what each active source may support and what it cannot support.",
-      "generatedAt": "2026-07-24T01:44:18Z",
-      "releaseId": "h3-content-data-2026-07-24",
-      "sourceIds": [
-        "eia-weekly-gasoline",
-        "hud-usps-crosswalk",
-        "kroger",
-        "usda-fooddata-central",
-        "usda-mymarketnews",
-        "usda-nass-quickstats"
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "eia-electricity-residential-us-2026-05",
+            "nass-corn-2025"
+          ],
+          "title": "Six-source claim boundaries trend",
+          "xField": "period",
+          "yField": "value"
+        }
       ],
-      "recordIds": [
+      "citationNotes": [
+        {
+          "note": "eia data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "eia-residential-electricity"
+        },
+        {
+          "note": "hud data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "hud-usps-crosswalk"
+        },
+        {
+          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "kroger"
+        },
+        {
+          "note": "fooddata data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-fooddata-central"
+        },
+        {
+          "note": "mymarketnews data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-mymarketnews"
+        },
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "hud-60614-county",
+            "eia-electricity-residential-us-2026-05",
+            "fdc-789890",
+            "mmn-1089",
+            "nass-corn-2025",
+            "kroger-kraft-mac-cheese"
+          ],
+          "id": "source-boundaries-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. corn production of 17,020,549,000 BU for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
         "hud-60614-county",
         "eia-electricity-residential-us-2026-05",
         "fdc-789890",
@@ -423,13 +1679,949 @@
         "nass-corn-2025",
         "kroger-kraft-mac-cheese"
       ],
-      "claimCandidates": [
-        "State what each active source may support and what it cannot support."
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "17031",
+      "id": "source-boundaries",
+      "intendedTopics": [
+        "source-boundaries"
       ],
-      "limitations": [
-        "Provider observations are historical context, not live quotes or personalized advice."
+      "observationDates": [
+        "2025",
+        "2026-05",
+        "2026-05-01",
+        "2026-07-20"
       ],
-      "disclosure": "Sources and retrieval times must accompany any published claim."
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "State what each active source may support and what it cannot support.",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "eia-residential-electricity",
+        "hud-usps-crosswalk",
+        "kroger",
+        "usda-fooddata-central",
+        "usda-mymarketnews",
+        "usda-nass-quickstats"
+      ],
+      "sourceRetrievalDates": {
+        "eia-residential-electricity": "2026-07-24T03:53:57Z",
+        "hud-usps-crosswalk": "2026-07-24T03:53:57Z",
+        "kroger": "2026-07-24T03:53:57Z",
+        "usda-fooddata-central": "2026-07-24T03:53:57Z",
+        "usda-mymarketnews": "2026-07-24T03:53:57Z",
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "hud-60614-county",
+            "eia-electricity-residential-us-2026-05",
+            "fdc-789890",
+            "mmn-1089",
+            "nass-corn-2025",
+            "kroger-kraft-mac-cheese"
+          ],
+          "title": "Six-source claim boundaries evidence"
+        }
+      ],
+      "title": "Six-source claim boundaries",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "manual-on-demand"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "hud data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "hud-usps-crosswalk"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "hud-60010-county-17031",
+            "hud-60010-county-17097",
+            "hud-60010-cbsa-16980"
+          ],
+          "id": "hud-weighted-ambiguity-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "HUD’s residential crosswalk assigns ZIP 60010 across four counties; Lake County, Illinois has the largest listed residential weight at 52.7421%, so the ZIP must not be described as belonging exclusively to Cook County."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "hud-60010-county-17031",
+        "hud-60010-county-17097",
+        "hud-60010-cbsa-16980"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "17031",
+      "id": "hud-weighted-ambiguity",
+      "intendedTopics": [
+        "hud-weighted-ambiguity"
+      ],
+      "observationDates": [],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "How should a ZIP spanning counties be described?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ],
+      "sourceRetrievalDates": {
+        "hud-usps-crosswalk": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "hud-60010-county-17031",
+            "hud-60010-county-17097",
+            "hud-60010-cbsa-16980"
+          ],
+          "title": "Weighted HUD ambiguity evidence"
+        }
+      ],
+      "title": "Weighted HUD ambiguity",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-soybeans-2021",
+            "nass-soybeans-2022",
+            "nass-soybeans-2023",
+            "nass-soybeans-2024",
+            "nass-soybeans-2025"
+          ],
+          "title": "U.S. soybean production trend trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-soybeans-2021",
+            "nass-soybeans-2022",
+            "nass-soybeans-2023",
+            "nass-soybeans-2024",
+            "nass-soybeans-2025"
+          ],
+          "id": "soybean-production-trend-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. soybeans production of 4,261,858,000 BU for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "nass-soybeans-2021",
+        "nass-soybeans-2022",
+        "nass-soybeans-2023",
+        "nass-soybeans-2024",
+        "nass-soybeans-2025"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "soybean-production-trend",
+      "intendedTopics": [
+        "soybean-production-trend"
+      ],
+      "observationDates": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "What changed in final U.S. soybean production?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-soybeans-2021",
+            "nass-soybeans-2022",
+            "nass-soybeans-2023",
+            "nass-soybeans-2024",
+            "nass-soybeans-2025"
+          ],
+          "title": "U.S. soybean production trend evidence"
+        }
+      ],
+      "title": "U.S. soybean production trend",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-oats-2021",
+            "nass-oats-2022",
+            "nass-oats-2023",
+            "nass-oats-2024",
+            "nass-oats-2025",
+            "nass-oats-2026"
+          ],
+          "title": "U.S. oat production trend trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-oats-2021",
+            "nass-oats-2022",
+            "nass-oats-2023",
+            "nass-oats-2024",
+            "nass-oats-2025",
+            "nass-oats-2026"
+          ],
+          "id": "oat-production-trend-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. oats production of 63,212,000 BU for 2026; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "nass-oats-2021",
+        "nass-oats-2022",
+        "nass-oats-2023",
+        "nass-oats-2024",
+        "nass-oats-2025",
+        "nass-oats-2026"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "oat-production-trend",
+      "intendedTopics": [
+        "oat-production-trend"
+      ],
+      "observationDates": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "What changed in final U.S. oat production?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-oats-2021",
+            "nass-oats-2022",
+            "nass-oats-2023",
+            "nass-oats-2024",
+            "nass-oats-2025",
+            "nass-oats-2026"
+          ],
+          "title": "U.S. oat production trend evidence"
+        }
+      ],
+      "title": "U.S. oat production trend",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-potatoes-2021",
+            "nass-potatoes-2022",
+            "nass-potatoes-2023",
+            "nass-potatoes-2024",
+            "nass-potatoes-2025"
+          ],
+          "title": "U.S. potato production trend trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-potatoes-2021",
+            "nass-potatoes-2022",
+            "nass-potatoes-2023",
+            "nass-potatoes-2024",
+            "nass-potatoes-2025"
+          ],
+          "id": "potato-production-trend-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. potatoes production of 412,860,000 CWT for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "nass-potatoes-2021",
+        "nass-potatoes-2022",
+        "nass-potatoes-2023",
+        "nass-potatoes-2024",
+        "nass-potatoes-2025"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "potato-production-trend",
+      "intendedTopics": [
+        "potato-production-trend"
+      ],
+      "observationDates": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "What changed in final U.S. potato production?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-potatoes-2021",
+            "nass-potatoes-2022",
+            "nass-potatoes-2023",
+            "nass-potatoes-2024",
+            "nass-potatoes-2025"
+          ],
+          "title": "U.S. potato production trend evidence"
+        }
+      ],
+      "title": "U.S. potato production trend",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [
+        {
+          "id": "trend",
+          "recordIds": [
+            "nass-soybeans-2025",
+            "nass-soybeans-2025-nov-forecast"
+          ],
+          "title": "NASS final versus forecast rows trend",
+          "xField": "period",
+          "yField": "value"
+        }
+      ],
+      "citationNotes": [
+        {
+          "note": "nass data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-nass-quickstats"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "nass-soybeans-2025",
+            "nass-soybeans-2025-nov-forecast"
+          ],
+          "id": "nass-final-vs-forecast-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA NASS reported final U.S. soybeans production of 4,261,858,000 BU for 2025; national production does not establish local store inventory."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "nass-soybeans-2025",
+        "nass-soybeans-2025-nov-forecast"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "US",
+      "id": "nass-final-vs-forecast",
+      "intendedTopics": [
+        "nass-final-vs-forecast"
+      ],
+      "observationDates": [
+        "2025"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "How are final and forecast statistics kept distinct?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ],
+      "sourceRetrievalDates": {
+        "usda-nass-quickstats": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "nass-soybeans-2025",
+            "nass-soybeans-2025-nov-forecast"
+          ],
+          "title": "NASS final versus forecast rows evidence"
+        }
+      ],
+      "title": "NASS final versus forecast rows",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "kroger"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "identity-only",
+          "evidenceRecordIds": [
+            "kroger-0001111001129",
+            "kroger-0001111004807",
+            "kroger-0001111004808",
+            "kroger-0001111011888",
+            "kroger-0001111011889",
+            "kroger-0001111072567",
+            "kroger-0001111085004",
+            "kroger-0001111085402",
+            "kroger-0001111085451",
+            "kroger-0001111086116"
+          ],
+          "id": "kroger-staple-basket-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "The governed Kroger research set contains 10 exact item-ID mappings scoped to internal research; public live price comparison remains disabled."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "kroger-0001111001129",
+        "kroger-0001111004807",
+        "kroger-0001111004808",
+        "kroger-0001111011888",
+        "kroger-0001111011889",
+        "kroger-0001111072567",
+        "kroger-0001111085004",
+        "kroger-0001111085402",
+        "kroger-0001111085451",
+        "kroger-0001111086116"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "kroger-staple-basket",
+      "intendedTopics": [
+        "kroger-staple-basket"
+      ],
+      "observationDates": [],
+      "productScope": "governed exact Kroger identities",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "Which exact staple identities were verified for the governed store?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "kroger"
+      ],
+      "sourceRetrievalDates": {
+        "kroger": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "kroger-0001111001129",
+            "kroger-0001111004807",
+            "kroger-0001111004808",
+            "kroger-0001111011888",
+            "kroger-0001111011889",
+            "kroger-0001111072567",
+            "kroger-0001111085004",
+            "kroger-0001111085402",
+            "kroger-0001111085451",
+            "kroger-0001111086116"
+          ],
+          "title": "Kroger store-scoped staple basket evidence"
+        }
+      ],
+      "title": "Kroger store-scoped staple basket",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "manual-on-demand"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "kroger data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "kroger"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "identity-only",
+          "evidenceRecordIds": [
+            "kroger-observation-53100516-0001111001129-2026-07-24",
+            "kroger-observation-53100516-0001111004807-2026-07-24",
+            "kroger-observation-53100516-0001111004808-2026-07-24",
+            "kroger-observation-53100516-0001111011888-2026-07-24",
+            "kroger-observation-53100516-0001111011889-2026-07-24"
+          ],
+          "id": "kroger-availability-boundary-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "The governed Kroger observations retain price and availability as unknown because the broker omitted the nested item fields; missing evidence is not treated as out of stock."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "kroger-observation-53100516-0001111001129-2026-07-24",
+        "kroger-observation-53100516-0001111004807-2026-07-24",
+        "kroger-observation-53100516-0001111004808-2026-07-24",
+        "kroger-observation-53100516-0001111011888-2026-07-24",
+        "kroger-observation-53100516-0001111011889-2026-07-24"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "kroger-availability-boundary",
+      "intendedTopics": [
+        "kroger-availability-boundary"
+      ],
+      "observationDates": [],
+      "productScope": "governed exact Kroger identities",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "What can the current broker evidence support about availability?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "kroger"
+      ],
+      "sourceRetrievalDates": {
+        "kroger": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "kroger-observation-53100516-0001111001129-2026-07-24",
+            "kroger-observation-53100516-0001111004807-2026-07-24",
+            "kroger-observation-53100516-0001111004808-2026-07-24",
+            "kroger-observation-53100516-0001111011888-2026-07-24",
+            "kroger-observation-53100516-0001111011889-2026-07-24"
+          ],
+          "title": "Kroger availability boundary evidence"
+        }
+      ],
+      "title": "Kroger availability boundary",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "manual-on-demand"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "mymarketnews data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-mymarketnews"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "mmn-1662"
+          ],
+          "id": "shipping-point-boundary-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA Market News describes first-handler or wholesale market conditions; the selected records do not support a consumer shelf-price claim."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "mmn-1662"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "not-applicable",
+      "id": "shipping-point-boundary",
+      "intendedTopics": [
+        "shipping-point-boundary"
+      ],
+      "observationDates": [
+        "2026-07-20"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "What does a shipping-point report not establish?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-mymarketnews"
+      ],
+      "sourceRetrievalDates": {
+        "usda-mymarketnews": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "mmn-1662"
+          ],
+          "title": "Shipping-point wholesale boundary evidence"
+        }
+      ],
+      "title": "Shipping-point wholesale boundary",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
+    },
+    {
+      "approval": {
+        "approvedAt": "2026-07-24T04:00:00Z",
+        "reviewer": "howbiscuit-h3.1-work-order",
+        "state": "approved"
+      },
+      "charts": [],
+      "citationNotes": [
+        {
+          "note": "mymarketnews data retrieved 2026-07-24T03:53:57Z.",
+          "sourceId": "usda-mymarketnews"
+        }
+      ],
+      "claims": [
+        {
+          "classification": "agricultural-statistic",
+          "evidenceRecordIds": [
+            "mmn-1427-midwest-2026-07-20",
+            "mmn-1427-midwest-misc-2026-07-20",
+            "mmn-1427-northeast-jumbo-2026-07-20",
+            "mmn-1427-northeast-misc-2026-07-20",
+            "mmn-1427-northwest-jumbo-2026-07-20",
+            "mmn-1427-six-area-misc-2026-07-20"
+          ],
+          "id": "egg-regional-inventory-claim-1",
+          "limitations": [
+            "Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary."
+          ],
+          "text": "USDA’s July 20, 2026 shell-egg inventory report measured regional inventory in thousand 30-dozen cases, a wholesale inventory unit that does not establish store availability."
+        }
+      ],
+      "disclosure": "This static research packet uses approved historical source records and makes no provider call during page load.",
+      "evidenceRecordIds": [
+        "mmn-1427-midwest-2026-07-20",
+        "mmn-1427-midwest-misc-2026-07-20",
+        "mmn-1427-northeast-jumbo-2026-07-20",
+        "mmn-1427-northeast-misc-2026-07-20",
+        "mmn-1427-northwest-jumbo-2026-07-20",
+        "mmn-1427-six-area-misc-2026-07-20"
+      ],
+      "generatedAt": "2026-07-24T03:53:57Z",
+      "geography": "Midwest",
+      "id": "egg-regional-inventory",
+      "intendedTopics": [
+        "egg-regional-inventory"
+      ],
+      "observationDates": [
+        "2026-07-20"
+      ],
+      "productScope": "not-applicable",
+      "releaseId": "h31-content-tools-2026-07-24",
+      "researchQuestion": "How did the selected regional wholesale inventories differ?",
+      "reviewDueAt": "2026-10-24T00:00:00Z",
+      "schemaVersion": "2.0.0",
+      "sourceIds": [
+        "usda-mymarketnews"
+      ],
+      "sourceRetrievalDates": {
+        "usda-mymarketnews": "2026-07-24T03:53:57Z"
+      },
+      "staleness": {
+        "assessedAt": "2026-07-24T03:53:57Z",
+        "state": "current"
+      },
+      "status": "validated",
+      "tables": [
+        {
+          "columns": [
+            "id",
+            "period",
+            "value",
+            "unit",
+            "description",
+            "geography",
+            "residentialRatio"
+          ],
+          "id": "evidence",
+          "recordIds": [
+            "mmn-1427-midwest-2026-07-20",
+            "mmn-1427-midwest-misc-2026-07-20",
+            "mmn-1427-northeast-jumbo-2026-07-20",
+            "mmn-1427-northeast-misc-2026-07-20",
+            "mmn-1427-northwest-jumbo-2026-07-20",
+            "mmn-1427-six-area-misc-2026-07-20"
+          ],
+          "title": "Regional shell-egg inventory context evidence"
+        }
+      ],
+      "title": "Regional shell-egg inventory context",
+      "unsupportedClaimWarnings": [
+        "Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim."
+      ],
+      "updateCadence": "quarterly"
     }
-  ]
+  ],
+  "releaseDigest": "247e73890d3581ed0273dfc95fe03993008ddd3b625d6a038b090cae6ff69576",
+  "releaseId": "h31-content-tools-2026-07-24",
+  "schemaVersion": "2.0.0"
 }

@@ -1,0 +1,11 @@
+{
+  "brokerOnly": true,
+  "maximumRecords": 2000,
+  "operation": "report-details-volumes",
+  "parameters": {
+    "limit": 20,
+    "reportIds": "1089,1427,1655,1662"
+  },
+  "providerId": "mymarketnews",
+  "schemaVersion": "1.0.0"
+}

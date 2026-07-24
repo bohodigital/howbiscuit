@@ -1,0 +1,26 @@
+---
+import PublicTool from '../../components/tools/PublicTool.astro';
+import toolPayload from '../../generated/tools/tools.v1.json';
+
+type Tool = (typeof toolPayload.tools)[number];
+
+export function getStaticPaths() {
+  return toolPayload.tools
+    .filter((tool) => tool.publicationStatus === 'published' && tool.visibility === 'public')
+    .map((tool) => ({
+      params: { slug: tool.slug },
+      props: {
+        tool,
+        relatedTools: tool.relatedTools.map((route) => {
+          const related = toolPayload.tools.find((candidate) => candidate.canonicalRoute === route);
+          if (!related) throw new Error(`${tool.id}: unresolved related tool ${route}`);
+          return related;
+        }),
+      },
+    }));
+}
+
+const { tool, relatedTools } = Astro.props as { tool: Tool; relatedTools: Tool[] };
+---
+
+<PublicTool {tool} {relatedTools} />

@@ -1,0 +1,11 @@
+{
+  "brokerOnly": true,
+  "maximumRecords": 2000,
+  "operation": "series_observations",
+  "parameters": {
+    "areas": "Chicago,Midwest,US",
+    "datasets": "weekly-gasoline"
+  },
+  "providerId": "eia",
+  "schemaVersion": "1.0.0"
+}

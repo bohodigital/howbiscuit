@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "crop-production",
+  "inputs": [
+    { "id": "commodity", "label": "Commodity", "type": "select", "field": "commodity", "maximumOptions": 30, "sensitive": false },
+    { "id": "classification", "label": "Final or forecast", "type": "select", "field": "classification", "maximumOptions": 4, "sensitive": false },
+    { "id": "period", "label": "Period", "type": "select", "field": "period", "maximumOptions": 30, "sensitive": false }
+  ],
+  "table": {
+    "caption": "Approved USDA NASS national crop production statistics",
+    "columns": [
+      { "field": "commodity", "label": "Commodity" },
+      { "field": "period", "label": "Year" },
+      { "field": "classification", "label": "Classification" },
+      { "field": "valueDisplay", "label": "Production" },
+      { "field": "revision", "label": "Source load or revision" }
+    ]
+  },
+  "chart": {
+    "enabled": true,
+    "xField": "period",
+    "yField": "value",
+    "accessibleSummary": "A static national production trend; exact values, units, and final or forecast classification remain in the table."
+  },
+  "limitation": "National crop production does not imply local store inventory, availability, quality, or price. Forecast rows must not be presented as final estimates.",
+  "providerCallsOnPageLoad": false,
+  "transmitsInput": false
+}

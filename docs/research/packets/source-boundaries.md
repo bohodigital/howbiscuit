@@ -1,34 +1,56 @@
 # Six-source claim boundaries
 
-Packet ID: `source-boundaries`  
-Release: `h3-content-data-2026-07-24`
+Packet ID: `source-boundaries`
+Release: `h31-content-tools-2026-07-24`
+Status: **validated / approved**
+Reviewer: `howbiscuit-h3.1-work-order`
+Generated: 2026-07-24T03:53:57Z
+Review due: 2026-10-24T00:00:00Z
 
 ## Research question
 
 State what each active source may support and what it cannot support.
 
+## Proposed factual claims
+
+### agricultural-statistic
+
+USDA NASS reported final U.S. corn production of 17,020,549,000 BU for 2025; national production does not establish local store inventory.
+
+Evidence: `hud-60614-county`, `eia-electricity-residential-us-2026-05`, `fdc-789890`, `mmn-1089`, `nass-corn-2025`, `kroger-kraft-mac-cheese`
+
+Limitations: Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary.
+
 ## Evidence records
 
-- `hud-60614-county`
-- `eia-electricity-residential-us-2026-05`
-- `fdc-789890`
-- `mmn-1089`
-- `nass-corn-2025`
-- `kroger-kraft-mac-cheese`
+- `hud-60614-county`: county
+- `eia-electricity-residential-us-2026-05`: electricity-residential-us
+- `fdc-789890`: Flour, wheat, all-purpose, enriched, bleached
+- `mmn-1089`: Butter - Central U.S.
+- `nass-corn-2025`: corn
+- `kroger-kraft-mac-cheese`: approved evidence record
 
-## Sources
+## Citation-ready source notes
 
-- eia-weekly-gasoline: U.S. Energy Information Administration — retrieved 2026-07-24T01:35:00Z — https://www.eia.gov/opendata/
-- hud-usps-crosswalk: HUD USER USPS ZIP Code Crosswalk — retrieved 2026-07-24T01:44:18Z — https://www.huduser.gov/portal/dataset/uspszip-api.html
-- kroger: Kroger Public APIs — retrieved 2026-07-23T00:00:00Z — https://developer.kroger.com/
-- usda-fooddata-central: USDA FoodData Central — retrieved 2026-07-24T01:37:00Z — https://fdc.nal.usda.gov/api-guide.html
-- usda-mymarketnews: USDA MyMarketNews — retrieved 2026-07-24T01:38:00Z — https://mymarketnews.ams.usda.gov/
-- usda-nass-quickstats: USDA NASS Quick Stats — retrieved 2026-07-24T01:39:00Z — https://quickstats.nass.usda.gov/
+- **eia-residential-electricity:** eia data retrieved 2026-07-24T03:53:57Z.
+- **hud-usps-crosswalk:** hud data retrieved 2026-07-24T03:53:57Z.
+- **kroger:** kroger data retrieved 2026-07-24T03:53:57Z.
+- **usda-fooddata-central:** fooddata data retrieved 2026-07-24T03:53:57Z.
+- **usda-mymarketnews:** mymarketnews data retrieved 2026-07-24T03:53:57Z.
+- **usda-nass-quickstats:** nass data retrieved 2026-07-24T03:53:57Z.
 
-## Claim candidate
+## Suggested tables
 
-State what each active source may support and what it cannot support.
+- `evidence` — Six-source claim boundaries evidence; 6 evidence row(s)
 
-## Limitations
+## Suggested charts
 
-Provider observations are historical context, not live quotes or personalized advice. Sources and retrieval times must accompany any published claim.
+- `trend` — Six-source claim boundaries trend; x: `period`, y: `value`
+
+## Freshness and disclosure
+
+Cadence: manual-on-demand. Staleness: current as of 2026-07-24T03:53:57Z.
+
+This static research packet uses approved historical source records and makes no provider call during page load.
+
+- Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim.

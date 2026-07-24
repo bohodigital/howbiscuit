@@ -1,0 +1,1 @@
+Select only from ZIP codes already present in the approved static release. Residential weights show why a single-label answer can be misleading. Nothing entered here is sent to a provider or retained.

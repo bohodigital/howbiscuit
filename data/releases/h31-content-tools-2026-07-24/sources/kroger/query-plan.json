@@ -1,0 +1,12 @@
+{
+  "brokerOnly": true,
+  "maximumRecords": 2000,
+  "operation": "product_search",
+  "parameters": {
+    "limit": 50,
+    "locationId": "53100516",
+    "terms": "governed-staple-set"
+  },
+  "providerId": "kroger",
+  "schemaVersion": "1.0.0"
+}

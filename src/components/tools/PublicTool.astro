@@ -1,0 +1,207 @@
+---
+import Breadcrumbs from '../Breadcrumbs.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface ToolColumn { field: string; label: string }
+interface ToolInput { id: string; label: string; field: string; options: string[] }
+interface ToolRecord { [key: string]: unknown }
+interface Tool {
+  id: string;
+  title: string;
+  description: string;
+  canonicalRoute: string;
+  toolType: string;
+  content: string;
+  updatedDate: string;
+  reviewDate: string;
+  releaseId: string;
+  definition: {
+    inputs: ToolInput[];
+    table: { caption: string; columns: ToolColumn[] };
+    chart: { enabled: boolean; xField: string | null; yField: string | null; accessibleSummary: string };
+    limitation: string;
+  };
+  rows: ToolRecord[];
+  sourceNotes: { sourceId: string; title: string; href: string; retrievedAt: string }[];
+  relatedArticles: string[];
+  relatedTools: string[];
+}
+
+const { tool, relatedTools } = Astro.props as { tool: Tool; relatedTools: Tool[] };
+const displayValue = (value: unknown) => {
+  if (value === null || value === undefined || value === '') return 'Not reported';
+  if (typeof value === 'number') return Number.isInteger(value) ? value.toLocaleString('en-US') : value.toLocaleString('en-US', { maximumFractionDigits: 6 });
+  if (Array.isArray(value)) return value.length ? value.join(', ') : 'None reported';
+  return String(value);
+};
+const paragraphText = tool.content.split(/\n{2,}/).map((paragraph) => paragraph.replace(/\n/g, ' '));
+const chartRows = tool.definition.chart.enabled && tool.definition.chart.xField && tool.definition.chart.yField
+  ? tool.rows.filter((row) => typeof row[tool.definition.chart.yField!] === 'number').slice(0, 24)
+  : [];
+const chartValues = chartRows.map((row) => Number(row[tool.definition.chart.yField!]));
+const chartMin = chartValues.length ? Math.min(...chartValues) : 0;
+const chartMax = chartValues.length ? Math.max(...chartValues) : 1;
+const chartRange = chartMax - chartMin || 1;
+const chartPoint = (value: number, index: number) => {
+  const x = chartValues.length === 1 ? 400 : 55 + (index / (chartValues.length - 1)) * 690;
+  const y = 235 - ((value - chartMin) / chartRange) * 175;
+  return `${x.toFixed(1)},${y.toFixed(1)}`;
+};
+const chartLabel = chartRows.length && tool.definition.chart.xField ? displayValue(chartRows[0][tool.definition.chart.xField]) : '';
+const chartEndLabel = chartRows.length && tool.definition.chart.xField ? displayValue(chartRows.at(-1)![tool.definition.chart.xField]) : '';
+---
+
+<BaseLayout title={tool.title} description={tool.description} canonical={tool.canonicalRoute} searchEligible={true} mainClass="hb-tool-page">
+  <div class="hb-tool-shell">
+    <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Tools', href: '/tools/' }, { label: tool.title }]} />
+    <header class="hb-tool-header">
+      <span>{tool.toolType} · static approved data</span>
+      <h1 data-pagefind-meta="title">{tool.title}</h1>
+      <p data-pagefind-meta="description">{tool.description}</p>
+      <div class="hb-tool-freshness" role="status">
+        <strong>Release {tool.releaseId}</strong>
+        <span>Updated {tool.updatedDate}</span>
+        <span>Review due {tool.reviewDate}</span>
+      </div>
+    </header>
+
+    <section class="hb-tool-introduction" aria-labelledby="tool-introduction-title">
+      <h2 id="tool-introduction-title">What this tool does</h2>
+      {paragraphText.map((paragraph) => <p>{paragraph}</p>)}
+    </section>
+
+    <section class="hb-tool-workspace" aria-labelledby="tool-controls-title" data-static-tool>
+      <div class="hb-tool-controls">
+        <h2 id="tool-controls-title">Narrow the approved rows</h2>
+        <p>These controls filter data already embedded in this page. They make no provider request and are not recorded by analytics.</p>
+        <form data-tool-filter>
+          {tool.definition.inputs.map((input) => (
+            <label>
+              <span>{input.label}</span>
+              <select name={input.id} data-filter-field={input.field}>
+                <option value="">All</option>
+                {input.options.map((option) => <option value={option}>{option}</option>)}
+              </select>
+            </label>
+          ))}
+          <button type="reset">Reset filters</button>
+        </form>
+        <p class="hb-tool-results" aria-live="polite"><strong data-visible-count>{tool.rows.length}</strong> approved row(s) shown.</p>
+        <noscript><p class="hb-tool-noscript">JavaScript is off, so the complete approved table is shown. No functionality or evidence is hidden.</p></noscript>
+      </div>
+
+      {chartRows.length > 1 && (
+        <figure class="hb-tool-chart">
+          <svg viewBox="0 0 800 280" role="img" aria-labelledby={`${tool.id}-chart-title ${tool.id}-chart-desc`}>
+            <title id={`${tool.id}-chart-title`}>{tool.title} static trend</title>
+            <desc id={`${tool.id}-chart-desc`}>{tool.definition.chart.accessibleSummary}</desc>
+            <rect x="0" y="0" width="800" height="280" rx="12" fill="#fffdf6" />
+            <line x1="55" y1="235" x2="745" y2="235" stroke="#142432" stroke-width="2" />
+            <line x1="55" y1="60" x2="55" y2="235" stroke="#142432" stroke-width="2" />
+            <polyline points={chartValues.map(chartPoint).join(' ')} fill="none" stroke="#ac321f" stroke-width="5" stroke-linejoin="round" />
+            {chartValues.map((value, index) => <circle cx={chartPoint(value, index).split(',')[0]} cy={chartPoint(value, index).split(',')[1]} r="5" fill="#142432"><title>{displayValue(value)}</title></circle>)}
+            <text x="55" y="260" font-size="15" fill="#142432">{chartLabel}</text>
+            <text x="745" y="260" text-anchor="end" font-size="15" fill="#142432">{chartEndLabel}</text>
+            <text x="65" y="52" font-size="15" fill="#142432">{displayValue(chartMax)}</text>
+            <text x="65" y="228" font-size="15" fill="#142432">{displayValue(chartMin)}</text>
+          </svg>
+          <figcaption>{tool.definition.chart.accessibleSummary} Use the table for exact values and units.</figcaption>
+        </figure>
+      )}
+
+      <div class="hb-tool-table-wrap" tabindex="0" aria-label="Scrollable data table">
+        <table>
+          <caption>{tool.definition.table.caption}</caption>
+          <thead><tr>{tool.definition.table.columns.map((column) => <th scope="col">{column.label}</th>)}</tr></thead>
+          <tbody>
+            {tool.rows.map((row) => (
+              <tr data-tool-row data-filter-values={JSON.stringify(Object.fromEntries(tool.definition.inputs.map((input) => [input.field, displayValue(row[input.field])])))}>
+                {tool.definition.table.columns.map((column, index) => index === 0 ? <th scope="row">{displayValue(row[column.field])}</th> : <td>{displayValue(row[column.field])}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="hb-tool-limitation" aria-labelledby="tool-limitations-title">
+      <h2 id="tool-limitations-title">Read this limitation</h2>
+      <p>{tool.definition.limitation}</p>
+    </aside>
+
+    <section class="hb-tool-methodology" aria-labelledby="tool-methodology-title">
+      <h2 id="tool-methodology-title">Sources and method</h2>
+      <p>The compiler resolved approved Research Packet v2 records against an immutable release. The page contains static rows and makes zero provider calls during ordinary use.</p>
+      <ul>{tool.sourceNotes.map((source) => <li><a href={source.href} rel="external">{source.title}</a> — {source.sourceId}, retrieved {source.retrievedAt}</li>)}</ul>
+    </section>
+
+    <section aria-labelledby="related-tools-title">
+      <h2 id="related-tools-title">Related tools</h2>
+      <div class="hb-related-tools">{relatedTools.map((related) => <a href={related.canonicalRoute}><strong>{related.title}</strong><span>{related.description}</span></a>)}</div>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  for (const root of document.querySelectorAll('[data-static-tool]')) {
+    const form = root.querySelector('[data-tool-filter]');
+    const count = root.querySelector('[data-visible-count]');
+    const rows = [...root.querySelectorAll('[data-tool-row]')];
+    if (!(form instanceof HTMLFormElement) || !(count instanceof HTMLElement)) continue;
+    const apply = () => {
+      const filters = [...form.querySelectorAll('select')].filter((control) => control instanceof HTMLSelectElement && control.value);
+      let visible = 0;
+      for (const row of rows) {
+        if (!(row instanceof HTMLTableRowElement)) continue;
+        const values = JSON.parse(row.dataset.filterValues || '{}');
+        const show = filters.every((control) => values[control.dataset.filterField || ''] === control.value);
+        row.hidden = !show;
+        if (show) visible += 1;
+      }
+      count.textContent = String(visible);
+    };
+    form.addEventListener('change', apply);
+    form.addEventListener('reset', () => requestAnimationFrame(apply));
+  }
+</script>
+
+<style>
+  .hb-tool-shell { width: min(1160px, calc(100% - 2rem)); margin: 0 auto 5rem; }
+  .hb-tool-header { margin: 1.5rem 0 3rem; border-bottom: 2px solid var(--hb-ink); padding-bottom: 2rem; }
+  .hb-tool-header > span { color: var(--hb-tomato-text); font-size: .72rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+  .hb-tool-header h1 { max-width: 900px; margin: .8rem 0 1rem; font-family: Georgia, serif; font-size: clamp(2.5rem, 7vw, 5.6rem); letter-spacing: -.055em; line-height: .94; }
+  .hb-tool-header > p { max-width: 760px; color: var(--hb-ink-soft); font-size: 1.12rem; line-height: 1.6; }
+  .hb-tool-freshness { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.2rem; }
+  .hb-tool-freshness > * { border: 1px solid var(--hb-ink); border-radius: 999px; padding: .38rem .65rem; font-size: .72rem; }
+  .hb-tool-introduction, .hb-tool-methodology { max-width: 780px; margin: 2rem 0; }
+  .hb-tool-workspace { margin: 2.5rem 0; border: 2px solid var(--hb-ink); background: var(--hb-white); box-shadow: 8px 8px 0 var(--hb-honey); }
+  .hb-tool-controls { padding: clamp(1rem, 4vw, 2rem); border-bottom: 1px solid var(--hb-ink); }
+  .hb-tool-controls h2 { margin-top: 0; }
+  form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); align-items: end; gap: 1rem; margin-top: 1.5rem; }
+  label span { display: block; margin-bottom: .4rem; font-size: .75rem; font-weight: 900; }
+  select, button { width: 100%; min-height: 46px; border: 2px solid var(--hb-ink); border-radius: .35rem; padding: .6rem; background: #fff; color: #142432; font: inherit; }
+  button { background: var(--hb-honey); font-weight: 900; cursor: pointer; }
+  :is(select, button, .hb-tool-table-wrap):focus-visible { outline: 4px solid var(--hb-blue); outline-offset: 3px; }
+  .hb-tool-results { margin-bottom: 0; }
+  .hb-tool-chart { margin: 0; border-bottom: 1px solid var(--hb-ink); padding: 1rem; overflow: hidden; }
+  .hb-tool-chart svg { display: block; width: 100%; height: auto; }
+  .hb-tool-chart figcaption { margin-top: .5rem; color: var(--hb-ink-soft); font-size: .82rem; }
+  .hb-tool-table-wrap { max-width: 100%; overflow-x: auto; }
+  table { width: 100%; min-width: 680px; border-collapse: collapse; }
+  caption { padding: 1rem; font-weight: 900; text-align: left; }
+  th, td { border-top: 1px solid color-mix(in srgb, var(--hb-ink), transparent 70%); padding: .75rem; text-align: left; vertical-align: top; }
+  thead th { background: var(--hb-ink); color: var(--hb-white); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+  tbody th { font-weight: 850; }
+  tr[hidden] { display: none; }
+  .hb-tool-limitation { margin: 2.5rem 0; border-left: .6rem solid var(--hb-tomato-text); padding: 1rem 1.5rem; background: color-mix(in srgb, var(--hb-tomato), white 55%); color: #142432; }
+  .hb-tool-limitation h2 { margin-top: 0; font-size: 1.25rem; }
+  .hb-related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
+  .hb-related-tools a { display: grid; gap: .45rem; border: 2px solid var(--hb-ink); padding: 1rem; color: var(--hb-ink); text-decoration: none; }
+  .hb-related-tools a:hover { box-shadow: 5px 5px 0 var(--hb-lilac); }
+  .hb-related-tools span { color: var(--hb-ink-soft); line-height: 1.45; }
+  @media (max-width: 390px) {
+    .hb-tool-shell { width: min(100% - 1rem, 1160px); }
+    .hb-tool-workspace { box-shadow: 4px 4px 0 var(--hb-honey); }
+    .hb-tool-header h1 { font-size: 2.55rem; }
+  }
+</style>

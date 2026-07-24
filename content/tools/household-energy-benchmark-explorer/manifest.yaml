@@ -1,0 +1,37 @@
+schemaVersion: 1.0.0
+id: household-energy-benchmark-explorer
+slug: household-energy-benchmark-explorer
+title: Household Energy Benchmark Explorer
+description: Compare approved state and United States residential electricity or natural-gas aggregates by period, with units and limitations kept visible.
+category: tools
+topic: calculators
+toolType: explorer
+publicationStatus: published
+approval:
+  state: approved
+  reviewer: howbiscuit-h3.1-work-order
+  approvedAt: 2026-07-23
+sourceReleaseIds:
+  - h31-content-tools-2026-07-24
+researchPacketIds:
+  - electricity-il-vs-us
+  - electricity-in-vs-us
+  - natural-gas-il-vs-us
+  - natural-gas-in-vs-us
+datasetIds:
+  - energyObservations
+visibility: public
+requiresJavaScript: false
+noJavaScriptFallback: complete-static-table
+analyticsEventPolicy: page-view-only
+inputPrivacy: bounded-public-enum-not-recorded
+canonicalRoute: /tools/household-energy-benchmark-explorer/
+social:
+  title: Household Energy Benchmark Explorer
+  description: Explore static EIA residential energy aggregates by geography, series, and period without mistaking them for an individual bill.
+relatedArticles:
+  - /articles/why-salt-melts-ice/
+relatedTools:
+  - /tools/zip-to-metro-relationship-explainer/
+updatedDate: 2026-07-23
+reviewDate: 2026-10-23

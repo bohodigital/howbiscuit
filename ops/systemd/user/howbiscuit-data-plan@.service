@@ -1,0 +1,15 @@
+[Unit]
+Description=Generate a bounded How Biscuit broker query plan for %i
+Documentation=file:///srv/local1/repos/sites/howbiscuit-site/docs/data/operator-runbook.md
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/local1/repos/sites/howbiscuit-site
+ExecStart=/usr/bin/npm run data:refresh -- --provider %i
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=default.target

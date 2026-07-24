@@ -2,12 +2,14 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
 
-test('broker doctor declares the six server-managed sources and excludes Best Buy',()=>{
+test('broker doctor declares six server-managed provider families, split EIA sources, and excludes Best Buy',()=>{
   const result=spawnSync(process.execPath,['scripts/providers/broker-contract.mjs','doctor'],{cwd:process.cwd(),encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   const output=JSON.parse(result.stdout);
   assert.equal(output.credentialHandling,'server-managed');
-  assert.equal(output.activeSources.length,6);
+  assert.equal(output.providerFamilies.length,6);
+  assert.equal(output.activeSources.length,8);
+  assert.deepEqual(output.activeSources.filter(id=>id.startsWith('eia-')),['eia-residential-electricity','eia-residential-natural-gas','eia-weekly-gasoline']);
   assert.deepEqual(output.excludedSources,['best-buy']);
 });
 

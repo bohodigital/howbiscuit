@@ -152,7 +152,7 @@ function verifyStaticArtifact(artifactRoot, { requirePagefind, label }) {
   const sourceFiles = collectFiles(docsRoot, (filePath) => /\.(md|mdx)$/.test(filePath));
   const sourceRoutes = new Set(sourceFiles.map((filePath) => routeFromSource(filePath, docsRoot)));
   const normalizedDocumentRoutes = new Set(
-    normalizedPublicRegistry.filter(({ kind }) => kind !== 'topic').map(({ route }) => route),
+    normalizedPublicRegistry.filter(({ kind }) => !['topic', 'tool'].includes(kind)).map(({ route }) => route),
   );
   assertSetsEqual(normalizedDocumentRoutes, sourceRoutes, 'Normalized source document route set');
   const inactiveContractRoutes = taxonomy.TARGET_ROUTE_CONTRACTS

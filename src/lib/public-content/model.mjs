@@ -286,7 +286,7 @@ function normalizeContent(source, taxonomy) {
 
 function normalizePublicPage(source, taxonomy) {
   const route = source.route;
-  if (!['home', 'category', 'guide-index', 'trust'].includes(source.kind)) {
+  if (!['home', 'category', 'guide-index', 'trust', 'tool'].includes(source.kind)) {
     throw new Error(`${route}: unsupported public page kind ${source.kind}`);
   }
   if (!isNonEmptyString(source.title)) throw new Error(`${route}: source title is missing`);
@@ -299,6 +299,11 @@ function normalizePublicPage(source, taxonomy) {
     }
     const category = taxonomy.PUBLIC_CATEGORIES.find(({ id }) => id === source.categoryId);
     if (category?.route !== route) throw new Error(`${route}: category source route does not match ${source.categoryId}`);
+  }
+  if (source.kind === 'tool') {
+    if (source.categoryId !== 'tools' || !source.route.startsWith('/tools/') || source.route === '/tools/') {
+      throw new Error(`${route}: public tools must remain under the canonical Tools category`);
+    }
   }
   const publishedDate = normalizeDate(source.publishedDate, 'publishedDate', route);
   const updatedDate = normalizeDate(source.updatedDate, 'updatedDate', route);

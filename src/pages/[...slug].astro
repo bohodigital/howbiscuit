@@ -10,6 +10,7 @@ import CategoryLayout from '../layouts/CategoryLayout.astro';
 import HomeLayout from '../layouts/HomeLayout.astro';
 import TrustLayout from '../layouts/TrustLayout.astro';
 import productCatalogJson from '../generated/publishing/products.v1.json';
+import toolsCatalogJson from '../generated/tools/tools.v1.json';
 import { orderLatestContent } from '../lib/public-content/model.mjs';
 import { createPublicPageCatalog, getPublicSiteData, routeFromEntryId } from '../lib/public-content/site-registry.mjs';
 
@@ -59,6 +60,7 @@ export async function getStaticPaths() {
   const siteData = getPublicSiteData() as SiteData;
   const entryByRoute = new Map(entries.map((entry) => [routeFromEntryId(entry.id), entry]));
   return createPublicPageCatalog(entries, siteData).map((record: PublicRecord) => {
+    if (record.kind === 'tool') return null;
     if (record.kind === 'topic') {
       const category = siteData.categoryViews.find(({ id }) => id === record.categoryId);
       const topic = category?.topics.find(({ id, route }) => id === record.topicId && route === record.route);
@@ -79,7 +81,7 @@ export async function getStaticPaths() {
       params: { slug: record.route.slice(1, -1) || undefined },
       props: { entry, route: record.route },
     };
-  });
+  }).filter(Boolean);
 }
 
 const page = Astro.props as PageProps;
@@ -110,6 +112,7 @@ const guideCategoryLabel = (guide: RegistryRecord) => (
   guide.categoryId ? categoryLabelById.get(guide.categoryId) ?? 'Editorial standard' : 'Editorial standard'
 );
 const productCatalog = productCatalogJson as ProductCatalog;
+const toolsCatalog = toolsCatalogJson as { tools: readonly { title: string; description: string; canonicalRoute: string; toolType: string; updatedDate: string }[] };
 const productById = new Map(productCatalog.products.map((product) => [product.id, product]));
 const categoryAccent = categoryView?.id === 'home'
   ? 'mint'
@@ -179,7 +182,13 @@ const categoryAccent = categoryView?.id === 'home'
 
     <section aria-labelledby="category-tools-title">
       <h2 id="category-tools-title">Relevant tools</h2>
-      <EmptyState title="No approved tool is attached to this category" message="Calculators, converters, checklists, and price tools appear here only after a real route and transparent method exist." actionHref={categoryView.id === 'tools' ? '/articles/' : '/tools/'} actionLabel={categoryView.id === 'tools' ? 'Browse All Guides' : 'View the Tools category'} />
+      {categoryView.id === 'tools' ? (
+        <div class="hb-guide-grid">
+          {toolsCatalog.tools.map((tool) => <GuideCard label={tool.toolType} title={tool.title} description={tool.description} href={tool.canonicalRoute} accent="honey" meta={`Static data · Updated ${tool.updatedDate}`} />)}
+        </div>
+      ) : (
+        <p><a href="/tools/">Browse all approved public tools</a>. Each tool exposes its source release, method, freshness, and limitations.</p>
+      )}
     </section>
 
     {categoryView.id === 'shop' && (

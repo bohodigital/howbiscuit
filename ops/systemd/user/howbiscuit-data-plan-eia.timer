@@ -1,0 +1,10 @@
+[Unit]
+Description=Monthly How Biscuit EIA query-plan reminder
+
+[Timer]
+OnCalendar=*-*-08 06:30:00 UTC
+Persistent=true
+Unit=howbiscuit-data-plan@eia.service
+
+[Install]
+WantedBy=timers.target

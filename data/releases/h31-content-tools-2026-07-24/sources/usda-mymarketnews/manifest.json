@@ -1,0 +1,15 @@
+{
+  "approvalState": "approved",
+  "envelopeDigest": "4057c1cb4deb20e5ba875d426e7f1f6ba382124e93c11e14deb3206a3f046c97",
+  "envelopePath": "sources/usda-mymarketnews/source-envelope.json",
+  "importerVersion": "howbiscuit-data-importer-v2",
+  "normalizedDigest": "864bc29ee1b18a8875524cd76700667b64d7e5a9f881dac8965f22540b13977c",
+  "operation": "report-details-volumes",
+  "providerId": "mymarketnews",
+  "recordCount": 15,
+  "releaseMembership": true,
+  "retrievedAt": "2026-07-24T03:53:57Z",
+  "schemaVersion": "1.0.0",
+  "sourceFamilyId": "mymarketnews",
+  "sourceId": "usda-mymarketnews"
+}

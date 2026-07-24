@@ -1,0 +1,12 @@
+{
+  "brokerOnly": true,
+  "maximumRecords": 2000,
+  "operation": "quickstats_query",
+  "parameters": {
+    "aggLevel": "NATIONAL",
+    "limit": 50,
+    "statistic": "PRODUCTION"
+  },
+  "providerId": "nass",
+  "schemaVersion": "1.0.0"
+}

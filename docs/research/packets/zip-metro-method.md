@@ -1,27 +1,49 @@
 # ZIP-to-metro method
 
-Packet ID: `zip-metro-method`  
-Release: `h3-content-data-2026-07-24`
+Packet ID: `zip-metro-method`
+Release: `h31-content-tools-2026-07-24`
+Status: **validated / approved**
+Reviewer: `howbiscuit-h3.1-work-order`
+Generated: 2026-07-24T03:53:57Z
+Review due: 2026-10-24T00:00:00Z
 
 ## Research question
 
 Explain residential-address weighting using representative national ZIPs.
 
+## Proposed factual claims
+
+### weighted-geographic-relationship
+
+The selected approved source record hud-60614-cbsa provides bounded historical context and does not support a live, personalized, or retail claim.
+
+Evidence: `hud-60614-cbsa`, `hud-46802-cbsa`, `hud-10001-cbsa`, `hud-90012-cbsa`
+
+Limitations: Historical aggregate or identity evidence only; retain the stated geography, period, unit, retrieval date, and source boundary.
+
 ## Evidence records
 
-- `hud-60614-cbsa`
-- `hud-46802-cbsa`
-- `hud-10001-cbsa`
-- `hud-90012-cbsa`
+- `hud-60614-cbsa`: cbsa
+- `hud-46802-cbsa`: cbsa
+- `hud-10001-cbsa`: cbsa
+- `hud-90012-cbsa`: cbsa
 
-## Sources
+## Citation-ready source notes
 
-- hud-usps-crosswalk: HUD USER USPS ZIP Code Crosswalk — retrieved 2026-07-24T01:44:18Z — https://www.huduser.gov/portal/dataset/uspszip-api.html
+- **hud-usps-crosswalk:** hud data retrieved 2026-07-24T03:53:57Z.
 
-## Claim candidate
+## Suggested tables
 
-Explain residential-address weighting using representative national ZIPs.
+- `evidence` — ZIP-to-metro method evidence; 4 evidence row(s)
 
-## Limitations
+## Suggested charts
 
-Provider observations are historical context, not live quotes or personalized advice. Sources and retrieval times must accompany any published claim.
+- None
+
+## Freshness and disclosure
+
+Cadence: quarterly. Staleness: current as of 2026-07-24T03:53:57Z.
+
+This static research packet uses approved historical source records and makes no provider call during page load.
+
+- Do not convert aggregate, identity, wholesale, or national production evidence into a live personal bill, shelf price, local availability, or inventory claim.

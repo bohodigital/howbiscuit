@@ -1,0 +1,37 @@
+schemaVersion: 1.0.0
+id: usda-staple-food-identity-explorer
+slug: usda-staple-food-identity-explorer
+title: USDA Staple Food Identity Explorer
+description: Browse approved USDA FoodData Central staple identities and see clearly when complete nutrient records are unavailable rather than filling gaps.
+category: tools
+topic: decision-tools
+toolType: browser
+publicationStatus: published
+approval:
+  state: approved
+  reviewer: howbiscuit-h3.1-work-order
+  approvedAt: 2026-07-23
+sourceReleaseIds:
+  - h31-content-tools-2026-07-24
+researchPacketIds:
+  - baking-staples-identities
+  - dairy-staples-identities
+  - pantry-staples-identities
+datasetIds:
+  - foods
+  - foodNutrients
+visibility: public
+requiresJavaScript: false
+noJavaScriptFallback: complete-static-table
+analyticsEventPolicy: page-view-only
+inputPrivacy: bounded-public-enum-not-recorded
+canonicalRoute: /tools/usda-staple-food-identity-explorer/
+social:
+  title: USDA Staple Food Identity Explorer
+  description: Browse approved generic staple identities from FoodData Central, with data type and nutrient completeness made explicit.
+relatedArticles:
+  - /articles/how-does-baking-powder-work/
+relatedTools:
+  - /tools/agricultural-market-context-browser/
+updatedDate: 2026-07-23
+reviewDate: 2026-10-23

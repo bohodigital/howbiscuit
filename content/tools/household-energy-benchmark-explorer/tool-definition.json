@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "energy-benchmark",
+  "inputs": [
+    { "id": "geography", "label": "Geography", "type": "select", "field": "geographyId", "maximumOptions": 10, "sensitive": false },
+    { "id": "series", "label": "Energy series", "type": "select", "field": "seriesId", "maximumOptions": 10, "sensitive": false },
+    { "id": "period", "label": "Period", "type": "select", "field": "period", "maximumOptions": 36, "sensitive": false }
+  ],
+  "table": {
+    "caption": "Approved EIA residential energy benchmarks",
+    "columns": [
+      { "field": "geographyId", "label": "Geography" },
+      { "field": "seriesId", "label": "Series" },
+      { "field": "period", "label": "Period" },
+      { "field": "valueDisplay", "label": "Reported benchmark" }
+    ]
+  },
+  "chart": {
+    "enabled": true,
+    "xField": "period",
+    "yField": "value",
+    "accessibleSummary": "A static trend plot of the selected EIA aggregate; the complete values remain available in the table."
+  },
+  "limitation": "These are EIA residential aggregates for the named geography and period. They are not a utility tariff, an individual household bill, or a prediction.",
+  "providerCallsOnPageLoad": false,
+  "transmitsInput": false
+}

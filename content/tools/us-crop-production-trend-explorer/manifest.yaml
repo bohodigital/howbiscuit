@@ -1,0 +1,40 @@
+schemaVersion: 1.0.0
+id: us-crop-production-trend-explorer
+slug: us-crop-production-trend-explorer
+title: U.S. Crop Production Trend Explorer
+description: Compare approved national crop production statistics by commodity and year while keeping final, forecast, unit, revision, and suppression states visible.
+category: tools
+topic: calculators
+toolType: explorer
+publicationStatus: published
+approval:
+  state: approved
+  reviewer: howbiscuit-h3.1-work-order
+  approvedAt: 2026-07-23
+sourceReleaseIds:
+  - h31-content-tools-2026-07-24
+researchPacketIds:
+  - corn-production-trend
+  - rice-production-trend
+  - wheat-production-trend
+  - soybean-production-trend
+  - oat-production-trend
+  - potato-production-trend
+  - nass-final-vs-forecast
+datasetIds:
+  - agriculturalStatistics
+visibility: public
+requiresJavaScript: false
+noJavaScriptFallback: complete-static-table
+analyticsEventPolicy: page-view-only
+inputPrivacy: bounded-public-enum-not-recorded
+canonicalRoute: /tools/us-crop-production-trend-explorer/
+social:
+  title: U.S. Crop Production Trend Explorer
+  description: Explore approved NASS production rows with commodity, period, unit, final or forecast classification, and revision context.
+relatedArticles:
+  - /articles/why-are-some-answers-better-than-others/
+relatedTools:
+  - /tools/agricultural-market-context-browser/
+updatedDate: 2026-07-23
+reviewDate: 2026-10-23

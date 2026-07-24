@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "market-context",
+  "inputs": [
+    { "id": "commodity", "label": "Commodity", "type": "select", "field": "commodity", "maximumOptions": 50, "sensitive": false },
+    { "id": "geography", "label": "Market geography", "type": "select", "field": "geography", "maximumOptions": 30, "sensitive": false },
+    { "id": "report", "label": "Report", "type": "select", "field": "title", "maximumOptions": 20, "sensitive": false }
+  ],
+  "table": {
+    "caption": "Selected USDA Market News wholesale observations",
+    "columns": [
+      { "field": "title", "label": "Report" },
+      { "field": "commodity", "label": "Commodity" },
+      { "field": "geography", "label": "Geography" },
+      { "field": "reportDate", "label": "Report period" },
+      { "field": "valueDisplay", "label": "Reported value" },
+      { "field": "unitBasis", "label": "Unit basis" },
+      { "field": "narrative", "label": "Context" }
+    ]
+  },
+  "chart": {
+    "enabled": false,
+    "xField": null,
+    "yField": null,
+    "accessibleSummary": "The selected wholesale observations and their exact unit basis are available in the accessible table."
+  },
+  "limitation": "Market News basis, inventory, and shipping-point observations describe wholesale or first-handler context. They are not retail shelf prices or store availability.",
+  "providerCallsOnPageLoad": false,
+  "transmitsInput": false
+}
