@@ -62,7 +62,10 @@ npm run data:d1-sync -- --release <previous-release-id> --database /safe/runtime
 
 `npm run data:d1-sync -- --check` creates an in-memory database from `drizzle/0004_h3_content_data.sql`, projects all fifteen content-data tables in one transaction, verifies counts and digests, injects a late failure, and proves the accepted marker survives. The release row starts as `draft`; `status=published` is written last. A failed transaction rolls back every row.
 
-Use `--dry-run` to review table counts. The current Sites project has no bound D1 resource in `.openai/hosting.json`; bind a reviewed database before using a remote deployment. Never substitute an unreviewed production binding.
+Use `--dry-run` to review table counts. The tracked Sites manifest names the
+pre-existing binding `DB`, but the Handoff 3.1 static public tools do not read
+or write it. Never substitute the validated local/Pi projection into that
+remote binding without a separately reviewed data migration and deployment.
 
 ## Schedules
 
