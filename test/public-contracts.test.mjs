@@ -166,7 +166,24 @@ test('the production Pages redirect artifact and Worker exactly match the direct
   const workerSource = taxonomy.buildSitesWorkerSource(redirectSource, headerSource);
   assert.equal(readFileSync(path.join(root, 'dist', '_worker.js'), 'utf8'), workerSource);
   const workerModule = await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
-  const env = { ASSETS: { fetch: () => new Response('asset', { status: 200 }) } };
+  const assetRequests = [];
+  const env = {
+    ASSETS: {
+      fetch(request) {
+        assetRequests.push(request.url);
+        if (new URL(request.url).pathname === '/missing-route/') {
+          return new Response(null, { status: 404 });
+        }
+        if (new URL(request.url).pathname === '/404') {
+          return new Response('<main><h1>Page not found</h1></main>', {
+            status: 200,
+            headers: { 'content-type': 'text/html' },
+          });
+        }
+        return new Response('asset', { status: 200 });
+      },
+    },
+  };
   async function assertSingleHop(requestUrl, expectedLocation) {
     const response = await workerModule.default.fetch(new Request(requestUrl), env);
     assert.equal(response.status, 301, requestUrl);
@@ -187,6 +204,14 @@ test('the production Pages redirect artifact and Worker exactly match the direct
     'https://www.howbiscuit.com/articles/?ref=contract',
     'https://howbiscuit.com/articles/?ref=contract',
   );
+  const missing = await workerModule.default.fetch(
+    new Request('https://howbiscuit.com/missing-route/'),
+    env,
+  );
+  assert.equal(missing.status, 404);
+  assert.equal(missing.headers.get('content-type'), 'text/html');
+  assert.equal(await missing.text(), '<main><h1>Page not found</h1></main>');
+  assert.ok(assetRequests.includes('https://howbiscuit.com/404'));
 });
 
 test('compatibility lookups are active but do not invent editorial categories', () => {

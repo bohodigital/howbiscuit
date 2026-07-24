@@ -277,6 +277,7 @@ async function verifyRedirectWorker({ workerPath, redirectSource, headerSource, 
   invariant(worker.includes('env.ASSETS.fetch(request)'), `${label} must delegate requests to the ASSETS binding.`);
   invariant(worker.includes('www.howbiscuit.com'), `${label} must implement www canonicalization.`);
   invariant(worker.includes('Response.redirect(location, 301)'), `${label} must emit permanent redirects before asset delegation.`);
+  invariant(worker.includes("fallbackUrl.pathname = '/404'"), `${label} must serve the governed 404 artifact when Sites returns an empty miss.`);
   invariant(worker.includes('withSecurityHeaders(response)'), `${label} must attach the governed security headers.`);
 
   const workerModule = await import(`${pathToFileURL(workerPath).href}?verify=${Date.now()}`);
@@ -285,6 +286,15 @@ async function verifyRedirectWorker({ workerPath, redirectSource, headerSource, 
     ASSETS: {
       fetch(request) {
         assetRequests.push(request.url);
+        if (new URL(request.url).pathname === '/missing-route/') {
+          return new Response(null, { status: 404 });
+        }
+        if (new URL(request.url).pathname === '/404') {
+          return new Response('<main><h1>Page not found</h1></main>', {
+            status: 200,
+            headers: { 'content-type': 'text/html' },
+          });
+        }
         return new Response('asset', { status: 200 });
       },
     },
@@ -316,6 +326,12 @@ async function verifyRedirectWorker({ workerPath, redirectSource, headerSource, 
   const ordinaryResponse = await workerModule.default.fetch(new Request(ordinaryUrl), env);
   invariant(ordinaryResponse.status === 200 && ordinaryResponse.headers.get('location') === null, `${label} must delegate a current apex route without redirecting.`);
   invariant(assetRequests.includes(ordinaryUrl), `${label} did not delegate a current route to static assets.`);
+  const missingUrl = 'https://howbiscuit.com/missing-route/';
+  const missingResponse = await workerModule.default.fetch(new Request(missingUrl), env);
+  invariant(missingResponse.status === 404, `${label} must preserve a 404 status for an unknown route.`);
+  invariant(await missingResponse.text() === '<main><h1>Page not found</h1></main>', `${label} must return the governed 404 artifact body.`);
+  invariant(assetRequests.includes(missingUrl), `${label} did not delegate the unknown route to static assets first.`);
+  invariant(assetRequests.includes('https://howbiscuit.com/404'), `${label} did not fetch the governed 404 artifact.`);
   return redirectRules.length;
 }
 
