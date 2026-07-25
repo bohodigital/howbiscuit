@@ -1,0 +1,50 @@
+{
+  "datasetIds": [
+    "agriculturalStatistics"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "oats",
+      "geography": "ARKANSAS",
+      "id": "nass-227ecaa2bf6ab2e362e2daf8",
+      "loadTime": "2025-02-26 15:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "OATS - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2025-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 1209000,
+      "year": 2023
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "oats",
+      "geography": "ARKANSAS",
+      "id": "nass-764e7f3e6ca49a6d27464098",
+      "loadTime": "2024-09-30 12:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "OATS - PRODUCTION, MEASURED IN BU",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2024-09-30 12:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "BU",
+      "value": 310000,
+      "year": 2023
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

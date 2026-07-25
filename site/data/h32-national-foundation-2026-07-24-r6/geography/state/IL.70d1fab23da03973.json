@@ -1,0 +1,230 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "BARRINGTON",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60010-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60010-county-17031",
+      "residentialRatio": 0.41789608723540733,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17089",
+      "geographyType": "county",
+      "id": "hud-60010-county-17089",
+      "residentialRatio": 0.0025657472738935213,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17097",
+      "geographyType": "county",
+      "id": "hud-60010-county-17097",
+      "residentialRatio": 0.527421423989737,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "BARRINGTON",
+      "geographyId": "17111",
+      "geographyType": "county",
+      "id": "hud-60010-county-17111",
+      "residentialRatio": 0.052116741500962155,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60010"
+    },
+    {
+      "city": "EVANSTON",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60201-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60201"
+    },
+    {
+      "city": "EVANSTON",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60201-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60201"
+    },
+    {
+      "city": "CALUMET CITY",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60409-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60409"
+    },
+    {
+      "city": "CALUMET CITY",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60409-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60409"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60439-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60439-county-17031",
+      "residentialRatio": 0.9239031494629528,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "17043",
+      "geographyType": "county",
+      "id": "hud-60439-county-17043",
+      "residentialRatio": 0.05843801201529219,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "LEMONT",
+      "geographyId": "17197",
+      "geographyType": "county",
+      "id": "hud-60439-county-17197",
+      "residentialRatio": 0.017658838521754962,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60439"
+    },
+    {
+      "city": "WILLOWBROOK",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60527-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60527"
+    },
+    {
+      "city": "WILLOWBROOK",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60527-county-17031",
+      "residentialRatio": 0.14210309843707156,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60527"
+    },
+    {
+      "city": "WILLOWBROOK",
+      "geographyId": "17043",
+      "geographyType": "county",
+      "id": "hud-60527-county-17043",
+      "residentialRatio": 0.8578969015629284,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60527"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60601-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60601"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60601-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60601"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60614-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60614"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60614-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60614"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-60647-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60647"
+    },
+    {
+      "city": "CHICAGO",
+      "geographyId": "17031",
+      "geographyType": "county",
+      "id": "hud-60647-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IL",
+      "zip": "60647"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

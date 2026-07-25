@@ -1,0 +1,30 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "NEW YORK",
+      "geographyId": "35620",
+      "geographyType": "cbsa",
+      "id": "hud-10001-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "NY",
+      "zip": "10001"
+    },
+    {
+      "city": "NEW YORK",
+      "geographyId": "36061",
+      "geographyType": "county",
+      "id": "hud-10001-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "NY",
+      "zip": "10001"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

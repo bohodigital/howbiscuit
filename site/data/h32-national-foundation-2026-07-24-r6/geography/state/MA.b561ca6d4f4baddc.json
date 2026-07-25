@@ -1,0 +1,30 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "BOSTON",
+      "geographyId": "14460",
+      "geographyType": "cbsa",
+      "id": "hud-02108-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "MA",
+      "zip": "02108"
+    },
+    {
+      "city": "BOSTON",
+      "geographyId": "25025",
+      "geographyType": "county",
+      "id": "hud-02108-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "MA",
+      "zip": "02108"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

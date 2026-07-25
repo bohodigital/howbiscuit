@@ -1,0 +1,5245 @@
+{
+  "budgets": {
+    "maximumPartitionBytes": 524288,
+    "maximumRegistryBytes": 262144
+  },
+  "datasetManifests": [
+    {
+      "datasetId": "geographyRelationships",
+      "partitions": [
+        "geography/state/AZ",
+        "geography/state/CA",
+        "geography/state/CO",
+        "geography/state/DC",
+        "geography/state/FL",
+        "geography/state/GA",
+        "geography/state/IL",
+        "geography/state/IN",
+        "geography/state/MA",
+        "geography/state/NY",
+        "geography/state/TX",
+        "geography/state/WA"
+      ]
+    },
+    {
+      "datasetId": "energyObservations",
+      "partitions": [
+        "energy/electricity/AK",
+        "energy/electricity/AL",
+        "energy/electricity/AR",
+        "energy/electricity/AZ",
+        "energy/electricity/CA",
+        "energy/electricity/CO",
+        "energy/electricity/CT",
+        "energy/electricity/DC",
+        "energy/electricity/DE",
+        "energy/electricity/ENC",
+        "energy/electricity/ESC",
+        "energy/electricity/FL",
+        "energy/electricity/GA",
+        "energy/electricity/HI",
+        "energy/electricity/IA",
+        "energy/electricity/ID",
+        "energy/electricity/IL",
+        "energy/electricity/IN",
+        "energy/electricity/KS",
+        "energy/electricity/KY",
+        "energy/electricity/LA",
+        "energy/electricity/MA",
+        "energy/electricity/MAT",
+        "energy/electricity/MD",
+        "energy/electricity/ME",
+        "energy/electricity/MI",
+        "energy/electricity/MN",
+        "energy/electricity/MO",
+        "energy/electricity/MS",
+        "energy/electricity/MT",
+        "energy/electricity/MTN",
+        "energy/electricity/NC",
+        "energy/electricity/ND",
+        "energy/electricity/NE",
+        "energy/electricity/NEW",
+        "energy/electricity/NH",
+        "energy/electricity/NJ",
+        "energy/electricity/NM",
+        "energy/electricity/NV",
+        "energy/electricity/NY",
+        "energy/electricity/OH",
+        "energy/electricity/OK",
+        "energy/electricity/OR",
+        "energy/electricity/PA",
+        "energy/electricity/PACC",
+        "energy/electricity/PACN",
+        "energy/electricity/RI",
+        "energy/electricity/SAT",
+        "energy/electricity/SC",
+        "energy/electricity/SD",
+        "energy/electricity/TN",
+        "energy/electricity/TX",
+        "energy/electricity/US",
+        "energy/electricity/UT",
+        "energy/electricity/VA",
+        "energy/electricity/VT",
+        "energy/electricity/WA",
+        "energy/electricity/WI",
+        "energy/electricity/WNC",
+        "energy/electricity/WSC",
+        "energy/electricity/WV",
+        "energy/electricity/WY",
+        "energy/gasoline/CA",
+        "energy/gasoline/CO",
+        "energy/gasoline/FL",
+        "energy/gasoline/MA",
+        "energy/gasoline/MN",
+        "energy/gasoline/NY",
+        "energy/gasoline/OH",
+        "energy/gasoline/R10",
+        "energy/gasoline/R1X",
+        "energy/gasoline/R1Y",
+        "energy/gasoline/R1Z",
+        "energy/gasoline/R20",
+        "energy/gasoline/R30",
+        "energy/gasoline/R40",
+        "energy/gasoline/R50",
+        "energy/gasoline/R5XCA",
+        "energy/gasoline/TX",
+        "energy/gasoline/US",
+        "energy/gasoline/WA",
+        "energy/gasoline/Y05LA",
+        "energy/gasoline/Y05SF",
+        "energy/gasoline/Y35NY",
+        "energy/gasoline/Y44HO",
+        "energy/gasoline/Y48SE",
+        "energy/gasoline/YBOS",
+        "energy/gasoline/YCLE",
+        "energy/gasoline/YDEN",
+        "energy/gasoline/YMIA",
+        "energy/gasoline/YORD",
+        "energy/natural-gas/AK",
+        "energy/natural-gas/AL",
+        "energy/natural-gas/AR",
+        "energy/natural-gas/AZ",
+        "energy/natural-gas/CA",
+        "energy/natural-gas/CO",
+        "energy/natural-gas/CT",
+        "energy/natural-gas/DC",
+        "energy/natural-gas/DE",
+        "energy/natural-gas/FL",
+        "energy/natural-gas/GA",
+        "energy/natural-gas/HI",
+        "energy/natural-gas/IA",
+        "energy/natural-gas/ID",
+        "energy/natural-gas/IL",
+        "energy/natural-gas/IN",
+        "energy/natural-gas/KS",
+        "energy/natural-gas/KY",
+        "energy/natural-gas/LA",
+        "energy/natural-gas/MA",
+        "energy/natural-gas/MD",
+        "energy/natural-gas/ME",
+        "energy/natural-gas/MI",
+        "energy/natural-gas/MN",
+        "energy/natural-gas/MO",
+        "energy/natural-gas/MS",
+        "energy/natural-gas/MT",
+        "energy/natural-gas/NC",
+        "energy/natural-gas/ND",
+        "energy/natural-gas/NE",
+        "energy/natural-gas/NH",
+        "energy/natural-gas/NJ",
+        "energy/natural-gas/NM",
+        "energy/natural-gas/NV",
+        "energy/natural-gas/NY",
+        "energy/natural-gas/OH",
+        "energy/natural-gas/OK",
+        "energy/natural-gas/OR",
+        "energy/natural-gas/PA",
+        "energy/natural-gas/RI",
+        "energy/natural-gas/SC",
+        "energy/natural-gas/SD",
+        "energy/natural-gas/TN",
+        "energy/natural-gas/TX",
+        "energy/natural-gas/US",
+        "energy/natural-gas/UT",
+        "energy/natural-gas/VA",
+        "energy/natural-gas/VT",
+        "energy/natural-gas/WA",
+        "energy/natural-gas/WI",
+        "energy/natural-gas/WV",
+        "energy/natural-gas/WY"
+      ]
+    },
+    {
+      "datasetId": "foods",
+      "partitions": [
+        "food/fdc/core-01"
+      ]
+    },
+    {
+      "datasetId": "foodNutrients",
+      "partitions": [
+        "food/fdc/core-01"
+      ]
+    },
+    {
+      "datasetId": "marketReports",
+      "partitions": [
+        "market/reports/mmn-1089",
+        "market/reports/mmn-1427",
+        "market/reports/mmn-1655",
+        "market/reports/mmn-1662"
+      ]
+    },
+    {
+      "datasetId": "marketObservations",
+      "partitions": [
+        "market/reports/mmn-1089",
+        "market/reports/mmn-1427",
+        "market/reports/mmn-1655",
+        "market/reports/mmn-1662"
+      ]
+    },
+    {
+      "datasetId": "agriculturalStatistics",
+      "partitions": [
+        "agriculture/corn/ALABAMA",
+        "agriculture/corn/ARIZONA",
+        "agriculture/corn/ARKANSAS",
+        "agriculture/corn/CALIFORNIA",
+        "agriculture/corn/COLORADO",
+        "agriculture/corn/DELAWARE",
+        "agriculture/corn/FLORIDA",
+        "agriculture/corn/GEORGIA",
+        "agriculture/corn/IDAHO",
+        "agriculture/corn/ILLINOIS",
+        "agriculture/corn/INDIANA",
+        "agriculture/corn/IOWA",
+        "agriculture/corn/KANSAS",
+        "agriculture/corn/KENTUCKY",
+        "agriculture/corn/LOUISIANA",
+        "agriculture/corn/MARYLAND",
+        "agriculture/corn/MICHIGAN",
+        "agriculture/corn/MINNESOTA",
+        "agriculture/corn/MISSISSIPPI",
+        "agriculture/corn/MISSOURI",
+        "agriculture/corn/MONTANA",
+        "agriculture/corn/NEBRASKA",
+        "agriculture/corn/NEW JERSEY",
+        "agriculture/corn/NEW MEXICO",
+        "agriculture/corn/NEW YORK",
+        "agriculture/corn/NORTH CAROLINA",
+        "agriculture/corn/NORTH DAKOTA",
+        "agriculture/corn/OHIO",
+        "agriculture/corn/OKLAHOMA",
+        "agriculture/corn/OREGON",
+        "agriculture/corn/OTHER STATES",
+        "agriculture/corn/PENNSYLVANIA",
+        "agriculture/corn/SOUTH CAROLINA",
+        "agriculture/corn/SOUTH DAKOTA",
+        "agriculture/corn/TENNESSEE",
+        "agriculture/corn/TEXAS",
+        "agriculture/corn/US TOTAL",
+        "agriculture/corn/UTAH",
+        "agriculture/corn/VIRGINIA",
+        "agriculture/corn/WASHINGTON",
+        "agriculture/corn/WEST VIRGINIA",
+        "agriculture/corn/WISCONSIN",
+        "agriculture/corn/WYOMING",
+        "agriculture/oats/ARKANSAS",
+        "agriculture/oats/CALIFORNIA",
+        "agriculture/oats/GEORGIA",
+        "agriculture/oats/IDAHO",
+        "agriculture/oats/ILLINOIS",
+        "agriculture/oats/IOWA",
+        "agriculture/oats/KANSAS",
+        "agriculture/oats/MAINE",
+        "agriculture/oats/MICHIGAN",
+        "agriculture/oats/MINNESOTA",
+        "agriculture/oats/MISSOURI",
+        "agriculture/oats/MONTANA",
+        "agriculture/oats/NEBRASKA",
+        "agriculture/oats/NEW YORK",
+        "agriculture/oats/NORTH CAROLINA",
+        "agriculture/oats/NORTH DAKOTA",
+        "agriculture/oats/OHIO",
+        "agriculture/oats/OKLAHOMA",
+        "agriculture/oats/OREGON",
+        "agriculture/oats/OTHER STATES",
+        "agriculture/oats/PENNSYLVANIA",
+        "agriculture/oats/SOUTH DAKOTA",
+        "agriculture/oats/TEXAS",
+        "agriculture/oats/US TOTAL",
+        "agriculture/oats/WISCONSIN",
+        "agriculture/potatoes/CALIFORNIA",
+        "agriculture/potatoes/COLORADO",
+        "agriculture/potatoes/FLORIDA",
+        "agriculture/potatoes/IDAHO",
+        "agriculture/potatoes/MAINE",
+        "agriculture/potatoes/MICHIGAN",
+        "agriculture/potatoes/MINNESOTA",
+        "agriculture/potatoes/NEBRASKA",
+        "agriculture/potatoes/NORTH DAKOTA",
+        "agriculture/potatoes/OREGON",
+        "agriculture/potatoes/OTHER STATES",
+        "agriculture/potatoes/TEXAS",
+        "agriculture/potatoes/US TOTAL",
+        "agriculture/potatoes/WASHINGTON",
+        "agriculture/potatoes/WISCONSIN",
+        "agriculture/rice/ARKANSAS",
+        "agriculture/rice/CALIFORNIA",
+        "agriculture/rice/LOUISIANA",
+        "agriculture/rice/MISSISSIPPI",
+        "agriculture/rice/MISSOURI",
+        "agriculture/rice/OTHER STATES",
+        "agriculture/rice/TEXAS",
+        "agriculture/rice/US TOTAL",
+        "agriculture/soybeans/ALABAMA",
+        "agriculture/soybeans/ARKANSAS",
+        "agriculture/soybeans/DELAWARE",
+        "agriculture/soybeans/GEORGIA",
+        "agriculture/soybeans/ILLINOIS",
+        "agriculture/soybeans/INDIANA",
+        "agriculture/soybeans/IOWA",
+        "agriculture/soybeans/KANSAS",
+        "agriculture/soybeans/KENTUCKY",
+        "agriculture/soybeans/LOUISIANA",
+        "agriculture/soybeans/MARYLAND",
+        "agriculture/soybeans/MICHIGAN",
+        "agriculture/soybeans/MINNESOTA",
+        "agriculture/soybeans/MISSISSIPPI",
+        "agriculture/soybeans/MISSOURI",
+        "agriculture/soybeans/NEBRASKA",
+        "agriculture/soybeans/NEW JERSEY",
+        "agriculture/soybeans/NEW YORK",
+        "agriculture/soybeans/NORTH CAROLINA",
+        "agriculture/soybeans/NORTH DAKOTA",
+        "agriculture/soybeans/OHIO",
+        "agriculture/soybeans/OKLAHOMA",
+        "agriculture/soybeans/OTHER STATES",
+        "agriculture/soybeans/PENNSYLVANIA",
+        "agriculture/soybeans/SOUTH CAROLINA",
+        "agriculture/soybeans/SOUTH DAKOTA",
+        "agriculture/soybeans/TENNESSEE",
+        "agriculture/soybeans/TEXAS",
+        "agriculture/soybeans/US TOTAL",
+        "agriculture/soybeans/VIRGINIA",
+        "agriculture/soybeans/WISCONSIN",
+        "agriculture/wheat/ALABAMA",
+        "agriculture/wheat/ARIZONA",
+        "agriculture/wheat/ARKANSAS",
+        "agriculture/wheat/CALIFORNIA",
+        "agriculture/wheat/COLORADO",
+        "agriculture/wheat/DELAWARE",
+        "agriculture/wheat/GEORGIA",
+        "agriculture/wheat/IDAHO",
+        "agriculture/wheat/ILLINOIS",
+        "agriculture/wheat/INDIANA",
+        "agriculture/wheat/KANSAS",
+        "agriculture/wheat/KENTUCKY",
+        "agriculture/wheat/MARYLAND",
+        "agriculture/wheat/MICHIGAN",
+        "agriculture/wheat/MINNESOTA",
+        "agriculture/wheat/MISSISSIPPI",
+        "agriculture/wheat/MISSOURI",
+        "agriculture/wheat/MONTANA",
+        "agriculture/wheat/NEBRASKA",
+        "agriculture/wheat/NEW JERSEY",
+        "agriculture/wheat/NEW MEXICO",
+        "agriculture/wheat/NEW YORK",
+        "agriculture/wheat/NORTH CAROLINA",
+        "agriculture/wheat/NORTH DAKOTA",
+        "agriculture/wheat/OHIO",
+        "agriculture/wheat/OKLAHOMA",
+        "agriculture/wheat/OREGON",
+        "agriculture/wheat/PENNSYLVANIA",
+        "agriculture/wheat/SOUTH CAROLINA",
+        "agriculture/wheat/SOUTH DAKOTA",
+        "agriculture/wheat/TENNESSEE",
+        "agriculture/wheat/TEXAS",
+        "agriculture/wheat/US TOTAL",
+        "agriculture/wheat/UTAH",
+        "agriculture/wheat/VIRGINIA",
+        "agriculture/wheat/WASHINGTON",
+        "agriculture/wheat/WISCONSIN",
+        "agriculture/wheat/WYOMING"
+      ]
+    },
+    {
+      "datasetId": "merchantLocations",
+      "partitions": []
+    },
+    {
+      "datasetId": "merchantMappings",
+      "partitions": []
+    },
+    {
+      "datasetId": "offerObservations",
+      "partitions": []
+    },
+    {
+      "datasetId": "unresolvedMappings",
+      "partitions": []
+    }
+  ],
+  "generatedAt": "2026-07-25T01:57:07.592Z",
+  "partitions": [
+    {
+      "byteLength": 11354,
+      "contentDigest": "89e39eb7a9067c0721b980824002a81a14c4dbc080f0b1fcc5923a3d148f285b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/ALABAMA.89e39eb7a9067c07.json",
+      "id": "agriculture/corn/ALABAMA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4055,
+      "contentDigest": "07aec773b1170330f89f7da70961c7a8f9c31e23626e12084e386a54eaf62891",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/ARIZONA.07aec773b1170330.json",
+      "id": "agriculture/corn/ARIZONA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11380,
+      "contentDigest": "1397d9d3f1c533cc00e3219f45624b33154bb7830cc22bb448b4c742802fdc40",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/ARKANSAS.1397d9d3f1c533cc.json",
+      "id": "agriculture/corn/ARKANSAS",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6734,
+      "contentDigest": "caff0357bef4fe904b22fd6537f58370c6dae4bddba573ad519a238703ce0bd1",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/CALIFORNIA.caff0357bef4fe90.json",
+      "id": "agriculture/corn/CALIFORNIA",
+      "publicationState": "public-static",
+      "recordCount": 10,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11385,
+      "contentDigest": "c11f7765fee9effad859f823fc04ebac0999823bb869868b0b78d764fce12c8f",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/COLORADO.c11f7765fee9effa.json",
+      "id": "agriculture/corn/COLORADO",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11371,
+      "contentDigest": "668daee7eba43d30e11d89abe08564d0190100dce7dd5fab5a4bdb925b84961b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/DELAWARE.668daee7eba43d30.json",
+      "id": "agriculture/corn/DELAWARE",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4055,
+      "contentDigest": "b911bb0c2f5ac417d7555a0fa6c0f8f1b54d657882d2358057a71b6f364456d8",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/FLORIDA.b911bb0c2f5ac417.json",
+      "id": "agriculture/corn/FLORIDA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11354,
+      "contentDigest": "75020933ac8085f42450653af2f3b7cce7bb46dba156aeb9f26ecb56700a54f8",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/GEORGIA.75020933ac8085f4.json",
+      "id": "agriculture/corn/GEORGIA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11320,
+      "contentDigest": "6e1a3f8d20a5b1a8d66029eb4a6550bce5e08d6e4125044f2033864cc59dbf6b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/IDAHO.6e1a3f8d20a5b1a8.json",
+      "id": "agriculture/corn/IDAHO",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11403,
+      "contentDigest": "e3e8e408b64a06c0ae45e47fe9c3b15d95ac8c69343d10d4c5f35d74907e263e",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/ILLINOIS.e3e8e408b64a06c0.json",
+      "id": "agriculture/corn/ILLINOIS",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11384,
+      "contentDigest": "d3dd8a286f6789163221b3036920bb7cc80cb4778a09887c97c9fb930258233d",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/INDIANA.d3dd8a286f678916.json",
+      "id": "agriculture/corn/INDIANA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11337,
+      "contentDigest": "90eda2c2ddbe4324235e2f04430f0c093ae874db28e4a8e1d297359632219bee",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/IOWA.90eda2c2ddbe4324.json",
+      "id": "agriculture/corn/IOWA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 9365,
+      "contentDigest": "13f58cdea6aa47bcde7cafb924de06fc0ff4a1c025f53cf0c5979d7fd63657ef",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/KANSAS.13f58cdea6aa47bc.json",
+      "id": "agriculture/corn/KANSAS",
+      "publicationState": "public-static",
+      "recordCount": 14,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 5421,
+      "contentDigest": "fecd102e9dec8cf674c6883bd678c0b9f45921b299fc5048777661d186cca7dc",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/KENTUCKY.fecd102e9dec8cf6.json",
+      "id": "agriculture/corn/KENTUCKY",
+      "publicationState": "public-static",
+      "recordCount": 8,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4778,
+      "contentDigest": "59aaf63950be313d3d38791664562bee61c858f1423625af2f988dac44fc1648",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/LOUISIANA.59aaf63950be313d.json",
+      "id": "agriculture/corn/LOUISIANA",
+      "publicationState": "public-static",
+      "recordCount": 7,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4767,
+      "contentDigest": "9695c3cc3b357a685dd40170cf99f454527dbcc0ea68ec0fbed639d48b01a211",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/MARYLAND.9695c3cc3b357a68.json",
+      "id": "agriculture/corn/MARYLAND",
+      "publicationState": "public-static",
+      "recordCount": 7,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "af8f7553209b538cf96853009677bcc4f83bf7c1aec67017394b366127489efa",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/MICHIGAN.af8f7553209b538c.json",
+      "id": "agriculture/corn/MICHIGAN",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2135,
+      "contentDigest": "367b6c57b64bf75b1a2a84830dc1b96b0e8e34860e9137a9e31f70d2bde9d4fe",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/MINNESOTA.367b6c57b64bf75b.json",
+      "id": "agriculture/corn/MINNESOTA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2138,
+      "contentDigest": "fbd318201992b10e1bf6d51f13c45a04694f05789fd7ac1c6c73d989224bd6a7",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/MISSISSIPPI.fbd318201992b10e.json",
+      "id": "agriculture/corn/MISSISSIPPI",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "8935ac853554aac54ccaef9f7cf3ffdde3e10994d8efbfb44e2832e18f0200d4",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/MISSOURI.8935ac853554aac5.json",
+      "id": "agriculture/corn/MISSOURI",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2123,
+      "contentDigest": "f31a3792e6f07e49a19f4a2004d557c18f2740eb99caa31bd6bddaee4d5cebe2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/MONTANA.f31a3792e6f07e49.json",
+      "id": "agriculture/corn/MONTANA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "2d2434d94556967b290802b363b4afa7418d0eed7ba8a86863563d6c616b07c0",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/NEBRASKA.2d2434d94556967b.json",
+      "id": "agriculture/corn/NEBRASKA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "0fa43bcb1e7cd203df973e65c90bde1fe6ba387a320ebe733324d27be2579913",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/NEW JERSEY.0fa43bcb1e7cd203.json",
+      "id": "agriculture/corn/NEW JERSEY",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "3e261c8a9cbbc095f754e0ddd33e65306cc1797b7a7316361d826ea8693fc262",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/NEW MEXICO.3e261c8a9cbbc095.json",
+      "id": "agriculture/corn/NEW MEXICO",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2129,
+      "contentDigest": "002b7546c67dfc7d9566478ae42dc9259d2f22b3ecd8588db6b2c14d89f334c2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/NEW YORK.002b7546c67dfc7d.json",
+      "id": "agriculture/corn/NEW YORK",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2147,
+      "contentDigest": "ca209378ac94ebedd5c7dea95a4a20668d5d1dd2c58d0942f3f7f659cddeffaf",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/NORTH CAROLINA.ca209378ac94ebed.json",
+      "id": "agriculture/corn/NORTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2144,
+      "contentDigest": "16de6204de9876ac79668a5a78069a560ce5378b856ba3bfa675f58369c868ed",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/NORTH DAKOTA.16de6204de9876ac.json",
+      "id": "agriculture/corn/NORTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2120,
+      "contentDigest": "638d418ba8bd1ad42d4313b3ade0036b652b4d72cf45df0e9fe87cf0d9cdd0a3",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/OHIO.638d418ba8bd1ad4.json",
+      "id": "agriculture/corn/OHIO",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2129,
+      "contentDigest": "d5fae3a29fd2eca3891122306ac09986351482e9b4d0e4275375d3eba91b33ee",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/OKLAHOMA.d5fae3a29fd2eca3.json",
+      "id": "agriculture/corn/OKLAHOMA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2120,
+      "contentDigest": "de48a2df19e576da45da0eb70e9bb8bf8e909e08528be4cd975eb9315acbc0b0",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/OREGON.de48a2df19e576da.json",
+      "id": "agriculture/corn/OREGON",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 9471,
+      "contentDigest": "71c7a0d651d35430dbe5d02939813cac0ac00530f398fddcaa16a1c44da3f309",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/OTHER STATES.71c7a0d651d35430.json",
+      "id": "agriculture/corn/OTHER STATES",
+      "publicationState": "public-static",
+      "recordCount": 14,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2141,
+      "contentDigest": "2b84af42ec755b37ea122547caeac1df6fcee494c45cd72ab15bccee2d0ce5aa",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/PENNSYLVANIA.2b84af42ec755b37.json",
+      "id": "agriculture/corn/PENNSYLVANIA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2147,
+      "contentDigest": "e8a54c62cb191c3ce221264dc5a4fdf2ca536093623174fddf515162b817c0ae",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/SOUTH CAROLINA.e8a54c62cb191c3c.json",
+      "id": "agriculture/corn/SOUTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2144,
+      "contentDigest": "2eb35d74679cd7b1e64997b4713606930f73de9fbf273b2d7998388966e8ab89",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/SOUTH DAKOTA.2eb35d74679cd7b1.json",
+      "id": "agriculture/corn/SOUTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "1447a1260a99c09af1add16113ef26c7e9092464f417e2e58005f086010c8470",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/TENNESSEE.1447a1260a99c09a.json",
+      "id": "agriculture/corn/TENNESSEE",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2123,
+      "contentDigest": "7a9d68f08de3a75b2279c7ef185a9532f49da83d2b510ebfde7ba5bd2c403580",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/TEXAS.7a9d68f08de3a75b.json",
+      "id": "agriculture/corn/TEXAS",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 13435,
+      "contentDigest": "ce09ed7a6389a32c48ab58c35d34bfe9e3af6b2304c5bdd5125146fb796ba786",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/US TOTAL.ce09ed7a6389a32c.json",
+      "id": "agriculture/corn/US TOTAL",
+      "publicationState": "public-static",
+      "recordCount": 20,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2114,
+      "contentDigest": "37a75dd523d3c63bff7ed79191b8f87bb00e4a8de3de19feebe89f477be35a90",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/UTAH.37a75dd523d3c63b.json",
+      "id": "agriculture/corn/UTAH",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2129,
+      "contentDigest": "3c464c3fcced27abf3e4a0e147fa1ad8a741dec6b952e9371ae41594d2480a0f",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/VIRGINIA.3c464c3fcced27ab.json",
+      "id": "agriculture/corn/VIRGINIA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2134,
+      "contentDigest": "daed48d68b2bc758f25330e18b16114550de7c359e0a16b5dd633152151990c8",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/WASHINGTON.daed48d68b2bc758.json",
+      "id": "agriculture/corn/WASHINGTON",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2141,
+      "contentDigest": "ae5bf3d35bc6c38cf2c5ec9886e95e421f485442e74eb0b071163357c5dee9af",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/WEST VIRGINIA.ae5bf3d35bc6c38c.json",
+      "id": "agriculture/corn/WEST VIRGINIA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2135,
+      "contentDigest": "3b154c6b890fb8613b2d304f33ee43998c727239b5387144d35fdca21ee8aa9c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/WISCONSIN.3b154c6b890fb861.json",
+      "id": "agriculture/corn/WISCONSIN",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2123,
+      "contentDigest": "3ca1d28219ecbe1fcdb8ee90331604a5a6015765628dabc60249ed59292946bb",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/corn/WYOMING.3ca1d28219ecbe1f.json",
+      "id": "agriculture/corn/WYOMING",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 1467,
+      "contentDigest": "e6eb20e0b3609f2032a521fc721693d96b3eea6a97d4638d92b214be02381233",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/ARKANSAS.e6eb20e0b3609f20.json",
+      "id": "agriculture/oats/ARKANSAS",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2785,
+      "contentDigest": "bf9081b58bc0dd816c9adac6eb510ef1c081f9983d562f45623b863143cac13a",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/CALIFORNIA.bf9081b58bc0dd81.json",
+      "id": "agriculture/oats/CALIFORNIA",
+      "publicationState": "public-static",
+      "recordCount": 4,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6629,
+      "contentDigest": "6e3a976349517a3c413b7bc4043738b7a8abe745b8e31eb0a17a92643c8a2794",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/GEORGIA.6e3a976349517a3c.json",
+      "id": "agriculture/oats/GEORGIA",
+      "publicationState": "public-static",
+      "recordCount": 10,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7908,
+      "contentDigest": "2f7f42f9f4812e677a813365041929650be16d490083a01fb47d8fb67cbb626d",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/IDAHO.2f7f42f9f4812e67.json",
+      "id": "agriculture/oats/IDAHO",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7951,
+      "contentDigest": "9ef8107a4da6834f334b0c05d32908b4501fdc9adeb87801e6e0faa05db585ce",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/ILLINOIS.9ef8107a4da6834f.json",
+      "id": "agriculture/oats/ILLINOIS",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7908,
+      "contentDigest": "1cebb982aa25ac462074936fe350a856a3f1ea4646fa54588181f5f11dc02389",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/IOWA.1cebb982aa25ac46.json",
+      "id": "agriculture/oats/IOWA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7928,
+      "contentDigest": "ecea919bfe33e454dee194fb0185753e41a01af0f14664704b65c5906389a7b9",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/KANSAS.ecea919bfe33e454.json",
+      "id": "agriculture/oats/KANSAS",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7908,
+      "contentDigest": "a1c415ae66ca626ab1c6fb5cdb9705ddc58f4bdcd67507377aa4252a45984967",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/MAINE.a1c415ae66ca626a.json",
+      "id": "agriculture/oats/MAINE",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7951,
+      "contentDigest": "a67204d0d84bae3642156f28fd9490baa3fd698dbb3e3d18638ee3f296bbd817",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/MICHIGAN.a67204d0d84bae36.json",
+      "id": "agriculture/oats/MICHIGAN",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7972,
+      "contentDigest": "cd1d6d17b23884cb62833d2510751194c9c3b3417c38285c97646777fa660699",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/MINNESOTA.cd1d6d17b23884cb.json",
+      "id": "agriculture/oats/MINNESOTA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2097,
+      "contentDigest": "842e42ad43662a2b83acce357dbadbdca92a48b30e2975a8dfc32c7689e46ab1",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/MISSOURI.842e42ad43662a2b.json",
+      "id": "agriculture/oats/MISSOURI",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7937,
+      "contentDigest": "c3bba21d6617e4f16ce991b84cbe8cd43afeec9016ab4018bec15e5766095162",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/MONTANA.c3bba21d6617e4f1.json",
+      "id": "agriculture/oats/MONTANA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7952,
+      "contentDigest": "74999068bb142c79d9164c273566c53c74cb19b230417f0914f874b83b949a48",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/NEBRASKA.74999068bb142c79.json",
+      "id": "agriculture/oats/NEBRASKA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7953,
+      "contentDigest": "7b226bffe460e5fcb9c52c33a9cd6a51b5e4426d9170211686298d985b29988c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/NEW YORK.7b226bffe460e5fc.json",
+      "id": "agriculture/oats/NEW YORK",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6698,
+      "contentDigest": "2124da652391dbcf730264e1771b666f17bdc969d1adb5e850b89fa20ee87f13",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/NORTH CAROLINA.2124da652391dbcf.json",
+      "id": "agriculture/oats/NORTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 10,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 8010,
+      "contentDigest": "d19c32850b0b5c912acebc8be81ba7d11463dfb46a54462bc0b8a06df53d688c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/NORTH DAKOTA.d19c32850b0b5c91.json",
+      "id": "agriculture/oats/NORTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7903,
+      "contentDigest": "099bb3a05d4f4937ff8819b3f5e0cbbe20c2a9aa5b25ed70a264f09fb8e9b9b6",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/OHIO.099bb3a05d4f4937.json",
+      "id": "agriculture/oats/OHIO",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 1467,
+      "contentDigest": "148176ea9215ef9e01f6ff5c1ba01db14af776a693eeead3498d8920732cb4f9",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/OKLAHOMA.148176ea9215ef9e.json",
+      "id": "agriculture/oats/OKLAHOMA",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7916,
+      "contentDigest": "50d4e855db29151a5c2ec33631cecad29f21f3ddc8d59adef0a8687a369ea191",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/OREGON.50d4e855db29151a.json",
+      "id": "agriculture/oats/OREGON",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6008,
+      "contentDigest": "983b962ef35598b04d83911391682c00f295ff47f7562e1456eb844ce24578d8",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/OTHER STATES.983b962ef35598b0.json",
+      "id": "agriculture/oats/OTHER STATES",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 8002,
+      "contentDigest": "34698bfa904f5eb52c799244f48822170af022470ff66a7d54d52a47cc4108d2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/PENNSYLVANIA.34698bfa904f5eb5.json",
+      "id": "agriculture/oats/PENNSYLVANIA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 8004,
+      "contentDigest": "3868b6d73cb5206ad49093262ff5a4bf4884610a56b64ce20a78ec9caca90073",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/SOUTH DAKOTA.3868b6d73cb5206a.json",
+      "id": "agriculture/oats/SOUTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7919,
+      "contentDigest": "0566b4aadfcfd10c50b64a0217311ce859bee5f6db4b73e358c7e5a2c8904cd7",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/TEXAS.0566b4aadfcfd10c.json",
+      "id": "agriculture/oats/TEXAS",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 8003,
+      "contentDigest": "7571eb5a83ab5c3133bf9513a5659bc698f002982772c873419006a026995655",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/US TOTAL.7571eb5a83ab5c31.json",
+      "id": "agriculture/oats/US TOTAL",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 7967,
+      "contentDigest": "d1ae22c032970d75b6d578915273febd5b6b18274c0f63687fffb57e3e7e5ee3",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/oats/WISCONSIN.d1ae22c032970d75.json",
+      "id": "agriculture/oats/WISCONSIN",
+      "publicationState": "public-static",
+      "recordCount": 12,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6092,
+      "contentDigest": "78b545a138c16f2c412c9fa2ec1d44a83dc5258b8f2ad22f04c7f08aa89302e0",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/CALIFORNIA.78b545a138c16f2c.json",
+      "id": "agriculture/potatoes/CALIFORNIA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6080,
+      "contentDigest": "05e51f6481e9efdaf0d61ca857c07266ccd09b3c5b0b945c49e85e8d0dd2e722",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/COLORADO.05e51f6481e9efda.json",
+      "id": "agriculture/potatoes/COLORADO",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6065,
+      "contentDigest": "49f8467256aafdc41deece9b24ac2c41705bf4c32164a59c26cc59eeb825e9e9",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/FLORIDA.49f8467256aafdc4.json",
+      "id": "agriculture/potatoes/FLORIDA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6062,
+      "contentDigest": "46a6aac6a59c7847bd6bbf7d08ee21e29900690d2ee9b5e0447f051147c6cf3a",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/IDAHO.46a6aac6a59c7847.json",
+      "id": "agriculture/potatoes/IDAHO",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6053,
+      "contentDigest": "6ab585086e22951ba1e1e5da6b8e137451bc1a27c628b93645beb9df2e6ad411",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/MAINE.6ab585086e22951b.json",
+      "id": "agriculture/potatoes/MAINE",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6080,
+      "contentDigest": "93e0cebf785e044b5318058c1305e5fce336f656a83e723cffc951b1bde97029",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/MICHIGAN.93e0cebf785e044b.json",
+      "id": "agriculture/potatoes/MICHIGAN",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6089,
+      "contentDigest": "6dc4e5de1c9165c2bfaca39d738b5cb2cf5a48e95e78ae0fd28d570cf2f1b2cb",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/MINNESOTA.6dc4e5de1c9165c2.json",
+      "id": "agriculture/potatoes/MINNESOTA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6077,
+      "contentDigest": "e7843d4314e4d4c93c0b45fa9415fd8669f36bc3676f951d9af9c1519d0bca6e",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/NEBRASKA.e7843d4314e4d4c9.json",
+      "id": "agriculture/potatoes/NEBRASKA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6116,
+      "contentDigest": "3d463b40cee6b33856006d5b4fe5a7e53ab79464a911dc1dc8f6a282d94d9684",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/NORTH DAKOTA.3d463b40cee6b338.json",
+      "id": "agriculture/potatoes/NORTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6062,
+      "contentDigest": "b9410bc95d90e46130d5d5e60d8e7e02340e5dd0934ccdc4b724c0d6c8bce30f",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/OREGON.b9410bc95d90e461.json",
+      "id": "agriculture/potatoes/OREGON",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4098,
+      "contentDigest": "23ebb9926b750e272ecaa2aea34c99825a5955329932b7e5fbd7a0ea60ebb016",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/OTHER STATES.23ebb9926b750e27.json",
+      "id": "agriculture/potatoes/OTHER STATES",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6047,
+      "contentDigest": "dbfee2c024163c581234734cc7191d57a5758a2165e2b361286e43253c6ec608",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/TEXAS.dbfee2c024163c58.json",
+      "id": "agriculture/potatoes/TEXAS",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6779,
+      "contentDigest": "f48a99cc037b98439e9b6f2a70e81ad679abe79026837369d0804df0cd92d8bb",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/US TOTAL.f48a99cc037b9843.json",
+      "id": "agriculture/potatoes/US TOTAL",
+      "publicationState": "public-static",
+      "recordCount": 10,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6102,
+      "contentDigest": "6c3e5ad6e2de1a1b05f0888feb087d221c3ca481ebca2009d9a22d2694ef740b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/WASHINGTON.6c3e5ad6e2de1a1b.json",
+      "id": "agriculture/potatoes/WASHINGTON",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6089,
+      "contentDigest": "0b2cc52bcd0d5dc4c837ea3e8b8e006b0b8e8b9347a04897f954d7a515f0dddb",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/potatoes/WISCONSIN.0b2cc52bcd0d5dc4.json",
+      "id": "agriculture/potatoes/WISCONSIN",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 17167,
+      "contentDigest": "7bfc400d6a34368d848611f3d04cc585ded2c63baaaa539ff3c631c014b75ef3",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/ARKANSAS.7bfc400d6a34368d.json",
+      "id": "agriculture/rice/ARKANSAS",
+      "publicationState": "public-static",
+      "recordCount": 26,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 17209,
+      "contentDigest": "72d3149ae65a8be1af5f59337763fc99d7294e65120701318bc62d6a34af4189",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/CALIFORNIA.72d3149ae65a8be1.json",
+      "id": "agriculture/rice/CALIFORNIA",
+      "publicationState": "public-static",
+      "recordCount": 26,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 15224,
+      "contentDigest": "b1bca9346d8603256e5a53bdda2ea20f425f36342b38ed0d70ce4c6ccf661c9b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/LOUISIANA.b1bca9346d860325.json",
+      "id": "agriculture/rice/LOUISIANA",
+      "publicationState": "public-static",
+      "recordCount": 23,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 15251,
+      "contentDigest": "387c2abf9fa9327e611eed19b22912ff51072db5b5cad725df77b409c6115a28",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/MISSISSIPPI.387c2abf9fa9327e.json",
+      "id": "agriculture/rice/MISSISSIPPI",
+      "publicationState": "public-static",
+      "recordCount": 23,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 15198,
+      "contentDigest": "8779fdbb52b8fac5748ee78bab1662d6f0a7bb5a474e68ec36ec7619e36c68af",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/MISSOURI.8779fdbb52b8fac5.json",
+      "id": "agriculture/rice/MISSOURI",
+      "publicationState": "public-static",
+      "recordCount": 23,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 828,
+      "contentDigest": "189d0c56b2809d285839deace13d9209f548af7c0543c94348b7554a2b1c144c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/OTHER STATES.189d0c56b2809d28.json",
+      "id": "agriculture/rice/OTHER STATES",
+      "publicationState": "public-static",
+      "recordCount": 1,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 15770,
+      "contentDigest": "48dabce2786ccdec0843ee4676f32336053edd59e66428281ab348b202735ed0",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/TEXAS.48dabce2786ccdec.json",
+      "id": "agriculture/rice/TEXAS",
+      "publicationState": "public-static",
+      "recordCount": 24,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 39536,
+      "contentDigest": "941d0cd870ede6fe518c156e4631ac1753a944ea5de6bda7c8a1c51a977e669a",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/rice/US TOTAL.941d0cd870ede6fe.json",
+      "id": "agriculture/rice/US TOTAL",
+      "publicationState": "public-static",
+      "recordCount": 59,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11370,
+      "contentDigest": "1026d8694e3ced501ca4ecbe1ff47c74efaac47d5f2a0cd834ebac87c72abeca",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/ALABAMA.1026d8694e3ced50.json",
+      "id": "agriculture/soybeans/ALABAMA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11405,
+      "contentDigest": "5631bc1a7bb160b645ceedd8ad552dc231e158883abf97bf8b3c3c29ceef0fff",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/ARKANSAS.5631bc1a7bb160b6.json",
+      "id": "agriculture/soybeans/ARKANSAS",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11371,
+      "contentDigest": "79d0140b2f0df1b0779f28b554452d0d34a14b1ce095e87d921fec0967d7b841",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/DELAWARE.79d0140b2f0df1b0.json",
+      "id": "agriculture/soybeans/DELAWARE",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11354,
+      "contentDigest": "f924680e1c479877527639ee3e27fa974563a739c9f3672a0b9b1f37ea9c7e09",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/GEORGIA.f924680e1c479877.json",
+      "id": "agriculture/soybeans/GEORGIA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11405,
+      "contentDigest": "f41201cf02fa16dea71c990c422f74f6d7a77b2666fcdfce9ab1f95072b1c0e3",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/ILLINOIS.f41201cf02fa16de.json",
+      "id": "agriculture/soybeans/ILLINOIS",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11388,
+      "contentDigest": "eecc232e18650ba7ed0e737e5ac48c92aad77e5ef732b2bdcfe82cad86b440f5",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/INDIANA.eecc232e18650ba7.json",
+      "id": "agriculture/soybeans/INDIANA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11337,
+      "contentDigest": "85b74620d738842c66fbb38bfdc623159cf2d53832ab004a48b584af998fae25",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/IOWA.85b74620d738842c.json",
+      "id": "agriculture/soybeans/IOWA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11371,
+      "contentDigest": "0049329f6ec34c91d750376674ec881dcb4addbfcd1435cfe031ad834f773931",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/KANSAS.0049329f6ec34c91.json",
+      "id": "agriculture/soybeans/KANSAS",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11396,
+      "contentDigest": "2153f4a2512afdabc304edf23cc248d494a6c9c3d6ce2509ade86c55cfa1565c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/KENTUCKY.2153f4a2512afdab.json",
+      "id": "agriculture/soybeans/KENTUCKY",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11405,
+      "contentDigest": "63188bc41cb8e22cc2b9302ba04d11a84f426f54fa9948387351538040202714",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/LOUISIANA.63188bc41cb8e22c.json",
+      "id": "agriculture/soybeans/LOUISIANA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11388,
+      "contentDigest": "f3b805ea9d80af7b3da5d1597431fab151d757412bc4d2b0b155a8586d399c04",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/MARYLAND.f3b805ea9d80af7b.json",
+      "id": "agriculture/soybeans/MARYLAND",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11400,
+      "contentDigest": "36e8ebfde250cf17c815f1a7387b66ec33e8018b6d5921d56c5ca77a83ba97ff",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/MICHIGAN.36e8ebfde250cf17.json",
+      "id": "agriculture/soybeans/MICHIGAN",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11422,
+      "contentDigest": "de682b05b128b9c22ed2f9eb1bf98ec58fef83d58644b001342a4296989cbc81",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/MINNESOTA.de682b05b128b9c2.json",
+      "id": "agriculture/soybeans/MINNESOTA",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11454,
+      "contentDigest": "52052ffcd64b9b28778478ab85bc857a4ed45fe86dce74386ee823d2a16543c7",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/MISSISSIPPI.52052ffcd64b9b28.json",
+      "id": "agriculture/soybeans/MISSISSIPPI",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 5429,
+      "contentDigest": "dd3edd5f56f51b08b7487bfbfdb47c6876c49dba5ca5083d7508f0cabf0d717d",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/MISSOURI.dd3edd5f56f51b08.json",
+      "id": "agriculture/soybeans/MISSOURI",
+      "publicationState": "public-static",
+      "recordCount": 8,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4781,
+      "contentDigest": "db3fa8305238a3b5a18d9280712ee950b3d640a29269062952ef9e22c6a2463d",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/NEBRASKA.db3fa8305238a3b5.json",
+      "id": "agriculture/soybeans/NEBRASKA",
+      "publicationState": "public-static",
+      "recordCount": 7,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4781,
+      "contentDigest": "dc2daead33ff67988ac23b8d55c0cfe48708eb52e10c26ca257f13b9a94735c0",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/NEW JERSEY.dc2daead33ff6798.json",
+      "id": "agriculture/soybeans/NEW JERSEY",
+      "publicationState": "public-static",
+      "recordCount": 7,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4109,
+      "contentDigest": "f45de98d944fb0332f3889db81c077838fb651768ca63bb5fd9987134a4c8745",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/NEW YORK.f45de98d944fb033.json",
+      "id": "agriculture/soybeans/NEW YORK",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2150,
+      "contentDigest": "b89bd23c5c8169a20db42160c27e359939c0da0701e28716b080badc806c59d5",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/NORTH CAROLINA.b89bd23c5c8169a2.json",
+      "id": "agriculture/soybeans/NORTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2147,
+      "contentDigest": "9206f9577d316c10e133c7b96d0f41a597ef47522bb9d1d52fa87dcdb317ccc5",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/NORTH DAKOTA.9206f9577d316c10.json",
+      "id": "agriculture/soybeans/NORTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2123,
+      "contentDigest": "ac46b19a70ae4c07d20a3b7b22010f63d4876f36beae23f5f2f83157d7410a1e",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/OHIO.ac46b19a70ae4c07.json",
+      "id": "agriculture/soybeans/OHIO",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2131,
+      "contentDigest": "f7cb2db41ded90ed799b30d0065087281648b909b235805c3f6c24325fb9ae5e",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/OKLAHOMA.f7cb2db41ded90ed.json",
+      "id": "agriculture/soybeans/OKLAHOMA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 836,
+      "contentDigest": "fe3a1a92165537fcd265f5b6e706ed24542cf462b8697984adc0df7782267190",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/OTHER STATES.fe3a1a92165537fc.json",
+      "id": "agriculture/soybeans/OTHER STATES",
+      "publicationState": "public-static",
+      "recordCount": 1,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2144,
+      "contentDigest": "b73343b3e11ced7a4fc4242920194ccfb5edac07d51cab44f68ca599ad2dd372",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/PENNSYLVANIA.b73343b3e11ced7a.json",
+      "id": "agriculture/soybeans/PENNSYLVANIA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2150,
+      "contentDigest": "b603b6a0b36ac3fc468bc92146a0810eea9e0435c68933805e73c75dbc80e54b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/SOUTH CAROLINA.b603b6a0b36ac3fc.json",
+      "id": "agriculture/soybeans/SOUTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2147,
+      "contentDigest": "3e643778cb0a9a38d9bc570874772017e606b3390b662f7edb5e2fc836ea211c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/SOUTH DAKOTA.3e643778cb0a9a38.json",
+      "id": "agriculture/soybeans/SOUTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2136,
+      "contentDigest": "acdb4e0f05d5af39a6b7ff758121681ec445a64d1cdf850636a397cf0a40f530",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/TENNESSEE.acdb4e0f05d5af39.json",
+      "id": "agriculture/soybeans/TENNESSEE",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2120,
+      "contentDigest": "6d061a018981446ade3db8f220548524b6b9927dfcc17ffb55742eee0d410e59",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/TEXAS.6d061a018981446a.json",
+      "id": "agriculture/soybeans/TEXAS",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 11473,
+      "contentDigest": "ce54d3ad88d87343159ccdb9a600a0571e23f27e1e320c11363fea833f79add2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/US TOTAL.ce54d3ad88d87343.json",
+      "id": "agriculture/soybeans/US TOTAL",
+      "publicationState": "public-static",
+      "recordCount": 17,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2132,
+      "contentDigest": "088ee349fe42260443cbc41cb4f645fbad941686041bd0bd3707810a5d891a12",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/VIRGINIA.088ee349fe422604.json",
+      "id": "agriculture/soybeans/VIRGINIA",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 2138,
+      "contentDigest": "3f71572f4adf962c037e628f47eb124433b4b9f310ef2fa5553b3ab1770d6533",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/soybeans/WISCONSIN.3f71572f4adf962c.json",
+      "id": "agriculture/soybeans/WISCONSIN",
+      "publicationState": "public-static",
+      "recordCount": 3,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4026,
+      "contentDigest": "0bb5077f69b0bf39e10706b8ce6228272fccbd4efe3e1efa15cfc2b8b1cccea2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/ALABAMA.0bb5077f69b0bf39.json",
+      "id": "agriculture/wheat/ALABAMA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 5984,
+      "contentDigest": "fd57b92d08601ec0fae35d7d3ecc5da8f6c067069e3243e2745c830d3e752430",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/ARIZONA.fd57b92d08601ec0.json",
+      "id": "agriculture/wheat/ARIZONA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4031,
+      "contentDigest": "001f702452ba6b2c0acfd3b5342286e8c8357847616c92e90b64cb15b721019c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/ARKANSAS.001f702452ba6b2c.json",
+      "id": "agriculture/wheat/ARKANSAS",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 6012,
+      "contentDigest": "6e87182e372cc4afa798dfb511be16b6328b10a7e4999a7f16336be1fca22cb6",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/CALIFORNIA.6e87182e372cc4af.json",
+      "id": "agriculture/wheat/CALIFORNIA",
+      "publicationState": "public-static",
+      "recordCount": 9,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4037,
+      "contentDigest": "6c5dce1d985df348042428ac56539f4a1f76ce6b1870cf80c7c56e7338ef34b5",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/COLORADO.6c5dce1d985df348.json",
+      "id": "agriculture/wheat/COLORADO",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4031,
+      "contentDigest": "7f999822d0334816c8b89cf5e90bf2c0e240f98522dedd7703667ae5afb0c37f",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/DELAWARE.7f999822d0334816.json",
+      "id": "agriculture/wheat/DELAWARE",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4025,
+      "contentDigest": "cd05c5f47a5b8812830d7f1549f801bd8460b7abb9a9684da354810572d2b2e2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/GEORGIA.cd05c5f47a5b8812.json",
+      "id": "agriculture/wheat/GEORGIA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 12046,
+      "contentDigest": "5d74f64861b538ecf1117c293a9d610038c773bc4ab4906445e194b66aa4f01f",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/IDAHO.5d74f64861b538ec.json",
+      "id": "agriculture/wheat/IDAHO",
+      "publicationState": "public-static",
+      "recordCount": 18,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4037,
+      "contentDigest": "20ab3e753e603812200d203d481fe49da2fc37345c27f44d75cbab2ac2b7c636",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/ILLINOIS.20ab3e753e603812.json",
+      "id": "agriculture/wheat/ILLINOIS",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4031,
+      "contentDigest": "ef2f3ab27352af4773c53a64d6caa18c1c48605b9ed737636c97afd8cab619a6",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/INDIANA.ef2f3ab27352af47.json",
+      "id": "agriculture/wheat/INDIANA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4031,
+      "contentDigest": "829fe57a7b9f939f0c078fdb1491be773057e2c0446f4d1622d90766181e322c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/KANSAS.829fe57a7b9f939f.json",
+      "id": "agriculture/wheat/KANSAS",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4037,
+      "contentDigest": "2f6b675238fb4c490e5beefe2b0b90f8f8e524c2d68638679aa1e119a1624f80",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/KENTUCKY.2f6b675238fb4c49.json",
+      "id": "agriculture/wheat/KENTUCKY",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4034,
+      "contentDigest": "bf0c499e599020ece664069f6f3b5ff4cb9379f77059cf7323986d46b5489605",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/MARYLAND.bf0c499e599020ec.json",
+      "id": "agriculture/wheat/MARYLAND",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4037,
+      "contentDigest": "c3c241bc2c0cc4184a86e8e304a0d5112c33f9c56c618b9c75a00e6c3c9bed06",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/MICHIGAN.c3c241bc2c0cc418.json",
+      "id": "agriculture/wheat/MICHIGAN",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 12116,
+      "contentDigest": "34aa4728c9179a73a84bbc78a76bcbba546b3dab2ab07739b6ce74e41f9a89cc",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/MINNESOTA.34aa4728c9179a73.json",
+      "id": "agriculture/wheat/MINNESOTA",
+      "publicationState": "public-static",
+      "recordCount": 18,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4048,
+      "contentDigest": "839fff6267621256cf21ecbc708c8548b6dd5ca0528869e209a6e3535d3b5bcc",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/MISSISSIPPI.839fff6267621256.json",
+      "id": "agriculture/wheat/MISSISSIPPI",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4037,
+      "contentDigest": "a700372553cea2a88a71be485e07b821424e3c3339b6b2eab0bda082b1ad1c3c",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/MISSOURI.a700372553cea2a8.json",
+      "id": "agriculture/wheat/MISSOURI",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 13393,
+      "contentDigest": "6c2adfefdd632faae06c8ee128827783145193a825fa9d3f79ec0e8475f3cd06",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/MONTANA.6c2adfefdd632faa.json",
+      "id": "agriculture/wheat/MONTANA",
+      "publicationState": "public-static",
+      "recordCount": 20,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4037,
+      "contentDigest": "19683e23413eebc19bc8106627a4b620cd640e471463661653265cda9eeca9a2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/NEBRASKA.19683e23413eebc1.json",
+      "id": "agriculture/wheat/NEBRASKA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 1477,
+      "contentDigest": "8cdfe235794c9c564b5e93f1efd716d9b14b4caa472d72e2f2c081a5f7bd86c1",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/NEW JERSEY.8cdfe235794c9c56.json",
+      "id": "agriculture/wheat/NEW JERSEY",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4040,
+      "contentDigest": "56afacda7dee50dc569c8e015ce19c9589d32025d628f4ddd1afafcbdf862868",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/NEW MEXICO.56afacda7dee50dc.json",
+      "id": "agriculture/wheat/NEW MEXICO",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4031,
+      "contentDigest": "8eace38de6fbfc84ae38821c7efa062504ca8004f4dd7c7cb2176c7cc148af82",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/NEW YORK.8eace38de6fbfc84.json",
+      "id": "agriculture/wheat/NEW YORK",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4071,
+      "contentDigest": "29f062f67aea977c9ba4ab23365635f1ff98200db1cad0f6aa1ac09cadbbc70f",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/NORTH CAROLINA.29f062f67aea977c.json",
+      "id": "agriculture/wheat/NORTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 13506,
+      "contentDigest": "63f2f0ce9eb0d7b2382355b85471c171d8af33e22f1f6a4bc200e8f1b57a0088",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/NORTH DAKOTA.63f2f0ce9eb0d7b2.json",
+      "id": "agriculture/wheat/NORTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 20,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4013,
+      "contentDigest": "d0c97d62977a680f299e83a2883b24544043319c23497c62c086c9ef1018b577",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/OHIO.d0c97d62977a680f.json",
+      "id": "agriculture/wheat/OHIO",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4039,
+      "contentDigest": "a31c5378479276d9297f6f3ae1e830fbe98bf2e0ed32ba188e87d567a02d381e",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/OKLAHOMA.a31c5378479276d9.json",
+      "id": "agriculture/wheat/OKLAHOMA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4025,
+      "contentDigest": "a822f3ddeedd6a56f01a566b9331086bf553e74892ac326399e2c79770f3dbf7",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/OREGON.a822f3ddeedd6a56.json",
+      "id": "agriculture/wheat/OREGON",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4059,
+      "contentDigest": "2757cf64d135440ebeaa0521f721133848d665d8ef6c351d8409183e23b12c3b",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/PENNSYLVANIA.2757cf64d135440e.json",
+      "id": "agriculture/wheat/PENNSYLVANIA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4067,
+      "contentDigest": "a7eb6d22ba226351feb6e24c64543800b88871580ff76da96fd5bd1305449ffa",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/SOUTH CAROLINA.a7eb6d22ba226351.json",
+      "id": "agriculture/wheat/SOUTH CAROLINA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 12170,
+      "contentDigest": "5b5e4e957c0b2d863592c146d966942456bd972590e7ba04070a7b2c2b3f0ce2",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/SOUTH DAKOTA.5b5e4e957c0b2d86.json",
+      "id": "agriculture/wheat/SOUTH DAKOTA",
+      "publicationState": "public-static",
+      "recordCount": 18,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4043,
+      "contentDigest": "3151aa81f4078a6b04b2d33c695ee6f3b3e1222589b995a6cc71470aae78de53",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/TENNESSEE.3151aa81f4078a6b.json",
+      "id": "agriculture/wheat/TENNESSEE",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4019,
+      "contentDigest": "ee218ba67134bdc06c57b39438defa38572cb70b51b734122d88cc6762ca3d25",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/TEXAS.ee218ba67134bdc0.json",
+      "id": "agriculture/wheat/TEXAS",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 95166,
+      "contentDigest": "3434a44d40b6e45599f4e18439a6ab4baf10bda94f9a65690ef7826d91e5c525",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/US TOTAL.3434a44d40b6e455.json",
+      "id": "agriculture/wheat/US TOTAL",
+      "publicationState": "public-static",
+      "recordCount": 141,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4007,
+      "contentDigest": "5306aea9581e3a69f35bb9dab8e8e3fc370371a7b0f03e7590311ec3bae6963a",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/UTAH.5306aea9581e3a69.json",
+      "id": "agriculture/wheat/UTAH",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4032,
+      "contentDigest": "4255f7a68e4414d6ffc0c38af679e90aa4f2aed0e09df050dfc597416867615d",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/VIRGINIA.4255f7a68e4414d6.json",
+      "id": "agriculture/wheat/VIRGINIA",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 12137,
+      "contentDigest": "dac8f36329b44caa7ff2e20a7e5fa0175f0a849fb5e3942040c7ac0f22af85fc",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/WASHINGTON.dac8f36329b44caa.json",
+      "id": "agriculture/wheat/WASHINGTON",
+      "publicationState": "public-static",
+      "recordCount": 18,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4041,
+      "contentDigest": "03f40d775f6fe4c180c53f8aa9028166571eac9c603f5e3b021bd18b58876771",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/WISCONSIN.03f40d775f6fe4c1.json",
+      "id": "agriculture/wheat/WISCONSIN",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 4025,
+      "contentDigest": "3eeeb5dc08db0cf15e9e99ccd4e55ce3c2465080e415ddb3d60b02f8a6d802e8",
+      "datasetIds": [
+        "agriculturalStatistics"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/agriculture/wheat/WYOMING.3eeeb5dc08db0cf1.json",
+      "id": "agriculture/wheat/WYOMING",
+      "publicationState": "public-static",
+      "recordCount": 6,
+      "sourceIds": [
+        "usda-nass-quickstats"
+      ]
+    },
+    {
+      "byteLength": 19297,
+      "contentDigest": "81d33872ce9f1fed913b93068971666a8a34209827f3f05e5a4bcb7943cac4f1",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/AK.81d33872ce9f1fed.json",
+      "id": "energy/electricity/AK",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19301,
+      "contentDigest": "3cce3a8a7eb4783495655e42a5f19674ca739cda69bda1081a5cbd107170f3e5",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/AL.3cce3a8a7eb47834.json",
+      "id": "energy/electricity/AL",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19301,
+      "contentDigest": "49d359f3bebd08f9c98eaa22a98b225bd8e3998502cbc7d8581b196fffbb254b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/AR.49d359f3bebd08f9.json",
+      "id": "energy/electricity/AR",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "1fe9849063516e16b8c7be582270c4e490e61f62d66343119828c2e7a406d295",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/AZ.1fe9849063516e16.json",
+      "id": "energy/electricity/AZ",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19300,
+      "contentDigest": "d2a34a3d9422608b0b51e4148e5defb3ac4e8f989a733894533d59cbd4ce0a99",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/CA.d2a34a3d9422608b.json",
+      "id": "energy/electricity/CA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19297,
+      "contentDigest": "1d4f2b64b6fb22a47dd622c875ca45b85f1af5839bc00c6527886cc2b697779c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/CO.1d4f2b64b6fb22a4.json",
+      "id": "energy/electricity/CO",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19290,
+      "contentDigest": "2a813d944ff5ba1f229d216eb62666a292c87576dc788c3aaa9fbd5989324e03",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/CT.2a813d944ff5ba1f.json",
+      "id": "energy/electricity/CT",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19293,
+      "contentDigest": "db2f12c2a757119436251aee1582785b86bb5be3cdad740db64f4c5526b3fb60",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/DC.db2f12c2a7571194.json",
+      "id": "energy/electricity/DC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "d4f914e6877a990208e5973c5aac5fb662d26d2b186e30639190af10f050be8c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/DE.d4f914e6877a9902.json",
+      "id": "energy/electricity/DE",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19355,
+      "contentDigest": "134f12fa4e913ed426f76adb128c4d75f18fcfe2596e8956ba342afd094fd2e9",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/ENC.134f12fa4e913ed4.json",
+      "id": "energy/electricity/ENC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19353,
+      "contentDigest": "0d791d708aa9978b3862e175866165a19cfe8aede29ccf590a95f1f98fc3e425",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/ESC.0d791d708aa9978b.json",
+      "id": "energy/electricity/ESC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "fcbcecf9f23952269d81417cd15cf30e30e196b95517d13ad632058777c30866",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/FL.fcbcecf9f2395226.json",
+      "id": "energy/electricity/FL",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "03f841e6d038d419e4549cd4c113ecace6c45afc6f655257bf5c37f37b5518df",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/GA.03f841e6d038d419.json",
+      "id": "energy/electricity/GA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19293,
+      "contentDigest": "610536ae8582a16abeb58ece2e81574ee5d368047415200c2092bd7920d26faa",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/HI.610536ae8582a16a.json",
+      "id": "energy/electricity/HI",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "97593ae9ea2c0d75a63318ad18216f2d9b1ba8e8c0e55f9596ffcb65852e04be",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/IA.97593ae9ea2c0d75.json",
+      "id": "energy/electricity/IA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19297,
+      "contentDigest": "7c31423ac66af1b066876390f33c2fc919368455346b07eb238abf1eda61ef8a",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/ID.7c31423ac66af1b0.json",
+      "id": "energy/electricity/ID",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "9153aaee12f2b137515dda4df1b4f5c89e4b3cb149c83390e1f3e81bac4bdf77",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/IL.9153aaee12f2b137.json",
+      "id": "energy/electricity/IL",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "3a9d9d0d6cb2eefd8ef4c57b74085ea6d215c32dcecbb05ad3cf620c39056b5f",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/IN.3a9d9d0d6cb2eefd.json",
+      "id": "energy/electricity/IN",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19294,
+      "contentDigest": "7859fcf2753aca659ba825d615c1cca6be6d89ee72d9e35160d4e5cf26586e37",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/KS.7859fcf2753aca65.json",
+      "id": "energy/electricity/KS",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "6298da52ffbf82175c39c694e20b095e3055024e50ef925462e8608fbc1c0183",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/KY.6298da52ffbf8217.json",
+      "id": "energy/electricity/KY",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19300,
+      "contentDigest": "ec5603fd16140737867e43ac9d8b49df0f1c338c00a18a65a3cd1e67d5937d7e",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/LA.ec5603fd16140737.json",
+      "id": "energy/electricity/LA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "5e92fd7354eb7346fdd9f4aed875af73d56cc6cca81585a41c7da70fbdf6df6f",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MA.5e92fd7354eb7346.json",
+      "id": "energy/electricity/MA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19356,
+      "contentDigest": "8610118bc40ce35b453517c6971e84a459cce071e9e7e8b570f35a59731e2860",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MAT.8610118bc40ce35b.json",
+      "id": "energy/electricity/MAT",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19295,
+      "contentDigest": "d055d142192dec151d59315f4b5feab4c64a8e9bec337865d14b9639a976c0ce",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MD.d055d142192dec15.json",
+      "id": "energy/electricity/MD",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "a71137e56335325b94eb7c831e37356404f6bff79eec92e1b1af1d577ac0000b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/ME.a71137e56335325b.json",
+      "id": "energy/electricity/ME",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19295,
+      "contentDigest": "de87fc56eb4f9c4e280eabd8ef94c7b83ffd6b42c7966f52529ee9395870ea51",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MI.de87fc56eb4f9c4e.json",
+      "id": "energy/electricity/MI",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "3746b2920ba70053500844b7cbb12770f2ee36d8f4e9140c5b7bf8c320bdc7b4",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MN.3746b2920ba70053.json",
+      "id": "energy/electricity/MN",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "fb56dbe498e69d9d3551ef2302e1f2609c77c7b55f60d9864b1a2ae0b2890501",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MO.fb56dbe498e69d9d.json",
+      "id": "energy/electricity/MO",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "7fa8012dc0dad5d5496750f535765cea8a8c217052175006e3ab23cb3f65586b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MS.7fa8012dc0dad5d5.json",
+      "id": "energy/electricity/MS",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19297,
+      "contentDigest": "81282476a206a782fb246c69649a1764c7805faa2d582c490ca56e5a7a41e0e4",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MT.81282476a206a782.json",
+      "id": "energy/electricity/MT",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19346,
+      "contentDigest": "0abc754ef7ded8b90a9a255a2849bb2219ebf181174d2d0b98df657d2a033c5c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/MTN.0abc754ef7ded8b9.json",
+      "id": "energy/electricity/MTN",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "bd6b5b6a48f0ac225ccb632710b2bfacb3373a03e6a06ceebf109322657ed124",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NC.bd6b5b6a48f0ac22.json",
+      "id": "energy/electricity/NC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "ab86ee14c57d0b212bdd6f3e9370953214ba3acb9a2e434e8988550a751776b7",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/ND.ab86ee14c57d0b21.json",
+      "id": "energy/electricity/ND",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "dde4352c095a59c5dc8bb2581e5b542f85cf93cab8a8a0cbe160b54de59804e0",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NE.dde4352c095a59c5.json",
+      "id": "energy/electricity/NE",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19354,
+      "contentDigest": "58d1b8d1206f9a3c71c2c81ebe42e00aae07ac368fe5fddd0fa4ed4fb1d6b7e7",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NEW.58d1b8d1206f9a3c.json",
+      "id": "energy/electricity/NEW",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "65c1bce2c174d6d2b7d538277f8da2d73743f6e5f3e8c0233eba4701c9e5121e",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NH.65c1bce2c174d6d2.json",
+      "id": "energy/electricity/NH",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "4eb54cd3f39faed005bf81d1fdc32a24343dc14e0e5cd34026e921377328db78",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NJ.4eb54cd3f39faed0.json",
+      "id": "energy/electricity/NJ",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19297,
+      "contentDigest": "2f15cb4da7bfa21182750c88419abf2ee01017525f3eedb222ca624770b1d765",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NM.2f15cb4da7bfa211.json",
+      "id": "energy/electricity/NM",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "db28108ca27f94ad5ff9464b7c96dd8c210d9b6ceefd23ba4ab2df9cb9da9aa3",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NV.db28108ca27f94ad.json",
+      "id": "energy/electricity/NV",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "7371c8879c4a62f69cb3b12c9f4f1d45130d86bb3ddbb24c6a919d316d75b8ab",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/NY.7371c8879c4a62f6.json",
+      "id": "energy/electricity/NY",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "c280ec8fdb6eaa3ef4bb0abcb60a390c6195d63b978f822a10c951fbc1012894",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/OH.c280ec8fdb6eaa3e.json",
+      "id": "energy/electricity/OH",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "6e599d52a5a991bbf0e7dcaf353e9694797274dadf06191633943dff9df82ebb",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/OK.6e599d52a5a991bb.json",
+      "id": "energy/electricity/OK",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "52d6f532d1ea377280a18bb7f7cce0527458562d64cd06f76f1b36d7f52757ca",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/OR.52d6f532d1ea3772.json",
+      "id": "energy/electricity/OR",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19297,
+      "contentDigest": "c07ea3cef6e27d56c378a0e091bb17803849ae408fae767a810252f26345316f",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/PA.c07ea3cef6e27d56.json",
+      "id": "energy/electricity/PA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19415,
+      "contentDigest": "d27cb848d191634a3f23cadf988b9434cbbe1620bbcb76e5c2aa5892319c2444",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/PACC.d27cb848d191634a.json",
+      "id": "energy/electricity/PACC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19416,
+      "contentDigest": "9094092373f6483bd6d4082d8de360d7bb055d360ed12bc1f28dd7d7df055db9",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/PACN.9094092373f6483b.json",
+      "id": "energy/electricity/PACN",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19294,
+      "contentDigest": "0ecffd324569563fa47f62d6a780a01cd38ab40ca7d981b5c70a6f84a8054ee7",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/RI.0ecffd324569563f.json",
+      "id": "energy/electricity/RI",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19358,
+      "contentDigest": "ce30df8b0580f6d9c6491b2c28f6e604d2017745dc956e073e8d50f10fc93b31",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/SAT.ce30df8b0580f6d9.json",
+      "id": "energy/electricity/SAT",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "1231dceec0c55f3dcadebf7dfb9f7b1dd0e4bb8648816c70bfb4c8c902de4428",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/SC.1231dceec0c55f3d.json",
+      "id": "energy/electricity/SC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "b57e76ac95d511bcb96343fdc795dc29ab9bf58f82c2bf3736a097211c31ba3a",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/SD.b57e76ac95d511bc.json",
+      "id": "energy/electricity/SD",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19300,
+      "contentDigest": "8c14bc6a9fab10d905fe87a703d11639c6e3f44718abd654060f59bb8db13f91",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/TN.8c14bc6a9fab10d9.json",
+      "id": "energy/electricity/TN",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "72582b09575532d8b8a4a9c1158b99d4678f59ba9da67b57912f36bfe871bb78",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/TX.72582b09575532d8.json",
+      "id": "energy/electricity/TX",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19298,
+      "contentDigest": "38b2264b65cf5324e71e82f38713ba4c1666f84b5ec3414b2752e5d64938f5b4",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/US.38b2264b65cf5324.json",
+      "id": "energy/electricity/US",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "2ba550424ff0e1a7cf706e5d204088182ab05662a0534fa401e0cece83552845",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/UT.2ba550424ff0e1a7.json",
+      "id": "energy/electricity/UT",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "c4a7b59522e2c753e99bf15e65c855dce7c1710e8da9da133d78ed97f8c4f96c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/VA.c4a7b59522e2c753.json",
+      "id": "energy/electricity/VA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19295,
+      "contentDigest": "901e9a9f1b8c0b6f1808bdb8ec9f92785eac1bf7b28cf5a7e95d6e1acfb693d4",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/VT.901e9a9f1b8c0b6f.json",
+      "id": "energy/electricity/VT",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "9c7d5eb8e746c2ca108a5f66e585a6aea616f207b317eda6e950737e7ab07d16",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/WA.9c7d5eb8e746c2ca.json",
+      "id": "energy/electricity/WA",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19299,
+      "contentDigest": "d880da1aa428a08c6747edc4196014b82abbb56a7f6eaf356fb646293710abda",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/WI.d880da1aa428a08c.json",
+      "id": "energy/electricity/WI",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19358,
+      "contentDigest": "6416ab623d8a5952c4517f61cf28a614691e9bae01e038b49bdb7e1038421e01",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/WNC.6416ab623d8a5952.json",
+      "id": "energy/electricity/WNC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19357,
+      "contentDigest": "3568f505007f1b94965ecbbd093dc53bdd511311dc52793f9dfb3e97e992bb5a",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/WSC.3568f505007f1b94.json",
+      "id": "energy/electricity/WSC",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19300,
+      "contentDigest": "4f355093eae005d941c17bbdd83a39468fe361ceaeba1f755ba754a678398046",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/WV.4f355093eae005d9.json",
+      "id": "energy/electricity/WV",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 19296,
+      "contentDigest": "7f2e98dac2e8063b0489e3c7940e1d30d7ce3431eb97798acc8767df2f25543c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/electricity/WY.7f2e98dac2e8063b.json",
+      "id": "energy/electricity/WY",
+      "publicationState": "public-static",
+      "recordCount": 29,
+      "sourceIds": [
+        "eia-residential-electricity"
+      ]
+    },
+    {
+      "byteLength": 33573,
+      "contentDigest": "9eed3b90704e1d3d196493bc3224d152006251e28e905ec85f8dec3f128e107f",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/CA.9eed3b90704e1d3d.json",
+      "id": "energy/gasoline/CA",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33572,
+      "contentDigest": "f3495d232fe93f0b0246d2a0e9dfabf186d6303d268a30404fc3b3ee3dc20927",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/CO.f3495d232fe93f0b.json",
+      "id": "energy/gasoline/CO",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33571,
+      "contentDigest": "f0b8f7f7a0dc15506c85221428553f69c10a7d78bc7e197d5a235111c13bf40e",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/FL.f0b8f7f7a0dc1550.json",
+      "id": "energy/gasoline/FL",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33573,
+      "contentDigest": "48b5000262b35a9349b6aa7822e8aad9ffe82412389ade9c9ce9a52a43843b91",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/MA.48b5000262b35a93.json",
+      "id": "energy/gasoline/MA",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33578,
+      "contentDigest": "1b7c4f2d1f4e88feaa6a03f96c85c6abb1d4e24bf8a450425165a4c4b42a0f19",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/MN.1b7c4f2d1f4e88fe.json",
+      "id": "energy/gasoline/MN",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33576,
+      "contentDigest": "9511426f7982022e78c167d3c5b3dc86d7b53d52d61780872af51111a69ec871",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/NY.9511426f7982022e.json",
+      "id": "energy/gasoline/NY",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33574,
+      "contentDigest": "76b5fc95ff673887065251c64a3ac2af9bc1d3addd2cc0d63b42f99b4c62b6fb",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/OH.76b5fc95ff673887.json",
+      "id": "energy/gasoline/OH",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33623,
+      "contentDigest": "c44d4a6d66509f33e738e157b743f09550354069f12986aecc02a36d2cd61816",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R10.c44d4a6d66509f33.json",
+      "id": "energy/gasoline/R10",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33627,
+      "contentDigest": "67f306f06ab74e772d73a3361de765972ba36749b0cb1bbd2c6cf04ba4601f99",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R1X.67f306f06ab74e77.json",
+      "id": "energy/gasoline/R1X",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33627,
+      "contentDigest": "d5439dd0e49ed624ffbbe89ced4e7e779fe19842eab938ad497ed98f48a5bcff",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R1Y.d5439dd0e49ed624.json",
+      "id": "energy/gasoline/R1Y",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33629,
+      "contentDigest": "721fe91d89bc4a802bea08211fce9835259fc7066713996edcb117afb94d5cf1",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R1Z.721fe91d89bc4a80.json",
+      "id": "energy/gasoline/R1Z",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33627,
+      "contentDigest": "03f7ca74eb881ee77073f8548e27326118b7e75a9edb2825f3fa64f17dce4e0a",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R20.03f7ca74eb881ee7.json",
+      "id": "energy/gasoline/R20",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33627,
+      "contentDigest": "3329b87d5c678129b32f608bc439e0a6b8ae853834710309549f001c37c7c0bd",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R30.3329b87d5c678129.json",
+      "id": "energy/gasoline/R30",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33629,
+      "contentDigest": "a3bef819c6f453555e9a874b1073a01979d706efa89eab05635f8f7691791597",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R40.a3bef819c6f45355.json",
+      "id": "energy/gasoline/R40",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33626,
+      "contentDigest": "75f07afdc71549aa2bb5b3be6285f782f2136723b3b0fa88b86db87bc3b7bee4",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R50.75f07afdc71549aa.json",
+      "id": "energy/gasoline/R50",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33843,
+      "contentDigest": "9e7d6c24ae1f32a8632952db32ddcc8e0ad311d9ab49a45b200fc71e9f1b7b3c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/R5XCA.9e7d6c24ae1f32a8.json",
+      "id": "energy/gasoline/R5XCA",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33575,
+      "contentDigest": "1d98fe67483a76ee508914ff09d7f0197ed67816ae9c6670bd5e27804922cda9",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/TX.1d98fe67483a76ee.json",
+      "id": "energy/gasoline/TX",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33572,
+      "contentDigest": "955d0fd306739a3639c3a3259acc5335253745116dba07cd0b4bca863be2c72d",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/US.955d0fd306739a36.json",
+      "id": "energy/gasoline/US",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33574,
+      "contentDigest": "d2b276f577f822763ab741769e3ef2e412176421588ea3c00bb66cc155b9c2d3",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/WA.d2b276f577f82276.json",
+      "id": "energy/gasoline/WA",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33838,
+      "contentDigest": "16a1d84d1e54d2c07bc88ed29024d24ddfaf2048055f4b493f65f963b5a0c494",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/Y05LA.16a1d84d1e54d2c0.json",
+      "id": "energy/gasoline/Y05LA",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33839,
+      "contentDigest": "4ef2d55f0cf49a976f5a693656280821a825d25065d24e3066b5e647e3247948",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/Y05SF.4ef2d55f0cf49a97.json",
+      "id": "energy/gasoline/Y05SF",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33838,
+      "contentDigest": "c8492cb9d27b8dc742f358b642f5b9aefb5abbb2107c276d25ee4bc71cf60cbd",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/Y35NY.c8492cb9d27b8dc7.json",
+      "id": "energy/gasoline/Y35NY",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33837,
+      "contentDigest": "2bfb3e146ffad20b0473a8c9b8704388e4f2016bf908d2104d72c0ea97b382dc",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/Y44HO.2bfb3e146ffad20b.json",
+      "id": "energy/gasoline/Y44HO",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33840,
+      "contentDigest": "a026ddb8e2818dffaf6a4b5f31cf650676097441c092671502ac8784834cb07d",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/Y48SE.a026ddb8e2818dff.json",
+      "id": "energy/gasoline/Y48SE",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33734,
+      "contentDigest": "3703fa5cd58bfac6951d7ad4ea63f5e1d496cafd965e2f45d12708542dc9a93c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/YBOS.3703fa5cd58bfac6.json",
+      "id": "energy/gasoline/YBOS",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33734,
+      "contentDigest": "53b1dffc3e46e9c0943aedd53a4226e1dd2f0e1c9174940591f087f19aca43c3",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/YCLE.53b1dffc3e46e9c0.json",
+      "id": "energy/gasoline/YCLE",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33728,
+      "contentDigest": "01db19800354eed64dfb410cbd78f623b26c316600ffd16a5d1b8d16734c1dbb",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/YDEN.01db19800354eed6.json",
+      "id": "energy/gasoline/YDEN",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33735,
+      "contentDigest": "ac1b69e46d3f80f54032bce71af5c903110d0f565371f63d55fdf58134ec1850",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/YMIA.ac1b69e46d3f80f5.json",
+      "id": "energy/gasoline/YMIA",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 33737,
+      "contentDigest": "0f7ca37bfb74f2f83d179e81fe4623f9e0bada39ad8591ce2a4da88d30491283",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/gasoline/YORD.0f7ca37bfb74f2f8.json",
+      "id": "energy/gasoline/YORD",
+      "publicationState": "public-static",
+      "recordCount": 53,
+      "sourceIds": [
+        "eia-weekly-gasoline"
+      ]
+    },
+    {
+      "byteLength": 17350,
+      "contentDigest": "8b8bafd2749bb0c7490c02431825b1e236d757f1a25f8e15903d158b496535c2",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/AK.8b8bafd2749bb0c7.json",
+      "id": "energy/natural-gas/AK",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17353,
+      "contentDigest": "a3df40892f987619751a583982e248866b1852cccf52650bb3d2c67486031a6c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/AL.a3df40892f987619.json",
+      "id": "energy/natural-gas/AL",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17349,
+      "contentDigest": "e28fe2573ac90b781ca1bf1266ba97fee252c372fa7d64040f6b2a11eb2b3fb5",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/AR.e28fe2573ac90b78.json",
+      "id": "energy/natural-gas/AR",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "acd2ddec277b0309a0a04def6960e57e7630af73cd416b10599bb4c9c2db4aaf",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/AZ.acd2ddec277b0309.json",
+      "id": "energy/natural-gas/AZ",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16740,
+      "contentDigest": "03205c7b590acd6e881a8597091493ecadcd09e093998a0b4a4406405674508f",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/CA.03205c7b590acd6e.json",
+      "id": "energy/natural-gas/CA",
+      "publicationState": "public-static",
+      "recordCount": 27,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17347,
+      "contentDigest": "9458c3ab0bcf0a4e714e57fba4854c1560a461df9a8f6871cd85f261fdabb35b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/CO.9458c3ab0bcf0a4e.json",
+      "id": "energy/natural-gas/CO",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16126,
+      "contentDigest": "837e1c04ff24c6ec3c0a612ba34bdb703e9707f661a3ebcc8895336bb8e99d0e",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/CT.837e1c04ff24c6ec.json",
+      "id": "energy/natural-gas/CT",
+      "publicationState": "public-static",
+      "recordCount": 26,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17352,
+      "contentDigest": "8b050a10368cf3f5669cf5a1f84e8897a0ae1d57f895f5573cbc2df59242c852",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/DC.8b050a10368cf3f5.json",
+      "id": "energy/natural-gas/DC",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17353,
+      "contentDigest": "4364409b0e78bdfc1100bbe9a3a8fe303690efc635b50f42f8cfc657aa61ff95",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/DE.4364409b0e78bdfc.json",
+      "id": "energy/natural-gas/DE",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 14899,
+      "contentDigest": "7b5885b3bf4994d64dc0ebc21a604abc0503acae9d2a3e27fa92c27d122b81ba",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/FL.7b5885b3bf4994d6.json",
+      "id": "energy/natural-gas/FL",
+      "publicationState": "public-static",
+      "recordCount": 24,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17350,
+      "contentDigest": "da9bad20c91494087f8d2c27af0b68e692a57c6a128791f9c311f4d25982bfd0",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/GA.da9bad20c9149408.json",
+      "id": "energy/natural-gas/GA",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17351,
+      "contentDigest": "a46b5171225cf17f5fe8690ca822b646e3fa7d182e7bbf4d5ce1dabc84d6c63d",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/HI.a46b5171225cf17f.json",
+      "id": "energy/natural-gas/HI",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17344,
+      "contentDigest": "206b6db5476c27f05ac4468036a26d79836ca423d4ed5dd0acca0f909dcf8544",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/IA.206b6db5476c27f0.json",
+      "id": "energy/natural-gas/IA",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17330,
+      "contentDigest": "67bcecce74412567ab3b71d1819b1c2a8e14171aa04ed0e4a0b28b446859f32e",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/ID.67bcecce74412567.json",
+      "id": "energy/natural-gas/ID",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17343,
+      "contentDigest": "e69295955302cb89d29226b994afa476d5cf800b19d01885d8b000ee384cc04d",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/IL.e69295955302cb89.json",
+      "id": "energy/natural-gas/IL",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17343,
+      "contentDigest": "4837daae8df1c5f6a4d6bb70d5aa63c9222704743e67beb4b7efb1fdfc5a46d0",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/IN.4837daae8df1c5f6.json",
+      "id": "energy/natural-gas/IN",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "b1fd191217096716abebb4c3296011272e97a0cdc5419b0b421f12773b78c781",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/KS.b1fd191217096716.json",
+      "id": "energy/natural-gas/KS",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "a374548e49641021e660f97389f761058c3f824d01531d06a642f21601cdace8",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/KY.a374548e49641021.json",
+      "id": "energy/natural-gas/KY",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 14900,
+      "contentDigest": "c8ead20ff6167a2509beb17cc84ca5db8b1132d68bdea10af6b4b884419c328e",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/LA.c8ead20ff6167a25.json",
+      "id": "energy/natural-gas/LA",
+      "publicationState": "public-static",
+      "recordCount": 24,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17349,
+      "contentDigest": "7e0c0846980e90add1de4921482a05369a5d51cff791eddd0d1822a116edd628",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MA.7e0c0846980e90ad.json",
+      "id": "energy/natural-gas/MA",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16126,
+      "contentDigest": "98e0f758f08ebb2a3508c242279fdb2c87a49737fa9b78fefb3e2ea01c1f04dd",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MD.98e0f758f08ebb2a.json",
+      "id": "energy/natural-gas/MD",
+      "publicationState": "public-static",
+      "recordCount": 26,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 15511,
+      "contentDigest": "3875101388ab0349c3d214c4b679b5efa16aeed231954b1084da7087c006783d",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/ME.3875101388ab0349.json",
+      "id": "energy/natural-gas/ME",
+      "publicationState": "public-static",
+      "recordCount": 25,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17347,
+      "contentDigest": "10ae22a074525b87ad7073d1bc074d6cf1acd3c8e68e875885a689212d6701fb",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MI.10ae22a074525b87.json",
+      "id": "energy/natural-gas/MI",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16734,
+      "contentDigest": "260005a171f8c72dbbccf1bd774647890d4d9874e3c0dd4298885bdb67aac8f8",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MN.260005a171f8c72d.json",
+      "id": "energy/natural-gas/MN",
+      "publicationState": "public-static",
+      "recordCount": 27,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17350,
+      "contentDigest": "8c30796d5194fa37599acbc569d6a98f07605624cc8f370412093b2542258700",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MO.8c30796d5194fa37.json",
+      "id": "energy/natural-gas/MO",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17347,
+      "contentDigest": "afea988b8ece00a8ae60f5c4c2e1e4a0c17a881d7eef006bb9367756f3b4454c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MS.afea988b8ece00a8.json",
+      "id": "energy/natural-gas/MS",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17332,
+      "contentDigest": "8490c5372d416140a36467bda3a159b05bf50f0d909b35b274e0cb9f582ba98b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/MT.8490c5372d416140.json",
+      "id": "energy/natural-gas/MT",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16126,
+      "contentDigest": "09d04219e56cd02061a1e76d11b341a69e64f042d1cdb3bd3c315b9a5d62fe91",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NC.09d04219e56cd020.json",
+      "id": "energy/natural-gas/NC",
+      "publicationState": "public-static",
+      "recordCount": 26,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17336,
+      "contentDigest": "a4d22903760deeecdd1ae16e08d2cc9cc8b55eb794bf6a06a5c7c0b4eefa90cf",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/ND.a4d22903760deeec.json",
+      "id": "energy/natural-gas/ND",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17345,
+      "contentDigest": "1e8a63594687139effa5e664d9c36a814c09a3b4041b3ebe02ceb4fd002cba98",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NE.1e8a63594687139e.json",
+      "id": "energy/natural-gas/NE",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17352,
+      "contentDigest": "43a6ac2b4b0116edca5430ceb925a3522f5a7b7c248e207eb26ff875544d32c3",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NH.43a6ac2b4b0116ed.json",
+      "id": "energy/natural-gas/NH",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "d27ea62a595a58942c2b52d4ca6c47289ae8ba24046494e8156c0c81c42d0325",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NJ.d27ea62a595a5894.json",
+      "id": "energy/natural-gas/NJ",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16113,
+      "contentDigest": "e12e9feb3a97bc567d6b9d8d1c6d9414bbc42385798301b519d22ece4ac22b2a",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NM.e12e9feb3a97bc56.json",
+      "id": "energy/natural-gas/NM",
+      "publicationState": "public-static",
+      "recordCount": 26,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17347,
+      "contentDigest": "44d5ad9c492e74428467bb92db237470993e495307fcac99ac798d46dad5252c",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NV.44d5ad9c492e7442.json",
+      "id": "energy/natural-gas/NV",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "17517d8c480a6d933a778fb8d7284459fa0a31f0c92862674f3b978019c7d9ea",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/NY.17517d8c480a6d93.json",
+      "id": "energy/natural-gas/NY",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "08a4816767e6ca7b85c448c4694f8f6560df96840c7699b4f8d2cf2f835b0e26",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/OH.08a4816767e6ca7b.json",
+      "id": "energy/natural-gas/OH",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16736,
+      "contentDigest": "0fc8ee9de99cd1f337d90d424525b800a72332d71a7e87a8d158dbe7ce076317",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/OK.0fc8ee9de99cd1f3.json",
+      "id": "energy/natural-gas/OK",
+      "publicationState": "public-static",
+      "recordCount": 27,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "4878232a8d666ec0359153600a2bf639f0627c46b50451dce4e04cdd79469e84",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/OR.4878232a8d666ec0.json",
+      "id": "energy/natural-gas/OR",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17352,
+      "contentDigest": "16d40c1c7ed7b7137b10baa9c4f402b7ff8503ada24d3cd805a4c1784b6e6007",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/PA.16d40c1c7ed7b713.json",
+      "id": "energy/natural-gas/PA",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16737,
+      "contentDigest": "81a55b52fd25f87ae2e0a5b568ef256bd773a99f6847ec3636837aecc420b6b8",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/RI.81a55b52fd25f87a.json",
+      "id": "energy/natural-gas/RI",
+      "publicationState": "public-static",
+      "recordCount": 27,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 15513,
+      "contentDigest": "d86742b5894a8ecabe615af3bfccfbe665ec3f3a74af41fe664a1edccb0d1de3",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/SC.d86742b5894a8eca.json",
+      "id": "energy/natural-gas/SC",
+      "publicationState": "public-static",
+      "recordCount": 25,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17340,
+      "contentDigest": "cd8b0c2315f67147757d37c873c566b9600dafd29338adcf62863af7b1962f5b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/SD.cd8b0c2315f67147.json",
+      "id": "energy/natural-gas/SD",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17349,
+      "contentDigest": "8f6f3f9ec0e2024a32d3af223095d34d90b3e2c1b9d24a894292c993c2b514e8",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/TN.8f6f3f9ec0e2024a.json",
+      "id": "energy/natural-gas/TN",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17349,
+      "contentDigest": "1256e35b8e6016cb061dea9a70a133ff91e418f201d66c4047d6970dfbb11213",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/TX.1256e35b8e6016cb.json",
+      "id": "energy/natural-gas/TX",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17353,
+      "contentDigest": "af76a0c89c8ebff6aad8a9760f6458acf7f763552de48d1fd63a612cfda3c694",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/US.af76a0c89c8ebff6.json",
+      "id": "energy/natural-gas/US",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17338,
+      "contentDigest": "1f66f31cf78434ff0bd7bda928e4c0586d834488839d8ae5b8b3ea7009a960e8",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/UT.1f66f31cf78434ff.json",
+      "id": "energy/natural-gas/UT",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17353,
+      "contentDigest": "ab4c6de236555738dafce5205e186fafce97900cc1aabe9dcc5e30a29efda86d",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/VA.ab4c6de236555738.json",
+      "id": "energy/natural-gas/VA",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17350,
+      "contentDigest": "121f0cee8a275049f2d3a474fc000e34f3c5ced521fea6ea32554da1fd4e6e6b",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/VT.121f0cee8a275049.json",
+      "id": "energy/natural-gas/VT",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 16737,
+      "contentDigest": "d0310daac77fe3c28e93b2352c0e506e07d1f6e8a075e3d9fabc6d695d5fb0a6",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/WA.d0310daac77fe3c2.json",
+      "id": "energy/natural-gas/WA",
+      "publicationState": "public-static",
+      "recordCount": 27,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17340,
+      "contentDigest": "35cc1b2dd1ac4d16901188adcc521e9e2a852f3943027ff7b260beaaf28e0229",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/WI.35cc1b2dd1ac4d16.json",
+      "id": "energy/natural-gas/WI",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17352,
+      "contentDigest": "93a4c29a200ed805cd260fb3ed954af0012a9513fbe1ad4c65750c1ffef14fd4",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/WV.93a4c29a200ed805.json",
+      "id": "energy/natural-gas/WV",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 17348,
+      "contentDigest": "9b37d048d8f7f26494de1dbc2e877bd9c3691bef062badc4b0f610eb77db1183",
+      "datasetIds": [
+        "energyObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/energy/natural-gas/WY.9b37d048d8f7f264.json",
+      "id": "energy/natural-gas/WY",
+      "publicationState": "public-static",
+      "recordCount": 28,
+      "sourceIds": [
+        "eia-residential-natural-gas"
+      ]
+    },
+    {
+      "byteLength": 158557,
+      "contentDigest": "9cf06a981d7a34ca8a6613110e4c60fdf6a9ffa40a2d40f6a3bda2a9ca627b1c",
+      "datasetIds": [
+        "foods",
+        "foodNutrients"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/food/fdc/core-01.9cf06a981d7a34ca.json",
+      "id": "food/fdc/core-01",
+      "publicationState": "public-static",
+      "recordCount": 517,
+      "sourceIds": [
+        "usda-fooddata-central"
+      ]
+    },
+    {
+      "byteLength": 678,
+      "contentDigest": "697e0fd413a22a1e18958568525274ff57c09a8462f49b270066b528d10b6194",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/AZ.697e0fd413a22a1e.json",
+      "id": "geography/state/AZ",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 686,
+      "contentDigest": "09dcba14b2efa9dc899bac06e2b7e412b44ab5c20b29c5792a75fbf1e1368d31",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/CA.09dcba14b2efa9dc.json",
+      "id": "geography/state/CA",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 676,
+      "contentDigest": "f267e9b6baa6e02691399179bfbd4230569f9db806919219f52ad3c7d3d376b3",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/CO.f267e9b6baa6e026.json",
+      "id": "geography/state/CO",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 684,
+      "contentDigest": "4dbdfc7ff699334e35d4c6375311a475d85adb8dc839e8a247740cc050ea9fa2",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/DC.4dbdfc7ff699334e.json",
+      "id": "geography/state/DC",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 674,
+      "contentDigest": "f28487f4353007cecad324fe3fc6f4ee01b813c818b6ab0b6eace1d5e61864a2",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/FL.f28487f4353007ce.json",
+      "id": "geography/state/FL",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 678,
+      "contentDigest": "8279996629f9ac5ee01e3f4f638288b2ff523002fa07cca321f93e97766ed7c6",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/GA.8279996629f9ac5e.json",
+      "id": "geography/state/GA",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 5799,
+      "contentDigest": "70d1fab23da03973ccb10ce6617a3612ab80f22aa48868d7a396f382d28b0766",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/IL.70d1fab23da03973.json",
+      "id": "geography/state/IL",
+      "publicationState": "public-static",
+      "recordCount": 22,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 2925,
+      "contentDigest": "2ae30fb6a63f1ac5e3c7fa4c206b5b57bc44ea7513f6df3a64432b6d84984a16",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/IN.2ae30fb6a63f1ac5.json",
+      "id": "geography/state/IN",
+      "publicationState": "public-static",
+      "recordCount": 11,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 676,
+      "contentDigest": "b561ca6d4f4baddc40e270e8ec593adb1aff547575787446c64cca663dcd3a32",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/MA.b561ca6d4f4baddc.json",
+      "id": "geography/state/MA",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 680,
+      "contentDigest": "fe8fce11d78dc1cdcf7ac0725e477f0ce471189cf6a29bed175db36bed90eb37",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/NY.fe8fce11d78dc1cd.json",
+      "id": "geography/state/NY",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 1160,
+      "contentDigest": "6cab28625664803218a1dbe410661fe1026565c24e928894b318c6895677c631",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/TX.6cab286256648032.json",
+      "id": "geography/state/TX",
+      "publicationState": "public-static",
+      "recordCount": 4,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 678,
+      "contentDigest": "5e7e9cbae3fd852cdb99eb756c429d847800f89ab8b50b9684c40d9ce5e71985",
+      "datasetIds": [
+        "geographyRelationships"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/geography/state/WA.5e7e9cbae3fd852c.json",
+      "id": "geography/state/WA",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "hud-usps-crosswalk"
+      ]
+    },
+    {
+      "byteLength": 1173,
+      "contentDigest": "89efc15b03fd2445ea3f3f475e371b24be144eee507ae309769a00131b37993b",
+      "datasetIds": [
+        "marketReports",
+        "marketObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/market/reports/mmn-1089.89efc15b03fd2445.json",
+      "id": "market/reports/mmn-1089",
+      "publicationState": "public-static",
+      "recordCount": 2,
+      "sourceIds": [
+        "usda-mymarketnews"
+      ]
+    },
+    {
+      "byteLength": 5452,
+      "contentDigest": "e0a218410064c11882dcb8a122657b674058936ea07d9977f04c8df030c4d5fb",
+      "datasetIds": [
+        "marketReports",
+        "marketObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/market/reports/mmn-1427.e0a218410064c118.json",
+      "id": "market/reports/mmn-1427",
+      "publicationState": "public-static",
+      "recordCount": 11,
+      "sourceIds": [
+        "usda-mymarketnews"
+      ]
+    },
+    {
+      "byteLength": 669,
+      "contentDigest": "0be7bb9e7cd57c3b6fc0a49f04b57b2e1e6456c556ab50279dc4355573ef6606",
+      "datasetIds": [
+        "marketReports",
+        "marketObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/market/reports/mmn-1655.0be7bb9e7cd57c3b.json",
+      "id": "market/reports/mmn-1655",
+      "publicationState": "public-static",
+      "recordCount": 1,
+      "sourceIds": [
+        "usda-mymarketnews"
+      ]
+    },
+    {
+      "byteLength": 652,
+      "contentDigest": "73dc4e91fdcbbc60c9dda6756bd4e873349b169f0d1c151f853d884ac423be63",
+      "datasetIds": [
+        "marketReports",
+        "marketObservations"
+      ],
+      "href": "/data/h32-national-foundation-2026-07-24-r6/market/reports/mmn-1662.73dc4e91fdcbbc60.json",
+      "id": "market/reports/mmn-1662",
+      "publicationState": "public-static",
+      "recordCount": 1,
+      "sourceIds": [
+        "usda-mymarketnews"
+      ]
+    }
+  ],
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "schemaVersion": "1.0.0",
+  "sourceManifests": [
+    {
+      "partitions": [
+        "energy/electricity/AK",
+        "energy/electricity/AL",
+        "energy/electricity/AR",
+        "energy/electricity/AZ",
+        "energy/electricity/CA",
+        "energy/electricity/CO",
+        "energy/electricity/CT",
+        "energy/electricity/DC",
+        "energy/electricity/DE",
+        "energy/electricity/ENC",
+        "energy/electricity/ESC",
+        "energy/electricity/FL",
+        "energy/electricity/GA",
+        "energy/electricity/HI",
+        "energy/electricity/IA",
+        "energy/electricity/ID",
+        "energy/electricity/IL",
+        "energy/electricity/IN",
+        "energy/electricity/KS",
+        "energy/electricity/KY",
+        "energy/electricity/LA",
+        "energy/electricity/MA",
+        "energy/electricity/MAT",
+        "energy/electricity/MD",
+        "energy/electricity/ME",
+        "energy/electricity/MI",
+        "energy/electricity/MN",
+        "energy/electricity/MO",
+        "energy/electricity/MS",
+        "energy/electricity/MT",
+        "energy/electricity/MTN",
+        "energy/electricity/NC",
+        "energy/electricity/ND",
+        "energy/electricity/NE",
+        "energy/electricity/NEW",
+        "energy/electricity/NH",
+        "energy/electricity/NJ",
+        "energy/electricity/NM",
+        "energy/electricity/NV",
+        "energy/electricity/NY",
+        "energy/electricity/OH",
+        "energy/electricity/OK",
+        "energy/electricity/OR",
+        "energy/electricity/PA",
+        "energy/electricity/PACC",
+        "energy/electricity/PACN",
+        "energy/electricity/RI",
+        "energy/electricity/SAT",
+        "energy/electricity/SC",
+        "energy/electricity/SD",
+        "energy/electricity/TN",
+        "energy/electricity/TX",
+        "energy/electricity/US",
+        "energy/electricity/UT",
+        "energy/electricity/VA",
+        "energy/electricity/VT",
+        "energy/electricity/WA",
+        "energy/electricity/WI",
+        "energy/electricity/WNC",
+        "energy/electricity/WSC",
+        "energy/electricity/WV",
+        "energy/electricity/WY"
+      ],
+      "publicRecordCount": 1798,
+      "publicationState": "public-static",
+      "sourceId": "eia-residential-electricity"
+    },
+    {
+      "partitions": [
+        "energy/natural-gas/AK",
+        "energy/natural-gas/AL",
+        "energy/natural-gas/AR",
+        "energy/natural-gas/AZ",
+        "energy/natural-gas/CA",
+        "energy/natural-gas/CO",
+        "energy/natural-gas/CT",
+        "energy/natural-gas/DC",
+        "energy/natural-gas/DE",
+        "energy/natural-gas/FL",
+        "energy/natural-gas/GA",
+        "energy/natural-gas/HI",
+        "energy/natural-gas/IA",
+        "energy/natural-gas/ID",
+        "energy/natural-gas/IL",
+        "energy/natural-gas/IN",
+        "energy/natural-gas/KS",
+        "energy/natural-gas/KY",
+        "energy/natural-gas/LA",
+        "energy/natural-gas/MA",
+        "energy/natural-gas/MD",
+        "energy/natural-gas/ME",
+        "energy/natural-gas/MI",
+        "energy/natural-gas/MN",
+        "energy/natural-gas/MO",
+        "energy/natural-gas/MS",
+        "energy/natural-gas/MT",
+        "energy/natural-gas/NC",
+        "energy/natural-gas/ND",
+        "energy/natural-gas/NE",
+        "energy/natural-gas/NH",
+        "energy/natural-gas/NJ",
+        "energy/natural-gas/NM",
+        "energy/natural-gas/NV",
+        "energy/natural-gas/NY",
+        "energy/natural-gas/OH",
+        "energy/natural-gas/OK",
+        "energy/natural-gas/OR",
+        "energy/natural-gas/PA",
+        "energy/natural-gas/RI",
+        "energy/natural-gas/SC",
+        "energy/natural-gas/SD",
+        "energy/natural-gas/TN",
+        "energy/natural-gas/TX",
+        "energy/natural-gas/US",
+        "energy/natural-gas/UT",
+        "energy/natural-gas/VA",
+        "energy/natural-gas/VT",
+        "energy/natural-gas/WA",
+        "energy/natural-gas/WI",
+        "energy/natural-gas/WV",
+        "energy/natural-gas/WY"
+      ],
+      "publicRecordCount": 1429,
+      "publicationState": "public-static",
+      "sourceId": "eia-residential-natural-gas"
+    },
+    {
+      "partitions": [
+        "energy/gasoline/CA",
+        "energy/gasoline/CO",
+        "energy/gasoline/FL",
+        "energy/gasoline/MA",
+        "energy/gasoline/MN",
+        "energy/gasoline/NY",
+        "energy/gasoline/OH",
+        "energy/gasoline/R10",
+        "energy/gasoline/R1X",
+        "energy/gasoline/R1Y",
+        "energy/gasoline/R1Z",
+        "energy/gasoline/R20",
+        "energy/gasoline/R30",
+        "energy/gasoline/R40",
+        "energy/gasoline/R50",
+        "energy/gasoline/R5XCA",
+        "energy/gasoline/TX",
+        "energy/gasoline/US",
+        "energy/gasoline/WA",
+        "energy/gasoline/Y05LA",
+        "energy/gasoline/Y05SF",
+        "energy/gasoline/Y35NY",
+        "energy/gasoline/Y44HO",
+        "energy/gasoline/Y48SE",
+        "energy/gasoline/YBOS",
+        "energy/gasoline/YCLE",
+        "energy/gasoline/YDEN",
+        "energy/gasoline/YMIA",
+        "energy/gasoline/YORD"
+      ],
+      "publicRecordCount": 1537,
+      "publicationState": "public-static",
+      "sourceId": "eia-weekly-gasoline"
+    },
+    {
+      "partitions": [
+        "geography/state/AZ",
+        "geography/state/CA",
+        "geography/state/CO",
+        "geography/state/DC",
+        "geography/state/FL",
+        "geography/state/GA",
+        "geography/state/IL",
+        "geography/state/IN",
+        "geography/state/MA",
+        "geography/state/NY",
+        "geography/state/TX",
+        "geography/state/WA"
+      ],
+      "publicRecordCount": 55,
+      "publicationState": "public-static",
+      "sourceId": "hud-usps-crosswalk"
+    },
+    {
+      "partitions": [
+        "food/fdc/core-01"
+      ],
+      "publicRecordCount": 517,
+      "publicationState": "public-static",
+      "sourceId": "usda-fooddata-central"
+    },
+    {
+      "partitions": [
+        "market/reports/mmn-1089",
+        "market/reports/mmn-1427",
+        "market/reports/mmn-1655",
+        "market/reports/mmn-1662"
+      ],
+      "publicRecordCount": 15,
+      "publicationState": "public-static",
+      "sourceId": "usda-mymarketnews"
+    },
+    {
+      "partitions": [
+        "agriculture/corn/ALABAMA",
+        "agriculture/corn/ARIZONA",
+        "agriculture/corn/ARKANSAS",
+        "agriculture/corn/CALIFORNIA",
+        "agriculture/corn/COLORADO",
+        "agriculture/corn/DELAWARE",
+        "agriculture/corn/FLORIDA",
+        "agriculture/corn/GEORGIA",
+        "agriculture/corn/IDAHO",
+        "agriculture/corn/ILLINOIS",
+        "agriculture/corn/INDIANA",
+        "agriculture/corn/IOWA",
+        "agriculture/corn/KANSAS",
+        "agriculture/corn/KENTUCKY",
+        "agriculture/corn/LOUISIANA",
+        "agriculture/corn/MARYLAND",
+        "agriculture/corn/MICHIGAN",
+        "agriculture/corn/MINNESOTA",
+        "agriculture/corn/MISSISSIPPI",
+        "agriculture/corn/MISSOURI",
+        "agriculture/corn/MONTANA",
+        "agriculture/corn/NEBRASKA",
+        "agriculture/corn/NEW JERSEY",
+        "agriculture/corn/NEW MEXICO",
+        "agriculture/corn/NEW YORK",
+        "agriculture/corn/NORTH CAROLINA",
+        "agriculture/corn/NORTH DAKOTA",
+        "agriculture/corn/OHIO",
+        "agriculture/corn/OKLAHOMA",
+        "agriculture/corn/OREGON",
+        "agriculture/corn/OTHER STATES",
+        "agriculture/corn/PENNSYLVANIA",
+        "agriculture/corn/SOUTH CAROLINA",
+        "agriculture/corn/SOUTH DAKOTA",
+        "agriculture/corn/TENNESSEE",
+        "agriculture/corn/TEXAS",
+        "agriculture/corn/US TOTAL",
+        "agriculture/corn/UTAH",
+        "agriculture/corn/VIRGINIA",
+        "agriculture/corn/WASHINGTON",
+        "agriculture/corn/WEST VIRGINIA",
+        "agriculture/corn/WISCONSIN",
+        "agriculture/corn/WYOMING",
+        "agriculture/oats/ARKANSAS",
+        "agriculture/oats/CALIFORNIA",
+        "agriculture/oats/GEORGIA",
+        "agriculture/oats/IDAHO",
+        "agriculture/oats/ILLINOIS",
+        "agriculture/oats/IOWA",
+        "agriculture/oats/KANSAS",
+        "agriculture/oats/MAINE",
+        "agriculture/oats/MICHIGAN",
+        "agriculture/oats/MINNESOTA",
+        "agriculture/oats/MISSOURI",
+        "agriculture/oats/MONTANA",
+        "agriculture/oats/NEBRASKA",
+        "agriculture/oats/NEW YORK",
+        "agriculture/oats/NORTH CAROLINA",
+        "agriculture/oats/NORTH DAKOTA",
+        "agriculture/oats/OHIO",
+        "agriculture/oats/OKLAHOMA",
+        "agriculture/oats/OREGON",
+        "agriculture/oats/OTHER STATES",
+        "agriculture/oats/PENNSYLVANIA",
+        "agriculture/oats/SOUTH DAKOTA",
+        "agriculture/oats/TEXAS",
+        "agriculture/oats/US TOTAL",
+        "agriculture/oats/WISCONSIN",
+        "agriculture/potatoes/CALIFORNIA",
+        "agriculture/potatoes/COLORADO",
+        "agriculture/potatoes/FLORIDA",
+        "agriculture/potatoes/IDAHO",
+        "agriculture/potatoes/MAINE",
+        "agriculture/potatoes/MICHIGAN",
+        "agriculture/potatoes/MINNESOTA",
+        "agriculture/potatoes/NEBRASKA",
+        "agriculture/potatoes/NORTH DAKOTA",
+        "agriculture/potatoes/OREGON",
+        "agriculture/potatoes/OTHER STATES",
+        "agriculture/potatoes/TEXAS",
+        "agriculture/potatoes/US TOTAL",
+        "agriculture/potatoes/WASHINGTON",
+        "agriculture/potatoes/WISCONSIN",
+        "agriculture/rice/ARKANSAS",
+        "agriculture/rice/CALIFORNIA",
+        "agriculture/rice/LOUISIANA",
+        "agriculture/rice/MISSISSIPPI",
+        "agriculture/rice/MISSOURI",
+        "agriculture/rice/OTHER STATES",
+        "agriculture/rice/TEXAS",
+        "agriculture/rice/US TOTAL",
+        "agriculture/soybeans/ALABAMA",
+        "agriculture/soybeans/ARKANSAS",
+        "agriculture/soybeans/DELAWARE",
+        "agriculture/soybeans/GEORGIA",
+        "agriculture/soybeans/ILLINOIS",
+        "agriculture/soybeans/INDIANA",
+        "agriculture/soybeans/IOWA",
+        "agriculture/soybeans/KANSAS",
+        "agriculture/soybeans/KENTUCKY",
+        "agriculture/soybeans/LOUISIANA",
+        "agriculture/soybeans/MARYLAND",
+        "agriculture/soybeans/MICHIGAN",
+        "agriculture/soybeans/MINNESOTA",
+        "agriculture/soybeans/MISSISSIPPI",
+        "agriculture/soybeans/MISSOURI",
+        "agriculture/soybeans/NEBRASKA",
+        "agriculture/soybeans/NEW JERSEY",
+        "agriculture/soybeans/NEW YORK",
+        "agriculture/soybeans/NORTH CAROLINA",
+        "agriculture/soybeans/NORTH DAKOTA",
+        "agriculture/soybeans/OHIO",
+        "agriculture/soybeans/OKLAHOMA",
+        "agriculture/soybeans/OTHER STATES",
+        "agriculture/soybeans/PENNSYLVANIA",
+        "agriculture/soybeans/SOUTH CAROLINA",
+        "agriculture/soybeans/SOUTH DAKOTA",
+        "agriculture/soybeans/TENNESSEE",
+        "agriculture/soybeans/TEXAS",
+        "agriculture/soybeans/US TOTAL",
+        "agriculture/soybeans/VIRGINIA",
+        "agriculture/soybeans/WISCONSIN",
+        "agriculture/wheat/ALABAMA",
+        "agriculture/wheat/ARIZONA",
+        "agriculture/wheat/ARKANSAS",
+        "agriculture/wheat/CALIFORNIA",
+        "agriculture/wheat/COLORADO",
+        "agriculture/wheat/DELAWARE",
+        "agriculture/wheat/GEORGIA",
+        "agriculture/wheat/IDAHO",
+        "agriculture/wheat/ILLINOIS",
+        "agriculture/wheat/INDIANA",
+        "agriculture/wheat/KANSAS",
+        "agriculture/wheat/KENTUCKY",
+        "agriculture/wheat/MARYLAND",
+        "agriculture/wheat/MICHIGAN",
+        "agriculture/wheat/MINNESOTA",
+        "agriculture/wheat/MISSISSIPPI",
+        "agriculture/wheat/MISSOURI",
+        "agriculture/wheat/MONTANA",
+        "agriculture/wheat/NEBRASKA",
+        "agriculture/wheat/NEW JERSEY",
+        "agriculture/wheat/NEW MEXICO",
+        "agriculture/wheat/NEW YORK",
+        "agriculture/wheat/NORTH CAROLINA",
+        "agriculture/wheat/NORTH DAKOTA",
+        "agriculture/wheat/OHIO",
+        "agriculture/wheat/OKLAHOMA",
+        "agriculture/wheat/OREGON",
+        "agriculture/wheat/PENNSYLVANIA",
+        "agriculture/wheat/SOUTH CAROLINA",
+        "agriculture/wheat/SOUTH DAKOTA",
+        "agriculture/wheat/TENNESSEE",
+        "agriculture/wheat/TEXAS",
+        "agriculture/wheat/US TOTAL",
+        "agriculture/wheat/UTAH",
+        "agriculture/wheat/VIRGINIA",
+        "agriculture/wheat/WASHINGTON",
+        "agriculture/wheat/WISCONSIN",
+        "agriculture/wheat/WYOMING"
+      ],
+      "publicRecordCount": 1672,
+      "publicationState": "public-static",
+      "sourceId": "usda-nass-quickstats"
+    }
+  ]
+}

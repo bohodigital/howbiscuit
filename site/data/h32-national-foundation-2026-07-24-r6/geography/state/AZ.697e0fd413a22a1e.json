@@ -1,0 +1,30 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "PHOENIX",
+      "geographyId": "38060",
+      "geographyType": "cbsa",
+      "id": "hud-85004-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "AZ",
+      "zip": "85004"
+    },
+    {
+      "city": "PHOENIX",
+      "geographyId": "04013",
+      "geographyType": "county",
+      "id": "hud-85004-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "AZ",
+      "zip": "85004"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

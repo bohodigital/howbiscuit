@@ -1,0 +1,16 @@
+{
+  "name": "howbiscuit-public",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Verified static public distribution for How Biscuit",
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/site-contract.mjs verify",
+    "build": "node scripts/site-contract.mjs build",
+    "test": "node scripts/site-contract.mjs test",
+    "inventory": "node scripts/site-contract.mjs inventory"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

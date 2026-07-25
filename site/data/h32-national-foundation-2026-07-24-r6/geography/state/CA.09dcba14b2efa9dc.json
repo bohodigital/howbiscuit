@@ -1,0 +1,30 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "LOS ANGELES",
+      "geographyId": "31080",
+      "geographyType": "cbsa",
+      "id": "hud-90012-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "CA",
+      "zip": "90012"
+    },
+    {
+      "city": "LOS ANGELES",
+      "geographyId": "06037",
+      "geographyType": "county",
+      "id": "hud-90012-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "CA",
+      "zip": "90012"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

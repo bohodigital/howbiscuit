@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "measurement": "observed-process-resource-usage",
+  "durationSeconds": 3.394399875,
+  "peakMemoryBytes": 522928128,
+  "measuredCommands": [
+    {
+      "command": "node_modules/astro/bin/astro.mjs",
+      "peakMemoryBytes": 522928128
+    },
+    {
+      "command": "node_modules/pagefind/lib/runner/bin.cjs",
+      "peakMemoryBytes": 44023808
+    }
+  ],
+  "generatedAt": "2026-07-25T22:06:24.707Z"
+}

@@ -1,0 +1,70 @@
+{
+  "datasetIds": [
+    "agriculturalStatistics"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "corn",
+      "geography": "MISSOURI",
+      "id": "nass-634e4c0698a181a1f13e4b6b",
+      "loadTime": "2025-02-26 15:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "CORN, GRAIN - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2025-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 2582946000,
+      "year": 2023
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "corn",
+      "geography": "MISSOURI",
+      "id": "nass-9d61252608e79e36779b0c99",
+      "loadTime": "2026-02-26 15:00:00.000",
+      "period": "2024",
+      "referencePeriod": "YEAR",
+      "shortDescription": "CORN, GRAIN - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2026-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 2568680000,
+      "year": 2024
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "corn",
+      "geography": "MISSOURI",
+      "id": "nass-a4d2b98d68f349871ad69cb1",
+      "loadTime": "2026-02-26 15:00:00.000",
+      "period": "2025",
+      "referencePeriod": "YEAR",
+      "shortDescription": "CORN, GRAIN - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2026-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 2809965000,
+      "year": 2025
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

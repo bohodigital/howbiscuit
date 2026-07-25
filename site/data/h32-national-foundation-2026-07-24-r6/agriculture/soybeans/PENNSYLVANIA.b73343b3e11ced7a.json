@@ -1,0 +1,70 @@
+{
+  "datasetIds": [
+    "agriculturalStatistics"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "soybeans",
+      "geography": "PENNSYLVANIA",
+      "id": "nass-2e89d5c4c0821c0cb427dfd7",
+      "loadTime": "2026-02-26 15:00:00.000",
+      "period": "2024",
+      "referencePeriod": "YEAR",
+      "shortDescription": "SOYBEANS - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2026-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 279000000,
+      "year": 2024
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "soybeans",
+      "geography": "PENNSYLVANIA",
+      "id": "nass-7078fcee8e288456faa8be02",
+      "loadTime": "2026-02-26 15:00:00.000",
+      "period": "2025",
+      "referencePeriod": "YEAR",
+      "shortDescription": "SOYBEANS - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2026-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 253308000,
+      "year": 2025
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "soybeans",
+      "geography": "PENNSYLVANIA",
+      "id": "nass-cf8a3449834a694097c2bca9",
+      "loadTime": "2025-02-26 15:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "SOYBEANS - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2025-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 329000000,
+      "year": 2023
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

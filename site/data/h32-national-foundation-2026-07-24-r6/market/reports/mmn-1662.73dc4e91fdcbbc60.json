@@ -1,0 +1,22 @@
+{
+  "datasetIds": [
+    "marketReports",
+    "marketObservations"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "id": "mmn-1662",
+      "marketType": "Shipping point trends",
+      "narrative": "Volumes and first-handler F.O.B. prices describe shipping-point markets, not retail shelf conditions.",
+      "publicationDate": "2026-07-20",
+      "reportDate": "2026-07-20",
+      "sourceId": "usda-mymarketnews",
+      "status": "final",
+      "title": "National Shipping Point Trends Report",
+      "unitBasis": "First-handler F.O.B."
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

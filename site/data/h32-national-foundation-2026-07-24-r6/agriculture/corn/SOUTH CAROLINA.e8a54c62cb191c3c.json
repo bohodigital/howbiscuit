@@ -1,0 +1,70 @@
+{
+  "datasetIds": [
+    "agriculturalStatistics"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "corn",
+      "geography": "SOUTH CAROLINA",
+      "id": "nass-093b56a355166106bcde2d83",
+      "loadTime": "2026-02-26 15:00:00.000",
+      "period": "2025",
+      "referencePeriod": "YEAR",
+      "shortDescription": "CORN, GRAIN - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2026-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 239982000,
+      "year": 2025
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "corn",
+      "geography": "SOUTH CAROLINA",
+      "id": "nass-34f4c91c3bbc6ae0652aeeb9",
+      "loadTime": "2025-02-26 15:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "CORN, GRAIN - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2025-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 286125000,
+      "year": 2023
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "corn",
+      "geography": "SOUTH CAROLINA",
+      "id": "nass-fc3d634eb5fba018a7461122",
+      "loadTime": "2026-02-26 15:00:00.000",
+      "period": "2024",
+      "referencePeriod": "YEAR",
+      "shortDescription": "CORN, GRAIN - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2026-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 141703000,
+      "year": 2024
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

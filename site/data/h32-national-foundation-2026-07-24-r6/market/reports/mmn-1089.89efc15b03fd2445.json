@@ -1,0 +1,37 @@
+{
+  "datasetIds": [
+    "marketReports",
+    "marketObservations"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "id": "mmn-1089",
+      "marketType": "Point of Sale - Dairy",
+      "narrative": "Cream availability was lighter in parts of the Central region; the published range describes first sales F.O.B. and is not a retail shelf price.",
+      "publicationDate": "2026-07-22",
+      "reportDate": "2026-07-20",
+      "sourceId": "usda-mymarketnews",
+      "status": "final",
+      "title": "Butter - Central U.S.",
+      "unitBasis": "Basis pricing, dollars per pound"
+    },
+    {
+      "changePercent": null,
+      "classification": "wholesale",
+      "commodity": "Butter",
+      "geography": "Central U.S.",
+      "id": "mmn-1089-2026-07-20",
+      "metric": "Grade AA first-sales basis differential",
+      "publicationDate": "2026-07-22",
+      "reportDate": "2026-07-20",
+      "reportId": "mmn-1089",
+      "sourceId": "usda-mymarketnews",
+      "unitBasis": "Basis pricing, dollars per pound",
+      "valueMax": 0.02,
+      "valueMin": -0.03
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

@@ -1,0 +1,35 @@
+# How Biscuit
+
+> Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.
+
+How Biscuit is an independent practical-guides publication operated by Boho Digital Services.
+This build has no affiliate links, sponsored placements, paid reviews, or product placements.
+
+## Public pages
+
+- [How Biscuit](https://howbiscuit.com/): Practical, evidence-aware guides for home technology, apartments, kitchens, shopping decisions, and useful tools.
+- [About](https://howbiscuit.com/about/): What How Biscuit publishes, who operates it, and how its practical guides are organized.
+- [Affiliate Disclosure](https://howbiscuit.com/affiliate-disclosure/): The current paid-link, sponsorship, review, and product-placement state for How Biscuit.
+- [All Guides](https://howbiscuit.com/articles/): Every published How Biscuit guide and editorial standard, generated from the normalized public-content registry.
+- [How Does Baking Powder Work?](https://howbiscuit.com/articles/how-does-baking-powder-work/): Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.
+- [Why Are Some Answers Better Than Others?](https://howbiscuit.com/articles/why-are-some-answers-better-than-others/): A useful answer addresses the real question, explains its reasoning, shows the next move, and makes the limits of its evidence visible.
+- [Why Salt Melts Ice (and When It Stops Working)](https://howbiscuit.com/articles/why-salt-melts-ice/): A plain-English field guide to freezing-point depression, brine, the limits of rock salt, and the least-wasteful way to de-ice a walk.
+- [Contact](https://howbiscuit.com/contact/): Contact How Biscuit about general questions, sources, product data, rights, attribution, or corrections.
+- [Corrections](https://howbiscuit.com/corrections/): How to report a factual, source, product-data, rights, or attribution concern to How Biscuit.
+- [Editorial Policy](https://howbiscuit.com/editorial-policy/): The publishing standards How Biscuit uses for clarity, evidence, safety, and updates.
+- [Home Tech](https://howbiscuit.com/home-tech/): Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.
+- [Home & Apartment](https://howbiscuit.com/home/): Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.
+- [Kitchen](https://howbiscuit.com/kitchen/): Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.
+- [Privacy](https://howbiscuit.com/privacy/): How How Biscuit uses first-party and Google analytics while keeping the site simple.
+- [Shop Smarter](https://howbiscuit.com/shop/): Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.
+- [Tools](https://howbiscuit.com/tools/): Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.
+- [Agricultural Market Context Browser](https://howbiscuit.com/tools/agricultural-market-context-browser/): Browse selected USDA Market News observations with commodity, geography, period, unit basis, narrative context, and the wholesale boundary kept prominent.
+- [Household Energy Benchmark Explorer](https://howbiscuit.com/tools/household-energy-benchmark-explorer/): Compare approved state and United States residential electricity or natural-gas aggregates by period, with units and limitations kept visible.
+- [U.S. Crop Production Trend Explorer](https://howbiscuit.com/tools/us-crop-production-trend-explorer/): Compare approved national crop production statistics by commodity and year while keeping final, forecast, unit, revision, and suppression states visible.
+- [USDA Staple Food Identity Explorer](https://howbiscuit.com/tools/usda-staple-food-identity-explorer/): Browse approved USDA FoodData Central staple identities and see clearly when complete nutrient records are unavailable rather than filling gaps.
+- [ZIP-to-Metro Relationship Explainer](https://howbiscuit.com/tools/zip-to-metro-relationship-explainer/): Inspect approved HUD ZIP-to-county and ZIP-to-CBSA relationships, including residential weights and honest ambiguity instead of neighborhood guesses.
+
+## Contact and corrections
+
+- Email: hello@howbiscuit.com
+- Corrections: https://howbiscuit.com/corrections/

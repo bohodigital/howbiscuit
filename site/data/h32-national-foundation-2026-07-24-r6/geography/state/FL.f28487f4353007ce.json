@@ -1,0 +1,30 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "MIAMI",
+      "geographyId": "33100",
+      "geographyType": "cbsa",
+      "id": "hud-33130-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "FL",
+      "zip": "33130"
+    },
+    {
+      "city": "MIAMI",
+      "geographyId": "12086",
+      "geographyType": "county",
+      "id": "hud-33130-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "FL",
+      "zip": "33130"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

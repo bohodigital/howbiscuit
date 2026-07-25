@@ -1,0 +1,22 @@
+{
+  "datasetIds": [
+    "marketReports",
+    "marketObservations"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "id": "mmn-1655",
+      "marketType": "Narrative summary",
+      "narrative": "Long- and medium-grain milled rice, second heads, brewers, and byproducts were reported steady in the South and California.",
+      "publicationDate": "2026-07-20",
+      "reportDate": "2026-07-20",
+      "sourceId": "usda-mymarketnews",
+      "status": "final",
+      "title": "National Weekly Rice Summary",
+      "unitBasis": "Qualitative market direction"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

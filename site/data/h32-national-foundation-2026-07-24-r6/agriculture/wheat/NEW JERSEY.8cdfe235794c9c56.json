@@ -1,0 +1,50 @@
+{
+  "datasetIds": [
+    "agriculturalStatistics"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "wheat",
+      "geography": "NEW JERSEY",
+      "id": "nass-2b7e8070ad7584f7ec7ffba5",
+      "loadTime": "2025-02-26 15:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "WHEAT - PRODUCTION, MEASURED IN $",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2025-02-26 15:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "$",
+      "value": 16426000,
+      "year": 2023
+    },
+    {
+      "aggregationLevel": "STATE",
+      "classification": "final",
+      "commodity": "wheat",
+      "geography": "NEW JERSEY",
+      "id": "nass-392c2d1d27f48e325b5c803b",
+      "loadTime": "2024-09-30 12:00:00.000",
+      "period": "2023",
+      "referencePeriod": "YEAR",
+      "shortDescription": "WHEAT - PRODUCTION, MEASURED IN BU",
+      "sourceId": "usda-nass-quickstats",
+      "sourceRevisionAt": "2024-09-30 12:00:00.000",
+      "sourceType": "SURVEY",
+      "statistic": "production",
+      "statisticCategory": "PRODUCTION",
+      "suppressed": false,
+      "unit": "BU",
+      "value": 2624000,
+      "year": 2023
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

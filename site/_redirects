@@ -1,0 +1,12 @@
+/make-do/ /home/ 301
+/cook/ /kitchen/ 301
+/buying-guides/ /shop/ 301
+/research-writing/ /editorial-policy/ 301
+/home-tech/gaming-pcs/ /home-tech/ 301
+/home-tech/laptops/ /home-tech/ 301
+/home-tech/streaming-tvs/ /home-tech/ 301
+/home-tech/wifi-routers/ /home-tech/ 301
+/home-tech/smart-home/ /home-tech/ 301
+/home-tech/privacy-security/ /home-tech/ 301
+/cooking/* /kitchen/ 301
+/make-do-lab/* /home/ 301

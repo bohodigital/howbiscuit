@@ -1,0 +1,120 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "EAST CHICAGO",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46312-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46312"
+    },
+    {
+      "city": "EAST CHICAGO",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46312-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46312"
+    },
+    {
+      "city": "HAMMOND",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46320-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46320"
+    },
+    {
+      "city": "HAMMOND",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46320-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46320"
+    },
+    {
+      "city": "PORTAGE",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46368-cbsa-16980",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46368"
+    },
+    {
+      "city": "PORTAGE",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46368-county-18089",
+      "residentialRatio": 0.000050787201625190454,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46368"
+    },
+    {
+      "city": "PORTAGE",
+      "geographyId": "18127",
+      "geographyType": "county",
+      "id": "hud-46368-county-18127",
+      "residentialRatio": 0.9999492127983748,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46368"
+    },
+    {
+      "city": "GARY",
+      "geographyId": "16980",
+      "geographyType": "cbsa",
+      "id": "hud-46402-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46402"
+    },
+    {
+      "city": "GARY",
+      "geographyId": "18089",
+      "geographyType": "county",
+      "id": "hud-46402-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46402"
+    },
+    {
+      "city": "FORT WAYNE",
+      "geographyId": "23060",
+      "geographyType": "cbsa",
+      "id": "hud-46802-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46802"
+    },
+    {
+      "city": "FORT WAYNE",
+      "geographyId": "18003",
+      "geographyType": "county",
+      "id": "hud-46802-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "IN",
+      "zip": "46802"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

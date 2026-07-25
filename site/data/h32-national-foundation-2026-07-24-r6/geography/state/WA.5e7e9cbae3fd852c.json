@@ -1,0 +1,30 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "SEATTLE",
+      "geographyId": "42660",
+      "geographyType": "cbsa",
+      "id": "hud-98101-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "WA",
+      "zip": "98101"
+    },
+    {
+      "city": "SEATTLE",
+      "geographyId": "53033",
+      "geographyType": "county",
+      "id": "hud-98101-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "WA",
+      "zip": "98101"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}

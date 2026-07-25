@@ -1,0 +1,50 @@
+{
+  "datasetIds": [
+    "geographyRelationships"
+  ],
+  "publicationState": "public-static",
+  "releaseId": "h32-national-foundation-2026-07-24-r6",
+  "rows": [
+    {
+      "city": "DALLAS",
+      "geographyId": "19100",
+      "geographyType": "cbsa",
+      "id": "hud-75201-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "75201"
+    },
+    {
+      "city": "DALLAS",
+      "geographyId": "48113",
+      "geographyType": "county",
+      "id": "hud-75201-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "75201"
+    },
+    {
+      "city": "HOUSTON",
+      "geographyId": "26420",
+      "geographyType": "cbsa",
+      "id": "hud-77002-cbsa",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "77002"
+    },
+    {
+      "city": "HOUSTON",
+      "geographyId": "48201",
+      "geographyType": "county",
+      "id": "hud-77002-county",
+      "residentialRatio": 1,
+      "sourceId": "hud-usps-crosswalk",
+      "state": "TX",
+      "zip": "77002"
+    }
+  ],
+  "schemaVersion": "1.0.0"
+}
