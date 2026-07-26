@@ -1,22 +1,28 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:28b1257b4d7f94a3675e7577ee362dd3c6792c7a1eaffd72d925a68134bff246",
-  "fileCount": 538,
-  "byteCount": 17745651,
-  "htmlRouteCount": 43,
+  "artifactDigest": "sha256:87a9c4bc62a7855f968d05882a8c1075bc73c3c7d0a9e81a10f65cf5e57927cc",
+  "fileCount": 579,
+  "byteCount": 21998265,
+  "htmlRouteCount": 49,
   "routes": [
     "/",
     "/404.html",
     "/about/",
     "/affiliate-disclosure/",
     "/articles/",
+    "/articles/2-4-ghz-vs-5-ghz-wifi/",
+    "/articles/best-place-to-put-wifi-router/",
     "/articles/does-turning-ac-off-save-money/",
     "/articles/fan-vs-air-conditioner-cost/",
+    "/articles/fix-wifi-dead-zones-without-buying-anything/",
     "/articles/home-energy-check-high-summer-bill/",
+    "/articles/home-wifi-dead-zone-checklist/",
     "/articles/how-does-baking-powder-work/",
     "/articles/portable-ac-cost-to-run/",
     "/articles/why-are-some-answers-better-than-others/",
+    "/articles/why-does-my-wifi-keep-disconnecting/",
     "/articles/why-electric-bill-high-summer/",
+    "/articles/why-is-my-wifi-so-slow/",
     "/articles/why-salt-melts-ice/",
     "/articles/window-ac-cost-per-hour/",
     "/contact/",
@@ -57,8 +63,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 18245,
-      "sha256": "sha256:d5b40c0209c26c78c3fbcce7c7a38b0f49444c2e28cca2e286a468a2c90b96cc"
+      "bytes": 19925,
+      "sha256": "sha256:d549c47455298f45334844fe193a6d381087889e61416ff1452ae4f9d538cf0c"
     },
     {
       "path": "_astro/BaseLayout.Dx1DJXA0.css",
@@ -402,13 +408,13 @@
     },
     {
       "path": "about/index.html",
-      "bytes": 20829,
-      "sha256": "sha256:4fdb2a7be1aad818e5e275c753e8e8be6f3274ffd67d249d66e4e45037606fa6"
+      "bytes": 22509,
+      "sha256": "sha256:426e034c5d0e9273d97ae4f5c5e8288d497dd158232d5f730194e3688c743a01"
     },
     {
       "path": "affiliate-disclosure/index.html",
-      "bytes": 20752,
-      "sha256": "sha256:ef905a27ad3307c425f94933c86eea3ea0b7406adf65ffd964e8479849ec1722"
+      "bytes": 22432,
+      "sha256": "sha256:61892ef6a08e0b9bebbc7f1174cbd69c897770ed6cd03c452efb6e554277be0b"
     },
     {
       "path": "analytics-bootstrap.js",
@@ -416,64 +422,94 @@
       "sha256": "sha256:cdac592a97e3bd2cdbb706e590d5503470460d5d4a5dd79e65e2bff9bc62f3af"
     },
     {
+      "path": "articles/2-4-ghz-vs-5-ghz-wifi/index.html",
+      "bytes": 41384,
+      "sha256": "sha256:0a042b75ea94a2dc9b6b5ea6e987f26a37f2445d8076fbeee9e86c69021c1fe2"
+    },
+    {
+      "path": "articles/best-place-to-put-wifi-router/index.html",
+      "bytes": 42814,
+      "sha256": "sha256:d8810414389e0cfed7b5f4a3bcf1491ca79e2c6c6ed2534aa89e5d265b62b830"
+    },
+    {
       "path": "articles/does-turning-ac-off-save-money/index.html",
-      "bytes": 43632,
-      "sha256": "sha256:a4b2dd0d26113f69b9c4782608fbbcd0562c472868405adc59943e5864d601f0"
+      "bytes": 45312,
+      "sha256": "sha256:9005124dc660edf255d473b8c8ff20e1d734769c669cec3f5ebc956ce8f7362f"
     },
     {
       "path": "articles/fan-vs-air-conditioner-cost/index.html",
-      "bytes": 41460,
-      "sha256": "sha256:384e64d108bb1f53dcc1bdbe4a30d3597ce9b72d28ae07699a398cc0b3d7f8ef"
+      "bytes": 43140,
+      "sha256": "sha256:6a38959788ce82c613eb308b47e7591e9322a9ec787defb704aa6c5f28eb92d0"
+    },
+    {
+      "path": "articles/fix-wifi-dead-zones-without-buying-anything/index.html",
+      "bytes": 41554,
+      "sha256": "sha256:d02e37827c1b509da057d90ac1dad2e6e5a32365189db300b546bb0ed230c14e"
     },
     {
       "path": "articles/home-energy-check-high-summer-bill/index.html",
-      "bytes": 56861,
-      "sha256": "sha256:8fddf2c7108d01304f6c45803f826167f31b9d25a2057105d3c1b042087eea3b"
+      "bytes": 58541,
+      "sha256": "sha256:75b1d0871ab5991041a413fc43b75e83ca456b6965e8cf18ca3a8ef3a6738103"
+    },
+    {
+      "path": "articles/home-wifi-dead-zone-checklist/index.html",
+      "bytes": 47565,
+      "sha256": "sha256:d209ba5d012f4aa603b6275eebd05926034dd889fc2b66523eab38b1ca07b8fc"
     },
     {
       "path": "articles/how-does-baking-powder-work/index.html",
-      "bytes": 30413,
-      "sha256": "sha256:e346fcc38f2f3a5446a64909d26845ebaeea4c06d466876eddf3d99c265b9b0a"
+      "bytes": 32093,
+      "sha256": "sha256:90546adf3983561e09bb1d2631bccf555a70fdca7f780038bef0bc7c717f0835"
     },
     {
       "path": "articles/index.html",
-      "bytes": 26408,
-      "sha256": "sha256:e8935ce1413f34871a20d436289a909fae1bb19ad29edd0be41221f815143f29"
+      "bytes": 31860,
+      "sha256": "sha256:e10c7589af958b91b55494bc046d99def866b86586ebba253e927922e86fd2f9"
     },
     {
       "path": "articles/portable-ac-cost-to-run/index.html",
-      "bytes": 43772,
-      "sha256": "sha256:9fdaaed8dabcaf3385dac647abfed7c17660a570edc39b6878d0ec8418cfeba7"
+      "bytes": 45452,
+      "sha256": "sha256:87f6f1eef11e7be1c0ced15d063594622679d379d008daac6450cf0e51e1f2a4"
     },
     {
       "path": "articles/why-are-some-answers-better-than-others/index.html",
-      "bytes": 29179,
-      "sha256": "sha256:571d0bed92105eae32a1c325a691564a3ba4b3b131300eafcb4ef08deddb690a"
+      "bytes": 30859,
+      "sha256": "sha256:620c808fdacb9038952b7331e751f5bc1e90dc958975899a5b504c199a1b709c"
+    },
+    {
+      "path": "articles/why-does-my-wifi-keep-disconnecting/index.html",
+      "bytes": 47346,
+      "sha256": "sha256:6cb392fbd602efd2ead6a296a8e9b84db3390fb3e7c748e97d30e920602edc4d"
     },
     {
       "path": "articles/why-electric-bill-high-summer/index.html",
-      "bytes": 49778,
-      "sha256": "sha256:65f25dc8d50d3aba33341129765c90f28db8fd1222ed12d7a36d7d9fc4c619bf"
+      "bytes": 51458,
+      "sha256": "sha256:f525b69e961af9e4731f45ade0e3387777175eb5c4e34c1dea4d65b3cd3c23e5"
+    },
+    {
+      "path": "articles/why-is-my-wifi-so-slow/index.html",
+      "bytes": 50271,
+      "sha256": "sha256:e53d96264f7d61af99ec2a50fb719fd0f87b48fb75b9b04d69531be044de8a90"
     },
     {
       "path": "articles/why-salt-melts-ice/index.html",
-      "bytes": 46033,
-      "sha256": "sha256:eae0bc2226289f0752c9f352cd5ef626016c468eacc97066ab53d7b3703bb8f3"
+      "bytes": 47714,
+      "sha256": "sha256:1219b911a267f76c447576ed9944132586a1b2f79f24d27a61ed514732d0b237"
     },
     {
       "path": "articles/window-ac-cost-per-hour/index.html",
-      "bytes": 45138,
-      "sha256": "sha256:0ac7c86eb4889f053ab175d2795a19826dbcdc4cdd10b46ec5003fc0f9fceaa8"
+      "bytes": 46818,
+      "sha256": "sha256:d6a535687062a61eb447e6dc01673d05ee8aeb08d8e783c0c746d9c1c63c6116"
     },
     {
       "path": "contact/index.html",
-      "bytes": 20804,
-      "sha256": "sha256:79c371586ff74581ff2cf6bab0d20966e361095886ad25b321b5ef6776a682c6"
+      "bytes": 22484,
+      "sha256": "sha256:cc444f5aad05f84895261c7bf0e9ce517ccaea5f271e3b5e87bddd42fbb43cca"
     },
     {
       "path": "corrections/index.html",
-      "bytes": 20757,
-      "sha256": "sha256:98dd68482bfe76e93e7bb9b5242d0604ed56e90d43d90ad451f7cbe5e1690898"
+      "bytes": 22437,
+      "sha256": "sha256:adcdc0f63663ee0bb5367f979cf34c19300eaf68c58d86027c0d336747a76e56"
     },
     {
       "path": "data/h31-content-tools-2026-07-24-r2/tools/agricultural-market-context-browser/532f4cf5d1ed984849d6bab96f2b034a60b893a42aefcb620abd64cf99462a29.json",
@@ -2151,9 +2187,14 @@
       "sha256": "sha256:e68f4a0848ce87ae304162f2c63db08ad928a40f9a10fc5e3fd440130a7cd4e2"
     },
     {
+      "path": "downloads/home-wifi-dead-zone-checklist.pdf",
+      "bytes": 6612,
+      "sha256": "sha256:7bba2728bee21269182e20be8fdc0fd0b0db636b9d1f873049a6336195202d87"
+    },
+    {
       "path": "editorial-policy/index.html",
-      "bytes": 21342,
-      "sha256": "sha256:4f92a33f571bbb614a22bf782088776e0acaa9c380ebd175ff520edfe078985a"
+      "bytes": 23022,
+      "sha256": "sha256:0904989a54a1f0e26b3d7231a8ee7a9cc98c321e0917a6f2c8d49244df1a1548"
     },
     {
       "path": "favicon.svg",
@@ -2162,38 +2203,58 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 4423,
-      "sha256": "sha256:6fac93fe6c453fcd1e1a08a7ccb1bc9a80981e1b4287145ec6736a114329abc9"
+      "bytes": 7257,
+      "sha256": "sha256:01b695f725126f938c332a74cd66d66600d54e20ffa32cb58c80418eeb0085ee"
     },
     {
       "path": "h3-workers/events.js",
-      "bytes": 551988,
-      "sha256": "sha256:3618288fdaf5b2829d8d57d1a24646072a7b514e21111575de4e6c5f51d27b95"
+      "bytes": 555060,
+      "sha256": "sha256:95395580a03c354039ba25f3c820280bb0289e6995b8c475e08d0b220aabad5b"
     },
     {
       "path": "h3-workers/gas.js",
-      "bytes": 566755,
-      "sha256": "sha256:ff003c91fe89dfe074b9b94166d33e95ca560ccad1f935c4ae328b4bef07775d"
+      "bytes": 569827,
+      "sha256": "sha256:c8b1fa7a630a25e75bac566816df19c118f93044665b1bc63a04924b7791f04e"
     },
     {
       "path": "h3-workers/location.js",
-      "bytes": 554011,
-      "sha256": "sha256:97d12a210c66ac1e1e88ddc72a409488ce77ff3d351b980c0b0ba22345833045"
+      "bytes": 557083,
+      "sha256": "sha256:5b2bfd43b460ec2585b03efeb9061629497f9e42e990a7948fd3a4c2af79a6ac"
     },
     {
       "path": "h3-workers/offers.js",
-      "bytes": 572244,
-      "sha256": "sha256:5f84fe3bead9f522118fa6674ac2de8d1a6440f7d017116db994b6bedd873e6f"
+      "bytes": 575316,
+      "sha256": "sha256:98c76364675b0e67e302e3546a7f2c5e69b2c2dc71108c356c2fd70d9a7f514a"
     },
     {
       "path": "home/index.html",
-      "bytes": 31482,
-      "sha256": "sha256:dede1bb69d0f21ae4660c817dbf6ba6afdbb27e4c03f89623157a13f558adcf8"
+      "bytes": 33162,
+      "sha256": "sha256:1d256825883daa639416dc7ba77f73794927ce79afd58346e2a49618c4ccc5d2"
     },
     {
       "path": "home-tech/index.html",
-      "bytes": 22505,
-      "sha256": "sha256:522ff05b705b377be9e311cc57ddb17d0e4fbaa411cbfaa6e9549376d7a1f279"
+      "bytes": 32261,
+      "sha256": "sha256:71600ecab7b758c48107da98ea3c7d9aca8e04da8ffa22d8f36573228629ce0f"
+    },
+    {
+      "path": "images/articles/2-4-ghz-vs-5-ghz-wifi/photo-wireless-access-point.jpg",
+      "bytes": 338955,
+      "sha256": "sha256:761433a7f4556236013c65bfe3e7b9e29deb15dcd1c9e479e975fe482f86b2bc"
+    },
+    {
+      "path": "images/articles/2-4-ghz-vs-5-ghz-wifi/photo-wireless-router.jpg",
+      "bytes": 268662,
+      "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
+    },
+    {
+      "path": "images/articles/best-place-to-put-wifi-router/photo-wireless-access-point.jpg",
+      "bytes": 338955,
+      "sha256": "sha256:761433a7f4556236013c65bfe3e7b9e29deb15dcd1c9e479e975fe482f86b2bc"
+    },
+    {
+      "path": "images/articles/best-place-to-put-wifi-router/photo-wireless-router.jpg",
+      "bytes": 268662,
+      "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
     },
     {
       "path": "images/articles/does-turning-ac-off-save-money/photo-smart-thermostat.jpg",
@@ -2214,6 +2275,16 @@
       "path": "images/articles/fan-vs-air-conditioner-cost/photo-ceiling-fan.jpg",
       "bytes": 313463,
       "sha256": "sha256:1a978ca4c9479d7f44de78133cc60b06733b2d3616ef2b2f4276ac338b74a783"
+    },
+    {
+      "path": "images/articles/fix-wifi-dead-zones-without-buying-anything/photo-rear-ethernet.jpg",
+      "bytes": 289523,
+      "sha256": "sha256:221089e894244f660f7d992a5a0c86bbc618a789df60a17452f6947429a2ba54"
+    },
+    {
+      "path": "images/articles/fix-wifi-dead-zones-without-buying-anything/photo-wireless-router.jpg",
+      "bytes": 268662,
+      "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
     },
     {
       "path": "images/articles/home-energy-check-high-summer-bill/checklist-preview.jpg",
@@ -2246,6 +2317,26 @@
       "sha256": "sha256:e911309d1998102dfc4f0496512461398be97cb242e3e6350ab237e83d5aba28"
     },
     {
+      "path": "images/articles/home-wifi-dead-zone-checklist/checklist-preview.jpg",
+      "bytes": 89832,
+      "sha256": "sha256:39368d3364bdae44bbc4a3f5d81fa239d62b301dcbbc5e475a260d5b73a68ce0"
+    },
+    {
+      "path": "images/articles/home-wifi-dead-zone-checklist/photo-rear-ethernet.jpg",
+      "bytes": 289523,
+      "sha256": "sha256:221089e894244f660f7d992a5a0c86bbc618a789df60a17452f6947429a2ba54"
+    },
+    {
+      "path": "images/articles/home-wifi-dead-zone-checklist/photo-wireless-access-point.jpg",
+      "bytes": 338955,
+      "sha256": "sha256:761433a7f4556236013c65bfe3e7b9e29deb15dcd1c9e479e975fe482f86b2bc"
+    },
+    {
+      "path": "images/articles/home-wifi-dead-zone-checklist/photo-wireless-router.jpg",
+      "bytes": 268662,
+      "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
+    },
+    {
       "path": "images/articles/portable-ac-cost-to-run/photo-portable-ac-example.jpg",
       "bytes": 230019,
       "sha256": "sha256:e783419030ea3cc057c841598ff14def8172b8816bdba4442b46b75fdf474b81"
@@ -2254,6 +2345,16 @@
       "path": "images/articles/portable-ac-cost-to-run/photo-portable-ac-school.jpg",
       "bytes": 146155,
       "sha256": "sha256:61b422d9e62cac40ca4c6989ac38b16cb8b48fa58802a89302d2ab38f7f6f9bc"
+    },
+    {
+      "path": "images/articles/why-does-my-wifi-keep-disconnecting/photo-linksys-router.jpg",
+      "bytes": 129804,
+      "sha256": "sha256:a4064dc9d58b8bc21acbc3eef24c566fe93497c2acc893a98cf01699b36686cf"
+    },
+    {
+      "path": "images/articles/why-does-my-wifi-keep-disconnecting/photo-rear-ethernet.jpg",
+      "bytes": 289523,
+      "sha256": "sha256:221089e894244f660f7d992a5a0c86bbc618a789df60a17452f6947429a2ba54"
     },
     {
       "path": "images/articles/why-electric-bill-high-summer/photo-dirty-ac-filters.jpg",
@@ -2281,6 +2382,16 @@
       "sha256": "sha256:09598501ba85bf0d8d21e49fbe8da0f005a5d49dc3eb44d348d526780f9ab186"
     },
     {
+      "path": "images/articles/why-is-my-wifi-so-slow/photo-rear-ethernet.jpg",
+      "bytes": 289523,
+      "sha256": "sha256:221089e894244f660f7d992a5a0c86bbc618a789df60a17452f6947429a2ba54"
+    },
+    {
+      "path": "images/articles/why-is-my-wifi-so-slow/photo-wireless-router.jpg",
+      "bytes": 268662,
+      "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
+    },
+    {
       "path": "images/articles/window-ac-cost-per-hour/photo-window-ac-general.jpg",
       "bytes": 243932,
       "sha256": "sha256:630a1cfdb8636bb82a13bed200100786d46dd78e01303ca3582033c11ee7862e"
@@ -2291,79 +2402,99 @@
       "sha256": "sha256:e911309d1998102dfc4f0496512461398be97cb242e3e6350ab237e83d5aba28"
     },
     {
+      "path": "images/diagrams/dead-zone-test-grid.svg",
+      "bytes": 2092,
+      "sha256": "sha256:a3e4cdce1953ea46c2bbc2aa2197638e06e1180abab8d7f2d507d4c22aafaa6a"
+    },
+    {
+      "path": "images/diagrams/router-placement.svg",
+      "bytes": 1713,
+      "sha256": "sha256:0f9684c0a6792b55f3a9cb41ec69409b913d8fcb2c84b63c97d0f9d6318d1497"
+    },
+    {
+      "path": "images/diagrams/wifi-band-tradeoff.svg",
+      "bytes": 1583,
+      "sha256": "sha256:9252d6602a60abee5b9b3f3f5adf380942dc67e1456ac8831ed6cf9070faed9a"
+    },
+    {
+      "path": "images/diagrams/wifi-diagnosis-flow.svg",
+      "bytes": 2764,
+      "sha256": "sha256:189265b4e711560fc2ab317822167c84286fdfcf656a7f5d3137fe8572af68e0"
+    },
+    {
       "path": "index.html",
-      "bytes": 30938,
-      "sha256": "sha256:f2ec60bd997e91fbf26260a44adb63b30230513e18cd980321aaadc3dbb077bd"
+      "bytes": 34304,
+      "sha256": "sha256:d992eb0395a64c65d21a065069c9590330677161f124de7903c63668ccd8c438"
     },
     {
       "path": "kitchen/index.html",
-      "bytes": 24116,
-      "sha256": "sha256:1068f0ce0a2baff8a4bd31380a0ac8172ab21ee1155b5f0850486bd49224b194"
+      "bytes": 25796,
+      "sha256": "sha256:fb117cb9193c26fdc2637c985be321f58a3211af92fc83aeba299264203d82d6"
     },
     {
       "path": "llms.txt",
-      "bytes": 6011,
-      "sha256": "sha256:1374a71b2979f65545273b3141712a99d622793a9ed3baca76eab276829b48bb"
+      "bytes": 7634,
+      "sha256": "sha256:ae84fc7f18a9d0f577489abd39984556037c168f9de6d3402d1c4565aebc3212"
     },
     {
       "path": "metro/atlanta/index.html",
-      "bytes": 20096,
-      "sha256": "sha256:f7bc6db37e207919ac6804b98ba67158d8de4fb8a91eb23205f1e855cb3a36f8"
+      "bytes": 21776,
+      "sha256": "sha256:77c689891547c2ed1f7c32f1657111dafff8dc77c3b800071a7dfb13a9ed1a99"
     },
     {
       "path": "metro/boston/index.html",
-      "bytes": 20072,
-      "sha256": "sha256:065d8b8922cb6fde615ee2d216446f373a1d8cdf9d38b0bbaaaef088cb18e39a"
+      "bytes": 21752,
+      "sha256": "sha256:d790536ffeec8a16668da3d218a2a30fb65ad4b101b1d15fd8d320a5b113b864"
     },
     {
       "path": "metro/chicago/index.html",
-      "bytes": 20341,
-      "sha256": "sha256:d7242461299fdb47cdb3a8a5ef3b48571b729559724957a79c1c0401736ad334"
+      "bytes": 22021,
+      "sha256": "sha256:c2f4e3070987a9a70af4c4bc8a2a2fc4ff066bbf576a9ceb49077108513286dc"
     },
     {
       "path": "metro/dallas-fort-worth/index.html",
-      "bytes": 20240,
-      "sha256": "sha256:12183cb61f73fc478354ae954b0a7907389a8a39cd19757e800604206bd625e5"
+      "bytes": 21920,
+      "sha256": "sha256:8d5bc122a392967590e52ae8f883cf52a733ad6844b7c33c06baf01eae1c5de3"
     },
     {
       "path": "metro/denver/index.html",
-      "bytes": 20084,
-      "sha256": "sha256:d696d2fd2e8c5fae6056b08daee0b95dea71f7e6f6771cfb0af746d796aacdf7"
+      "bytes": 21764,
+      "sha256": "sha256:4060d439236abbdcc25174e6f0e5178e39045a9fe98cedf166157bc65b6977ba"
     },
     {
       "path": "metro/houston/index.html",
-      "bytes": 20107,
-      "sha256": "sha256:f73bb5eee29b1d1dc2419292e2b678379c2cc8329cb54dcaf25f844dc51ad361"
+      "bytes": 21787,
+      "sha256": "sha256:c40c80ea9aba6866f41b067270017e8c36e0e7ee159ddd0ebb6123e548cb5db6"
     },
     {
       "path": "metro/los-angeles/index.html",
-      "bytes": 20171,
-      "sha256": "sha256:141d7489828dd1cf1f6e272799bf47d2a4b31b5179f6c52d50766cf4e643c739"
+      "bytes": 21851,
+      "sha256": "sha256:8877df6b241f769378c1b7376de8ccf7a3e8d8fe0ec7f2cb58eacc438b8313e8"
     },
     {
       "path": "metro/miami/index.html",
-      "bytes": 20085,
-      "sha256": "sha256:e5ed4448ee9d1ad854f38332976921e82f4f0a651eee8ebc94f24d4bc9fea0ad"
+      "bytes": 21765,
+      "sha256": "sha256:24790fbdb0d90735f618f5ff65603a5d8392e21316d248d2383345deac5fa9dc"
     },
     {
       "path": "metro/new-york/index.html",
-      "bytes": 20159,
-      "sha256": "sha256:e8b83d9491d1b5e9d37b23068780fa8ff5281d22cc6f13dcf891e0f9cf842e7a"
+      "bytes": 21839,
+      "sha256": "sha256:9b5029be08c4aaf00a1ef501f3c4e3ae79bfa9b3e257158d34d66ec25cb2100f"
     },
     {
       "path": "metro/phoenix/index.html",
-      "bytes": 20107,
-      "sha256": "sha256:026b79c1388373ae9f8c45a575d1b872ae4920898a119c0c7755cd46e4a2bae5"
+      "bytes": 21787,
+      "sha256": "sha256:cf042dbf0e342c5d684d2fc5bc9261e527fc930b11d3ed6d0e04c5a060768903"
     },
     {
       "path": "metro/seattle/index.html",
-      "bytes": 20110,
-      "sha256": "sha256:4db467ea143af205fb0b7338bc7ebdd248505ae9926298cbbf4a080675a3d417"
+      "bytes": 21790,
+      "sha256": "sha256:90464523b66ea7b3b6076f08b968c264fbd1bf615c218eac379157b7e0b571dd"
     },
     {
       "path": "metro/washington-dc/index.html",
-      "bytes": 20193,
-      "sha256": "sha256:c7ae81bcbb99f4787536d7d2ba8d39ba400545567c31590ac0fdd31a19673d7c"
+      "bytes": 21873,
+      "sha256": "sha256:9e2195d0e11efc9b73fee23fb35b0c019b541d06b5962f8a818e1f1e7fc77e04"
     },
     {
       "path": "og.png",
@@ -2381,6 +2512,11 @@
       "sha256": "sha256:77e5deeef09ecedbf83a99ddf1488d275d2f92ff326670437d0b903e1679e513"
     },
     {
+      "path": "pagefind/filter/en_acd6f61.pf_filter",
+      "bytes": 150,
+      "sha256": "sha256:bb35b69fe0fbb3ca54caade39cd2d04c0b78d7327debddc47c82ea5000c3a064"
+    },
+    {
       "path": "pagefind/filter/en_e2ccbab.pf_filter",
       "bytes": 140,
       "sha256": "sha256:c5901ca7da00f43abfee0c015f50e8ff273544e445e18d052d17b199e0d4564c"
@@ -2389,6 +2525,11 @@
       "path": "pagefind/filter/en_eaa3826.pf_filter",
       "bytes": 130,
       "sha256": "sha256:03b42c522d8d860241c04bd2851620d288377117f02c1042907740703d98a085"
+    },
+    {
+      "path": "pagefind/filter/en_f34f842.pf_filter",
+      "bytes": 140,
+      "sha256": "sha256:e78bd0c66fd5867d84442ca4806b3fcfc11bebdf73dc427f663e2059d135c3bf"
     },
     {
       "path": "pagefind/fragment/en_12b76c3.pf_fragment",
@@ -2436,6 +2577,16 @@
       "sha256": "sha256:46a86f4c1578102097e2aa944f36dd2bbc4ff2d2ce7188b1dff1042aff6f79bc"
     },
     {
+      "path": "pagefind/fragment/en_517a781.pf_fragment",
+      "bytes": 4852,
+      "sha256": "sha256:b68aea1e66a351f8d5f995a2f1d1f6628f0ee14e8095c0614d58a4bc02fdd1fb"
+    },
+    {
+      "path": "pagefind/fragment/en_52a296a.pf_fragment",
+      "bytes": 1868,
+      "sha256": "sha256:a50c8df2f6387062fa100238613420e4a3288cfd4dd5f6346402b10d4706f140"
+    },
+    {
       "path": "pagefind/fragment/en_5af52c2.pf_fragment",
       "bytes": 770,
       "sha256": "sha256:cb3b69c3fb8aa8d7a4aabb390c1fc9e62153fb766faf30f57991de8208ed8165"
@@ -2461,6 +2612,16 @@
       "sha256": "sha256:17e6350babb622bd8098aa453237b03ccdf2eae8b6757bf6294ded518237e214"
     },
     {
+      "path": "pagefind/fragment/en_79bbf1d.pf_fragment",
+      "bytes": 4180,
+      "sha256": "sha256:5b4c93a2865c5d004682b50b86e001c7f58d7dae479da19bc7475bd7b3430ae5"
+    },
+    {
+      "path": "pagefind/fragment/en_79e31b9.pf_fragment",
+      "bytes": 1335,
+      "sha256": "sha256:9d9673468b104378fe427fa09cbb254412dea5efd32f529638942bf06d2d0445"
+    },
+    {
       "path": "pagefind/fragment/en_8734d21.pf_fragment",
       "bytes": 1799,
       "sha256": "sha256:591af0a065b72700e16a684427e42028894cf27504c2de47667b706f80ae0063"
@@ -2469,6 +2630,11 @@
       "path": "pagefind/fragment/en_8a1838e.pf_fragment",
       "bytes": 820,
       "sha256": "sha256:062362239154d6f5062585cf397d55409d40399623b6b9fc9210068f04cd1d82"
+    },
+    {
+      "path": "pagefind/fragment/en_8e7ffce.pf_fragment",
+      "bytes": 6338,
+      "sha256": "sha256:682d050f249ab719242a33680e1adef991b0aa1e894ffc65d44273a21824ab62"
     },
     {
       "path": "pagefind/fragment/en_8fb65af.pf_fragment",
@@ -2536,6 +2702,11 @@
       "sha256": "sha256:6fbd9b6f706a3f1c3932be704babfe9a12aad50a877dab037f3bc2b8d5668886"
     },
     {
+      "path": "pagefind/fragment/en_cf68a85.pf_fragment",
+      "bytes": 2766,
+      "sha256": "sha256:a88f874762c5ef55edbc5c63da229f28dfff0c3fbd6a7f0eb472e825f130aeeb"
+    },
+    {
       "path": "pagefind/fragment/en_d7ffab4.pf_fragment",
       "bytes": 1508,
       "sha256": "sha256:049859ebb525ee49cf9f629841a9f504311573bbe17d86fd34fdae7bc9ca7556"
@@ -2556,6 +2727,16 @@
       "sha256": "sha256:9dfe26caf6021057e36f8ca5212e85f187fed87ed8cdec4e4113328e4322c85f"
     },
     {
+      "path": "pagefind/fragment/en_e51e2e8.pf_fragment",
+      "bytes": 3665,
+      "sha256": "sha256:f8da4d1d09ed6439dd356263706498ef338d7966c515b3079bde9a44659ac6f2"
+    },
+    {
+      "path": "pagefind/fragment/en_f0907e9.pf_fragment",
+      "bytes": 5289,
+      "sha256": "sha256:e57c510089576d49e7966c0f1c652c8860dae057dc5cf2e4ddfb61ee7f3631de"
+    },
+    {
       "path": "pagefind/fragment/en_f238f07.pf_fragment",
       "bytes": 1528,
       "sha256": "sha256:6fa829d11da6271c3cc32731db0dfe1bcf35c74cc510ad420699f44eec8da015"
@@ -2564,6 +2745,11 @@
       "path": "pagefind/fragment/en_f26217b.pf_fragment",
       "bytes": 399,
       "sha256": "sha256:68b2979d3a5acb63103d2b07f3a72fe12f7936503eb9c5c201fa9f1810f81889"
+    },
+    {
+      "path": "pagefind/fragment/en_f3d2afc.pf_fragment",
+      "bytes": 4389,
+      "sha256": "sha256:4739c756fa8e9d3afa92410d17f86d083c6742ce5fecc070ef85f91e754f254e"
     },
     {
       "path": "pagefind/fragment/en_f4178b3.pf_fragment",
@@ -2586,6 +2772,16 @@
       "sha256": "sha256:f38e1b630f1b71848cdbb05cd2687010570418f9360a7a0ad63c82e85dd21667"
     },
     {
+      "path": "pagefind/index/en_3a62e4c.pf_index",
+      "bytes": 31161,
+      "sha256": "sha256:a34d8d1729000529286ea1e97213e516fb3bbbedc298480a4a691d93235b9ce8"
+    },
+    {
+      "path": "pagefind/index/en_4388cda.pf_index",
+      "bytes": 1548,
+      "sha256": "sha256:fd41a598d7f69c2a03e6554a25a98cf136ef2e65fad36ce55cf305590bfbbf10"
+    },
+    {
       "path": "pagefind/index/en_6166224.pf_index",
       "bytes": 17941,
       "sha256": "sha256:8b7568310f6878a3ef64969aec726e4bfaf81ad0ec53e870aebe2b3917e25a31"
@@ -2601,6 +2797,16 @@
       "sha256": "sha256:68c60055b79cc8bf65070d14d33269b5ee6e43d574c16934ff9dfe1cb1f167ce"
     },
     {
+      "path": "pagefind/index/en_c8b3249.pf_index",
+      "bytes": 31039,
+      "sha256": "sha256:664fcffda7ee606da82f037fcaae8f9f60539197a2054c3fb2d095f600976d13"
+    },
+    {
+      "path": "pagefind/index/en_ead8d36.pf_index",
+      "bytes": 31570,
+      "sha256": "sha256:56a7e8cd62ee4e730a1b0483544921b17c0cdc224da91b0a8e825c8f0e889996"
+    },
+    {
       "path": "pagefind/index/en_fdaf9b2.pf_index",
       "bytes": 31673,
       "sha256": "sha256:b4c7997cebe095ac8e50c4445e662216ce207f7f329519ce752b6a2c15759857"
@@ -2612,13 +2818,13 @@
     },
     {
       "path": "pagefind/pagefind-component-ui.js",
-      "bytes": 175486,
-      "sha256": "sha256:0f25ebc6c6078ded981919edd142c8810ebdb12a3f60c9360afd669b4642d916"
+      "bytes": 175488,
+      "sha256": "sha256:958620129dd14bd851805daeb12ce708bd63b9287325d1d5ae6f73a04d1723f8"
     },
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 172,
-      "sha256": "sha256:bbda78eecdeff4fdcd7a7d6931a4ebbe375d1500470f5aa683d29c7bf30f1e3c"
+      "sha256": "sha256:ddbcc46f1347365b8f3652e8993affa0d9cdc6c6df848b3aa953675ad8e6d6a0"
     },
     {
       "path": "pagefind/pagefind-highlight.js",
@@ -2651,6 +2857,11 @@
       "sha256": "sha256:4ca50d25bcab9e1c3afbc00ab5f7761114e83c8fc1b83d38655af1558b650c2a"
     },
     {
+      "path": "pagefind/pagefind.en_2fb61dcc6b.pf_meta",
+      "bytes": 462,
+      "sha256": "sha256:24676853905b3298e92a8b95f076eef3707e07e4d4a5a7b3d554e6d03d24c9b5"
+    },
+    {
       "path": "pagefind/pagefind.en_337f48ef21.pf_meta",
       "bytes": 313,
       "sha256": "sha256:da75283e67d8a4397f76b26cf2ddf5eb12ce6d60bd9195ee3e4b2fca53e490e9"
@@ -2677,8 +2888,8 @@
     },
     {
       "path": "privacy/index.html",
-      "bytes": 21679,
-      "sha256": "sha256:2524e238fed44acc6c73d74fa1b6d0b044c6db681f8f7b058ac0bf39902ff8d0"
+      "bytes": 23359,
+      "sha256": "sha256:cc9aee213ab5d02a3908ef569e8676157b5907b3411bc45cdd74ed6c49a47d6f"
     },
     {
       "path": "robots.txt",
@@ -2687,23 +2898,23 @@
     },
     {
       "path": "shop/index.html",
-      "bytes": 23023,
-      "sha256": "sha256:afd1f3899f1bf450ee032ed96fc8ae56ab615a7de21f6b5cdc341c1c8d25611f"
+      "bytes": 24703,
+      "sha256": "sha256:932ca46b4e4bd1a582355dcfe228155042c79664f68056382ba2503fb17fc057"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 3168,
-      "sha256": "sha256:2b90d8fe10d4c1084dc1628b92e63c344115de643746304ef4a71f499b621023"
+      "bytes": 3947,
+      "sha256": "sha256:0dc166d3a0f9e84ad6666beb3b2710ae508fb5fbf2fd5fe22ca146ad4452baeb"
     },
     {
       "path": "tools/agricultural-market-context-browser/index.html",
-      "bytes": 33966,
-      "sha256": "sha256:3c170477a18430bc38e3a8d07442cf897be8affae1a724b8a1accfe49cd8453c"
+      "bytes": 35646,
+      "sha256": "sha256:34a0ece7e61c0b7429463ce4698dae716e06fab8c135e593b4cc8d6a4d8299ba"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/index.html",
-      "bytes": 71556,
-      "sha256": "sha256:56a197f2f9d385e07be58ad901b71d8c1ee9e14d58bd8f99b8dc4fb0f48eea68"
+      "bytes": 73236,
+      "sha256": "sha256:4cfc73b317d4ddd6f27280af0badb85c6bf37cadb893b05e1c126f6c25398072"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/page/2/index.html",
@@ -2717,13 +2928,13 @@
     },
     {
       "path": "tools/index.html",
-      "bytes": 27133,
-      "sha256": "sha256:e840e69c5c760d113e2fcac5060a4dfde58068148a8ad5d655ee0e8a34de01ee"
+      "bytes": 28813,
+      "sha256": "sha256:07c78b5e1da7120145f13c9a2e1f639a44504dbf20429fc53150708fd4bad403"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/index.html",
-      "bytes": 44417,
-      "sha256": "sha256:bff025f0930bfffdf0fcbd43d4880a4462ee17f9220c1604ffafc28f636cb066"
+      "bytes": 46097,
+      "sha256": "sha256:fd2416173b5ee23f8966bae916673037a8a0f80ecc0edccd238aa44b901864f5"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/page/2/index.html",
@@ -2732,13 +2943,13 @@
     },
     {
       "path": "tools/usda-staple-food-identity-explorer/index.html",
-      "bytes": 40572,
-      "sha256": "sha256:2e11c2bbe1cc30c7ab8121523e68a892377fbd011771961023a68efe2e40163e"
+      "bytes": 42252,
+      "sha256": "sha256:7d182efb732b6932b2cace63ff2ba08269737669f9b1c5c620619af7f68d26ac"
     },
     {
       "path": "tools/zip-to-metro-relationship-explainer/index.html",
-      "bytes": 50498,
-      "sha256": "sha256:96de8ed1ef94a17df1fd6652fb5fc8b34611cf223f1e811011f8a8dc53056e69"
+      "bytes": 52178,
+      "sha256": "sha256:09673f357e2730bc5d4a8e3ddf6275fe27d940a57d401678b8f859327bbf3028"
     }
   ]
 }

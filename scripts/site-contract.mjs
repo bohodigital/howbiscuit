@@ -131,15 +131,21 @@ async function verifyDirectory(directory, expected) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  if (actual.htmlRouteCount !== 43) fail("expected exactly 43 HTML routes");
+  if (actual.htmlRouteCount !== 49) fail("expected exactly 49 HTML routes");
   const expectedPublicArticles = [
+    "/articles/2-4-ghz-vs-5-ghz-wifi/",
+    "/articles/best-place-to-put-wifi-router/",
     "/articles/does-turning-ac-off-save-money/",
     "/articles/fan-vs-air-conditioner-cost/",
+    "/articles/fix-wifi-dead-zones-without-buying-anything/",
     "/articles/home-energy-check-high-summer-bill/",
+    "/articles/home-wifi-dead-zone-checklist/",
     "/articles/how-does-baking-powder-work/",
     "/articles/portable-ac-cost-to-run/",
     "/articles/why-are-some-answers-better-than-others/",
+    "/articles/why-does-my-wifi-keep-disconnecting/",
     "/articles/why-electric-bill-high-summer/",
+    "/articles/why-is-my-wifi-so-slow/",
     "/articles/why-salt-melts-ice/",
     "/articles/window-ac-cost-per-hour/",
   ];
@@ -164,20 +170,20 @@ async function loadManifest() {
 async function verifyPromotionPackage(release) {
   const promotion = JSON.parse(await readFile(promotionPath, "utf8"));
   if (promotion.schemaVersion !== "public-promotion-package.v1") fail("invalid promotion schema version");
-  if (promotion.releaseId !== "howbiscuit-phase1-batch1-2026-07-25") fail("unexpected promotion release ID");
-  if (promotion.approvalDigest !== "sha256:131d753ab5656fc0b168380b79be34826c9a8430d490a61b8700acdeec46fe52") {
-    fail("unexpected Batch 1 approval digest");
+  if (promotion.releaseId !== "howbiscuit-phase1-batch2-2026-07-25") fail("unexpected promotion release ID");
+  if (promotion.approvalDigest !== "sha256:2b36f0727e30da677ac976fdf2ade46b0d2b3bedae8a730c3efe24dc5e8c2c77") {
+    fail("unexpected Batch 2 approval digest");
   }
   const expectedRoutes = [
-    "/articles/why-electric-bill-high-summer/",
-    "/articles/window-ac-cost-per-hour/",
-    "/articles/portable-ac-cost-to-run/",
-    "/articles/fan-vs-air-conditioner-cost/",
-    "/articles/does-turning-ac-off-save-money/",
-    "/articles/home-energy-check-high-summer-bill/",
+    "/articles/why-is-my-wifi-so-slow/",
+    "/articles/best-place-to-put-wifi-router/",
+    "/articles/why-does-my-wifi-keep-disconnecting/",
+    "/articles/2-4-ghz-vs-5-ghz-wifi/",
+    "/articles/fix-wifi-dead-zones-without-buying-anything/",
+    "/articles/home-wifi-dead-zone-checklist/",
   ];
   if (JSON.stringify(promotion.routes) !== JSON.stringify(expectedRoutes)) fail("promotion route inventory differs");
-  if (!Array.isArray(promotion.files) || promotion.files.length !== 93) fail("promotion file inventory differs");
+  if (!Array.isArray(promotion.files) || promotion.files.length !== 90) fail("promotion file inventory differs");
   const releaseFiles = new Map(release.files.map((file) => [file.path, file]));
   const seen = new Set();
   for (const file of promotion.files) {
@@ -188,8 +194,12 @@ async function verifyPromotionPackage(release) {
     }
   }
   for (const required of [
-    "downloads/home-energy-check-high-summer-bill.pdf",
+    "downloads/home-wifi-dead-zone-checklist.pdf",
     "feed.xml",
+    "images/diagrams/dead-zone-test-grid.svg",
+    "images/diagrams/router-placement.svg",
+    "images/diagrams/wifi-band-tradeoff.svg",
+    "images/diagrams/wifi-diagnosis-flow.svg",
     "llms.txt",
     "sitemap.xml",
   ]) {

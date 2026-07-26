@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Typical 2.4 GHz and 5 GHz Wi-Fi tradeoff</title>
+<desc id="d">An illustrative diagram shows 2.4 GHz with a larger typical coverage area and 5 GHz with a smaller typical coverage area and greater nearby capacity.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial, sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Typical home Wi-Fi tradeoff</text>
+<circle cx="350" cy="350" r="230" stroke-dasharray="14 10"/>
+<circle cx="850" cy="350" r="155" stroke-dasharray="8 8"/>
+<rect x="305" y="310" width="90" height="70" rx="8"/><text x="350" y="352" text-anchor="middle" fill="black" font-size="18">Router</text>
+<rect x="805" y="310" width="90" height="70" rx="8"/><text x="850" y="352" text-anchor="middle" fill="black" font-size="18">Router</text>
+<text x="350" y="110" text-anchor="middle" fill="black" font-size="28">2.4 GHz</text>
+<text x="350" y="625" text-anchor="middle" fill="black" font-size="21">Usually more reach and wall tolerance</text>
+<text x="850" y="180" text-anchor="middle" fill="black" font-size="28">5 GHz</text>
+<text x="850" y="555" text-anchor="middle" fill="black" font-size="21">Usually more nearby capacity</text>
+<text x="600" y="680" text-anchor="middle" fill="black" font-size="17">Illustrative only; not to scale. Actual performance depends on devices, standards, channels, walls, and interference.</text>
+</g></svg>

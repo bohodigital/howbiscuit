@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-preference="system"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let storedPreference = null;
+        try {
+          storedPreference = localStorage.getItem('howbiscuit-theme');
+        } catch { /* Storage may be denied; system preference still applies. */ }
+        const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';
+        let systemPrefersDark = false;
+        try {
+          systemPrefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch { /* Light is the safe fallback when media queries are unavailable. */ }
+        const resolved = preference === 'system' ? (systemPrefersDark ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.theme = resolved;
+      })();
+    </script><title>Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything | How Biscuit</title><meta name="description" content="Slow Wi-Fi can come from weak signal, ISP trouble, congestion, router placement, or one problem device. Use this step-by-step diagnosis before buying new hardware."><meta name="robots" content="index, follow"><meta name="theme-color" content="#fff8e7"><link rel="canonical" href="https://howbiscuit.com/articles/why-is-my-wifi-so-slow/"><link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml"><link rel="sitemap" href="/sitemap.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="How Biscuit"><meta property="og:title" content="Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything | How Biscuit"><meta property="og:description" content="Slow Wi-Fi can come from weak signal, ISP trouble, congestion, router placement, or one problem device. Use this step-by-step diagnosis before buying new hardware."><meta property="og:url" content="https://howbiscuit.com/articles/why-is-my-wifi-so-slow/"><meta property="og:image" content="https://howbiscuit.com/images/articles/why-is-my-wifi-so-slow/photo-wireless-router.jpg"><meta property="og:image:alt" content="A real wireless router with upright antennas"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything | How Biscuit"><meta name="twitter:description" content="Slow Wi-Fi can come from weak signal, ISP trouble, congestion, router placement, or one problem device. Use this step-by-step diagnosis before buying new hardware."><meta name="twitter:image" content="https://howbiscuit.com/images/articles/why-is-my-wifi-so-slow/photo-wireless-router.jpg"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"How Biscuit","description":"Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.","url":"https://howbiscuit.com/","publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"Article","headline":"Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything","description":"Slow Wi-Fi can come from weak signal, ISP trouble, congestion, router placement, or one problem device. Use this step-by-step diagnosis before buying new hardware.","url":"https://howbiscuit.com/articles/why-is-my-wifi-so-slow/","datePublished":"2026-07-25","dateModified":"2026-07-25","articleSection":"Home Tech","about":"Wi-Fi \u0026 Routers","author":{"@type":"Organization","name":"How Biscuit"},"publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://howbiscuit.com/"},{"@type":"ListItem","position":2,"name":"Home Tech","item":"https://howbiscuit.com/home-tech/"},{"@type":"ListItem","position":3,"name":"Wi-Fi \u0026 Routers","item":"https://howbiscuit.com/home-tech/#topic-wifi-routers"},{"@type":"ListItem","position":4,"name":"Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything"}]}]</script><script defer src="/analytics-bootstrap.js" data-analytics-bootstrap="boho-v1" data-umami-script-url="https://analytics.bohodigitalservices.com/script.js" data-umami-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-umami-domains="howbiscuit.com,www.howbiscuit.com" data-ga-id="G-NG0NQMVFEH" data-ga-public-hosts="howbiscuit.com,www.howbiscuit.com"></script><style>@media(min-width:58.001rem){.hb-content[data-astro-cid-zm77yjld]{grid-column:1;grid-row:1}.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:2;grid-row:1}}.hb-direct-answer[data-astro-cid-zm77yjld]{margin-top:1.2rem;border-left:4px solid var(--hb-tomato);padding-left:1rem;color:var(--hb-ink);font-size:clamp(1.05rem,2vw,1.3rem)}.hb-correction-link[data-astro-cid-zm77yjld]{margin-top:3rem;border-top:1px solid var(--hb-ink);padding-top:1rem}.hb-empty-state p{color:var(--hb-ink-soft)}.hb-empty-state a{color:var(--hb-ink);font-weight:850}.hb-topic-section[data-astro-cid-fzx4jmue]{scroll-margin-top:6.5rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]{margin-top:4rem;border-top:2px solid var(--hb-ink);padding-top:1.2rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]>div[data-astro-cid-fzx4jmue]{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.8rem}.hb-neighbor-links[data-astro-cid-fzx4jmue] a[data-astro-cid-fzx4jmue]{border:1px solid var(--hb-ink);border-radius:999px;padding:.45rem .7rem;color:var(--hb-ink);text-decoration:none}
+</style>
+<link rel="stylesheet" href="/_astro/BaseLayout.Dx1DJXA0.css"><style>.hb-article-media[data-astro-cid-ryrfu6xi]{margin:2rem 0}.hb-article-media[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{display:block;width:100%;max-height:38rem;object-fit:cover;border:1px solid var(--hb-ink);border-radius:1rem;background:var(--hb-paper)}.hb-article-media-hero[data-astro-cid-ryrfu6xi]{margin-top:0}.hb-article-media-hero[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{aspect-ratio:16 / 9}.hb-article-media[data-astro-cid-ryrfu6xi] figcaption[data-astro-cid-ryrfu6xi]{display:grid;gap:.25rem;margin-top:.55rem;color:var(--hb-muted-ink);font-size:.9rem;line-height:1.45}.hb-article-media-credit[data-astro-cid-ryrfu6xi]{font-size:.8rem}
+</style></head> <body> <a class="hb-skip-link" href="#main-content">Skip to content</a> <header class="hb-custom-header" data-pagefind-ignore="all" data-astro-cid-ctg3m53h> <div class="hb-header-inner" data-astro-cid-ctg3m53h> <a class="hb-brand" href="/" aria-label="How Biscuit home" data-astro-cid-ctg3m53h> <span data-astro-cid-ctg3m53h>HOW BISCUIT</span><b aria-hidden="true" data-astro-cid-ctg3m53h>?</b><i data-astro-cid-ctg3m53h>Practical guides</i> </a> <nav class="hb-desktop-nav" aria-label="Primary navigation" data-astro-cid-ctg3m53h> <details class="hb-category-menu" name="hb-primary-navigation" data-category="home-tech" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home Tech published topics" data-astro-cid-ctg3m53h> <a href="/home-tech/#topic-wifi-routers" aria-label="Wi-Fi &amp; Routers, 6 published guides" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers<span aria-hidden="true" data-astro-cid-ctg3m53h>6</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/2-4-ghz-vs-5-ghz-wifi/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>2.4 GHz vs. 5 GHz Wi-Fi: Which Should You Use?</strong><small data-astro-cid-ctg3m53h>Use 2.4 GHz when range and wall penetration matter; use 5 GHz when a nearby device needs more capacity. Learn why the router may choose automatically.</small></a><a href="/articles/best-place-to-put-wifi-router/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Best Place to Put Your Wi-Fi Router</strong><small data-astro-cid-ctg3m53h>Put your router near the center of the area you use, out in the open, off the floor, and away from dense barriers. Use this test before buying an extender.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="home" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home &amp; Apartment published topics" data-astro-cid-ctg3m53h> <a href="/home/#topic-heating-cooling" aria-label="Heating &amp; Cooling, 5 published guides" data-astro-cid-ctg3m53h>Heating &amp; Cooling<span aria-hidden="true" data-astro-cid-ctg3m53h>5</span></a><a href="/home/#topic-utilities-energy" aria-label="Utilities &amp; Energy, 1 published guide" data-astro-cid-ctg3m53h>Utilities &amp; Energy<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/why-electric-bill-high-summer/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Why Is My Electric Bill So High in Summer?</strong><small data-astro-cid-ctg3m53h>A high summer electric bill usually comes from more cooling hours, higher rates, a longer billing period, air leaks, or an inefficient system. Here is how to identify the cause.</small></a><a href="/articles/window-ac-cost-per-hour/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does a Window AC Cost per Hour?</strong><small data-astro-cid-ctg3m53h>Calculate a window air conditioner’s hourly, daily, and monthly electricity cost from its wattage and your local electric rate.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="kitchen" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p></div> <div class="hb-topic-labels" role="group" aria-label="Kitchen published topics" data-astro-cid-ctg3m53h> <a href="/kitchen/#topic-food-science" aria-label="Food Science, 1 published guide" data-astro-cid-ctg3m53h>Food Science<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/how-does-baking-powder-work/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Does Baking Powder Work?</strong><small data-astro-cid-ctg3m53h>Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="shop" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p></div>   </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="tools" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p></div> <div class="hb-topic-labels" role="group" aria-label="Tools published topics" data-astro-cid-ctg3m53h> <a href="/tools/#topic-checklists" aria-label="Checklists, 1 published guide" data-astro-cid-ctg3m53h>Checklists<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</strong><small data-astro-cid-ctg3m53h>Use this step-by-step home energy checklist to find why a summer electric bill increased, from billing days and rates to AC filters, air leaks, and hidden loads.</small></a> </div> </div> </details> <a class="hb-all-guides-link" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme: System</button> </nav> <div class="hb-mobile-actions" data-astro-cid-ctg3m53h> <button class="hb-header-action" id="mobile-navigation-trigger" type="button" data-open-modal="mobile-navigation" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Menu</button> <button class="hb-header-action" id="mobile-search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme</button> </div> </div> </header> <noscript> <details class="hb-noscript-navigation" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Browse How Biscuit</summary> <nav aria-label="Primary navigation without JavaScript" data-astro-cid-ctg3m53h> <div data-astro-cid-ctg3m53h> <a href="/home-tech/" aria-current="true" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong></a> <a href="/articles/2-4-ghz-vs-5-ghz-wifi/" data-astro-cid-ctg3m53h>2.4 GHz vs. 5 GHz Wi-Fi: Which Should You Use?</a><a href="/articles/best-place-to-put-wifi-router/" data-astro-cid-ctg3m53h>Best Place to Put Your Wi-Fi Router</a> </div><div data-astro-cid-ctg3m53h> <a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong></a> <a href="/articles/why-electric-bill-high-summer/" data-astro-cid-ctg3m53h>Why Is My Electric Bill So High in Summer?</a><a href="/articles/window-ac-cost-per-hour/" data-astro-cid-ctg3m53h>How Much Does a Window AC Cost per Hour?</a> </div><div data-astro-cid-ctg3m53h> <a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong></a> <a href="/articles/how-does-baking-powder-work/" data-astro-cid-ctg3m53h>How Does Baking Powder Work?</a> </div><div data-astro-cid-ctg3m53h> <a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong></a>  </div><div data-astro-cid-ctg3m53h> <a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong></a> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </details> </noscript> <dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="mobile-navigation-title" data-astro-cid-ctg3m53h>Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu" data-astro-cid-ctg3m53h>Close</button></header> <nav aria-label="Mobile navigation" data-astro-cid-ctg3m53h> <details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home-tech/" data-astro-cid-ctg3m53h>Open Home Tech →</a> <p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home-tech/#topic-wifi-routers" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers</a></p> <a href="/articles/2-4-ghz-vs-5-ghz-wifi/" data-astro-cid-ctg3m53h>2.4 GHz vs. 5 GHz Wi-Fi: Which Should You Use?</a><a href="/articles/best-place-to-put-wifi-router/" data-astro-cid-ctg3m53h>Best Place to Put Your Wi-Fi Router</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home/" data-astro-cid-ctg3m53h>Open Home &amp; Apartment →</a> <p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home/#topic-heating-cooling" data-astro-cid-ctg3m53h>Heating &amp; Cooling</a><a href="/home/#topic-utilities-energy" data-astro-cid-ctg3m53h>Utilities &amp; Energy</a></p> <a href="/articles/why-electric-bill-high-summer/" data-astro-cid-ctg3m53h>Why Is My Electric Bill So High in Summer?</a><a href="/articles/window-ac-cost-per-hour/" data-astro-cid-ctg3m53h>How Much Does a Window AC Cost per Hour?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/kitchen/" data-astro-cid-ctg3m53h>Open Kitchen →</a> <p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/kitchen/#topic-food-science" data-astro-cid-ctg3m53h>Food Science</a></p> <a href="/articles/how-does-baking-powder-work/" data-astro-cid-ctg3m53h>How Does Baking Powder Work?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/shop/" data-astro-cid-ctg3m53h>Open Shop Smarter →</a> <p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p>   </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/tools/" data-astro-cid-ctg3m53h>Open Tools →</a> <p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/tools/#topic-checklists" data-astro-cid-ctg3m53h>Checklists</a></p> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> </details> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </div> </dialog> <dialog class="hb-shell-dialog hb-search-dialog" id="search-dialog" aria-labelledby="search-dialog-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="search-dialog-title" data-astro-cid-ctg3m53h>Search How Biscuit</h2><button type="button" data-close-modal aria-label="Close search" data-astro-cid-ctg3m53h>Close</button></header> <form class="hb-search-form" role="search" data-astro-cid-ctg3m53h> <label for="howbiscuit-search-input" data-astro-cid-ctg3m53h>Search published guides and pages</label> <div data-astro-cid-ctg3m53h><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" data-astro-cid-ctg3m53h><button type="submit" data-astro-cid-ctg3m53h>Search</button></div> </form> <p class="hb-search-status" role="status" aria-live="polite" data-astro-cid-ctg3m53h>Enter a word or phrase to search.</p> <div class="hb-search-results" role="region" aria-label="Search results" data-astro-cid-ctg3m53h></div> </div> </dialog>  <script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js"></script> <main id="main-content" class="hb-main hb-article-page" data-pagefind-body> <span hidden aria-hidden="true" data-pagefind-filter="category">Home Tech</span><span hidden aria-hidden="true" data-pagefind-filter="type">Guide</span> <span hidden aria-hidden="true" data-pagefind-meta="title">Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything</span> <span hidden aria-hidden="true" data-pagefind-meta="description">Slow Wi-Fi can come from weak signal, ISP trouble, congestion, router placement, or one problem device. Use this step-by-step diagnosis before buying new hardware.</span> <span hidden aria-hidden="true" data-pagefind-meta="route">/articles/why-is-my-wifi-so-slow/</span>   <article class="hb-article-shell" data-astro-cid-zm77yjld> <nav class="hb-breadcrumbs" aria-label="Breadcrumb"> <ol> <li> <a href="/">Home</a> <b aria-hidden="true">/</b> </li><li> <a href="/home-tech/">Home Tech</a> <b aria-hidden="true">/</b> </li><li> <a href="/home-tech/#topic-wifi-routers">Wi-Fi &amp; Routers</a> <b aria-hidden="true">/</b> </li><li> <span aria-current="page">Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything</span>  </li> </ol> </nav> <header class="hb-article-title" data-astro-cid-zm77yjld> <div class="hb-article-labels" role="group" aria-label="Article classification" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Category: Home Tech</span> <span data-astro-cid-zm77yjld>Topic: Wi-Fi &amp; Routers</span> <span data-astro-cid-zm77yjld>Type: Guide</span> </div> <h1 data-astro-cid-zm77yjld>Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything</h1> <p class="hb-direct-answer" data-astro-cid-zm77yjld>Test another device beside the router before spending money. If every device is slow even close to the router, check the modem, internet service, cables, and router. If only distant rooms are slow, work on placement and signal coverage.</p> <div class="hb-article-meta" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Updated <time datetime="2026-07-25" data-astro-cid-zm77yjld>Jul 25, 2026</time></span> <span data-astro-cid-zm77yjld>10 min read</span> <span class="hb-badge hb-evidence hb-evidence-label" data-evidence="researched">Researched</span> <span class="hb-badge hb-testing-badge" data-state="not-hands-on-tested">Not hands-on tested</span> </div> </header> <aside class="hb-disclosure" aria-label="Disclosure"> <strong>Disclosure</strong> <p>This guide contains no affiliate links, sponsored placements, paid reviews, or product placements. It also contains no product cards or retailer links.</p> <a href="/affiliate-disclosure/">Read the disclosure</a> </aside> <div class="hb-article-grid" data-astro-cid-zm77yjld> <nav class="hb-article-toc" aria-labelledby="article-toc-title" data-astro-cid-zm77yjld> <h2 id="article-toc-title" data-astro-cid-zm77yjld>On this page</h2> <ol data-astro-cid-zm77yjld><li data-depth="2" data-astro-cid-zm77yjld><a href="#first-separate-wi-fi-from-the-internet-connection" data-astro-cid-zm77yjld>First, separate Wi-Fi from the internet connection</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#how-to-run-a-useful-home-wi-fi-test" data-astro-cid-zm77yjld>How to run a useful home Wi-Fi test</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#1-test-beside-the-router" data-astro-cid-zm77yjld>1. Test beside the router</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#2-test-another-device" data-astro-cid-zm77yjld>2. Test another device</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#3-compare-wi-fi-with-ethernet-when-possible" data-astro-cid-zm77yjld>3. Compare Wi-Fi with Ethernet when possible</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#4-pause-background-traffic" data-astro-cid-zm77yjld>4. Pause background traffic</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#5-restart-the-modem-and-router-correctly" data-astro-cid-zm77yjld>5. Restart the modem and router correctly</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#6-check-cables-power-and-status-lights" data-astro-cid-zm77yjld>6. Check cables, power, and status lights</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#7-move-closer-and-remove-obstacles" data-astro-cid-zm77yjld>7. Move closer and remove obstacles</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#8-improve-router-placement" data-astro-cid-zm77yjld>8. Improve router placement</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#9-try-another-frequency-band" data-astro-cid-zm77yjld>9. Try another frequency band</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#10-forget-and-rejoin-the-network-on-one-problem-device" data-astro-cid-zm77yjld>10. Forget and rejoin the network on one problem device</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#11-update-the-router-and-the-device" data-astro-cid-zm77yjld>11. Update the router and the device</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#12-contact-the-isp-before-replacing-hardware" data-astro-cid-zm77yjld>12. Contact the ISP before replacing hardware</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#do-not-factory-reset-the-router-first" data-astro-cid-zm77yjld>Do not factory-reset the router first</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#when-new-hardware-might-actually-be-justified" data-astro-cid-zm77yjld>When new hardware might actually be justified</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#frequently-asked-questions" data-astro-cid-zm77yjld>Frequently asked questions</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#why-is-the-speed-test-fast-but-streaming-still-buffers" data-astro-cid-zm77yjld>Why is the speed test fast but streaming still buffers?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#why-is-wi-fi-slow-only-at-night" data-astro-cid-zm77yjld>Why is Wi-Fi slow only at night?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#will-restarting-the-router-make-wi-fi-faster" data-astro-cid-zm77yjld>Will restarting the router make Wi-Fi faster?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#does-a-full-wi-fi-signal-icon-mean-the-internet-is-fast" data-astro-cid-zm77yjld>Does a full Wi-Fi signal icon mean the internet is fast?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#should-i-change-channels-manually" data-astro-cid-zm77yjld>Should I change channels manually?</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#related-wi-fi-guides" data-astro-cid-zm77yjld>Related Wi-Fi guides</a></li></ol> </nav> <div class="hb-content" data-astro-cid-zm77yjld> <figure class="hb-article-media hb-article-media-hero" data-astro-cid-ryrfu6xi> <img src="/images/articles/why-is-my-wifi-so-slow/photo-wireless-router.jpg" alt="A real wireless router with upright antennas" loading="eager" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real wireless router. The photograph illustrates hardware only; How Biscuit did not test or recommend this model.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by ajay_suresh via Wikimedia Commons, CC BY 2.0  · CC BY 2.0  · <a href="https://commons.wikimedia.org/wiki/File:Wireless_Router_(50841204223).jpg" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>Slow Wi-Fi does not automatically mean you need a new router. The problem may be the internet service, the modem, the router’s location, radio interference, one device, background traffic, or a weak signal in only part of the home.</p>
+<p>The fastest useful diagnosis is to run the <strong>same test in two places</strong>:</p>
+<ol>
+<li>Beside the router</li>
+<li>In the room where Wi-Fi feels slow</li>
+</ol>
+<p>Use the same device, the same test service, and roughly the same time. If performance is good near the router but poor in the problem room, the issue is probably Wi-Fi coverage or interference. If it is poor beside the router too, investigate the internet connection, modem, router, or device.</p>
+<blockquote>
+<p><strong>Quick answer:</strong> Test another device beside the router before spending money. If every device is slow even close to the router, check the modem, internet service, cables, and router. If only distant rooms are slow, work on placement and signal coverage.</p>
+</blockquote>
+<h2 id="first-separate-wi-fi-from-the-internet-connection">First, separate Wi-Fi from the internet connection</h2>
+<p>People often use “Wi-Fi” and “internet” as though they are the same thing. They are not.</p>
+<ul>
+<li><strong>Wi-Fi</strong> is the wireless link between your device and the router or access point.</li>
+<li><strong>Internet service</strong> is the connection from the modem or gateway to your provider and the wider internet.</li>
+</ul>
+<p>You can have:</p>
+<ul>
+<li>Strong Wi-Fi with no internet because the provider is down</li>
+<li>Working internet at the modem but weak Wi-Fi in a distant room</li>
+<li>Good Wi-Fi and internet, but one slow website or app</li>
+<li>A healthy network with one malfunctioning device</li>
+</ul>
+<p>This distinction determines what to test next.</p>
+<h2 id="how-to-run-a-useful-home-wi-fi-test">How to run a useful home Wi-Fi test</h2>
+<p><img src="/images/diagrams/wifi-diagnosis-flow.svg" alt="Home Wi-Fi diagnosis flow separating one-device, whole-network, and internet-service problems"/></p>
+<p><em>Use the scope test to choose a device, Wi-Fi, or internet troubleshooting path; then change one thing and repeat the same test.</em></p>
+<p>Before changing settings:</p>
+<ul>
+<li>Use one laptop or phone for all comparison tests</li>
+<li>Pause large downloads, game updates, cloud backups, and streaming</li>
+<li>Stand in a repeatable location</li>
+<li>Run at least three tests and record the middle result</li>
+<li>Record download, upload, and latency if the test reports them</li>
+<li>Use the same speed-test service for each comparison</li>
+<li>Do not compare a phone on Wi-Fi with another phone on cellular data</li>
+</ul>
+<p>Microsoft recommends taking a baseline in several locations, then repeating the tests after changes.<sup><a href="#source-ms-wifi-layout" aria-label="Source 1: Wi-Fi and your home layout">[1]</a></sup></p>
+<p>A speed test is not a laboratory measurement. Results vary with the test server, time of day, device, radio band, network traffic, and internet congestion. The pattern between locations is usually more useful than one dramatic number.</p>
+<h2 id="1-test-beside-the-router">1. Test beside the router</h2>
+<p>Move within a few feet of the router or access point without blocking it with your body. Run several tests.</p>
+<p>If performance is much better here than in the problem room, skip ahead to:</p>
+<ul>
+<li>Router placement</li>
+<li>Physical obstacles</li>
+<li>2.4 GHz versus 5 GHz</li>
+<li>Dead-zone fixes</li>
+</ul>
+<p>If it remains slow, keep diagnosing the connection itself.</p>
+<h2 id="2-test-another-device">2. Test another device</h2>
+<p>Try another phone, tablet, or laptop on the same Wi-Fi network.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Result</th><th>Likely direction</th></tr></thead><tbody><tr><td>One device is slow; others are normal</td><td>Device settings, driver, saved network, VPN, software, or hardware</td></tr><tr><td>Every device is slow</td><td>Router, modem, internet service, interference, or network-wide traffic</td></tr><tr><td>Only one app or website is slow</td><td>App, service, DNS, VPN, or remote-server issue</td></tr><tr><td>Only one room is slow</td><td>Coverage, placement, or obstacles</td></tr></tbody></table>
+<p>Google and Microsoft both recommend testing another device to separate a device problem from a network problem.<sup><a href="#source-google-nest-performance" aria-label="Source 2: How to improve Nest Wifi Pro, Nest Wifi or Google Wi-Fi speed and performance">[2]</a></sup><sup><a href="#source-ms-fix-wifi" aria-label="Source 3: Fix Wi-Fi connection issues in Windows">[3]</a></sup></p>
+<h2 id="3-compare-wi-fi-with-ethernet-when-possible">3. Compare Wi-Fi with Ethernet when possible</h2>
+<figure class="hb-article-media" data-astro-cid-ryrfu6xi> <img src="/images/articles/why-is-my-wifi-so-slow/photo-rear-ethernet.jpg" alt="The rear of a real wireless router showing its Ethernet port, power connection, and antenna" loading="lazy" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A router Ethernet port can help separate a Wi-Fi radio problem from a broader internet or local-network problem.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by Didier Misson via Wikimedia Commons, CC BY-SA 2.5  · CC BY-SA 2.5  · <a href="https://commons.wikimedia.org/wiki/File:La_Fonera_20_rear_ethernet_rj45_port.JPG" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>If you have a computer and a compatible Ethernet cable, connect it directly to the router or gateway and repeat the test.</p>
+<ul>
+<li>Ethernet good, Wi-Fi poor: focus on the wireless side.</li>
+<li>Ethernet and Wi-Fi both poor: focus on the modem, provider, router uplink, or internet plan.</li>
+<li>Ethernet cannot connect either: check the modem, router, cables, or provider outage.</li>
+</ul>
+<p>Do not unplug a provider-managed gateway or move cables you cannot identify. Photograph the existing connections before changing anything.</p>
+<h2 id="4-pause-background-traffic">4. Pause background traffic</h2>
+<p>One device can consume much of the available connection without looking dramatic.</p>
+<p>Check for:</p>
+<ul>
+<li>Operating-system updates</li>
+<li>Game downloads</li>
+<li>Cloud-photo synchronization</li>
+<li>Computer backups</li>
+<li>Security-camera uploads</li>
+<li>Large file transfers</li>
+<li>Several simultaneous video streams</li>
+<li>A device repeatedly retrying a failed download</li>
+</ul>
+<p>Pause the activity, wait a minute, and test again.</p>
+<p>This does not prove the router is defective. It may only show that the internet plan or local wireless capacity is being shared.</p>
+<h2 id="5-restart-the-modem-and-router-correctly">5. Restart the modem and router correctly</h2>
+<p>A restart can clear a stuck connection, renew the provider link, or recover from a temporary software fault.</p>
+<p>For separate modem and router devices, Microsoft’s general sequence is:</p>
+<ol>
+<li>Unplug the router.</li>
+<li>Unplug the modem.</li>
+<li>Wait about 30 seconds.</li>
+<li>Reconnect the modem and wait until its normal status lights settle.</li>
+<li>Reconnect the router and wait for it to finish starting.<sup><a href="#source-ms-fix-wifi" aria-label="Source 3: Fix Wi-Fi connection issues in Windows">[3]</a></sup></li>
+</ol>
+<p>If you have one combined gateway, restart only that device. Follow the provider or manufacturer instructions if they differ.</p>
+<p>A restart is not a factory reset. Do not press a recessed reset button unless you intend to erase the configuration.</p>
+<h2 id="6-check-cables-power-and-status-lights">6. Check cables, power, and status lights</h2>
+<p>Inspect without opening the equipment.</p>
+<ul>
+<li>Confirm the power connectors are fully seated.</li>
+<li>Confirm the modem-to-router Ethernet cable is secure.</li>
+<li>Look for a damaged cable or loose connector.</li>
+<li>Compare the indicator lights with the manual.</li>
+<li>Make sure the router is not repeatedly rebooting.</li>
+<li>Check whether the modem shows an outage or signal warning.</li>
+</ul>
+<p>Replace only cables you can identify and safely access.</p>
+<h2 id="7-move-closer-and-remove-obstacles">7. Move closer and remove obstacles</h2>
+<p>Google notes that Wi-Fi speed can vary with distance, frequency band, walls, and other physical barriers.<sup><a href="#source-google-nest-performance" aria-label="Source 2: How to improve Nest Wifi Pro, Nest Wifi or Google Wi-Fi speed and performance">[2]</a></sup></p>
+<p>Common signal blockers include:</p>
+<ul>
+<li>Multiple walls or floors</li>
+<li>Brick, concrete, stone, or tile</li>
+<li>Metal cabinets, ductwork, and appliances</li>
+<li>Large mirrors</li>
+<li>Aquariums and other large bodies of water</li>
+<li>A router hidden behind a television</li>
+<li>A router inside furniture</li>
+</ul>
+<p>If moving one room closer produces a major improvement, the connection may be healthy and the coverage simply inadequate at the original location.</p>
+<h2 id="8-improve-router-placement">8. Improve router placement</h2>
+<p>A router usually works best when it is:</p>
+<ul>
+<li>Near the center of the area that needs coverage</li>
+<li>Out in the open</li>
+<li>Off the floor</li>
+<li>Away from dense barriers and major appliances</li>
+<li>Given adequate ventilation</li>
+</ul>
+<p>Do not cover it, put it in an enclosed cabinet, balance it on unstable furniture, or place indoor equipment where it can get wet.</p>
+<p>See <strong>Best Place to Put Your Wi-Fi Router</strong> for a complete placement test.</p>
+<h2 id="9-try-another-frequency-band">9. Try another frequency band</h2>
+<p>Many routers support both 2.4 GHz and 5 GHz. Some also support 6 GHz.</p>
+<p>In general:</p>
+<ul>
+<li>2.4 GHz reaches farther and handles obstacles better, but it is often more crowded.</li>
+<li>5 GHz usually provides more capacity at shorter range.</li>
+<li>6 GHz can provide additional capacity for compatible devices, but range through walls is usually more limited.</li>
+</ul>
+<p>Microsoft recommends trying another band as part of connection troubleshooting.<sup><a href="#source-ms-fix-wifi" aria-label="Source 3: Fix Wi-Fi connection issues in Windows">[3]</a></sup></p>
+<p>Your router may use one network name for all bands and move devices automatically. Do not permanently split network names merely to chase one speed-test result. Use the manufacturer’s documentation before changing band or steering settings.</p>
+<h2 id="10-forget-and-rejoin-the-network-on-one-problem-device">10. Forget and rejoin the network on one problem device</h2>
+<p>A saved profile can become inconsistent after a password, security, or router-setting change.</p>
+<p>On a problem device:</p>
+<ol>
+<li>Confirm you know the Wi-Fi password.</li>
+<li>Forget or remove the saved network.</li>
+<li>Rejoin it.</li>
+<li>Test again.</li>
+</ol>
+<p>Apple, Google, and Microsoft all include forgetting and rejoining a network in their device troubleshooting guidance.<sup><a href="#source-ms-fix-wifi" aria-label="Source 3: Fix Wi-Fi connection issues in Windows">[3]</a></sup><sup><a href="#source-apple-iphone-wifi" aria-label="Source 4: If you can't connect to Wi-Fi on your iPhone or iPad">[4]</a></sup><sup><a href="#source-google-pixel-fix" aria-label="Source 5: How to fix Wi-Fi connection problems">[5]</a></sup></p>
+<p>Be cautious when devices share saved networks through an account or keychain. Forgetting one network may affect other devices.</p>
+<h2 id="11-update-the-router-and-the-device">11. Update the router and the device</h2>
+<p>Firmware and operating-system updates can fix stability, compatibility, performance, and security problems.</p>
+<ul>
+<li>Check the router manufacturer or ISP for the supported update method.</li>
+<li>Prefer automatic firmware updates when the router supports them.</li>
+<li>Update the phone, computer, or tablet.</li>
+<li>Use the device manufacturer’s driver rather than a random driver-download site.</li>
+<li>Replace unsupported network hardware that no longer receives security updates.</li>
+</ul>
+<p>Apple recommends current router firmware and automatic updates where available. The FTC also advises checking the manufacturer or ISP for router updates.<sup><a href="#source-apple-router-settings" aria-label="Source 6: Recommended settings for Wi-Fi routers and access points">[6]</a></sup><sup><a href="#source-ftc-home-wifi-security" aria-label="Source 7: How To Secure Your Home Wi-Fi Network">[7]</a></sup></p>
+<p>Back up router settings before making substantial configuration changes.</p>
+<h2 id="12-contact-the-isp-before-replacing-hardware">12. Contact the ISP before replacing hardware</h2>
+<p>Contact your provider when:</p>
+<ul>
+<li>Every device is slow beside the router</li>
+<li>Ethernet is also slow</li>
+<li>The modem shows abnormal status lights</li>
+<li>The connection drops at the same times every day</li>
+<li>The provider reports an outage</li>
+<li>Your measured performance remains far below the plan after repeated tests</li>
+<li>The gateway is provider-owned and cannot be updated or replaced by you</li>
+</ul>
+<p>Have these details ready:</p>
+<ul>
+<li>Account and service address</li>
+<li>Modem or gateway model</li>
+<li>Date and time of tests</li>
+<li>Wired and wireless results</li>
+<li>Whether every device is affected</li>
+<li>Status-light behavior</li>
+<li>Recent outages or equipment changes</li>
+</ul>
+<p>The FCC complaint system includes speed, latency, equipment, and interference as internet-service complaint categories, but first give the provider a reasonable opportunity to investigate.<sup><a href="#source-fcc-internet-complaints" aria-label="Source 8: Internet Form: Descriptions of Complaint Issues">[8]</a></sup></p>
+<h2 id="do-not-factory-reset-the-router-first">Do not factory-reset the router first</h2>
+<p>A factory reset can erase:</p>
+<ul>
+<li>Network name and password</li>
+<li>ISP settings</li>
+<li>Security settings</li>
+<li>Port forwarding</li>
+<li>Parental controls</li>
+<li>Device reservations</li>
+<li>Guest networks</li>
+<li>Mesh or access-point relationships</li>
+</ul>
+<p>Use it only when the manufacturer or provider recommends it and you have the information needed to rebuild the network.</p>
+<h2 id="when-new-hardware-might-actually-be-justified">When new hardware might actually be justified</h2>
+<p>Replacement or additional equipment may be reasonable when:</p>
+<ul>
+<li>The router no longer receives security updates</li>
+<li>It cannot provide WPA2 or WPA3 security</li>
+<li>It repeatedly crashes after supported firmware and power checks</li>
+<li>Coverage remains poor after placement changes</li>
+<li>The home is too large or structurally difficult for one access point</li>
+<li>Wired speed is healthy but the router cannot serve current devices reliably</li>
+<li>The provider confirms the gateway is faulty</li>
+</ul>
+<p>That decision belongs after diagnosis, not before it.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="why-is-the-speed-test-fast-but-streaming-still-buffers">Why is the speed test fast but streaming still buffers?</h3>
+<p>The problem may be intermittent packet loss, latency variation, the streaming service, Wi-Fi instability, VPN use, or another device consuming bandwidth. One speed test is only a snapshot.</p>
+<h3 id="why-is-wi-fi-slow-only-at-night">Why is Wi-Fi slow only at night?</h3>
+<p>More people may be using your home network, neighboring Wi-Fi channels, or the provider’s local network. Repeat tests beside the router and over Ethernet at several times.</p>
+<h3 id="will-restarting-the-router-make-wi-fi-faster">Will restarting the router make Wi-Fi faster?</h3>
+<p>It can resolve a temporary fault, but it does not fix poor placement, interference, an inadequate plan, or unsupported hardware.</p>
+<h3 id="does-a-full-wi-fi-signal-icon-mean-the-internet-is-fast">Does a full Wi-Fi signal icon mean the internet is fast?</h3>
+<p>No. The icon mainly represents the device’s link to the access point. The provider connection or remote service may still be slow.</p>
+<h3 id="should-i-change-channels-manually">Should I change channels manually?</h3>
+<p>Usually leave channel selection on Auto unless the router or manufacturer recommends otherwise. Manual channel changes can help in some environments, but random changes often create new problems.<sup><a href="#source-apple-router-settings" aria-label="Source 6: Recommended settings for Wi-Fi routers and access points">[6]</a></sup></p>
+<h2 id="related-wi-fi-guides">Related Wi-Fi guides</h2>
+<ul>
+<li><a href="/articles/best-place-to-put-wifi-router/">Choose and test a better router location</a></li>
+<li><a href="/articles/why-does-my-wifi-keep-disconnecting/">Diagnose repeated Wi-Fi disconnects</a></li>
+<li><a href="/articles/2-4-ghz-vs-5-ghz-wifi/">Compare 2.4 GHz and 5 GHz Wi-Fi</a></li>
+<li><a href="/articles/fix-wifi-dead-zones-without-buying-anything/">Fix Wi-Fi dead zones with free changes</a></li>
+<li><a href="/articles/home-wifi-dead-zone-checklist/">Use the printable dead-zone checklist</a></li>
+</ul> <section class="hb-sources" aria-labelledby="source-notes"> <div><span>Sources reviewed</span><h2 id="source-notes">Source notes</h2></div> <ol> <li id="source-ms-wifi-layout"><a href="https://support.microsoft.com/en-US/Windows/Experience/Connectivity-Networking/wi-fi-and-your-home-layout">Wi-Fi and your home layout</a><span>Microsoft Support</span></li><li id="source-google-nest-performance"><a href="https://support.google.com/googlenest/answer/7578264">How to improve Nest Wifi Pro, Nest Wifi or Google Wi-Fi speed and performance</a><span>Google Nest Help</span></li><li id="source-ms-fix-wifi"><a href="https://support.microsoft.com/en-us/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c">Fix Wi-Fi connection issues in Windows</a><span>Microsoft Support</span></li><li id="source-apple-iphone-wifi"><a href="https://support.apple.com/en-us/111786">If you can&#39;t connect to Wi-Fi on your iPhone or iPad</a><span>Apple Support</span></li><li id="source-google-pixel-fix"><a href="https://support.google.com/pixelphone/answer/6183600">How to fix Wi-Fi connection problems</a><span>Google Pixel Help</span></li><li id="source-apple-router-settings"><a href="https://support.apple.com/en-us/102766">Recommended settings for Wi-Fi routers and access points</a><span>Apple Support</span></li><li id="source-ftc-home-wifi-security"><a href="https://consumer.ftc.gov/articles/how-secure-your-home-wifi-network">How To Secure Your Home Wi-Fi Network</a><span>Federal Trade Commission</span></li><li id="source-fcc-internet-complaints"><a href="https://consumercomplaints.fcc.gov/hc/en-us/articles/115002206106-Internet-Form-Descriptions-of-Complaint-Issues">Internet Form: Descriptions of Complaint Issues</a><span>Federal Communications Commission</span></li> </ol> </section> <aside class="hb-related" aria-label="Related guides"> <p>Keep going</p> <div><a href="/articles/best-place-to-put-wifi-router/"><span>Home Tech</span><b>Best Place to Put Your Wi-Fi Router</b><i aria-hidden="true">→</i></a><a href="/articles/why-does-my-wifi-keep-disconnecting/"><span>Home Tech</span><b>Why Does My Wi-Fi Keep Disconnecting?</b><i aria-hidden="true">→</i></a><a href="/articles/2-4-ghz-vs-5-ghz-wifi/"><span>Home Tech</span><b>2.4 GHz vs. 5 GHz Wi-Fi: Which Should You Use?</b><i aria-hidden="true">→</i></a></div> </aside> <p class="hb-correction-link" data-astro-cid-zm77yjld>See something wrong or out of date? <a href="/corrections/" data-astro-cid-zm77yjld>Report a correction</a>.</p> </div> </div> </article>  </main> <footer class="hb-global-footer" data-pagefind-ignore="all"> <div class="hb-footer-mark">HOW BISCUIT<span>?</span></div> <p>Practical guides for technology, home, kitchens, shopping decisions, and useful tools.</p> <nav aria-label="Browse categories"> <a href="/home-tech/">Home Tech</a><a href="/home/">Home &amp; Apartment</a><a href="/kitchen/">Kitchen</a><a href="/shop/">Shop Smarter</a><a href="/tools/">Tools</a> <a href="/articles/">All Guides</a> </nav> <nav aria-label="Site information"> <a href="/about/">About</a> <a href="/editorial-policy/">Editorial policy</a> <a href="/corrections/">Corrections</a> <a href="/privacy/">Privacy</a> <a href="/affiliate-disclosure/">Affiliate disclosure</a> <a href="/contact/">Contact</a> <a href="/feed.xml">RSS</a> <a href="/sitemap.xml">Sitemap</a> </nav> </footer> </body></html>

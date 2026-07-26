@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Router placement comparison</title>
+<desc id="d">Two simplified floor plans compare a router in a corner cabinet with a router in a central open location.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial, sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="300" y="55" text-anchor="middle" fill="black" font-size="28">Edge and enclosed</text>
+<rect x="60" y="90" width="480" height="500"/>
+<line x1="300" y1="90" x2="300" y2="590"/><line x1="60" y1="340" x2="540" y2="340"/>
+<rect x="85" y="115" width="100" height="70" rx="8"/><text x="135" y="155" text-anchor="middle" fill="black" font-size="18">Router</text>
+<path d="M135 190 C260 220, 350 330, 430 520" stroke-dasharray="12 10"/>
+<text x="300" y="630" text-anchor="middle" fill="black" font-size="19">More walls; useful signal leaves the home</text>
+<text x="900" y="55" text-anchor="middle" fill="black" font-size="28">Central and open</text>
+<rect x="660" y="90" width="480" height="500"/>
+<line x1="900" y1="90" x2="900" y2="590"/><line x1="660" y1="340" x2="1140" y2="340"/>
+<rect x="850" y="300" width="100" height="70" rx="8"/><text x="900" y="340" text-anchor="middle" fill="black" font-size="18">Router</text>
+<circle cx="900" cy="335" r="175" stroke-dasharray="12 10"/>
+<text x="900" y="630" text-anchor="middle" fill="black" font-size="19">Shorter paths to important rooms</text>
+<text x="600" y="680" text-anchor="middle" fill="black" font-size="17">Illustrative floor plans. Actual coverage depends on layout, materials, equipment, and interference.</text>
+</g></svg>

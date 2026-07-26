@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Home Wi-Fi diagnosis flow</title>
+<desc id="d">A flowchart separates one-device problems, whole-network Wi-Fi problems, and internet-provider problems.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial, sans-serif" fill="none" stroke="black" stroke-width="3">
+<rect x="410" y="40" width="380" height="90" rx="18"/><text x="600" y="78" text-anchor="middle" fill="black" font-size="26">Wi-Fi feels slow or disconnects</text>
+<text x="600" y="110" text-anchor="middle" fill="black" font-size="19">Test another device in the same place</text>
+<line x1="600" y1="130" x2="600" y2="190"/>
+<rect x="410" y="190" width="380" height="90" rx="18"/><text x="600" y="228" text-anchor="middle" fill="black" font-size="24">Is only one device affected?</text>
+<line x1="410" y1="235" x2="235" y2="235"/><text x="330" y="220" fill="black" font-size="19">Yes</text>
+<rect x="40" y="190" width="300" height="150" rx="18"/><text x="190" y="230" text-anchor="middle" fill="black" font-size="23">Device path</text>
+<text x="190" y="265" text-anchor="middle" fill="black" font-size="18">Forget and rejoin</text>
+<text x="190" y="295" text-anchor="middle" fill="black" font-size="18">Update software or driver</text>
+<text x="190" y="325" text-anchor="middle" fill="black" font-size="18">Test on another network</text>
+<line x1="790" y1="235" x2="965" y2="235"/><text x="845" y="220" fill="black" font-size="19">No</text>
+<rect x="860" y="190" width="300" height="150" rx="18"/><text x="1010" y="230" text-anchor="middle" fill="black" font-size="23">Network path</text>
+<text x="1010" y="265" text-anchor="middle" fill="black" font-size="18">Test beside the router</text>
+<text x="1010" y="295" text-anchor="middle" fill="black" font-size="18">Check Ethernet if available</text>
+<text x="1010" y="325" text-anchor="middle" fill="black" font-size="18">Check modem and ISP</text>
+<line x1="1010" y1="340" x2="1010" y2="410"/>
+<rect x="820" y="410" width="380" height="105" rx="18"/><text x="1010" y="448" text-anchor="middle" fill="black" font-size="23">Good beside router?</text>
+<text x="1010" y="482" text-anchor="middle" fill="black" font-size="18">Yes: coverage or interference</text>
+<text x="1010" y="507" text-anchor="middle" fill="black" font-size="18">No: router, modem, ISP, or traffic</text>
+<rect x="350" y="570" width="500" height="85" rx="18"/><text x="600" y="607" text-anchor="middle" fill="black" font-size="23">Change one thing, then repeat the same test</text>
+<text x="600" y="637" text-anchor="middle" fill="black" font-size="18">Record location, device, band, speed, latency, and drops</text>
+</g></svg>

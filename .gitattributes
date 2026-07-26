@@ -1,1 +1,4 @@
 *.pdf binary
+site/articles/why-salt-melts-ice/index.html -whitespace
+site/h3-workers/*.js -whitespace
+site/pagefind/pagefind-component-ui.js -whitespace
