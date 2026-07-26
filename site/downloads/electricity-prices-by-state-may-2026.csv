@@ -1,0 +1,53 @@
+period,release_date,state_code,state,sector,price_cents_per_kwh,cost_of_100_kwh_usd,difference_from_us_average_cents_per_kwh,source,retrieved_at
+2026-05,2026-07-23,AL,Alabama,residential,16.77,16.77,-1.67,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,AK,Alaska,residential,28.23,28.23,9.79,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,AZ,Arizona,residential,15.23,15.23,-3.21,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,AR,Arkansas,residential,14.36,14.36,-4.08,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,CA,California,residential,33.25,33.25,14.81,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,CO,Colorado,residential,16.16,16.16,-2.28,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,CT,Connecticut,residential,27.37,27.37,8.93,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,DE,Delaware,residential,19.38,19.38,0.94,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,DC,District of Columbia,residential,25.40,25.40,6.96,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,FL,Florida,residential,15.17,15.17,-3.27,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,GA,Georgia,residential,15.84,15.84,-2.60,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,HI,Hawaii,residential,52.00,52.00,33.56,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,ID,Idaho,residential,12.35,12.35,-6.09,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,IL,Illinois,residential,23.85,23.85,5.41,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,IN,Indiana,residential,18.15,18.15,-0.29,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,IA,Iowa,residential,14.14,14.14,-4.30,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,KS,Kansas,residential,15.13,15.13,-3.31,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,KY,Kentucky,residential,14.98,14.98,-3.46,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,LA,Louisiana,residential,14.15,14.15,-4.29,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,ME,Maine,residential,28.63,28.63,10.19,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MD,Maryland,residential,21.77,21.77,3.33,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MA,Massachusetts,residential,28.82,28.82,10.38,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MI,Michigan,residential,22.01,22.01,3.57,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MN,Minnesota,residential,16.95,16.95,-1.49,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MS,Mississippi,residential,16.16,16.16,-2.28,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MO,Missouri,residential,13.68,13.68,-4.76,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,MT,Montana,residential,14.67,14.67,-3.77,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NE,Nebraska,residential,13.59,13.59,-4.85,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NV,Nevada,residential,13.60,13.60,-4.84,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NH,New Hampshire,residential,27.33,27.33,8.89,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NJ,New Jersey,residential,23.27,23.27,4.83,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NM,New Mexico,residential,14.12,14.12,-4.32,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NY,New York,residential,29.93,29.93,11.49,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,NC,North Carolina,residential,15.09,15.09,-3.35,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,ND,North Dakota,residential,13.61,13.61,-4.83,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,OH,Ohio,residential,19.52,19.52,1.08,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,OK,Oklahoma,residential,13.38,13.38,-5.06,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,OR,Oregon,residential,16.27,16.27,-2.17,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,PA,Pennsylvania,residential,21.55,21.55,3.11,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,RI,Rhode Island,residential,29.46,29.46,11.02,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,SC,South Carolina,residential,16.18,16.18,-2.26,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,SD,South Dakota,residential,15.73,15.73,-2.71,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,TN,Tennessee,residential,14.47,14.47,-3.97,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,TX,Texas,residential,16.44,16.44,-2.00,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,UT,Utah,residential,12.96,12.96,-5.48,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,VT,Vermont,residential,24.89,24.89,6.45,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,VA,Virginia,residential,17.61,17.61,-0.83,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,WA,Washington,residential,14.95,14.95,-3.49,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,WV,West Virginia,residential,16.80,16.80,-1.64,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,WI,Wisconsin,residential,19.74,19.74,1.30,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,WY,Wyoming,residential,14.80,14.80,-3.64,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z
+2026-05,2026-07-23,US,U.S. Total,residential,18.44,18.44,0.00,U.S. Energy Information Administration API v2 electricity/retail-sales,2026-07-26T04:57:28Z

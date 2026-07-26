@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "howbiscuit.eia-state-electricity-prices.v1",
+  "period": "2026-05",
+  "releaseDate": "2026-07-23",
+  "retrievedAt": "2026-07-26T04:57:28Z",
+  "sector": "residential",
+  "units": "cents per kilowatt-hour",
+  "usAverage": 18.44,
+  "source": {
+    "provider": "U.S. Energy Information Administration",
+    "apiRoute": "electricity/retail-sales",
+    "frequency": "monthly",
+    "dataField": "price",
+    "sectorFacet": "RES",
+    "documentation": "https://www.eia.gov/opendata/documentation.php"
+  },
+  "jurisdictions": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "price": 16.77
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "price": 28.23
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "price": 15.23
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "price": 14.36
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "price": 33.25
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "price": 16.16
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "price": 27.37
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "price": 19.38
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "price": 25.4
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "price": 15.17
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "price": 15.84
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "price": 52.0
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "price": 12.35
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "price": 23.85
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "price": 18.15
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "price": 14.14
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "price": 15.13
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "price": 14.98
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "price": 14.15
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "price": 28.63
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "price": 21.77
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "price": 28.82
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "price": 22.01
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "price": 16.95
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "price": 16.16
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "price": 13.68
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "price": 14.67
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "price": 13.59
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "price": 13.6
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "price": 27.33
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "price": 23.27
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "price": 14.12
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "price": 29.93
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "price": 15.09
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "price": 13.61
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "price": 19.52
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "price": 13.38
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "price": 16.27
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "price": 21.55
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "price": 29.46
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "price": 16.18
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "price": 15.73
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "price": 14.47
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "price": 16.44
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "price": 12.96
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "price": 24.89
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "price": 17.61
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "price": 14.95
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "price": 16.8
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "price": 19.74
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "price": 14.8
+    }
+  ]
+}

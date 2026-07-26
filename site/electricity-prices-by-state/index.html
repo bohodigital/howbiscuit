@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-preference="system"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let storedPreference = null;
+        try {
+          storedPreference = localStorage.getItem('howbiscuit-theme');
+        } catch { /* Storage may be denied; system preference still applies. */ }
+        const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';
+        let systemPrefersDark = false;
+        try {
+          systemPrefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch { /* Light is the safe fallback when media queries are unavailable. */ }
+        const resolved = preference === 'system' ? (systemPrefersDark ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.theme = resolved;
+      })();
+    </script><title>Residential Electricity Prices by State: May 2026 | How Biscuit</title><meta name="description" content="Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator."><meta name="robots" content="index, follow"><meta name="theme-color" content="#fff8e7"><link rel="canonical" href="https://howbiscuit.com/electricity-prices-by-state/"><link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml"><link rel="sitemap" href="/sitemap.xml"><meta property="og:type" content="website"><meta property="og:site_name" content="How Biscuit"><meta property="og:title" content="Residential Electricity Prices by State: May 2026 | How Biscuit"><meta property="og:description" content="Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator."><meta property="og:url" content="https://howbiscuit.com/electricity-prices-by-state/"><meta property="og:image" content="https://howbiscuit.com/og.png"><meta property="og:image:alt" content="How Biscuit practical guides and troubleshooting."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Residential Electricity Prices by State: May 2026 | How Biscuit"><meta name="twitter:description" content="Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator."><meta name="twitter:image" content="https://howbiscuit.com/og.png"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"How Biscuit","description":"Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.","url":"https://howbiscuit.com/","publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"WebPage","name":"Residential Electricity Prices by State: May 2026","description":"Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator.","url":"https://howbiscuit.com/electricity-prices-by-state/","isPartOf":{"@type":"WebSite","name":"How Biscuit","url":"https://howbiscuit.com/"}}]</script><script defer src="/analytics-bootstrap.js" data-analytics-bootstrap="boho-v1" data-umami-script-url="https://analytics.bohodigitalservices.com/script.js" data-umami-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-umami-domains="howbiscuit.com,www.howbiscuit.com" data-ga-id="G-NG0NQMVFEH" data-ga-public-hosts="howbiscuit.com,www.howbiscuit.com"></script><style>@media(min-width:58.001rem){.hb-content[data-astro-cid-zm77yjld]{grid-column:1;grid-row:1}.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:2;grid-row:1}}@media(max-width:58rem){.hb-content[data-astro-cid-zm77yjld],.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:1;grid-row:auto;min-width:0}}.hb-direct-answer[data-astro-cid-zm77yjld]{margin-top:1.2rem;border-left:4px solid var(--hb-tomato);padding-left:1rem;color:var(--hb-ink);font-size:clamp(1.05rem,2vw,1.3rem)}.hb-correction-link[data-astro-cid-zm77yjld]{margin-top:3rem;border-top:1px solid var(--hb-ink);padding-top:1rem}.hb-content[data-astro-cid-pwjejfi6]{min-width:0;overflow-wrap:anywhere}.hb-content[data-astro-cid-pwjejfi6] pre,.hb-content[data-astro-cid-pwjejfi6] table{display:block;max-width:100%;overflow-x:auto}.hb-empty-state p{color:var(--hb-ink-soft)}.hb-empty-state a{color:var(--hb-ink);font-weight:850}.hb-topic-section[data-astro-cid-fzx4jmue]{scroll-margin-top:6.5rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]{margin-top:4rem;border-top:2px solid var(--hb-ink);padding-top:1.2rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]>div[data-astro-cid-fzx4jmue]{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.8rem}.hb-neighbor-links[data-astro-cid-fzx4jmue] a[data-astro-cid-fzx4jmue]{border:1px solid var(--hb-ink);border-radius:999px;padding:.45rem .7rem;color:var(--hb-ink);text-decoration:none}
+</style>
+<link rel="stylesheet" href="/_astro/BaseLayout.Dx1DJXA0.css"></head> <body> <a class="hb-skip-link" href="#main-content">Skip to content</a> <header class="hb-custom-header" data-pagefind-ignore="all" data-astro-cid-ctg3m53h> <div class="hb-header-inner" data-astro-cid-ctg3m53h> <a class="hb-brand" href="/" aria-label="How Biscuit home" data-astro-cid-ctg3m53h> <span data-astro-cid-ctg3m53h>HOW BISCUIT</span><b aria-hidden="true" data-astro-cid-ctg3m53h>?</b><i data-astro-cid-ctg3m53h>Practical guides</i> </a> <nav class="hb-desktop-nav" aria-label="Primary navigation" data-astro-cid-ctg3m53h> <details class="hb-category-menu" name="hb-primary-navigation" data-category="home-tech" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home Tech published topics" data-astro-cid-ctg3m53h> <a href="/home-tech/#topic-wifi-routers" aria-label="Wi-Fi &amp; Routers, 8 published guides" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers<span aria-hidden="true" data-astro-cid-ctg3m53h>8</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/does-aluminum-foil-improve-wifi-signal/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Does Aluminum Foil Improve Wi-Fi Signal?</strong><small data-astro-cid-ctg3m53h>Metal can redirect Wi-Fi, but the famous study used computer-optimized 3D reflectors coated with foil. Random kitchen foil can help one direction and hurt another.</small></a><a href="/articles/where-to-place-wifi-extender/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Where Should You Place a Wi-Fi Extender?</strong><small data-astro-cid-ctg3m53h>Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="home" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home &amp; Apartment published topics" data-astro-cid-ctg3m53h> <a href="/home/#topic-heating-cooling" aria-label="Heating &amp; Cooling, 5 published guides" data-astro-cid-ctg3m53h>Heating &amp; Cooling<span aria-hidden="true" data-astro-cid-ctg3m53h>5</span></a><a href="/home/#topic-utilities-energy" aria-label="Utilities &amp; Energy, 4 published guides" data-astro-cid-ctg3m53h>Utilities &amp; Energy<span aria-hidden="true" data-astro-cid-ctg3m53h>4</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</strong><small data-astro-cid-ctg3m53h>Estimate dryer cost from measured or certified kWh per cycle. A standardized electric-dryer example can range from about 17 to 40 cents per test load at 18.44 cents/kWh.</small></a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</strong><small data-astro-cid-ctg3m53h>Calculate appliance cost from annual kWh, measured kWh, or watts and time. Learn which method works for refrigerators, dryers, dishwashers, ovens, and small appliances.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="kitchen" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p></div> <div class="hb-topic-labels" role="group" aria-label="Kitchen published topics" data-astro-cid-ctg3m53h> <a href="/kitchen/#topic-food-science" aria-label="Food Science, 1 published guide" data-astro-cid-ctg3m53h>Food Science<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a><a href="/kitchen/#topic-troubleshooting-safety" aria-label="Kitchen Troubleshooting &amp; Safety, 11 published guides" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety<span aria-hidden="true" data-astro-cid-ctg3m53h>11</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</strong><small data-astro-cid-ctg3m53h>Compare exact wattage, preheat, cooking time, batches, and servings. A small air fryer often uses less for a small meal, but capacity can reverse the result.</small></a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</strong><small data-astro-cid-ctg3m53h>Divide annual kWh by annual test cycles, then multiply by your rate. A 240 kWh/year dishwasher works out to about 21 cents per standardized cycle at 18.44 cents/kWh.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="shop" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p></div>   </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="tools" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p></div> <div class="hb-topic-labels" role="group" aria-label="Tools published topics" data-astro-cid-ctg3m53h> <a href="/tools/#topic-checklists" aria-label="Checklists, 1 published guide" data-astro-cid-ctg3m53h>Checklists<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</strong><small data-astro-cid-ctg3m53h>Use this step-by-step home energy checklist to find why a summer electric bill increased, from billing days and rates to AC filters, air leaks, and hidden loads.</small></a> </div> </div> </details> <a class="hb-all-guides-link" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme: System</button> </nav> <div class="hb-mobile-actions" data-astro-cid-ctg3m53h> <button class="hb-header-action" id="mobile-navigation-trigger" type="button" data-open-modal="mobile-navigation" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Menu</button> <button class="hb-header-action" id="mobile-search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme</button> </div> </div> </header> <noscript> <details class="hb-noscript-navigation" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Browse How Biscuit</summary> <nav aria-label="Primary navigation without JavaScript" data-astro-cid-ctg3m53h> <div data-astro-cid-ctg3m53h> <a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong></a> <a href="/articles/does-aluminum-foil-improve-wifi-signal/" data-astro-cid-ctg3m53h>Does Aluminum Foil Improve Wi-Fi Signal?</a><a href="/articles/where-to-place-wifi-extender/" data-astro-cid-ctg3m53h>Where Should You Place a Wi-Fi Extender?</a> </div><div data-astro-cid-ctg3m53h> <a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong></a> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</a> </div><div data-astro-cid-ctg3m53h> <a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong></a> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</a> </div><div data-astro-cid-ctg3m53h> <a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong></a>  </div><div data-astro-cid-ctg3m53h> <a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong></a> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </details> </noscript> <dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="mobile-navigation-title" data-astro-cid-ctg3m53h>Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu" data-astro-cid-ctg3m53h>Close</button></header> <nav aria-label="Mobile navigation" data-astro-cid-ctg3m53h> <details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home-tech/" data-astro-cid-ctg3m53h>Open Home Tech →</a> <p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home-tech/#topic-wifi-routers" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers</a></p> <a href="/articles/does-aluminum-foil-improve-wifi-signal/" data-astro-cid-ctg3m53h>Does Aluminum Foil Improve Wi-Fi Signal?</a><a href="/articles/where-to-place-wifi-extender/" data-astro-cid-ctg3m53h>Where Should You Place a Wi-Fi Extender?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home/" data-astro-cid-ctg3m53h>Open Home &amp; Apartment →</a> <p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home/#topic-heating-cooling" data-astro-cid-ctg3m53h>Heating &amp; Cooling</a><a href="/home/#topic-utilities-energy" data-astro-cid-ctg3m53h>Utilities &amp; Energy</a></p> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/kitchen/" data-astro-cid-ctg3m53h>Open Kitchen →</a> <p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/kitchen/#topic-food-science" data-astro-cid-ctg3m53h>Food Science</a><a href="/kitchen/#topic-troubleshooting-safety" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety</a></p> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/shop/" data-astro-cid-ctg3m53h>Open Shop Smarter →</a> <p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p>   </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/tools/" data-astro-cid-ctg3m53h>Open Tools →</a> <p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/tools/#topic-checklists" data-astro-cid-ctg3m53h>Checklists</a></p> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> </details> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </div> </dialog> <dialog class="hb-shell-dialog hb-search-dialog" id="search-dialog" aria-labelledby="search-dialog-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="search-dialog-title" data-astro-cid-ctg3m53h>Search How Biscuit</h2><button type="button" data-close-modal aria-label="Close search" data-astro-cid-ctg3m53h>Close</button></header> <form class="hb-search-form" role="search" data-astro-cid-ctg3m53h> <label for="howbiscuit-search-input" data-astro-cid-ctg3m53h>Search published guides and pages</label> <div data-astro-cid-ctg3m53h><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" data-astro-cid-ctg3m53h><button type="submit" data-astro-cid-ctg3m53h>Search</button></div> </form> <p class="hb-search-status" role="status" aria-live="polite" data-astro-cid-ctg3m53h>Enter a word or phrase to search.</p> <div class="hb-search-results" role="region" aria-label="Search results" data-astro-cid-ctg3m53h></div> </div> </dialog>  <script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js"></script> <main id="main-content" class="hb-main hb-trust-page" data-pagefind-body> <span hidden aria-hidden="true" data-pagefind-filter="type">Data</span> <span hidden aria-hidden="true" data-pagefind-meta="title">Residential Electricity Prices by State: May 2026</span> <span hidden aria-hidden="true" data-pagefind-meta="description">Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator.</span> <span hidden aria-hidden="true" data-pagefind-meta="route">/electricity-prices-by-state/</span>   <div class="hb-page-shell hb-trust-shell" data-astro-cid-pwjejfi6> <nav class="hb-breadcrumbs" aria-label="Breadcrumb"> <ol> <li> <a href="/">Home</a> <b aria-hidden="true">/</b> </li><li> <span aria-current="page">Residential Electricity Prices by State: May 2026</span>  </li> </ol> </nav> <header class="hb-page-title" data-astro-cid-pwjejfi6><span data-astro-cid-pwjejfi6>How Biscuit</span><h1 data-pagefind-meta="title" data-astro-cid-pwjejfi6>Residential Electricity Prices by State: May 2026</h1><p data-pagefind-meta="description" data-astro-cid-pwjejfi6>Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator.</p></header> <div class="hb-content" data-astro-cid-pwjejfi6><p>The U.S. residential average electricity price was <strong>18.44 cents per kilowatt-hour in May 2026</strong>.</p>
+<p>State averages ranged from <strong>12.35 cents per kWh in Idaho</strong> to <strong>52.00 cents per kWh in Hawaii</strong>.</p>
+<p>These are statewide monthly averages from the U.S. Energy Information Administration. They are not personal utility rates, posted tariffs, or guaranteed marginal prices.</p>
+<p><strong>Data period:</strong> May 2026<br/>
+<strong>EIA release date:</strong> July 23, 2026<br/>
+<strong>Dataset:</strong> EIA API v2, <code>electricity/retail-sales</code><br/>
+<strong>Sector:</strong> Residential<br/>
+<strong>Unit:</strong> cents per kilowatt-hour<br/>
+<strong>Download:</strong> <a href="/downloads/electricity-prices-by-state-may-2026.csv">May 2026 state-price CSV</a></p>
+<h2 id="what-the-state-average-means">What the state average means</h2>
+<p>EIA calculates average retail prices from electricity revenue and sales.</p>
+<p>A state average can differ from your bill because of:</p>
+<ul>
+<li>Utility</li>
+<li>City or service territory</li>
+<li>Supply provider</li>
+<li>Monthly fixed charge</li>
+<li>Seasonal rate</li>
+<li>Tier</li>
+<li>Time-of-use period</li>
+<li>Taxes and riders</li>
+<li>Credits</li>
+<li>Distributed generation</li>
+<li>Billing adjustments</li>
+</ul>
+<p>Use your bill for a personal appliance calculation.</p>
+<h2 id="highest-state-averages">Highest state averages</h2>
+<p>The five highest May 2026 averages were:</p>
+<p>Hawaii (52.00¢), California (33.25¢), New York (29.93¢), Rhode Island (29.46¢), Massachusetts (28.82¢).</p>
+<h2 id="lowest-state-averages">Lowest state averages</h2>
+<p>The five lowest were:</p>
+<p>Idaho (12.35¢), Utah (12.96¢), Oklahoma (13.38¢), Nebraska (13.59¢), Nevada (13.60¢).</p>
+<h2 id="cost-of-100-kwh">Cost of 100 kWh</h2>
+<p>At the U.S. average:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>100 \text( kWh) \times \$0.1844 = \$18.44</span></span></code></pre>
+<p>At Hawaii’s state average:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>100 \times \$0.52 = \$52.00</span></span></code></pre>
+<p>At Idaho’s state average:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>100 \times \$0.1235 = \$12.35</span></span></code></pre>
+<p>This does not include a separately billed fixed charge.</p>
+<h2 id="state-table">State table</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>State</th><th style="text-align:right">May 2026 residential price</th><th style="text-align:right">Cost of 100 kWh</th><th style="text-align:right">Difference from U.S. average</th></tr></thead><tbody><tr><td>Alabama</td><td style="text-align:right">16.77¢/kWh</td><td style="text-align:right">$16.77</td><td style="text-align:right">-1.67¢/kWh</td></tr><tr><td>Alaska</td><td style="text-align:right">28.23¢/kWh</td><td style="text-align:right">$28.23</td><td style="text-align:right">+9.79¢/kWh</td></tr><tr><td>Arizona</td><td style="text-align:right">15.23¢/kWh</td><td style="text-align:right">$15.23</td><td style="text-align:right">-3.21¢/kWh</td></tr><tr><td>Arkansas</td><td style="text-align:right">14.36¢/kWh</td><td style="text-align:right">$14.36</td><td style="text-align:right">-4.08¢/kWh</td></tr><tr><td>California</td><td style="text-align:right">33.25¢/kWh</td><td style="text-align:right">$33.25</td><td style="text-align:right">+14.81¢/kWh</td></tr><tr><td>Colorado</td><td style="text-align:right">16.16¢/kWh</td><td style="text-align:right">$16.16</td><td style="text-align:right">-2.28¢/kWh</td></tr><tr><td>Connecticut</td><td style="text-align:right">27.37¢/kWh</td><td style="text-align:right">$27.37</td><td style="text-align:right">+8.93¢/kWh</td></tr><tr><td>Delaware</td><td style="text-align:right">19.38¢/kWh</td><td style="text-align:right">$19.38</td><td style="text-align:right">+0.94¢/kWh</td></tr><tr><td>District of Columbia</td><td style="text-align:right">25.40¢/kWh</td><td style="text-align:right">$25.40</td><td style="text-align:right">+6.96¢/kWh</td></tr><tr><td>Florida</td><td style="text-align:right">15.17¢/kWh</td><td style="text-align:right">$15.17</td><td style="text-align:right">-3.27¢/kWh</td></tr><tr><td>Georgia</td><td style="text-align:right">15.84¢/kWh</td><td style="text-align:right">$15.84</td><td style="text-align:right">-2.60¢/kWh</td></tr><tr><td>Hawaii</td><td style="text-align:right">52.00¢/kWh</td><td style="text-align:right">$52.00</td><td style="text-align:right">+33.56¢/kWh</td></tr><tr><td>Idaho</td><td style="text-align:right">12.35¢/kWh</td><td style="text-align:right">$12.35</td><td style="text-align:right">-6.09¢/kWh</td></tr><tr><td>Illinois</td><td style="text-align:right">23.85¢/kWh</td><td style="text-align:right">$23.85</td><td style="text-align:right">+5.41¢/kWh</td></tr><tr><td>Indiana</td><td style="text-align:right">18.15¢/kWh</td><td style="text-align:right">$18.15</td><td style="text-align:right">-0.29¢/kWh</td></tr><tr><td>Iowa</td><td style="text-align:right">14.14¢/kWh</td><td style="text-align:right">$14.14</td><td style="text-align:right">-4.30¢/kWh</td></tr><tr><td>Kansas</td><td style="text-align:right">15.13¢/kWh</td><td style="text-align:right">$15.13</td><td style="text-align:right">-3.31¢/kWh</td></tr><tr><td>Kentucky</td><td style="text-align:right">14.98¢/kWh</td><td style="text-align:right">$14.98</td><td style="text-align:right">-3.46¢/kWh</td></tr><tr><td>Louisiana</td><td style="text-align:right">14.15¢/kWh</td><td style="text-align:right">$14.15</td><td style="text-align:right">-4.29¢/kWh</td></tr><tr><td>Maine</td><td style="text-align:right">28.63¢/kWh</td><td style="text-align:right">$28.63</td><td style="text-align:right">+10.19¢/kWh</td></tr><tr><td>Maryland</td><td style="text-align:right">21.77¢/kWh</td><td style="text-align:right">$21.77</td><td style="text-align:right">+3.33¢/kWh</td></tr><tr><td>Massachusetts</td><td style="text-align:right">28.82¢/kWh</td><td style="text-align:right">$28.82</td><td style="text-align:right">+10.38¢/kWh</td></tr><tr><td>Michigan</td><td style="text-align:right">22.01¢/kWh</td><td style="text-align:right">$22.01</td><td style="text-align:right">+3.57¢/kWh</td></tr><tr><td>Minnesota</td><td style="text-align:right">16.95¢/kWh</td><td style="text-align:right">$16.95</td><td style="text-align:right">-1.49¢/kWh</td></tr><tr><td>Mississippi</td><td style="text-align:right">16.16¢/kWh</td><td style="text-align:right">$16.16</td><td style="text-align:right">-2.28¢/kWh</td></tr><tr><td>Missouri</td><td style="text-align:right">13.68¢/kWh</td><td style="text-align:right">$13.68</td><td style="text-align:right">-4.76¢/kWh</td></tr><tr><td>Montana</td><td style="text-align:right">14.67¢/kWh</td><td style="text-align:right">$14.67</td><td style="text-align:right">-3.77¢/kWh</td></tr><tr><td>Nebraska</td><td style="text-align:right">13.59¢/kWh</td><td style="text-align:right">$13.59</td><td style="text-align:right">-4.85¢/kWh</td></tr><tr><td>Nevada</td><td style="text-align:right">13.60¢/kWh</td><td style="text-align:right">$13.60</td><td style="text-align:right">-4.84¢/kWh</td></tr><tr><td>New Hampshire</td><td style="text-align:right">27.33¢/kWh</td><td style="text-align:right">$27.33</td><td style="text-align:right">+8.89¢/kWh</td></tr><tr><td>New Jersey</td><td style="text-align:right">23.27¢/kWh</td><td style="text-align:right">$23.27</td><td style="text-align:right">+4.83¢/kWh</td></tr><tr><td>New Mexico</td><td style="text-align:right">14.12¢/kWh</td><td style="text-align:right">$14.12</td><td style="text-align:right">-4.32¢/kWh</td></tr><tr><td>New York</td><td style="text-align:right">29.93¢/kWh</td><td style="text-align:right">$29.93</td><td style="text-align:right">+11.49¢/kWh</td></tr><tr><td>North Carolina</td><td style="text-align:right">15.09¢/kWh</td><td style="text-align:right">$15.09</td><td style="text-align:right">-3.35¢/kWh</td></tr><tr><td>North Dakota</td><td style="text-align:right">13.61¢/kWh</td><td style="text-align:right">$13.61</td><td style="text-align:right">-4.83¢/kWh</td></tr><tr><td>Ohio</td><td style="text-align:right">19.52¢/kWh</td><td style="text-align:right">$19.52</td><td style="text-align:right">+1.08¢/kWh</td></tr><tr><td>Oklahoma</td><td style="text-align:right">13.38¢/kWh</td><td style="text-align:right">$13.38</td><td style="text-align:right">-5.06¢/kWh</td></tr><tr><td>Oregon</td><td style="text-align:right">16.27¢/kWh</td><td style="text-align:right">$16.27</td><td style="text-align:right">-2.17¢/kWh</td></tr><tr><td>Pennsylvania</td><td style="text-align:right">21.55¢/kWh</td><td style="text-align:right">$21.55</td><td style="text-align:right">+3.11¢/kWh</td></tr><tr><td>Rhode Island</td><td style="text-align:right">29.46¢/kWh</td><td style="text-align:right">$29.46</td><td style="text-align:right">+11.02¢/kWh</td></tr><tr><td>South Carolina</td><td style="text-align:right">16.18¢/kWh</td><td style="text-align:right">$16.18</td><td style="text-align:right">-2.26¢/kWh</td></tr><tr><td>South Dakota</td><td style="text-align:right">15.73¢/kWh</td><td style="text-align:right">$15.73</td><td style="text-align:right">-2.71¢/kWh</td></tr><tr><td>Tennessee</td><td style="text-align:right">14.47¢/kWh</td><td style="text-align:right">$14.47</td><td style="text-align:right">-3.97¢/kWh</td></tr><tr><td>Texas</td><td style="text-align:right">16.44¢/kWh</td><td style="text-align:right">$16.44</td><td style="text-align:right">-2.00¢/kWh</td></tr><tr><td>Utah</td><td style="text-align:right">12.96¢/kWh</td><td style="text-align:right">$12.96</td><td style="text-align:right">-5.48¢/kWh</td></tr><tr><td>Vermont</td><td style="text-align:right">24.89¢/kWh</td><td style="text-align:right">$24.89</td><td style="text-align:right">+6.45¢/kWh</td></tr><tr><td>Virginia</td><td style="text-align:right">17.61¢/kWh</td><td style="text-align:right">$17.61</td><td style="text-align:right">-0.83¢/kWh</td></tr><tr><td>Washington</td><td style="text-align:right">14.95¢/kWh</td><td style="text-align:right">$14.95</td><td style="text-align:right">-3.49¢/kWh</td></tr><tr><td>West Virginia</td><td style="text-align:right">16.80¢/kWh</td><td style="text-align:right">$16.80</td><td style="text-align:right">-1.64¢/kWh</td></tr><tr><td>Wisconsin</td><td style="text-align:right">19.74¢/kWh</td><td style="text-align:right">$19.74</td><td style="text-align:right">+1.30¢/kWh</td></tr><tr><td>Wyoming</td><td style="text-align:right">14.80¢/kWh</td><td style="text-align:right">$14.80</td><td style="text-align:right">-3.64¢/kWh</td></tr></tbody></table>
+<h2 id="use-a-state-average-in-the-calculator">Use a state average in the calculator</h2>
+<p>The <a href="/tools/appliance-electricity-cost-calculator/">Appliance Electricity Cost Calculator</a> can load one of these state averages into its rate field.</p>
+<p>The selection:</p>
+<ul>
+<li>Is manual</li>
+<li>Does not use device location</li>
+<li>Does not identify a utility</li>
+<li>Can be overwritten with the reader’s own rate</li>
+<li>Remains in the browser</li>
+</ul>
+<h2 id="methodology">Methodology</h2>
+<p>Source query:</p>
+<ul>
+<li>Route: <code>electricity/retail-sales</code></li>
+<li>Frequency: monthly</li>
+<li>Data field: <code>price</code></li>
+<li>Sector: residential</li>
+<li>Period: <code>2026-05</code></li>
+<li>State records: 50 states and District of Columbia</li>
+<li>U.S. average: 18.44 cents/kWh</li>
+</ul>
+<p>The public page should display:</p>
+<ul>
+<li>Data period</li>
+<li>Release date</li>
+<li>Retrieval date</li>
+<li>Source attribution</li>
+<li>Methodology</li>
+<li>Revision note</li>
+<li>CSV digest</li>
+<li>Next freshness check</li>
+</ul>
+<h2 id="revision-and-freshness-policy">Revision and freshness policy</h2>
+<p>EIA may revise previously published values.</p>
+<p>Before publication:</p>
+<ol>
+<li>Check the accepted EIA partition.</li>
+<li>Check EIA revision notices.</li>
+<li>Confirm the current release remains May 2026.</li>
+<li>If a newer accepted monthly release exists, update:
+<ul>
+<li>State table</li>
+<li>CSV</li>
+<li>U.S. default</li>
+<li>Tool state selector</li>
+<li>Worked examples that use the national rate</li>
+<li>Page title and metadata</li>
+<li>Source and artifact digests</li>
+</ul>
+</li>
+</ol>
+<p>Do not silently mix periods.</p>
+<h2 id="important-limitations">Important limitations</h2>
+<ul>
+<li>This is a monthly statewide average.</li>
+<li>It is not an annual average.</li>
+<li>It is not a forecast.</li>
+<li>It is not a utility plan.</li>
+<li>It is not a marginal rate.</li>
+<li>It may reflect the mix of customers, weather, billing, and rate structures in the month.</li>
+<li>Fixed customer charges cannot be removed by reducing one appliance’s energy use.</li>
+</ul>
+<h2 id="internal-links">Internal links</h2>
+<ul>
+<li><a href="/tools/appliance-electricity-cost-calculator/">Appliance Electricity Cost Calculator</a></li>
+<li><a href="/articles/how-to-calculate-appliance-electricity-cost/">How to Calculate Appliance Electricity Cost</a></li>
+<li><a href="/articles/why-electric-bill-high-summer/">Why Is My Electric Bill So High in Summer?</a></li>
+<li><a href="/articles/home-energy-check-high-summer-bill/">Home Energy Check</a></li>
+<li><a href="/articles/how-much-does-refrigerator-cost-to-run/">Refrigerator Cost</a></li>
+<li><a href="/articles/how-much-does-dishwasher-cost-per-load/">Dishwasher Cost</a></li>
+<li><a href="/articles/how-much-does-electric-dryer-cost-per-load/">Dryer Cost</a></li>
+<li><a href="/articles/how-much-does-electric-oven-cost-per-hour/">Oven Cost</a></li>
+<li><a href="/articles/how-much-does-washing-machine-cost-per-load/">Washing Machine Cost</a></li>
+<li><a href="/articles/how-much-electricity-does-microwave-use/">Microwave Cost</a></li>
+</ul>
+<p>The accepted public CSV SHA-256 digest is <code>cbf8122ee68bc5f56d152898111bf3dbcb2aa36ce5bf40bc9b526107cb3da845</code>.</p>
+<p>Source: <a href="https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a">U.S. Energy Information Administration, Table 5.6.A</a>. Values are preliminary and may be revised.</p></div> </div>  </main> <footer class="hb-global-footer" data-pagefind-ignore="all"> <div class="hb-footer-mark">HOW BISCUIT<span>?</span></div> <p>Practical guides for technology, home, kitchens, shopping decisions, and useful tools.</p> <nav aria-label="Browse categories"> <a href="/home-tech/">Home Tech</a><a href="/home/">Home &amp; Apartment</a><a href="/kitchen/">Kitchen</a><a href="/shop/">Shop Smarter</a><a href="/tools/">Tools</a> <a href="/articles/">All Guides</a> </nav> <nav aria-label="Site information"> <a href="/about/">About</a> <a href="/editorial-policy/">Editorial policy</a> <a href="/corrections/">Corrections</a> <a href="/privacy/">Privacy</a> <a href="/affiliate-disclosure/">Affiliate disclosure</a> <a href="/contact/">Contact</a> <a href="/feed.xml">RSS</a> <a href="/sitemap.xml">Sitemap</a> </nav> </footer> </body></html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-preference="system"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let storedPreference = null;
+        try {
+          storedPreference = localStorage.getItem('howbiscuit-theme');
+        } catch { /* Storage may be denied; system preference still applies. */ }
+        const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';
+        let systemPrefersDark = false;
+        try {
+          systemPrefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch { /* Light is the safe fallback when media queries are unavailable. */ }
+        const resolved = preference === 'system' ? (systemPrefersDark ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.theme = resolved;
+      })();
+    </script><title>Where Should You Place a Wi-Fi Extender? | How Biscuit</title><meta name="description" content="Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther."><meta name="robots" content="index, follow"><meta name="theme-color" content="#fff8e7"><link rel="canonical" href="https://howbiscuit.com/articles/where-to-place-wifi-extender/"><link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml"><link rel="sitemap" href="/sitemap.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="How Biscuit"><meta property="og:title" content="Where Should You Place a Wi-Fi Extender? | How Biscuit"><meta property="og:description" content="Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther."><meta property="og:url" content="https://howbiscuit.com/articles/where-to-place-wifi-extender/"><meta property="og:image" content="https://howbiscuit.com/images/articles/where-to-place-wifi-extender/photo-extender.jpg"><meta property="og:image:alt" content="A real plug-in Wi-Fi range extender in a wall outlet"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Where Should You Place a Wi-Fi Extender? | How Biscuit"><meta name="twitter:description" content="Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther."><meta name="twitter:image" content="https://howbiscuit.com/images/articles/where-to-place-wifi-extender/photo-extender.jpg"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"How Biscuit","description":"Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.","url":"https://howbiscuit.com/","publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"Article","headline":"Where Should You Place a Wi-Fi Extender?","description":"Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther.","url":"https://howbiscuit.com/articles/where-to-place-wifi-extender/","datePublished":"2026-07-26","dateModified":"2026-07-26","articleSection":"Home Tech","about":"Wi-Fi \u0026 Routers","author":{"@type":"Organization","name":"How Biscuit"},"publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://howbiscuit.com/"},{"@type":"ListItem","position":2,"name":"Home Tech","item":"https://howbiscuit.com/home-tech/"},{"@type":"ListItem","position":3,"name":"Wi-Fi \u0026 Routers","item":"https://howbiscuit.com/home-tech/#topic-wifi-routers"},{"@type":"ListItem","position":4,"name":"Where Should You Place a Wi-Fi Extender?"}]}]</script><script defer src="/analytics-bootstrap.js" data-analytics-bootstrap="boho-v1" data-umami-script-url="https://analytics.bohodigitalservices.com/script.js" data-umami-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-umami-domains="howbiscuit.com,www.howbiscuit.com" data-ga-id="G-NG0NQMVFEH" data-ga-public-hosts="howbiscuit.com,www.howbiscuit.com"></script><style>@media(min-width:58.001rem){.hb-content[data-astro-cid-zm77yjld]{grid-column:1;grid-row:1}.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:2;grid-row:1}}@media(max-width:58rem){.hb-content[data-astro-cid-zm77yjld],.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:1;grid-row:auto;min-width:0}}.hb-direct-answer[data-astro-cid-zm77yjld]{margin-top:1.2rem;border-left:4px solid var(--hb-tomato);padding-left:1rem;color:var(--hb-ink);font-size:clamp(1.05rem,2vw,1.3rem)}.hb-correction-link[data-astro-cid-zm77yjld]{margin-top:3rem;border-top:1px solid var(--hb-ink);padding-top:1rem}.hb-content[data-astro-cid-pwjejfi6]{min-width:0;overflow-wrap:anywhere}.hb-content[data-astro-cid-pwjejfi6] pre,.hb-content[data-astro-cid-pwjejfi6] table{display:block;max-width:100%;overflow-x:auto}.hb-empty-state p{color:var(--hb-ink-soft)}.hb-empty-state a{color:var(--hb-ink);font-weight:850}.hb-topic-section[data-astro-cid-fzx4jmue]{scroll-margin-top:6.5rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]{margin-top:4rem;border-top:2px solid var(--hb-ink);padding-top:1.2rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]>div[data-astro-cid-fzx4jmue]{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.8rem}.hb-neighbor-links[data-astro-cid-fzx4jmue] a[data-astro-cid-fzx4jmue]{border:1px solid var(--hb-ink);border-radius:999px;padding:.45rem .7rem;color:var(--hb-ink);text-decoration:none}
+</style>
+<link rel="stylesheet" href="/_astro/BaseLayout.Dx1DJXA0.css"><style>.hb-article-media[data-astro-cid-ryrfu6xi]{margin:2rem 0}.hb-article-media[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{display:block;width:100%;max-height:38rem;object-fit:cover;border:1px solid var(--hb-ink);border-radius:1rem;background:var(--hb-paper)}.hb-article-media-hero[data-astro-cid-ryrfu6xi]{margin-top:0}.hb-article-media-hero[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{aspect-ratio:16 / 9}.hb-article-media[data-astro-cid-ryrfu6xi] figcaption[data-astro-cid-ryrfu6xi]{display:grid;gap:.25rem;margin-top:.55rem;color:var(--hb-muted-ink);font-size:.9rem;line-height:1.45}.hb-article-media-credit[data-astro-cid-ryrfu6xi]{font-size:.8rem}
+</style></head> <body> <a class="hb-skip-link" href="#main-content">Skip to content</a> <header class="hb-custom-header" data-pagefind-ignore="all" data-astro-cid-ctg3m53h> <div class="hb-header-inner" data-astro-cid-ctg3m53h> <a class="hb-brand" href="/" aria-label="How Biscuit home" data-astro-cid-ctg3m53h> <span data-astro-cid-ctg3m53h>HOW BISCUIT</span><b aria-hidden="true" data-astro-cid-ctg3m53h>?</b><i data-astro-cid-ctg3m53h>Practical guides</i> </a> <nav class="hb-desktop-nav" aria-label="Primary navigation" data-astro-cid-ctg3m53h> <details class="hb-category-menu" name="hb-primary-navigation" data-category="home-tech" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home Tech published topics" data-astro-cid-ctg3m53h> <a href="/home-tech/#topic-wifi-routers" aria-label="Wi-Fi &amp; Routers, 8 published guides" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers<span aria-hidden="true" data-astro-cid-ctg3m53h>8</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/does-aluminum-foil-improve-wifi-signal/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Does Aluminum Foil Improve Wi-Fi Signal?</strong><small data-astro-cid-ctg3m53h>Metal can redirect Wi-Fi, but the famous study used computer-optimized 3D reflectors coated with foil. Random kitchen foil can help one direction and hurt another.</small></a><a href="/articles/where-to-place-wifi-extender/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Where Should You Place a Wi-Fi Extender?</strong><small data-astro-cid-ctg3m53h>Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="home" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home &amp; Apartment published topics" data-astro-cid-ctg3m53h> <a href="/home/#topic-heating-cooling" aria-label="Heating &amp; Cooling, 5 published guides" data-astro-cid-ctg3m53h>Heating &amp; Cooling<span aria-hidden="true" data-astro-cid-ctg3m53h>5</span></a><a href="/home/#topic-utilities-energy" aria-label="Utilities &amp; Energy, 4 published guides" data-astro-cid-ctg3m53h>Utilities &amp; Energy<span aria-hidden="true" data-astro-cid-ctg3m53h>4</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</strong><small data-astro-cid-ctg3m53h>Estimate dryer cost from measured or certified kWh per cycle. A standardized electric-dryer example can range from about 17 to 40 cents per test load at 18.44 cents/kWh.</small></a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</strong><small data-astro-cid-ctg3m53h>Calculate appliance cost from annual kWh, measured kWh, or watts and time. Learn which method works for refrigerators, dryers, dishwashers, ovens, and small appliances.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="kitchen" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p></div> <div class="hb-topic-labels" role="group" aria-label="Kitchen published topics" data-astro-cid-ctg3m53h> <a href="/kitchen/#topic-food-science" aria-label="Food Science, 1 published guide" data-astro-cid-ctg3m53h>Food Science<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a><a href="/kitchen/#topic-troubleshooting-safety" aria-label="Kitchen Troubleshooting &amp; Safety, 11 published guides" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety<span aria-hidden="true" data-astro-cid-ctg3m53h>11</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</strong><small data-astro-cid-ctg3m53h>Compare exact wattage, preheat, cooking time, batches, and servings. A small air fryer often uses less for a small meal, but capacity can reverse the result.</small></a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</strong><small data-astro-cid-ctg3m53h>Divide annual kWh by annual test cycles, then multiply by your rate. A 240 kWh/year dishwasher works out to about 21 cents per standardized cycle at 18.44 cents/kWh.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="shop" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p></div>   </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="tools" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p></div> <div class="hb-topic-labels" role="group" aria-label="Tools published topics" data-astro-cid-ctg3m53h> <a href="/tools/#topic-checklists" aria-label="Checklists, 1 published guide" data-astro-cid-ctg3m53h>Checklists<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</strong><small data-astro-cid-ctg3m53h>Use this step-by-step home energy checklist to find why a summer electric bill increased, from billing days and rates to AC filters, air leaks, and hidden loads.</small></a> </div> </div> </details> <a class="hb-all-guides-link" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme: System</button> </nav> <div class="hb-mobile-actions" data-astro-cid-ctg3m53h> <button class="hb-header-action" id="mobile-navigation-trigger" type="button" data-open-modal="mobile-navigation" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Menu</button> <button class="hb-header-action" id="mobile-search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme</button> </div> </div> </header> <noscript> <details class="hb-noscript-navigation" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Browse How Biscuit</summary> <nav aria-label="Primary navigation without JavaScript" data-astro-cid-ctg3m53h> <div data-astro-cid-ctg3m53h> <a href="/home-tech/" aria-current="true" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong></a> <a href="/articles/does-aluminum-foil-improve-wifi-signal/" data-astro-cid-ctg3m53h>Does Aluminum Foil Improve Wi-Fi Signal?</a><a href="/articles/where-to-place-wifi-extender/" data-astro-cid-ctg3m53h>Where Should You Place a Wi-Fi Extender?</a> </div><div data-astro-cid-ctg3m53h> <a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong></a> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</a> </div><div data-astro-cid-ctg3m53h> <a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong></a> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</a> </div><div data-astro-cid-ctg3m53h> <a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong></a>  </div><div data-astro-cid-ctg3m53h> <a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong></a> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </details> </noscript> <dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="mobile-navigation-title" data-astro-cid-ctg3m53h>Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu" data-astro-cid-ctg3m53h>Close</button></header> <nav aria-label="Mobile navigation" data-astro-cid-ctg3m53h> <details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home-tech/" data-astro-cid-ctg3m53h>Open Home Tech →</a> <p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home-tech/#topic-wifi-routers" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers</a></p> <a href="/articles/does-aluminum-foil-improve-wifi-signal/" data-astro-cid-ctg3m53h>Does Aluminum Foil Improve Wi-Fi Signal?</a><a href="/articles/where-to-place-wifi-extender/" data-astro-cid-ctg3m53h>Where Should You Place a Wi-Fi Extender?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home/" data-astro-cid-ctg3m53h>Open Home &amp; Apartment →</a> <p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home/#topic-heating-cooling" data-astro-cid-ctg3m53h>Heating &amp; Cooling</a><a href="/home/#topic-utilities-energy" data-astro-cid-ctg3m53h>Utilities &amp; Energy</a></p> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/kitchen/" data-astro-cid-ctg3m53h>Open Kitchen →</a> <p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/kitchen/#topic-food-science" data-astro-cid-ctg3m53h>Food Science</a><a href="/kitchen/#topic-troubleshooting-safety" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety</a></p> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/shop/" data-astro-cid-ctg3m53h>Open Shop Smarter →</a> <p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p>   </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/tools/" data-astro-cid-ctg3m53h>Open Tools →</a> <p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/tools/#topic-checklists" data-astro-cid-ctg3m53h>Checklists</a></p> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> </details> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </div> </dialog> <dialog class="hb-shell-dialog hb-search-dialog" id="search-dialog" aria-labelledby="search-dialog-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="search-dialog-title" data-astro-cid-ctg3m53h>Search How Biscuit</h2><button type="button" data-close-modal aria-label="Close search" data-astro-cid-ctg3m53h>Close</button></header> <form class="hb-search-form" role="search" data-astro-cid-ctg3m53h> <label for="howbiscuit-search-input" data-astro-cid-ctg3m53h>Search published guides and pages</label> <div data-astro-cid-ctg3m53h><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" data-astro-cid-ctg3m53h><button type="submit" data-astro-cid-ctg3m53h>Search</button></div> </form> <p class="hb-search-status" role="status" aria-live="polite" data-astro-cid-ctg3m53h>Enter a word or phrase to search.</p> <div class="hb-search-results" role="region" aria-label="Search results" data-astro-cid-ctg3m53h></div> </div> </dialog>  <script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js"></script> <main id="main-content" class="hb-main hb-article-page" data-pagefind-body> <span hidden aria-hidden="true" data-pagefind-filter="category">Home Tech</span><span hidden aria-hidden="true" data-pagefind-filter="type">Guide</span> <span hidden aria-hidden="true" data-pagefind-meta="title">Where Should You Place a Wi-Fi Extender?</span> <span hidden aria-hidden="true" data-pagefind-meta="description">Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther.</span> <span hidden aria-hidden="true" data-pagefind-meta="route">/articles/where-to-place-wifi-extender/</span>   <article class="hb-article-shell" data-astro-cid-zm77yjld> <nav class="hb-breadcrumbs" aria-label="Breadcrumb"> <ol> <li> <a href="/">Home</a> <b aria-hidden="true">/</b> </li><li> <a href="/home-tech/">Home Tech</a> <b aria-hidden="true">/</b> </li><li> <a href="/home-tech/#topic-wifi-routers">Wi-Fi &amp; Routers</a> <b aria-hidden="true">/</b> </li><li> <span aria-current="page">Where Should You Place a Wi-Fi Extender?</span>  </li> </ol> </nav> <header class="hb-article-title" data-astro-cid-zm77yjld> <div class="hb-article-labels" role="group" aria-label="Article classification" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Category: Home Tech</span> <span data-astro-cid-zm77yjld>Topic: Wi-Fi &amp; Routers</span> <span data-astro-cid-zm77yjld>Type: Guide</span> </div> <h1 data-astro-cid-zm77yjld>Where Should You Place a Wi-Fi Extender?</h1> <p class="hb-direct-answer" data-astro-cid-zm77yjld>Set up the extender near the router first. Then move it toward the weak room until the router-link indicator still shows a good connection. Test both the extender&#39;s upstream link and the client connection.</p> <div class="hb-article-meta" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Updated <time datetime="2026-07-26" data-astro-cid-zm77yjld>Jul 26, 2026</time></span> <span data-astro-cid-zm77yjld>6 min read</span> <span class="hb-badge hb-evidence hb-evidence-label" data-evidence="researched">Researched</span> <span class="hb-badge hb-testing-badge" data-state="not-hands-on-tested">Not hands-on tested</span> </div> </header> <aside class="hb-disclosure" aria-label="Disclosure"> <strong>Disclosure</strong> <p>This guide contains no affiliate links, sponsored placements, paid reviews, product placements, product cards, or product recommendations.</p> <a href="/affiliate-disclosure/">Read the disclosure</a> </aside> <div class="hb-article-grid" data-astro-cid-zm77yjld> <nav class="hb-article-toc" aria-labelledby="article-toc-title" data-astro-cid-zm77yjld> <h2 id="article-toc-title" data-astro-cid-zm77yjld>On this page</h2> <ol data-astro-cid-zm77yjld><li data-depth="2" data-astro-cid-zm77yjld><a href="#halfway-is-a-starting-point" data-astro-cid-zm77yjld>“Halfway” is a starting point</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#the-extender-needs-two-good-links" data-astro-cid-zm77yjld>The extender needs two good links</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#set-up-near-the-router-first" data-astro-cid-zm77yjld>Set up near the router first</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#move-outward-gradually" data-astro-cid-zm77yjld>Move outward gradually</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#avoid-obstacles" data-astro-cid-zm77yjld>Avoid obstacles</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#outlet-location" data-astro-cid-zm77yjld>Outlet location</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#why-speed-may-be-lower" data-astro-cid-zm77yjld>Why speed may be lower</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#backhaul-matters" data-astro-cid-zm77yjld>Backhaul matters</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#same-network-name-or-separate-name" data-astro-cid-zm77yjld>Same network name or separate name?</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#compatibility-limits" data-astro-cid-zm77yjld>Compatibility limits</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#update-firmware" data-astro-cid-zm77yjld>Update firmware</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#how-to-test-final-placement" data-astro-cid-zm77yjld>How to test final placement</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#when-an-extender-is-the-wrong-solution" data-astro-cid-zm77yjld>When an extender is the wrong solution</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#frequently-asked-questions" data-astro-cid-zm77yjld>Frequently asked questions</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#should-the-extender-go-in-the-dead-zone" data-astro-cid-zm77yjld>Should the extender go in the dead zone?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#is-exactly-halfway-always-correct" data-astro-cid-zm77yjld>Is exactly halfway always correct?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#can-the-extender-be-closer-to-the-weak-room" data-astro-cid-zm77yjld>Can the extender be closer to the weak room?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#will-an-extender-give-the-same-speed-as-the-router" data-astro-cid-zm77yjld>Will an extender give the same speed as the router?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#can-i-use-the-same-wi-fi-name" data-astro-cid-zm77yjld>Can I use the same Wi-Fi name?</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#related-guides" data-astro-cid-zm77yjld>Related guides</a></li></ol> </nav> <div class="hb-content" data-astro-cid-zm77yjld> <figure class="hb-article-media hb-article-media-hero" data-astro-cid-ryrfu6xi> <img src="/images/articles/where-to-place-wifi-extender/photo-extender.jpg" alt="A real plug-in Wi-Fi range extender in a wall outlet" loading="eager" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real plug-in Wi-Fi extender. The visible brand is incidental and is not a recommendation or compatibility claim.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by Kskhh via Wikimedia Commons (CC BY-SA 4.0)  · CC BY-SA 4.0  · <a href="https://commons.wikimedia.org/wiki/File:Wifi_Range_Extender.jpg" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>Place a Wi-Fi extender <strong>roughly halfway between the router and the weak area</strong>, but only where it still receives a reliable signal from the router.</p>
+<p>Do not put the extender inside the dead zone. It cannot rebroadcast a useful connection it does not receive.</p>
+<blockquote>
+<p><strong>Quick answer:</strong> Set up the extender near the router first. Then move it toward the weak room until the router-link indicator still shows a good connection. Test both the extender’s upstream link and the client connection.</p>
+</blockquote>
+<h2 id="halfway-is-a-starting-point">“Halfway” is a starting point</h2>
+<p>NETGEAR and TP-Link both advise placing an extender roughly halfway between the router and the problem area while remaining inside the router’s wireless range.<sup><a href="#source-batch5-netgear-extender-placement" aria-label="Source 1: Where should I place my NETGEAR WiFi range extender?">[1]</a></sup><sup><a href="#source-batch5-netgear-extender-setup" aria-label="Source 2: How do I set up my NETGEAR WiFi range extender?">[2]</a></sup><sup><a href="#source-batch5-tplink-expansion-options" aria-label="Source 3: How to Boost Your Wi-Fi Signal: Range Extender, Powerline, or Mesh">[3]</a></sup></p>
+<p>The correct position may be:</p>
+<ul>
+<li>Closer to the router</li>
+<li>Closer to the client</li>
+<li>In a hallway</li>
+<li>Near a doorway</li>
+<li>On another floor</li>
+<li>At a different height</li>
+</ul>
+<p>Walls and outlets do not arrange themselves for networking convenience.</p>
+<h2 id="the-extender-needs-two-good-links">The extender needs two good links</h2>
+<p><img src="/images/diagrams/extender-placement.svg" alt="Diagram showing a router, correctly placed extender, client, and the required upstream link"/></p>
+<p>A wireless extender has:</p>
+<ol>
+<li><strong>Upstream link:</strong> extender to router</li>
+<li><strong>Client link:</strong> phone, laptop, television, or other device to extender</li>
+</ol>
+<p>A strong client-to-extender connection is useless if the extender’s router connection is poor.</p>
+<p>Check:</p>
+<ul>
+<li>Router-link LED</li>
+<li>Signal indicator</li>
+<li>Setup app</li>
+<li>Extender status page</li>
+<li>Actual speed and stability</li>
+</ul>
+<p>Use the model’s instructions. LED colors and meanings differ.</p>
+<h2 id="set-up-near-the-router-first">Set up near the router first</h2>
+<p>Many official setup guides instruct users to:</p>
+<ol>
+<li>Plug the extender near the router.</li>
+<li>Complete pairing and firmware checks.</li>
+<li>Confirm it works.</li>
+<li>Move it to the intended location.<sup><a href="#source-batch5-netgear-extender-setup" aria-label="Source 2: How do I set up my NETGEAR WiFi range extender?">[2]</a></sup><sup><a href="#source-batch5-netgear-extender-faq" aria-label="Source 4: NETGEAR WiFi Range Extender Frequently Asked Questions">[4]</a></sup></li>
+</ol>
+<p>This separates setup failure from placement failure.</p>
+<p>Do not factory-reset the extender merely because the first outlet is poor.</p>
+<h2 id="move-outward-gradually">Move outward gradually</h2>
+<p>Test a sequence:</p>
+<ol>
+<li>Same room as router</li>
+<li>Hallway or room between</li>
+<li>Midpoint</li>
+<li>Closer to weak area</li>
+</ol>
+<p>At each location:</p>
+<ul>
+<li>Wait for startup.</li>
+<li>Check router-link quality.</li>
+<li>Connect a device.</li>
+<li>Run repeatable tests.</li>
+<li>Record band and network name.</li>
+<li>Test the original weak area.</li>
+</ul>
+<p>Stop moving outward when upstream quality becomes weak or unstable.</p>
+<h2 id="avoid-obstacles">Avoid obstacles</h2>
+<p>Keep the extender away from:</p>
+<ul>
+<li>Large metal objects</li>
+<li>Refrigerators</li>
+<li>Microwaves</li>
+<li>Dense masonry</li>
+<li>Mirrors</li>
+<li>Aquariums</li>
+<li>Cabinets</li>
+<li>Floors</li>
+<li>Crowded power strips</li>
+<li>Heat and moisture</li>
+</ul>
+<p>A direct path through fewer dense obstacles is better than a geometrically perfect midpoint behind a refrigerator.</p>
+<h2 id="outlet-location">Outlet location</h2>
+<p>Plug-in extenders are limited by outlet placement.</p>
+<p>Use:</p>
+<ul>
+<li>A stable wall outlet</li>
+<li>Manufacturer-approved orientation</li>
+<li>Adequate ventilation</li>
+<li>Clear access to buttons and lights</li>
+</ul>
+<p>Do not:</p>
+<ul>
+<li>Use an extension cord unless approved</li>
+<li>Hide it behind furniture that blocks airflow</li>
+<li>Put it near water</li>
+<li>Overload the outlet</li>
+<li>Remove grounding features</li>
+</ul>
+<p>If the correct radio location has no outlet, a different network solution may be more appropriate.</p>
+<h2 id="why-speed-may-be-lower">Why speed may be lower</h2>
+<p>TP-Link explains that a wireless extender adds another wireless hop, so client performance can be lower than a direct router connection.<sup><a href="#source-batch5-tplink-extender-speed" aria-label="Source 5: Why is my Range Extender not getting the same speed as the main router?">[5]</a></sup></p>
+<p>The exact effect depends on:</p>
+<ul>
+<li>Radio bands</li>
+<li>Dedicated backhaul</li>
+<li>Channel use</li>
+<li>Router and extender standards</li>
+<li>Signal quality</li>
+<li>Client capability</li>
+<li>Traffic</li>
+<li>Interference</li>
+</ul>
+<p>Do not expect the extender to reproduce the router’s maximum speed at a distant location.</p>
+<p>The goal may be a stable usable connection where none existed.</p>
+<h2 id="backhaul-matters">Backhaul matters</h2>
+<p><strong>Backhaul</strong> is the connection from extender to router.</p>
+<p>It may be:</p>
+<ul>
+<li>Wireless 2.4 GHz</li>
+<li>Wireless 5 GHz</li>
+<li>Wireless 6 GHz</li>
+<li>Dedicated radio</li>
+<li>Ethernet, when supported</li>
+<li>Another model-specific method</li>
+</ul>
+<p>A dedicated or wired backhaul can avoid some wireless-relay limitations, but exact behavior depends on the product.</p>
+<p>Do not assume an Ethernet port means the extender supports access-point mode or wired backhaul. Check the manual.</p>
+<h2 id="same-network-name-or-separate-name">Same network name or separate name?</h2>
+<p>Some extenders:</p>
+<ul>
+<li>Use the router’s network name</li>
+<li>Add <code>_EXT</code></li>
+<li>Create separate band names</li>
+<li>Support a vendor-specific one-name mode</li>
+</ul>
+<p>A shared name does not guarantee seamless roaming.</p>
+<p>The phone or laptop may cling to the weaker access point until its own roaming logic decides to switch.</p>
+<p>For diagnosis, separate names can help reveal which radio serves the device. For normal use, follow the manufacturer’s recommended configuration.</p>
+<h2 id="compatibility-limits">Compatibility limits</h2>
+<p>A generic extender may connect to many routers, but features can differ.</p>
+<p>Check:</p>
+<ul>
+<li>Supported bands</li>
+<li>Security modes</li>
+<li>WPA3 support</li>
+<li>Channel width</li>
+<li>Mesh or EasyMesh support</li>
+<li>Vendor roaming features</li>
+<li>Guest-network behavior</li>
+<li>MAC filtering</li>
+<li>Parental controls</li>
+<li>IPv6</li>
+<li>Firmware support</li>
+<li>Regional power and radio rules</li>
+</ul>
+<p>NETGEAR notes that broad router compatibility does not eliminate band and regional considerations.<sup><a href="#source-batch5-netgear-extender-faq" aria-label="Source 4: NETGEAR WiFi Range Extender Frequently Asked Questions">[4]</a></sup></p>
+<p>Do not weaken the entire network to WEP, WPA, or TKIP for an obsolete extender.</p>
+<h2 id="update-firmware">Update firmware</h2>
+<p>Before final placement:</p>
+<ul>
+<li>Update the router.</li>
+<li>Update the extender.</li>
+<li>Confirm support status.</li>
+<li>Save settings if supported.</li>
+<li>Change default administrator credentials.</li>
+<li>Use current WPA2 or WPA3 security.</li>
+</ul>
+<p>An extender becomes another network-management device that must be maintained.</p>
+<h2 id="how-to-test-final-placement">How to test final placement</h2>
+<p>Test:</p>
+<ul>
+<li>Beside the router</li>
+<li>At the extender</li>
+<li>In the weak room</li>
+<li>One room beyond</li>
+<li>During normal busy periods</li>
+</ul>
+<p>Record:</p>
+<ul>
+<li>Download</li>
+<li>Upload</li>
+<li>Latency</li>
+<li>Disconnects</li>
+<li>Connected SSID</li>
+<li>Connected band</li>
+<li>Link indicator</li>
+<li>Device switching behavior</li>
+</ul>
+<p>Compare with the Batch 2 dead-zone checklist.</p>
+<h2 id="when-an-extender-is-the-wrong-solution">When an extender is the wrong solution</h2>
+<p>Consider another design when:</p>
+<ul>
+<li>The extender cannot receive a good upstream signal.</li>
+<li>Thick concrete or metal blocks the path.</li>
+<li>High throughput is required.</li>
+<li>Seamless roaming matters.</li>
+<li>Several distant areas need coverage.</li>
+<li>Existing Ethernet can support an access point.</li>
+<li>The router itself is unsupported or unstable.</li>
+<li>Multiple extenders would be chained.</li>
+</ul>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="should-the-extender-go-in-the-dead-zone">Should the extender go in the dead zone?</h3>
+<p>No. It needs a usable router signal.</p>
+<h3 id="is-exactly-halfway-always-correct">Is exactly halfway always correct?</h3>
+<p>No. Halfway is a starting point. Use link quality and tests.</p>
+<h3 id="can-the-extender-be-closer-to-the-weak-room">Can the extender be closer to the weak room?</h3>
+<p>Yes, if its router link remains good.</p>
+<h3 id="will-an-extender-give-the-same-speed-as-the-router">Will an extender give the same speed as the router?</h3>
+<p>Not necessarily. Wireless repeating adds another link and may reduce throughput.</p>
+<h3 id="can-i-use-the-same-wi-fi-name">Can I use the same Wi-Fi name?</h3>
+<p>Some models support it. Same-name operation does not guarantee seamless roaming.</p>
+<h2 id="related-guides">Related guides</h2>
+<ul>
+<li><a href="/articles/best-place-to-put-wifi-router/">Choose a better router location</a></li>
+<li><a href="/articles/why-does-my-wifi-keep-disconnecting/">Diagnose repeated Wi-Fi disconnects</a></li>
+<li><a href="/articles/fix-wifi-dead-zones-without-buying-anything/">Try free Wi-Fi dead-zone fixes</a></li>
+<li><a href="/tools/appliance-electricity-cost-calculator/">Use the appliance electricity cost calculator</a></li>
+</ul> <section class="hb-sources" aria-labelledby="source-notes"> <div><span>Sources reviewed</span><h2 id="source-notes">Source notes</h2></div> <ol> <li id="source-batch5-netgear-extender-placement"><a href="https://kb.netgear.com/25508/Where-should-I-place-my-NETGEAR-WiFi-range-extender">Where should I place my NETGEAR WiFi range extender?</a><span>NETGEAR Support</span></li><li id="source-batch5-netgear-extender-setup"><a href="https://kb.netgear.com/23517/How-do-I-set-up-my-NETGEAR-WiFi-Range-Extender">How do I set up my NETGEAR WiFi range extender?</a><span>NETGEAR Support</span></li><li id="source-batch5-tplink-expansion-options"><a href="https://www.tp-link.com/us/support/faq/2927/">How to Boost Your Wi-Fi Signal: Range Extender, Powerline, or Mesh</a><span>TP-Link Support</span></li><li id="source-batch5-netgear-extender-faq"><a href="https://kb.netgear.com/23568/NETGEAR-WiFi-Range-Extender-Frequently-Asked-Questions">NETGEAR WiFi Range Extender Frequently Asked Questions</a><span>NETGEAR Support</span></li><li id="source-batch5-tplink-extender-speed"><a href="https://www.tp-link.com/us/support/faq/3889/">Why is my Range Extender not getting the same speed as the main router?</a><span>TP-Link Support</span></li><li id="source-batch5-tplink-placement"><a href="https://www.tp-link.com/us/support/faq/3052/">Range extender placement troubleshooting</a><span>TP-Link Support</span></li> </ol> </section> <aside class="hb-related" aria-label="Related guides"> <p>Keep going</p> <div><a href="/articles/best-place-to-put-wifi-router/"><span>Home Tech</span><b>Best Place to Put Your Wi-Fi Router</b><i aria-hidden="true">→</i></a><a href="/articles/why-does-my-wifi-keep-disconnecting/"><span>Home Tech</span><b>Why Does My Wi-Fi Keep Disconnecting?</b><i aria-hidden="true">→</i></a><a href="/articles/fix-wifi-dead-zones-without-buying-anything/"><span>Home Tech</span><b>How to Fix Wi-Fi Dead Zones Without Buying Anything</b><i aria-hidden="true">→</i></a></div> </aside> <p class="hb-correction-link" data-astro-cid-zm77yjld>See something wrong or out of date? <a href="/corrections/" data-astro-cid-zm77yjld>Report a correction</a>.</p> </div> </div> </article>  </main> <footer class="hb-global-footer" data-pagefind-ignore="all"> <div class="hb-footer-mark">HOW BISCUIT<span>?</span></div> <p>Practical guides for technology, home, kitchens, shopping decisions, and useful tools.</p> <nav aria-label="Browse categories"> <a href="/home-tech/">Home Tech</a><a href="/home/">Home &amp; Apartment</a><a href="/kitchen/">Kitchen</a><a href="/shop/">Shop Smarter</a><a href="/tools/">Tools</a> <a href="/articles/">All Guides</a> </nav> <nav aria-label="Site information"> <a href="/about/">About</a> <a href="/editorial-policy/">Editorial policy</a> <a href="/corrections/">Corrections</a> <a href="/privacy/">Privacy</a> <a href="/affiliate-disclosure/">Affiliate disclosure</a> <a href="/contact/">Contact</a> <a href="/feed.xml">RSS</a> <a href="/sitemap.xml">Sitemap</a> </nav> </footer> </body></html>

@@ -1,0 +1,262 @@
+{
+  "releaseId": "h31-content-tools-2026-07-24-r2",
+  "rows": [
+    {
+      "price": 16.77,
+      "state": "Alabama",
+      "stateCode": "AL"
+    },
+    {
+      "price": 28.23,
+      "state": "Alaska",
+      "stateCode": "AK"
+    },
+    {
+      "price": 15.23,
+      "state": "Arizona",
+      "stateCode": "AZ"
+    },
+    {
+      "price": 14.36,
+      "state": "Arkansas",
+      "stateCode": "AR"
+    },
+    {
+      "price": 33.25,
+      "state": "California",
+      "stateCode": "CA"
+    },
+    {
+      "price": 16.16,
+      "state": "Colorado",
+      "stateCode": "CO"
+    },
+    {
+      "price": 27.37,
+      "state": "Connecticut",
+      "stateCode": "CT"
+    },
+    {
+      "price": 19.38,
+      "state": "Delaware",
+      "stateCode": "DE"
+    },
+    {
+      "price": 25.4,
+      "state": "District of Columbia",
+      "stateCode": "DC"
+    },
+    {
+      "price": 15.17,
+      "state": "Florida",
+      "stateCode": "FL"
+    },
+    {
+      "price": 15.84,
+      "state": "Georgia",
+      "stateCode": "GA"
+    },
+    {
+      "price": 52,
+      "state": "Hawaii",
+      "stateCode": "HI"
+    },
+    {
+      "price": 12.35,
+      "state": "Idaho",
+      "stateCode": "ID"
+    },
+    {
+      "price": 23.85,
+      "state": "Illinois",
+      "stateCode": "IL"
+    },
+    {
+      "price": 18.15,
+      "state": "Indiana",
+      "stateCode": "IN"
+    },
+    {
+      "price": 14.14,
+      "state": "Iowa",
+      "stateCode": "IA"
+    },
+    {
+      "price": 15.13,
+      "state": "Kansas",
+      "stateCode": "KS"
+    },
+    {
+      "price": 14.98,
+      "state": "Kentucky",
+      "stateCode": "KY"
+    },
+    {
+      "price": 14.15,
+      "state": "Louisiana",
+      "stateCode": "LA"
+    },
+    {
+      "price": 28.63,
+      "state": "Maine",
+      "stateCode": "ME"
+    },
+    {
+      "price": 21.77,
+      "state": "Maryland",
+      "stateCode": "MD"
+    },
+    {
+      "price": 28.82,
+      "state": "Massachusetts",
+      "stateCode": "MA"
+    },
+    {
+      "price": 22.01,
+      "state": "Michigan",
+      "stateCode": "MI"
+    },
+    {
+      "price": 16.95,
+      "state": "Minnesota",
+      "stateCode": "MN"
+    },
+    {
+      "price": 16.16,
+      "state": "Mississippi",
+      "stateCode": "MS"
+    },
+    {
+      "price": 13.68,
+      "state": "Missouri",
+      "stateCode": "MO"
+    },
+    {
+      "price": 14.67,
+      "state": "Montana",
+      "stateCode": "MT"
+    },
+    {
+      "price": 13.59,
+      "state": "Nebraska",
+      "stateCode": "NE"
+    },
+    {
+      "price": 13.6,
+      "state": "Nevada",
+      "stateCode": "NV"
+    },
+    {
+      "price": 27.33,
+      "state": "New Hampshire",
+      "stateCode": "NH"
+    },
+    {
+      "price": 23.27,
+      "state": "New Jersey",
+      "stateCode": "NJ"
+    },
+    {
+      "price": 14.12,
+      "state": "New Mexico",
+      "stateCode": "NM"
+    },
+    {
+      "price": 29.93,
+      "state": "New York",
+      "stateCode": "NY"
+    },
+    {
+      "price": 15.09,
+      "state": "North Carolina",
+      "stateCode": "NC"
+    },
+    {
+      "price": 13.61,
+      "state": "North Dakota",
+      "stateCode": "ND"
+    },
+    {
+      "price": 19.52,
+      "state": "Ohio",
+      "stateCode": "OH"
+    },
+    {
+      "price": 13.38,
+      "state": "Oklahoma",
+      "stateCode": "OK"
+    },
+    {
+      "price": 16.27,
+      "state": "Oregon",
+      "stateCode": "OR"
+    },
+    {
+      "price": 21.55,
+      "state": "Pennsylvania",
+      "stateCode": "PA"
+    },
+    {
+      "price": 29.46,
+      "state": "Rhode Island",
+      "stateCode": "RI"
+    },
+    {
+      "price": 16.18,
+      "state": "South Carolina",
+      "stateCode": "SC"
+    },
+    {
+      "price": 15.73,
+      "state": "South Dakota",
+      "stateCode": "SD"
+    },
+    {
+      "price": 14.47,
+      "state": "Tennessee",
+      "stateCode": "TN"
+    },
+    {
+      "price": 16.44,
+      "state": "Texas",
+      "stateCode": "TX"
+    },
+    {
+      "price": 12.96,
+      "state": "Utah",
+      "stateCode": "UT"
+    },
+    {
+      "price": 24.89,
+      "state": "Vermont",
+      "stateCode": "VT"
+    },
+    {
+      "price": 17.61,
+      "state": "Virginia",
+      "stateCode": "VA"
+    },
+    {
+      "price": 14.95,
+      "state": "Washington",
+      "stateCode": "WA"
+    },
+    {
+      "price": 16.8,
+      "state": "West Virginia",
+      "stateCode": "WV"
+    },
+    {
+      "price": 19.74,
+      "state": "Wisconsin",
+      "stateCode": "WI"
+    },
+    {
+      "price": 14.8,
+      "state": "Wyoming",
+      "stateCode": "WY"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "toolId": "appliance-electricity-cost-calculator"
+}
