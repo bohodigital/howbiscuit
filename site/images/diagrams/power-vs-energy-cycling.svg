@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+<title id="t">Power versus energy for continuous and cycling appliances</title>
+<desc id="d">Two simple graphs compare a continuously powered appliance with a cycling appliance over one hour while explaining that kilowatt-hours equal the area under the power curve.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial, sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="50" text-anchor="middle" fill="black" font-size="30">Power is a rate; energy accumulates over time</text>
+<line x1="90" y1="550" x2="530" y2="550"/><line x1="90" y1="550" x2="90" y2="145"/>
+<text x="310" y="605" text-anchor="middle" fill="black" font-size="20">One hour</text>
+<text x="35" y="350" text-anchor="middle" fill="black" font-size="20" transform="rotate(-90 35 350)">Power</text>
+<path d="M90 250 L530 250 L530 550 L90 550 Z" fill="none"/>
+<text x="310" y="115" text-anchor="middle" fill="black" font-size="25">Continuous 1 kW load</text>
+<text x="310" y="635" text-anchor="middle" fill="black" font-size="19">1 kW x 1 hour = 1 kWh</text>
+<line x1="670" y1="550" x2="1110" y2="550"/><line x1="670" y1="550" x2="670" y2="145"/>
+<path d="M670 250 L760 250 L760 550 L825 550 L825 250 L900 250 L900 550 L990 550 L990 250 L1060 250 L1060 550 L1110 550" />
+<text x="890" y="115" text-anchor="middle" fill="black" font-size="25">Cycling 1 kW rated load</text>
+<text x="890" y="605" text-anchor="middle" fill="black" font-size="19">Less than 1 kWh if off for part of the hour</text>
+<text x="600" y="675" text-anchor="middle" fill="black" font-size="18">Illustrative load pattern. Actual cycling depends on the exact appliance and conditions.</text>
+</g></svg>

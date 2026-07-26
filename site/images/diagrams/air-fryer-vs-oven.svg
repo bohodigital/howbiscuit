@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+<title id="t">Air fryer versus oven electricity cost comparison</title>
+<desc id="d">A hypothetical comparison includes wattage, time, batches, total energy, total cost, servings, and cost per serving for an air fryer and an electric oven.</desc>
+<rect width="1200" height="760" fill="white"/>
+<g font-family="Arial, sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="50" text-anchor="middle" fill="black" font-size="30">Compare the whole cooking task</text>
+<rect x="70" y="100" width="480" height="520" rx="24"/>
+<text x="310" y="155" text-anchor="middle" fill="black" font-size="28">Air fryer example</text>
+<text x="120" y="215" fill="black" font-size="21">Power: 1.5 kW</text>
+<text x="120" y="255" fill="black" font-size="21">Time: 20 minutes</text>
+<text x="120" y="295" fill="black" font-size="21">Batches: 2</text>
+<text x="120" y="335" fill="black" font-size="21">Energy: 1.0 kWh</text>
+<text x="120" y="375" fill="black" font-size="21">Cost at $0.1844/kWh: $0.18</text>
+<text x="120" y="415" fill="black" font-size="21">Servings: 4</text>
+<text x="120" y="455" fill="black" font-size="21">Cost per serving: about $0.05</text>
+<rect x="650" y="100" width="480" height="520" rx="24"/>
+<text x="890" y="155" text-anchor="middle" fill="black" font-size="28">Oven example</text>
+<text x="700" y="215" fill="black" font-size="21">Power: 3.0 kW</text>
+<text x="700" y="255" fill="black" font-size="21">Time: 45 minutes</text>
+<text x="700" y="295" fill="black" font-size="21">Batches: 1</text>
+<text x="700" y="335" fill="black" font-size="21">Energy: 2.25 kWh</text>
+<text x="700" y="375" fill="black" font-size="21">Cost at $0.1844/kWh: $0.41</text>
+<text x="700" y="415" fill="black" font-size="21">Servings: 4</text>
+<text x="700" y="455" fill="black" font-size="21">Cost per serving: about $0.10</text>
+<text x="600" y="675" text-anchor="middle" fill="black" font-size="18">Hypothetical comparison. Real appliances cycle; include actual preheat, time, capacity, and batch count.</text>
+<text x="600" y="715" text-anchor="middle" fill="black" font-size="18">Use exact model wattage and your local rate. This diagram is not a product recommendation.</text>
+</g></svg>

@@ -131,9 +131,10 @@ async function verifyDirectory(directory, expected) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  if (actual.htmlRouteCount !== 55) fail("expected exactly 55 HTML routes");
+  if (actual.htmlRouteCount !== 61) fail("expected exactly 61 HTML routes");
   const expectedPublicArticles = [
     "/articles/2-4-ghz-vs-5-ghz-wifi/",
+    "/articles/air-fryer-vs-oven-electricity-cost/",
     "/articles/best-place-to-put-wifi-router/",
     "/articles/can-you-refreeze-food-after-power-outage/",
     "/articles/do-you-need-refrigerator-freezer-thermometer/",
@@ -145,6 +146,11 @@ async function verifyDirectory(directory, expected) {
     "/articles/how-does-baking-powder-work/",
     "/articles/how-long-food-safe-refrigerator-without-power/",
     "/articles/how-long-food-stay-frozen-power-outage/",
+    "/articles/how-much-does-dishwasher-cost-per-load/",
+    "/articles/how-much-does-electric-dryer-cost-per-load/",
+    "/articles/how-much-does-electric-oven-cost-per-hour/",
+    "/articles/how-much-does-refrigerator-cost-to-run/",
+    "/articles/how-to-calculate-appliance-electricity-cost/",
     "/articles/portable-ac-cost-to-run/",
     "/articles/power-outage-food-safety-chart/",
     "/articles/what-food-throw-away-after-power-outage/",
@@ -176,17 +182,17 @@ async function loadManifest() {
 async function verifyPromotionPackage(release) {
   const promotion = JSON.parse(await readFile(promotionPath, "utf8"));
   if (promotion.schemaVersion !== "public-promotion-package.v1") fail("invalid promotion schema version");
-  if (promotion.releaseId !== "howbiscuit-phase1-batch3-2026-07-25") fail("unexpected promotion release ID");
-  if (promotion.approvalDigest !== "sha256:0e2dcbc381211c51884492a7751ce53cef2f427768e7b8a107969f0767c4831e") {
-    fail("unexpected Batch 3 approval digest");
+  if (promotion.releaseId !== "howbiscuit-phase1-batch4-2026-07-26") fail("unexpected promotion release ID");
+  if (promotion.approvalDigest !== "sha256:7d58dc4414bb52a073ed05f48e9a945d7a03768e99fc4d43c0cf72322e7083bb") {
+    fail("unexpected Batch 4 approval digest");
   }
   const expectedRoutes = [
-    "/articles/how-long-food-safe-refrigerator-without-power/",
-    "/articles/how-long-food-stay-frozen-power-outage/",
-    "/articles/what-food-throw-away-after-power-outage/",
-    "/articles/can-you-refreeze-food-after-power-outage/",
-    "/articles/do-you-need-refrigerator-freezer-thermometer/",
-    "/articles/power-outage-food-safety-chart/",
+    "/articles/how-to-calculate-appliance-electricity-cost/",
+    "/articles/how-much-does-refrigerator-cost-to-run/",
+    "/articles/how-much-does-dishwasher-cost-per-load/",
+    "/articles/how-much-does-electric-dryer-cost-per-load/",
+    "/articles/how-much-does-electric-oven-cost-per-hour/",
+    "/articles/air-fryer-vs-oven-electricity-cost/",
   ];
   if (JSON.stringify(promotion.routes) !== JSON.stringify(expectedRoutes)) fail("promotion route inventory differs");
   if (!Array.isArray(promotion.files) || promotion.files.length === 0) fail("promotion file inventory differs");
@@ -200,12 +206,12 @@ async function verifyPromotionPackage(release) {
     }
   }
   for (const required of [
-    "downloads/power-outage-food-safety-chart.pdf",
+    "downloads/appliance-electricity-cost-worksheet.pdf",
     "feed.xml",
-    "images/diagrams/freezer-refreeze-decision-tree.svg",
-    "images/diagrams/outage-time-limits.svg",
-    "images/diagrams/refrigerator-decision-tree.svg",
-    "images/diagrams/thermometer-placement.svg",
+    "images/diagrams/air-fryer-vs-oven.svg",
+    "images/diagrams/appliance-cost-method.svg",
+    "images/diagrams/energyguide-to-cost.svg",
+    "images/diagrams/power-vs-energy-cycling.svg",
     "llms.txt",
     "sitemap.xml",
   ]) {
