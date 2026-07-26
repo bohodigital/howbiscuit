@@ -1,18 +1,24 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:2ce73ff315fcb5a17de30c421a029a74ce36afd68d9ceea81da0b74d2062d3cb",
-  "fileCount": 488,
-  "byteCount": 14204357,
-  "htmlRouteCount": 37,
+  "artifactDigest": "sha256:28b1257b4d7f94a3675e7577ee362dd3c6792c7a1eaffd72d925a68134bff246",
+  "fileCount": 538,
+  "byteCount": 17745651,
+  "htmlRouteCount": 43,
   "routes": [
     "/",
     "/404.html",
     "/about/",
     "/affiliate-disclosure/",
     "/articles/",
+    "/articles/does-turning-ac-off-save-money/",
+    "/articles/fan-vs-air-conditioner-cost/",
+    "/articles/home-energy-check-high-summer-bill/",
     "/articles/how-does-baking-powder-work/",
+    "/articles/portable-ac-cost-to-run/",
     "/articles/why-are-some-answers-better-than-others/",
+    "/articles/why-electric-bill-high-summer/",
     "/articles/why-salt-melts-ice/",
+    "/articles/window-ac-cost-per-hour/",
     "/contact/",
     "/corrections/",
     "/editorial-policy/",
@@ -51,8 +57,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 16222,
-      "sha256": "sha256:1f5d7bb2bf1cc13ba83a991e810a0aaec33b1aa6a973ae27f457c6e8d14f48c5"
+      "bytes": 18245,
+      "sha256": "sha256:d5b40c0209c26c78c3fbcce7c7a38b0f49444c2e28cca2e286a468a2c90b96cc"
     },
     {
       "path": "_astro/BaseLayout.Dx1DJXA0.css",
@@ -365,6 +371,11 @@
       "sha256": "sha256:8c75e7eaffe2294957207b40e7d83448832938c29a3f0989f25cbcfcfaf8138c"
     },
     {
+      "path": "_astro/_slug_.DExZsdqk.css",
+      "bytes": 4401,
+      "sha256": "sha256:f711b6e7a364ce9d064182bbb8bfc959e19778fea18cc5c0b4d69624dfe8830e"
+    },
+    {
       "path": "_astro/tool-page-data.D4BluorV.css",
       "bytes": 5668,
       "sha256": "sha256:4e709c6bb5b8d623df9705e2942385f1f87a07bdb56b42ddb3c5a38b618c15c6"
@@ -391,13 +402,13 @@
     },
     {
       "path": "about/index.html",
-      "bytes": 18806,
-      "sha256": "sha256:102abc79eb9a8c3353a02809df4b9f262959cd0d92cfbec6580ca538c2faf79c"
+      "bytes": 20829,
+      "sha256": "sha256:4fdb2a7be1aad818e5e275c753e8e8be6f3274ffd67d249d66e4e45037606fa6"
     },
     {
       "path": "affiliate-disclosure/index.html",
-      "bytes": 18729,
-      "sha256": "sha256:8e3add07f6bca3cc32c2aa9f1bd6a6b78638ffeca0f4057d2f2c2d30a55f752e"
+      "bytes": 20752,
+      "sha256": "sha256:ef905a27ad3307c425f94933c86eea3ea0b7406adf65ffd964e8479849ec1722"
     },
     {
       "path": "analytics-bootstrap.js",
@@ -405,34 +416,64 @@
       "sha256": "sha256:cdac592a97e3bd2cdbb706e590d5503470460d5d4a5dd79e65e2bff9bc62f3af"
     },
     {
+      "path": "articles/does-turning-ac-off-save-money/index.html",
+      "bytes": 43632,
+      "sha256": "sha256:a4b2dd0d26113f69b9c4782608fbbcd0562c472868405adc59943e5864d601f0"
+    },
+    {
+      "path": "articles/fan-vs-air-conditioner-cost/index.html",
+      "bytes": 41460,
+      "sha256": "sha256:384e64d108bb1f53dcc1bdbe4a30d3597ce9b72d28ae07699a398cc0b3d7f8ef"
+    },
+    {
+      "path": "articles/home-energy-check-high-summer-bill/index.html",
+      "bytes": 56861,
+      "sha256": "sha256:8fddf2c7108d01304f6c45803f826167f31b9d25a2057105d3c1b042087eea3b"
+    },
+    {
       "path": "articles/how-does-baking-powder-work/index.html",
-      "bytes": 28209,
-      "sha256": "sha256:9a71162666dc61e73e44be107bc1b8c3416d69e5a1e9bffb89396640d568068e"
+      "bytes": 30413,
+      "sha256": "sha256:e346fcc38f2f3a5446a64909d26845ebaeea4c06d466876eddf3d99c265b9b0a"
     },
     {
       "path": "articles/index.html",
-      "bytes": 20693,
-      "sha256": "sha256:8768786f70bf67e9014dbe9a8062c891709affc6ea8f71a5950cddbe689d5654"
+      "bytes": 26408,
+      "sha256": "sha256:e8935ce1413f34871a20d436289a909fae1bb19ad29edd0be41221f815143f29"
+    },
+    {
+      "path": "articles/portable-ac-cost-to-run/index.html",
+      "bytes": 43772,
+      "sha256": "sha256:9fdaaed8dabcaf3385dac647abfed7c17660a570edc39b6878d0ec8418cfeba7"
     },
     {
       "path": "articles/why-are-some-answers-better-than-others/index.html",
-      "bytes": 27156,
-      "sha256": "sha256:49e03502239d3361eb14753d7e6d4d3331b12e4fe6fbed57ed2716936b2489cc"
+      "bytes": 29179,
+      "sha256": "sha256:571d0bed92105eae32a1c325a691564a3ba4b3b131300eafcb4ef08deddb690a"
+    },
+    {
+      "path": "articles/why-electric-bill-high-summer/index.html",
+      "bytes": 49778,
+      "sha256": "sha256:65f25dc8d50d3aba33341129765c90f28db8fd1222ed12d7a36d7d9fc4c619bf"
     },
     {
       "path": "articles/why-salt-melts-ice/index.html",
-      "bytes": 43853,
-      "sha256": "sha256:c0251cd0e3bb16972d98051a433a101f7e46fb46fd79d29eb4ecbd735f7470c2"
+      "bytes": 46033,
+      "sha256": "sha256:eae0bc2226289f0752c9f352cd5ef626016c468eacc97066ab53d7b3703bb8f3"
+    },
+    {
+      "path": "articles/window-ac-cost-per-hour/index.html",
+      "bytes": 45138,
+      "sha256": "sha256:0ac7c86eb4889f053ab175d2795a19826dbcdc4cdd10b46ec5003fc0f9fceaa8"
     },
     {
       "path": "contact/index.html",
-      "bytes": 18781,
-      "sha256": "sha256:e08cb6bb058eb2f7a53ff3ff64f4f45dab2293411e18d318d1fef8c4c030b227"
+      "bytes": 20804,
+      "sha256": "sha256:79c371586ff74581ff2cf6bab0d20966e361095886ad25b321b5ef6776a682c6"
     },
     {
       "path": "corrections/index.html",
-      "bytes": 18734,
-      "sha256": "sha256:a3488bf32cd70a30d9b6e8c6546f170201a0e47367922962275104ea1a8659fb"
+      "bytes": 20757,
+      "sha256": "sha256:98dd68482bfe76e93e7bb9b5242d0604ed56e90d43d90ad451f7cbe5e1690898"
     },
     {
       "path": "data/h31-content-tools-2026-07-24-r2/tools/agricultural-market-context-browser/532f4cf5d1ed984849d6bab96f2b034a60b893a42aefcb620abd64cf99462a29.json",
@@ -2105,9 +2146,14 @@
       "sha256": "sha256:b6ed404f3b634332d208f2cdb295d22fea6f2845c23ea4d2b9e4d6689e4454b6"
     },
     {
+      "path": "downloads/home-energy-check-high-summer-bill.pdf",
+      "bytes": 3619,
+      "sha256": "sha256:e68f4a0848ce87ae304162f2c63db08ad928a40f9a10fc5e3fd440130a7cd4e2"
+    },
+    {
       "path": "editorial-policy/index.html",
-      "bytes": 19319,
-      "sha256": "sha256:c4c70ede09ce749b54560688fef36a1cd9888c4532c1ec161381947fb27aa9a5"
+      "bytes": 21342,
+      "sha256": "sha256:4f92a33f571bbb614a22bf782088776e0acaa9c380ebd175ff520edfe078985a"
     },
     {
       "path": "favicon.svg",
@@ -2116,113 +2162,208 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 1639,
-      "sha256": "sha256:d0b74ceb9fca07c51fb5ff53d0d01c535131c07a81b68baf5232fccbdc407c30"
+      "bytes": 4423,
+      "sha256": "sha256:6fac93fe6c453fcd1e1a08a7ccb1bc9a80981e1b4287145ec6736a114329abc9"
     },
     {
       "path": "h3-workers/events.js",
-      "bytes": 552020,
-      "sha256": "sha256:d3df6a6863f96705041a760ee03b43fc46610381db457167835c6a469a104c9c"
+      "bytes": 551988,
+      "sha256": "sha256:3618288fdaf5b2829d8d57d1a24646072a7b514e21111575de4e6c5f51d27b95"
     },
     {
       "path": "h3-workers/gas.js",
-      "bytes": 566787,
-      "sha256": "sha256:79fe1be1d1d191b8723132eafc47fd6221306e1c325def288ba143ec68c75a2b"
+      "bytes": 566755,
+      "sha256": "sha256:ff003c91fe89dfe074b9b94166d33e95ca560ccad1f935c4ae328b4bef07775d"
     },
     {
       "path": "h3-workers/location.js",
-      "bytes": 554043,
-      "sha256": "sha256:294ee2533a5940a1b51cbe89cbbd5a4e093c970f7e95a2d36f0f0941d0ea962b"
+      "bytes": 554011,
+      "sha256": "sha256:97d12a210c66ac1e1e88ddc72a409488ce77ff3d351b980c0b0ba22345833045"
     },
     {
       "path": "h3-workers/offers.js",
-      "bytes": 572276,
-      "sha256": "sha256:4b7dc66517fa4eab79b405c2e8555040cd6f03122da79ff61002b722aff4badc"
+      "bytes": 572244,
+      "sha256": "sha256:5f84fe3bead9f522118fa6674ac2de8d1a6440f7d017116db994b6bedd873e6f"
     },
     {
       "path": "home/index.html",
-      "bytes": 22695,
-      "sha256": "sha256:ca3349a0769ed598529656f398a21966610a8aeccdb9dbee3446006c85f66b7b"
+      "bytes": 31482,
+      "sha256": "sha256:dede1bb69d0f21ae4660c817dbf6ba6afdbb27e4c03f89623157a13f558adcf8"
     },
     {
       "path": "home-tech/index.html",
-      "bytes": 20482,
-      "sha256": "sha256:e282c9cd9a95744e7578b7376191a19542e3bb0b61a1e7d6ec030ea102191700"
+      "bytes": 22505,
+      "sha256": "sha256:522ff05b705b377be9e311cc57ddb17d0e4fbaa411cbfaa6e9549376d7a1f279"
+    },
+    {
+      "path": "images/articles/does-turning-ac-off-save-money/photo-smart-thermostat.jpg",
+      "bytes": 135942,
+      "sha256": "sha256:218200b955dff0622d0204d4bd535e81f66de93444273f8a0029d0bbe8963c6b"
+    },
+    {
+      "path": "images/articles/does-turning-ac-off-save-money/photo-thermostat-adjustment.jpg",
+      "bytes": 63760,
+      "sha256": "sha256:3ea08866defb51950a8251f606e394f1289bb1b7195e30ba53d93ce468cfcf34"
+    },
+    {
+      "path": "images/articles/fan-vs-air-conditioner-cost/photo-box-fan.jpg",
+      "bytes": 103512,
+      "sha256": "sha256:69a6fb60b4a1139314885d30e775f2c6fe3cc661d070d6844df36d62d9019170"
+    },
+    {
+      "path": "images/articles/fan-vs-air-conditioner-cost/photo-ceiling-fan.jpg",
+      "bytes": 313463,
+      "sha256": "sha256:1a978ca4c9479d7f44de78133cc60b06733b2d3616ef2b2f4276ac338b74a783"
+    },
+    {
+      "path": "images/articles/home-energy-check-high-summer-bill/checklist-preview.jpg",
+      "bytes": 103274,
+      "sha256": "sha256:413c2bcedef3b4449ccd66f2e2629dc9600d18de9c0e7445d8795ddee8b3810d"
+    },
+    {
+      "path": "images/articles/home-energy-check-high-summer-bill/photo-dirty-ac-filters.jpg",
+      "bytes": 236906,
+      "sha256": "sha256:45d6e4207ef9247a389957aca2dc57afced5c55bfec354ea7e70f1600ff5d572"
+    },
+    {
+      "path": "images/articles/home-energy-check-high-summer-bill/photo-electricity-meter.jpg",
+      "bytes": 215349,
+      "sha256": "sha256:e730857d7c3a3f2b6afd7aa0a85d44de186962c88af25c63b73928a2a589ca49"
+    },
+    {
+      "path": "images/articles/home-energy-check-high-summer-bill/photo-outdoor-ac-unit.jpg",
+      "bytes": 386593,
+      "sha256": "sha256:d4cca1990101e1e2190e471d093144d6dabcda5cdacf5b7e796660e6274febb0"
+    },
+    {
+      "path": "images/articles/home-energy-check-high-summer-bill/photo-thermostat-reading.jpg",
+      "bytes": 55083,
+      "sha256": "sha256:09598501ba85bf0d8d21e49fbe8da0f005a5d49dc3eb44d348d526780f9ab186"
+    },
+    {
+      "path": "images/articles/home-energy-check-high-summer-bill/photo-window-ac-interior.jpg",
+      "bytes": 183250,
+      "sha256": "sha256:e911309d1998102dfc4f0496512461398be97cb242e3e6350ab237e83d5aba28"
+    },
+    {
+      "path": "images/articles/portable-ac-cost-to-run/photo-portable-ac-example.jpg",
+      "bytes": 230019,
+      "sha256": "sha256:e783419030ea3cc057c841598ff14def8172b8816bdba4442b46b75fdf474b81"
+    },
+    {
+      "path": "images/articles/portable-ac-cost-to-run/photo-portable-ac-school.jpg",
+      "bytes": 146155,
+      "sha256": "sha256:61b422d9e62cac40ca4c6989ac38b16cb8b48fa58802a89302d2ab38f7f6f9bc"
+    },
+    {
+      "path": "images/articles/why-electric-bill-high-summer/photo-dirty-ac-filters.jpg",
+      "bytes": 236906,
+      "sha256": "sha256:45d6e4207ef9247a389957aca2dc57afced5c55bfec354ea7e70f1600ff5d572"
+    },
+    {
+      "path": "images/articles/why-electric-bill-high-summer/photo-electricity-meter.jpg",
+      "bytes": 215349,
+      "sha256": "sha256:e730857d7c3a3f2b6afd7aa0a85d44de186962c88af25c63b73928a2a589ca49"
+    },
+    {
+      "path": "images/articles/why-electric-bill-high-summer/photo-outdoor-ac-unit.jpg",
+      "bytes": 386593,
+      "sha256": "sha256:d4cca1990101e1e2190e471d093144d6dabcda5cdacf5b7e796660e6274febb0"
+    },
+    {
+      "path": "images/articles/why-electric-bill-high-summer/photo-thermostat-adjustment.jpg",
+      "bytes": 63760,
+      "sha256": "sha256:3ea08866defb51950a8251f606e394f1289bb1b7195e30ba53d93ce468cfcf34"
+    },
+    {
+      "path": "images/articles/why-electric-bill-high-summer/photo-thermostat-reading.jpg",
+      "bytes": 55083,
+      "sha256": "sha256:09598501ba85bf0d8d21e49fbe8da0f005a5d49dc3eb44d348d526780f9ab186"
+    },
+    {
+      "path": "images/articles/window-ac-cost-per-hour/photo-window-ac-general.jpg",
+      "bytes": 243932,
+      "sha256": "sha256:630a1cfdb8636bb82a13bed200100786d46dd78e01303ca3582033c11ee7862e"
+    },
+    {
+      "path": "images/articles/window-ac-cost-per-hour/photo-window-ac-interior.jpg",
+      "bytes": 183250,
+      "sha256": "sha256:e911309d1998102dfc4f0496512461398be97cb242e3e6350ab237e83d5aba28"
     },
     {
       "path": "index.html",
-      "bytes": 25340,
-      "sha256": "sha256:17a52fc344e7afe87f21d6f3150c92a445564a3be7c65a1ee1324d206a98523a"
+      "bytes": 30938,
+      "sha256": "sha256:f2ec60bd997e91fbf26260a44adb63b30230513e18cd980321aaadc3dbb077bd"
     },
     {
       "path": "kitchen/index.html",
-      "bytes": 22093,
-      "sha256": "sha256:a06bdecf249f08d7de70f95405886be2c6630d2984bfc81de3b91b77e38b2d3a"
+      "bytes": 24116,
+      "sha256": "sha256:1068f0ce0a2baff8a4bd31380a0ac8172ab21ee1155b5f0850486bd49224b194"
     },
     {
       "path": "llms.txt",
-      "bytes": 4438,
-      "sha256": "sha256:f591b6f1984d48aa75065d27628ba009d18144861d7b469c9213f56016fcc851"
+      "bytes": 6011,
+      "sha256": "sha256:1374a71b2979f65545273b3141712a99d622793a9ed3baca76eab276829b48bb"
     },
     {
       "path": "metro/atlanta/index.html",
-      "bytes": 18073,
-      "sha256": "sha256:39f355b8eeb1d04170ad74895530c06ad0e8ba3b876c27001f1b0c132d2d2d98"
+      "bytes": 20096,
+      "sha256": "sha256:f7bc6db37e207919ac6804b98ba67158d8de4fb8a91eb23205f1e855cb3a36f8"
     },
     {
       "path": "metro/boston/index.html",
-      "bytes": 18049,
-      "sha256": "sha256:1afa49490821661c5008aa12b27cac7b017b7e9e5b020a1d2de0b9403845c544"
+      "bytes": 20072,
+      "sha256": "sha256:065d8b8922cb6fde615ee2d216446f373a1d8cdf9d38b0bbaaaef088cb18e39a"
     },
     {
       "path": "metro/chicago/index.html",
-      "bytes": 18318,
-      "sha256": "sha256:4d40da7fc336e66ec66cd63716fcfe8104d9f1a7100cd02c83cb2abaaa7c3afb"
+      "bytes": 20341,
+      "sha256": "sha256:d7242461299fdb47cdb3a8a5ef3b48571b729559724957a79c1c0401736ad334"
     },
     {
       "path": "metro/dallas-fort-worth/index.html",
-      "bytes": 18217,
-      "sha256": "sha256:401efaf1d382c8a605ad80aca42af61dd62df6889fc41165ad2594ad11e44849"
+      "bytes": 20240,
+      "sha256": "sha256:12183cb61f73fc478354ae954b0a7907389a8a39cd19757e800604206bd625e5"
     },
     {
       "path": "metro/denver/index.html",
-      "bytes": 18061,
-      "sha256": "sha256:dabec45a7e8fae988e5976f669f83f62f12cc4836d130b2ef808cca27b627546"
+      "bytes": 20084,
+      "sha256": "sha256:d696d2fd2e8c5fae6056b08daee0b95dea71f7e6f6771cfb0af746d796aacdf7"
     },
     {
       "path": "metro/houston/index.html",
-      "bytes": 18084,
-      "sha256": "sha256:50005951b1350455bdd94cb499ce08b667ebb8f70b428448e67fb35972211f9a"
+      "bytes": 20107,
+      "sha256": "sha256:f73bb5eee29b1d1dc2419292e2b678379c2cc8329cb54dcaf25f844dc51ad361"
     },
     {
       "path": "metro/los-angeles/index.html",
-      "bytes": 18148,
-      "sha256": "sha256:81e1f791aed86d17972217037baec66c7258fad8384e3c7aa04a24d6011fad9d"
+      "bytes": 20171,
+      "sha256": "sha256:141d7489828dd1cf1f6e272799bf47d2a4b31b5179f6c52d50766cf4e643c739"
     },
     {
       "path": "metro/miami/index.html",
-      "bytes": 18062,
-      "sha256": "sha256:567cd614b00f521ec6e28639228eff35412709ec34685da90d199a3ef415ae48"
+      "bytes": 20085,
+      "sha256": "sha256:e5ed4448ee9d1ad854f38332976921e82f4f0a651eee8ebc94f24d4bc9fea0ad"
     },
     {
       "path": "metro/new-york/index.html",
-      "bytes": 18136,
-      "sha256": "sha256:022bde3693067ee203c9026252762308633dcffa106a64fd84150e91fce40b9d"
+      "bytes": 20159,
+      "sha256": "sha256:e8b83d9491d1b5e9d37b23068780fa8ff5281d22cc6f13dcf891e0f9cf842e7a"
     },
     {
       "path": "metro/phoenix/index.html",
-      "bytes": 18084,
-      "sha256": "sha256:5aeec98310b600d8658dd5bdbe816287ca781e8a9b5897965f9c475309434ca2"
+      "bytes": 20107,
+      "sha256": "sha256:026b79c1388373ae9f8c45a575d1b872ae4920898a119c0c7755cd46e4a2bae5"
     },
     {
       "path": "metro/seattle/index.html",
-      "bytes": 18087,
-      "sha256": "sha256:3eb9c3e8cb1760e48fb37d2165a4e9bd0fc7c6467b0634b030ea696e2ab8c78f"
+      "bytes": 20110,
+      "sha256": "sha256:4db467ea143af205fb0b7338bc7ebdd248505ae9926298cbbf4a080675a3d417"
     },
     {
       "path": "metro/washington-dc/index.html",
-      "bytes": 18170,
-      "sha256": "sha256:e0d342fb17f8c3a9544facc417aca91aff7b171bb8d6f8238f189ee9fdc46f63"
+      "bytes": 20193,
+      "sha256": "sha256:c7ae81bcbb99f4787536d7d2ba8d39ba400545567c31590ac0fdd31a19673d7c"
     },
     {
       "path": "og.png",
@@ -2240,14 +2381,59 @@
       "sha256": "sha256:77e5deeef09ecedbf83a99ddf1488d275d2f92ff326670437d0b903e1679e513"
     },
     {
+      "path": "pagefind/filter/en_e2ccbab.pf_filter",
+      "bytes": 140,
+      "sha256": "sha256:c5901ca7da00f43abfee0c015f50e8ff273544e445e18d052d17b199e0d4564c"
+    },
+    {
+      "path": "pagefind/filter/en_eaa3826.pf_filter",
+      "bytes": 130,
+      "sha256": "sha256:03b42c522d8d860241c04bd2851620d288377117f02c1042907740703d98a085"
+    },
+    {
+      "path": "pagefind/fragment/en_12b76c3.pf_fragment",
+      "bytes": 1805,
+      "sha256": "sha256:9134a0918b43689c49999f4b542dfa939779afaea065da4dc954a965fe508cf1"
+    },
+    {
+      "path": "pagefind/fragment/en_16cc392.pf_fragment",
+      "bytes": 5354,
+      "sha256": "sha256:103e13545adb4a223b5f0a8626fb42fc37fb6d1933d88e716c7deded2067dfa6"
+    },
+    {
       "path": "pagefind/fragment/en_1c3ee7d.pf_fragment",
       "bytes": 662,
       "sha256": "sha256:9e7b645372840afbef22b99b57da74607648ff0247fbad7f7bdebc317e75d7f5"
     },
     {
+      "path": "pagefind/fragment/en_1d1bd8e.pf_fragment",
+      "bytes": 2515,
+      "sha256": "sha256:0b0ace5dad96439d3ce611f6427effc95e30aed5f663808a7d20a41944dc0a70"
+    },
+    {
+      "path": "pagefind/fragment/en_228d504.pf_fragment",
+      "bytes": 1300,
+      "sha256": "sha256:ed99cc2efea74b8426b4f910ef7970f95f6fb84409441a116cbdd79a12ce6fe5"
+    },
+    {
       "path": "pagefind/fragment/en_2613449.pf_fragment",
       "bytes": 397,
       "sha256": "sha256:fd366dc2ee92266784f1ddf674d28d845d1388a96a6bf76104c42743cb3b4508"
+    },
+    {
+      "path": "pagefind/fragment/en_29cbb04.pf_fragment",
+      "bytes": 2380,
+      "sha256": "sha256:d517462b757d0f128f624e60f54cf70f7e68fc9fd95da22ffd03da78078c7402"
+    },
+    {
+      "path": "pagefind/fragment/en_2d9f9c9.pf_fragment",
+      "bytes": 1738,
+      "sha256": "sha256:a0289d0e4507763e7331c95e54861c501f8daeeca76292dac07d5e1b224274a2"
+    },
+    {
+      "path": "pagefind/fragment/en_3ec1d44.pf_fragment",
+      "bytes": 6034,
+      "sha256": "sha256:46a86f4c1578102097e2aa944f36dd2bbc4ff2d2ce7188b1dff1042aff6f79bc"
     },
     {
       "path": "pagefind/fragment/en_5af52c2.pf_fragment",
@@ -2263,6 +2449,11 @@
       "path": "pagefind/fragment/en_646382f.pf_fragment",
       "bytes": 3944,
       "sha256": "sha256:2f9ab3a9feee909d33f967b6d322b41abcd53395cda4cc1ff2ff5ffbe5a0b749"
+    },
+    {
+      "path": "pagefind/fragment/en_6ec2cb7.pf_fragment",
+      "bytes": 5077,
+      "sha256": "sha256:aa615416f9b8dbe5124a70cafbd9de21d6f143ca2be65715cad48124815855de"
     },
     {
       "path": "pagefind/fragment/en_7488cca.pf_fragment",
@@ -2295,14 +2486,39 @@
       "sha256": "sha256:5f7ab3e071414a38d93f8647fd3052113c0a34a68cecc7af157d3439fbc803fb"
     },
     {
+      "path": "pagefind/fragment/en_a1dee89.pf_fragment",
+      "bytes": 6680,
+      "sha256": "sha256:1e7a2cde5c9665bdd870973a91ca5af9f7830875fc14ba8dfb504afee48d077c"
+    },
+    {
       "path": "pagefind/fragment/en_a263991.pf_fragment",
       "bytes": 721,
       "sha256": "sha256:ef33ee4105dfaf0b331f583c96438477a935c948e98715438282372ef903ea41"
     },
     {
+      "path": "pagefind/fragment/en_a2c56e3.pf_fragment",
+      "bytes": 2835,
+      "sha256": "sha256:1758960311d3fbc5d524ef06103b89c14d68bada3fb04d111e269f44edc94f9f"
+    },
+    {
       "path": "pagefind/fragment/en_a32eefc.pf_fragment",
       "bytes": 2356,
       "sha256": "sha256:ead7c292ca9ac3431df669523f1a12ed45d0384a88806a636475cc8032f998bb"
+    },
+    {
+      "path": "pagefind/fragment/en_abb2a51.pf_fragment",
+      "bytes": 1270,
+      "sha256": "sha256:a36a171eaf84a6cd9c32cd7bc0fa5be1283932cc74d1f8f1e5313b41f394af2d"
+    },
+    {
+      "path": "pagefind/fragment/en_b0e87ae.pf_fragment",
+      "bytes": 1346,
+      "sha256": "sha256:8292747aaea1aded411e2c58f45456c8c6d1f1c71f6bd8236f494a184caed0c6"
+    },
+    {
+      "path": "pagefind/fragment/en_b150203.pf_fragment",
+      "bytes": 2332,
+      "sha256": "sha256:6ac05dc3072932eb970c46fccbb22c096aa884e8f893d5b01c1f59af04e26952"
     },
     {
       "path": "pagefind/fragment/en_b8ed8ac.pf_fragment",
@@ -2313,6 +2529,21 @@
       "path": "pagefind/fragment/en_bd6a1a3.pf_fragment",
       "bytes": 837,
       "sha256": "sha256:f41d1e7dbefcd7abf1ff7a1b9b6658cec27feab458922991157437255979fa74"
+    },
+    {
+      "path": "pagefind/fragment/en_c0cc61f.pf_fragment",
+      "bytes": 4516,
+      "sha256": "sha256:6fbd9b6f706a3f1c3932be704babfe9a12aad50a877dab037f3bc2b8d5668886"
+    },
+    {
+      "path": "pagefind/fragment/en_d7ffab4.pf_fragment",
+      "bytes": 1508,
+      "sha256": "sha256:049859ebb525ee49cf9f629841a9f504311573bbe17d86fd34fdae7bc9ca7556"
+    },
+    {
+      "path": "pagefind/fragment/en_d9c43cb.pf_fragment",
+      "bytes": 1357,
+      "sha256": "sha256:b9def9f4e78ef7ae2ed5b8d67c69e7accb3af14a515d4916e680da09064098b5"
     },
     {
       "path": "pagefind/fragment/en_db2163d.pf_fragment",
@@ -2340,9 +2571,19 @@
       "sha256": "sha256:076f0420360e8bf75c60b1836fe426298467c34d3dc65a9f8100ea573819c618"
     },
     {
+      "path": "pagefind/fragment/en_f931614.pf_fragment",
+      "bytes": 5239,
+      "sha256": "sha256:a1e30c0643a57f416fb601711d19727c411640390846b79ab6afdc5859cde48c"
+    },
+    {
       "path": "pagefind/fragment/en_fbf9e71.pf_fragment",
       "bytes": 516,
       "sha256": "sha256:19ada934806197f0d1cea489671eddfe754e6cc5cb91626b441a12197c7b31aa"
+    },
+    {
+      "path": "pagefind/index/en_38a4d77.pf_index",
+      "bytes": 2494,
+      "sha256": "sha256:f38e1b630f1b71848cdbb05cd2687010570418f9360a7a0ad63c82e85dd21667"
     },
     {
       "path": "pagefind/index/en_6166224.pf_index",
@@ -2350,9 +2591,19 @@
       "sha256": "sha256:8b7568310f6878a3ef64969aec726e4bfaf81ad0ec53e870aebe2b3917e25a31"
     },
     {
+      "path": "pagefind/index/en_7140477.pf_index",
+      "bytes": 31752,
+      "sha256": "sha256:6733883cdec4af5dd8ca9eec3266610033947612ffee2864bea67e288fc718e9"
+    },
+    {
       "path": "pagefind/index/en_beefd3a.pf_index",
       "bytes": 24912,
       "sha256": "sha256:68c60055b79cc8bf65070d14d33269b5ee6e43d574c16934ff9dfe1cb1f167ce"
+    },
+    {
+      "path": "pagefind/index/en_fdaf9b2.pf_index",
+      "bytes": 31673,
+      "sha256": "sha256:b4c7997cebe095ac8e50c4445e662216ce207f7f329519ce752b6a2c15759857"
     },
     {
       "path": "pagefind/pagefind-component-ui.css",
@@ -2361,13 +2612,13 @@
     },
     {
       "path": "pagefind/pagefind-component-ui.js",
-      "bytes": 175488,
-      "sha256": "sha256:958620129dd14bd851805daeb12ce708bd63b9287325d1d5ae6f73a04d1723f8"
+      "bytes": 175486,
+      "sha256": "sha256:0f25ebc6c6078ded981919edd142c8810ebdb12a3f60c9360afd669b4642d916"
     },
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 172,
-      "sha256": "sha256:cc528a22d7b10a5dc0d944d47182841fb7297262784aa822835ce1132c085a08"
+      "sha256": "sha256:bbda78eecdeff4fdcd7a7d6931a4ebbe375d1500470f5aa683d29c7bf30f1e3c"
     },
     {
       "path": "pagefind/pagefind-highlight.js",
@@ -2405,6 +2656,11 @@
       "sha256": "sha256:da75283e67d8a4397f76b26cf2ddf5eb12ce6d60bd9195ee3e4b2fca53e490e9"
     },
     {
+      "path": "pagefind/pagefind.en_6267bbe263.pf_meta",
+      "bytes": 401,
+      "sha256": "sha256:568abc1a823b3ed904bb3c63e1630f15b192f5ed515acab382ab8d036c78cc4e"
+    },
+    {
       "path": "pagefind/pagefind.js",
       "bytes": 45555,
       "sha256": "sha256:252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009"
@@ -2421,8 +2677,8 @@
     },
     {
       "path": "privacy/index.html",
-      "bytes": 19656,
-      "sha256": "sha256:2042b353a2e30236feaa48312f7928f7d29efe0858963e870ad4720fefb7a250"
+      "bytes": 21679,
+      "sha256": "sha256:2524e238fed44acc6c73d74fa1b6d0b044c6db681f8f7b058ac0bf39902ff8d0"
     },
     {
       "path": "robots.txt",
@@ -2431,23 +2687,23 @@
     },
     {
       "path": "shop/index.html",
-      "bytes": 21000,
-      "sha256": "sha256:5ebcbdc7daf20111e33c9faea1a8327350d622716817a1f24e85a39051d6daf1"
+      "bytes": 23023,
+      "sha256": "sha256:afd1f3899f1bf450ee032ed96fc8ae56ab615a7de21f6b5cdc341c1c8d25611f"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 2402,
-      "sha256": "sha256:4440bffe488cc30026334f0b30e61cb5c37a629fde57a0b1d7c6f3d133971f77"
+      "bytes": 3168,
+      "sha256": "sha256:2b90d8fe10d4c1084dc1628b92e63c344115de643746304ef4a71f499b621023"
     },
     {
       "path": "tools/agricultural-market-context-browser/index.html",
-      "bytes": 41280,
-      "sha256": "sha256:3fadd26814e230f048246447ff0ca1cc87e3c7f7f7e2233eebac15f837a01440"
+      "bytes": 33966,
+      "sha256": "sha256:3c170477a18430bc38e3a8d07442cf897be8affae1a724b8a1accfe49cd8453c"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/index.html",
-      "bytes": 272521,
-      "sha256": "sha256:b2474ef52675bc5fcb8ccd810c1127cc996c0951cf5418b419778486771eb28a"
+      "bytes": 71556,
+      "sha256": "sha256:56a197f2f9d385e07be58ad901b71d8c1ee9e14d58bd8f99b8dc4fb0f48eea68"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/page/2/index.html",
@@ -2461,13 +2717,13 @@
     },
     {
       "path": "tools/index.html",
-      "bytes": 23354,
-      "sha256": "sha256:dcbd4e2461305ba7c9b3188dc334255df3340ca6680049a88f5c8fc8b7facd59"
+      "bytes": 27133,
+      "sha256": "sha256:e840e69c5c760d113e2fcac5060a4dfde58068148a8ad5d655ee0e8a34de01ee"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/index.html",
-      "bytes": 256496,
-      "sha256": "sha256:d2c8c0e58c55dfbc9fc042e1f694f9de23ca48f430e467031337705ddb2fd0c7"
+      "bytes": 44417,
+      "sha256": "sha256:bff025f0930bfffdf0fcbd43d4880a4462ee17f9220c1604ffafc28f636cb066"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/page/2/index.html",
@@ -2476,13 +2732,13 @@
     },
     {
       "path": "tools/usda-staple-food-identity-explorer/index.html",
-      "bytes": 103665,
-      "sha256": "sha256:b8c96a7506a0303f52ab4a734dce627270c0f561236d27180b3d2efa7050d0ce"
+      "bytes": 40572,
+      "sha256": "sha256:2e11c2bbe1cc30c7ab8121523e68a892377fbd011771961023a68efe2e40163e"
     },
     {
       "path": "tools/zip-to-metro-relationship-explainer/index.html",
-      "bytes": 72254,
-      "sha256": "sha256:e19648fbf4251bb975ff9e526ee873f8b2ab9d707af32f9ae2c15a87bb14d7b1"
+      "bytes": 50498,
+      "sha256": "sha256:96de8ed1ef94a17df1fd6652fb5fc8b34611cf223f1e811011f8a8dc53056e69"
     }
   ]
 }

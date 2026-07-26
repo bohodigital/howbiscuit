@@ -15,6 +15,7 @@ const root = path.resolve(import.meta.dirname, "..");
 const siteDir = path.join(root, "site");
 const distDir = path.join(root, "dist");
 const manifestPath = path.join(root, "public-release.v1.json");
+const promotionPath = path.join(root, "promotion-package.v1.json");
 const maximumFiles = 2000;
 const maximumBytes = 50 * 1024 * 1024;
 const blockedLiterals = [
@@ -130,14 +131,28 @@ async function verifyDirectory(directory, expected) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  if (actual.htmlRouteCount !== 37) fail("expected exactly 37 HTML routes");
+  if (actual.htmlRouteCount !== 43) fail("expected exactly 43 HTML routes");
   const expectedPublicArticles = [
+    "/articles/does-turning-ac-off-save-money/",
+    "/articles/fan-vs-air-conditioner-cost/",
+    "/articles/home-energy-check-high-summer-bill/",
     "/articles/how-does-baking-powder-work/",
+    "/articles/portable-ac-cost-to-run/",
     "/articles/why-are-some-answers-better-than-others/",
+    "/articles/why-electric-bill-high-summer/",
     "/articles/why-salt-melts-ice/",
+    "/articles/window-ac-cost-per-hour/",
   ];
   for (const route of expectedPublicArticles) {
     if (!actual.routes.includes(route)) fail(`missing approved article route: ${route}`);
+  }
+  const preservedToolRoutes = [
+    "/tools/household-energy-benchmark-explorer/page/2/",
+    "/tools/household-energy-benchmark-explorer/page/3/",
+    "/tools/us-crop-production-trend-explorer/page/2/",
+  ];
+  for (const route of preservedToolRoutes) {
+    if (!actual.routes.includes(route)) fail(`missing preserved tool route: ${route}`);
   }
   return actual;
 }
@@ -146,9 +161,46 @@ async function loadManifest() {
   return JSON.parse(await readFile(manifestPath, "utf8"));
 }
 
+async function verifyPromotionPackage(release) {
+  const promotion = JSON.parse(await readFile(promotionPath, "utf8"));
+  if (promotion.schemaVersion !== "public-promotion-package.v1") fail("invalid promotion schema version");
+  if (promotion.releaseId !== "howbiscuit-phase1-batch1-2026-07-25") fail("unexpected promotion release ID");
+  if (promotion.approvalDigest !== "sha256:131d753ab5656fc0b168380b79be34826c9a8430d490a61b8700acdeec46fe52") {
+    fail("unexpected Batch 1 approval digest");
+  }
+  const expectedRoutes = [
+    "/articles/why-electric-bill-high-summer/",
+    "/articles/window-ac-cost-per-hour/",
+    "/articles/portable-ac-cost-to-run/",
+    "/articles/fan-vs-air-conditioner-cost/",
+    "/articles/does-turning-ac-off-save-money/",
+    "/articles/home-energy-check-high-summer-bill/",
+  ];
+  if (JSON.stringify(promotion.routes) !== JSON.stringify(expectedRoutes)) fail("promotion route inventory differs");
+  if (!Array.isArray(promotion.files) || promotion.files.length !== 93) fail("promotion file inventory differs");
+  const releaseFiles = new Map(release.files.map((file) => [file.path, file]));
+  const seen = new Set();
+  for (const file of promotion.files) {
+    if (seen.has(file.path)) fail(`duplicate promoted file: ${file.path}`);
+    seen.add(file.path);
+    if (JSON.stringify(file) !== JSON.stringify(releaseFiles.get(file.path))) {
+      fail(`promoted file differs from the accepted release: ${file.path}`);
+    }
+  }
+  for (const required of [
+    "downloads/home-energy-check-high-summer-bill.pdf",
+    "feed.xml",
+    "llms.txt",
+    "sitemap.xml",
+  ]) {
+    if (!seen.has(required)) fail(`promotion inventory is missing required public file: ${required}`);
+  }
+}
+
 async function verify() {
   const manifest = await loadManifest();
   const release = await verifyDirectory(siteDir, manifest);
+  await verifyPromotionPackage(release);
   console.log(`verified ${release.fileCount} files, ${release.byteCount} bytes`);
   console.log(release.artifactDigest);
   return release;
