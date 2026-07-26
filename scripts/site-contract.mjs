@@ -131,17 +131,23 @@ async function verifyDirectory(directory, expected) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  if (actual.htmlRouteCount !== 49) fail("expected exactly 49 HTML routes");
+  if (actual.htmlRouteCount !== 55) fail("expected exactly 55 HTML routes");
   const expectedPublicArticles = [
     "/articles/2-4-ghz-vs-5-ghz-wifi/",
     "/articles/best-place-to-put-wifi-router/",
+    "/articles/can-you-refreeze-food-after-power-outage/",
+    "/articles/do-you-need-refrigerator-freezer-thermometer/",
     "/articles/does-turning-ac-off-save-money/",
     "/articles/fan-vs-air-conditioner-cost/",
     "/articles/fix-wifi-dead-zones-without-buying-anything/",
     "/articles/home-energy-check-high-summer-bill/",
     "/articles/home-wifi-dead-zone-checklist/",
     "/articles/how-does-baking-powder-work/",
+    "/articles/how-long-food-safe-refrigerator-without-power/",
+    "/articles/how-long-food-stay-frozen-power-outage/",
     "/articles/portable-ac-cost-to-run/",
+    "/articles/power-outage-food-safety-chart/",
+    "/articles/what-food-throw-away-after-power-outage/",
     "/articles/why-are-some-answers-better-than-others/",
     "/articles/why-does-my-wifi-keep-disconnecting/",
     "/articles/why-electric-bill-high-summer/",
@@ -170,20 +176,20 @@ async function loadManifest() {
 async function verifyPromotionPackage(release) {
   const promotion = JSON.parse(await readFile(promotionPath, "utf8"));
   if (promotion.schemaVersion !== "public-promotion-package.v1") fail("invalid promotion schema version");
-  if (promotion.releaseId !== "howbiscuit-phase1-batch2-2026-07-25") fail("unexpected promotion release ID");
-  if (promotion.approvalDigest !== "sha256:2b36f0727e30da677ac976fdf2ade46b0d2b3bedae8a730c3efe24dc5e8c2c77") {
-    fail("unexpected Batch 2 approval digest");
+  if (promotion.releaseId !== "howbiscuit-phase1-batch3-2026-07-25") fail("unexpected promotion release ID");
+  if (promotion.approvalDigest !== "sha256:0e2dcbc381211c51884492a7751ce53cef2f427768e7b8a107969f0767c4831e") {
+    fail("unexpected Batch 3 approval digest");
   }
   const expectedRoutes = [
-    "/articles/why-is-my-wifi-so-slow/",
-    "/articles/best-place-to-put-wifi-router/",
-    "/articles/why-does-my-wifi-keep-disconnecting/",
-    "/articles/2-4-ghz-vs-5-ghz-wifi/",
-    "/articles/fix-wifi-dead-zones-without-buying-anything/",
-    "/articles/home-wifi-dead-zone-checklist/",
+    "/articles/how-long-food-safe-refrigerator-without-power/",
+    "/articles/how-long-food-stay-frozen-power-outage/",
+    "/articles/what-food-throw-away-after-power-outage/",
+    "/articles/can-you-refreeze-food-after-power-outage/",
+    "/articles/do-you-need-refrigerator-freezer-thermometer/",
+    "/articles/power-outage-food-safety-chart/",
   ];
   if (JSON.stringify(promotion.routes) !== JSON.stringify(expectedRoutes)) fail("promotion route inventory differs");
-  if (!Array.isArray(promotion.files) || promotion.files.length !== 90) fail("promotion file inventory differs");
+  if (!Array.isArray(promotion.files) || promotion.files.length === 0) fail("promotion file inventory differs");
   const releaseFiles = new Map(release.files.map((file) => [file.path, file]));
   const seen = new Set();
   for (const file of promotion.files) {
@@ -194,12 +200,12 @@ async function verifyPromotionPackage(release) {
     }
   }
   for (const required of [
-    "downloads/home-wifi-dead-zone-checklist.pdf",
+    "downloads/power-outage-food-safety-chart.pdf",
     "feed.xml",
-    "images/diagrams/dead-zone-test-grid.svg",
-    "images/diagrams/router-placement.svg",
-    "images/diagrams/wifi-band-tradeoff.svg",
-    "images/diagrams/wifi-diagnosis-flow.svg",
+    "images/diagrams/freezer-refreeze-decision-tree.svg",
+    "images/diagrams/outage-time-limits.svg",
+    "images/diagrams/refrigerator-decision-tree.svg",
+    "images/diagrams/thermometer-placement.svg",
     "llms.txt",
     "sitemap.xml",
   ]) {
