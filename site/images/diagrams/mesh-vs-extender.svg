@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="t desc">
+<title id="t">Mesh Wi-Fi and range extender comparison</title>
+<desc id="desc">The left side shows one router relayed through one extender to one weak area. The right side shows coordinated mesh nodes with either wireless or Ethernet backhaul.</desc>
+<rect width="1200" height="720" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="31">Targeted extension versus coordinated coverage</text>
+<rect x="55" y="105" width="505" height="500" rx="22"/>
+<text x="308" y="155" text-anchor="middle" fill="black" font-size="28">Range extender</text>
+<rect x="105" y="290" width="125" height="80" rx="12"/><text x="168" y="337" text-anchor="middle" fill="black" font-size="20">Router</text>
+<rect x="300" y="290" width="145" height="80" rx="12"/><text x="373" y="337" text-anchor="middle" fill="black" font-size="20">Extender</text>
+<rect x="480" y="270" width="55" height="120" rx="10"/><text x="508" y="335" text-anchor="middle" fill="black" font-size="17" transform="rotate(-90 508 335)">weak room</text>
+<line x1="230" y1="330" x2="300" y2="330"/><text x="265" y="310" text-anchor="middle" fill="black" font-size="16">upstream</text>
+<line x1="445" y1="330" x2="480" y2="330"/>
+<text x="308" y="435" text-anchor="middle" fill="black" font-size="18">Good for one isolated problem</text>
+<text x="308" y="475" text-anchor="middle" fill="black" font-size="17">Depends on a useful router link</text>
+<rect x="640" y="105" width="505" height="500" rx="22"/>
+<text x="893" y="155" text-anchor="middle" fill="black" font-size="28">Mesh system</text>
+<rect x="690" y="280" width="125" height="80" rx="12"/><text x="753" y="327" text-anchor="middle" fill="black" font-size="20">Primary</text>
+<rect x="865" y="220" width="125" height="80" rx="12"/><text x="928" y="267" text-anchor="middle" fill="black" font-size="20">Node</text>
+<rect x="865" y="380" width="125" height="80" rx="12"/><text x="928" y="427" text-anchor="middle" fill="black" font-size="20">Node</text>
+<rect x="1030" y="300" width="80" height="80" rx="12"/><text x="1070" y="347" text-anchor="middle" fill="black" font-size="18">Client</text>
+<line x1="815" y1="310" x2="865" y2="270"/><line x1="815" y1="340" x2="865" y2="410"/>
+<line x1="990" y1="260" x2="1030" y2="325"/><line x1="990" y1="420" x2="1030" y2="355"/>
+<path d="M753 360 L753 520 L928 520 L928 460" stroke-dasharray="10 8"/>
+<text x="840" y="548" text-anchor="middle" fill="black" font-size="16">optional Ethernet backhaul</text>
+<text x="893" y="475" text-anchor="middle" fill="black" font-size="18">Useful for several rooms or floors</text>
+<text x="893" y="585" text-anchor="middle" fill="black" font-size="17">Compatibility, backhaul, and client roaming still matter</text>
+<text x="600" y="675" text-anchor="middle" fill="black" font-size="18">Illustrative topology only. Exact behavior depends on product, placement, firmware, and client devices.</text>
+</g></svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="t desc">
+<title id="t">Household simultaneous bandwidth planning</title>
+<desc id="desc">A planning example adds one Netflix 4K stream, one Zoom 1080p call, and one Microsoft Teams meeting separately for download and upload.</desc>
+<rect width="1200" height="760" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="31">Add activities that happen at the same time</text>
+<text x="310" y="115" text-anchor="middle" fill="black" font-size="25">Download subtotal</text>
+<rect x="90" y="150" width="440" height="100"/><text x="310" y="190" text-anchor="middle" fill="black" font-size="21">Netflix 4K</text><text x="310" y="225" text-anchor="middle" fill="black" font-size="25">15 Mbps down</text>
+<rect x="90" y="250" width="440" height="100"/><text x="310" y="290" text-anchor="middle" fill="black" font-size="21">Zoom 1080p</text><text x="310" y="325" text-anchor="middle" fill="black" font-size="25">3 Mbps down</text>
+<rect x="90" y="350" width="440" height="100"/><text x="310" y="390" text-anchor="middle" fill="black" font-size="21">Teams meeting</text><text x="310" y="425" text-anchor="middle" fill="black" font-size="25">4 Mbps down</text>
+<rect x="90" y="475" width="440" height="90" rx="14"/><text x="310" y="530" text-anchor="middle" fill="black" font-size="28">22 Mbps down subtotal</text>
+<text x="890" y="115" text-anchor="middle" fill="black" font-size="25">Upload subtotal</text>
+<rect x="670" y="150" width="440" height="100"/><text x="890" y="190" text-anchor="middle" fill="black" font-size="21">Netflix stream</text><text x="890" y="225" text-anchor="middle" fill="black" font-size="25">not counted as upload</text>
+<rect x="670" y="250" width="440" height="100"/><text x="890" y="290" text-anchor="middle" fill="black" font-size="21">Zoom 1080p</text><text x="890" y="325" text-anchor="middle" fill="black" font-size="25">3.8 Mbps up</text>
+<rect x="670" y="350" width="440" height="100"/><text x="890" y="390" text-anchor="middle" fill="black" font-size="21">Teams meeting</text><text x="890" y="425" text-anchor="middle" fill="black" font-size="25">2.5 Mbps up</text>
+<rect x="670" y="475" width="440" height="90" rx="14"/><text x="890" y="530" text-anchor="middle" fill="black" font-size="28">6.3 Mbps up subtotal</text>
+<text x="600" y="625" text-anchor="middle" fill="black" font-size="19">Choose delivered service above the subtotal to allow for overhead, variation, and background traffic.</text>
+<text x="600" y="665" text-anchor="middle" fill="black" font-size="18">This is a planning example, not a guarantee or universal plan recommendation.</text>
+<text x="600" y="705" text-anchor="middle" fill="black" font-size="17">Official application values must be reverified before publication.</text>
+</g></svg>

@@ -131,15 +131,18 @@ async function verifyDirectory(directory, expected) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  if (actual.htmlRouteCount !== 67) fail("expected exactly 67 HTML routes");
+  if (actual.htmlRouteCount !== 73) fail("expected exactly 73 HTML routes");
   const expectedPublicArticles = [
     "/articles/2-4-ghz-vs-5-ghz-wifi/",
     "/articles/air-fryer-vs-oven-electricity-cost/",
     "/articles/best-place-to-put-wifi-router/",
+    "/articles/can-microwave-interfere-with-wifi/",
     "/articles/can-you-refreeze-food-after-power-outage/",
     "/articles/do-you-need-refrigerator-freezer-thermometer/",
     "/articles/does-aluminum-foil-improve-wifi-signal/",
     "/articles/does-turning-ac-off-save-money/",
+    "/articles/download-vs-upload-speed-latency/",
+    "/articles/ethernet-vs-wifi/",
     "/articles/fan-vs-air-conditioner-cost/",
     "/articles/fix-wifi-dead-zones-without-buying-anything/",
     "/articles/home-energy-check-high-summer-bill/",
@@ -153,7 +156,10 @@ async function verifyDirectory(directory, expected) {
     "/articles/how-much-does-refrigerator-cost-to-run/",
     "/articles/how-much-does-washing-machine-cost-per-load/",
     "/articles/how-much-electricity-does-microwave-use/",
+    "/articles/how-much-internet-speed-do-you-need/",
+    "/articles/how-often-should-you-replace-wifi-router/",
     "/articles/how-to-calculate-appliance-electricity-cost/",
+    "/articles/mesh-wifi-vs-range-extender/",
     "/articles/portable-ac-cost-to-run/",
     "/articles/power-outage-food-safety-chart/",
     "/articles/what-food-throw-away-after-power-outage/",
@@ -186,17 +192,17 @@ async function loadManifest() {
 async function verifyPromotionPackage(release) {
   const promotion = JSON.parse(await readFile(promotionPath, "utf8"));
   if (promotion.schemaVersion !== "public-promotion-package.v1") fail("invalid promotion schema version");
-  if (promotion.releaseId !== "howbiscuit-phase1-batch5-2026-07-26") fail("unexpected promotion release ID");
-  if (promotion.approvalDigest !== "sha256:3214f267627f39698e468e3a3358162944ccd8002bda51d2a2fa689d437527ec") {
-    fail("unexpected Batch 5 approval digest");
+  if (promotion.releaseId !== "howbiscuit-phase1-batch6-2026-07-26") fail("unexpected promotion release ID");
+  if (promotion.approvalDigest !== "sha256:fe017b80cf2f46607b2b0f96cd3ad8798cc5dd7a643127e61388aed412554128") {
+    fail("unexpected Batch 6 approval digest");
   }
   const expectedRoutes = [
-    "/articles/how-much-does-washing-machine-cost-per-load/",
-    "/articles/how-much-electricity-does-microwave-use/",
-    "/articles/does-aluminum-foil-improve-wifi-signal/",
-    "/articles/where-to-place-wifi-extender/",
-    "/tools/appliance-electricity-cost-calculator/",
-    "/electricity-prices-by-state/",
+    "/articles/mesh-wifi-vs-range-extender/",
+    "/articles/ethernet-vs-wifi/",
+    "/articles/how-often-should-you-replace-wifi-router/",
+    "/articles/can-microwave-interfere-with-wifi/",
+    "/articles/download-vs-upload-speed-latency/",
+    "/articles/how-much-internet-speed-do-you-need/",
   ];
   if (JSON.stringify(promotion.routes) !== JSON.stringify(expectedRoutes)) fail("promotion route inventory differs");
   if (!Array.isArray(promotion.files) || promotion.files.length === 0) fail("promotion file inventory differs");
@@ -210,17 +216,34 @@ async function verifyPromotionPackage(release) {
     }
   }
   for (const required of [
-    "data/electricity-prices-by-state-may-2026.json",
-    "downloads/electricity-prices-by-state-may-2026.csv",
+    "articles/can-microwave-interfere-with-wifi/index.html",
+    "articles/download-vs-upload-speed-latency/index.html",
+    "articles/ethernet-vs-wifi/index.html",
+    "articles/how-much-internet-speed-do-you-need/index.html",
+    "articles/how-often-should-you-replace-wifi-router/index.html",
+    "articles/mesh-wifi-vs-range-extender/index.html",
+    "articles/index.html",
     "feed.xml",
-    "images/diagrams/calculator-methods.svg",
-    "images/diagrams/extender-placement.svg",
-    "images/diagrams/microwave-input-output.svg",
-    "images/diagrams/optimized-reflector.svg",
+    "home-tech/index.html",
+    "images/articles/can-microwave-interfere-with-wifi/photo-accesspoint.jpg",
+    "images/articles/can-microwave-interfere-with-wifi/photo-microwave.jpg",
+    "images/articles/download-vs-upload-speed-latency/photo-ethernet.jpg",
+    "images/articles/download-vs-upload-speed-latency/photo-rear.jpg",
+    "images/articles/ethernet-vs-wifi/photo-ethernet.jpg",
+    "images/articles/ethernet-vs-wifi/photo-rear.jpg",
+    "images/articles/how-much-internet-speed-do-you-need/photo-mesh.jpg",
+    "images/articles/how-much-internet-speed-do-you-need/photo-router.jpg",
+    "images/articles/how-often-should-you-replace-wifi-router/photo-oldrouter.jpg",
+    "images/articles/how-often-should-you-replace-wifi-router/photo-router.jpg",
+    "images/articles/mesh-wifi-vs-range-extender/photo-extender.jpg",
+    "images/articles/mesh-wifi-vs-range-extender/photo-mesh.jpg",
+    "images/diagrams/ethernet-slowest-link.svg",
+    "images/diagrams/household-bandwidth-stack.svg",
+    "images/diagrams/mesh-vs-extender.svg",
+    "images/diagrams/microwave-interference-timeline.svg",
+    "images/diagrams/router-replacement-decision.svg",
     "llms.txt",
     "sitemap.xml",
-    "tools/appliance-electricity-cost-calculator/index.html",
-    "electricity-prices-by-state/index.html",
   ]) {
     if (!seen.has(required)) fail(`promotion inventory is missing required public file: ${required}`);
   }
