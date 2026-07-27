@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t desc">
+<title id="t">Storage and tankless water heater comparison</title>
+<desc id="desc">A storage tank provides a finite heated reserve while tankless equipment heats flowing water within a maximum flow and temperature rise.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Reserve capacity versus flow-limited heating</text>
+<rect x="70" y="120" width="480" height="430" rx="22"/><text x="310" y="170" text-anchor="middle" fill="black" font-size="27">Storage heater</text>
+<rect x="200" y="230" width="220" height="210" rx="30"/><text x="310" y="300" text-anchor="middle" fill="black" font-size="22">Heated reserve</text><text x="310" y="340" text-anchor="middle" fill="black" font-size="18">finite tank</text><text x="310" y="380" text-anchor="middle" fill="black" font-size="18">recovery after use</text>
+<text x="310" y="500" text-anchor="middle" fill="black" font-size="18">Compare tank volume + First Hour Rating</text>
+<rect x="650" y="120" width="480" height="430" rx="22"/><text x="890" y="170" text-anchor="middle" fill="black" font-size="27">Tankless heater</text>
+<rect x="800" y="250" width="180" height="160" rx="18"/><text x="890" y="310" text-anchor="middle" fill="black" font-size="22">Heat</text><text x="890" y="348" text-anchor="middle" fill="black" font-size="22">exchanger</text>
+<line x1="690" y1="330" x2="800" y2="330"/><line x1="980" y1="330" x2="1090" y2="330"/>
+<text x="890" y="500" text-anchor="middle" fill="black" font-size="18">Limited by flow, temperature rise and input</text>
+<text x="600" y="625" text-anchor="middle" fill="black" font-size="18">Neither category is universally cheaper or unlimited.</text>
+
+</g></svg>

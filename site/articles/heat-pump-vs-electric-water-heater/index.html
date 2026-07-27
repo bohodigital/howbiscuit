@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-preference="system"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let storedPreference = null;
+        try {
+          storedPreference = localStorage.getItem('howbiscuit-theme');
+        } catch { /* Storage may be denied; system preference still applies. */ }
+        const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';
+        let systemPrefersDark = false;
+        try {
+          systemPrefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch { /* Light is the safe fallback when media queries are unavailable. */ }
+        const resolved = preference === 'system' ? (systemPrefersDark ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.theme = resolved;
+      })();
+    </script><title>Heat Pump vs. Standard Electric Water Heater | How Biscuit</title><meta name="description" content="Heat-pump water heaters move heat from surrounding air and may use resistance backup. Compare efficiency, recovery, room size, temperature, noise, condensate, and installation."><meta name="robots" content="index, follow"><meta name="theme-color" content="#fff8e7"><link rel="canonical" href="https://howbiscuit.com/articles/heat-pump-vs-electric-water-heater/"><link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml"><link rel="sitemap" href="/sitemap.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="How Biscuit"><meta property="og:title" content="Heat Pump vs. Standard Electric Water Heater | How Biscuit"><meta property="og:description" content="Heat-pump water heaters move heat from surrounding air and may use resistance backup. Compare efficiency, recovery, room size, temperature, noise, condensate, and installation."><meta property="og:url" content="https://howbiscuit.com/articles/heat-pump-vs-electric-water-heater/"><meta property="og:image" content="https://howbiscuit.com/images/articles/heat-pump-vs-electric-water-heater/photo-hero.jpg"><meta property="og:image:alt" content="A real gas storage water heater with visible connected piping"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Heat Pump vs. Standard Electric Water Heater | How Biscuit"><meta name="twitter:description" content="Heat-pump water heaters move heat from surrounding air and may use resistance backup. Compare efficiency, recovery, room size, temperature, noise, condensate, and installation."><meta name="twitter:image" content="https://howbiscuit.com/images/articles/heat-pump-vs-electric-water-heater/photo-hero.jpg"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"How Biscuit","description":"Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.","url":"https://howbiscuit.com/","publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"Article","headline":"Heat Pump vs. Standard Electric Water Heater","description":"Heat-pump water heaters move heat from surrounding air and may use resistance backup. Compare efficiency, recovery, room size, temperature, noise, condensate, and installation.","url":"https://howbiscuit.com/articles/heat-pump-vs-electric-water-heater/","datePublished":"2026-07-27","dateModified":"2026-07-27","articleSection":"Home \u0026 Apartment","about":"Utilities \u0026 Energy","author":{"@type":"Organization","name":"How Biscuit"},"publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://howbiscuit.com/"},{"@type":"ListItem","position":2,"name":"Home \u0026 Apartment","item":"https://howbiscuit.com/home/"},{"@type":"ListItem","position":3,"name":"Utilities \u0026 Energy","item":"https://howbiscuit.com/home/#topic-utilities-energy"},{"@type":"ListItem","position":4,"name":"Heat Pump vs. Standard Electric Water Heater"}]}]</script><script defer src="/analytics-bootstrap.js" data-analytics-bootstrap="boho-v1" data-umami-script-url="https://analytics.bohodigitalservices.com/script.js" data-umami-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-umami-domains="howbiscuit.com,www.howbiscuit.com" data-ga-id="G-NG0NQMVFEH" data-ga-public-hosts="howbiscuit.com,www.howbiscuit.com"></script><style>@media(min-width:58.001rem){.hb-content[data-astro-cid-zm77yjld]{grid-column:1;grid-row:1}.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:2;grid-row:1}}@media(max-width:58rem){.hb-content[data-astro-cid-zm77yjld],.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:1;grid-row:auto;min-width:0}}.hb-direct-answer[data-astro-cid-zm77yjld]{margin-top:1.2rem;border-left:4px solid var(--hb-tomato);padding-left:1rem;color:var(--hb-ink);font-size:clamp(1.05rem,2vw,1.3rem)}.hb-correction-link[data-astro-cid-zm77yjld]{margin-top:3rem;border-top:1px solid var(--hb-ink);padding-top:1rem}.hb-content[data-astro-cid-pwjejfi6]{min-width:0;overflow-wrap:anywhere}.hb-content[data-astro-cid-pwjejfi6] pre,.hb-content[data-astro-cid-pwjejfi6] table{display:block;max-width:100%;overflow-x:auto}.hb-empty-state p{color:var(--hb-ink-soft)}.hb-empty-state a{color:var(--hb-ink);font-weight:850}.hb-topic-section[data-astro-cid-fzx4jmue]{scroll-margin-top:6.5rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]{margin-top:4rem;border-top:2px solid var(--hb-ink);padding-top:1.2rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]>div[data-astro-cid-fzx4jmue]{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.8rem}.hb-neighbor-links[data-astro-cid-fzx4jmue] a[data-astro-cid-fzx4jmue]{border:1px solid var(--hb-ink);border-radius:999px;padding:.45rem .7rem;color:var(--hb-ink);text-decoration:none}
+</style>
+<link rel="stylesheet" href="/_astro/BaseLayout.DYSwHKpc.css"><style>.hb-article-media[data-astro-cid-ryrfu6xi]{margin:2rem 0}.hb-article-media[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{display:block;width:100%;max-height:38rem;object-fit:cover;border:1px solid var(--hb-ink);border-radius:1rem;background:var(--hb-paper)}.hb-article-media-hero[data-astro-cid-ryrfu6xi]{margin-top:0}.hb-article-media-hero[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{aspect-ratio:16 / 9}.hb-article-media[data-astro-cid-ryrfu6xi] figcaption[data-astro-cid-ryrfu6xi]{display:grid;gap:.25rem;margin-top:.55rem;color:var(--hb-muted-ink);font-size:.9rem;line-height:1.45}.hb-article-media-credit[data-astro-cid-ryrfu6xi]{font-size:.8rem}
+</style></head> <body> <a class="hb-skip-link" href="#main-content">Skip to content</a> <header class="hb-custom-header" data-pagefind-ignore="all" data-astro-cid-ctg3m53h> <div class="hb-header-inner" data-astro-cid-ctg3m53h> <a class="hb-brand" href="/" aria-label="How Biscuit home" data-astro-cid-ctg3m53h> <span data-astro-cid-ctg3m53h>HOW BISCUIT</span><b aria-hidden="true" data-astro-cid-ctg3m53h>?</b><i data-astro-cid-ctg3m53h>Practical guides</i> </a> <nav class="hb-desktop-nav" aria-label="Primary navigation" data-astro-cid-ctg3m53h> <details class="hb-category-menu" name="hb-primary-navigation" data-category="home-tech" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home Tech published topics" data-astro-cid-ctg3m53h> <a href="/home-tech/#topic-wifi-routers" aria-label="Wi-Fi &amp; Routers, 14 published guides" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers<span aria-hidden="true" data-astro-cid-ctg3m53h>14</span></a><a href="/home-tech/#topic-power-cooling-storage" aria-label="Power, Cooling &amp; Storage, 6 published guides" data-astro-cid-ctg3m53h>Power, Cooling &amp; Storage<span aria-hidden="true" data-astro-cid-ctg3m53h>6</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/dehumidifier-running-not-collecting-water/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Why Is My Dehumidifier Running but Not Collecting Water?</strong><small data-astro-cid-ctg3m53h>A dehumidifier may stop collecting because the room is already below the setpoint, the room is too cold, airflow is blocked, the bucket or drain is wrong, or the compressor has failed.</small></a><a href="/articles/dehumidifier-vs-air-conditioner/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Dehumidifier vs. Air Conditioner: Which Do You Need?</strong><small data-astro-cid-ctg3m53h>An air conditioner removes heat and some moisture. A dehumidifier removes moisture but returns heat to the room. Choose from temperature, humidity, moisture source, and room conditions.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="home" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home &amp; Apartment published topics" data-astro-cid-ctg3m53h> <a href="/home/#topic-heating-cooling" aria-label="Heating &amp; Cooling, 11 published guides" data-astro-cid-ctg3m53h>Heating &amp; Cooling<span aria-hidden="true" data-astro-cid-ctg3m53h>11</span></a><a href="/home/#topic-cleaning" aria-label="Cleaning, 6 published guides" data-astro-cid-ctg3m53h>Cleaning<span aria-hidden="true" data-astro-cid-ctg3m53h>6</span></a><a href="/home/#topic-utilities-energy" aria-label="Utilities &amp; Energy, 10 published guides" data-astro-cid-ctg3m53h>Utilities &amp; Energy<span aria-hidden="true" data-astro-cid-ctg3m53h>10</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/air-drying-vs-clothes-dryer/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Air-Drying vs. Clothes Dryer: Cost, Time, and Fabric Tradeoffs</strong><small data-astro-cid-ctg3m53h>Air drying reduces dryer energy and can reduce fabric wear, but requires time, space, ventilation, and humidity control. Compare cost, weather, pollen, and fabric needs.</small></a><a href="/articles/air-purifier-vs-hvac-filter/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Air Purifier vs. HVAC Filter: Which Do You Need?</strong><small data-astro-cid-ctg3m53h>Portable air cleaners treat one room or area. HVAC filters work throughout a ducted system only while its fan runs. Learn when one, both, or neither solves the problem.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="kitchen" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p></div> <div class="hb-topic-labels" role="group" aria-label="Kitchen published topics" data-astro-cid-ctg3m53h> <a href="/kitchen/#topic-food-science" aria-label="Food Science, 1 published guide" data-astro-cid-ctg3m53h>Food Science<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a><a href="/kitchen/#topic-troubleshooting-safety" aria-label="Kitchen Troubleshooting &amp; Safety, 17 published guides" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety<span aria-hidden="true" data-astro-cid-ctg3m53h>17</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/how-long-leftovers-last-fridge/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Long Do Leftovers Last in the Fridge?</strong><small data-astro-cid-ctg3m53h>Most cooked leftovers keep 3 to 4 days in a refrigerator at 40°F or below. Refrigerate within 2 hours, use shallow containers, and reheat leftovers to 165°F.</small></a><a href="/articles/organize-refrigerator-food-safety/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How to Organize a Refrigerator for Food Safety and Less Waste</strong><small data-astro-cid-ctg3m53h>Keep the refrigerator at 40°F or below, preserve airflow, contain raw-food leaks, date leftovers, and create a visible use-first area to reduce waste.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="shop" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p></div> <div class="hb-topic-labels" role="group" aria-label="Shop Smarter published topics" data-astro-cid-ctg3m53h> <a href="/shop/#topic-used-refurbished" aria-label="Used &amp; Refurbished, 1 published guide" data-astro-cid-ctg3m53h>Used &amp; Refurbished<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a><a href="/shop/#topic-total-cost-ownership" aria-label="Total Cost of Ownership, 5 published guides" data-astro-cid-ctg3m53h>Total Cost of Ownership<span aria-hidden="true" data-astro-cid-ctg3m53h>5</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/appliance-buying-checklist/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls</strong><small data-astro-cid-ctg3m53h>Measure the space and delivery route, verify every hookup, read EnergyGuide and warranty terms, inspect delivery damage, check recalls, and document installation.</small></a><a href="/articles/appliance-extended-warranty-worth-it/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Are Extended Warranties on Appliances Worth It?</strong><small data-astro-cid-ctg3m53h>Compare the service contract with the manufacturer warranty, repair risk, deductibles, exclusions, shipping, reimbursement limits, claims process, and provider reputation.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="tools" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p></div> <div class="hb-topic-labels" role="group" aria-label="Tools published topics" data-astro-cid-ctg3m53h> <a href="/tools/#topic-checklists" aria-label="Checklists, 1 published guide" data-astro-cid-ctg3m53h>Checklists<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</strong><small data-astro-cid-ctg3m53h>Use this step-by-step home energy checklist to find why a summer electric bill increased, from billing days and rates to AC filters, air leaks, and hidden loads.</small></a> </div> </div> </details> <a class="hb-all-guides-link" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme: System</button> </nav> <div class="hb-mobile-actions" data-astro-cid-ctg3m53h> <button class="hb-header-action" id="mobile-navigation-trigger" type="button" data-open-modal="mobile-navigation" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Menu</button> <button class="hb-header-action" id="mobile-search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme</button> </div> </div> </header> <noscript> <details class="hb-noscript-navigation" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Browse How Biscuit</summary> <nav aria-label="Primary navigation without JavaScript" data-astro-cid-ctg3m53h> <div data-astro-cid-ctg3m53h> <a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong></a> <a href="/articles/dehumidifier-running-not-collecting-water/" data-astro-cid-ctg3m53h>Why Is My Dehumidifier Running but Not Collecting Water?</a><a href="/articles/dehumidifier-vs-air-conditioner/" data-astro-cid-ctg3m53h>Dehumidifier vs. Air Conditioner: Which Do You Need?</a> </div><div data-astro-cid-ctg3m53h> <a href="/home/" aria-current="true" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong></a> <a href="/articles/air-drying-vs-clothes-dryer/" data-astro-cid-ctg3m53h>Air-Drying vs. Clothes Dryer: Cost, Time, and Fabric Tradeoffs</a><a href="/articles/air-purifier-vs-hvac-filter/" data-astro-cid-ctg3m53h>Air Purifier vs. HVAC Filter: Which Do You Need?</a> </div><div data-astro-cid-ctg3m53h> <a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong></a> <a href="/articles/how-long-leftovers-last-fridge/" data-astro-cid-ctg3m53h>How Long Do Leftovers Last in the Fridge?</a><a href="/articles/organize-refrigerator-food-safety/" data-astro-cid-ctg3m53h>How to Organize a Refrigerator for Food Safety and Less Waste</a> </div><div data-astro-cid-ctg3m53h> <a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong></a> <a href="/articles/appliance-buying-checklist/" data-astro-cid-ctg3m53h>Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls</a><a href="/articles/appliance-extended-warranty-worth-it/" data-astro-cid-ctg3m53h>Are Extended Warranties on Appliances Worth It?</a> </div><div data-astro-cid-ctg3m53h> <a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong></a> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </details> </noscript> <dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="mobile-navigation-title" data-astro-cid-ctg3m53h>Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu" data-astro-cid-ctg3m53h>Close</button></header> <nav aria-label="Mobile navigation" data-astro-cid-ctg3m53h> <details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home-tech/" data-astro-cid-ctg3m53h>Open Home Tech →</a> <p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home-tech/#topic-wifi-routers" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers</a><a href="/home-tech/#topic-power-cooling-storage" data-astro-cid-ctg3m53h>Power, Cooling &amp; Storage</a></p> <a href="/articles/dehumidifier-running-not-collecting-water/" data-astro-cid-ctg3m53h>Why Is My Dehumidifier Running but Not Collecting Water?</a><a href="/articles/dehumidifier-vs-air-conditioner/" data-astro-cid-ctg3m53h>Dehumidifier vs. Air Conditioner: Which Do You Need?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home/" data-astro-cid-ctg3m53h>Open Home &amp; Apartment →</a> <p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home/#topic-heating-cooling" data-astro-cid-ctg3m53h>Heating &amp; Cooling</a><a href="/home/#topic-cleaning" data-astro-cid-ctg3m53h>Cleaning</a><a href="/home/#topic-utilities-energy" data-astro-cid-ctg3m53h>Utilities &amp; Energy</a></p> <a href="/articles/air-drying-vs-clothes-dryer/" data-astro-cid-ctg3m53h>Air-Drying vs. Clothes Dryer: Cost, Time, and Fabric Tradeoffs</a><a href="/articles/air-purifier-vs-hvac-filter/" data-astro-cid-ctg3m53h>Air Purifier vs. HVAC Filter: Which Do You Need?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/kitchen/" data-astro-cid-ctg3m53h>Open Kitchen →</a> <p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/kitchen/#topic-food-science" data-astro-cid-ctg3m53h>Food Science</a><a href="/kitchen/#topic-troubleshooting-safety" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety</a></p> <a href="/articles/how-long-leftovers-last-fridge/" data-astro-cid-ctg3m53h>How Long Do Leftovers Last in the Fridge?</a><a href="/articles/organize-refrigerator-food-safety/" data-astro-cid-ctg3m53h>How to Organize a Refrigerator for Food Safety and Less Waste</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/shop/" data-astro-cid-ctg3m53h>Open Shop Smarter →</a> <p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/shop/#topic-used-refurbished" data-astro-cid-ctg3m53h>Used &amp; Refurbished</a><a href="/shop/#topic-total-cost-ownership" data-astro-cid-ctg3m53h>Total Cost of Ownership</a></p> <a href="/articles/appliance-buying-checklist/" data-astro-cid-ctg3m53h>Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls</a><a href="/articles/appliance-extended-warranty-worth-it/" data-astro-cid-ctg3m53h>Are Extended Warranties on Appliances Worth It?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/tools/" data-astro-cid-ctg3m53h>Open Tools →</a> <p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/tools/#topic-checklists" data-astro-cid-ctg3m53h>Checklists</a></p> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> </details> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </div> </dialog> <dialog class="hb-shell-dialog hb-search-dialog" id="search-dialog" aria-labelledby="search-dialog-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="search-dialog-title" data-astro-cid-ctg3m53h>Search How Biscuit</h2><button type="button" data-close-modal aria-label="Close search" data-astro-cid-ctg3m53h>Close</button></header> <form class="hb-search-form" role="search" data-astro-cid-ctg3m53h> <label for="howbiscuit-search-input" data-astro-cid-ctg3m53h>Search published guides and pages</label> <div data-astro-cid-ctg3m53h><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" data-astro-cid-ctg3m53h><button type="submit" data-astro-cid-ctg3m53h>Search</button></div> </form> <p class="hb-search-status" role="status" aria-live="polite" data-astro-cid-ctg3m53h>Enter a word or phrase to search.</p> <div class="hb-search-results" role="region" aria-label="Search results" data-astro-cid-ctg3m53h></div> </div> </dialog>  <script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js"></script> <main id="main-content" class="hb-main hb-article-page" data-pagefind-body> <span hidden aria-hidden="true" data-pagefind-filter="category">Home &amp; Apartment</span><span hidden aria-hidden="true" data-pagefind-filter="type">Guide</span> <span hidden aria-hidden="true" data-pagefind-meta="title">Heat Pump vs. Standard Electric Water Heater</span> <span hidden aria-hidden="true" data-pagefind-meta="description">Heat-pump water heaters move heat from surrounding air and may use resistance backup. Compare efficiency, recovery, room size, temperature, noise, condensate, and installation.</span> <span hidden aria-hidden="true" data-pagefind-meta="route">/articles/heat-pump-vs-electric-water-heater/</span>   <article class="hb-article-shell" data-astro-cid-zm77yjld> <nav class="hb-breadcrumbs" aria-label="Breadcrumb"> <ol> <li> <a href="/">Home</a> <b aria-hidden="true">/</b> </li><li> <a href="/home/">Home &amp; Apartment</a> <b aria-hidden="true">/</b> </li><li> <a href="/home/#topic-utilities-energy">Utilities &amp; Energy</a> <b aria-hidden="true">/</b> </li><li> <span aria-current="page">Heat Pump vs. Standard Electric Water Heater</span>  </li> </ol> </nav> <header class="hb-article-title" data-astro-cid-zm77yjld> <div class="hb-article-labels" role="group" aria-label="Article classification" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Category: Home &amp; Apartment</span> <span data-astro-cid-zm77yjld>Topic: Utilities &amp; Energy</span> <span data-astro-cid-zm77yjld>Type: Guide</span> </div> <h1 data-astro-cid-zm77yjld>Heat Pump vs. Standard Electric Water Heater</h1> <p class="hb-direct-answer" data-astro-cid-zm77yjld>Heat-pump water heaters can use much less electricity, but they need an appropriate installation space, airflow, condensate route, temperature range, maintenance, and enough storage for household demand.</p> <div class="hb-article-meta" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Updated <time datetime="2026-07-27" data-astro-cid-zm77yjld>Jul 27, 2026</time></span> <span data-astro-cid-zm77yjld>5 min read</span> <span class="hb-badge hb-evidence hb-evidence-label" data-evidence="researched">Researched</span> <span class="hb-badge hb-testing-badge" data-state="not-hands-on-tested">Not hands-on tested</span> </div> </header> <aside class="hb-disclosure" aria-label="Disclosure"> <strong>Disclosure</strong> <p>This guide contains no affiliate links, sponsored placements, paid reviews, product placements, product cards, or product recommendations.</p> <a href="/affiliate-disclosure/">Read the disclosure</a> </aside> <div class="hb-article-grid" data-astro-cid-zm77yjld> <nav class="hb-article-toc" aria-labelledby="article-toc-title" data-astro-cid-zm77yjld> <h2 id="article-toc-title" data-astro-cid-zm77yjld>On this page</h2> <ol data-astro-cid-zm77yjld><li data-depth="2" data-astro-cid-zm77yjld><a href="#standard-electric-resistance" data-astro-cid-zm77yjld>Standard electric resistance</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#heat-pump-operation" data-astro-cid-zm77yjld>Heat-pump operation</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#hybrid-backup" data-astro-cid-zm77yjld>Hybrid backup</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#installation-space" data-astro-cid-zm77yjld>Installation space</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#room-cooling-and-dehumidification" data-astro-cid-zm77yjld>Room cooling and dehumidification</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#condensate" data-astro-cid-zm77yjld>Condensate</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#noise" data-astro-cid-zm77yjld>Noise</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#recovery-and-tank-size" data-astro-cid-zm77yjld>Recovery and tank size</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#cold-spaces" data-astro-cid-zm77yjld>Cold spaces</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#laundry-room-chemicals" data-astro-cid-zm77yjld>Laundry-room chemicals</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#filter-maintenance" data-astro-cid-zm77yjld>Filter maintenance</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#electrical-service" data-astro-cid-zm77yjld>Electrical service</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#cost-comparison" data-astro-cid-zm77yjld>Cost comparison</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#frequently-asked-questions" data-astro-cid-zm77yjld>Frequently asked questions</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#does-a-heat-pump-water-heater-work-in-winter" data-astro-cid-zm77yjld>Does a heat-pump water heater work in winter?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#will-it-cool-the-basement" data-astro-cid-zm77yjld>Will it cool the basement?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#is-it-loud" data-astro-cid-zm77yjld>Is it loud?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#does-it-need-a-drain" data-astro-cid-zm77yjld>Does it need a drain?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#is-it-always-cheaper" data-astro-cid-zm77yjld>Is it always cheaper?</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#printable-companion" data-astro-cid-zm77yjld>Printable companion</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#related-guides" data-astro-cid-zm77yjld>Related guides</a></li></ol> </nav> <div class="hb-content" data-astro-cid-zm77yjld> <figure class="hb-article-media hb-article-media-hero" data-astro-cid-ryrfu6xi> <img src="/images/articles/heat-pump-vs-electric-water-heater/photo-hero.jpg" alt="A real gas storage water heater with visible connected piping" loading="eager" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real gas storage water heater. The photograph does not establish that every visible installation detail meets current local code.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by Tomwsulcer via Wikimedia Commons (CC0 1.0)  · CC0 1.0  · <a href="https://commons.wikimedia.org/wiki/File:Hot_water_heater_with_pipe.jpg" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>A standard electric water heater creates heat in resistance elements.</p>
+<p>A heat-pump water heater moves heat from surrounding air into the tank and may use resistance elements during higher demand.</p>
+<blockquote>
+<p><strong>Quick answer:</strong> Heat-pump water heaters can use much less electricity, but they need an appropriate installation space, airflow, condensate route, temperature range, maintenance, and enough storage for household demand.</p>
+</blockquote>
+<h2 id="standard-electric-resistance">Standard electric resistance</h2>
+<figure class="hb-article-media" data-astro-cid-ryrfu6xi> <img src="/images/articles/heat-pump-vs-electric-water-heater/photo-inline-1.jpg" alt="A real wall-mounted electric tankless water heater" loading="lazy" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real electric tankless water heater used only to illustrate the appliance type, not compatibility, safety, or performance.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by Mattes via Wikimedia Commons (public domain)  · Public domain dedication  · <a href="https://commons.wikimedia.org/wiki/File:Water_heater_bathroom.JPG" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>A conventional electric storage heater uses electrical resistance elements inside the tank.</p>
+<p>Advantages:</p>
+<ul>
+<li>Simple operating principle</li>
+<li>Quiet</li>
+<li>No room-air requirement</li>
+<li>No condensate</li>
+<li>Familiar service</li>
+<li>Predictable recovery from element rating</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Higher electricity use</li>
+<li>No heat-pump efficiency</li>
+<li>Finite tank</li>
+<li>Standby loss</li>
+</ul>
+<h2 id="heat-pump-operation">Heat-pump operation</h2>
+<p>ENERGY STAR describes a heat-pump water heater as a refrigerator in reverse:</p>
+<ul>
+<li>A refrigerator removes heat from a box.</li>
+<li>A heat-pump water heater removes heat from surrounding air.</li>
+<li>It transfers that heat into the water.<sup><a href="#source-finale-source-6fe7f66fc44c" aria-label="Source 1: How Heat Pump Water Heaters Work">[1]</a></sup></li>
+</ul>
+<p>This can provide more water-heating energy than the electrical energy directly supplied to the compressor and fan.</p>
+<h2 id="hybrid-backup">Hybrid backup</h2>
+<figure class="hb-article-media" data-astro-cid-ryrfu6xi> <img src="/images/articles/heat-pump-vs-electric-water-heater/photo-inline-2.jpg" alt="A real electric hot-water storage tank installed in a utility space" loading="lazy" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real storage water heater used to illustrate the appliance category, not installation compliance or a recommendation.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by Julie Anne Workman via Wikimedia Commons (CC BY-SA 3.0)  · CC BY-SA 3.0  · <a href="https://commons.wikimedia.org/wiki/File:Hot_water_storage.jpg" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>Many units offer modes such as:</p>
+<ul>
+<li>Efficiency</li>
+<li>Hybrid</li>
+<li>Electric</li>
+<li>Vacation</li>
+</ul>
+<p>During high demand, resistance elements may operate.</p>
+<p>A household that lives in electric-only mode loses much of the heat-pump advantage.</p>
+<p>Mode names and behavior differ by manufacturer.</p>
+<h2 id="installation-space">Installation space</h2>
+<p>The unit needs:</p>
+<ul>
+<li>Sufficient air volume</li>
+<li>Clear inlet and outlet</li>
+<li>Suitable temperature</li>
+<li>Condensate drain</li>
+<li>Stable floor</li>
+<li>Electrical circuit</li>
+<li>Service access</li>
+<li>Filter access</li>
+</ul>
+<p>A small sealed closet may require ducting or may be unsuitable.</p>
+<p>Use exact manufacturer requirements.</p>
+<h2 id="room-cooling-and-dehumidification">Room cooling and dehumidification</h2>
+<p><img src="/images/diagrams/hpwh-energy-path.svg" alt="A heat-pump water heater moves heat from surrounding air while a resistance element converts electrical energy directly to heat."/></p>
+<p>A heat-pump water heater:</p>
+<ul>
+<li>Removes heat from surrounding air</li>
+<li>Produces cooler discharge air</li>
+<li>Removes some moisture</li>
+<li>Generates condensate</li>
+</ul>
+<p>This may be useful in a warm basement.</p>
+<p>It may be undesirable in:</p>
+<ul>
+<li>Cold living space</li>
+<li>Small laundry closet</li>
+<li>Heating-dominated room</li>
+<li>Area with sensitive stored items</li>
+</ul>
+<p>Do not market it as a free air conditioner or dehumidifier. Its primary purpose is water heating.</p>
+<h2 id="condensate">Condensate</h2>
+<p>The system needs a reliable condensate path.</p>
+<p>Options may include:</p>
+<ul>
+<li>Gravity drain</li>
+<li>Condensate pump</li>
+<li>Floor drain</li>
+<li>Approved plumbing connection</li>
+</ul>
+<p>The drain must be:</p>
+<ul>
+<li>Correctly sloped</li>
+<li>Protected from blockage</li>
+<li>Protected from freezing</li>
+<li>Installed to code</li>
+<li>Accessible</li>
+</ul>
+<p>A leaking condensate line can damage the building.</p>
+<h2 id="noise">Noise</h2>
+<p>Heat-pump models use:</p>
+<ul>
+<li>Compressor</li>
+<li>fan</li>
+<li>airflow</li>
+</ul>
+<p>Check rated sound and installation location.</p>
+<p>A utility room beside a bedroom may require special consideration.</p>
+<p>Do not rely on subjective “quiet” claims.</p>
+<h2 id="recovery-and-tank-size">Recovery and tank size</h2>
+<p>Efficiency mode can recover more slowly than resistance heating.</p>
+<p>A larger tank may allow the household to:</p>
+<ul>
+<li>Store more hot water</li>
+<li>Avoid resistance backup</li>
+<li>Shift heating to lower-rate periods</li>
+<li>Handle peak use</li>
+</ul>
+<p>Consider:</p>
+<ul>
+<li>Occupants</li>
+<li>Shower patterns</li>
+<li>Bath</li>
+<li>laundry</li>
+<li>dishwasher</li>
+<li>First Hour Rating</li>
+<li>operating mode</li>
+</ul>
+<h2 id="cold-spaces">Cold spaces</h2>
+<p>Heat-pump performance can decline in a cold room.</p>
+<p>The unit may:</p>
+<ul>
+<li>Use more resistance heat</li>
+<li>Recover slowly</li>
+<li>Stop heat-pump operation below a threshold</li>
+<li>Need ducting</li>
+</ul>
+<p>Use the model’s approved ambient range.</p>
+<p>Do not install it in a freezing location.</p>
+<h2 id="laundry-room-chemicals">Laundry-room chemicals</h2>
+<p>DOE warns that vapors from products such as bleach, detergents, and fabric softeners can be corrosive near heat-pump water heaters, and flammable vapors can be hazardous.<sup><a href="#source-finale-source-3c1c16aa6886" aria-label="Source 2: Purchasing Energy-Efficient Residential Water Heaters">[2]</a></sup></p>
+<p>Follow clearance and storage instructions.</p>
+<p>Do not store gasoline, solvents, or flammable liquids nearby.</p>
+<h2 id="filter-maintenance">Filter maintenance</h2>
+<p>Heat-pump units have an air filter.</p>
+<p>DOE notes that the filter must be cleaned according to the manual.<sup><a href="#source-finale-source-3c1c16aa6886" aria-label="Source 2: Purchasing Energy-Efficient Residential Water Heaters">[2]</a></sup></p>
+<p>A dirty filter can reduce airflow and efficiency.</p>
+<p>Record:</p>
+<ul>
+<li>Cleaning interval</li>
+<li>Alarm</li>
+<li>filter location</li>
+<li>damage</li>
+<li>unusual noise</li>
+</ul>
+<h2 id="electrical-service">Electrical service</h2>
+<p>Replacement may require:</p>
+<ul>
+<li>240-volt circuit</li>
+<li>Circuit size</li>
+<li>Panel capacity</li>
+<li>Disconnect</li>
+<li>Wiring</li>
+<li>Permit</li>
+</ul>
+<p>Some newer products use different electrical configurations.</p>
+<p>Do not assume the old resistance-heater circuit fits every replacement.</p>
+<h2 id="cost-comparison">Cost comparison</h2>
+<p>Compare:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Cost</th><th style="text-align:right">Resistance</th><th style="text-align:right">Heat pump</th></tr></thead><tbody><tr><td>Purchase</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Delivery</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Installation</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Electrical work</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Condensate</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Ducting</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Annual kWh</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Maintenance</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Rebate</td><td style="text-align:right"></td><td style="text-align:right"></td></tr><tr><td>Expected ownership period</td><td style="text-align:right"></td><td style="text-align:right"></td></tr></tbody></table>
+<p>Do not subtract a rebate until eligibility is verified.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="does-a-heat-pump-water-heater-work-in-winter">Does a heat-pump water heater work in winter?</h3>
+<p>It can, within its approved ambient range. Cold-room performance and resistance backup matter.</p>
+<h3 id="will-it-cool-the-basement">Will it cool the basement?</h3>
+<p>It removes heat from surrounding air, but exact room effect depends on operation and space.</p>
+<h3 id="is-it-loud">Is it loud?</h3>
+<p>It has a compressor and fan. Check model sound data and location.</p>
+<h3 id="does-it-need-a-drain">Does it need a drain?</h3>
+<p>It produces condensate and needs an approved drainage method.</p>
+<h3 id="is-it-always-cheaper">Is it always cheaper?</h3>
+<p>Operating electricity may be lower, but installation and household use determine total economics.</p>
+<h2 id="printable-companion">Printable companion</h2>
+<p><a href="/downloads/water-heater-inspection-replacement-checklist.pdf">Download the ungated Water Heater Inspection and Replacement Checklist PDF</a>. No email address is required.</p>
+<h2 id="related-guides">Related guides</h2>
+<ul>
+<li><a href="/articles/water-heater-temperature-setting/">What Temperature Should a Water Heater Be Set To?</a></li>
+<li><a href="/articles/how-much-does-water-heater-cost-to-run/">How Much Does a Water Heater Cost to Run?</a></li>
+<li><a href="/articles/why-hot-water-runs-out-fast/">Why Does My Hot Water Run Out So Fast?</a></li>
+<li><a href="/articles/tank-vs-tankless-water-heater/">Tank vs. Tankless Water Heater: Which Is Better for Your Home?</a></li>
+<li><a href="/articles/water-heater-leaking-what-to-do/">Is My Water Heater Leaking? What to Check and When to Shut It Down</a></li>
+<li><a href="/articles/how-to-calculate-appliance-electricity-cost/">How to Calculate What an Appliance Costs to Run</a></li>
+<li><a href="/articles/how-to-read-energyguide-label/">How to Read an EnergyGuide Label</a></li>
+<li><a href="/articles/energy-star-vs-energyguide/">ENERGY STAR vs. EnergyGuide</a></li>
+<li><a href="/articles/repair-or-replace-appliance/">Repair or Replace an Appliance?</a></li>
+<li><a href="/articles/appliance-buying-checklist/">Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls</a></li>
+</ul> <section class="hb-sources" aria-labelledby="source-notes"> <div><span>Sources reviewed</span><h2 id="source-notes">Source notes</h2></div> <ol> <li id="source-finale-source-6fe7f66fc44c"><a href="https://www.energystar.gov/products/heat_pump_water_heaters/how-it-works">How Heat Pump Water Heaters Work</a><span>ENERGY STAR</span></li><li id="source-finale-source-3c1c16aa6886"><a href="https://www.energy.gov/cmei/femp/purchasing-energy-efficient-residential-water-heaters">Purchasing Energy-Efficient Residential Water Heaters</a><span>DOE FEMP</span></li><li id="source-finale-source-8f0dafba175a"><a href="https://www.energystar.gov/products/heat_pump_water_heaters">Heat Pump Water Heaters</a><span>ENERGY STAR</span></li> </ol> </section> <aside class="hb-related" aria-label="Related guides"> <p>Keep going</p> <div><a href="/articles/water-heater-temperature-setting/"><span>Home &amp; Apartment</span><b>What Temperature Should a Water Heater Be Set To?</b><i aria-hidden="true">→</i></a><a href="/articles/how-much-does-water-heater-cost-to-run/"><span>Home &amp; Apartment</span><b>How Much Does a Water Heater Cost to Run?</b><i aria-hidden="true">→</i></a><a href="/articles/why-hot-water-runs-out-fast/"><span>Home &amp; Apartment</span><b>Why Does My Hot Water Run Out So Fast?</b><i aria-hidden="true">→</i></a></div> </aside> <p class="hb-correction-link" data-astro-cid-zm77yjld>See something wrong or out of date? <a href="/corrections/" data-astro-cid-zm77yjld>Report a correction</a>.</p> </div> </div> </article>  </main> <footer class="hb-global-footer" data-pagefind-ignore="all"> <div class="hb-footer-mark">HOW BISCUIT<span>?</span></div> <p>Practical guides for technology, home, kitchens, shopping decisions, and useful tools.</p> <nav aria-label="Browse categories"> <a href="/home-tech/">Home Tech</a><a href="/home/">Home &amp; Apartment</a><a href="/kitchen/">Kitchen</a><a href="/shop/">Shop Smarter</a><a href="/tools/">Tools</a> <a href="/articles/">All Guides</a> </nav> <nav aria-label="Site information"> <a href="/about/">About</a> <a href="/editorial-policy/">Editorial policy</a> <a href="/corrections/">Corrections</a> <a href="/privacy/">Privacy</a> <a href="/affiliate-disclosure/">Affiliate disclosure</a> <a href="/contact/">Contact</a> <a href="/feed.xml">RSS</a> <a href="/sitemap.xml">Sitemap</a> </nav> </footer> </body></html>

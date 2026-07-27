@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t desc">
+<title id="t">Heat-pump and resistance water heating</title>
+<desc id="desc">A heat-pump water heater moves heat from surrounding air while a resistance element converts electrical energy directly to heat.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Move heat or create resistance heat</text>
+<rect x="60" y="120" width="500" height="430" rx="22"/><text x="310" y="170" text-anchor="middle" fill="black" font-size="26">Heat-pump mode</text>
+<text x="150" y="300" fill="black" font-size="22">Room heat</text><line x1="240" y1="290" x2="360" y2="290"/>
+<rect x="360" y="230" width="150" height="130" rx="18"/><text x="435" y="285" text-anchor="middle" fill="black" font-size="20">Compressor</text><text x="435" y="322" text-anchor="middle" fill="black" font-size="20">and fan</text>
+<line x1="435" y1="360" x2="435" y2="455"/><text x="310" y="505" text-anchor="middle" fill="black" font-size="18">Moves heat into stored water</text>
+<rect x="640" y="120" width="500" height="430" rx="22"/><text x="890" y="170" text-anchor="middle" fill="black" font-size="26">Resistance mode</text>
+<text x="735" y="290" fill="black" font-size="22">Electricity</text><line x1="830" y1="285" x2="920" y2="285"/>
+<path d="M920 240 L980 285 L920 330 L980 375" stroke-width="8"/>
+<text x="890" y="505" text-anchor="middle" fill="black" font-size="18">Creates heat directly in the tank</text>
+<text x="600" y="625" text-anchor="middle" fill="black" font-size="18">Hybrid systems may use both during high demand.</text>
+
+</g></svg>

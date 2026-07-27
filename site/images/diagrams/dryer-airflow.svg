@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t desc">
+<title id="t">Clothes dryer airflow path</title>
+<desc id="desc">Air passes through the heater and drum, then lint filter, transition duct, exhaust duct and exterior flap, with restriction points highlighted.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Long drying time often begins with restricted airflow</text>
+<rect x="60" y="250" width="170" height="110" rx="16"/><text x="145" y="315" text-anchor="middle" fill="black" font-size="21">Heat and drum</text>
+<rect x="285" y="250" width="170" height="110" rx="16"/><text x="370" y="315" text-anchor="middle" fill="black" font-size="21">Lint filter</text>
+<rect x="510" y="250" width="170" height="110" rx="16"/><text x="595" y="315" text-anchor="middle" fill="black" font-size="21">Transition duct</text>
+<rect x="735" y="250" width="170" height="110" rx="16"/><text x="820" y="315" text-anchor="middle" fill="black" font-size="21">Vent duct</text>
+<rect x="960" y="250" width="180" height="110" rx="16"/><text x="1050" y="300" text-anchor="middle" fill="black" font-size="20">Exterior</text><text x="1050" y="335" text-anchor="middle" fill="black" font-size="20">flap</text>
+<line x1="230" y1="305" x2="285" y2="305"/><line x1="455" y1="305" x2="510" y2="305"/><line x1="680" y1="305" x2="735" y2="305"/><line x1="905" y1="305" x2="960" y2="305"/>
+<text x="370" y="420" text-anchor="middle" fill="black" font-size="18">Clean every load</text>
+<text x="710" y="455" text-anchor="middle" fill="black" font-size="18">Inspect kinks, bends, lint and disconnection</text>
+<text x="600" y="580" text-anchor="middle" fill="black" font-size="18">Clean the vent path at least annually and sooner when symptoms change.</text>
+
+</g></svg>

@@ -1,9 +1,9 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:26b495923281953aeb728376f212d657f7ed8f3257d19555e548cd1cc72d356c",
-  "fileCount": 719,
-  "byteCount": 34478811,
-  "htmlRouteCount": 79,
+  "artifactDigest": "sha256:650d095587baaee28ee15b661eb52b69fcf7e9dc931b774a79aac38799b19b73",
+  "fileCount": 921,
+  "byteCount": 52285682,
+  "htmlRouteCount": 109,
   "routes": [
     "/",
     "/404.html",
@@ -11,46 +11,76 @@
     "/affiliate-disclosure/",
     "/articles/",
     "/articles/2-4-ghz-vs-5-ghz-wifi/",
+    "/articles/air-drying-vs-clothes-dryer/",
     "/articles/air-fryer-vs-oven-electricity-cost/",
+    "/articles/air-purifier-vs-hvac-filter/",
+    "/articles/appliance-buying-checklist/",
+    "/articles/appliance-extended-warranty-worth-it/",
     "/articles/best-place-to-put-wifi-router/",
     "/articles/can-microwave-interfere-with-wifi/",
     "/articles/can-you-refreeze-food-after-power-outage/",
+    "/articles/clothes-taking-too-long-to-dry/",
+    "/articles/cold-vs-warm-vs-hot-water-laundry/",
     "/articles/dehumidifier-running-not-collecting-water/",
     "/articles/dehumidifier-vs-air-conditioner/",
     "/articles/do-you-need-refrigerator-freezer-thermometer/",
     "/articles/does-aluminum-foil-improve-wifi-signal/",
     "/articles/does-turning-ac-off-save-money/",
     "/articles/download-vs-upload-speed-latency/",
+    "/articles/energy-star-vs-energyguide/",
     "/articles/ethernet-vs-wifi/",
     "/articles/fan-vs-air-conditioner-cost/",
     "/articles/fix-wifi-dead-zones-without-buying-anything/",
+    "/articles/front-load-washer-smells/",
+    "/articles/heat-pump-vs-electric-water-heater/",
     "/articles/home-energy-check-high-summer-bill/",
     "/articles/home-humidity-dehumidifier-checklist/",
     "/articles/home-wifi-dead-zone-checklist/",
     "/articles/how-does-baking-powder-work/",
     "/articles/how-long-food-safe-refrigerator-without-power/",
     "/articles/how-long-food-stay-frozen-power-outage/",
+    "/articles/how-long-leftovers-last-fridge/",
+    "/articles/how-much-does-air-purifier-cost-to-run/",
     "/articles/how-much-does-dehumidifier-cost-to-run/",
     "/articles/how-much-does-dishwasher-cost-per-load/",
     "/articles/how-much-does-electric-dryer-cost-per-load/",
     "/articles/how-much-does-electric-oven-cost-per-hour/",
     "/articles/how-much-does-refrigerator-cost-to-run/",
     "/articles/how-much-does-washing-machine-cost-per-load/",
+    "/articles/how-much-does-water-heater-cost-to-run/",
     "/articles/how-much-electricity-does-microwave-use/",
     "/articles/how-much-internet-speed-do-you-need/",
+    "/articles/how-much-laundry-detergent-use/",
+    "/articles/how-often-change-hvac-filter/",
+    "/articles/how-often-clean-dryer-vent/",
     "/articles/how-often-should-you-replace-wifi-router/",
     "/articles/how-to-calculate-appliance-electricity-cost/",
+    "/articles/how-to-read-energyguide-label/",
     "/articles/mesh-wifi-vs-range-extender/",
+    "/articles/new-vs-used-refurbished-open-box-appliances/",
+    "/articles/organize-refrigerator-food-safety/",
     "/articles/portable-ac-cost-to-run/",
     "/articles/power-outage-food-safety-chart/",
+    "/articles/refrigerator-not-cooling-freezer-works/",
+    "/articles/refrigerator-running-constantly/",
+    "/articles/repair-or-replace-appliance/",
+    "/articles/tank-vs-tankless-water-heater/",
+    "/articles/water-heater-leaking-what-to-do/",
+    "/articles/water-heater-temperature-setting/",
+    "/articles/what-can-air-purifier-remove/",
     "/articles/what-food-throw-away-after-power-outage/",
     "/articles/what-humidity-should-house-be/",
+    "/articles/what-merv-rating-should-i-use/",
+    "/articles/what-size-air-purifier-do-i-need/",
     "/articles/what-size-dehumidifier-do-i-need/",
     "/articles/where-to-place-wifi-extender/",
     "/articles/why-are-some-answers-better-than-others/",
     "/articles/why-does-my-wifi-keep-disconnecting/",
     "/articles/why-electric-bill-high-summer/",
+    "/articles/why-freezer-frosting-up/",
+    "/articles/why-hot-water-runs-out-fast/",
     "/articles/why-is-my-wifi-so-slow/",
+    "/articles/why-refrigerator-leaking-water/",
     "/articles/why-salt-melts-ice/",
     "/articles/window-ac-cost-per-hour/",
     "/contact/",
@@ -93,8 +123,13 @@
     },
     {
       "path": "404.html",
-      "bytes": 21672,
-      "sha256": "sha256:9359368f0e1187f4e82a8691d89810ebad4b2ab3f3d68e40b629878f4b0d2e7c"
+      "bytes": 24109,
+      "sha256": "sha256:c08679ffa5116b7f06ecb5f042bf22c9ae7b6126530fc96356ee006ecacde786"
+    },
+    {
+      "path": "_astro/BaseLayout.DYSwHKpc.css",
+      "bytes": 40066,
+      "sha256": "sha256:db98cb142dde9c6dc8b0f6444a95f07a89b8578c7312fd69bcc4dd1b8c0ff293"
     },
     {
       "path": "_astro/BaseLayout.Dx1DJXA0.css",
@@ -428,13 +463,13 @@
     },
     {
       "path": "about/index.html",
-      "bytes": 24744,
-      "sha256": "sha256:2f5a16abb4b2c0ace3b30f5126b89a0473d8722bdce3913c824dce8b7d2870f6"
+      "bytes": 27181,
+      "sha256": "sha256:9910908c9a91ac55aef52488f87f9e2353bdc9652bf1ab294a3c036be8d9e841"
     },
     {
       "path": "affiliate-disclosure/index.html",
-      "bytes": 24667,
-      "sha256": "sha256:ba9e819911f110406c62c7abd2c8fd86ed105e29afd9e7414048c922fa9f4039"
+      "bytes": 27104,
+      "sha256": "sha256:e37d38c3ed755c66d178dbe450d88455568157b61c4aca10f330e784f3030fbe"
     },
     {
       "path": "analytics-bootstrap.js",
@@ -443,233 +478,383 @@
     },
     {
       "path": "articles/2-4-ghz-vs-5-ghz-wifi/index.html",
-      "bytes": 43475,
-      "sha256": "sha256:442bf13aca742ceca4eab0a221a0eb15a69096523af528d281c76c31c568270a"
+      "bytes": 45912,
+      "sha256": "sha256:a1a6642700072e7048e0c029f90767299791b9c4bcd2a0cbca0d44f096711cf2"
+    },
+    {
+      "path": "articles/air-drying-vs-clothes-dryer/index.html",
+      "bytes": 45347,
+      "sha256": "sha256:15a083818a44c2c65d7bb01e9dad7149c3c1c1c0e1bb6fe8fa1b432361b21e16"
     },
     {
       "path": "articles/air-fryer-vs-oven-electricity-cost/index.html",
-      "bytes": 45927,
-      "sha256": "sha256:13f326f72ba8f27dc7a69004f213109bc6f420980bce2fbb6092335527a8306e"
+      "bytes": 48356,
+      "sha256": "sha256:cfc0b2d0947cc52035ab0edd946598b88bdf31923c441c3fa15411346de74c4e"
+    },
+    {
+      "path": "articles/air-purifier-vs-hvac-filter/index.html",
+      "bytes": 46909,
+      "sha256": "sha256:63484e27866258f4c0d3e306d8e04c9f773188c273ccaeceddbe5382a5d17c39"
+    },
+    {
+      "path": "articles/appliance-buying-checklist/index.html",
+      "bytes": 50190,
+      "sha256": "sha256:8713bf49c8de96308492ac695a7bf4f3d55e4a4e6c08e656f5c653ba3667d3c4"
+    },
+    {
+      "path": "articles/appliance-extended-warranty-worth-it/index.html",
+      "bytes": 47424,
+      "sha256": "sha256:5fa34e22fb1a434af9096042791f3a7d33c60e242af5c61352a6f5f42de5dc00"
     },
     {
       "path": "articles/best-place-to-put-wifi-router/index.html",
-      "bytes": 44905,
-      "sha256": "sha256:5b22bda469adacd882a322f94c8c9e0993a6b798d0a24391e328979c1ed75b27"
+      "bytes": 47342,
+      "sha256": "sha256:7ef03bcc3739eb439c66ad201e9037454d7dbcc177aa6e9eb9e481fd4b4945cc"
     },
     {
       "path": "articles/can-microwave-interfere-with-wifi/index.html",
-      "bytes": 44142,
-      "sha256": "sha256:5c462c5091cf6fcc3de527eb5e6341af36152f27840f0a67ab01ec9b5733c406"
+      "bytes": 46579,
+      "sha256": "sha256:1d0568ba376adb2c826344a9b7c19d59be4677d2399747155294051c685894e1"
     },
     {
       "path": "articles/can-you-refreeze-food-after-power-outage/index.html",
-      "bytes": 43684,
-      "sha256": "sha256:3d24cf8ab28b819cd96717a6a8bfff36d2d839889b4edd56ef9349c8ce4a1bfc"
+      "bytes": 46121,
+      "sha256": "sha256:5f79a22f4b7b579e0731b26587c585030a8f712dd253005dd875f8856ec1a9bd"
+    },
+    {
+      "path": "articles/clothes-taking-too-long-to-dry/index.html",
+      "bytes": 47307,
+      "sha256": "sha256:002c08ac8fcb8ef5233e4314369c2ce1a7e2bdf706ecedcc1490cec36ce1bd10"
+    },
+    {
+      "path": "articles/cold-vs-warm-vs-hot-water-laundry/index.html",
+      "bytes": 44729,
+      "sha256": "sha256:79279480347ab78322c9d6d4c3df0e97f1ee90861c93fad2ed1efc2f2d0a8444"
     },
     {
       "path": "articles/dehumidifier-running-not-collecting-water/index.html",
-      "bytes": 48122,
-      "sha256": "sha256:d820fda2c328cafd941366c35a061d240b1003380bf9bc8a366b50f2e2e53ddc"
+      "bytes": 50559,
+      "sha256": "sha256:a1d8c0e4ce2fb3d692e79f269e717063d0d60a0038a300d3575b382efc521b94"
     },
     {
       "path": "articles/dehumidifier-vs-air-conditioner/index.html",
-      "bytes": 47097,
-      "sha256": "sha256:1825450221241e2eb3531665f5a35d6b686f7568f5eb2de9dc0b138b7eb895ad"
+      "bytes": 49534,
+      "sha256": "sha256:88f49b801c33ce9e4574c01eac977d01f0cfd95fc4d76160f8bb6f478860c388"
     },
     {
       "path": "articles/do-you-need-refrigerator-freezer-thermometer/index.html",
-      "bytes": 47489,
-      "sha256": "sha256:a0ac5b252e1faf04dd0506ae0cd68c726389aab764a85184659ffa281850bc4d"
+      "bytes": 49926,
+      "sha256": "sha256:c3c97493d5fd9dd6ab04468441c4ef14e553c32bdd5e205499bc9fd58a588ecc"
     },
     {
       "path": "articles/does-aluminum-foil-improve-wifi-signal/index.html",
-      "bytes": 40873,
-      "sha256": "sha256:6da113062127043900bf3423f1488a8796f866fbd15564678b1556be42b0f9ac"
+      "bytes": 43310,
+      "sha256": "sha256:41bb4997bc8dd57338d620e4bd84132fa5c9010fab49d1e1897519540fe64a39"
     },
     {
       "path": "articles/does-turning-ac-off-save-money/index.html",
-      "bytes": 47403,
-      "sha256": "sha256:23ab7afc60920c38dafa2c4a0f3f7990b71e47858f6eec2c81b4851a689928a6"
+      "bytes": 49840,
+      "sha256": "sha256:1c5c5144a9289fdc3cf05b4e3dbfedb66bbac29a5aaeba62062ec46dd16def4e"
     },
     {
       "path": "articles/download-vs-upload-speed-latency/index.html",
-      "bytes": 42838,
-      "sha256": "sha256:13939311975fdc7776078a558c0413d23a928b379a6416c8c0432972e23dc273"
+      "bytes": 45275,
+      "sha256": "sha256:7a883018dc598c01a984c3deb77aeb77255f55c2ea68cc8b9e18597181fa2418"
+    },
+    {
+      "path": "articles/energy-star-vs-energyguide/index.html",
+      "bytes": 44101,
+      "sha256": "sha256:b64b203b27286139d828ef7a626452d68aad0941625122b3b5c4742c1f9c080c"
     },
     {
       "path": "articles/ethernet-vs-wifi/index.html",
-      "bytes": 44298,
-      "sha256": "sha256:7cbfd1c1c688374f849b8f97219bf9a41ca813c2d9cce63bf05783023750cfcd"
+      "bytes": 46735,
+      "sha256": "sha256:6a7f82ea6ca7258aa52be39da9f94e12acac7e0d36d7df765a32ace6a3f856c8"
     },
     {
       "path": "articles/fan-vs-air-conditioner-cost/index.html",
-      "bytes": 45231,
-      "sha256": "sha256:b3d48ea78432c7b9372f44a3e6805d1486f7a29fec0a53a00a5534493d8ef663"
+      "bytes": 47668,
+      "sha256": "sha256:70b3aea587f8e6c69d5c1aeae0c8e4d4df2fe570214e08e5192faa57ede8cb6e"
     },
     {
       "path": "articles/fix-wifi-dead-zones-without-buying-anything/index.html",
-      "bytes": 43645,
-      "sha256": "sha256:414e654806e7cf1a4a89fc5c6380d411b549db949550bdec620cff1ad72c07e7"
+      "bytes": 46082,
+      "sha256": "sha256:b28ce2d1b03037f3becbb0e7aa34ca8d5a78efc6b984fa64882833a70bf5b629"
+    },
+    {
+      "path": "articles/front-load-washer-smells/index.html",
+      "bytes": 44950,
+      "sha256": "sha256:f7ede70e973309a251cb58fda24245b18b1b8ce1aba12d853d7315f47c33db4a"
+    },
+    {
+      "path": "articles/heat-pump-vs-electric-water-heater/index.html",
+      "bytes": 46776,
+      "sha256": "sha256:457223b08efd9df0dc6cdfd076cec8b6b65409ccccb66987cfa440794aad7398"
     },
     {
       "path": "articles/home-energy-check-high-summer-bill/index.html",
-      "bytes": 60632,
-      "sha256": "sha256:e5f30ad4a9dd12f311c07bcc1c0846f50172340c36011d3b2cdcf3648e80c114"
+      "bytes": 63069,
+      "sha256": "sha256:347ba860e188be15e45ec72f98bd5803b3723c1bd7ce9d49433e1ee1c44c87a1"
     },
     {
       "path": "articles/home-humidity-dehumidifier-checklist/index.html",
-      "bytes": 56491,
-      "sha256": "sha256:df04a1df174765f952a3e47cafe9e83bacaad06001e6db417b91d292d8ee6ed0"
+      "bytes": 58928,
+      "sha256": "sha256:626615836bd199a7f112aa74ef4e753074acb53f86302e384f9144154c82f085"
     },
     {
       "path": "articles/home-wifi-dead-zone-checklist/index.html",
-      "bytes": 49656,
-      "sha256": "sha256:dd7446e445de28f97165f6a3f68220719f8d29bcca759670ef8d395da2f2ffc6"
+      "bytes": 52093,
+      "sha256": "sha256:de7dec07c4821712d0653d009126adf60dc078c045c6d9482bd49fee099e143b"
     },
     {
       "path": "articles/how-does-baking-powder-work/index.html",
-      "bytes": 34335,
-      "sha256": "sha256:013bd97c685766268e18163953333ee6d914fccc213f5f7f51f70f9137fa7685"
+      "bytes": 36774,
+      "sha256": "sha256:1b9a0e37f866598f1cb703f20a17d3849f2147ab0c73773eef27340f0cd8baea"
     },
     {
       "path": "articles/how-long-food-safe-refrigerator-without-power/index.html",
-      "bytes": 49062,
-      "sha256": "sha256:e3a6d4a26f349573fb0890ceb0274c9b833d3d84eecfb85d3f22a6f8a4982c5a"
+      "bytes": 51499,
+      "sha256": "sha256:e3ac919d8073c39a3cf3b7585b8a8eaf86c32adef35a974148ec25371de7ee6a"
     },
     {
       "path": "articles/how-long-food-stay-frozen-power-outage/index.html",
-      "bytes": 48769,
-      "sha256": "sha256:15c2f86886d36502949c9b3731b2536c10ee2df80d688622666ceb0c87999077"
+      "bytes": 51206,
+      "sha256": "sha256:7d2567734ece99d6bf230443d73ccaae6711fa7d2ef19a19d42d6629b9044b2a"
+    },
+    {
+      "path": "articles/how-long-leftovers-last-fridge/index.html",
+      "bytes": 47458,
+      "sha256": "sha256:2907f4517da416ed9868b507947380bdf5cffcaaac63c1cd4b366fa85af802dd"
+    },
+    {
+      "path": "articles/how-much-does-air-purifier-cost-to-run/index.html",
+      "bytes": 47337,
+      "sha256": "sha256:d252a0dbaddeea2c6ad0c438bcc2b0086e5b04e50be7c2bd7c671fa13e0e7cda"
     },
     {
       "path": "articles/how-much-does-dehumidifier-cost-to-run/index.html",
-      "bytes": 50024,
-      "sha256": "sha256:b0f24809a847d29489d10d02318330886b68ca8754565db3949b798c16357041"
+      "bytes": 52461,
+      "sha256": "sha256:3bfbcd8f0ea03dba25499583118a634bc49b488cfcafcf28eff27d808373aa20"
     },
     {
       "path": "articles/how-much-does-dishwasher-cost-per-load/index.html",
-      "bytes": 43797,
-      "sha256": "sha256:862800372492094638aeaa248b9cd6e8332ad25b4685d74f6b7384002491c601"
+      "bytes": 46234,
+      "sha256": "sha256:09039faa8c351f876c9a4efa16551a3bb3c7798e80d3656981fee09695d3f2b3"
     },
     {
       "path": "articles/how-much-does-electric-dryer-cost-per-load/index.html",
-      "bytes": 43520,
-      "sha256": "sha256:33fd2b99f58e8ee14633fb991006f76c093ae0806afeaba007a811f456ea4372"
+      "bytes": 45957,
+      "sha256": "sha256:a3b2e7a3350bea5331a0a77e3d0f48450d2b18c767b80a2530a25f17f8d500bc"
     },
     {
       "path": "articles/how-much-does-electric-oven-cost-per-hour/index.html",
-      "bytes": 43144,
-      "sha256": "sha256:599126da918408e365c20edbbdef98c72e7ff02e289c5f97747f858730ab9771"
+      "bytes": 45581,
+      "sha256": "sha256:89e7e912fe932ed534b720d81cc7bc82384cb150f74219f6bc995b6ee79f4863"
     },
     {
       "path": "articles/how-much-does-refrigerator-cost-to-run/index.html",
-      "bytes": 46018,
-      "sha256": "sha256:6fb2cac8284adbe4fcd39079717eaafe5c80a6e273f75c3af0733e9f0c1435d3"
+      "bytes": 48455,
+      "sha256": "sha256:5adfc8f8c32137afbb1f94871e8491b42d57149686b138db9da1fc196d346d97"
     },
     {
       "path": "articles/how-much-does-washing-machine-cost-per-load/index.html",
-      "bytes": 44769,
-      "sha256": "sha256:169bfd60296f3eb821af8c2bf45629556295fd746493ecb4bda557ad8a86d430"
+      "bytes": 47206,
+      "sha256": "sha256:174e3d5b49bab24efb9abe8ab5471b14876c91379a95d77c98fbd0d516280889"
+    },
+    {
+      "path": "articles/how-much-does-water-heater-cost-to-run/index.html",
+      "bytes": 49390,
+      "sha256": "sha256:2dc7f202eef83b7774e9b0d92785c6c221160042058bb13b69024c69acc5d927"
     },
     {
       "path": "articles/how-much-electricity-does-microwave-use/index.html",
-      "bytes": 44144,
-      "sha256": "sha256:e4fb5a966fa0a5c5f14bb95b6558d5ef02c1344f10ef76eb83ea8453f6f60867"
+      "bytes": 46581,
+      "sha256": "sha256:bdeeba9257ab35c935afd0754576e0fc8463576aaf814176e85dca64a2dec7b9"
     },
     {
       "path": "articles/how-much-internet-speed-do-you-need/index.html",
-      "bytes": 47916,
-      "sha256": "sha256:700098f4dc5ee441c9e6846d9c7c7f6fdf6d53e21a702ea5be17b61dd3cfe26f"
+      "bytes": 50353,
+      "sha256": "sha256:45889eef2b37f5351fca056d50764f4ea82e97028c584f33910f5a51e465b91e"
+    },
+    {
+      "path": "articles/how-much-laundry-detergent-use/index.html",
+      "bytes": 44307,
+      "sha256": "sha256:0763397c312a2fc003150894ad5ccbc96c06b209401bd4acea6b9856f5e661ef"
+    },
+    {
+      "path": "articles/how-often-change-hvac-filter/index.html",
+      "bytes": 46333,
+      "sha256": "sha256:f67b260b37a0d46a5274145dc18451e0cf68219bfe39af4ec0cc181789c77198"
+    },
+    {
+      "path": "articles/how-often-clean-dryer-vent/index.html",
+      "bytes": 46215,
+      "sha256": "sha256:d9b19cd5c136d7dbafad8d0bbba29a003d80638f296d1df9e98fb2a4519f7007"
     },
     {
       "path": "articles/how-often-should-you-replace-wifi-router/index.html",
-      "bytes": 44640,
-      "sha256": "sha256:84d37cfd3d1a1a6e23d70c431c281d6a4d599e89789d698b8310dd0757518eb5"
+      "bytes": 47077,
+      "sha256": "sha256:3664dd0a76394d62923eb5ddcfcfcb92c2125d505663c711583a676c8016cbd1"
     },
     {
       "path": "articles/how-to-calculate-appliance-electricity-cost/index.html",
-      "bytes": 53889,
-      "sha256": "sha256:5248882d282e106e299f2486d503b35900ea66d63b7c9fefbce25d8311abf41b"
+      "bytes": 56326,
+      "sha256": "sha256:377054da68b649a9f972018b57feacf09de45726ca360a7219805a5d782c37ce"
+    },
+    {
+      "path": "articles/how-to-read-energyguide-label/index.html",
+      "bytes": 46740,
+      "sha256": "sha256:31321629b4d16df0808b9e64d78eb13ee97f4fd29dd64d4de6c0f79eb8beddf1"
     },
     {
       "path": "articles/index.html",
-      "bytes": 52227,
-      "sha256": "sha256:a38bf8a41fe5e445572a53849486a958b52dd8180a86400bdbfba204f6d8dc11"
+      "bytes": 74270,
+      "sha256": "sha256:ad5a2741120adb2c16d59039b9e885037cdd654c1a54d08b7d59a7cc55914b39"
     },
     {
       "path": "articles/mesh-wifi-vs-range-extender/index.html",
-      "bytes": 47531,
-      "sha256": "sha256:3710e8f69a2fe3659fb56f04775f2cc0f50ce71ff7ca1ffa2c3bc8c2edc0e62b"
+      "bytes": 49968,
+      "sha256": "sha256:904d6e725cf01ed4a6a8a9d9f02f9bc060aa6915290b1a332fa882d0ade0ef5a"
+    },
+    {
+      "path": "articles/new-vs-used-refurbished-open-box-appliances/index.html",
+      "bytes": 46458,
+      "sha256": "sha256:dbc5c10d8a04be9bde70a372c1caf240819ae8175668bac284884dfbad476dcd"
+    },
+    {
+      "path": "articles/organize-refrigerator-food-safety/index.html",
+      "bytes": 47790,
+      "sha256": "sha256:ed23b5e64c5995026949b22ac00057f72705706009e5e38992b9dfe04932f249"
     },
     {
       "path": "articles/portable-ac-cost-to-run/index.html",
-      "bytes": 47543,
-      "sha256": "sha256:b2218c42ac5e7130e2053cf8f77122bcb93d7a1e07f4e8e49072ded12fc87b97"
+      "bytes": 49980,
+      "sha256": "sha256:38cbdf2ac6947ab57a45cfca08e3b6e5933579e66c70c94e312623cb9d97f18e"
     },
     {
       "path": "articles/power-outage-food-safety-chart/index.html",
-      "bytes": 41628,
-      "sha256": "sha256:f390b769b5957044eb21ac0e1e62fed585c713eea9975fea5457e7ff72f1ec99"
+      "bytes": 44065,
+      "sha256": "sha256:3f6426d7df189aff6640fe7063b80f7290a965910f678c0ad1a847e6bc6b3376"
+    },
+    {
+      "path": "articles/refrigerator-not-cooling-freezer-works/index.html",
+      "bytes": 45858,
+      "sha256": "sha256:0d0e4504c05ca9a07f18d9314b24ce6bd4583e645979c1dc1f07763483555f73"
+    },
+    {
+      "path": "articles/refrigerator-running-constantly/index.html",
+      "bytes": 48331,
+      "sha256": "sha256:e7fb7c0e6d7864f25833e65baf8f3e5d012bb4c0539b253da579c6aacf7c845e"
+    },
+    {
+      "path": "articles/repair-or-replace-appliance/index.html",
+      "bytes": 47399,
+      "sha256": "sha256:75cd9f5c911034e71a15fa184ce2928f0bb56e2203654098f8311e9f7ff72697"
+    },
+    {
+      "path": "articles/tank-vs-tankless-water-heater/index.html",
+      "bytes": 47737,
+      "sha256": "sha256:8aaca3cb5aae3a3d549eef82f74b05e6637e309f57c199ee8e972b32e3697824"
+    },
+    {
+      "path": "articles/water-heater-leaking-what-to-do/index.html",
+      "bytes": 46298,
+      "sha256": "sha256:1f933ee3fb61de9fd2567189c8798ed3d8c117a21b1b257e191efd4445691e90"
+    },
+    {
+      "path": "articles/water-heater-temperature-setting/index.html",
+      "bytes": 47677,
+      "sha256": "sha256:76ee837f57cbb1c05451d4c4a9f633abbd61fd3b6b1c7f3d07e5cc23d7b075fe"
+    },
+    {
+      "path": "articles/what-can-air-purifier-remove/index.html",
+      "bytes": 47302,
+      "sha256": "sha256:e4660b91eb753cfd2272edd90228efbd0aad54644b048891efc833aaf450b06a"
     },
     {
       "path": "articles/what-food-throw-away-after-power-outage/index.html",
-      "bytes": 46992,
-      "sha256": "sha256:b1797fd3af5c4c644cd75f631be56c72861cfeadb6adf64fdc32c0ccc62454c9"
+      "bytes": 49429,
+      "sha256": "sha256:d41d3eb3751f3f409f768490db942c11fed1109a82692600a0fae13faa107127"
     },
     {
       "path": "articles/what-humidity-should-house-be/index.html",
-      "bytes": 46689,
-      "sha256": "sha256:461759483fe3490dca767b556a3dc4b9154eaf176168faac96cb2246429b05f8"
+      "bytes": 49126,
+      "sha256": "sha256:f9c1f85906a2a669bf9476f3274835a54d633191d30e7c6857aee65514f8872c"
+    },
+    {
+      "path": "articles/what-merv-rating-should-i-use/index.html",
+      "bytes": 48812,
+      "sha256": "sha256:7ae9cf0c16030b422fa6deeda90543b4a276fa44e6afc82b68dea0bc69132e4b"
+    },
+    {
+      "path": "articles/what-size-air-purifier-do-i-need/index.html",
+      "bytes": 47493,
+      "sha256": "sha256:b55a967f52cdc74d82be00b58bb12280f740bcf90c319e20d17c846b4646a782"
     },
     {
       "path": "articles/what-size-dehumidifier-do-i-need/index.html",
-      "bytes": 51375,
-      "sha256": "sha256:5f13a2f79cc5c5709330299c0e8e5a5eb347c629aa30bb187dacae6570ff7b55"
+      "bytes": 53812,
+      "sha256": "sha256:1583dec7c9887507d809bd3a0f20ca5df8fbf4a3cac128fa152fa379de9d63d0"
     },
     {
       "path": "articles/where-to-place-wifi-extender/index.html",
-      "bytes": 43839,
-      "sha256": "sha256:61021b02d0c45c5b77f4e0900e049acffdadbaf6ad3fc01e96e6966ab023fe87"
+      "bytes": 46276,
+      "sha256": "sha256:ddf8f82d08a6f5ea697c87cebcc6db5fdab876cf9e1e7c2411ad502ccad38f37"
     },
     {
       "path": "articles/why-are-some-answers-better-than-others/index.html",
-      "bytes": 32950,
-      "sha256": "sha256:72ee74797515d4669d87e8e4adc51dfc059397b7fca11142bf3ca0814bb60c8b"
+      "bytes": 35387,
+      "sha256": "sha256:2badb951e98415710855f1747c5e0ae661c47fb2693388b20efc4d13f6f2f1e6"
     },
     {
       "path": "articles/why-does-my-wifi-keep-disconnecting/index.html",
-      "bytes": 49437,
-      "sha256": "sha256:3559b1e242f53a10b2e3d9ba7e24889983b1b5776d171c85b40a88fecdfbad6f"
+      "bytes": 51874,
+      "sha256": "sha256:197c9e9f75adc181f730579d4d445a116bf712a620432f69316095ba40525f56"
     },
     {
       "path": "articles/why-electric-bill-high-summer/index.html",
-      "bytes": 53549,
-      "sha256": "sha256:5b730f56ce85f546df03548a542e73fff1edc147c42db6277d0db90b7c8800e4"
+      "bytes": 55986,
+      "sha256": "sha256:b2728afd3f44d86226d6f44a30c763601f0a90979664c4c1df9feced5009730b"
+    },
+    {
+      "path": "articles/why-freezer-frosting-up/index.html",
+      "bytes": 45542,
+      "sha256": "sha256:9d1d876705b7e678c0aa16ef55fe44be0a2e924cf1b80308a48fc2d0d1a70d99"
+    },
+    {
+      "path": "articles/why-hot-water-runs-out-fast/index.html",
+      "bytes": 46272,
+      "sha256": "sha256:8fcd216bd618deaf9142cf4022f874f83dc6f41f1736598481d8ad4b5e36fe85"
     },
     {
       "path": "articles/why-is-my-wifi-so-slow/index.html",
-      "bytes": 52362,
-      "sha256": "sha256:c64ab168251ac1a76316dbbd0fdf996bdb92de5f157202d8aaf5473c6416f84c"
+      "bytes": 54799,
+      "sha256": "sha256:5a91c312808736c7bf8808fdb54309a8fc887eb11d399e332458911ec370aff7"
+    },
+    {
+      "path": "articles/why-refrigerator-leaking-water/index.html",
+      "bytes": 45321,
+      "sha256": "sha256:fb8a295ed1ec03e0b23fd9e35f6c7f7cba754bc9037b9c0718175da75094b694"
     },
     {
       "path": "articles/why-salt-melts-ice/index.html",
-      "bytes": 49805,
-      "sha256": "sha256:1add5cf4ae9215d0e87a44ffa3c6565064dec07e36b7af3bfe7ec74b2621f9b9"
+      "bytes": 52254,
+      "sha256": "sha256:6f0a1988b2243276c544f3da94b6b9f340e05b42df98c0058a2afc21a6a5aa3b"
     },
     {
       "path": "articles/window-ac-cost-per-hour/index.html",
-      "bytes": 48909,
-      "sha256": "sha256:c03a0a2d5ca0a15a211d81a0a89c99f1dc3d73ab76d00a4e833fa8422a529965"
+      "bytes": 51346,
+      "sha256": "sha256:6eda59949d0897c171cb7c8ce11bddbd84921a055d04388d815662a5d8fcfcb0"
     },
     {
       "path": "contact/index.html",
-      "bytes": 24719,
-      "sha256": "sha256:8900839246f1a668ac9821ee8d67787994bf1e23d4ca1e7a3c32c8f53639e8de"
+      "bytes": 27156,
+      "sha256": "sha256:c440077592893bd26c3d3920095bf74525a02036ac282eb7524747aae7d5b644"
     },
     {
       "path": "corrections/index.html",
-      "bytes": 24672,
-      "sha256": "sha256:1fff7c60553e7106cc2990894ed20eee742cce882b9c77f6e0db5e4eeaabab35"
+      "bytes": 27109,
+      "sha256": "sha256:f4e864ca754ee54e7157a3a4e06671cc1017897de0c304d844facbc7c9a25522"
     },
     {
       "path": "data/dehumidifier-cost-test-vectors.json",
@@ -2367,6 +2552,11 @@
       "sha256": "sha256:7216f56d4de2c9755cab01ed4e9835f79827602bb2cb6d52325f564bc5f5a860"
     },
     {
+      "path": "downloads/appliance-purchase-delivery-checklist.pdf",
+      "bytes": 11027,
+      "sha256": "sha256:582acc59aab511cd268bc2578a3c88c233888d2f0efa82e3ab468813d741d66c"
+    },
+    {
       "path": "downloads/electricity-prices-by-state-may-2026.csv",
       "bytes": 8176,
       "sha256": "sha256:cbf8122ee68bc5f56d152898111bf3dbcb2aa36ce5bf40bc9b526107cb3da845"
@@ -2387,19 +2577,39 @@
       "sha256": "sha256:7bba2728bee21269182e20be8fdc0fd0b0db636b9d1f873049a6336195202d87"
     },
     {
+      "path": "downloads/hvac-filter-log.pdf",
+      "bytes": 4655,
+      "sha256": "sha256:3c12a9ad1e152b0a6be6812f93193ed684a50baa15b7418c0a0ad129fc28db9f"
+    },
+    {
+      "path": "downloads/laundry-fire-safety-vent-log.pdf",
+      "bytes": 5903,
+      "sha256": "sha256:5fd68f142ff527422e0167f81382b30662eb3e630930ef0124800ec53374e893"
+    },
+    {
+      "path": "downloads/leftover-labels-use-first-list.pdf",
+      "bytes": 7063,
+      "sha256": "sha256:4220d1add4d90d1f8c5d1bc829629ab44f4daa39612c4199cfd40af2e7ba785a"
+    },
+    {
       "path": "downloads/power-outage-food-safety-chart.pdf",
       "bytes": 6194,
       "sha256": "sha256:a75de0fb94c5bad48a5e2e7934f76f3c58c863ed95b3dd857b45cab60b00bfa9"
     },
     {
+      "path": "downloads/water-heater-inspection-replacement-checklist.pdf",
+      "bytes": 9089,
+      "sha256": "sha256:a3d6379ee274a746228df0851b03aee2a9aa14fd857dc5c0d1083352e5973a60"
+    },
+    {
       "path": "editorial-policy/index.html",
-      "bytes": 25257,
-      "sha256": "sha256:7175a83a59930b473e90dddc46013728c375dcfaacd890ec0700e37fcf1d98cd"
+      "bytes": 27694,
+      "sha256": "sha256:b85a99dce8f66cfd7bd63e189f2a46911a41bdc1ae84c29bedc8af5c2b57f364"
     },
     {
       "path": "electricity-prices-by-state/index.html",
-      "bytes": 39815,
-      "sha256": "sha256:357061d29243751ec2549ccb4f6309081b772a04d94b5e83203d3e942d8110cf"
+      "bytes": 42252,
+      "sha256": "sha256:87af98ff9441ff33d546faf7889138472c42a7188ad065b2ec318f26d01d859d"
     },
     {
       "path": "favicon.svg",
@@ -2408,8 +2618,8 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 21110,
-      "sha256": "sha256:e90eefadc9667ce96f8ce6f312cec9ab4ffc6b726095391ce0bd557ba14820fb"
+      "bytes": 35822,
+      "sha256": "sha256:487bebea002cb9afaf8fd50ee94e84f7b6143cbbd4cdaa486ea26fb3f9f38527"
     },
     {
       "path": "h3-workers/events.js",
@@ -2433,13 +2643,13 @@
     },
     {
       "path": "home/index.html",
-      "bytes": 39298,
-      "sha256": "sha256:422e1ad7a9a6a5f481f3b60ac9188bdaa654b421acdb003a83d1489e6f635b47"
+      "bytes": 65693,
+      "sha256": "sha256:421059ac749c81a480f3af9d29f3202f710dbd60eb737ee921fee9d918b42cdb"
     },
     {
       "path": "home-tech/index.html",
-      "bytes": 53142,
-      "sha256": "sha256:0b3198a589a7f65fe99fbbfec701cb7cb41e1e9ac7e8ab1606ef978de2c32ac5"
+      "bytes": 55579,
+      "sha256": "sha256:2b3a3edfc521f5f04d36a07887453b59cbdebaf201246748ceab979e91073b4e"
     },
     {
       "path": "images/articles/2-4-ghz-vs-5-ghz-wifi/photo-wireless-access-point.jpg",
@@ -2452,9 +2662,74 @@
       "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
     },
     {
+      "path": "images/articles/air-drying-vs-clothes-dryer/photo-hero.jpg",
+      "bytes": 104224,
+      "sha256": "sha256:ccd6775b7ac932165e6806669c273df89bbb5d3e653ef77497960fb8a0345fba"
+    },
+    {
+      "path": "images/articles/air-drying-vs-clothes-dryer/photo-inline-1.jpg",
+      "bytes": 147918,
+      "sha256": "sha256:7175c521e06513dda81a2eddcd330d98a7fd6738b8e918e1068afeb24cb5d659"
+    },
+    {
+      "path": "images/articles/air-drying-vs-clothes-dryer/photo-inline-2.jpg",
+      "bytes": 180140,
+      "sha256": "sha256:8127322050ec5d21ba4a84a525f07239a4b1e126fb8518d34ad37a42b0e745f6"
+    },
+    {
       "path": "images/articles/air-fryer-vs-oven-electricity-cost/photo-air-fryer.jpg",
       "bytes": 196638,
       "sha256": "sha256:fe3f62365e74f8e3fa4c62d3921a7eeebe3cb0266866026933e04df0f2acfcd1"
+    },
+    {
+      "path": "images/articles/air-purifier-vs-hvac-filter/photo-hero.jpg",
+      "bytes": 104224,
+      "sha256": "sha256:ccd6775b7ac932165e6806669c273df89bbb5d3e653ef77497960fb8a0345fba"
+    },
+    {
+      "path": "images/articles/air-purifier-vs-hvac-filter/photo-inline-1.jpg",
+      "bytes": 347903,
+      "sha256": "sha256:5c7d919fd44e56e629f72b1052d2c35f267848218d9f987d41098cd385fc91d2"
+    },
+    {
+      "path": "images/articles/air-purifier-vs-hvac-filter/photo-inline-2.jpg",
+      "bytes": 232317,
+      "sha256": "sha256:2ec543f245c5a95c12f25dbdc801e6a23011d0a641d1053473932bb02cc1035c"
+    },
+    {
+      "path": "images/articles/appliance-buying-checklist/photo-hero.jpg",
+      "bytes": 141530,
+      "sha256": "sha256:142647bbe544d2567d6ea66e127eae8803acc60c5c29069b9ea4287ad717b3e3"
+    },
+    {
+      "path": "images/articles/appliance-buying-checklist/photo-inline-1.jpg",
+      "bytes": 45222,
+      "sha256": "sha256:fb9347069beaab037e9659b71a5011274507fa982127ad44651fc78b40665887"
+    },
+    {
+      "path": "images/articles/appliance-buying-checklist/photo-inline-2.jpg",
+      "bytes": 38591,
+      "sha256": "sha256:7194fecf58afc14be1ffb587148e81357524779e30e8465aa8902d6393997593"
+    },
+    {
+      "path": "images/articles/appliance-buying-checklist/printable-preview.jpg",
+      "bytes": 76087,
+      "sha256": "sha256:6b1a091bbf0425b5da18748f397633944f1f5833ff7f83219fbc02e91f596c2e"
+    },
+    {
+      "path": "images/articles/appliance-extended-warranty-worth-it/photo-hero.jpg",
+      "bytes": 141530,
+      "sha256": "sha256:142647bbe544d2567d6ea66e127eae8803acc60c5c29069b9ea4287ad717b3e3"
+    },
+    {
+      "path": "images/articles/appliance-extended-warranty-worth-it/photo-inline-1.jpg",
+      "bytes": 45222,
+      "sha256": "sha256:fb9347069beaab037e9659b71a5011274507fa982127ad44651fc78b40665887"
+    },
+    {
+      "path": "images/articles/appliance-extended-warranty-worth-it/photo-inline-2.jpg",
+      "bytes": 38591,
+      "sha256": "sha256:7194fecf58afc14be1ffb587148e81357524779e30e8465aa8902d6393997593"
     },
     {
       "path": "images/articles/best-place-to-put-wifi-router/photo-wireless-access-point.jpg",
@@ -2485,6 +2760,41 @@
       "path": "images/articles/can-you-refreeze-food-after-power-outage/photo-usda-refrigerator-thermometer.jpg",
       "bytes": 281030,
       "sha256": "sha256:410c5148180b28a9ddf5ef275db1f6597505d2d5970582facd58381c1083e9f1"
+    },
+    {
+      "path": "images/articles/clothes-taking-too-long-to-dry/photo-hero.jpg",
+      "bytes": 60206,
+      "sha256": "sha256:33de7b6e55c91d3ca5ed9e056cc34dd9806b4d919eeefd02ed1f5b6e57aa75fa"
+    },
+    {
+      "path": "images/articles/clothes-taking-too-long-to-dry/photo-inline-1.jpg",
+      "bytes": 180140,
+      "sha256": "sha256:8127322050ec5d21ba4a84a525f07239a4b1e126fb8518d34ad37a42b0e745f6"
+    },
+    {
+      "path": "images/articles/clothes-taking-too-long-to-dry/photo-inline-2.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
+    },
+    {
+      "path": "images/articles/clothes-taking-too-long-to-dry/printable-preview.jpg",
+      "bytes": 68479,
+      "sha256": "sha256:fe923a0fc5e18a11c831d1dbdc286e7403d20420066f820577e080a76024c68a"
+    },
+    {
+      "path": "images/articles/cold-vs-warm-vs-hot-water-laundry/photo-hero.jpg",
+      "bytes": 60206,
+      "sha256": "sha256:33de7b6e55c91d3ca5ed9e056cc34dd9806b4d919eeefd02ed1f5b6e57aa75fa"
+    },
+    {
+      "path": "images/articles/cold-vs-warm-vs-hot-water-laundry/photo-inline-1.jpg",
+      "bytes": 180140,
+      "sha256": "sha256:8127322050ec5d21ba4a84a525f07239a4b1e126fb8518d34ad37a42b0e745f6"
+    },
+    {
+      "path": "images/articles/cold-vs-warm-vs-hot-water-laundry/photo-inline-2.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
     },
     {
       "path": "images/articles/dehumidifier-running-not-collecting-water/photo-front.jpg",
@@ -2542,6 +2852,21 @@
       "sha256": "sha256:221089e894244f660f7d992a5a0c86bbc618a789df60a17452f6947429a2ba54"
     },
     {
+      "path": "images/articles/energy-star-vs-energyguide/photo-hero.jpg",
+      "bytes": 71541,
+      "sha256": "sha256:a7b95f7d9f3390c0c8a958517d054eec6a2b923ebb9e6caf2049373d2ecb2fee"
+    },
+    {
+      "path": "images/articles/energy-star-vs-energyguide/photo-inline-1.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/energy-star-vs-energyguide/photo-inline-2.jpg",
+      "bytes": 45222,
+      "sha256": "sha256:fb9347069beaab037e9659b71a5011274507fa982127ad44651fc78b40665887"
+    },
+    {
       "path": "images/articles/ethernet-vs-wifi/photo-ethernet.jpg",
       "bytes": 128923,
       "sha256": "sha256:bf9712e048d71be280dee35f0f653107bc9c300f4bf151ed6a401d8c9d2d8030"
@@ -2570,6 +2895,36 @@
       "path": "images/articles/fix-wifi-dead-zones-without-buying-anything/photo-wireless-router.jpg",
       "bytes": 268662,
       "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
+    },
+    {
+      "path": "images/articles/front-load-washer-smells/photo-hero.jpg",
+      "bytes": 104224,
+      "sha256": "sha256:ccd6775b7ac932165e6806669c273df89bbb5d3e653ef77497960fb8a0345fba"
+    },
+    {
+      "path": "images/articles/front-load-washer-smells/photo-inline-1.jpg",
+      "bytes": 147918,
+      "sha256": "sha256:7175c521e06513dda81a2eddcd330d98a7fd6738b8e918e1068afeb24cb5d659"
+    },
+    {
+      "path": "images/articles/front-load-washer-smells/photo-inline-2.jpg",
+      "bytes": 180140,
+      "sha256": "sha256:8127322050ec5d21ba4a84a525f07239a4b1e126fb8518d34ad37a42b0e745f6"
+    },
+    {
+      "path": "images/articles/heat-pump-vs-electric-water-heater/photo-hero.jpg",
+      "bytes": 62004,
+      "sha256": "sha256:bfe3e559df342fe928b33e3fe734ad2fb053193e0e0a9594211128feff8de114"
+    },
+    {
+      "path": "images/articles/heat-pump-vs-electric-water-heater/photo-inline-1.jpg",
+      "bytes": 250801,
+      "sha256": "sha256:f45fcc371862c9745404ffe4e04e9963e9592919ebf95479f6700b5d77cef6b7"
+    },
+    {
+      "path": "images/articles/heat-pump-vs-electric-water-heater/photo-inline-2.jpg",
+      "bytes": 225146,
+      "sha256": "sha256:e505e7a5692289555545f2eb63914a8795ad0e8657fbc0650fc0eab48d6cf890"
     },
     {
       "path": "images/articles/home-energy-check-high-summer-bill/checklist-preview.jpg",
@@ -2652,6 +3007,36 @@
       "sha256": "sha256:0c0d9ab73dee87cac5136a99fa54f55113fbf28a9ad54af12cef791aff455eda"
     },
     {
+      "path": "images/articles/how-long-leftovers-last-fridge/photo-hero.jpg",
+      "bytes": 126104,
+      "sha256": "sha256:6e47d3cd1ae412f3b857c29a83b0421b5ebf15e6d7c98d113d426ea326d2dbe1"
+    },
+    {
+      "path": "images/articles/how-long-leftovers-last-fridge/photo-inline-1.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/how-long-leftovers-last-fridge/photo-inline-2.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/how-much-does-air-purifier-cost-to-run/photo-hero.jpg",
+      "bytes": 98711,
+      "sha256": "sha256:0846c5fd1380c528702508e049ade87d6de5edecc5479e888a0d6e8e77e1d368"
+    },
+    {
+      "path": "images/articles/how-much-does-air-purifier-cost-to-run/photo-inline-1.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
+    },
+    {
+      "path": "images/articles/how-much-does-air-purifier-cost-to-run/photo-inline-2.jpg",
+      "bytes": 347903,
+      "sha256": "sha256:5c7d919fd44e56e629f72b1052d2c35f267848218d9f987d41098cd385fc91d2"
+    },
+    {
       "path": "images/articles/how-much-does-dehumidifier-cost-to-run/photo-hygrometer.jpg",
       "bytes": 285163,
       "sha256": "sha256:94ca4c56ab3a835bb9c211298cae347d1cf92de58d6ab3ca6d10bd02bd336482"
@@ -2687,6 +3072,21 @@
       "sha256": "sha256:b28370258caa61e9170beb0d830bad763ec6fd0e0d98dbe03427c077cb19f8a0"
     },
     {
+      "path": "images/articles/how-much-does-water-heater-cost-to-run/photo-hero.jpg",
+      "bytes": 62004,
+      "sha256": "sha256:bfe3e559df342fe928b33e3fe734ad2fb053193e0e0a9594211128feff8de114"
+    },
+    {
+      "path": "images/articles/how-much-does-water-heater-cost-to-run/photo-inline-1.jpg",
+      "bytes": 250801,
+      "sha256": "sha256:f45fcc371862c9745404ffe4e04e9963e9592919ebf95479f6700b5d77cef6b7"
+    },
+    {
+      "path": "images/articles/how-much-does-water-heater-cost-to-run/photo-inline-2.jpg",
+      "bytes": 225146,
+      "sha256": "sha256:e505e7a5692289555545f2eb63914a8795ad0e8657fbc0650fc0eab48d6cf890"
+    },
+    {
       "path": "images/articles/how-much-electricity-does-microwave-use/photo-microwave.jpg",
       "bytes": 151785,
       "sha256": "sha256:ec0a8fc55f2cf62aaaf6b48974fc341634a58ce6bc794b05a5372f37b91ea5aa"
@@ -2700,6 +3100,51 @@
       "path": "images/articles/how-much-internet-speed-do-you-need/photo-router.jpg",
       "bytes": 268662,
       "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
+    },
+    {
+      "path": "images/articles/how-much-laundry-detergent-use/photo-hero.jpg",
+      "bytes": 46521,
+      "sha256": "sha256:d413ba96908acec56c572cf1eef71d937f817aa8120aa0eac72522fe9249cd03"
+    },
+    {
+      "path": "images/articles/how-much-laundry-detergent-use/photo-inline-1.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
+    },
+    {
+      "path": "images/articles/how-much-laundry-detergent-use/photo-inline-2.jpg",
+      "bytes": 147918,
+      "sha256": "sha256:7175c521e06513dda81a2eddcd330d98a7fd6738b8e918e1068afeb24cb5d659"
+    },
+    {
+      "path": "images/articles/how-often-change-hvac-filter/photo-hero.jpg",
+      "bytes": 98711,
+      "sha256": "sha256:0846c5fd1380c528702508e049ade87d6de5edecc5479e888a0d6e8e77e1d368"
+    },
+    {
+      "path": "images/articles/how-often-change-hvac-filter/photo-inline-1.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
+    },
+    {
+      "path": "images/articles/how-often-change-hvac-filter/photo-inline-2.jpg",
+      "bytes": 347903,
+      "sha256": "sha256:5c7d919fd44e56e629f72b1052d2c35f267848218d9f987d41098cd385fc91d2"
+    },
+    {
+      "path": "images/articles/how-often-clean-dryer-vent/photo-hero.jpg",
+      "bytes": 46521,
+      "sha256": "sha256:d413ba96908acec56c572cf1eef71d937f817aa8120aa0eac72522fe9249cd03"
+    },
+    {
+      "path": "images/articles/how-often-clean-dryer-vent/photo-inline-1.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
+    },
+    {
+      "path": "images/articles/how-often-clean-dryer-vent/photo-inline-2.jpg",
+      "bytes": 147918,
+      "sha256": "sha256:7175c521e06513dda81a2eddcd330d98a7fd6738b8e918e1068afeb24cb5d659"
     },
     {
       "path": "images/articles/how-often-should-you-replace-wifi-router/photo-oldrouter.jpg",
@@ -2722,6 +3167,21 @@
       "sha256": "sha256:10e37ce50f8c4879ed207d8133082f256c6584201819e37891b41bc77fdb0211"
     },
     {
+      "path": "images/articles/how-to-read-energyguide-label/photo-hero.jpg",
+      "bytes": 62216,
+      "sha256": "sha256:6aa424c55c8d3a5f2ad54ecd295c31b1940c057cdb0ecf2e4e5290656e03c911"
+    },
+    {
+      "path": "images/articles/how-to-read-energyguide-label/photo-inline-1.jpg",
+      "bytes": 38591,
+      "sha256": "sha256:7194fecf58afc14be1ffb587148e81357524779e30e8465aa8902d6393997593"
+    },
+    {
+      "path": "images/articles/how-to-read-energyguide-label/photo-inline-2.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
       "path": "images/articles/mesh-wifi-vs-range-extender/photo-extender.jpg",
       "bytes": 80189,
       "sha256": "sha256:d75dd63914b65eea7d29979ac71ce38fd941c18308fb7904fc401ee747aaa347"
@@ -2730,6 +3190,41 @@
       "path": "images/articles/mesh-wifi-vs-range-extender/photo-mesh.jpg",
       "bytes": 142115,
       "sha256": "sha256:7f05027baada7acf40a7b5d59133449da51c371428aaf06f796b80d7760d2c78"
+    },
+    {
+      "path": "images/articles/new-vs-used-refurbished-open-box-appliances/photo-hero.jpg",
+      "bytes": 71541,
+      "sha256": "sha256:a7b95f7d9f3390c0c8a958517d054eec6a2b923ebb9e6caf2049373d2ecb2fee"
+    },
+    {
+      "path": "images/articles/new-vs-used-refurbished-open-box-appliances/photo-inline-1.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/new-vs-used-refurbished-open-box-appliances/photo-inline-2.jpg",
+      "bytes": 45222,
+      "sha256": "sha256:fb9347069beaab037e9659b71a5011274507fa982127ad44651fc78b40665887"
+    },
+    {
+      "path": "images/articles/organize-refrigerator-food-safety/photo-hero.jpg",
+      "bytes": 141530,
+      "sha256": "sha256:142647bbe544d2567d6ea66e127eae8803acc60c5c29069b9ea4287ad717b3e3"
+    },
+    {
+      "path": "images/articles/organize-refrigerator-food-safety/photo-inline-1.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/organize-refrigerator-food-safety/photo-inline-2.jpg",
+      "bytes": 267205,
+      "sha256": "sha256:d89e8259380ab7bdd7227bf9dc9f1d136f043ab2a5f8e2939686592922c113f6"
+    },
+    {
+      "path": "images/articles/organize-refrigerator-food-safety/printable-preview.jpg",
+      "bytes": 123257,
+      "sha256": "sha256:97b21563d26dacb86ce8d41425fc55fe0324e598939721b3b24762067aed1f8c"
     },
     {
       "path": "images/articles/portable-ac-cost-to-run/photo-portable-ac-example.jpg",
@@ -2757,6 +3252,116 @@
       "sha256": "sha256:cbeffffb112098a497563ed4b4a454bdd2937032b6d909a212ba396a28d76b3b"
     },
     {
+      "path": "images/articles/refrigerator-not-cooling-freezer-works/photo-hero.jpg",
+      "bytes": 126104,
+      "sha256": "sha256:6e47d3cd1ae412f3b857c29a83b0421b5ebf15e6d7c98d113d426ea326d2dbe1"
+    },
+    {
+      "path": "images/articles/refrigerator-not-cooling-freezer-works/photo-inline-1.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/refrigerator-not-cooling-freezer-works/photo-inline-2.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/refrigerator-running-constantly/photo-hero.jpg",
+      "bytes": 141530,
+      "sha256": "sha256:142647bbe544d2567d6ea66e127eae8803acc60c5c29069b9ea4287ad717b3e3"
+    },
+    {
+      "path": "images/articles/refrigerator-running-constantly/photo-inline-1.jpg",
+      "bytes": 267205,
+      "sha256": "sha256:d89e8259380ab7bdd7227bf9dc9f1d136f043ab2a5f8e2939686592922c113f6"
+    },
+    {
+      "path": "images/articles/refrigerator-running-constantly/photo-inline-2.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/repair-or-replace-appliance/photo-hero.jpg",
+      "bytes": 62216,
+      "sha256": "sha256:6aa424c55c8d3a5f2ad54ecd295c31b1940c057cdb0ecf2e4e5290656e03c911"
+    },
+    {
+      "path": "images/articles/repair-or-replace-appliance/photo-inline-1.jpg",
+      "bytes": 38591,
+      "sha256": "sha256:7194fecf58afc14be1ffb587148e81357524779e30e8465aa8902d6393997593"
+    },
+    {
+      "path": "images/articles/repair-or-replace-appliance/photo-inline-2.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/tank-vs-tankless-water-heater/photo-hero.jpg",
+      "bytes": 79689,
+      "sha256": "sha256:c6ee81215ee362fc0410ba05d036c57f66ee3badef40d8575800f5be96304d36"
+    },
+    {
+      "path": "images/articles/tank-vs-tankless-water-heater/photo-inline-1.jpg",
+      "bytes": 124462,
+      "sha256": "sha256:6845006ca9c3e29ac35e223fc66511344d6ebc93d6f9746b1c357957fe6835d0"
+    },
+    {
+      "path": "images/articles/tank-vs-tankless-water-heater/photo-inline-2.jpg",
+      "bytes": 250801,
+      "sha256": "sha256:f45fcc371862c9745404ffe4e04e9963e9592919ebf95479f6700b5d77cef6b7"
+    },
+    {
+      "path": "images/articles/water-heater-leaking-what-to-do/photo-hero.jpg",
+      "bytes": 101332,
+      "sha256": "sha256:445c7cd1e8dda1f348805240bbfde428c71e3dc5ee33eb8816c0ac58e00eb567"
+    },
+    {
+      "path": "images/articles/water-heater-leaking-what-to-do/photo-inline-1.jpg",
+      "bytes": 225146,
+      "sha256": "sha256:e505e7a5692289555545f2eb63914a8795ad0e8657fbc0650fc0eab48d6cf890"
+    },
+    {
+      "path": "images/articles/water-heater-leaking-what-to-do/photo-inline-2.jpg",
+      "bytes": 124462,
+      "sha256": "sha256:6845006ca9c3e29ac35e223fc66511344d6ebc93d6f9746b1c357957fe6835d0"
+    },
+    {
+      "path": "images/articles/water-heater-temperature-setting/photo-hero.jpg",
+      "bytes": 79689,
+      "sha256": "sha256:c6ee81215ee362fc0410ba05d036c57f66ee3badef40d8575800f5be96304d36"
+    },
+    {
+      "path": "images/articles/water-heater-temperature-setting/photo-inline-1.jpg",
+      "bytes": 124462,
+      "sha256": "sha256:6845006ca9c3e29ac35e223fc66511344d6ebc93d6f9746b1c357957fe6835d0"
+    },
+    {
+      "path": "images/articles/water-heater-temperature-setting/photo-inline-2.jpg",
+      "bytes": 250801,
+      "sha256": "sha256:f45fcc371862c9745404ffe4e04e9963e9592919ebf95479f6700b5d77cef6b7"
+    },
+    {
+      "path": "images/articles/water-heater-temperature-setting/printable-preview.jpg",
+      "bytes": 79142,
+      "sha256": "sha256:bfbcbff1e461f46d14685be3985899d43bab1fdbe7e2ba0fdbea06fe8c7c4104"
+    },
+    {
+      "path": "images/articles/what-can-air-purifier-remove/photo-hero.jpg",
+      "bytes": 104224,
+      "sha256": "sha256:ccd6775b7ac932165e6806669c273df89bbb5d3e653ef77497960fb8a0345fba"
+    },
+    {
+      "path": "images/articles/what-can-air-purifier-remove/photo-inline-1.jpg",
+      "bytes": 347903,
+      "sha256": "sha256:5c7d919fd44e56e629f72b1052d2c35f267848218d9f987d41098cd385fc91d2"
+    },
+    {
+      "path": "images/articles/what-can-air-purifier-remove/photo-inline-2.jpg",
+      "bytes": 232317,
+      "sha256": "sha256:2ec543f245c5a95c12f25dbdc801e6a23011d0a641d1053473932bb02cc1035c"
+    },
+    {
       "path": "images/articles/what-food-throw-away-after-power-outage/photo-usda-organized-refrigerator.jpg",
       "bytes": 238655,
       "sha256": "sha256:cbeffffb112098a497563ed4b4a454bdd2937032b6d909a212ba396a28d76b3b"
@@ -2775,6 +3380,41 @@
       "path": "images/articles/what-humidity-should-house-be/photo-hygrometer.jpg",
       "bytes": 285163,
       "sha256": "sha256:94ca4c56ab3a835bb9c211298cae347d1cf92de58d6ab3ca6d10bd02bd336482"
+    },
+    {
+      "path": "images/articles/what-merv-rating-should-i-use/photo-hero.jpg",
+      "bytes": 122627,
+      "sha256": "sha256:b0be958e245107bdc948df47ec4bece5f56998c4910f8cc382217f9359745c8c"
+    },
+    {
+      "path": "images/articles/what-merv-rating-should-i-use/photo-inline-1.jpg",
+      "bytes": 232317,
+      "sha256": "sha256:2ec543f245c5a95c12f25dbdc801e6a23011d0a641d1053473932bb02cc1035c"
+    },
+    {
+      "path": "images/articles/what-merv-rating-should-i-use/photo-inline-2.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
+    },
+    {
+      "path": "images/articles/what-merv-rating-should-i-use/printable-preview.jpg",
+      "bytes": 76582,
+      "sha256": "sha256:dd970fd3a627bcd3dd5b7fa3b780d5cf81cd7d00366b6380c4976885457dd78d"
+    },
+    {
+      "path": "images/articles/what-size-air-purifier-do-i-need/photo-hero.jpg",
+      "bytes": 122627,
+      "sha256": "sha256:b0be958e245107bdc948df47ec4bece5f56998c4910f8cc382217f9359745c8c"
+    },
+    {
+      "path": "images/articles/what-size-air-purifier-do-i-need/photo-inline-1.jpg",
+      "bytes": 232317,
+      "sha256": "sha256:2ec543f245c5a95c12f25dbdc801e6a23011d0a641d1053473932bb02cc1035c"
+    },
+    {
+      "path": "images/articles/what-size-air-purifier-do-i-need/photo-inline-2.jpg",
+      "bytes": 253228,
+      "sha256": "sha256:eca8abfa33f209267cde7a5b286e51ea022808e65b22278267a860e5189a9c02"
     },
     {
       "path": "images/articles/what-size-dehumidifier-do-i-need/photo-front.jpg",
@@ -2827,6 +3467,36 @@
       "sha256": "sha256:09598501ba85bf0d8d21e49fbe8da0f005a5d49dc3eb44d348d526780f9ab186"
     },
     {
+      "path": "images/articles/why-freezer-frosting-up/photo-hero.jpg",
+      "bytes": 141530,
+      "sha256": "sha256:142647bbe544d2567d6ea66e127eae8803acc60c5c29069b9ea4287ad717b3e3"
+    },
+    {
+      "path": "images/articles/why-freezer-frosting-up/photo-inline-1.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
+    },
+    {
+      "path": "images/articles/why-freezer-frosting-up/photo-inline-2.jpg",
+      "bytes": 267205,
+      "sha256": "sha256:d89e8259380ab7bdd7227bf9dc9f1d136f043ab2a5f8e2939686592922c113f6"
+    },
+    {
+      "path": "images/articles/why-hot-water-runs-out-fast/photo-hero.jpg",
+      "bytes": 101332,
+      "sha256": "sha256:445c7cd1e8dda1f348805240bbfde428c71e3dc5ee33eb8816c0ac58e00eb567"
+    },
+    {
+      "path": "images/articles/why-hot-water-runs-out-fast/photo-inline-1.jpg",
+      "bytes": 225146,
+      "sha256": "sha256:e505e7a5692289555545f2eb63914a8795ad0e8657fbc0650fc0eab48d6cf890"
+    },
+    {
+      "path": "images/articles/why-hot-water-runs-out-fast/photo-inline-2.jpg",
+      "bytes": 124462,
+      "sha256": "sha256:6845006ca9c3e29ac35e223fc66511344d6ebc93d6f9746b1c357957fe6835d0"
+    },
+    {
       "path": "images/articles/why-is-my-wifi-so-slow/photo-rear-ethernet.jpg",
       "bytes": 289523,
       "sha256": "sha256:221089e894244f660f7d992a5a0c86bbc618a789df60a17452f6947429a2ba54"
@@ -2835,6 +3505,21 @@
       "path": "images/articles/why-is-my-wifi-so-slow/photo-wireless-router.jpg",
       "bytes": 268662,
       "sha256": "sha256:ff6623919c7b7fa8cb8f46fd62317d684019dae80067281a52d9e5dc1aecfe89"
+    },
+    {
+      "path": "images/articles/why-refrigerator-leaking-water/photo-hero.jpg",
+      "bytes": 141530,
+      "sha256": "sha256:142647bbe544d2567d6ea66e127eae8803acc60c5c29069b9ea4287ad717b3e3"
+    },
+    {
+      "path": "images/articles/why-refrigerator-leaking-water/photo-inline-1.jpg",
+      "bytes": 267205,
+      "sha256": "sha256:d89e8259380ab7bdd7227bf9dc9f1d136f043ab2a5f8e2939686592922c113f6"
+    },
+    {
+      "path": "images/articles/why-refrigerator-leaking-water/photo-inline-2.jpg",
+      "bytes": 226577,
+      "sha256": "sha256:1ada56ec98867a9847dc0c439e13cfd8076ce9ef9429c33138d22b5447235bc1"
     },
     {
       "path": "images/articles/window-ac-cost-per-hour/photo-window-ac-general.jpg",
@@ -2847,14 +3532,29 @@
       "sha256": "sha256:e911309d1998102dfc4f0496512461398be97cb242e3e6350ab237e83d5aba28"
     },
     {
+      "path": "images/diagrams/air-dry-tradeoff.svg",
+      "bytes": 1769,
+      "sha256": "sha256:7f93830dbc8b42ee451ae6ffc8b10cfda9f456b00099991bc0d51b3ea7aa7de9"
+    },
+    {
       "path": "images/diagrams/air-fryer-vs-oven.svg",
       "bytes": 2320,
       "sha256": "sha256:fd65b3b968058825c3d7c722b9ce78604e66cecb85efd675fc1d0d30d0885c40"
     },
     {
+      "path": "images/diagrams/appliance-buying-workflow.svg",
+      "bytes": 2683,
+      "sha256": "sha256:7cb0d4d6ab307feea3c8d5ca97f0449554955f7d22d927dbd45f9f95ea6f11b8"
+    },
+    {
       "path": "images/diagrams/appliance-cost-method.svg",
       "bytes": 3081,
       "sha256": "sha256:3ceec9c420bc550667ec330f0c04a5f49f99b2a9e8671fd1c3ee1e80a36babfa"
+    },
+    {
+      "path": "images/diagrams/cadr-sizing.svg",
+      "bytes": 2449,
+      "sha256": "sha256:4402776f8e11da8990c05dca4bfa93df41254b2af0f0463ae77ded89d79bdd88"
     },
     {
       "path": "images/diagrams/calculator-methods.svg",
@@ -2887,9 +3587,19 @@
       "sha256": "sha256:ddb9b17789ceab773e7f68aceb9ec3b867ed40f786b64b9a7b2669ba8560fc33"
     },
     {
+      "path": "images/diagrams/dryer-airflow.svg",
+      "bytes": 1965,
+      "sha256": "sha256:36d11c8a3a0a0fa3bd43b74273eba3c892e4553ed7c6009b41c3c0b7944f2cbc"
+    },
+    {
       "path": "images/diagrams/energyguide-to-cost.svg",
       "bytes": 2193,
       "sha256": "sha256:e47ce0c3a085e742d99b224acefefb87b289124d3d189f95e8e9159f41c20a13"
+    },
+    {
+      "path": "images/diagrams/energyguide-vs-star.svg",
+      "bytes": 1841,
+      "sha256": "sha256:ce50966172ab81de7a278a7a4f5bbfc1aec97a130d1837e96236012d81227e69"
     },
     {
       "path": "images/diagrams/ethernet-slowest-link.svg",
@@ -2912,9 +3622,24 @@
       "sha256": "sha256:fe76c592d504ef09273c24b84aa24b3567fa286089de20e78da14259f4b40815"
     },
     {
+      "path": "images/diagrams/hpwh-energy-path.svg",
+      "bytes": 1793,
+      "sha256": "sha256:1c907b27de7e33337b97958449bf42391911e13b99e4f951701c6bb8ac80b20a"
+    },
+    {
       "path": "images/diagrams/humidity-target-band.svg",
       "bytes": 2224,
       "sha256": "sha256:237e10920b9b745785d82b5b5309f4b7eb5c6ece6c532b6adef6709144942223"
+    },
+    {
+      "path": "images/diagrams/leftovers-timeline.svg",
+      "bytes": 1818,
+      "sha256": "sha256:01e5c766106f228e4bec3dc5549cbaae79165a510df20a23c2ea4efee59798f2"
+    },
+    {
+      "path": "images/diagrams/merv-compatibility.svg",
+      "bytes": 2280,
+      "sha256": "sha256:f23ad184149db37e4a1a923181b7feb61940b3b7927e7d2dcc3efa597a50f588"
     },
     {
       "path": "images/diagrams/mesh-vs-extender.svg",
@@ -2947,9 +3672,29 @@
       "sha256": "sha256:1134551c10e9cf11b06f851a1a5da4342e8491a1b6ca664f11672a72ef117ba0"
     },
     {
+      "path": "images/diagrams/purifier-vs-hvac.svg",
+      "bytes": 1945,
+      "sha256": "sha256:7c147c3c87ef59c52045e84b116e40c8862ae227a884412c42eae2726a7f7ebb"
+    },
+    {
+      "path": "images/diagrams/refrigerator-airflow.svg",
+      "bytes": 1676,
+      "sha256": "sha256:3088f6549be136ad5137a960b420b7c5f77ca324d42840a8d03bea2c71e9e263"
+    },
+    {
       "path": "images/diagrams/refrigerator-decision-tree.svg",
       "bytes": 2748,
       "sha256": "sha256:1bda57255f89f2f08f0f83c63f82781aada0810105de058659ec6de73f7f1d19"
+    },
+    {
+      "path": "images/diagrams/refrigerator-leak-map.svg",
+      "bytes": 1608,
+      "sha256": "sha256:95a941a7a2cb0f745fa7e9001356a46608d5515a34c96265c5e8824bf49c12f3"
+    },
+    {
+      "path": "images/diagrams/repair-replace-tree.svg",
+      "bytes": 2557,
+      "sha256": "sha256:86eb40c3b62bb084f00b1aaff0750861478ed82d5146b888e1c2a7712b2fd53a"
     },
     {
       "path": "images/diagrams/router-placement.svg",
@@ -2962,9 +3707,24 @@
       "sha256": "sha256:2cd72a8d57e36ea0c6cd1f963a41cc78cf570007e9512b38c6b6179ed7c466bf"
     },
     {
+      "path": "images/diagrams/tank-vs-tankless.svg",
+      "bytes": 1931,
+      "sha256": "sha256:b79547b85e45ee885c40f2c45fbe381e8d65d799fee4856380a5a17c7b9f5ab3"
+    },
+    {
       "path": "images/diagrams/thermometer-placement.svg",
       "bytes": 2060,
       "sha256": "sha256:d7c10d490d4f60b88368ce1a485bd7ee7b7ccba5408633fe86558c1534ff5163"
+    },
+    {
+      "path": "images/diagrams/washer-odor-map.svg",
+      "bytes": 1455,
+      "sha256": "sha256:71956c3a2db2193aa7ae9355de3f5430e0c6bfde8ac6244581ecd517adafcb3d"
+    },
+    {
+      "path": "images/diagrams/water-temperature-mixing.svg",
+      "bytes": 1698,
+      "sha256": "sha256:c1835098a61007e3f50eca760b8971e80ddbdc1c2b708565e5a0244187f3211c"
     },
     {
       "path": "images/diagrams/wifi-band-tradeoff.svg",
@@ -2978,78 +3738,78 @@
     },
     {
       "path": "index.html",
-      "bytes": 44807,
-      "sha256": "sha256:01b44c5ba8d7d36e5bf50c4ffb18dbfb8de8df848519ed41f4b8b5b6284aae03"
+      "bytes": 56223,
+      "sha256": "sha256:6f9e349917a678e95c3ee5a7c1c7e42cf94b103c071e4330acb758ef682ceb8c"
     },
     {
       "path": "kitchen/index.html",
-      "bytes": 43040,
-      "sha256": "sha256:c9ddead02e6f3d08fb6768bccfe71f5931ee4b50df391f94f83453d72587cd31"
+      "bytes": 53125,
+      "sha256": "sha256:6078bbf2abed57269fb958b99426c328b79e554cc32eaad2ffed7e0f778bc15e"
     },
     {
       "path": "llms.txt",
-      "bytes": 16188,
-      "sha256": "sha256:6e987095a09239ea8fac874d3dbac189295c17cf4ca3e5d859e87176c88ae99d"
+      "bytes": 24820,
+      "sha256": "sha256:a0c7796bf5a85081324a1e71da58bae12bdf4bd6d63b8797a228fa865a29b051"
     },
     {
       "path": "metro/atlanta/index.html",
-      "bytes": 23523,
-      "sha256": "sha256:397bab346125b023d38eed9434e90281315a3663186793352c2576dc0533a237"
+      "bytes": 25960,
+      "sha256": "sha256:8bb35cf0625ae4abda81b7b7cd0314de124dc3399985b8d6aacfed9b5566703c"
     },
     {
       "path": "metro/boston/index.html",
-      "bytes": 23499,
-      "sha256": "sha256:3006f4fac841888dfae4319cec7739132868b6413c16fae3ae37e7140c0d9a9b"
+      "bytes": 25936,
+      "sha256": "sha256:bc8a3aaf501e7f296316a3220d40f07a379c627039ed817681c426794cfccc14"
     },
     {
       "path": "metro/chicago/index.html",
-      "bytes": 23768,
-      "sha256": "sha256:b909c28479be603be054747a3e582d479397c84ba0203eeca6ce47db1f9bdb76"
+      "bytes": 26205,
+      "sha256": "sha256:0cb84cc23bbb322bc09d3975ea895b93dce38fa3c58fa67bd6739d8bcb7db07c"
     },
     {
       "path": "metro/dallas-fort-worth/index.html",
-      "bytes": 23667,
-      "sha256": "sha256:3908e499320b65813878c274e990a812eb78c07e07ccd9771ba3b82208c9137b"
+      "bytes": 26104,
+      "sha256": "sha256:db266db040954bcfa2acd3117bd5b859b5580c47b156b7c8574a37f6e5efff65"
     },
     {
       "path": "metro/denver/index.html",
-      "bytes": 23511,
-      "sha256": "sha256:f335661aa811b0ceb6de1e914e78561c56e75943351e73a1fc113a088e01b189"
+      "bytes": 25948,
+      "sha256": "sha256:ca4d4afe2ce3dd6078676f84ccb7dd07f1a56f40e87d5888dca07e5f7fc8c5c9"
     },
     {
       "path": "metro/houston/index.html",
-      "bytes": 23534,
-      "sha256": "sha256:cf5b1be838ad0f695754877239a9d1a1b6b5e135b9a6e74db3244674532c955a"
+      "bytes": 25971,
+      "sha256": "sha256:88d5eac3227c1cc4d2017fd8e99daffc7c2a922510c350555d1a2fcf45e28d34"
     },
     {
       "path": "metro/los-angeles/index.html",
-      "bytes": 23598,
-      "sha256": "sha256:e8d4850948fb2f9ccdc4d03a9d5cb7c6232d9c83988a05453a3d03d82da99527"
+      "bytes": 26035,
+      "sha256": "sha256:d86daf2ef7ee72cf23a12daa1fb4331ea1bd66c68f486ab5c583f091252c842c"
     },
     {
       "path": "metro/miami/index.html",
-      "bytes": 23512,
-      "sha256": "sha256:675f23e5511120a785edc9da72ee4d05f34b882e3fc05429118b2c09761002c6"
+      "bytes": 25949,
+      "sha256": "sha256:595fb2efec938ab1ff4f5b8ad8bd7ea3e02604d18b70cec3e530da6da52fcb06"
     },
     {
       "path": "metro/new-york/index.html",
-      "bytes": 23586,
-      "sha256": "sha256:e0d6d005afce25716ace41c7e91e9e205f4acfca6c6b7968f91589bb43eaaed7"
+      "bytes": 26023,
+      "sha256": "sha256:e25ff61aebea0b151dacb9344cb3a418fc67d7538d9cbad493b98d1cf2765f00"
     },
     {
       "path": "metro/phoenix/index.html",
-      "bytes": 23534,
-      "sha256": "sha256:6a5f9429cb083c16b1e0e6dd140b5833275b791e0d4d6dbc3726c384d29d187e"
+      "bytes": 25971,
+      "sha256": "sha256:d4fa1a8fe0b3c0609c02e8a784ff9f76837ab0166c62f996b77a3cf6ea6bc25e"
     },
     {
       "path": "metro/seattle/index.html",
-      "bytes": 23537,
-      "sha256": "sha256:502d1e9d6f92d779ea98dbd35ce3d497c8a7de26ed3f5ef45a9eb5bd6ee959c8"
+      "bytes": 25974,
+      "sha256": "sha256:741e84e7791ab377497af740ece5e813e7f4fe7314e4c6df58fb6931f05b590c"
     },
     {
       "path": "metro/washington-dc/index.html",
-      "bytes": 23620,
-      "sha256": "sha256:673edd2cc8d9a6f4298c87595f64a3e1eefdd267358bc782ec7a4249752c5e24"
+      "bytes": 26057,
+      "sha256": "sha256:8f8bb8aa516fe67e9447c6d14745e46cef803fc51ac61a19b8e9e96b8ed0ed0e"
     },
     {
       "path": "og.png",
@@ -3060,6 +3820,11 @@
       "path": "pagefind/filter/en_3e997dc.pf_filter",
       "bytes": 205,
       "sha256": "sha256:ba6ba9c424e403a3929d6463c363e7a5e48608205e74e2b301f00fd848d268d3"
+    },
+    {
+      "path": "pagefind/filter/en_7c4f3d1.pf_filter",
+      "bytes": 230,
+      "sha256": "sha256:705533ed1ee254885e725e77603c3acd4aa7ad826d218949ad0d33364b22e7e1"
     },
     {
       "path": "pagefind/filter/en_8863974.pf_filter",
@@ -3077,6 +3842,16 @@
       "sha256": "sha256:4ab3ff80d7d9f7236418b7ae92b0309f64a087d518edafedbdeac6a1e317c8c1"
     },
     {
+      "path": "pagefind/filter/en_b1b7bae.pf_filter",
+      "bytes": 229,
+      "sha256": "sha256:89899a56c7243e6db88aa062349f4f0c20933588b532a40823305f89ee0c3b05"
+    },
+    {
+      "path": "pagefind/filter/en_d4a4be2.pf_filter",
+      "bytes": 245,
+      "sha256": "sha256:3912d862dd8e4bd2e759ce63f236ba822b060c1948557cc16abc965884b0954a"
+    },
+    {
       "path": "pagefind/filter/en_e22b721.pf_filter",
       "bytes": 196,
       "sha256": "sha256:370183f44cff752851482491e974ea03fb729b7b0f27ad271b37bd803fb57c27"
@@ -3087,9 +3862,19 @@
       "sha256": "sha256:6dbf56ac420db23fa3c53be2b125b66746c1a823905e53e2a290aeba85a31455"
     },
     {
+      "path": "pagefind/filter/en_fdb382c.pf_filter",
+      "bytes": 245,
+      "sha256": "sha256:4bac7923f2ad498f7dde45e5eddb4c9d846c8ec5bab5744274f2b4efee2676c4"
+    },
+    {
       "path": "pagefind/fragment/en_12b76c3.pf_fragment",
       "bytes": 1805,
       "sha256": "sha256:9134a0918b43689c49999f4b542dfa939779afaea065da4dc954a965fe508cf1"
+    },
+    {
+      "path": "pagefind/fragment/en_13b7f86.pf_fragment",
+      "bytes": 3755,
+      "sha256": "sha256:6500afe75015d052042144e1c91985c1557f708d744c781d5e36fc6620003c46"
     },
     {
       "path": "pagefind/fragment/en_16cc392.pf_fragment",
@@ -3100,6 +3885,11 @@
       "path": "pagefind/fragment/en_172d38a.pf_fragment",
       "bytes": 4245,
       "sha256": "sha256:40fdadd683f03b34abb9a0a4aacc04cb85da041207a8775ef262d213fcf19dd3"
+    },
+    {
+      "path": "pagefind/fragment/en_18c9f18.pf_fragment",
+      "bytes": 4209,
+      "sha256": "sha256:81fcddf59291688b0902bffe9f06c743aa79ceaf333eb2a26f2d5457c75c4eee"
     },
     {
       "path": "pagefind/fragment/en_1bdfa3a.pf_fragment",
@@ -3122,6 +3912,11 @@
       "sha256": "sha256:d090a18ffdf3b6a00a6900d145dd304cb6ba55c7e376abf2a3bc88b81063a2a0"
     },
     {
+      "path": "pagefind/fragment/en_2d21c42.pf_fragment",
+      "bytes": 3929,
+      "sha256": "sha256:2ad9f92a7b8f1a1f4fe61ffa0f8d18a4d9eac4435fffd5c06879e3bf0e671ca1"
+    },
+    {
       "path": "pagefind/fragment/en_2d9f9c9.pf_fragment",
       "bytes": 1738,
       "sha256": "sha256:a0289d0e4507763e7331c95e54861c501f8daeeca76292dac07d5e1b224274a2"
@@ -3137,6 +3932,11 @@
       "sha256": "sha256:1dcdab73575184a69137079e7bb62945b35f18b8e20ed7b8870f47542d91c6a8"
     },
     {
+      "path": "pagefind/fragment/en_34e17ea.pf_fragment",
+      "bytes": 4115,
+      "sha256": "sha256:df92cd8d88cec4f9dbc6779ff235b924c29a083e91c23522275b0d6070a24a91"
+    },
+    {
       "path": "pagefind/fragment/en_358a903.pf_fragment",
       "bytes": 3217,
       "sha256": "sha256:7f010df1eacac62846e01366ee532be4306088bb7b4d0bcb9dfaa6a61fe20fc2"
@@ -3147,9 +3947,24 @@
       "sha256": "sha256:984e0ce7a4a331a83de3b59224367e6afe95b992dd81089f582b1fc23a7bfcef"
     },
     {
+      "path": "pagefind/fragment/en_3835da5.pf_fragment",
+      "bytes": 4168,
+      "sha256": "sha256:60839b8b1bc6327525b8b6269fd4a75bd263adcab09c7ce6a87e2cbe73383c36"
+    },
+    {
+      "path": "pagefind/fragment/en_39fcada.pf_fragment",
+      "bytes": 3763,
+      "sha256": "sha256:8c3a0026e3073de58c0b7584263d8dc3589211bc1a38e4eb01704944407bdf33"
+    },
+    {
       "path": "pagefind/fragment/en_3ec1d44.pf_fragment",
       "bytes": 6034,
       "sha256": "sha256:46a86f4c1578102097e2aa944f36dd2bbc4ff2d2ce7188b1dff1042aff6f79bc"
+    },
+    {
+      "path": "pagefind/fragment/en_3f8af5b.pf_fragment",
+      "bytes": 4040,
+      "sha256": "sha256:33e1d1fb339b2c36b514c019542063f60767f5ea8947ed4b8edc3a4fb244b058"
     },
     {
       "path": "pagefind/fragment/en_41377df.pf_fragment",
@@ -3162,6 +3977,21 @@
       "sha256": "sha256:9e6ece86db62b56a19b94d8e5f5d3d072573ea6c3d662e2c8e119c50574dbcca"
     },
     {
+      "path": "pagefind/fragment/en_41dd132.pf_fragment",
+      "bytes": 4343,
+      "sha256": "sha256:d7b839ec57db90d4a9c50783d17a4f5ce40f97ba5d0a216f9be6df0b194f879a"
+    },
+    {
+      "path": "pagefind/fragment/en_449d9cb.pf_fragment",
+      "bytes": 2543,
+      "sha256": "sha256:2a8a3303f543ba5dcdfbaf15edb02d775baee61156d81d9ac081a5456e425dc6"
+    },
+    {
+      "path": "pagefind/fragment/en_47caef0.pf_fragment",
+      "bytes": 3810,
+      "sha256": "sha256:bef592bb03b498802776e5efffc359068ae31a3d6d299b500cbdbf2a85a6e0b4"
+    },
+    {
       "path": "pagefind/fragment/en_494954f.pf_fragment",
       "bytes": 2541,
       "sha256": "sha256:c77590739d62f67734cda74422c877a730e5b2c6c08a4b5a4ff3a1888d9d2176"
@@ -3170,6 +4000,11 @@
       "path": "pagefind/fragment/en_49d8262.pf_fragment",
       "bytes": 4063,
       "sha256": "sha256:d87d2fef3d97aa95c49838c06f79fc85308d5f0ff00eb1a889edef84bc75b6b7"
+    },
+    {
+      "path": "pagefind/fragment/en_4c6f45f.pf_fragment",
+      "bytes": 3484,
+      "sha256": "sha256:6709153dca24e225cc43d326be13f66c305b203d8faa4b075ec13045d06d6e60"
     },
     {
       "path": "pagefind/fragment/en_517a781.pf_fragment",
@@ -3212,6 +4047,21 @@
       "sha256": "sha256:11cd92911fd8f87bc788464077e619b7cd805d5c8e731ec6b957ee7389055819"
     },
     {
+      "path": "pagefind/fragment/en_661b397.pf_fragment",
+      "bytes": 4162,
+      "sha256": "sha256:fc1f2eea6327b7dd5865e40cf5b149b2d889839bed09f3f4398195d9845a0295"
+    },
+    {
+      "path": "pagefind/fragment/en_68ff4ec.pf_fragment",
+      "bytes": 4304,
+      "sha256": "sha256:5e0ac1174796525ee15fb79624dfe459576ee727203fb41bb55489329fbf5182"
+    },
+    {
+      "path": "pagefind/fragment/en_6a22503.pf_fragment",
+      "bytes": 4341,
+      "sha256": "sha256:24e15c261a7ad646d838f66334489b924fe40ea28c69759b3b4f6712db590a28"
+    },
+    {
       "path": "pagefind/fragment/en_6ec2cb7.pf_fragment",
       "bytes": 5077,
       "sha256": "sha256:aa615416f9b8dbe5124a70cafbd9de21d6f143ca2be65715cad48124815855de"
@@ -3252,14 +4102,49 @@
       "sha256": "sha256:5b4c93a2865c5d004682b50b86e001c7f58d7dae479da19bc7475bd7b3430ae5"
     },
     {
+      "path": "pagefind/fragment/en_80ef836.pf_fragment",
+      "bytes": 7460,
+      "sha256": "sha256:0d6e1a9d8fa9e119c2979d2f6149d6053feb03c660d2f1cf6bbd3806f88a350e"
+    },
+    {
+      "path": "pagefind/fragment/en_82e1eac.pf_fragment",
+      "bytes": 3586,
+      "sha256": "sha256:e4ddebcc426f738233937e3da320cb52149ef8c670f48182d6d203a1e3e67db8"
+    },
+    {
+      "path": "pagefind/fragment/en_8570b2e.pf_fragment",
+      "bytes": 3761,
+      "sha256": "sha256:42e61ea9672bd81c9148d4eb46e1bbc5a1efd9397a5fa567e50ff4a87548aba9"
+    },
+    {
+      "path": "pagefind/fragment/en_85ed395.pf_fragment",
+      "bytes": 2532,
+      "sha256": "sha256:22c883ceab7f886dcc99a22333f9c0e1aad578f67847c4342337fe38c53c11af"
+    },
+    {
       "path": "pagefind/fragment/en_8e7ffce.pf_fragment",
       "bytes": 6338,
       "sha256": "sha256:682d050f249ab719242a33680e1adef991b0aa1e894ffc65d44273a21824ab62"
     },
     {
+      "path": "pagefind/fragment/en_91f6d06.pf_fragment",
+      "bytes": 3263,
+      "sha256": "sha256:fa8b6866c1fdd84e01f4a3e125d274cc465f8c54826f3a5b57d2fef26f3d45cf"
+    },
+    {
+      "path": "pagefind/fragment/en_95cb2a0.pf_fragment",
+      "bytes": 4040,
+      "sha256": "sha256:d48374d689fda27c5f7ba74c3070a3a91b1339b764c02912d3bab33f5a991dc0"
+    },
+    {
       "path": "pagefind/fragment/en_9af8936.pf_fragment",
       "bytes": 704,
       "sha256": "sha256:5f7ab3e071414a38d93f8647fd3052113c0a34a68cecc7af157d3439fbc803fb"
+    },
+    {
+      "path": "pagefind/fragment/en_9cbddb6.pf_fragment",
+      "bytes": 3851,
+      "sha256": "sha256:15fdb464890219e034bb4d8b8372718397aa5d22ca92f77086e2dc6cd94171c9"
     },
     {
       "path": "pagefind/fragment/en_9dd06a3.pf_fragment",
@@ -3302,14 +4187,39 @@
       "sha256": "sha256:b5693a9c791d8e0c50f6ef1911fc539ce19ac3144968c03742e2d819dad2e125"
     },
     {
+      "path": "pagefind/fragment/en_a7765b2.pf_fragment",
+      "bytes": 3944,
+      "sha256": "sha256:d5cca779dcdc210be1113c84c6ad49088cc7ec59fc3eff0ec490b25c0558c9be"
+    },
+    {
       "path": "pagefind/fragment/en_a8a3ed1.pf_fragment",
       "bytes": 4755,
       "sha256": "sha256:f67e4d354de0da4063154f204a1f660fda65f4ee2c07ed00688ce03a1ee4d72e"
     },
     {
+      "path": "pagefind/fragment/en_a9e1645.pf_fragment",
+      "bytes": 3571,
+      "sha256": "sha256:733a827b23136dbe39963208b758f99d1285173713d19f9205eb4086d6db514c"
+    },
+    {
+      "path": "pagefind/fragment/en_a9f833a.pf_fragment",
+      "bytes": 3440,
+      "sha256": "sha256:f4d009282f9311cc9efbb3824e5d03444b1eafa2c83042b430c5d5f288ddf3f1"
+    },
+    {
       "path": "pagefind/fragment/en_ad7a4eb.pf_fragment",
       "bytes": 4385,
       "sha256": "sha256:9da10338a991669517e738815e7ecb660f2eb0b608aa5004bbc836c60d5363a7"
+    },
+    {
+      "path": "pagefind/fragment/en_b016997.pf_fragment",
+      "bytes": 3590,
+      "sha256": "sha256:4d0b9d9a7e34341b5083d62106c76b16a6a452eac555c5be76c9f3f3ced50eb0"
+    },
+    {
+      "path": "pagefind/fragment/en_b0526dd.pf_fragment",
+      "bytes": 3907,
+      "sha256": "sha256:ddfcf9d7834f4d939b91f93b6313ecc781ab1d04ad3cc5c49d2cc48ab4a18f0a"
     },
     {
       "path": "pagefind/fragment/en_b06c758.pf_fragment",
@@ -3337,6 +4247,11 @@
       "sha256": "sha256:04e34c7129a4ac2b23235c382fe8ba26d94d0e17c988fdd7420b00b24e0ec4ed"
     },
     {
+      "path": "pagefind/fragment/en_b75b9c8.pf_fragment",
+      "bytes": 3566,
+      "sha256": "sha256:1ef8582bcc56c189b7ad5720b96940655373071055b20187f423a4351deb66fd"
+    },
+    {
       "path": "pagefind/fragment/en_b8ed8ac.pf_fragment",
       "bytes": 801,
       "sha256": "sha256:1027fd81c868029dae470c1da01bb41eadf1a2403fdab29dd93e72b2fa376372"
@@ -3352,9 +4267,19 @@
       "sha256": "sha256:bf49e136477603d8a1e2c7b7ba285a9c8ad61d0d522cf522cf26cff2b1f767c6"
     },
     {
+      "path": "pagefind/fragment/en_bcf2f98.pf_fragment",
+      "bytes": 3719,
+      "sha256": "sha256:f5d66a8739aba50150cc2e79f475951d208fc729607dfd7f0afa75e33db5b344"
+    },
+    {
       "path": "pagefind/fragment/en_bd6a1a3.pf_fragment",
       "bytes": 837,
       "sha256": "sha256:f41d1e7dbefcd7abf1ff7a1b9b6658cec27feab458922991157437255979fa74"
+    },
+    {
+      "path": "pagefind/fragment/en_be6e83e.pf_fragment",
+      "bytes": 4663,
+      "sha256": "sha256:7cb4eb40766d2503f30a2e26b34c075d16e3c5774a3e2cf76282b029c7b1601f"
     },
     {
       "path": "pagefind/fragment/en_c0cc61f.pf_fragment",
@@ -3387,9 +4312,24 @@
       "sha256": "sha256:161dab05643fc0974bc11f26f7292a6582d0d945566f08372cf12e2328dbcac2"
     },
     {
+      "path": "pagefind/fragment/en_d16bfd9.pf_fragment",
+      "bytes": 3752,
+      "sha256": "sha256:a703ce87363526570d2685d12413a7e4125acc3eabe2a945d533d15cc13c8b7d"
+    },
+    {
+      "path": "pagefind/fragment/en_d19085a.pf_fragment",
+      "bytes": 4203,
+      "sha256": "sha256:19d564a06f963d3f0e9b1aae8af5d5406d0156d20ceb45ae7b620f0ba58ab3c1"
+    },
+    {
       "path": "pagefind/fragment/en_d27ae73.pf_fragment",
       "bytes": 4419,
       "sha256": "sha256:c18bbefe069095c1356fd5f89ca77c155149791f73cfb5f08085713cc03c732d"
+    },
+    {
+      "path": "pagefind/fragment/en_d4217ab.pf_fragment",
+      "bytes": 3769,
+      "sha256": "sha256:5f85222cc619dbc9779d1d17933f1abf98643212e3f0b7d1dbf5f18a955e9f95"
     },
     {
       "path": "pagefind/fragment/en_d7ffab4.pf_fragment",
@@ -3402,9 +4342,29 @@
       "sha256": "sha256:837977085e6de4536e8a3d0d62dada9e3a833d5fdeb2cb39189ba724a64fd0ab"
     },
     {
+      "path": "pagefind/fragment/en_e41ad75.pf_fragment",
+      "bytes": 6923,
+      "sha256": "sha256:ec969dca2dd685bdcf426801dc96f10cab2160b1454664a22061f5291104961e"
+    },
+    {
       "path": "pagefind/fragment/en_e51e2e8.pf_fragment",
       "bytes": 3665,
       "sha256": "sha256:f8da4d1d09ed6439dd356263706498ef338d7966c515b3079bde9a44659ac6f2"
+    },
+    {
+      "path": "pagefind/fragment/en_e5b6b92.pf_fragment",
+      "bytes": 4210,
+      "sha256": "sha256:759df3b78d92fe415b54b20405dfd7e5d2311701a65750c2d032c8060e5fc4ce"
+    },
+    {
+      "path": "pagefind/fragment/en_e6e1e23.pf_fragment",
+      "bytes": 3767,
+      "sha256": "sha256:505f5dfc89678de671d22b377817847cd51e1365f78c838c986c8d040cba5e6b"
+    },
+    {
+      "path": "pagefind/fragment/en_eb75969.pf_fragment",
+      "bytes": 1609,
+      "sha256": "sha256:1e1c8d712ffafa6a1a686ff8b331c0c66c0c36353bea646ebab463aa5693883c"
     },
     {
       "path": "pagefind/fragment/en_f0907e9.pf_fragment",
@@ -3422,9 +4382,19 @@
       "sha256": "sha256:4739c756fa8e9d3afa92410d17f86d083c6742ce5fecc070ef85f91e754f254e"
     },
     {
+      "path": "pagefind/fragment/en_f8b645f.pf_fragment",
+      "bytes": 3933,
+      "sha256": "sha256:f071f0faa5ed5be69724d5e39bc9496f3eae082a94374a6dd645438be8ce622e"
+    },
+    {
       "path": "pagefind/fragment/en_f931614.pf_fragment",
       "bytes": 5239,
       "sha256": "sha256:a1e30c0643a57f416fb601711d19727c411640390846b79ab6afdc5859cde48c"
+    },
+    {
+      "path": "pagefind/fragment/en_fa675d3.pf_fragment",
+      "bytes": 2845,
+      "sha256": "sha256:5f23855a4df33b644714ef5ef98dfc944847677177a63bceca1ab731eabdb7a3"
     },
     {
       "path": "pagefind/fragment/en_fbf9e71.pf_fragment",
@@ -3457,9 +4427,34 @@
       "sha256": "sha256:56403c9bb758cde070a4e896870c7344c881df954d8944837c872b3bbeb3f4de"
     },
     {
+      "path": "pagefind/index/en_4b5fd0b.pf_index",
+      "bytes": 29246,
+      "sha256": "sha256:889614c0e7494f5ac574c369e2b802b24db6affcc38512e1cf4dc367270e4b33"
+    },
+    {
+      "path": "pagefind/index/en_56f5bbe.pf_index",
+      "bytes": 29404,
+      "sha256": "sha256:61238cbed9d7588d4b987f9acedf1a1232358cb90d2c4be97bcd2d9fa85489b8"
+    },
+    {
+      "path": "pagefind/index/en_6be393b.pf_index",
+      "bytes": 29497,
+      "sha256": "sha256:56ab382de4b91bb6a372ca80734be80d505b75bceb5832e856fddb17dd5d6364"
+    },
+    {
       "path": "pagefind/index/en_73fea34.pf_index",
       "bytes": 30136,
       "sha256": "sha256:1d6781bd36343414d112fe22f5b5240ce2e91ad32f139c625341058fb41bae65"
+    },
+    {
+      "path": "pagefind/index/en_88882c1.pf_index",
+      "bytes": 28836,
+      "sha256": "sha256:baae4f82818a0cf2eb8641da7ba44dca73d7ae3f138e2e8337393829254e7baa"
+    },
+    {
+      "path": "pagefind/index/en_8a72889.pf_index",
+      "bytes": 30004,
+      "sha256": "sha256:9da960de991e3c1e5c5a0f1217cd0bcfedb2fbcae19d40002543a15e5a240f04"
     },
     {
       "path": "pagefind/index/en_8ac1739.pf_index",
@@ -3482,6 +4477,16 @@
       "sha256": "sha256:8474885df2cc471ec64652a399b1677510169e7e37d7eb0aa6222834ec73deb7"
     },
     {
+      "path": "pagefind/index/en_9eddfff.pf_index",
+      "bytes": 29110,
+      "sha256": "sha256:5527ce05bed3af332e297cf55b8979d3169d726c60b3031a9806cc3489c05a4d"
+    },
+    {
+      "path": "pagefind/index/en_a92d625.pf_index",
+      "bytes": 31635,
+      "sha256": "sha256:228586d7d98f9878626382f41e712d41f03bc49bba7fd7351144ade41ee878f4"
+    },
+    {
       "path": "pagefind/index/en_afdeed5.pf_index",
       "bytes": 31300,
       "sha256": "sha256:c4253212ecf43b29b9697aa26075593f9f1f4ab25f99ca24ca7aaaecba48e83a"
@@ -3490,6 +4495,11 @@
       "path": "pagefind/index/en_b363263.pf_index",
       "bytes": 29907,
       "sha256": "sha256:95a7a4d0bf92015aa842dcabeceff677a4118d66ed2f1080fc20bc62b630b20d"
+    },
+    {
+      "path": "pagefind/index/en_c05f41d.pf_index",
+      "bytes": 28797,
+      "sha256": "sha256:11a404cb42705f31157789b4ed254cb981157c441583d2dde88064182689b817"
     },
     {
       "path": "pagefind/index/en_c11599b.pf_index",
@@ -3507,6 +4517,11 @@
       "sha256": "sha256:02fbe67764a5b9a04841c960aa7d2a15ec13271582f48a7de657d47f7df65bb9"
     },
     {
+      "path": "pagefind/index/en_c7e9868.pf_index",
+      "bytes": 28750,
+      "sha256": "sha256:2812d14eb57ffef6c14ecbd150c5dcbe1fe6699de45c075a4878baa84ff759f4"
+    },
+    {
       "path": "pagefind/index/en_cd895b3.pf_index",
       "bytes": 30445,
       "sha256": "sha256:a9c8af001f2428c08584088686a8b07b40acc19ae06514de9ffb90503892f1cf"
@@ -3522,9 +4537,24 @@
       "sha256": "sha256:a3326e75dc6d8815694202805ef3c3a6540637a6055e1f97c22028a8a3aac73f"
     },
     {
+      "path": "pagefind/index/en_eb53383.pf_index",
+      "bytes": 30104,
+      "sha256": "sha256:87b1fc1124996b5666daccc30224f029a4de23af5feeb25c24206814e1c483fb"
+    },
+    {
+      "path": "pagefind/index/en_ef5cfdc.pf_index",
+      "bytes": 2267,
+      "sha256": "sha256:fecbe393ab257e987b06ea9d26e6a59dc4bee0cb36b7163bffa9f0f41f4504c5"
+    },
+    {
       "path": "pagefind/index/en_f4e443f.pf_index",
       "bytes": 30946,
       "sha256": "sha256:12dc1bf81a6658cddf3f5c7f269f699d4d7cc7554c77628c065140b7a3887232"
+    },
+    {
+      "path": "pagefind/index/en_f54f494.pf_index",
+      "bytes": 29505,
+      "sha256": "sha256:81e29bd669625580175507a1acb701d1adbf1530a180701b141e5658e9bf46a9"
     },
     {
       "path": "pagefind/index/en_f864161.pf_index",
@@ -3549,7 +4579,7 @@
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 172,
-      "sha256": "sha256:a7b690859e6e30a1156a71c4e43b4cf5c04f3a6bfd9560a4579d0fd699faba62"
+      "sha256": "sha256:9cf842df2e53e26ae636072c650e95fc1eba2788430ff391b53b2c573677a197"
     },
     {
       "path": "pagefind/pagefind-highlight.js",
@@ -3587,6 +4617,11 @@
       "sha256": "sha256:f8088db11159f58658c8b4f7fda27ba1c6a4002fafda0d04fa2d0c2239e8745f"
     },
     {
+      "path": "pagefind/pagefind.en_2cfbe1a7c7.pf_meta",
+      "bytes": 1059,
+      "sha256": "sha256:f4079d17702f7c1b92384ea50fbc00ecf73580bb9f308a89b0beca8520033276"
+    },
+    {
       "path": "pagefind/pagefind.en_5131a281b3.pf_meta",
       "bytes": 691,
       "sha256": "sha256:4e69b2744efc4b24ad2e98008d9a906a09e9b6d477507b1037a67f3e21b96515"
@@ -3595,6 +4630,11 @@
       "path": "pagefind/pagefind.en_b27513f761.pf_meta",
       "bytes": 628,
       "sha256": "sha256:2cb5fe7db573b76094f8d2c1e763aeb973e28b317074b1722649ae24965cef6f"
+    },
+    {
+      "path": "pagefind/pagefind.en_dfdda9a6cc.pf_meta",
+      "bytes": 1059,
+      "sha256": "sha256:1c99623850f7cedad5bdd921311ffded8ec55c3d1d8eb64fb9d911acf916ba06"
     },
     {
       "path": "pagefind/pagefind.js",
@@ -3613,8 +4653,8 @@
     },
     {
       "path": "privacy/index.html",
-      "bytes": 25594,
-      "sha256": "sha256:d873c4289f1202b4d8fd1b33e632395e5954a5a5c3fcab5a372348df002ce3a8"
+      "bytes": 28031,
+      "sha256": "sha256:2e31e18d2106e738a56d7d1839f05440060073a726dc5fe0849e39a544a26c22"
     },
     {
       "path": "robots.txt",
@@ -3623,28 +4663,28 @@
     },
     {
       "path": "shop/index.html",
-      "bytes": 26794,
-      "sha256": "sha256:17878a7305e5e902b9f48c9a12078b1e78b2d6d3ce83b5f96b541bd8c7bb5e3d"
+      "bytes": 38175,
+      "sha256": "sha256:8ef639e1aab0b5dc84fbcfadf3657f3ccaf90c1c3c85f2a49bfed0740e13bf28"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 8009,
-      "sha256": "sha256:930494574fe1339741dfe26c6b40ccf017d5ac1dc359b80a74a782de557447e8"
+      "bytes": 11924,
+      "sha256": "sha256:73862c78e4a4cf403ea825071e186b745b1e8b4bc2d44895629b14f378493a65"
     },
     {
       "path": "tools/agricultural-market-context-browser/index.html",
-      "bytes": 37393,
-      "sha256": "sha256:b1d2fc0ead5c71c8eb6e3cd61c1daa9b387a77303b21a1261e7aa51cf76bf38c"
+      "bytes": 39830,
+      "sha256": "sha256:6f7eb13f27ce505760162f48c3bde5fd4924059c3c82c2b1fba9a5b9f542a75f"
     },
     {
       "path": "tools/appliance-electricity-cost-calculator/index.html",
-      "bytes": 39932,
-      "sha256": "sha256:f3b00cc94ce99e9963f807e1346524c782417115441bb76a956cf6de37dad4c0"
+      "bytes": 42369,
+      "sha256": "sha256:2e96c6cde750b42c99f1711ba1300492af2b5c0d62185b717db2673769f946d4"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/index.html",
-      "bytes": 74983,
-      "sha256": "sha256:d270ef496ba3cf0e6d9f5b17aeb54f5825f075debef8da1ee3c25b5ac5b9435a"
+      "bytes": 77420,
+      "sha256": "sha256:511a93a42bbb1fc3e0226b2a2ac2e4ae1f1ccd2624d9aaad8264e5f0bb778cf2"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/page/2/index.html",
@@ -3658,13 +4698,13 @@
     },
     {
       "path": "tools/index.html",
-      "bytes": 31528,
-      "sha256": "sha256:99983e62e89fce19c239a81ed36386965e8e34eae8f008743a8ba89aa9a6c3e0"
+      "bytes": 33965,
+      "sha256": "sha256:6d1574cf245a4083e4cb2f524ae70139ca2f53618e8b3acbab2b59f07310768d"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/index.html",
-      "bytes": 47844,
-      "sha256": "sha256:3aa894e729ad075c06e084993dbbd435be0070b1e6a15409b28cb4845c72d46d"
+      "bytes": 50281,
+      "sha256": "sha256:4aba8b5a1e99c18cb55b21be343fc5a3fdad04d44f6983d4e48827fc8740b424"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/page/2/index.html",
@@ -3673,13 +4713,13 @@
     },
     {
       "path": "tools/usda-staple-food-identity-explorer/index.html",
-      "bytes": 43999,
-      "sha256": "sha256:9e0f9255e8cb7942e229ef6f794349ac8e21403f0cd153ea046dd7af9ee619f7"
+      "bytes": 46436,
+      "sha256": "sha256:ffdff9ef865a9572a0603eb44267c5281268875f3c349b44447ca0e06914f67e"
     },
     {
       "path": "tools/zip-to-metro-relationship-explainer/index.html",
-      "bytes": 53925,
-      "sha256": "sha256:65c0609d658b5aaf4accbff47ed2209eab9d3b9ca40905b46181b83edbe73d04"
+      "bytes": 56362,
+      "sha256": "sha256:fc89d739b5e1cb82c45da934ce5d21545b62cac98f14e0e2709c1f681bd5fac5"
     }
   ]
 }

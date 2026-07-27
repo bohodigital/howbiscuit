@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t desc">
+<title id="t">MERV rating and HVAC compatibility</title>
+<desc id="desc">A decision diagram prioritizes manual compatibility, exact fit, and airflow before selecting MERV 13 or the highest supported filter.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Higher capture still requires system compatibility</text>
+<rect x="390" y="105" width="420" height="80" rx="16"/><text x="600" y="152" text-anchor="middle" fill="black" font-size="24">Check manual and exact filter slot</text>
+<line x1="600" y1="185" x2="600" y2="240"/>
+<rect x="390" y="240" width="420" height="90" rx="16"/><text x="600" y="278" text-anchor="middle" fill="black" font-size="23">Can fan and cabinet accept MERV 13?</text><text x="600" y="309" text-anchor="middle" fill="black" font-size="17">Fit, depth and airflow all matter</text>
+<line x1="390" y1="285" x2="210" y2="285"/><text x="300" y="268" fill="black" font-size="18">No or unknown</text>
+<rect x="35" y="235" width="280" height="120" rx="16"/><text x="175" y="280" text-anchor="middle" fill="black" font-size="22">Use highest approved rating</text><text x="175" y="315" text-anchor="middle" fill="black" font-size="17">or ask qualified HVAC help</text>
+<line x1="810" y1="285" x2="990" y2="285"/><text x="875" y="268" fill="black" font-size="18">Yes</text>
+<rect x="900" y="235" width="280" height="120" rx="16"/><text x="1040" y="280" text-anchor="middle" fill="black" font-size="22">Use correct MERV 13</text><text x="1040" y="315" text-anchor="middle" fill="black" font-size="17">and monitor airflow/loading</text>
+<rect x="350" y="460" width="500" height="105" rx="16"/><text x="600" y="502" text-anchor="middle" fill="black" font-size="22">Stop and reassess for weak airflow, icing, limit trips,</text><text x="600" y="536" text-anchor="middle" fill="black" font-size="22">filter collapse or large bypass gaps</text>
+<text x="600" y="640" text-anchor="middle" fill="black" font-size="18">EPA: MERV 13, or as high as the system can accommodate.</text>
+
+</g></svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t desc">
+<title id="t">Front-load washer odor sources</title>
+<desc id="desc">The diagram identifies gasket folds, detergent drawer, drum, pump filter, drain hose and wet laundry as moisture and residue locations.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Moisture and residue collect in predictable places</text>
+<circle cx="600" cy="340" r="190"/><circle cx="600" cy="340" r="125"/>
+<text x="600" y="350" text-anchor="middle" fill="black" font-size="24">Drum</text>
+<line x1="450" y1="210" x2="315" y2="130"/><text x="220" y="125" text-anchor="middle" fill="black" font-size="19">Detergent drawer</text>
+<line x1="430" y1="390" x2="260" y2="450"/><text x="190" y="470" text-anchor="middle" fill="black" font-size="19">Gasket folds</text>
+<line x1="600" y1="530" x2="600" y2="620"/><text x="600" y="655" text-anchor="middle" fill="black" font-size="19">Pump filter / drain area</text>
+<line x1="760" y1="230" x2="930" y2="150"/><text x="1000" y="145" text-anchor="middle" fill="black" font-size="19">Wet laundry</text>
+<line x1="770" y1="410" x2="930" y2="475"/><text x="1010" y="490" text-anchor="middle" fill="black" font-size="19">Drain hose / standpipe</text>
+
+</g></svg>

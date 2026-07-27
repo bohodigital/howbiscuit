@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="t desc">
+<title id="t">Air drying and machine drying tradeoffs</title>
+<desc id="desc">A split diagram compares dryer energy and speed with air-drying time, space and indoor humidity.</desc>
+<rect width="1200" height="700" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="30">Energy, time, fabric and moisture tradeoffs</text>
+<rect x="60" y="110" width="500" height="460" rx="22"/><text x="310" y="165" text-anchor="middle" fill="black" font-size="27">Clothes dryer</text>
+<text x="310" y="250" text-anchor="middle" fill="black" font-size="22">Faster</text><text x="310" y="300" text-anchor="middle" fill="black" font-size="22">Uses electricity or gas</text><text x="310" y="350" text-anchor="middle" fill="black" font-size="22">Tumbling and heat</text><text x="310" y="400" text-anchor="middle" fill="black" font-size="22">Sensor and vent matter</text>
+<rect x="640" y="110" width="500" height="460" rx="22"/><text x="890" y="165" text-anchor="middle" fill="black" font-size="27">Air drying</text>
+<text x="890" y="250" text-anchor="middle" fill="black" font-size="22">Slower</text><text x="890" y="300" text-anchor="middle" fill="black" font-size="22">Avoids dryer energy</text><text x="890" y="350" text-anchor="middle" fill="black" font-size="22">Needs space and airflow</text><text x="890" y="400" text-anchor="middle" fill="black" font-size="22">Adds indoor moisture</text>
+<text x="600" y="635" text-anchor="middle" fill="black" font-size="18">A hybrid method can balance cost, softness, humidity and fabric care.</text>
+
+</g></svg>
