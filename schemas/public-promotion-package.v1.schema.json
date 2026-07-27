@@ -9,6 +9,7 @@
     "releaseId",
     "approvalDigest",
     "files",
+    "removedFiles",
     "routes"
   ],
   "properties": {
@@ -26,7 +27,7 @@
     "files": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 2000,
+      "maxItems": 3000,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -39,7 +40,7 @@
           "bytes": {
             "type": "integer",
             "minimum": 0,
-            "maximum": 52428800
+            "maximum": 78643200
           },
           "sha256": {
             "type": "string",
@@ -48,11 +49,22 @@
         }
       }
     },
-    "routes": {
+    "removedFiles": {
       "type": "array",
+      "maxItems": 3000,
+      "uniqueItems": true,
       "items": {
         "type": "string",
-        "pattern": "^/"
+        "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[A-Za-z0-9._/-]+$"
+      }
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^/articles/[a-z0-9]+(?:-[a-z0-9]+)*/$"
       }
     }
   }
