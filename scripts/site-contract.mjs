@@ -131,13 +131,15 @@ async function verifyDirectory(directory, expected) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  if (actual.htmlRouteCount !== 73) fail("expected exactly 73 HTML routes");
+  if (actual.htmlRouteCount !== 79) fail("expected exactly 79 HTML routes");
   const expectedPublicArticles = [
     "/articles/2-4-ghz-vs-5-ghz-wifi/",
     "/articles/air-fryer-vs-oven-electricity-cost/",
     "/articles/best-place-to-put-wifi-router/",
     "/articles/can-microwave-interfere-with-wifi/",
     "/articles/can-you-refreeze-food-after-power-outage/",
+    "/articles/dehumidifier-running-not-collecting-water/",
+    "/articles/dehumidifier-vs-air-conditioner/",
     "/articles/do-you-need-refrigerator-freezer-thermometer/",
     "/articles/does-aluminum-foil-improve-wifi-signal/",
     "/articles/does-turning-ac-off-save-money/",
@@ -146,11 +148,13 @@ async function verifyDirectory(directory, expected) {
     "/articles/fan-vs-air-conditioner-cost/",
     "/articles/fix-wifi-dead-zones-without-buying-anything/",
     "/articles/home-energy-check-high-summer-bill/",
+    "/articles/home-humidity-dehumidifier-checklist/",
     "/articles/home-wifi-dead-zone-checklist/",
     "/articles/how-does-baking-powder-work/",
     "/articles/how-long-food-safe-refrigerator-without-power/",
     "/articles/how-long-food-stay-frozen-power-outage/",
     "/articles/how-much-does-dishwasher-cost-per-load/",
+    "/articles/how-much-does-dehumidifier-cost-to-run/",
     "/articles/how-much-does-electric-dryer-cost-per-load/",
     "/articles/how-much-does-electric-oven-cost-per-hour/",
     "/articles/how-much-does-refrigerator-cost-to-run/",
@@ -163,6 +167,8 @@ async function verifyDirectory(directory, expected) {
     "/articles/portable-ac-cost-to-run/",
     "/articles/power-outage-food-safety-chart/",
     "/articles/what-food-throw-away-after-power-outage/",
+    "/articles/what-humidity-should-house-be/",
+    "/articles/what-size-dehumidifier-do-i-need/",
     "/articles/where-to-place-wifi-extender/",
     "/articles/why-are-some-answers-better-than-others/",
     "/articles/why-does-my-wifi-keep-disconnecting/",
@@ -192,17 +198,17 @@ async function loadManifest() {
 async function verifyPromotionPackage(release) {
   const promotion = JSON.parse(await readFile(promotionPath, "utf8"));
   if (promotion.schemaVersion !== "public-promotion-package.v1") fail("invalid promotion schema version");
-  if (promotion.releaseId !== "howbiscuit-phase1-batch6-2026-07-26") fail("unexpected promotion release ID");
-  if (promotion.approvalDigest !== "sha256:fe017b80cf2f46607b2b0f96cd3ad8798cc5dd7a643127e61388aed412554128") {
-    fail("unexpected Batch 6 approval digest");
+  if (promotion.releaseId !== "howbiscuit-phase1-batch7-2026-07-26") fail("unexpected promotion release ID");
+  if (promotion.approvalDigest !== "sha256:d1bf13ccd4c36dd319206a8bc570a5f34f13b1b849b415835d9b2add45c83d36") {
+    fail("unexpected Batch 7 approval digest");
   }
   const expectedRoutes = [
-    "/articles/mesh-wifi-vs-range-extender/",
-    "/articles/ethernet-vs-wifi/",
-    "/articles/how-often-should-you-replace-wifi-router/",
-    "/articles/can-microwave-interfere-with-wifi/",
-    "/articles/download-vs-upload-speed-latency/",
-    "/articles/how-much-internet-speed-do-you-need/",
+    "/articles/what-humidity-should-house-be/",
+    "/articles/how-much-does-dehumidifier-cost-to-run/",
+    "/articles/what-size-dehumidifier-do-i-need/",
+    "/articles/dehumidifier-running-not-collecting-water/",
+    "/articles/dehumidifier-vs-air-conditioner/",
+    "/articles/home-humidity-dehumidifier-checklist/",
   ];
   if (JSON.stringify(promotion.routes) !== JSON.stringify(expectedRoutes)) fail("promotion route inventory differs");
   if (!Array.isArray(promotion.files) || promotion.files.length === 0) fail("promotion file inventory differs");
@@ -216,32 +222,35 @@ async function verifyPromotionPackage(release) {
     }
   }
   for (const required of [
-    "articles/can-microwave-interfere-with-wifi/index.html",
-    "articles/download-vs-upload-speed-latency/index.html",
-    "articles/ethernet-vs-wifi/index.html",
-    "articles/how-much-internet-speed-do-you-need/index.html",
-    "articles/how-often-should-you-replace-wifi-router/index.html",
-    "articles/mesh-wifi-vs-range-extender/index.html",
+    "articles/dehumidifier-running-not-collecting-water/index.html",
+    "articles/dehumidifier-vs-air-conditioner/index.html",
+    "articles/home-humidity-dehumidifier-checklist/index.html",
+    "articles/how-much-does-dehumidifier-cost-to-run/index.html",
+    "articles/what-humidity-should-house-be/index.html",
+    "articles/what-size-dehumidifier-do-i-need/index.html",
     "articles/index.html",
+    "data/dehumidifier-cost-test-vectors.json",
+    "data/dehumidifier-sizing-values.json",
+    "downloads/home-humidity-dehumidifier-checklist.pdf",
     "feed.xml",
     "home-tech/index.html",
-    "images/articles/can-microwave-interfere-with-wifi/photo-accesspoint.jpg",
-    "images/articles/can-microwave-interfere-with-wifi/photo-microwave.jpg",
-    "images/articles/download-vs-upload-speed-latency/photo-ethernet.jpg",
-    "images/articles/download-vs-upload-speed-latency/photo-rear.jpg",
-    "images/articles/ethernet-vs-wifi/photo-ethernet.jpg",
-    "images/articles/ethernet-vs-wifi/photo-rear.jpg",
-    "images/articles/how-much-internet-speed-do-you-need/photo-mesh.jpg",
-    "images/articles/how-much-internet-speed-do-you-need/photo-router.jpg",
-    "images/articles/how-often-should-you-replace-wifi-router/photo-oldrouter.jpg",
-    "images/articles/how-often-should-you-replace-wifi-router/photo-router.jpg",
-    "images/articles/mesh-wifi-vs-range-extender/photo-extender.jpg",
-    "images/articles/mesh-wifi-vs-range-extender/photo-mesh.jpg",
-    "images/diagrams/ethernet-slowest-link.svg",
-    "images/diagrams/household-bandwidth-stack.svg",
-    "images/diagrams/mesh-vs-extender.svg",
-    "images/diagrams/microwave-interference-timeline.svg",
-    "images/diagrams/router-replacement-decision.svg",
+    "images/articles/dehumidifier-running-not-collecting-water/photo-front.jpg",
+    "images/articles/dehumidifier-running-not-collecting-water/photo-top.jpg",
+    "images/articles/dehumidifier-vs-air-conditioner/photo-ac.jpg",
+    "images/articles/dehumidifier-vs-air-conditioner/photo-front.jpg",
+    "images/articles/home-humidity-dehumidifier-checklist/photo-hygrometer.jpg",
+    "images/articles/home-humidity-dehumidifier-checklist/photo-top.jpg",
+    "images/articles/how-much-does-dehumidifier-cost-to-run/photo-hygrometer.jpg",
+    "images/articles/how-much-does-dehumidifier-cost-to-run/photo-top.jpg",
+    "images/articles/what-humidity-should-house-be/photo-front.jpg",
+    "images/articles/what-humidity-should-house-be/photo-hygrometer.jpg",
+    "images/articles/what-size-dehumidifier-do-i-need/photo-front.jpg",
+    "images/articles/what-size-dehumidifier-do-i-need/photo-top.jpg",
+    "images/diagrams/dehumidifier-cost-cycling.svg",
+    "images/diagrams/dehumidifier-no-water-decision.svg",
+    "images/diagrams/dehumidifier-sizing-matrix.svg",
+    "images/diagrams/dehumidifier-vs-ac.svg",
+    "images/diagrams/humidity-target-band.svg",
     "llms.txt",
     "sitemap.xml",
   ]) {

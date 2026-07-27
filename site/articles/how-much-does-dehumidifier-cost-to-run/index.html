@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" data-theme="light" data-theme-preference="system"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script>
+      (() => {
+        document.documentElement.classList.add('js');
+        let storedPreference = null;
+        try {
+          storedPreference = localStorage.getItem('howbiscuit-theme');
+        } catch { /* Storage may be denied; system preference still applies. */ }
+        const preference = ['system', 'light', 'dark'].includes(storedPreference) ? storedPreference : 'system';
+        let systemPrefersDark = false;
+        try {
+          systemPrefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        } catch { /* Light is the safe fallback when media queries are unavailable. */ }
+        const resolved = preference === 'system' ? (systemPrefersDark ? 'dark' : 'light') : preference;
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.theme = resolved;
+      })();
+    </script><title>How Much Does a Dehumidifier Cost to Run? | How Biscuit</title><meta name="description" content="Calculate dehumidifier cost from watts, runtime, measured kWh, or annual certified energy use. A 500-watt full-power example costs about 9 cents per hour at 18.44 cents/kWh."><meta name="robots" content="index, follow"><meta name="theme-color" content="#fff8e7"><link rel="canonical" href="https://howbiscuit.com/articles/how-much-does-dehumidifier-cost-to-run/"><link rel="alternate" type="application/rss+xml" title="How Biscuit RSS Feed" href="/feed.xml"><link rel="sitemap" href="/sitemap.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="How Biscuit"><meta property="og:title" content="How Much Does a Dehumidifier Cost to Run? | How Biscuit"><meta property="og:description" content="Calculate dehumidifier cost from watts, runtime, measured kWh, or annual certified energy use. A 500-watt full-power example costs about 9 cents per hour at 18.44 cents/kWh."><meta property="og:url" content="https://howbiscuit.com/articles/how-much-does-dehumidifier-cost-to-run/"><meta property="og:image" content="https://howbiscuit.com/images/articles/how-much-does-dehumidifier-cost-to-run/photo-top.jpg"><meta property="og:image:alt" content="The top controls and air outlet of a real portable dehumidifier"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How Much Does a Dehumidifier Cost to Run? | How Biscuit"><meta name="twitter:description" content="Calculate dehumidifier cost from watts, runtime, measured kWh, or annual certified energy use. A 500-watt full-power example costs about 9 cents per hour at 18.44 cents/kWh."><meta name="twitter:image" content="https://howbiscuit.com/images/articles/how-much-does-dehumidifier-cost-to-run/photo-top.jpg"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"How Biscuit","description":"Practical, evidence-aware guides for technology, home, kitchens, shopping decisions, and useful tools.","url":"https://howbiscuit.com/","publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"Article","headline":"How Much Does a Dehumidifier Cost to Run?","description":"Calculate dehumidifier cost from watts, runtime, measured kWh, or annual certified energy use. A 500-watt full-power example costs about 9 cents per hour at 18.44 cents/kWh.","url":"https://howbiscuit.com/articles/how-much-does-dehumidifier-cost-to-run/","datePublished":"2026-07-26","dateModified":"2026-07-26","articleSection":"Home Tech","about":"Power, Cooling \u0026 Storage","author":{"@type":"Organization","name":"How Biscuit"},"publisher":{"@type":"Organization","name":"How Biscuit"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://howbiscuit.com/"},{"@type":"ListItem","position":2,"name":"Home Tech","item":"https://howbiscuit.com/home-tech/"},{"@type":"ListItem","position":3,"name":"Power, Cooling \u0026 Storage","item":"https://howbiscuit.com/home-tech/#topic-power-cooling-storage"},{"@type":"ListItem","position":4,"name":"How Much Does a Dehumidifier Cost to Run?"}]}]</script><script defer src="/analytics-bootstrap.js" data-analytics-bootstrap="boho-v1" data-umami-script-url="https://analytics.bohodigitalservices.com/script.js" data-umami-website-id="fefef93c-b1d6-4d04-95d3-064af3d38a41" data-umami-domains="howbiscuit.com,www.howbiscuit.com" data-ga-id="G-NG0NQMVFEH" data-ga-public-hosts="howbiscuit.com,www.howbiscuit.com"></script><style>@media(min-width:58.001rem){.hb-content[data-astro-cid-zm77yjld]{grid-column:1;grid-row:1}.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:2;grid-row:1}}@media(max-width:58rem){.hb-content[data-astro-cid-zm77yjld],.hb-article-toc[data-astro-cid-zm77yjld]{grid-column:1;grid-row:auto;min-width:0}}.hb-direct-answer[data-astro-cid-zm77yjld]{margin-top:1.2rem;border-left:4px solid var(--hb-tomato);padding-left:1rem;color:var(--hb-ink);font-size:clamp(1.05rem,2vw,1.3rem)}.hb-correction-link[data-astro-cid-zm77yjld]{margin-top:3rem;border-top:1px solid var(--hb-ink);padding-top:1rem}.hb-content[data-astro-cid-pwjejfi6]{min-width:0;overflow-wrap:anywhere}.hb-content[data-astro-cid-pwjejfi6] pre,.hb-content[data-astro-cid-pwjejfi6] table{display:block;max-width:100%;overflow-x:auto}.hb-empty-state p{color:var(--hb-ink-soft)}.hb-empty-state a{color:var(--hb-ink);font-weight:850}.hb-topic-section[data-astro-cid-fzx4jmue]{scroll-margin-top:6.5rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]{margin-top:4rem;border-top:2px solid var(--hb-ink);padding-top:1.2rem}.hb-neighbor-links[data-astro-cid-fzx4jmue]>div[data-astro-cid-fzx4jmue]{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.8rem}.hb-neighbor-links[data-astro-cid-fzx4jmue] a[data-astro-cid-fzx4jmue]{border:1px solid var(--hb-ink);border-radius:999px;padding:.45rem .7rem;color:var(--hb-ink);text-decoration:none}
+</style>
+<link rel="stylesheet" href="/_astro/BaseLayout.Dx1DJXA0.css"><style>.hb-article-media[data-astro-cid-ryrfu6xi]{margin:2rem 0}.hb-article-media[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{display:block;width:100%;max-height:38rem;object-fit:cover;border:1px solid var(--hb-ink);border-radius:1rem;background:var(--hb-paper)}.hb-article-media-hero[data-astro-cid-ryrfu6xi]{margin-top:0}.hb-article-media-hero[data-astro-cid-ryrfu6xi] img[data-astro-cid-ryrfu6xi]{aspect-ratio:16 / 9}.hb-article-media[data-astro-cid-ryrfu6xi] figcaption[data-astro-cid-ryrfu6xi]{display:grid;gap:.25rem;margin-top:.55rem;color:var(--hb-muted-ink);font-size:.9rem;line-height:1.45}.hb-article-media-credit[data-astro-cid-ryrfu6xi]{font-size:.8rem}
+</style></head> <body> <a class="hb-skip-link" href="#main-content">Skip to content</a> <header class="hb-custom-header" data-pagefind-ignore="all" data-astro-cid-ctg3m53h> <div class="hb-header-inner" data-astro-cid-ctg3m53h> <a class="hb-brand" href="/" aria-label="How Biscuit home" data-astro-cid-ctg3m53h> <span data-astro-cid-ctg3m53h>HOW BISCUIT</span><b aria-hidden="true" data-astro-cid-ctg3m53h>?</b><i data-astro-cid-ctg3m53h>Practical guides</i> </a> <nav class="hb-desktop-nav" aria-label="Primary navigation" data-astro-cid-ctg3m53h> <details class="hb-category-menu" name="hb-primary-navigation" data-category="home-tech" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home-tech/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home Tech published topics" data-astro-cid-ctg3m53h> <a href="/home-tech/#topic-wifi-routers" aria-label="Wi-Fi &amp; Routers, 14 published guides" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers<span aria-hidden="true" data-astro-cid-ctg3m53h>14</span></a><a href="/home-tech/#topic-power-cooling-storage" aria-label="Power, Cooling &amp; Storage, 6 published guides" data-astro-cid-ctg3m53h>Power, Cooling &amp; Storage<span aria-hidden="true" data-astro-cid-ctg3m53h>6</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/dehumidifier-running-not-collecting-water/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Why Is My Dehumidifier Running but Not Collecting Water?</strong><small data-astro-cid-ctg3m53h>A dehumidifier may stop collecting because the room is already below the setpoint, the room is too cold, airflow is blocked, the bucket or drain is wrong, or the compressor has failed.</small></a><a href="/articles/dehumidifier-vs-air-conditioner/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Dehumidifier vs. Air Conditioner: Which Do You Need?</strong><small data-astro-cid-ctg3m53h>An air conditioner removes heat and some moisture. A dehumidifier removes moisture but returns heat to the room. Choose from temperature, humidity, moisture source, and room conditions.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="home" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p></div> <div class="hb-topic-labels" role="group" aria-label="Home &amp; Apartment published topics" data-astro-cid-ctg3m53h> <a href="/home/#topic-heating-cooling" aria-label="Heating &amp; Cooling, 5 published guides" data-astro-cid-ctg3m53h>Heating &amp; Cooling<span aria-hidden="true" data-astro-cid-ctg3m53h>5</span></a><a href="/home/#topic-utilities-energy" aria-label="Utilities &amp; Energy, 4 published guides" data-astro-cid-ctg3m53h>Utilities &amp; Energy<span aria-hidden="true" data-astro-cid-ctg3m53h>4</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</strong><small data-astro-cid-ctg3m53h>Estimate dryer cost from measured or certified kWh per cycle. A standardized electric-dryer example can range from about 17 to 40 cents per test load at 18.44 cents/kWh.</small></a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</strong><small data-astro-cid-ctg3m53h>Calculate appliance cost from annual kWh, measured kWh, or watts and time. Learn which method works for refrigerators, dryers, dishwashers, ovens, and small appliances.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="kitchen" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p></div> <div class="hb-topic-labels" role="group" aria-label="Kitchen published topics" data-astro-cid-ctg3m53h> <a href="/kitchen/#topic-food-science" aria-label="Food Science, 1 published guide" data-astro-cid-ctg3m53h>Food Science<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a><a href="/kitchen/#topic-troubleshooting-safety" aria-label="Kitchen Troubleshooting &amp; Safety, 11 published guides" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety<span aria-hidden="true" data-astro-cid-ctg3m53h>11</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</strong><small data-astro-cid-ctg3m53h>Compare exact wattage, preheat, cooking time, batches, and servings. A small air fryer often uses less for a small meal, but capacity can reverse the result.</small></a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</strong><small data-astro-cid-ctg3m53h>Divide annual kWh by annual test cycles, then multiply by your rate. A 240 kWh/year dishwasher works out to about 21 cents per standardized cycle at 18.44 cents/kWh.</small></a> </div> </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="shop" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p></div>   </div> </details><details class="hb-category-menu" name="hb-primary-navigation" data-category="tools" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h></span></summary> <div class="hb-category-panel" data-astro-cid-ctg3m53h> <div class="hb-category-intro" data-astro-cid-ctg3m53h><a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong><span data-astro-cid-ctg3m53h>Open category →</span></a><p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p></div> <div class="hb-topic-labels" role="group" aria-label="Tools published topics" data-astro-cid-ctg3m53h> <a href="/tools/#topic-checklists" aria-label="Checklists, 1 published guide" data-astro-cid-ctg3m53h>Checklists<span aria-hidden="true" data-astro-cid-ctg3m53h>1</span></a> </div> <div class="hb-menu-guides" data-astro-cid-ctg3m53h> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</strong><small data-astro-cid-ctg3m53h>Use this step-by-step home energy checklist to find why a summer electric bill increased, from billing days and rates to AC filters, air leaks, and hidden loads.</small></a> </div> </div> </details> <a class="hb-all-guides-link" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> <button class="hb-header-action" id="search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme: System</button> </nav> <div class="hb-mobile-actions" data-astro-cid-ctg3m53h> <button class="hb-header-action" id="mobile-navigation-trigger" type="button" data-open-modal="mobile-navigation" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Menu</button> <button class="hb-header-action" id="mobile-search-trigger" type="button" data-open-modal="search" aria-haspopup="dialog" data-astro-cid-ctg3m53h>Search</button> <button class="hb-header-action hb-theme-control" type="button" data-theme-control aria-label="Theme: System. Activate for Light." data-astro-cid-ctg3m53h>Theme</button> </div> </div> </header> <noscript> <details class="hb-noscript-navigation" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Browse How Biscuit</summary> <nav aria-label="Primary navigation without JavaScript" data-astro-cid-ctg3m53h> <div data-astro-cid-ctg3m53h> <a href="/home-tech/" aria-current="true" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home Tech</strong></a> <a href="/articles/dehumidifier-running-not-collecting-water/" data-astro-cid-ctg3m53h>Why Is My Dehumidifier Running but Not Collecting Water?</a><a href="/articles/dehumidifier-vs-air-conditioner/" data-astro-cid-ctg3m53h>Dehumidifier vs. Air Conditioner: Which Do You Need?</a> </div><div data-astro-cid-ctg3m53h> <a href="/home/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Home &amp; Apartment</strong></a> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</a> </div><div data-astro-cid-ctg3m53h> <a href="/kitchen/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Kitchen</strong></a> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</a> </div><div data-astro-cid-ctg3m53h> <a href="/shop/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Shop Smarter</strong></a>  </div><div data-astro-cid-ctg3m53h> <a href="/tools/" data-astro-cid-ctg3m53h><strong data-astro-cid-ctg3m53h>Tools</strong></a> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </details> </noscript> <dialog class="hb-shell-dialog hb-mobile-navigation-dialog" id="mobile-navigation-dialog" aria-labelledby="mobile-navigation-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="mobile-navigation-title" data-astro-cid-ctg3m53h>Explore How Biscuit</h2><button type="button" data-close-modal aria-label="Close menu" data-astro-cid-ctg3m53h>Close</button></header> <nav aria-label="Mobile navigation" data-astro-cid-ctg3m53h> <details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary aria-current="true" data-astro-cid-ctg3m53h>Home Tech<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home-tech/" data-astro-cid-ctg3m53h>Open Home Tech →</a> <p data-astro-cid-ctg3m53h>Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home-tech/#topic-wifi-routers" data-astro-cid-ctg3m53h>Wi-Fi &amp; Routers</a><a href="/home-tech/#topic-power-cooling-storage" data-astro-cid-ctg3m53h>Power, Cooling &amp; Storage</a></p> <a href="/articles/dehumidifier-running-not-collecting-water/" data-astro-cid-ctg3m53h>Why Is My Dehumidifier Running but Not Collecting Water?</a><a href="/articles/dehumidifier-vs-air-conditioner/" data-astro-cid-ctg3m53h>Dehumidifier vs. Air Conditioner: Which Do You Need?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Home &amp; Apartment<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/home/" data-astro-cid-ctg3m53h>Open Home &amp; Apartment →</a> <p data-astro-cid-ctg3m53h>Useful guidance for repairs, apartment comfort, heating and cooling, cleaning, materials, utilities, and energy.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/home/#topic-heating-cooling" data-astro-cid-ctg3m53h>Heating &amp; Cooling</a><a href="/home/#topic-utilities-energy" data-astro-cid-ctg3m53h>Utilities &amp; Energy</a></p> <a href="/articles/how-much-does-electric-dryer-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does an Electric Dryer Cost Per Load?</a><a href="/articles/how-to-calculate-appliance-electricity-cost/" data-astro-cid-ctg3m53h>How to Calculate What an Appliance Costs to Run</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Kitchen<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/kitchen/" data-astro-cid-ctg3m53h>Open Kitchen →</a> <p data-astro-cid-ctg3m53h>Mechanism-first kitchen guidance for appliances, cookware, food science, substitutions, meals, and safety.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/kitchen/#topic-food-science" data-astro-cid-ctg3m53h>Food Science</a><a href="/kitchen/#topic-troubleshooting-safety" data-astro-cid-ctg3m53h>Kitchen Troubleshooting &amp; Safety</a></p> <a href="/articles/air-fryer-vs-oven-electricity-cost/" data-astro-cid-ctg3m53h>Air Fryer vs. Oven Electricity Cost</a><a href="/articles/how-much-does-dishwasher-cost-per-load/" data-astro-cid-ctg3m53h>How Much Does a Dishwasher Cost Per Load?</a> </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Shop Smarter<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/shop/" data-astro-cid-ctg3m53h>Open Shop Smarter →</a> <p data-astro-cid-ctg3m53h>Evidence-labeled buying guidance focused on comparisons, local prices, used goods, total cost, and avoiding waste.</p>   </div> </details><details class="hb-mobile-category" data-astro-cid-ctg3m53h> <summary data-astro-cid-ctg3m53h>Tools<span aria-hidden="true" data-astro-cid-ctg3m53h>+</span></summary> <div data-astro-cid-ctg3m53h> <a class="hb-mobile-category-link" href="/tools/" data-astro-cid-ctg3m53h>Open Tools →</a> <p data-astro-cid-ctg3m53h>Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.</p> <p class="hb-mobile-topic-labels" data-astro-cid-ctg3m53h><a href="/tools/#topic-checklists" data-astro-cid-ctg3m53h>Checklists</a></p> <a href="/articles/home-energy-check-high-summer-bill/" data-astro-cid-ctg3m53h>Home Energy Check for a High Summer Electric Bill</a> </div> </details> <a class="hb-mobile-all-guides" href="/articles/" data-astro-cid-ctg3m53h>All Guides</a> </nav> </div> </dialog> <dialog class="hb-shell-dialog hb-search-dialog" id="search-dialog" aria-labelledby="search-dialog-title" data-astro-cid-ctg3m53h> <div class="hb-dialog-card" data-astro-cid-ctg3m53h> <header data-astro-cid-ctg3m53h><h2 id="search-dialog-title" data-astro-cid-ctg3m53h>Search How Biscuit</h2><button type="button" data-close-modal aria-label="Close search" data-astro-cid-ctg3m53h>Close</button></header> <form class="hb-search-form" role="search" data-astro-cid-ctg3m53h> <label for="howbiscuit-search-input" data-astro-cid-ctg3m53h>Search published guides and pages</label> <div data-astro-cid-ctg3m53h><input id="howbiscuit-search-input" type="search" name="q" autocomplete="off" spellcheck="false" data-astro-cid-ctg3m53h><button type="submit" data-astro-cid-ctg3m53h>Search</button></div> </form> <p class="hb-search-status" role="status" aria-live="polite" data-astro-cid-ctg3m53h>Enter a word or phrase to search.</p> <div class="hb-search-results" role="region" aria-label="Search results" data-astro-cid-ctg3m53h></div> </div> </dialog>  <script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js"></script> <main id="main-content" class="hb-main hb-article-page" data-pagefind-body> <span hidden aria-hidden="true" data-pagefind-filter="category">Home Tech</span><span hidden aria-hidden="true" data-pagefind-filter="type">Guide</span> <span hidden aria-hidden="true" data-pagefind-meta="title">How Much Does a Dehumidifier Cost to Run?</span> <span hidden aria-hidden="true" data-pagefind-meta="description">Calculate dehumidifier cost from watts, runtime, measured kWh, or annual certified energy use. A 500-watt full-power example costs about 9 cents per hour at 18.44 cents/kWh.</span> <span hidden aria-hidden="true" data-pagefind-meta="route">/articles/how-much-does-dehumidifier-cost-to-run/</span>   <article class="hb-article-shell" data-astro-cid-zm77yjld> <nav class="hb-breadcrumbs" aria-label="Breadcrumb"> <ol> <li> <a href="/">Home</a> <b aria-hidden="true">/</b> </li><li> <a href="/home-tech/">Home Tech</a> <b aria-hidden="true">/</b> </li><li> <a href="/home-tech/#topic-power-cooling-storage">Power, Cooling &amp; Storage</a> <b aria-hidden="true">/</b> </li><li> <span aria-current="page">How Much Does a Dehumidifier Cost to Run?</span>  </li> </ol> </nav> <header class="hb-article-title" data-astro-cid-zm77yjld> <div class="hb-article-labels" role="group" aria-label="Article classification" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Category: Home Tech</span> <span data-astro-cid-zm77yjld>Topic: Power, Cooling &amp; Storage</span> <span data-astro-cid-zm77yjld>Type: Guide</span> </div> <h1 data-astro-cid-zm77yjld>How Much Does a Dehumidifier Cost to Run?</h1> <p class="hb-direct-answer" data-astro-cid-zm77yjld>A hypothetical 500-watt dehumidifier costs about 9 cents per full-power hour at 18.44 cents per kWh. Eight full-power hours would cost about 74 cents. Actual cost is often lower or higher because the compressor cycles and the fan may continue running.</p> <div class="hb-article-meta" data-astro-cid-zm77yjld> <span data-astro-cid-zm77yjld>Updated <time datetime="2026-07-26" data-astro-cid-zm77yjld>Jul 26, 2026</time></span> <span data-astro-cid-zm77yjld>8 min read</span> <span class="hb-badge hb-evidence hb-evidence-label" data-evidence="researched">Researched</span> <span class="hb-badge hb-testing-badge" data-state="not-hands-on-tested">Not hands-on tested</span> </div> </header> <aside class="hb-disclosure" aria-label="Disclosure"> <strong>Disclosure</strong> <p>This guide contains no affiliate links, sponsored placements, paid reviews, product placements, product cards, or product recommendations.</p> <a href="/affiliate-disclosure/">Read the disclosure</a> </aside> <div class="hb-article-grid" data-astro-cid-zm77yjld> <nav class="hb-article-toc" aria-labelledby="article-toc-title" data-astro-cid-zm77yjld> <h2 id="article-toc-title" data-astro-cid-zm77yjld>On this page</h2> <ol data-astro-cid-zm77yjld><li data-depth="2" data-astro-cid-zm77yjld><a href="#full-power-hourly-formula" data-astro-cid-zm77yjld>Full-power hourly formula</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#daily-and-monthly-example" data-astro-cid-zm77yjld>Daily and monthly example</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#why-actual-cost-differs" data-astro-cid-zm77yjld>Why actual cost differs</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#best-calculation-methods" data-astro-cid-zm77yjld>Best calculation methods</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#1-model-specific-annual-kwh" data-astro-cid-zm77yjld>1. Model-specific annual kWh</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#2-safely-measured-kwh" data-astro-cid-zm77yjld>2. Safely measured kWh</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#3-watts-multiplied-by-time" data-astro-cid-zm77yjld>3. Watts multiplied by time</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#4-utility-interval-data" data-astro-cid-zm77yjld>4. Utility interval data</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#find-the-electrical-input" data-astro-cid-zm77yjld>Find the electrical input</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#integrated-energy-factor" data-astro-cid-zm77yjld>Integrated Energy Factor</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#energy-star-savings" data-astro-cid-zm77yjld>ENERGY STAR savings</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#humidity-setting-affects-cost" data-astro-cid-zm77yjld>Humidity setting affects cost</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#room-temperature-affects-cost-and-performance" data-astro-cid-zm77yjld>Room temperature affects cost and performance</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#continuous-drainage" data-astro-cid-zm77yjld>Continuous drainage</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#moisture-sources-dominate-runtime" data-astro-cid-zm77yjld>Moisture sources dominate runtime</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#dehumidifier-and-air-conditioner-together" data-astro-cid-zm77yjld>Dehumidifier and air conditioner together</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#cost-per-amount-of-water-removed" data-astro-cid-zm77yjld>Cost per amount of water removed</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#fixed-charges-and-time-of-use-rates" data-astro-cid-zm77yjld>Fixed charges and time-of-use rates</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#safety-and-recalls" data-astro-cid-zm77yjld>Safety and recalls</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#frequently-asked-questions" data-astro-cid-zm77yjld>Frequently asked questions</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#how-much-does-a-500-watt-dehumidifier-cost-per-hour" data-astro-cid-zm77yjld>How much does a 500-watt dehumidifier cost per hour?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#does-a-dehumidifier-use-full-wattage-all-day" data-astro-cid-zm77yjld>Does a dehumidifier use full wattage all day?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#is-continuous-mode-expensive" data-astro-cid-zm77yjld>Is continuous mode expensive?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#do-energy-star-models-save-money" data-astro-cid-zm77yjld>Do ENERGY STAR models save money?</a></li><li data-depth="3" data-astro-cid-zm77yjld><a href="#should-i-turn-the-unit-off-when-the-bucket-is-empty" data-astro-cid-zm77yjld>Should I turn the unit off when the bucket is empty?</a></li><li data-depth="2" data-astro-cid-zm77yjld><a href="#related-guides" data-astro-cid-zm77yjld>Related guides</a></li></ol> </nav> <div class="hb-content" data-astro-cid-zm77yjld> <figure class="hb-article-media hb-article-media-hero" data-astro-cid-ryrfu6xi> <img src="/images/articles/how-much-does-dehumidifier-cost-to-run/photo-top.jpg" alt="The top controls and air outlet of a real portable dehumidifier" loading="eager" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real dehumidifier control area; visible branding is incidental and not a recommendation.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by Chong Tian Lin via Wikimedia Commons (CC BY-SA 4.0)  · CC BY-SA 4.0  · <a href="https://commons.wikimedia.org/wiki/File:Dehumidifer.jpg" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>A dehumidifier’s electricity cost depends on:</p>
+<ul>
+<li>Electrical input</li>
+<li>Compressor runtime</li>
+<li>Fan runtime</li>
+<li>Humidity setting</li>
+<li>Room temperature</li>
+<li>Moisture load</li>
+<li>Unit efficiency</li>
+<li>Local electricity price</li>
+</ul>
+<p>Use actual measured kWh or model-specific annual energy data when available.</p>
+<blockquote>
+<p><strong>Quick answer:</strong> A hypothetical 500-watt dehumidifier costs about 9 cents per full-power hour at 18.44 cents per kWh. Eight full-power hours would cost about 74 cents. Actual cost is often lower or higher because the compressor cycles and the fan may continue running.</p>
+</blockquote>
+<h2 id="full-power-hourly-formula">Full-power hourly formula</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Hourly cost =</span></span>
+<span class="line"><span>\frac(watts)(1(,)000)</span></span>
+<span class="line"><span>\times</span></span>
+<span class="line"><span>electricity price per kWh</span></span></code></pre>
+<p>For a hypothetical 500-watt unit:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>500 \div 1(,)000 = 0.5  kW</span></span></code></pre>
+<p>At $0.1844 per kWh:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>0.5 \times \$0.1844 = \$0.0922</span></span></code></pre>
+<p>About <strong>9 cents per full-power hour</strong>.</p>
+<h2 id="daily-and-monthly-example">Daily and monthly example</h2>
+<p>At eight full-power hours per day:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>0.5 \times 8 = 4  kWh per day</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>4 \times \$0.1844 = \$0.7376</span></span></code></pre>
+<p>About <strong>74 cents per day</strong>.</p>
+<p>For 30 days:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>\$0.7376 \times 30 = \$22.13</span></span></code></pre>
+<p>This is a full-power example, not a prediction for every home.</p>
+<h2 id="why-actual-cost-differs">Why actual cost differs</h2>
+<p><img src="/images/diagrams/dehumidifier-cost-cycling.svg" alt="Manual timeline contrasting full-power clock time with illustrative compressor cycling"/></p>
+<p>A dehumidifier may:</p>
+<ul>
+<li>Run its compressor continuously during initial drying</li>
+<li>Cycle the compressor after reaching the setpoint</li>
+<li>Run the fan between compressor cycles</li>
+<li>Enter defrost mode</li>
+<li>Shut off when the bucket is full</li>
+<li>Stop because the room is too cold</li>
+<li>Operate longer because moisture keeps entering</li>
+</ul>
+<p>The number of hours the unit is switched on is not always the number of full-power compressor hours.</p>
+<h2 id="best-calculation-methods">Best calculation methods</h2>
+<p>Use the strongest available method.</p>
+<h3 id="1-model-specific-annual-kwh">1. Model-specific annual kWh</h3>
+<p>ENERGY STAR Product Finder includes annual energy consumption for certified models.<sup><a href="#source-batch7-energystar-dehumidifiers" aria-label="Source 1: Dehumidifiers">[1]</a></sup></p>
+<p>Use:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Annual cost =</span></span>
+<span class="line"><span>annual kWh</span></span>
+<span class="line"><span>\times</span></span>
+<span class="line"><span>your rate</span></span></code></pre>
+<p>This standardized figure is useful for comparing models. Household use can differ substantially.</p>
+<h3 id="2-safely-measured-kwh">2. Safely measured kWh</h3>
+<p>A compatible plug-in electricity meter can record cumulative kWh for many portable 120-volt dehumidifiers.</p>
+<p>Use only when:</p>
+<ul>
+<li>The dehumidifier uses a standard compatible plug</li>
+<li>The meter’s voltage, current, and wattage ratings cover the appliance</li>
+<li>The manufacturer permits ordinary plug-in operation</li>
+<li>The outlet and cord are undamaged</li>
+<li>No extension cord, power strip, adapter, or unapproved smart plug is introduced</li>
+</ul>
+<p>Measure for several representative days rather than one hour.</p>
+<p>Do not use an ordinary meter on hardwired or whole-home equipment.</p>
+<h3 id="3-watts-multiplied-by-time">3. Watts multiplied by time</h3>
+<p>Use the full-power formula when the exact electrical input and active time are known.</p>
+<p>Label it clearly as an estimate.</p>
+<h3 id="4-utility-interval-data">4. Utility interval data</h3>
+<p>If the dehumidifier is a major load, compare utility hourly or daily data during:</p>
+<ul>
+<li>Similar weather</li>
+<li>Similar occupancy</li>
+<li>Similar HVAC use</li>
+<li>Dehumidifier on versus off</li>
+</ul>
+<p>This is less precise when several household loads change at once.</p>
+<h2 id="find-the-electrical-input">Find the electrical input</h2>
+<figure class="hb-article-media" data-astro-cid-ryrfu6xi> <img src="/images/articles/how-much-does-dehumidifier-cost-to-run/photo-hygrometer.jpg" alt="A real hygrometer and thermometer used to record humidity and temperature" loading="lazy" decoding="async" data-astro-cid-ryrfu6xi> <figcaption data-astro-cid-ryrfu6xi> <span data-astro-cid-ryrfu6xi>A real humidity and temperature measuring instrument. Its displayed values are illustrative, not a reading from the reader’s home.</span> <span class="hb-article-media-credit" data-astro-cid-ryrfu6xi> Photo by EPO via Wikimedia Commons (Attribution-only permission)  · Attribution-only permission  · <a href="https://commons.wikimedia.org/wiki/File:Hygrometer.jpg" rel="license" data-astro-cid-ryrfu6xi>Source</a> </span> </figcaption> </figure>
+<p>Look at:</p>
+<ul>
+<li>Rating label</li>
+<li>Owner’s manual</li>
+<li>Manufacturer specification</li>
+<li>Certified model data</li>
+</ul>
+<p>Do not use:</p>
+<ul>
+<li>Breaker size</li>
+<li>Cord rating</li>
+<li>Extension-cord rating</li>
+<li>Maximum outlet capacity</li>
+<li>Another model’s wattage</li>
+<li>Pint capacity as though it were electrical power</li>
+</ul>
+<p>A 50-pint dehumidifier does not necessarily draw the same watts as another 50-pint model.</p>
+<h2 id="integrated-energy-factor">Integrated Energy Factor</h2>
+<p>Dehumidifier efficiency is reported as <strong>Integrated Energy Factor</strong>, or IEF, in liters of water removed per kilowatt-hour.</p>
+<p>Higher IEF means more water removed per unit of energy under the standardized test.</p>
+<p>ENERGY STAR Version 6.0 criteria, effective October 1, 2025, use different minimum IEF levels by portable capacity.<sup><a href="#source-batch7-energystar-criteria" aria-label="Source 2: Dehumidifiers Key Efficiency Criteria">[2]</a></sup></p>
+<p>Use IEF to compare similarly sized products.</p>
+<p>Do not use IEF alone to predict exact household cost because:</p>
+<ul>
+<li>Room conditions differ from the test</li>
+<li>Moisture load varies</li>
+<li>Temperature varies</li>
+<li>Runtime varies</li>
+<li>Fan behavior varies</li>
+<li>Drainage and defrost behavior vary</li>
+</ul>
+<h2 id="energy-star-savings">ENERGY STAR savings</h2>
+<p>ENERGY STAR states that a certified dehumidifier uses about <strong>20% less energy</strong> than a similarly sized conventional unit while removing the same amount of moisture.<sup><a href="#source-batch7-energystar-dehumidifiers" aria-label="Source 1: Dehumidifiers">[1]</a></sup></p>
+<p>That is a program-level comparison, not a guaranteed dollar saving for one household.</p>
+<p>Savings depend on:</p>
+<ul>
+<li>Model</li>
+<li>Runtime</li>
+<li>Rate</li>
+<li>Capacity</li>
+<li>Setpoint</li>
+<li>Room condition</li>
+</ul>
+<h2 id="humidity-setting-affects-cost">Humidity setting affects cost</h2>
+<p>A lower setpoint generally causes more runtime.</p>
+<p>For example:</p>
+<ul>
+<li>Setting 55% may require less operation than 45%.</li>
+<li>A room with active seepage may never reach 45%.</li>
+<li>A cold basement may enter defrost rather than remove water efficiently.</li>
+<li>An oversized unit may reach the target faster but cycle differently.</li>
+</ul>
+<p>Use the highest RH target that:</p>
+<ul>
+<li>Keeps the space within the practical 30% to 50% goal</li>
+<li>Prevents condensation</li>
+<li>Controls musty dampness</li>
+<li>Meets building and occupant needs</li>
+</ul>
+<p>Do not set 35% simply because the control permits it.</p>
+<h2 id="room-temperature-affects-cost-and-performance">Room temperature affects cost and performance</h2>
+<p>ENERGY STAR warns that frost can form on coils below about 65°F and reduce moisture removal.<sup><a href="#source-batch7-energystar-dehumidifiers" aria-label="Source 1: Dehumidifiers">[1]</a></sup></p>
+<p>A dehumidifier that repeatedly defrosts may:</p>
+<ul>
+<li>Run the fan</li>
+<li>Cycle the compressor</li>
+<li>Collect little water</li>
+<li>Use electricity without controlling the room effectively</li>
+</ul>
+<p>Choose equipment rated for the actual temperature or address the space condition.</p>
+<h2 id="continuous-drainage">Continuous drainage</h2>
+<p>A gravity drain can reduce bucket-empty downtime, but it does not inherently reduce the energy used per operating hour.</p>
+<p>Check:</p>
+<ul>
+<li>Hose slopes downward</li>
+<li>No kinks</li>
+<li>No clog</li>
+<li>Correct connection</li>
+<li>Drain is safe and permitted</li>
+<li>Condensate cannot back up</li>
+</ul>
+<p>A pump-equipped model adds another electrical component and maintenance requirement.</p>
+<h2 id="moisture-sources-dominate-runtime">Moisture sources dominate runtime</h2>
+<p>Cost can remain high when moisture enters through:</p>
+<ul>
+<li>Foundation seepage</li>
+<li>Plumbing leak</li>
+<li>Open humid-air path</li>
+<li>Unvented dryer</li>
+<li>Indoor laundry drying</li>
+<li>Showering</li>
+<li>Cooking</li>
+<li>Wet materials</li>
+<li>Crawl space</li>
+<li>Poor drainage</li>
+</ul>
+<p>Fixing the source can save more electricity than changing the dehumidifier setting.</p>
+<p>A dehumidifier is not a substitute for repair.</p>
+<h2 id="dehumidifier-and-air-conditioner-together">Dehumidifier and air conditioner together</h2>
+<p>An air conditioner removes heat and some moisture.</p>
+<p>A dehumidifier removes moisture but adds its electrical energy and the heat released during condensation back to the room.</p>
+<p>Running both may:</p>
+<ul>
+<li>Improve humidity control</li>
+<li>Increase electrical use</li>
+<li>Add heat the air conditioner must remove</li>
+</ul>
+<p>Use both only when the humidity problem remains after correct HVAC operation and source control.</p>
+<h2 id="cost-per-amount-of-water-removed">Cost per amount of water removed</h2>
+<p>IEF can be used for a standardized efficiency comparison.</p>
+<p>A model with an IEF of 2.0 L/kWh removes two liters of water per kWh under the test conditions.</p>
+<p>At $0.1844 per kWh, the test-condition energy cost would be:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>\$0.1844 \div 2.0 = \$0.0922  per liter</span></span></code></pre>
+<p>That is about nine cents of electricity per liter under the test condition.</p>
+<p>Real household cost per liter can be higher because conditions and cycling differ.</p>
+<h2 id="fixed-charges-and-time-of-use-rates">Fixed charges and time-of-use rates</h2>
+<p>A fixed monthly utility charge remains even if the dehumidifier is unplugged.</p>
+<p>For time-of-use rates:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="text"><code><span class="line"><span>Total cost =</span></span>
+<span class="line"><span>(off-peak kWh \times off-peak rate)</span></span>
+<span class="line"><span>+</span></span>
+<span class="line"><span>(peak kWh \times peak rate)</span></span></code></pre>
+<p>Humidity control may need to operate when moisture is present, not only when electricity is cheapest.</p>
+<p>Do not delay necessary drying of wet materials to chase a cheaper rate.</p>
+<h2 id="safety-and-recalls">Safety and recalls</h2>
+<p>Some older dehumidifiers have been recalled for fire hazards.</p>
+<p>Before using an older or secondhand unit:</p>
+<ul>
+<li>Record exact brand and model</li>
+<li>Record date code and serial range</li>
+<li>Search the CPSC recall database</li>
+<li>Follow the recall remedy</li>
+<li>Stop using recalled equipment</li>
+</ul>
+<p>Stop and unplug the unit if it:</p>
+<ul>
+<li>Smokes</li>
+<li>Smells like burning</li>
+<li>Has a hot or damaged plug</li>
+<li>Sparks</li>
+<li>Repeatedly trips the breaker</li>
+<li>Leaks water near electrical parts</li>
+<li>Shows melted plastic</li>
+</ul>
+<p>Do not open the refrigeration or electrical enclosure.</p>
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3 id="how-much-does-a-500-watt-dehumidifier-cost-per-hour">How much does a 500-watt dehumidifier cost per hour?</h3>
+<p>At 18.44 cents per kWh, about 9.2 cents per full-power hour.</p>
+<h3 id="does-a-dehumidifier-use-full-wattage-all-day">Does a dehumidifier use full wattage all day?</h3>
+<p>Not necessarily. The compressor cycles, the fan may run separately, and the unit may defrost or shut off.</p>
+<h3 id="is-continuous-mode-expensive">Is continuous mode expensive?</h3>
+<p>It can be when the unit runs constantly. Use a humidistat after the initial high-humidity condition is controlled.</p>
+<h3 id="do-energy-star-models-save-money">Do ENERGY STAR models save money?</h3>
+<p>They use less energy than similarly sized conventional models under the program comparison, but household savings depend on use and rates.</p>
+<h3 id="should-i-turn-the-unit-off-when-the-bucket-is-empty">Should I turn the unit off when the bucket is empty?</h3>
+<p>An empty bucket does not prove the room is dry. Check RH, setting, temperature, airflow, drainage, and operation.</p>
+<ul>
+<li><a href="/tools/appliance-electricity-cost-calculator/">Estimate appliance electricity cost with the free calculator</a></li>
+<li><a href="/data/electricity-prices-by-state/">See residential electricity prices by state</a></li>
+</ul>
+<h2 id="related-guides">Related guides</h2>
+<ul>
+<li><a href="/articles/what-humidity-should-house-be/">What Humidity Should Your House Be?</a></li>
+<li><a href="/articles/what-size-dehumidifier-do-i-need/">What Size Dehumidifier Do You Need?</a></li>
+<li><a href="/articles/dehumidifier-running-not-collecting-water/">Why Is My Dehumidifier Running but Not Collecting Water?</a></li>
+<li><a href="/articles/dehumidifier-vs-air-conditioner/">Dehumidifier vs. Air Conditioner: Which Do You Need?</a></li>
+<li><a href="/articles/how-to-calculate-appliance-electricity-cost/">Calculate appliance electricity cost</a></li>
+</ul> <section class="hb-sources" aria-labelledby="source-notes"> <div><span>Sources reviewed</span><h2 id="source-notes">Source notes</h2></div> <ol> <li id="source-batch7-energystar-dehumidifiers"><a href="https://www.energystar.gov/products/dehumidifiers">Dehumidifiers</a><span>ENERGY STAR</span></li><li id="source-batch7-energystar-criteria"><a href="https://www.energystar.gov/products/dehumidifiers/key_efficiency_criteria">Dehumidifiers Key Efficiency Criteria</a><span>ENERGY STAR</span></li><li id="source-batch7-energystar-product-finder"><a href="https://www.energystar.gov/productfinder/product/certified-dehumidifiers/results">Certified Dehumidifiers</a><span>ENERGY STAR</span></li><li id="source-batch7-doe-dehumidifiers"><a href="https://www.energy.gov/cmei/buildings/consumer-dehumidifiers">Consumer Dehumidifiers</a><span>U.S. Department of Energy</span></li><li id="source-eia-residential-price-may-2026"><a href="https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=table_es1a">Electric Power Monthly: Sales, Revenue, and Average Price of Electricity to Ultimate Customers for May 2026</a><span>U.S. Energy Information Administration</span></li><li id="source-batch7-cpsc-recalls"><a href="https://www.cpsc.gov/Recalls">Recalls</a><span>U.S. Consumer Product Safety Commission</span></li> </ol> </section> <aside class="hb-related" aria-label="Related guides"> <p>Keep going</p> <div><a href="/articles/what-humidity-should-house-be/"><span>Home Tech</span><b>What Humidity Should Your House Be?</b><i aria-hidden="true">→</i></a><a href="/articles/what-size-dehumidifier-do-i-need/"><span>Home Tech</span><b>What Size Dehumidifier Do You Need?</b><i aria-hidden="true">→</i></a><a href="/articles/dehumidifier-running-not-collecting-water/"><span>Home Tech</span><b>Why Is My Dehumidifier Running but Not Collecting Water?</b><i aria-hidden="true">→</i></a></div> </aside> <p class="hb-correction-link" data-astro-cid-zm77yjld>See something wrong or out of date? <a href="/corrections/" data-astro-cid-zm77yjld>Report a correction</a>.</p> </div> </div> </article>  </main> <footer class="hb-global-footer" data-pagefind-ignore="all"> <div class="hb-footer-mark">HOW BISCUIT<span>?</span></div> <p>Practical guides for technology, home, kitchens, shopping decisions, and useful tools.</p> <nav aria-label="Browse categories"> <a href="/home-tech/">Home Tech</a><a href="/home/">Home &amp; Apartment</a><a href="/kitchen/">Kitchen</a><a href="/shop/">Shop Smarter</a><a href="/tools/">Tools</a> <a href="/articles/">All Guides</a> </nav> <nav aria-label="Site information"> <a href="/about/">About</a> <a href="/editorial-policy/">Editorial policy</a> <a href="/corrections/">Corrections</a> <a href="/privacy/">Privacy</a> <a href="/affiliate-disclosure/">Affiliate disclosure</a> <a href="/contact/">Contact</a> <a href="/feed.xml">RSS</a> <a href="/sitemap.xml">Sitemap</a> </nav> </footer> </body></html>

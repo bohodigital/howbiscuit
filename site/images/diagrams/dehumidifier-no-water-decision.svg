@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="t desc">
+<title id="t">Dehumidifier running but not collecting water decision tree</title>
+<desc id="desc">A decision tree checks room humidity, temperature and frost, airflow, bucket and drain, mode, and compressor operation before service or replacement.</desc>
+<rect width="1200" height="850" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+<rect x="375" y="30" width="450" height="75" rx="16"/><text x="600" y="75" text-anchor="middle" fill="black" font-size="25">Running but little or no water</text>
+<line x1="600" y1="105" x2="600" y2="145"/>
+<rect x="375" y="145" width="450" height="80" rx="16"/><text x="600" y="180" text-anchor="middle" fill="black" font-size="22">Measured RH above setpoint?</text><text x="600" y="208" text-anchor="middle" fill="black" font-size="17">Use a separate hygrometer</text>
+<line x1="375" y1="185" x2="205" y2="185"/><text x="295" y="168" fill="black" font-size="18">No</text>
+<rect x="35" y="140" width="280" height="100" rx="16"/><text x="175" y="180" text-anchor="middle" fill="black" font-size="22">Little collection may be normal</text><text x="175" y="212" text-anchor="middle" fill="black" font-size="17">Room may already be dry</text>
+<line x1="600" y1="225" x2="600" y2="280"/><text x="620" y="255" fill="black" font-size="18">Yes</text>
+<rect x="375" y="280" width="450" height="80" rx="16"/><text x="600" y="315" text-anchor="middle" fill="black" font-size="22">Room below about 65°F or coils iced?</text>
+<line x1="825" y1="320" x2="990" y2="320"/><text x="885" y="303" fill="black" font-size="18">Yes</text>
+<rect x="900" y="275" width="280" height="100" rx="16"/><text x="1040" y="315" text-anchor="middle" fill="black" font-size="22">Stop and defrost</text><text x="1040" y="347" text-anchor="middle" fill="black" font-size="17">Check temperature rating</text>
+<line x1="600" y1="360" x2="600" y2="420"/><text x="620" y="395" fill="black" font-size="18">No</text>
+<rect x="375" y="420" width="450" height="85" rx="16"/><text x="600" y="455" text-anchor="middle" fill="black" font-size="22">Airflow, filter, bucket, and drain correct?</text><text x="600" y="485" text-anchor="middle" fill="black" font-size="17">No blockage, kink, clog, or misalignment</text>
+<line x1="375" y1="462" x2="205" y2="462"/><text x="295" y="445" fill="black" font-size="18">No</text>
+<rect x="35" y="415" width="280" height="105" rx="16"/><text x="175" y="457" text-anchor="middle" fill="black" font-size="22">Correct external issue</text><text x="175" y="490" text-anchor="middle" fill="black" font-size="17">Follow exact manual</text>
+<line x1="600" y1="505" x2="600" y2="565"/><text x="620" y="540" fill="black" font-size="18">Yes</text>
+<rect x="375" y="565" width="450" height="85" rx="16"/><text x="600" y="600" text-anchor="middle" fill="black" font-size="22">Correct mode and compressor operating?</text><text x="600" y="630" text-anchor="middle" fill="black" font-size="17">Allow startup and defrost delays</text>
+<line x1="825" y1="607" x2="990" y2="607"/><text x="885" y="590" fill="black" font-size="18">No/unclear</text>
+<rect x="900" y="555" width="280" height="115" rx="16"/><text x="1040" y="600" text-anchor="middle" fill="black" font-size="22">Contact support</text><text x="1040" y="633" text-anchor="middle" fill="black" font-size="17">Service or replacement</text>
+<line x1="600" y1="650" x2="600" y2="710"/><text x="620" y="685" fill="black" font-size="18">Yes</text>
+<rect x="375" y="710" width="450" height="90" rx="16"/><text x="600" y="748" text-anchor="middle" fill="black" font-size="22">Run representative test and recheck RH</text><text x="600" y="780" text-anchor="middle" fill="black" font-size="17">Never judge by bucket volume alone</text>
+<text x="600" y="835" text-anchor="middle" fill="black" font-size="17">Stop immediately for smoke, burning odor, hot plug, sparks, repeated trips, water in electrical parts, or recall.</text>
+</g></svg>

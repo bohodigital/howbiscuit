@@ -1,7 +1,7 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "howbiscuit-phase1-batch6-2026-07-26",
-  "approvalDigest": "sha256:fe017b80cf2f46607b2b0f96cd3ad8798cc5dd7a643127e61388aed412554128",
+  "releaseId": "howbiscuit-phase1-batch7-2026-07-26",
+  "approvalDigest": "sha256:d1bf13ccd4c36dd319206a8bc570a5f34f13b1b849b415835d9b2add45c83d36",
   "files": [
     {
       "path": ".build-metrics.json",
@@ -10,8 +10,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 21179,
-      "sha256": "sha256:2a24f4536509c3b4c01251efa967a7b802956163ebd12f6ef342fa5b72836d77"
+      "bytes": 21672,
+      "sha256": "sha256:9359368f0e1187f4e82a8691d89810ebad4b2ab3f3d68e40b629878f4b0d2e7c"
     },
     {
       "path": "_astro/BaseLayout.Dx1DJXA0.css",
@@ -345,13 +345,13 @@
     },
     {
       "path": "about/index.html",
-      "bytes": 24251,
-      "sha256": "sha256:dc8f71b092c2388c02523d290a894b8ad7610dd4e6c93832928576a5109653cc"
+      "bytes": 24744,
+      "sha256": "sha256:2f5a16abb4b2c0ace3b30f5126b89a0473d8722bdce3913c824dce8b7d2870f6"
     },
     {
       "path": "affiliate-disclosure/index.html",
-      "bytes": 24174,
-      "sha256": "sha256:121cf91d84671b46a66f8b2479e06e2382137ef3903c10fd6783a280b3341c88"
+      "bytes": 24667,
+      "sha256": "sha256:ba9e819911f110406c62c7abd2c8fd86ed105e29afd9e7414048c922fa9f4039"
     },
     {
       "path": "analytics-bootstrap.js",
@@ -360,203 +360,243 @@
     },
     {
       "path": "articles/2-4-ghz-vs-5-ghz-wifi/index.html",
-      "bytes": 42982,
-      "sha256": "sha256:928ae3104af79a798fb4c2ba592693cd65a95c5168ba34c724312d1173653b3d"
+      "bytes": 43475,
+      "sha256": "sha256:442bf13aca742ceca4eab0a221a0eb15a69096523af528d281c76c31c568270a"
     },
     {
       "path": "articles/air-fryer-vs-oven-electricity-cost/index.html",
-      "bytes": 45434,
-      "sha256": "sha256:859d0b13a1a6953f92f0678c6487a06aaf4133cb50fb7d2816b9d286c85fd312"
+      "bytes": 45927,
+      "sha256": "sha256:13f326f72ba8f27dc7a69004f213109bc6f420980bce2fbb6092335527a8306e"
     },
     {
       "path": "articles/best-place-to-put-wifi-router/index.html",
-      "bytes": 44412,
-      "sha256": "sha256:e9c48e9df598d0905545cec7d367b75bbc75dea64d86d6da66ce0750d72132b3"
+      "bytes": 44905,
+      "sha256": "sha256:5b22bda469adacd882a322f94c8c9e0993a6b798d0a24391e328979c1ed75b27"
     },
     {
       "path": "articles/can-microwave-interfere-with-wifi/index.html",
-      "bytes": 43649,
-      "sha256": "sha256:b5159066e757a9400aad2a3d90d5aec5b71ca1653886342b7b22a271936b28c8"
+      "bytes": 44142,
+      "sha256": "sha256:5c462c5091cf6fcc3de527eb5e6341af36152f27840f0a67ab01ec9b5733c406"
     },
     {
       "path": "articles/can-you-refreeze-food-after-power-outage/index.html",
-      "bytes": 43191,
-      "sha256": "sha256:7ce4a884f6a9a6aada545a080ff0760117164c069b6dc8d8df9a18c7460b2cb2"
+      "bytes": 43684,
+      "sha256": "sha256:3d24cf8ab28b819cd96717a6a8bfff36d2d839889b4edd56ef9349c8ce4a1bfc"
+    },
+    {
+      "path": "articles/dehumidifier-running-not-collecting-water/index.html",
+      "bytes": 48122,
+      "sha256": "sha256:d820fda2c328cafd941366c35a061d240b1003380bf9bc8a366b50f2e2e53ddc"
+    },
+    {
+      "path": "articles/dehumidifier-vs-air-conditioner/index.html",
+      "bytes": 47097,
+      "sha256": "sha256:1825450221241e2eb3531665f5a35d6b686f7568f5eb2de9dc0b138b7eb895ad"
     },
     {
       "path": "articles/do-you-need-refrigerator-freezer-thermometer/index.html",
-      "bytes": 46996,
-      "sha256": "sha256:6fbd34eedeadddd629ed2d4c6f44d62857b146aa4dfacc9512437e52219e5d84"
+      "bytes": 47489,
+      "sha256": "sha256:a0ac5b252e1faf04dd0506ae0cd68c726389aab764a85184659ffa281850bc4d"
     },
     {
       "path": "articles/does-aluminum-foil-improve-wifi-signal/index.html",
-      "bytes": 40380,
-      "sha256": "sha256:93230d086f2541a9255afdad453804909063891ea325fe9153c5f08ee23197a6"
+      "bytes": 40873,
+      "sha256": "sha256:6da113062127043900bf3423f1488a8796f866fbd15564678b1556be42b0f9ac"
     },
     {
       "path": "articles/does-turning-ac-off-save-money/index.html",
-      "bytes": 46910,
-      "sha256": "sha256:d0f045ecc5850f3c2c5a00b6576d13b42ec456a6279c61679be97545db9dd51a"
+      "bytes": 47403,
+      "sha256": "sha256:23ab7afc60920c38dafa2c4a0f3f7990b71e47858f6eec2c81b4851a689928a6"
     },
     {
       "path": "articles/download-vs-upload-speed-latency/index.html",
-      "bytes": 42345,
-      "sha256": "sha256:95785b13c08030b0f04109b7c66c258f3dcd6389f498b6ccab5389d0bbf1cfb5"
+      "bytes": 42838,
+      "sha256": "sha256:13939311975fdc7776078a558c0413d23a928b379a6416c8c0432972e23dc273"
     },
     {
       "path": "articles/ethernet-vs-wifi/index.html",
-      "bytes": 43805,
-      "sha256": "sha256:8d166bf89b3df30232c45bc89bc1c5ad4cb3ea700fde9939053bfbc3263f9606"
+      "bytes": 44298,
+      "sha256": "sha256:7cbfd1c1c688374f849b8f97219bf9a41ca813c2d9cce63bf05783023750cfcd"
     },
     {
       "path": "articles/fan-vs-air-conditioner-cost/index.html",
-      "bytes": 44738,
-      "sha256": "sha256:8fd51e26147ab1b7a5beeb1f3d785fedce8a0da922c36e2d0ad89a4a9f9b85cb"
+      "bytes": 45231,
+      "sha256": "sha256:b3d48ea78432c7b9372f44a3e6805d1486f7a29fec0a53a00a5534493d8ef663"
     },
     {
       "path": "articles/fix-wifi-dead-zones-without-buying-anything/index.html",
-      "bytes": 43152,
-      "sha256": "sha256:12fbf78f58340beba85496a6d6b06425e8d2b1ce73b7d162b7bdfd337409316f"
+      "bytes": 43645,
+      "sha256": "sha256:414e654806e7cf1a4a89fc5c6380d411b549db949550bdec620cff1ad72c07e7"
     },
     {
       "path": "articles/home-energy-check-high-summer-bill/index.html",
-      "bytes": 60139,
-      "sha256": "sha256:0646f5c7ce6856540920947cc2c538e41eebbe09a184079e17b08f2ff88a5861"
+      "bytes": 60632,
+      "sha256": "sha256:e5f30ad4a9dd12f311c07bcc1c0846f50172340c36011d3b2cdcf3648e80c114"
+    },
+    {
+      "path": "articles/home-humidity-dehumidifier-checklist/index.html",
+      "bytes": 56491,
+      "sha256": "sha256:df04a1df174765f952a3e47cafe9e83bacaad06001e6db417b91d292d8ee6ed0"
     },
     {
       "path": "articles/home-wifi-dead-zone-checklist/index.html",
-      "bytes": 49163,
-      "sha256": "sha256:44d6d0eea4773eed0092f17196bc3e90f63fca31ae88407268f925ef63733cf3"
+      "bytes": 49656,
+      "sha256": "sha256:dd7446e445de28f97165f6a3f68220719f8d29bcca759670ef8d395da2f2ffc6"
     },
     {
       "path": "articles/how-does-baking-powder-work/index.html",
-      "bytes": 33842,
-      "sha256": "sha256:4ec0b7a7d1d991263bce82ece9e077b1a515cf153647eb0fe3613cd64af11b80"
+      "bytes": 34335,
+      "sha256": "sha256:013bd97c685766268e18163953333ee6d914fccc213f5f7f51f70f9137fa7685"
     },
     {
       "path": "articles/how-long-food-safe-refrigerator-without-power/index.html",
-      "bytes": 48569,
-      "sha256": "sha256:0a1e0897209216c930d88051858e0770e4b6e2b6f5e10c09ac4276a597723e0c"
+      "bytes": 49062,
+      "sha256": "sha256:e3a6d4a26f349573fb0890ceb0274c9b833d3d84eecfb85d3f22a6f8a4982c5a"
     },
     {
       "path": "articles/how-long-food-stay-frozen-power-outage/index.html",
-      "bytes": 48276,
-      "sha256": "sha256:03e1a9e095da47d0873ad82e75065186c1d5c1e84f9999ce10b30a3f82e039a2"
+      "bytes": 48769,
+      "sha256": "sha256:15c2f86886d36502949c9b3731b2536c10ee2df80d688622666ceb0c87999077"
+    },
+    {
+      "path": "articles/how-much-does-dehumidifier-cost-to-run/index.html",
+      "bytes": 50024,
+      "sha256": "sha256:b0f24809a847d29489d10d02318330886b68ca8754565db3949b798c16357041"
     },
     {
       "path": "articles/how-much-does-dishwasher-cost-per-load/index.html",
-      "bytes": 43304,
-      "sha256": "sha256:03ffaa2e4bd36bb604ad0bfd9ebbdfdef26bbfa690f901232085c33fbdd488df"
+      "bytes": 43797,
+      "sha256": "sha256:862800372492094638aeaa248b9cd6e8332ad25b4685d74f6b7384002491c601"
     },
     {
       "path": "articles/how-much-does-electric-dryer-cost-per-load/index.html",
-      "bytes": 43027,
-      "sha256": "sha256:a218cb2550d2c2e4523b3ab671db4e1978c906a637f7083d755e1728021ed0ea"
+      "bytes": 43520,
+      "sha256": "sha256:33fd2b99f58e8ee14633fb991006f76c093ae0806afeaba007a811f456ea4372"
     },
     {
       "path": "articles/how-much-does-electric-oven-cost-per-hour/index.html",
-      "bytes": 42651,
-      "sha256": "sha256:b8e51b7643fb0a5fa26afbd0abeb212683bbb66af8c1ecdecbc17e0c71cb1da9"
+      "bytes": 43144,
+      "sha256": "sha256:599126da918408e365c20edbbdef98c72e7ff02e289c5f97747f858730ab9771"
     },
     {
       "path": "articles/how-much-does-refrigerator-cost-to-run/index.html",
-      "bytes": 45525,
-      "sha256": "sha256:6a62c78a3eac8be88bd4f61a06bf548b79fff010926b9ac48eada4e4a5243260"
+      "bytes": 46018,
+      "sha256": "sha256:6fb2cac8284adbe4fcd39079717eaafe5c80a6e273f75c3af0733e9f0c1435d3"
     },
     {
       "path": "articles/how-much-does-washing-machine-cost-per-load/index.html",
-      "bytes": 44276,
-      "sha256": "sha256:8b3e9cb8e5698ef2dacc5b44938896e3ca1489689effdce5fdeb9da5dfb7c803"
+      "bytes": 44769,
+      "sha256": "sha256:169bfd60296f3eb821af8c2bf45629556295fd746493ecb4bda557ad8a86d430"
     },
     {
       "path": "articles/how-much-electricity-does-microwave-use/index.html",
-      "bytes": 43651,
-      "sha256": "sha256:d7f1758bd947ad27778cc7e2ffc444f7d17ca4ea9414cc927501c9975c312883"
+      "bytes": 44144,
+      "sha256": "sha256:e4fb5a966fa0a5c5f14bb95b6558d5ef02c1344f10ef76eb83ea8453f6f60867"
     },
     {
       "path": "articles/how-much-internet-speed-do-you-need/index.html",
-      "bytes": 47423,
-      "sha256": "sha256:c89becb539ebb3e0c52f119ac661541ebe5b394bbc16aaec32d723ea4c693036"
+      "bytes": 47916,
+      "sha256": "sha256:700098f4dc5ee441c9e6846d9c7c7f6fdf6d53e21a702ea5be17b61dd3cfe26f"
     },
     {
       "path": "articles/how-often-should-you-replace-wifi-router/index.html",
-      "bytes": 44147,
-      "sha256": "sha256:5778b35fd47c58100e53c24731419344e6237230197795920c1a6cf9327cbd85"
+      "bytes": 44640,
+      "sha256": "sha256:84d37cfd3d1a1a6e23d70c431c281d6a4d599e89789d698b8310dd0757518eb5"
     },
     {
       "path": "articles/how-to-calculate-appliance-electricity-cost/index.html",
-      "bytes": 53396,
-      "sha256": "sha256:a643b47842df99ba3de6c94b2ea1798b708cb44838f4922ef6ae49ea537b47f6"
+      "bytes": 53889,
+      "sha256": "sha256:5248882d282e106e299f2486d503b35900ea66d63b7c9fefbce25d8311abf41b"
     },
     {
       "path": "articles/index.html",
-      "bytes": 47793,
-      "sha256": "sha256:10422d1b8253a1b12c9372b4ae7822cdf9e9720a8e21c5956299474eceec79ab"
+      "bytes": 52227,
+      "sha256": "sha256:a38bf8a41fe5e445572a53849486a958b52dd8180a86400bdbfba204f6d8dc11"
     },
     {
       "path": "articles/mesh-wifi-vs-range-extender/index.html",
-      "bytes": 47038,
-      "sha256": "sha256:ee084bddeb9a8a6e7f444c603d7bd077529bf83b076180b726d0c6dc0c324239"
+      "bytes": 47531,
+      "sha256": "sha256:3710e8f69a2fe3659fb56f04775f2cc0f50ce71ff7ca1ffa2c3bc8c2edc0e62b"
     },
     {
       "path": "articles/portable-ac-cost-to-run/index.html",
-      "bytes": 47050,
-      "sha256": "sha256:5ad628848e4d922b27478eec40870109972772781aa03bce0c93f0690e1828aa"
+      "bytes": 47543,
+      "sha256": "sha256:b2218c42ac5e7130e2053cf8f77122bcb93d7a1e07f4e8e49072ded12fc87b97"
     },
     {
       "path": "articles/power-outage-food-safety-chart/index.html",
-      "bytes": 41135,
-      "sha256": "sha256:458f197a10cdd889339d02014bd3ebc521e9061c40db8946d9db2938519d00ba"
+      "bytes": 41628,
+      "sha256": "sha256:f390b769b5957044eb21ac0e1e62fed585c713eea9975fea5457e7ff72f1ec99"
     },
     {
       "path": "articles/what-food-throw-away-after-power-outage/index.html",
-      "bytes": 46499,
-      "sha256": "sha256:1ddc283186b9f359edf086f3e1f354b6c8b1c87356275176b22aff7db05e65a4"
+      "bytes": 46992,
+      "sha256": "sha256:b1797fd3af5c4c644cd75f631be56c72861cfeadb6adf64fdc32c0ccc62454c9"
+    },
+    {
+      "path": "articles/what-humidity-should-house-be/index.html",
+      "bytes": 46689,
+      "sha256": "sha256:461759483fe3490dca767b556a3dc4b9154eaf176168faac96cb2246429b05f8"
+    },
+    {
+      "path": "articles/what-size-dehumidifier-do-i-need/index.html",
+      "bytes": 51375,
+      "sha256": "sha256:5f13a2f79cc5c5709330299c0e8e5a5eb347c629aa30bb187dacae6570ff7b55"
     },
     {
       "path": "articles/where-to-place-wifi-extender/index.html",
-      "bytes": 43346,
-      "sha256": "sha256:3c3ac6ac0e42c7ccefe0b6286353a5ead31f2c00f2e746c4e1ce6c4ac06374e7"
+      "bytes": 43839,
+      "sha256": "sha256:61021b02d0c45c5b77f4e0900e049acffdadbaf6ad3fc01e96e6966ab023fe87"
     },
     {
       "path": "articles/why-are-some-answers-better-than-others/index.html",
-      "bytes": 32457,
-      "sha256": "sha256:8cbd450a398ca62ab2f5abd9dfb501f7aa40ccab338af748a702d1bbd4109743"
+      "bytes": 32950,
+      "sha256": "sha256:72ee74797515d4669d87e8e4adc51dfc059397b7fca11142bf3ca0814bb60c8b"
     },
     {
       "path": "articles/why-does-my-wifi-keep-disconnecting/index.html",
-      "bytes": 48944,
-      "sha256": "sha256:e602430a62654a37755b3bf1b684f1c542b798eb8da7c1c9b0815c9707e2a8aa"
+      "bytes": 49437,
+      "sha256": "sha256:3559b1e242f53a10b2e3d9ba7e24889983b1b5776d171c85b40a88fecdfbad6f"
     },
     {
       "path": "articles/why-electric-bill-high-summer/index.html",
-      "bytes": 53056,
-      "sha256": "sha256:833fd69ad58d0c853c922ab4b25a36162e827b00f49d864433a8af08f913c851"
+      "bytes": 53549,
+      "sha256": "sha256:5b730f56ce85f546df03548a542e73fff1edc147c42db6277d0db90b7c8800e4"
     },
     {
       "path": "articles/why-is-my-wifi-so-slow/index.html",
-      "bytes": 51869,
-      "sha256": "sha256:3df3ef1960506032f8bdd5673a4a79a53b272929a1b5299baed6dbf68bc673aa"
+      "bytes": 52362,
+      "sha256": "sha256:c64ab168251ac1a76316dbbd0fdf996bdb92de5f157202d8aaf5473c6416f84c"
     },
     {
       "path": "articles/why-salt-melts-ice/index.html",
-      "bytes": 49312,
-      "sha256": "sha256:db0ba7ba61e25e6688590cd8f0069167e4339cb8dd254a24f4c4a8920c44037d"
+      "bytes": 49805,
+      "sha256": "sha256:1add5cf4ae9215d0e87a44ffa3c6565064dec07e36b7af3bfe7ec74b2621f9b9"
     },
     {
       "path": "articles/window-ac-cost-per-hour/index.html",
-      "bytes": 48416,
-      "sha256": "sha256:35a78db4aa4b0f9e7524afe598a5c8aa48470062fa3786f10d955caec7b5fc68"
+      "bytes": 48909,
+      "sha256": "sha256:c03a0a2d5ca0a15a211d81a0a89c99f1dc3d73ab76d00a4e833fa8422a529965"
     },
     {
       "path": "contact/index.html",
-      "bytes": 24226,
-      "sha256": "sha256:0c383298d09cc48abb673ad00ebe8f88b1d00494487f210703a17bb11ffd9042"
+      "bytes": 24719,
+      "sha256": "sha256:8900839246f1a668ac9821ee8d67787994bf1e23d4ca1e7a3c32c8f53639e8de"
     },
     {
       "path": "corrections/index.html",
-      "bytes": 24179,
-      "sha256": "sha256:172f145c6d02278555301e759bdfa90720530189b8a1cbb5df171ccaa0500de7"
+      "bytes": 24672,
+      "sha256": "sha256:1fff7c60553e7106cc2990894ed20eee742cce882b9c77f6e0db5e4eeaabab35"
+    },
+    {
+      "path": "data/dehumidifier-cost-test-vectors.json",
+      "bytes": 956,
+      "sha256": "sha256:e0e653c24824d9b5b554c581727b6ef2ad280a1e288647b834c8eed9362fcb93"
+    },
+    {
+      "path": "data/dehumidifier-sizing-values.json",
+      "bytes": 1175,
+      "sha256": "sha256:96d9cbc57b27bcc561806f53426e8ee82e93d83bc26c9a867e3dfe345db366ba"
     },
     {
       "path": "data/electricity-prices-by-state-may-2026.json",
@@ -2254,6 +2294,11 @@
       "sha256": "sha256:e68f4a0848ce87ae304162f2c63db08ad928a40f9a10fc5e3fd440130a7cd4e2"
     },
     {
+      "path": "downloads/home-humidity-dehumidifier-checklist.pdf",
+      "bytes": 8491,
+      "sha256": "sha256:09d1b1f3c61fbccff52f96b9dcc5ae0e52a51a22c3231b2927fa33424d2703ee"
+    },
+    {
       "path": "downloads/home-wifi-dead-zone-checklist.pdf",
       "bytes": 6612,
       "sha256": "sha256:7bba2728bee21269182e20be8fdc0fd0b0db636b9d1f873049a6336195202d87"
@@ -2265,13 +2310,13 @@
     },
     {
       "path": "editorial-policy/index.html",
-      "bytes": 24764,
-      "sha256": "sha256:0315aa172adb2f0f33bdf31c788973ce16e202fd34c7d05eac6546e0ba3ad5c9"
+      "bytes": 25257,
+      "sha256": "sha256:7175a83a59930b473e90dddc46013728c375dcfaacd890ec0700e37fcf1d98cd"
     },
     {
       "path": "electricity-prices-by-state/index.html",
-      "bytes": 39322,
-      "sha256": "sha256:7670752e0d1675a5fe39a82f47dcbdefd5566c1452d23f004b9f3f38bdcefc1a"
+      "bytes": 39815,
+      "sha256": "sha256:357061d29243751ec2549ccb4f6309081b772a04d94b5e83203d3e942d8110cf"
     },
     {
       "path": "favicon.svg",
@@ -2280,8 +2325,8 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 18100,
-      "sha256": "sha256:6c13256045caa402f23dfc98f5509e85f7be35c27796829cc4f34e2326ece605"
+      "bytes": 21110,
+      "sha256": "sha256:e90eefadc9667ce96f8ce6f312cec9ab4ffc6b726095391ce0bd557ba14820fb"
     },
     {
       "path": "h3-workers/events.js",
@@ -2305,13 +2350,13 @@
     },
     {
       "path": "home/index.html",
-      "bytes": 38805,
-      "sha256": "sha256:7e16e8bdaeab22b9fca49a15bc6cf1e3eeee0c4ca16f4e692104de2070e71540"
+      "bytes": 39298,
+      "sha256": "sha256:422e1ad7a9a6a5f481f3b60ac9188bdaa654b421acdb003a83d1489e6f635b47"
     },
     {
       "path": "home-tech/index.html",
-      "bytes": 44079,
-      "sha256": "sha256:0c38c5ab5b1e5d152005c5231bd86224cb8668d417efb056a2efbad4c8f25d2b"
+      "bytes": 53142,
+      "sha256": "sha256:0b3198a589a7f65fe99fbbfec701cb7cb41e1e9ac7e8ab1606ef978de2c32ac5"
     },
     {
       "path": "images/articles/2-4-ghz-vs-5-ghz-wifi/photo-wireless-access-point.jpg",
@@ -2357,6 +2402,26 @@
       "path": "images/articles/can-you-refreeze-food-after-power-outage/photo-usda-refrigerator-thermometer.jpg",
       "bytes": 281030,
       "sha256": "sha256:410c5148180b28a9ddf5ef275db1f6597505d2d5970582facd58381c1083e9f1"
+    },
+    {
+      "path": "images/articles/dehumidifier-running-not-collecting-water/photo-front.jpg",
+      "bytes": 129648,
+      "sha256": "sha256:beea19c0471e6117920ea09fe9e37f5cfed50f73fd68aa2b60a748a82acf1420"
+    },
+    {
+      "path": "images/articles/dehumidifier-running-not-collecting-water/photo-top.jpg",
+      "bytes": 202099,
+      "sha256": "sha256:09482764129c331bc354fb324b183dc74e66958536413b677cc575958504511b"
+    },
+    {
+      "path": "images/articles/dehumidifier-vs-air-conditioner/photo-ac.jpg",
+      "bytes": 696719,
+      "sha256": "sha256:e111929dbb50a42fae8c5f662ff2ba4664f0c20864779e85aaa4566888483946"
+    },
+    {
+      "path": "images/articles/dehumidifier-vs-air-conditioner/photo-front.jpg",
+      "bytes": 129648,
+      "sha256": "sha256:beea19c0471e6117920ea09fe9e37f5cfed50f73fd68aa2b60a748a82acf1420"
     },
     {
       "path": "images/articles/do-you-need-refrigerator-freezer-thermometer/photo-usda-refrigerator-thermometer.jpg",
@@ -2454,6 +2519,16 @@
       "sha256": "sha256:e911309d1998102dfc4f0496512461398be97cb242e3e6350ab237e83d5aba28"
     },
     {
+      "path": "images/articles/home-humidity-dehumidifier-checklist/photo-hygrometer.jpg",
+      "bytes": 285163,
+      "sha256": "sha256:94ca4c56ab3a835bb9c211298cae347d1cf92de58d6ab3ca6d10bd02bd336482"
+    },
+    {
+      "path": "images/articles/home-humidity-dehumidifier-checklist/photo-top.jpg",
+      "bytes": 202099,
+      "sha256": "sha256:09482764129c331bc354fb324b183dc74e66958536413b677cc575958504511b"
+    },
+    {
       "path": "images/articles/home-wifi-dead-zone-checklist/checklist-preview.jpg",
       "bytes": 89832,
       "sha256": "sha256:39368d3364bdae44bbc4a3f5d81fa239d62b301dcbbc5e475a260d5b73a68ce0"
@@ -2492,6 +2567,16 @@
       "path": "images/articles/how-long-food-stay-frozen-power-outage/photo-usda-safe-temperature.jpg",
       "bytes": 160863,
       "sha256": "sha256:0c0d9ab73dee87cac5136a99fa54f55113fbf28a9ad54af12cef791aff455eda"
+    },
+    {
+      "path": "images/articles/how-much-does-dehumidifier-cost-to-run/photo-hygrometer.jpg",
+      "bytes": 285163,
+      "sha256": "sha256:94ca4c56ab3a835bb9c211298cae347d1cf92de58d6ab3ca6d10bd02bd336482"
+    },
+    {
+      "path": "images/articles/how-much-does-dehumidifier-cost-to-run/photo-top.jpg",
+      "bytes": 202099,
+      "sha256": "sha256:09482764129c331bc354fb324b183dc74e66958536413b677cc575958504511b"
     },
     {
       "path": "images/articles/how-much-does-dishwasher-cost-per-load/photo-dishwasher.jpg",
@@ -2599,6 +2684,26 @@
       "sha256": "sha256:410c5148180b28a9ddf5ef275db1f6597505d2d5970582facd58381c1083e9f1"
     },
     {
+      "path": "images/articles/what-humidity-should-house-be/photo-front.jpg",
+      "bytes": 129648,
+      "sha256": "sha256:beea19c0471e6117920ea09fe9e37f5cfed50f73fd68aa2b60a748a82acf1420"
+    },
+    {
+      "path": "images/articles/what-humidity-should-house-be/photo-hygrometer.jpg",
+      "bytes": 285163,
+      "sha256": "sha256:94ca4c56ab3a835bb9c211298cae347d1cf92de58d6ab3ca6d10bd02bd336482"
+    },
+    {
+      "path": "images/articles/what-size-dehumidifier-do-i-need/photo-front.jpg",
+      "bytes": 129648,
+      "sha256": "sha256:beea19c0471e6117920ea09fe9e37f5cfed50f73fd68aa2b60a748a82acf1420"
+    },
+    {
+      "path": "images/articles/what-size-dehumidifier-do-i-need/photo-top.jpg",
+      "bytes": 202099,
+      "sha256": "sha256:09482764129c331bc354fb324b183dc74e66958536413b677cc575958504511b"
+    },
+    {
       "path": "images/articles/where-to-place-wifi-extender/photo-extender.jpg",
       "bytes": 80189,
       "sha256": "sha256:d75dd63914b65eea7d29979ac71ce38fd941c18308fb7904fc401ee747aaa347"
@@ -2679,6 +2784,26 @@
       "sha256": "sha256:a3e4cdce1953ea46c2bbc2aa2197638e06e1180abab8d7f2d507d4c22aafaa6a"
     },
     {
+      "path": "images/diagrams/dehumidifier-cost-cycling.svg",
+      "bytes": 1809,
+      "sha256": "sha256:2fc6b07a0c5f69fc25fc00837dff44bd7718e9efda92458fbf48f5e268a78f88"
+    },
+    {
+      "path": "images/diagrams/dehumidifier-no-water-decision.svg",
+      "bytes": 4073,
+      "sha256": "sha256:266b367a3a944b2b53d6dcfb8f60d2eb76ab4cc16ce9a6608272a7d30f898e6f"
+    },
+    {
+      "path": "images/diagrams/dehumidifier-sizing-matrix.svg",
+      "bytes": 2618,
+      "sha256": "sha256:70137f1c217941147509b5dd41e241d3256a2c1788de95c4507928baf11d4e70"
+    },
+    {
+      "path": "images/diagrams/dehumidifier-vs-ac.svg",
+      "bytes": 2733,
+      "sha256": "sha256:ddb9b17789ceab773e7f68aceb9ec3b867ed40f786b64b9a7b2669ba8560fc33"
+    },
+    {
       "path": "images/diagrams/energyguide-to-cost.svg",
       "bytes": 2193,
       "sha256": "sha256:e47ce0c3a085e742d99b224acefefb87b289124d3d189f95e8e9159f41c20a13"
@@ -2702,6 +2827,11 @@
       "path": "images/diagrams/household-bandwidth-stack.svg",
       "bytes": 2959,
       "sha256": "sha256:fe76c592d504ef09273c24b84aa24b3567fa286089de20e78da14259f4b40815"
+    },
+    {
+      "path": "images/diagrams/humidity-target-band.svg",
+      "bytes": 2224,
+      "sha256": "sha256:237e10920b9b745785d82b5b5309f4b7eb5c6ece6c532b6adef6709144942223"
     },
     {
       "path": "images/diagrams/mesh-vs-extender.svg",
@@ -2765,83 +2895,88 @@
     },
     {
       "path": "index.html",
-      "bytes": 42399,
-      "sha256": "sha256:a99b84d42fde61363c8a70fd649c72f4b7094b90d3bc24087e9fb67071d41304"
+      "bytes": 44807,
+      "sha256": "sha256:01b44c5ba8d7d36e5bf50c4ffb18dbfb8de8df848519ed41f4b8b5b6284aae03"
     },
     {
       "path": "kitchen/index.html",
-      "bytes": 42547,
-      "sha256": "sha256:f1689aa01cbb2b08b0f625ebb9cb07cea7e1216922b185775ce9482b381d5163"
+      "bytes": 43040,
+      "sha256": "sha256:c9ddead02e6f3d08fb6768bccfe71f5931ee4b50df391f94f83453d72587cd31"
     },
     {
       "path": "llms.txt",
-      "bytes": 14417,
-      "sha256": "sha256:6f12b90f9de0883acb18a610d7a2ab49debf32c3e2bac4c236217cb8f43ddaf6"
+      "bytes": 16188,
+      "sha256": "sha256:6e987095a09239ea8fac874d3dbac189295c17cf4ca3e5d859e87176c88ae99d"
     },
     {
       "path": "metro/atlanta/index.html",
-      "bytes": 23030,
-      "sha256": "sha256:6ac100cee3ca7fada0f3e9feb32282ffc429ec331e92eec0b513ab5d1ff7a4aa"
+      "bytes": 23523,
+      "sha256": "sha256:397bab346125b023d38eed9434e90281315a3663186793352c2576dc0533a237"
     },
     {
       "path": "metro/boston/index.html",
-      "bytes": 23006,
-      "sha256": "sha256:4fe13c4025a6e69b77d5011101d6e054cffeb0a977abc2b702836a41b35ab0b1"
+      "bytes": 23499,
+      "sha256": "sha256:3006f4fac841888dfae4319cec7739132868b6413c16fae3ae37e7140c0d9a9b"
     },
     {
       "path": "metro/chicago/index.html",
-      "bytes": 23275,
-      "sha256": "sha256:d4b879fef6ea9fab309f927f63430e0fa517983d5339c16ec98de224b9415181"
+      "bytes": 23768,
+      "sha256": "sha256:b909c28479be603be054747a3e582d479397c84ba0203eeca6ce47db1f9bdb76"
     },
     {
       "path": "metro/dallas-fort-worth/index.html",
-      "bytes": 23174,
-      "sha256": "sha256:ac450b87203840484603776ce2e1b054f17a5950b14a15a53d080ded562d05d0"
+      "bytes": 23667,
+      "sha256": "sha256:3908e499320b65813878c274e990a812eb78c07e07ccd9771ba3b82208c9137b"
     },
     {
       "path": "metro/denver/index.html",
-      "bytes": 23018,
-      "sha256": "sha256:087f7b722b7b4143491b4a4300e1d9849f05ffb5da190f80fe209b2682ae0400"
+      "bytes": 23511,
+      "sha256": "sha256:f335661aa811b0ceb6de1e914e78561c56e75943351e73a1fc113a088e01b189"
     },
     {
       "path": "metro/houston/index.html",
-      "bytes": 23041,
-      "sha256": "sha256:edf1c8750e9c79465276bfa5cee47e99d9d35c45f1f717212a973cca01e12f43"
+      "bytes": 23534,
+      "sha256": "sha256:cf5b1be838ad0f695754877239a9d1a1b6b5e135b9a6e74db3244674532c955a"
     },
     {
       "path": "metro/los-angeles/index.html",
-      "bytes": 23105,
-      "sha256": "sha256:dc5471e0bd56456c73c80fb8eefef3ea1b7bc3dabb393cfdf96a819c71d0c402"
+      "bytes": 23598,
+      "sha256": "sha256:e8d4850948fb2f9ccdc4d03a9d5cb7c6232d9c83988a05453a3d03d82da99527"
     },
     {
       "path": "metro/miami/index.html",
-      "bytes": 23019,
-      "sha256": "sha256:1b526d980901cce4fc3ed3b31309c63d2add42c568f48639396e1023fa46277c"
+      "bytes": 23512,
+      "sha256": "sha256:675f23e5511120a785edc9da72ee4d05f34b882e3fc05429118b2c09761002c6"
     },
     {
       "path": "metro/new-york/index.html",
-      "bytes": 23093,
-      "sha256": "sha256:16c06ec076913a96011dbd00ef4425df7f38b8e1e768487eb540c36fd57a298a"
+      "bytes": 23586,
+      "sha256": "sha256:e0d6d005afce25716ace41c7e91e9e205f4acfca6c6b7968f91589bb43eaaed7"
     },
     {
       "path": "metro/phoenix/index.html",
-      "bytes": 23041,
-      "sha256": "sha256:86590f49b89548dad97b27a42683ba0c64883cfccee9f5edc81e31bbca845067"
+      "bytes": 23534,
+      "sha256": "sha256:6a5f9429cb083c16b1e0e6dd140b5833275b791e0d4d6dbc3726c384d29d187e"
     },
     {
       "path": "metro/seattle/index.html",
-      "bytes": 23044,
-      "sha256": "sha256:bd12d7f6b402b3271d23c885225e51c2fefcedc100a739a4dbe103e46b1c9b24"
+      "bytes": 23537,
+      "sha256": "sha256:502d1e9d6f92d779ea98dbd35ce3d497c8a7de26ed3f5ef45a9eb5bd6ee959c8"
     },
     {
       "path": "metro/washington-dc/index.html",
-      "bytes": 23127,
-      "sha256": "sha256:0370b9f41f02295e0bcf4b1c3b2bff7cd0d426799c24a0ebe202e31edb84c7e3"
+      "bytes": 23620,
+      "sha256": "sha256:673edd2cc8d9a6f4298c87595f64a3e1eefdd267358bc782ec7a4249752c5e24"
     },
     {
       "path": "og.png",
       "bytes": 2908167,
       "sha256": "sha256:f2ca3056feaa0de6701e1d90c065706627f5f310f5b682edace01aeaea8b2541"
+    },
+    {
+      "path": "pagefind/filter/en_3e997dc.pf_filter",
+      "bytes": 205,
+      "sha256": "sha256:ba6ba9c424e403a3929d6463c363e7a5e48608205e74e2b301f00fd848d268d3"
     },
     {
       "path": "pagefind/filter/en_8863974.pf_filter",
@@ -2852,6 +2987,11 @@
       "path": "pagefind/filter/en_8cc6185.pf_filter",
       "bytes": 165,
       "sha256": "sha256:9485e07c8f88ff44b8cb49e50c1ba369a6891157d425bad3cbbe0e9736acccad"
+    },
+    {
+      "path": "pagefind/filter/en_9db243c.pf_filter",
+      "bytes": 186,
+      "sha256": "sha256:4ab3ff80d7d9f7236418b7ae92b0309f64a087d518edafedbdeac6a1e317c8c1"
     },
     {
       "path": "pagefind/filter/en_e22b721.pf_filter",
@@ -2907,6 +3047,11 @@
       "path": "pagefind/fragment/en_2ed3662.pf_fragment",
       "bytes": 4201,
       "sha256": "sha256:b4b7345a82acf279e89b9d78fe18ecf8893612aa5f1452186e1f4c67bde7f12c"
+    },
+    {
+      "path": "pagefind/fragment/en_31e5c9d.pf_fragment",
+      "bytes": 4872,
+      "sha256": "sha256:1dcdab73575184a69137079e7bb62945b35f18b8e20ed7b8870f47542d91c6a8"
     },
     {
       "path": "pagefind/fragment/en_358a903.pf_fragment",
@@ -3009,6 +3154,16 @@
       "sha256": "sha256:1c221920dd833adf02d1edeb00101a1b6830f75ee3518d2ecbec41c2299d4c02"
     },
     {
+      "path": "pagefind/fragment/en_783ff18.pf_fragment",
+      "bytes": 5256,
+      "sha256": "sha256:a5ce2a966281f86ff9f51354f658cf56777b562130a3f8a4838f313b8cfd516c"
+    },
+    {
+      "path": "pagefind/fragment/en_79acee9.pf_fragment",
+      "bytes": 4643,
+      "sha256": "sha256:0f61ef43413d4a4606736fb80c629456bdb9edbd1dc74dd0dbe24dc8fe63d933"
+    },
+    {
       "path": "pagefind/fragment/en_79bbf1d.pf_fragment",
       "bytes": 4180,
       "sha256": "sha256:5b4c93a2865c5d004682b50b86e001c7f58d7dae479da19bc7475bd7b3430ae5"
@@ -3022,6 +3177,11 @@
       "path": "pagefind/fragment/en_9af8936.pf_fragment",
       "bytes": 704,
       "sha256": "sha256:5f7ab3e071414a38d93f8647fd3052113c0a34a68cecc7af157d3439fbc803fb"
+    },
+    {
+      "path": "pagefind/fragment/en_9dd06a3.pf_fragment",
+      "bytes": 5433,
+      "sha256": "sha256:95ceb6ad7f35500f59fa78728d3cc5b72a87c20cdb4df8687730dbd1de778591"
     },
     {
       "path": "pagefind/fragment/en_a1dee89.pf_fragment",
@@ -3039,9 +3199,29 @@
       "sha256": "sha256:ead7c292ca9ac3431df669523f1a12ed45d0384a88806a636475cc8032f998bb"
     },
     {
+      "path": "pagefind/fragment/en_a39e258.pf_fragment",
+      "bytes": 2862,
+      "sha256": "sha256:610407ebaa9e8006695f487a857e7d7e5fbbfa696418826968fe0b868f9aa262"
+    },
+    {
       "path": "pagefind/fragment/en_a5a53dc.pf_fragment",
       "bytes": 4585,
       "sha256": "sha256:ce35bd5c2216ab4d9328dd6df68a1daf98f7bd139b650e5220501c6ef64451ed"
+    },
+    {
+      "path": "pagefind/fragment/en_a5c2346.pf_fragment",
+      "bytes": 4279,
+      "sha256": "sha256:cc11d34763a72dc0f1c320da9f9c5db820a4592781aba60ddc82c3a895aec6ec"
+    },
+    {
+      "path": "pagefind/fragment/en_a61f5cc.pf_fragment",
+      "bytes": 5019,
+      "sha256": "sha256:b5693a9c791d8e0c50f6ef1911fc539ce19ac3144968c03742e2d819dad2e125"
+    },
+    {
+      "path": "pagefind/fragment/en_a8a3ed1.pf_fragment",
+      "bytes": 4755,
+      "sha256": "sha256:f67e4d354de0da4063154f204a1f660fda65f4ee2c07ed00688ce03a1ee4d72e"
     },
     {
       "path": "pagefind/fragment/en_ad7a4eb.pf_fragment",
@@ -3077,6 +3257,11 @@
       "path": "pagefind/fragment/en_b8ed8ac.pf_fragment",
       "bytes": 801,
       "sha256": "sha256:1027fd81c868029dae470c1da01bb41eadf1a2403fdab29dd93e72b2fa376372"
+    },
+    {
+      "path": "pagefind/fragment/en_ba52827.pf_fragment",
+      "bytes": 4912,
+      "sha256": "sha256:4293b023c75eb9cc3462e08a04734cbd0757c55bd233b1d753d0a2e918c77bcd"
     },
     {
       "path": "pagefind/fragment/en_bafee5e.pf_fragment",
@@ -3184,6 +3369,11 @@
       "sha256": "sha256:7024f908c4572d1b6be5928545fbb903040c41eaaf2dd0d9e3dc558c78b6c05a"
     },
     {
+      "path": "pagefind/index/en_4057247.pf_index",
+      "bytes": 30564,
+      "sha256": "sha256:56403c9bb758cde070a4e896870c7344c881df954d8944837c872b3bbeb3f4de"
+    },
+    {
       "path": "pagefind/index/en_73fea34.pf_index",
       "bytes": 30136,
       "sha256": "sha256:1d6781bd36343414d112fe22f5b5240ce2e91ad32f139c625341058fb41bae65"
@@ -3192,6 +3382,16 @@
       "path": "pagefind/index/en_8ac1739.pf_index",
       "bytes": 30991,
       "sha256": "sha256:ecff1ac934e3263e76433d3a2b3e4581bf899491c617324f0eaa7038eb81e3a0"
+    },
+    {
+      "path": "pagefind/index/en_8dc2d57.pf_index",
+      "bytes": 29736,
+      "sha256": "sha256:17f97da84fcbb8df60023eec1755b9341419de97392ad7b5c3c4dd5d614fda88"
+    },
+    {
+      "path": "pagefind/index/en_8f9af82.pf_index",
+      "bytes": 30964,
+      "sha256": "sha256:1ff119306d9965a8dcb86ace7b44f9044011f117c8deef36cd0dad06b86e4cf7"
     },
     {
       "path": "pagefind/index/en_941828e.pf_index",
@@ -3204,9 +3404,29 @@
       "sha256": "sha256:c4253212ecf43b29b9697aa26075593f9f1f4ab25f99ca24ca7aaaecba48e83a"
     },
     {
+      "path": "pagefind/index/en_b363263.pf_index",
+      "bytes": 29907,
+      "sha256": "sha256:95a7a4d0bf92015aa842dcabeceff677a4118d66ed2f1080fc20bc62b630b20d"
+    },
+    {
+      "path": "pagefind/index/en_c11599b.pf_index",
+      "bytes": 30322,
+      "sha256": "sha256:866d7d03853fe18aa42a31b8994f1414ab2f3dd3803ed5df20dc71dc335b2628"
+    },
+    {
       "path": "pagefind/index/en_c329d0a.pf_index",
       "bytes": 30668,
       "sha256": "sha256:1c71685db08a9465d57083014189dab24c079534c65cf3db43b33a1633c4a535"
+    },
+    {
+      "path": "pagefind/index/en_c6cd5f0.pf_index",
+      "bytes": 31024,
+      "sha256": "sha256:02fbe67764a5b9a04841c960aa7d2a15ec13271582f48a7de657d47f7df65bb9"
+    },
+    {
+      "path": "pagefind/index/en_cd895b3.pf_index",
+      "bytes": 30445,
+      "sha256": "sha256:a9c8af001f2428c08584088686a8b07b40acc19ae06514de9ffb90503892f1cf"
     },
     {
       "path": "pagefind/index/en_d893e55.pf_index",
@@ -3222,6 +3442,11 @@
       "path": "pagefind/index/en_f4e443f.pf_index",
       "bytes": 30946,
       "sha256": "sha256:12dc1bf81a6658cddf3f5c7f269f699d4d7cc7554c77628c065140b7a3887232"
+    },
+    {
+      "path": "pagefind/index/en_f864161.pf_index",
+      "bytes": 7113,
+      "sha256": "sha256:a45284590d5b3795cad7b9078765015048c2ce7e6763f257d8df7f4f74fd9ff5"
     },
     {
       "path": "pagefind/index/en_f9b8a61.pf_index",
@@ -3241,7 +3466,7 @@
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 172,
-      "sha256": "sha256:b89d569f533e04d230df3710573e38d71850b37b2f3d5dc3b7c5809dcfac5c67"
+      "sha256": "sha256:a7b690859e6e30a1156a71c4e43b4cf5c04f3a6bfd9560a4579d0fd699faba62"
     },
     {
       "path": "pagefind/pagefind-highlight.js",
@@ -3274,6 +3499,11 @@
       "sha256": "sha256:4ca50d25bcab9e1c3afbc00ab5f7761114e83c8fc1b83d38655af1558b650c2a"
     },
     {
+      "path": "pagefind/pagefind.en_17cacabfb4.pf_meta",
+      "bytes": 767,
+      "sha256": "sha256:f8088db11159f58658c8b4f7fda27ba1c6a4002fafda0d04fa2d0c2239e8745f"
+    },
+    {
       "path": "pagefind/pagefind.en_5131a281b3.pf_meta",
       "bytes": 691,
       "sha256": "sha256:4e69b2744efc4b24ad2e98008d9a906a09e9b6d477507b1037a67f3e21b96515"
@@ -3300,8 +3530,8 @@
     },
     {
       "path": "privacy/index.html",
-      "bytes": 25101,
-      "sha256": "sha256:3c9eec1693c968656a507b10769fda5afac1b2a7129931c25a62601a07dc87ea"
+      "bytes": 25594,
+      "sha256": "sha256:d873c4289f1202b4d8fd1b33e632395e5954a5a5c3fcab5a372348df002ce3a8"
     },
     {
       "path": "robots.txt",
@@ -3310,28 +3540,28 @@
     },
     {
       "path": "shop/index.html",
-      "bytes": 26301,
-      "sha256": "sha256:7bca0d53c619b04c8882034fcb4f8c2d3876d19264294ea763e742690f80ef49"
+      "bytes": 26794,
+      "sha256": "sha256:17878a7305e5e902b9f48c9a12078b1e78b2d6d3ce83b5f96b541bd8c7bb5e3d"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 7202,
-      "sha256": "sha256:9bbfb8ae5f2559775b40bb6670e26b0d46bb6a892aa6af3a692e8da9e8727e13"
+      "bytes": 8009,
+      "sha256": "sha256:930494574fe1339741dfe26c6b40ccf017d5ac1dc359b80a74a782de557447e8"
     },
     {
       "path": "tools/agricultural-market-context-browser/index.html",
-      "bytes": 36900,
-      "sha256": "sha256:ff7a2ba5c520da1e34de8ef39d163125b11b7e40cb6f4cb17d83072cb7163d03"
+      "bytes": 37393,
+      "sha256": "sha256:b1d2fc0ead5c71c8eb6e3cd61c1daa9b387a77303b21a1261e7aa51cf76bf38c"
     },
     {
       "path": "tools/appliance-electricity-cost-calculator/index.html",
-      "bytes": 39439,
-      "sha256": "sha256:de0ed0e90ac590919ad761be778587efc509113c3314e766f3c0ffc283e670b8"
+      "bytes": 39932,
+      "sha256": "sha256:f3b00cc94ce99e9963f807e1346524c782417115441bb76a956cf6de37dad4c0"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/index.html",
-      "bytes": 74490,
-      "sha256": "sha256:78818935a413c3e72b19f7b1a32dfc05644ced003ff32a2d69b54bf184749f1c"
+      "bytes": 74983,
+      "sha256": "sha256:d270ef496ba3cf0e6d9f5b17aeb54f5825f075debef8da1ee3c25b5ac5b9435a"
     },
     {
       "path": "tools/household-energy-benchmark-explorer/page/2/index.html",
@@ -3345,13 +3575,13 @@
     },
     {
       "path": "tools/index.html",
-      "bytes": 31035,
-      "sha256": "sha256:b200a5f04d4b073927e2cc00d6d212bcf1c18ef42de2892470e880e14b6b3c63"
+      "bytes": 31528,
+      "sha256": "sha256:99983e62e89fce19c239a81ed36386965e8e34eae8f008743a8ba89aa9a6c3e0"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/index.html",
-      "bytes": 47351,
-      "sha256": "sha256:c25b8a1509782226f06d70185454426a681a638ce7705c251cd5807ca0290fb5"
+      "bytes": 47844,
+      "sha256": "sha256:3aa894e729ad075c06e084993dbbd435be0070b1e6a15409b28cb4845c72d46d"
     },
     {
       "path": "tools/us-crop-production-trend-explorer/page/2/index.html",
@@ -3360,21 +3590,21 @@
     },
     {
       "path": "tools/usda-staple-food-identity-explorer/index.html",
-      "bytes": 43506,
-      "sha256": "sha256:6cff34776b5c663935b9033fb92b2e532be92c493b1fd5f83f6ecad8124834b8"
+      "bytes": 43999,
+      "sha256": "sha256:9e0f9255e8cb7942e229ef6f794349ac8e21403f0cd153ea046dd7af9ee619f7"
     },
     {
       "path": "tools/zip-to-metro-relationship-explainer/index.html",
-      "bytes": 53432,
-      "sha256": "sha256:985dbff2c2e9fea8a1ddae37d54189110381d956de5869477915c4ee1dac6cd4"
+      "bytes": 53925,
+      "sha256": "sha256:65c0609d658b5aaf4accbff47ed2209eab9d3b9ca40905b46181b83edbe73d04"
     }
   ],
   "routes": [
-    "/articles/mesh-wifi-vs-range-extender/",
-    "/articles/ethernet-vs-wifi/",
-    "/articles/how-often-should-you-replace-wifi-router/",
-    "/articles/can-microwave-interfere-with-wifi/",
-    "/articles/download-vs-upload-speed-latency/",
-    "/articles/how-much-internet-speed-do-you-need/"
+    "/articles/what-humidity-should-house-be/",
+    "/articles/how-much-does-dehumidifier-cost-to-run/",
+    "/articles/what-size-dehumidifier-do-i-need/",
+    "/articles/dehumidifier-running-not-collecting-water/",
+    "/articles/dehumidifier-vs-air-conditioner/",
+    "/articles/home-humidity-dehumidifier-checklist/"
   ]
 }

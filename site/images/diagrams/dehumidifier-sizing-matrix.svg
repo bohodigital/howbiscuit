@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="t desc">
+<title id="t">ENERGY STAR portable dehumidifier sizing matrix</title>
+<desc id="desc">A matrix lists recommended pints per day for slightly damp, very damp, and wet conditions for spaces below and above two thousand square feet.</desc>
+<rect width="1200" height="760" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="31">Portable dehumidifier capacity starting point</text>
+<rect x="80" y="115" width="1040" height="470"/>
+<line x1="420" y1="115" x2="420" y2="585"/><line x1="770" y1="115" x2="770" y2="585"/>
+<line x1="80" y1="205" x2="1120" y2="205"/><line x1="80" y1="330" x2="1120" y2="330"/><line x1="80" y1="455" x2="1120" y2="455"/>
+<text x="250" y="170" text-anchor="middle" fill="black" font-size="23">Condition</text>
+<text x="595" y="155" text-anchor="middle" fill="black" font-size="22">Under 2,000 sq. ft.</text>
+<text x="945" y="155" text-anchor="middle" fill="black" font-size="22">Over 2,000 sq. ft.</text>
+<text x="250" y="260" text-anchor="middle" fill="black" font-size="21">Slightly/moderately damp</text>
+<text x="250" y="295" text-anchor="middle" fill="black" font-size="17">50% to 75% RH</text>
+<text x="595" y="280" text-anchor="middle" fill="black" font-size="28">20-30 pints/day</text>
+<text x="945" y="280" text-anchor="middle" fill="black" font-size="28">30+ pints/day</text>
+<text x="250" y="385" text-anchor="middle" fill="black" font-size="21">Very damp</text>
+<text x="250" y="420" text-anchor="middle" fill="black" font-size="17">75% to 90% RH</text>
+<text x="595" y="405" text-anchor="middle" fill="black" font-size="28">25-40 pints/day</text>
+<text x="945" y="405" text-anchor="middle" fill="black" font-size="28">40+ pints/day</text>
+<text x="250" y="510" text-anchor="middle" fill="black" font-size="21">Wet</text>
+<text x="250" y="545" text-anchor="middle" fill="black" font-size="17">90% to 100% RH</text>
+<text x="595" y="530" text-anchor="middle" fill="black" font-size="28">30-50 pints/day</text>
+<text x="945" y="530" text-anchor="middle" fill="black" font-size="28">50+ pints/day</text>
+<text x="600" y="635" text-anchor="middle" fill="black" font-size="19">Starting point only. Temperature, air leakage, open rooms, laundry, and water entry change the need.</text>
+<text x="600" y="680" text-anchor="middle" fill="black" font-size="18">Repair seepage and leaks first. Current pint ratings differ from pre-2020 ratings.</text>
+</g></svg>

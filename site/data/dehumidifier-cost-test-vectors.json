@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "howbiscuit.dehumidifier-cost-tests.v1",
+  "rate": {
+    "centsPerKwh": 18.44,
+    "period": "2026-05",
+    "scope": "U.S. residential average"
+  },
+  "vectors": [
+    {
+      "id": "500w-one-hour",
+      "watts": 500,
+      "hours": 1,
+      "expectedKwh": 0.5,
+      "expectedCostUsd": 0.0922
+    },
+    {
+      "id": "500w-eight-hours",
+      "watts": 500,
+      "hours": 8,
+      "expectedKwh": 4.0,
+      "expectedCostUsd": 0.7376
+    },
+    {
+      "id": "500w-eight-hours-30-days",
+      "watts": 500,
+      "hours": 240,
+      "expectedKwh": 120.0,
+      "expectedCostUsd": 22.128
+    },
+    {
+      "id": "ief-two-liters-per-kwh",
+      "iefLitersPerKwh": 2.0,
+      "expectedEnergyCostPerLiterUsd": 0.0922
+    }
+  ],
+  "formula": "cost = watts / 1000 * hours * rate_dollars_per_kwh",
+  "warning": "Full-power examples do not model compressor cycling, fan-only operation, defrost, bucket shutdown, or household conditions."
+}

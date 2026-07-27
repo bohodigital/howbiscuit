@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "howbiscuit.dehumidifier-sizing.v1",
+  "source": "ENERGY STAR Dehumidifiers",
+  "retrievedDate": "2026-07-26",
+  "spaceClasses": {
+    "smallMedium": "under 2,000 square feet",
+    "large": "over 2,000 square feet"
+  },
+  "rows": [
+    {
+      "condition": "slightly_to_moderately_damp",
+      "relativeHumidityRange": "50-75%",
+      "smallMediumPintsPerDay": [
+        20,
+        30
+      ],
+      "largeMinimumPintsPerDay": 30
+    },
+    {
+      "condition": "very_damp",
+      "relativeHumidityRange": "75-90%",
+      "smallMediumPintsPerDay": [
+        25,
+        40
+      ],
+      "largeMinimumPintsPerDay": 40
+    },
+    {
+      "condition": "wet",
+      "relativeHumidityRange": "90-100%",
+      "smallMediumPintsPerDay": [
+        30,
+        50
+      ],
+      "largeMinimumPintsPerDay": 50
+    }
+  ],
+  "limitations": [
+    "Starting-point guidance, not a product recommendation.",
+    "Temperature, air leakage, open rooms, ceiling height, laundry, and water entry affect the need.",
+    "Repair active seepage and leaks before relying on dehumidification.",
+    "Current ratings use a different test basis from many pre-2020 labels."
+  ]
+}

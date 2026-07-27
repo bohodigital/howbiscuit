@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="t desc">
+<title id="t">Dehumidifier full-power and cycling cost</title>
+<desc id="desc">The left graph shows a 500 watt full-power estimate for eight hours. The right graph shows compressor cycling with lower accumulated energy.</desc>
+<rect width="1200" height="680" fill="white"/>
+<g font-family="Arial,sans-serif" stroke="black" stroke-width="3" fill="none">
+<text x="600" y="55" text-anchor="middle" fill="black" font-size="31">Clock time is not always full-power compressor time</text>
+<line x1="90" y1="500" x2="520" y2="500"/><line x1="90" y1="500" x2="90" y2="150"/>
+<path d="M90 250 L520 250 L520 500 L90 500 Z"/>
+<text x="305" y="120" text-anchor="middle" fill="black" font-size="25">Full-power estimate</text>
+<text x="305" y="555" text-anchor="middle" fill="black" font-size="19">0.5 kW x 8 hours = 4 kWh</text>
+<text x="305" y="595" text-anchor="middle" fill="black" font-size="19">At $0.1844/kWh: about $0.74</text>
+<line x1="680" y1="500" x2="1110" y2="500"/><line x1="680" y1="500" x2="680" y2="150"/>
+<path d="M680 250 L745 250 L745 500 L800 500 L800 250 L860 250 L860 500 L930 500 L930 250 L995 250 L995 500 L1050 500 L1050 250 L1110 250" stroke-width="5"/>
+<text x="895" y="120" text-anchor="middle" fill="black" font-size="25">Illustrative cycling</text>
+<text x="895" y="555" text-anchor="middle" fill="black" font-size="19">Less energy when compressor is off</text>
+<text x="895" y="595" text-anchor="middle" fill="black" font-size="19">Fan and defrost behavior still matter</text>
+<text x="600" y="645" text-anchor="middle" fill="black" font-size="17">Use measured or model annual kWh when available. This is not a universal dehumidifier load pattern.</text>
+</g></svg>
