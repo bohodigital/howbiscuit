@@ -1,209 +1,188 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "mcp-pb-20260727t215934z-583b8781005e",
-  "approvalDigest": "sha256:2f333afd3e7b7b1b4ebe134865ee2f2d3b931c841adee04eeae89c4c8e0b5900",
+  "releaseId": "mcp-pb-20260728t225301z-8b0ed5805234",
+  "approvalDigest": "sha256:02015ba7b15854c6829f5e83d86a4736ad20f8d5134701d207da9b828b02e911",
   "files": [
     {
+      "path": "_astro/_slug_.DExZsdqk.css",
+      "bytes": 4401,
+      "sha256": "sha256:f711b6e7a364ce9d064182bbb8bfc959e19778fea18cc5c0b4d69624dfe8830e"
+    },
+    {
+      "path": "_redirects",
+      "bytes": 363,
+      "sha256": "sha256:ee08600a979a486830db58742ee8ce8273a6d2c555eb7f4bb64cdac821fe7323"
+    },
+    {
+      "path": "_worker.js",
+      "bytes": 3103,
+      "sha256": "sha256:6c89c0f0a6d78d6e7e96e5964f9a783172ff29b1843dbd7dcdc42fdacf8f738d"
+    },
+    {
       "path": "articles/index.html",
-      "bytes": 74680,
-      "sha256": "sha256:438578025310f98d7da61b5b0442e0b22fe3d7da72743521b0d4f23b4e2f9a56"
+      "bytes": 75470,
+      "sha256": "sha256:159e7ab31c5a8d175e80fdd93af726d9b33ff10eff08e7c93d0ed306e7ee4e8e"
     },
     {
       "path": "articles/should-you-unplug-electronics-during-thunderstorm/index.html",
-      "bytes": 16502,
-      "sha256": "sha256:568175624ac1b073de6643b64d4c1423e19f5200d79e555007d0ead1be51f1b4"
+      "bytes": 47888,
+      "sha256": "sha256:32266e3a99c9d2d716b2d1405e247c4cb99c3619675fb291ddcca3e3d3ac4a43"
     },
     {
       "path": "feed.xml",
-      "bytes": 36338,
-      "sha256": "sha256:a0ac5dce7c7ca2cd22d8fc81191f937bfa5da848cf3927b0d974f4c4e8c634fe"
+      "bytes": 24988,
+      "sha256": "sha256:e74d611a35555ac12743298099bcf8b5492e5f4a8709bea5724af25672cfd1d2"
     },
     {
       "path": "home-tech/index.html",
-      "bytes": 55989,
-      "sha256": "sha256:71347a2f191eb8b9d59aaa632fb8011c6d3d4b6c38d3f86e8eb9a1c19e729a84"
+      "bytes": 57360,
+      "sha256": "sha256:125c0e4ad4ed3c1dcf93c335e0d7a6ead6638c822eb210892379e56f3d93a945"
     },
     {
-      "path": "images/articles/should-you-unplug-electronics-during-thunderstorm/thunderstorm-electronics-safety.webp",
-      "bytes": 24590,
-      "sha256": "sha256:825554126375dc6554210099197375dd4db85fa2e37b2d165fff038180993849"
+      "path": "home-tech/power-cooling-storage/index.html",
+      "bytes": 32382,
+      "sha256": "sha256:d83b3956ab36c181b4973b11e829d0c12cedf2c4e09bf931efa926e9853062d8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 37033,
+      "sha256": "sha256:2ef5ef0c09ff1ae5c0e7b5aa665654cc429ce383ded05d157b2021c6ce0a0be3"
     },
     {
       "path": "llms.txt",
-      "bytes": 25132,
-      "sha256": "sha256:4556c094b6d652c54c705df7ea5e4990dde593c336b29f510f6ef27aab2df3d3"
+      "bytes": 25835,
+      "sha256": "sha256:69732d8b567024be691e7014ffabbc583c3f79975aab625e141eb6202ab9bc95"
     },
     {
-      "path": "pagefind/filter/en_d3379e3.pf_filter",
-      "bytes": 245,
-      "sha256": "sha256:fee439f86bcdb8b8f90f09c776fa7d3f559e8ce3674531eb4c8722cea7438dd4"
+      "path": "pagefind/filter/en_1356549.pf_filter",
+      "bytes": 231,
+      "sha256": "sha256:9cee6780862ca1f43918ed4abcc6d6ee2d6562dd82941c23e9f2c71bf713bbe7"
     },
     {
-      "path": "pagefind/filter/en_f5fc222.pf_filter",
-      "bytes": 228,
-      "sha256": "sha256:7ac4b4a8e64bbba1b91f3ee2f7fe79c82b7892881629fc832184b7a9e6d4dc15"
+      "path": "pagefind/filter/en_87bef8d.pf_filter",
+      "bytes": 255,
+      "sha256": "sha256:335b2bee278018207f85d7833abf9e9c6cf106872130c94e1fe26021bedc14e1"
     },
     {
-      "path": "pagefind/fragment/en_44cfbb1.pf_fragment",
-      "bytes": 2956,
-      "sha256": "sha256:384191bedbbda7f9bd7e95c0dd4d76be59da53951c5c058905d91a5c3c9cbf41"
+      "path": "pagefind/fragment/en_4a8a2be.pf_fragment",
+      "bytes": 1221,
+      "sha256": "sha256:d3b435f0d5c1091b5d91b5c01301704a9dd8dfb15973871dd068ae5056fc3840"
     },
     {
-      "path": "pagefind/fragment/en_c48e1ae.pf_fragment",
-      "bytes": 7010,
-      "sha256": "sha256:af72a232cea8eb755c5ace04faed504d10bcb0697d7b0e551c8881600bbabdb4"
+      "path": "pagefind/fragment/en_9f66bfc.pf_fragment",
+      "bytes": 2456,
+      "sha256": "sha256:2ef7afe67a1c3366409df3248e54a08f16354ee02e02adde84f954afea00e88b"
     },
     {
-      "path": "pagefind/index/en_21135e5.pf_index",
-      "bytes": 30091,
-      "sha256": "sha256:a02327b1b2a84758321826195c4496aae8303149cdab857a0df97a10aa7e6ab5"
+      "path": "pagefind/fragment/en_b1c8be8.pf_fragment",
+      "bytes": 5111,
+      "sha256": "sha256:49a33c9bec82144ceecfc3829c7f537b2196e37b76aeebf9e9db45b16ab63cfa"
     },
     {
-      "path": "pagefind/index/en_2236e41.pf_index",
-      "bytes": 29452,
-      "sha256": "sha256:7817c008e4cc181e8d83fa572e205ac52db33bcf428808f98ebda0d04bd7ee6f"
+      "path": "pagefind/fragment/en_db9be13.pf_fragment",
+      "bytes": 2949,
+      "sha256": "sha256:6598ecc168977287c5942029f5e15ded53b1c297fee8dd457bd600c4765daf8d"
     },
     {
-      "path": "pagefind/index/en_2c40469.pf_index",
-      "bytes": 28893,
-      "sha256": "sha256:0e1f4da4e81582799326d9940855d50582bad3945bb1d1782c7f648e6bcc7b9d"
+      "path": "pagefind/fragment/en_e6bcced.pf_fragment",
+      "bytes": 7021,
+      "sha256": "sha256:6ca4acd973ac35c20052c2f8fec56e3dc7571c45e9bedba92deafc00555cd79c"
     },
     {
-      "path": "pagefind/index/en_2d685a5.pf_index",
-      "bytes": 29148,
-      "sha256": "sha256:6b19e18deac67edc60256b641283b50c89f108bf118af332a4c70b71ffdb981a"
+      "path": "pagefind/index/en_11779c4.pf_index",
+      "bytes": 29189,
+      "sha256": "sha256:30f0bab8afc9397df4295ff6fc4f7c9c7ef1ee87bcfc93f37ee6c50d83cde98f"
     },
     {
-      "path": "pagefind/index/en_36c4254.pf_index",
-      "bytes": 29708,
-      "sha256": "sha256:491d688cd252244a6f167ade4b56ae6bedeb5eb6ce85370e9ac218e9dc8639fc"
+      "path": "pagefind/index/en_183de10.pf_index",
+      "bytes": 29286,
+      "sha256": "sha256:2e6ee8f35f446eb378c0378ccd0289611a32a09c5451950ad54fe75888418afc"
     },
     {
-      "path": "pagefind/index/en_6e8fca1.pf_index",
-      "bytes": 30166,
-      "sha256": "sha256:606fac80e9ba472f5f2aad2d041f755bc064030acd4a94f5acaa52d1e049dd58"
+      "path": "pagefind/index/en_3698641.pf_index",
+      "bytes": 30020,
+      "sha256": "sha256:220a9f4f3d5d07680f29bb2414514e319f80fdcd8558928af38b373aaadf498a"
     },
     {
-      "path": "pagefind/index/en_72762cb.pf_index",
-      "bytes": 28858,
-      "sha256": "sha256:c6f25b0e1bceac7ee067342ff31d52353db4f559258906c581e62182c3b520f8"
+      "path": "pagefind/index/en_5c233bf.pf_index",
+      "bytes": 28880,
+      "sha256": "sha256:8eeba19ebdd757dc43b6466f527ca8487cc84954caa1f1b051f522a272533198"
     },
     {
-      "path": "pagefind/index/en_842589b.pf_index",
-      "bytes": 2273,
-      "sha256": "sha256:fa7690c85edda81a1d1e489648b8b6954771b1b8d7e3c7f75366d87413b74b98"
+      "path": "pagefind/index/en_860add2.pf_index",
+      "bytes": 29713,
+      "sha256": "sha256:9f9c0ae6daa0f09a70f24e1cd294f1d952ed5c3e727ecb4e46d9d144f27e9263"
     },
     {
-      "path": "pagefind/index/en_90b379f.pf_index",
-      "bytes": 28821,
-      "sha256": "sha256:ebeb0a1a035de37ca20b1cf2a076c3f1b5339659045230925eafeaec90f7397b"
+      "path": "pagefind/index/en_a93b35b.pf_index",
+      "bytes": 28854,
+      "sha256": "sha256:b9b46bd815e6af288574e9f2caa3ae2e7d30b119506061c18b3d1a56aa691936"
     },
     {
-      "path": "pagefind/index/en_c2f3b3a.pf_index",
-      "bytes": 29284,
-      "sha256": "sha256:f6d364720a251dfc3f9e87a337cf8be986f4743de3540246c8556b17017e2706"
+      "path": "pagefind/index/en_b9be2fe.pf_index",
+      "bytes": 29438,
+      "sha256": "sha256:74cb941455ce1fad8bef5a8c0bae5c1c584c73a5612fb654b33706ccd5d2fbc0"
     },
     {
-      "path": "pagefind/index/en_cce4799.pf_index",
-      "bytes": 29555,
-      "sha256": "sha256:007969d4e8d2b719df83bf1214e1ae8857427c31b261ceef18a221ee3cc1441b"
+      "path": "pagefind/index/en_c0a643e.pf_index",
+      "bytes": 30644,
+      "sha256": "sha256:0da518219dd1b4744408fee778f0b1649f668f389fd1f7f8f6bc7848b8e1f657"
     },
     {
-      "path": "pagefind/index/en_ec214e6.pf_index",
-      "bytes": 31647,
-      "sha256": "sha256:59bb4ced03c17936783fbd2abe17ef5dfc676217afb823053f4b4b795653c678"
+      "path": "pagefind/index/en_c8dcb63.pf_index",
+      "bytes": 29325,
+      "sha256": "sha256:46be3f4d0be54984a02d7ad85681d001314bd5cf70f6bd3a0fc3f4955a1995ad"
+    },
+    {
+      "path": "pagefind/index/en_d4719cc.pf_index",
+      "bytes": 3591,
+      "sha256": "sha256:cf7926a8663fad08b6b88af95b0dac52ca5aea15f0464ac8243cc182e1abaf3b"
+    },
+    {
+      "path": "pagefind/index/en_f0c0866.pf_index",
+      "bytes": 28519,
+      "sha256": "sha256:3308ad310cd1a93429bec7286738e90a90176d003cdf514f2e9aff7e7a059eb0"
+    },
+    {
+      "path": "pagefind/index/en_f2d934f.pf_index",
+      "bytes": 29946,
+      "sha256": "sha256:031f86d18994709b3befe595cb9c8c3f7e6e33a9924ae208a572814338dd991b"
     },
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 172,
-      "sha256": "sha256:f127054b1b0981a698fe4dc7a143ea2253f7233d466dc374bd68e777e60a5fc4"
+      "sha256": "sha256:2cce8bfa0d5612c32775a503d40d744427091818c2a20118676bed23dee76e3c"
     },
     {
-      "path": "pagefind/pagefind.en_8e4eb046e9.pf_meta",
-      "bytes": 1061,
-      "sha256": "sha256:a0033986820e2fa1a1af89b40f4f80be71c0ade038e8f206f2d9618aa364a031"
-    },
-    {
-      "path": "pagefind/wasm.en.pagefind",
-      "bytes": 72209,
-      "sha256": "sha256:f884c7e6558f566866b9dd85f694a03f626b3f164fa52cd4e1be5562e523d604"
-    },
-    {
-      "path": "pagefind/wasm.unknown.pagefind",
-      "bytes": 68024,
-      "sha256": "sha256:9541233b37f38fd67cc6d9a44546a4db99eb6fcfbfa57053e07eed9997b55edc"
+      "path": "pagefind/pagefind.en_d1cdb5e1f4.pf_meta",
+      "bytes": 1077,
+      "sha256": "sha256:dd28dba33d22037df4b2eb1550e5e6942bc887aafee26e30cd03fccf9af67d0d"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 12058,
-      "sha256": "sha256:4270c58e6effd835463024e2359bd41721b93e70fa889411baf065747249ab2d"
+      "bytes": 12620,
+      "sha256": "sha256:a3e1eea55c305e820bc96073d6a84e73bf9e83329343177e75c08b902cbacca2"
     }
   ],
   "removedFiles": [
-    "pagefind/filter/en_3e997dc.pf_filter",
-    "pagefind/filter/en_7c4f3d1.pf_filter",
-    "pagefind/filter/en_8863974.pf_filter",
-    "pagefind/filter/en_8cc6185.pf_filter",
-    "pagefind/filter/en_9db243c.pf_filter",
-    "pagefind/filter/en_b1b7bae.pf_filter",
-    "pagefind/filter/en_d4a4be2.pf_filter",
-    "pagefind/filter/en_e22b721.pf_filter",
-    "pagefind/filter/en_e31ab8f.pf_filter",
-    "pagefind/filter/en_fdb382c.pf_filter",
-    "pagefind/fragment/en_1bdfa3a.pf_fragment",
-    "pagefind/fragment/en_2b4e35d.pf_fragment",
-    "pagefind/fragment/en_2ed3662.pf_fragment",
-    "pagefind/fragment/en_358a903.pf_fragment",
-    "pagefind/fragment/en_494954f.pf_fragment",
-    "pagefind/fragment/en_588d787.pf_fragment",
-    "pagefind/fragment/en_5c207f9.pf_fragment",
-    "pagefind/fragment/en_5d57718.pf_fragment",
-    "pagefind/fragment/en_734d4ac.pf_fragment",
-    "pagefind/fragment/en_a2c56e3.pf_fragment",
-    "pagefind/fragment/en_a39e258.pf_fragment",
-    "pagefind/fragment/en_a5c2346.pf_fragment",
-    "pagefind/fragment/en_b8ed8ac.pf_fragment",
-    "pagefind/fragment/en_ba52827.pf_fragment",
-    "pagefind/fragment/en_d27ae73.pf_fragment",
-    "pagefind/fragment/en_e41ad75.pf_fragment",
-    "pagefind/index/en_1359ba3.pf_index",
-    "pagefind/index/en_255a4d2.pf_index",
-    "pagefind/index/en_399cb7f.pf_index",
-    "pagefind/index/en_3a148e3.pf_index",
-    "pagefind/index/en_4057247.pf_index",
-    "pagefind/index/en_4b5fd0b.pf_index",
-    "pagefind/index/en_56f5bbe.pf_index",
-    "pagefind/index/en_6be393b.pf_index",
-    "pagefind/index/en_73fea34.pf_index",
-    "pagefind/index/en_88882c1.pf_index",
-    "pagefind/index/en_8a72889.pf_index",
-    "pagefind/index/en_8ac1739.pf_index",
-    "pagefind/index/en_8dc2d57.pf_index",
-    "pagefind/index/en_8f9af82.pf_index",
-    "pagefind/index/en_941828e.pf_index",
-    "pagefind/index/en_9eddfff.pf_index",
-    "pagefind/index/en_a92d625.pf_index",
-    "pagefind/index/en_afdeed5.pf_index",
-    "pagefind/index/en_b363263.pf_index",
-    "pagefind/index/en_c05f41d.pf_index",
-    "pagefind/index/en_c11599b.pf_index",
-    "pagefind/index/en_c329d0a.pf_index",
-    "pagefind/index/en_c6cd5f0.pf_index",
-    "pagefind/index/en_c7e9868.pf_index",
-    "pagefind/index/en_cd895b3.pf_index",
-    "pagefind/index/en_d893e55.pf_index",
-    "pagefind/index/en_ddc2693.pf_index",
-    "pagefind/index/en_eb53383.pf_index",
-    "pagefind/index/en_ef5cfdc.pf_index",
-    "pagefind/index/en_f4e443f.pf_index",
-    "pagefind/index/en_f54f494.pf_index",
-    "pagefind/index/en_f864161.pf_index",
-    "pagefind/index/en_f9b8a61.pf_index",
-    "pagefind/pagefind.en_17cacabfb4.pf_meta",
-    "pagefind/pagefind.en_2cfbe1a7c7.pf_meta",
-    "pagefind/pagefind.en_5131a281b3.pf_meta",
-    "pagefind/pagefind.en_b27513f761.pf_meta",
-    "pagefind/pagefind.en_dfdda9a6cc.pf_meta"
+    "pagefind/filter/en_d3379e3.pf_filter",
+    "pagefind/filter/en_f5fc222.pf_filter",
+    "pagefind/fragment/en_44cfbb1.pf_fragment",
+    "pagefind/fragment/en_80ef836.pf_fragment",
+    "pagefind/fragment/en_c48e1ae.pf_fragment",
+    "pagefind/index/en_21135e5.pf_index",
+    "pagefind/index/en_2236e41.pf_index",
+    "pagefind/index/en_2c40469.pf_index",
+    "pagefind/index/en_2d685a5.pf_index",
+    "pagefind/index/en_36c4254.pf_index",
+    "pagefind/index/en_6e8fca1.pf_index",
+    "pagefind/index/en_72762cb.pf_index",
+    "pagefind/index/en_842589b.pf_index",
+    "pagefind/index/en_90b379f.pf_index",
+    "pagefind/index/en_c2f3b3a.pf_index",
+    "pagefind/index/en_cce4799.pf_index",
+    "pagefind/index/en_ec214e6.pf_index",
+    "pagefind/pagefind.en_8e4eb046e9.pf_meta"
   ],
   "routes": [
     "/articles/should-you-unplug-electronics-during-thunderstorm/"

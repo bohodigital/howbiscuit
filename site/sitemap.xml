@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://howbiscuit.com/articles/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-07-18</lastmod>
   </url>
   <url>
     <loc>https://howbiscuit.com/articles/2-4-ghz-vs-5-ghz-wifi/</loc>
@@ -233,6 +233,10 @@
     <lastmod>2026-07-27</lastmod>
   </url>
   <url>
+    <loc>https://howbiscuit.com/articles/should-you-unplug-electronics-during-thunderstorm/</loc>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+  <url>
     <loc>https://howbiscuit.com/articles/tank-vs-tankless-water-heater/</loc>
     <lastmod>2026-07-27</lastmod>
   </url>
@@ -321,20 +325,40 @@
     <lastmod>2026-07-18</lastmod>
   </url>
   <url>
-    <loc>https://howbiscuit.com/electricity-prices-by-state/</loc>
-    <lastmod>2026-07-26</lastmod>
-  </url>
-  <url>
     <loc>https://howbiscuit.com/home-tech/</loc>
     <lastmod>2026-07-18</lastmod>
+  </url>
+  <url>
+    <loc>https://howbiscuit.com/home-tech/power-cooling-storage/</loc>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+  <url>
+    <loc>https://howbiscuit.com/home-tech/wifi-routers/</loc>
+    <lastmod>2026-07-26</lastmod>
   </url>
   <url>
     <loc>https://howbiscuit.com/home/</loc>
     <lastmod>2026-07-18</lastmod>
   </url>
   <url>
+    <loc>https://howbiscuit.com/home/cleaning/</loc>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+  <url>
+    <loc>https://howbiscuit.com/home/heating-cooling/</loc>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+  <url>
+    <loc>https://howbiscuit.com/home/utilities-energy/</loc>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+  <url>
     <loc>https://howbiscuit.com/kitchen/</loc>
     <lastmod>2026-07-18</lastmod>
+  </url>
+  <url>
+    <loc>https://howbiscuit.com/kitchen/troubleshooting-safety/</loc>
+    <lastmod>2026-07-27</lastmod>
   </url>
   <url>
     <loc>https://howbiscuit.com/privacy/</loc>
@@ -342,6 +366,10 @@
   <url>
     <loc>https://howbiscuit.com/shop/</loc>
     <lastmod>2026-07-18</lastmod>
+  </url>
+  <url>
+    <loc>https://howbiscuit.com/shop/total-cost-ownership/</loc>
+    <lastmod>2026-07-27</lastmod>
   </url>
   <url>
     <loc>https://howbiscuit.com/tools/</loc>
@@ -352,12 +380,8 @@
     <lastmod>2026-07-23</lastmod>
   </url>
   <url>
-    <loc>https://howbiscuit.com/tools/appliance-electricity-cost-calculator/</loc>
-    <lastmod>2026-07-26</lastmod>
-  </url>
-  <url>
     <loc>https://howbiscuit.com/tools/household-energy-benchmark-explorer/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-23</lastmod>
   </url>
   <url>
     <loc>https://howbiscuit.com/tools/us-crop-production-trend-explorer/</loc>
@@ -371,5 +395,4 @@
     <loc>https://howbiscuit.com/tools/zip-to-metro-relationship-explainer/</loc>
     <lastmod>2026-07-23</lastmod>
   </url>
-<url><loc>https://howbiscuit.com/articles/should-you-unplug-electronics-during-thunderstorm/</loc><lastmod>2026-07-27</lastmod></url>
 </urlset>
