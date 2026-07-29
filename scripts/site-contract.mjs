@@ -135,12 +135,66 @@ function referenceTarget(filePaths, routes, missingReferences, rawReference, sou
 function verifyFullCorpusReferences(scan) {
   const filePaths = new Set(scan.files.map((file) => file.path));
   const routes = new Set(scan.files.map((file) => routeFor(file.path)).filter(Boolean));
-  for (const required of ["_headers", "_redirects", "feed.xml", "llms.txt", "robots.txt", "sitemap.xml"]) {
+  for (const required of ["_headers", "_redirects", "feed.xml", "llms.txt", "robots.txt", "search-index.json", "sitemap.xml"]) {
     if (!filePaths.has(required)) fail(`public discovery surface is missing ${required}`);
   }
   const headers = scan.files.find((file) => file.path === "_headers").contents.toString("utf8");
-  if (filePaths.has("pagefind/pagefind.js") && !headers.includes("'wasm-unsafe-eval'")) {
-    fail("Pagefind requires the narrow wasm-unsafe-eval CSP permission");
+  if (headers.includes("'wasm-unsafe-eval'")) {
+    fail("the public CSP must not relax script execution for browser search");
+  }
+  const headerAssets = scan.files
+    .filter((file) => /^_astro\/SiteHeader[^/]*\.js$/.test(file.path))
+    .map((file) => file.contents.toString("utf8"));
+  if (headerAssets.length !== 1) fail("exactly one generated SiteHeader browser asset is required");
+  if (!headerAssets[0].includes("/search-index.json")) {
+    fail("the generated SiteHeader must load the first-party static search index");
+  }
+  if (headerAssets[0].includes("/pagefind/pagefind.js")) {
+    fail("the generated SiteHeader must not dynamically load the Pagefind runtime");
+  }
+
+  let searchPayload;
+  try {
+    searchPayload = JSON.parse(
+      scan.files.find((file) => file.path === "search-index.json").contents.toString("utf8"),
+    );
+  } catch {
+    fail("search-index.json must contain valid JSON");
+  }
+  if (
+    searchPayload?.schemaVersion !== "howbiscuit-static-search.v1"
+    || !Array.isArray(searchPayload.records)
+    || searchPayload.records.length === 0
+    || searchPayload.records.length > 1000
+  ) {
+    fail("search-index.json has an invalid schema or record count");
+  }
+  const searchRoutes = new Set();
+  for (const record of searchPayload.records) {
+    if (
+      !record
+      || typeof record !== "object"
+      || typeof record.route !== "string"
+      || !/^\/(?:[a-z0-9-]+\/)*$/.test(record.route)
+      || typeof record.title !== "string"
+      || record.title.length === 0
+      || record.title.length > 240
+      || typeof record.description !== "string"
+      || record.description.length === 0
+      || record.description.length > 1000
+      || (record.category !== null && (typeof record.category !== "string" || record.category.length === 0 || record.category.length > 120))
+      || typeof record.type !== "string"
+      || record.type.length === 0
+      || record.type.length > 120
+      || typeof record.searchText !== "string"
+      || record.searchText.length === 0
+      || record.searchText.length > 4000
+    ) {
+      fail("search-index.json contains an invalid record");
+    }
+    if (searchRoutes.has(record.route)) fail(`search-index.json duplicates ${record.route}`);
+    if (!routes.has(record.route)) fail(`search-index.json references a missing route: ${record.route}`);
+    searchRoutes.add(record.route);
   }
 
   const missingReferences = new Set();

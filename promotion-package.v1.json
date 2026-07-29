@@ -1,12 +1,22 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "scale-readiness-search-runtime-repair-20260729",
-  "approvalDigest": "sha256:9d98f78ec5d9026fdcf237af6ee68ca60f7fe67e18ea9546ec214d9cede2d1a5",
+  "releaseId": "scale-readiness-static-search-20260729",
+  "approvalDigest": "sha256:62a1684ef591eab83b174185acf2150b2a166112922c607badc95faf14718c28",
   "files": [
     {
+      "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js",
+      "bytes": 8310,
+      "sha256": "sha256:6d847bf69e96151e1bd02cff236ce2dc2be3435a366af1fd651b5b508142eee4"
+    },
+    {
       "path": "_headers",
-      "bytes": 723,
-      "sha256": "sha256:d3d73f80a82dc7629d9ae9fc1ed6766fb8d5e13341b284965e7467f21ebe6925"
+      "bytes": 704,
+      "sha256": "sha256:cd0ba281571321b07235f026b71c12422e7b97bb34d9babd80395dc67c73a6d1"
+    },
+    {
+      "path": "search-index.json",
+      "bytes": 62242,
+      "sha256": "sha256:f6a3cd4f7c8a4b06ad7bca8008cf1062dbfa402edd4046d537c782ed55b153f9"
     }
   ],
   "removedFiles": [],

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:0bf735b93747d7c66088575e5cf0e06c9f933eeb8599c5d9660d1b236f9054a3",
-  "fileCount": 894,
-  "byteCount": 51983330,
+  "artifactDigest": "sha256:23e39373793b9cc3db665c8b6eba9d738af723c1d521b6e4371c026decdc8309",
+  "fileCount": 895,
+  "byteCount": 52047768,
   "htmlRouteCount": 117,
   "routes": [
     "/",
@@ -446,8 +446,8 @@
     },
     {
       "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js",
-      "bytes": 6095,
-      "sha256": "sha256:8c75e7eaffe2294957207b40e7d83448832938c29a3f0989f25cbcfcfaf8138c"
+      "bytes": 8310,
+      "sha256": "sha256:6d847bf69e96151e1bd02cff236ce2dc2be3435a366af1fd651b5b508142eee4"
     },
     {
       "path": "_astro/_slug_.C3qI6nIE.css",
@@ -471,8 +471,8 @@
     },
     {
       "path": "_headers",
-      "bytes": 723,
-      "sha256": "sha256:d3d73f80a82dc7629d9ae9fc1ed6766fb8d5e13341b284965e7467f21ebe6925"
+      "bytes": 704,
+      "sha256": "sha256:cd0ba281571321b07235f026b71c12422e7b97bb34d9babd80395dc67c73a6d1"
     },
     {
       "path": "_redirects",
@@ -4528,6 +4528,11 @@
       "path": "robots.txt",
       "bytes": 68,
       "sha256": "sha256:067239caee95059fff70c76b0c233c627f913fa2bd73f451c7692fb8753da91b"
+    },
+    {
+      "path": "search-index.json",
+      "bytes": 62242,
+      "sha256": "sha256:f6a3cd4f7c8a4b06ad7bca8008cf1062dbfa402edd4046d537c782ed55b153f9"
     },
     {
       "path": "shop/index.html",
