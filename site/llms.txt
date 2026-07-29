@@ -88,6 +88,7 @@ This build has no affiliate links, sponsored placements, paid reviews, or produc
 - [Contact](https://howbiscuit.com/contact/): Contact How Biscuit about general questions, sources, product data, rights, attribution, or corrections.
 - [Corrections](https://howbiscuit.com/corrections/): How to report a factual, source, product-data, rights, or attribution concern to How Biscuit.
 - [Editorial Policy](https://howbiscuit.com/editorial-policy/): The publishing standards How Biscuit uses for clarity, evidence, safety, and updates.
+- [Residential Electricity Prices by State: May 2026](https://howbiscuit.com/electricity-prices-by-state/): Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator.
 - [Home Tech](https://howbiscuit.com/home-tech/): Practical help for connected devices, computers, entertainment systems, privacy, power, cooling, and storage.
 - [Power, Cooling & Storage](https://howbiscuit.com/home-tech/power-cooling-storage/): Power delivery, battery care, heat, airflow, storage capacity, failure signs, and replacement decisions.
 - [Wi-Fi & Routers](https://howbiscuit.com/home-tech/wifi-routers/): Coverage, speed, placement, mesh systems, modems, and reliable home-network troubleshooting.
@@ -102,6 +103,7 @@ This build has no affiliate links, sponsored placements, paid reviews, or produc
 - [Total Cost of Ownership](https://howbiscuit.com/shop/total-cost-ownership/): Upfront cost, subscriptions, energy, maintenance, repair, replacement, resale, and switching costs.
 - [Tools](https://howbiscuit.com/tools/): Transparent calculators, converters, price checkers, checklists, decision aids, and reusable templates.
 - [Agricultural Market Context Browser](https://howbiscuit.com/tools/agricultural-market-context-browser/): Browse selected USDA Market News observations with commodity, geography, period, unit basis, narrative context, and the wholesale boundary kept prominent.
+- [Appliance Electricity Cost Calculator](https://howbiscuit.com/tools/appliance-electricity-cost-calculator/): Calculate appliance cost per use, month, and year from watts and time, measured kWh, or annual EnergyGuide kWh. Your entries stay in your browser.
 - [Household Energy Benchmark Explorer](https://howbiscuit.com/tools/household-energy-benchmark-explorer/): Compare approved state and United States residential electricity or natural-gas aggregates by period, with units and limitations kept visible.
 - [U.S. Crop Production Trend Explorer](https://howbiscuit.com/tools/us-crop-production-trend-explorer/): Compare approved national crop production statistics by commodity and year while keeping final, forecast, unit, revision, and suppression states visible.
 - [USDA Staple Food Identity Explorer](https://howbiscuit.com/tools/usda-staple-food-identity-explorer/): Browse approved USDA FoodData Central staple identities and see clearly when complete nutrient records are unavailable rather than filling gaps.

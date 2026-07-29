@@ -4,7 +4,8 @@
     "repository": "bohodigital/howbiscuit",
     "commit": "b5eaf33139e541a89cdb869c4bce47dab63acb29",
     "siteArtifactDigest": "sha256:64d55c6c2bb046308decd32811e2b660dcd7f5a4a2b5d38e6abf495e9e88102c",
-    "articleCount": 74
+    "articleCount": 74,
+    "recordCount": 94
   },
   "records": [
     {
@@ -3787,7 +3788,7 @@
       "testing": {
         "state": "not-hands-on-tested",
         "notes": [
-          "This rendering-remediation update preserves the previously approved desk-sourced article and does not add hands-on testing."
+          "No hands-on testing was performed; the preserved article is based on reviewed primary-source guidance."
         ]
       },
       "relatedContent": {
@@ -5135,6 +5136,23 @@
       "featured": false
     },
     {
+      "kind": "data",
+      "renderMode": "preserve-existing-public-artifact",
+      "route": "/electricity-prices-by-state/",
+      "title": "Residential Electricity Prices by State: May 2026",
+      "description": "Compare May 2026 average residential electricity prices for all 50 states and Washington, D.C., using EIA data. Download the table and use a rate in the appliance calculator.",
+      "categoryId": null,
+      "topicId": null,
+      "articleType": "data",
+      "publishedDate": null,
+      "updatedDate": "2026-07-26",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
       "kind": "category",
       "renderMode": "canonical-source",
       "route": "/home-tech/",
@@ -5374,6 +5392,23 @@
     },
     {
       "kind": "tool",
+      "renderMode": "preserve-existing-public-artifact",
+      "route": "/tools/appliance-electricity-cost-calculator/",
+      "title": "Appliance Electricity Cost Calculator",
+      "description": "Calculate appliance cost per use, month, and year from watts and time, measured kWh, or annual EnergyGuide kWh. Your entries stay in your browser.",
+      "categoryId": "tools",
+      "topicId": "calculators",
+      "articleType": "tool",
+      "publishedDate": null,
+      "updatedDate": "2026-07-26",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "tool",
       "renderMode": "canonical-source",
       "route": "/tools/household-energy-benchmark-explorer/",
       "title": "Household Energy Benchmark Explorer",
@@ -5382,7 +5417,7 @@
       "topicId": "calculators",
       "articleType": "tool",
       "publishedDate": "2026-07-23",
-      "updatedDate": "2026-07-23",
+      "updatedDate": "2026-07-24",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -5441,5 +5476,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:c76bbab359774984e4e71764d08ea0d8a8e3e5aca84b51c359f588ef44d50448"
+  "registryDigest": "sha256:ab5a1a862a5d92cb7d82d805733b7134a766a4d084bc38b39df66486c90676cf"
 }
