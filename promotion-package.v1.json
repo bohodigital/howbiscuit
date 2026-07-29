@@ -1,29 +1,16 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "scale-readiness-corpus-repair-20260729",
-  "approvalDigest": "sha256:e0259281b6c472561b6113aea038bb4fa4f4c24d214cd3cb3e79b52e00f5254b",
+  "releaseId": "scale-readiness-search-runtime-repair-20260729",
+  "approvalDigest": "sha256:9d98f78ec5d9026fdcf237af6ee68ca60f7fe67e18ea9546ec214d9cede2d1a5",
   "files": [
     {
-      "path": "_astro/PublicTool.astro_astro_type_script_index_0_lang.Dx2h0ycp.js",
-      "bytes": 8884,
-      "sha256": "sha256:83e670d30dfe2f5bcc217086cb856752711b01e40c3f6e7656295788ed934cca"
-    },
-    {
-      "path": "_astro/tool-page-data.D4BluorV.css",
-      "bytes": 5668,
-      "sha256": "sha256:4e709c6bb5b8d623df9705e2942385f1f87a07bdb56b42ddb3c5a38b618c15c6"
-    },
-    {
-      "path": "articles/how-much-does-dehumidifier-cost-to-run/index.html",
-      "bytes": 52457,
-      "sha256": "sha256:f0eb9541f711951792223029f5b9d536814d7f3c0a7b33794d2dec309955d487"
+      "path": "_headers",
+      "bytes": 723,
+      "sha256": "sha256:d3d73f80a82dc7629d9ae9fc1ed6766fb8d5e13341b284965e7467f21ebe6925"
     }
   ],
   "removedFiles": [],
   "routes": [
-    "/articles/how-much-does-dehumidifier-cost-to-run/",
-    "/tools/household-energy-benchmark-explorer/page/2/",
-    "/tools/household-energy-benchmark-explorer/page/3/",
-    "/tools/us-crop-production-trend-explorer/page/2/"
+    "/"
   ]
 }

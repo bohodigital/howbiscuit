@@ -138,6 +138,10 @@ function verifyFullCorpusReferences(scan) {
   for (const required of ["_headers", "_redirects", "feed.xml", "llms.txt", "robots.txt", "sitemap.xml"]) {
     if (!filePaths.has(required)) fail(`public discovery surface is missing ${required}`);
   }
+  const headers = scan.files.find((file) => file.path === "_headers").contents.toString("utf8");
+  if (filePaths.has("pagefind/pagefind.js") && !headers.includes("'wasm-unsafe-eval'")) {
+    fail("Pagefind requires the narrow wasm-unsafe-eval CSP permission");
+  }
 
   const missingReferences = new Set();
   let internalReferenceCount = 0;
@@ -308,7 +312,10 @@ async function inventory() {
     fail("inventory requires a valid release ID");
   }
   const routes = [...new Set(requestedRoutes)].sort();
-  if (routes.length === 0 || routes.some((route) => !/^\/[A-Za-z0-9._/-]*\/$/.test(route))) {
+  if (
+    routes.length === 0
+    || routes.some((route) => route !== "/" && !/^\/[A-Za-z0-9._/-]*\/$/.test(route))
+  ) {
     fail("inventory requires one or more safe affected routes");
   }
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:a1798f7106a00a83b7dffee6d05d6cfd3882bde75d7ea9af7b52bdc7314efd14",
+  "artifactDigest": "sha256:0bf735b93747d7c66088575e5cf0e06c9f933eeb8599c5d9660d1b236f9054a3",
   "fileCount": 894,
-  "byteCount": 51983311,
+  "byteCount": 51983330,
   "htmlRouteCount": 117,
   "routes": [
     "/",
@@ -471,8 +471,8 @@
     },
     {
       "path": "_headers",
-      "bytes": 704,
-      "sha256": "sha256:cd0ba281571321b07235f026b71c12422e7b97bb34d9babd80395dc67c73a6d1"
+      "bytes": 723,
+      "sha256": "sha256:d3d73f80a82dc7629d9ae9fc1ed6766fb8d5e13341b284965e7467f21ebe6925"
     },
     {
       "path": "_redirects",
