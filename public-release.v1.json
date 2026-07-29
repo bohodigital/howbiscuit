@@ -1,8 +1,8 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:919de53297bd551adb29f37b70ba1ecedf0867aa5854f0d7a36de1ff84835d28",
-  "fileCount": 892,
-  "byteCount": 51968763,
+  "artifactDigest": "sha256:a1798f7106a00a83b7dffee6d05d6cfd3882bde75d7ea9af7b52bdc7314efd14",
+  "fileCount": 894,
+  "byteCount": 51983311,
   "htmlRouteCount": 117,
   "routes": [
     "/",
@@ -440,6 +440,11 @@
       "sha256": "sha256:f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa"
     },
     {
+      "path": "_astro/PublicTool.astro_astro_type_script_index_0_lang.Dx2h0ycp.js",
+      "bytes": 8884,
+      "sha256": "sha256:83e670d30dfe2f5bcc217086cb856752711b01e40c3f6e7656295788ed934cca"
+    },
+    {
       "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js",
       "bytes": 6095,
       "sha256": "sha256:8c75e7eaffe2294957207b40e7d83448832938c29a3f0989f25cbcfcfaf8138c"
@@ -453,6 +458,11 @@
       "path": "_astro/_slug_.DExZsdqk.css",
       "bytes": 4401,
       "sha256": "sha256:f711b6e7a364ce9d064182bbb8bfc959e19778fea18cc5c0b4d69624dfe8830e"
+    },
+    {
+      "path": "_astro/tool-page-data.D4BluorV.css",
+      "bytes": 5668,
+      "sha256": "sha256:4e709c6bb5b8d623df9705e2942385f1f87a07bdb56b42ddb3c5a38b618c15c6"
     },
     {
       "path": "_astro/why-salt-melts-ice.Ci-tvtJg.css",
@@ -646,8 +656,8 @@
     },
     {
       "path": "articles/how-much-does-dehumidifier-cost-to-run/index.html",
-      "bytes": 52461,
-      "sha256": "sha256:3bfbcd8f0ea03dba25499583118a634bc49b488cfcafcf28eff27d808373aa20"
+      "bytes": 52457,
+      "sha256": "sha256:f0eb9541f711951792223029f5b9d536814d7f3c0a7b33794d2dec309955d487"
     },
     {
       "path": "articles/how-much-does-dishwasher-cost-per-load/index.html",

@@ -4,7 +4,9 @@ import {
   mkdir,
   readFile,
   readdir,
+  rename,
   rm,
+  writeFile,
 } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
@@ -91,6 +93,111 @@ function routeFor(relative) {
   return `/${relative}`;
 }
 
+function referenceTarget(filePaths, routes, missingReferences, rawReference, sourcePath) {
+  const reference = rawReference.trim().replaceAll("&amp;", "&");
+  if (!reference || reference.startsWith("#")) return false;
+  if (/^(?:mailto|tel|data):/i.test(reference)) return false;
+  if (/^javascript:/i.test(reference)) fail(`${sourcePath}: executable URL is forbidden`);
+
+  const sourceRoute = sourcePath.endsWith("/index.html")
+    ? `/${sourcePath.slice(0, -"index.html".length)}`
+    : `/${sourcePath}`;
+  let parsed;
+  try {
+    parsed = new URL(reference, `https://howbiscuit.com${sourceRoute}`);
+  } catch {
+    fail(`${sourcePath}: invalid reference ${reference}`);
+  }
+  if (!["howbiscuit.com", "www.howbiscuit.com"].includes(parsed.hostname)) return false;
+
+  let pathname;
+  try {
+    pathname = decodeURIComponent(parsed.pathname);
+  } catch {
+    fail(`${sourcePath}: reference has invalid percent encoding ${reference}`);
+  }
+  if (!pathname.startsWith("/") || pathname.includes("\\")) {
+    fail(`${sourcePath}: unsafe internal reference ${reference}`);
+  }
+  if (pathname.split("/").includes("..")) fail(`${sourcePath}: internal reference escapes the public root`);
+
+  const normalized = path.posix.normalize(pathname);
+  const direct = normalized.slice(1);
+  const indexPath = normalized === "/" ? "index.html" : `${direct.replace(/\/?$/, "/")}index.html`;
+  const route = normalized.endsWith("/") ? normalized : `${normalized}/`;
+  if (!filePaths.has(direct) && !filePaths.has(indexPath) && !routes.has(route)) {
+    missingReferences.add(`${sourcePath} -> ${pathname}`);
+    return false;
+  }
+  return true;
+}
+
+function verifyFullCorpusReferences(scan) {
+  const filePaths = new Set(scan.files.map((file) => file.path));
+  const routes = new Set(scan.files.map((file) => routeFor(file.path)).filter(Boolean));
+  for (const required of ["_headers", "_redirects", "feed.xml", "llms.txt", "robots.txt", "sitemap.xml"]) {
+    if (!filePaths.has(required)) fail(`public discovery surface is missing ${required}`);
+  }
+
+  const missingReferences = new Set();
+  let internalReferenceCount = 0;
+  for (const file of scan.files) {
+    if (file.path.endsWith(".html")) {
+      const html = file.contents.toString("utf8");
+      for (const match of html.matchAll(/\b(?:href|src|poster|data-src)=["']([^"']+)["']/gi)) {
+        if (referenceTarget(filePaths, routes, missingReferences, match[1], file.path)) {
+          internalReferenceCount += 1;
+        }
+      }
+      for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/gi)) {
+        for (const candidate of match[1].split(",")) {
+          const reference = candidate.trim().split(/\s+/, 1)[0];
+          if (referenceTarget(filePaths, routes, missingReferences, reference, file.path)) {
+            internalReferenceCount += 1;
+          }
+        }
+      }
+    } else if (file.path.endsWith(".css")) {
+      const css = file.contents.toString("utf8");
+      for (const match of css.matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/gi)) {
+        if (referenceTarget(filePaths, routes, missingReferences, match[1], file.path)) {
+          internalReferenceCount += 1;
+        }
+      }
+    }
+  }
+
+  const feed = scan.files.find((file) => file.path === "feed.xml").contents.toString("utf8");
+  const feedUrls = [...feed.matchAll(/https:\/\/(?:www\.)?howbiscuit\.com[^<"'\s]*/g)];
+  if (feedUrls.length === 0) fail("feed.xml contains no canonical How Biscuit URLs");
+  for (const match of feedUrls) {
+    if (referenceTarget(filePaths, routes, missingReferences, match[0], "feed.xml")) {
+      internalReferenceCount += 1;
+    }
+  }
+
+  const llms = scan.files.find((file) => file.path === "llms.txt").contents.toString("utf8");
+  const llmsReferences = [
+    ...[...llms.matchAll(/\]\((\/[^)\s]+)\)/g)].map((match) => match[1]),
+    ...[...llms.matchAll(/https:\/\/(?:www\.)?howbiscuit\.com[^)\s]*/g)].map((match) => match[0]),
+  ];
+  if (llmsReferences.length === 0) fail("llms.txt contains no internal discovery links");
+  for (const reference of llmsReferences) {
+    if (referenceTarget(filePaths, routes, missingReferences, reference, "llms.txt")) {
+      internalReferenceCount += 1;
+    }
+  }
+
+  const robots = scan.files.find((file) => file.path === "robots.txt").contents.toString("utf8");
+  if (!robots.includes("Sitemap: https://howbiscuit.com/sitemap.xml")) {
+    fail("robots.txt does not name the canonical sitemap");
+  }
+  if (missingReferences.size > 0) {
+    fail(`full-corpus internal references are missing: ${[...missingReferences].sort().slice(0, 20).join(", ")}`);
+  }
+  return { routes: routes.size, internalReferences: internalReferenceCount };
+}
+
 function privacyScan(files) {
   for (const file of files) {
     const text = file.contents.toString("utf8");
@@ -122,14 +229,24 @@ async function loadJson(file) {
   return JSON.parse(await readFile(file, "utf8"));
 }
 
+async function writeJsonAtomic(file, value) {
+  const temporary = path.join(root, `.${path.basename(file)}.${process.pid}.tmp`);
+  await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`, {
+    encoding: "utf8",
+    flag: "wx",
+  });
+  await rename(temporary, file);
+}
+
 async function verifyDirectory(directory, expected) {
   const scan = await collect(directory);
   privacyScan(scan.files);
+  const references = verifyFullCorpusReferences(scan);
   const actual = releaseFrom(scan);
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     fail(`${path.basename(directory)} differs from the approved release manifest`);
   }
-  return actual;
+  return { release: actual, references };
 }
 
 async function verifyPromotion(release) {
@@ -167,9 +284,11 @@ async function verifyPromotion(release) {
 }
 
 async function verify() {
-  const release = await verifyDirectory(siteDir, await loadJson(releasePath));
+  const verified = await verifyDirectory(siteDir, await loadJson(releasePath));
+  const release = verified.release;
   await verifyPromotion(release);
   console.log(`verified ${release.fileCount} files, ${release.byteCount} bytes`);
+  console.log(`verified ${verified.references.internalReferences} internal references`);
   console.log(release.artifactDigest);
   return release;
 }
@@ -183,12 +302,67 @@ async function build() {
   console.log("built reproducible dist/");
 }
 
+async function inventory() {
+  const [releaseId, ...requestedRoutes] = process.argv.slice(3);
+  if (!/^[a-z0-9][a-z0-9._-]{2,79}$/.test(releaseId ?? "")) {
+    fail("inventory requires a valid release ID");
+  }
+  const routes = [...new Set(requestedRoutes)].sort();
+  if (routes.length === 0 || routes.some((route) => !/^\/[A-Za-z0-9._/-]*\/$/.test(route))) {
+    fail("inventory requires one or more safe affected routes");
+  }
+
+  const previous = await loadJson(releasePath);
+  const scan = await collect(siteDir);
+  privacyScan(scan.files);
+  verifyFullCorpusReferences(scan);
+  const release = releaseFrom(scan);
+  for (const route of routes) {
+    if (!release.routes.includes(route)) fail(`affected route is missing: ${route}`);
+  }
+
+  const previousByPath = new Map(previous.files.map((file) => [file.path, file.sha256]));
+  const releasePaths = new Set(release.files.map((file) => file.path));
+  const files = release.files.filter((file) => previousByPath.get(file.path) !== file.sha256);
+  const removedFiles = previous.files
+    .map((file) => file.path)
+    .filter((file) => !releasePaths.has(file))
+    .sort();
+  if (files.length === 0 && removedFiles.length === 0) fail("inventory found no changed files");
+
+  const approvalBinding = {
+    schemaVersion: "public-corpus-repair-approval.v1",
+    releaseId,
+    baseArtifactDigest: previous.artifactDigest,
+    artifactDigest: release.artifactDigest,
+    files,
+    removedFiles,
+    routes,
+  };
+  const promotion = {
+    schemaVersion: "public-promotion-package.v1",
+    releaseId,
+    approvalDigest: `sha256:${sha256(Buffer.from(JSON.stringify(approvalBinding)))}`,
+    files,
+    removedFiles,
+    routes,
+  };
+
+  await writeJsonAtomic(promotionPath, promotion);
+  await writeJsonAtomic(releasePath, release);
+  console.log(`inventoried ${files.length} changed and ${removedFiles.length} removed files`);
+  console.log(release.artifactDigest);
+  console.log(promotion.approvalDigest);
+}
+
 const command = process.argv[2] ?? "verify";
 if (command === "verify") {
   await verify();
 } else if (command === "build" || command === "test") {
   await build();
   if (command === "test") console.log("all public distribution tests passed");
+} else if (command === "inventory") {
+  await inventory();
 } else {
   fail(`unknown command: ${command}`);
 }

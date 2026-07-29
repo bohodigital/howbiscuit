@@ -1,177 +1,29 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "mcp-pb-20260729t012930z-fe1f9b25ca2c",
-  "approvalDigest": "sha256:dd79bc2e5126cc9ff4032e97357255de5272b1b344c862cb567dfec87300e381",
+  "releaseId": "scale-readiness-corpus-repair-20260729",
+  "approvalDigest": "sha256:e0259281b6c472561b6113aea038bb4fa4f4c24d214cd3cb3e79b52e00f5254b",
   "files": [
     {
-      "path": "home/cleaning/index.html",
-      "bytes": 31347,
-      "sha256": "sha256:c228b97ecbbad9b7d2f1b7bd9cb0d36666ed2881d80d25cef64eb721ea267bd3"
+      "path": "_astro/PublicTool.astro_astro_type_script_index_0_lang.Dx2h0ycp.js",
+      "bytes": 8884,
+      "sha256": "sha256:83e670d30dfe2f5bcc217086cb856752711b01e40c3f6e7656295788ed934cca"
     },
     {
-      "path": "home/heating-cooling/index.html",
-      "bytes": 34498,
-      "sha256": "sha256:8d068dce3c73de52618d46c36b6e67161c24b8753b68462ef9171e0986b37b50"
+      "path": "_astro/tool-page-data.D4BluorV.css",
+      "bytes": 5668,
+      "sha256": "sha256:4e709c6bb5b8d623df9705e2942385f1f87a07bdb56b42ddb3c5a38b618c15c6"
     },
     {
-      "path": "home/utilities-energy/index.html",
-      "bytes": 34344,
-      "sha256": "sha256:07362012ebfcb314002510f0cc513085abf1aa60614c47d79688b870c6fab9e8"
-    },
-    {
-      "path": "home-tech/wifi-routers/index.html",
-      "bytes": 36453,
-      "sha256": "sha256:12df1311374b9dc012feac6cbe435a44352171096b25b640d7f8438989020f20"
-    },
-    {
-      "path": "kitchen/troubleshooting-safety/index.html",
-      "bytes": 38835,
-      "sha256": "sha256:40b095590321dd53a557b87376458bd44b8375a840b8a5c942ef0fb23dfc9539"
-    },
-    {
-      "path": "llms.txt",
-      "bytes": 26377,
-      "sha256": "sha256:176317a2c0ac5f0dc5fce63f408534fc26913d442b28fbb6f5414605cace7d58"
-    },
-    {
-      "path": "pagefind/filter/en_2c2aac8.pf_filter",
-      "bytes": 237,
-      "sha256": "sha256:25be7260d6c83d91eca73ab7098cd276e5830bb286e6e2ca008e780af76ceffb"
-    },
-    {
-      "path": "pagefind/filter/en_be2330a.pf_filter",
-      "bytes": 261,
-      "sha256": "sha256:eeefd8e5e04fd922225ba83bc6b8356cfee19b13872634c1c988c7ecf0aeceec"
-    },
-    {
-      "path": "pagefind/fragment/en_41e1cc6.pf_fragment",
-      "bytes": 1789,
-      "sha256": "sha256:47996cb6862037c1a224a18004247128f88f36906333381a86fb67cdfb4a1b4b"
-    },
-    {
-      "path": "pagefind/fragment/en_743b6a7.pf_fragment",
-      "bytes": 1090,
-      "sha256": "sha256:aef2f996d380ce1c753c5d6357c82276457f20faafea1cb8eeba1e6b21641795"
-    },
-    {
-      "path": "pagefind/fragment/en_814929c.pf_fragment",
-      "bytes": 1547,
-      "sha256": "sha256:f7caa72053b54447740a9a46d4687bced37400bf4fddeea5be922fdd64e2e928"
-    },
-    {
-      "path": "pagefind/fragment/en_8997353.pf_fragment",
-      "bytes": 2011,
-      "sha256": "sha256:b68ab1ad39154a0f68c5f3c38783598325e0d0281f9788a4b73fa868cb0d8837"
-    },
-    {
-      "path": "pagefind/fragment/en_bf916b5.pf_fragment",
-      "bytes": 962,
-      "sha256": "sha256:8ea25ceda6bef1ef081019844bc454179af3f07b362f7b21ef3b705deed191ca"
-    },
-    {
-      "path": "pagefind/fragment/en_dbcb55f.pf_fragment",
-      "bytes": 1519,
-      "sha256": "sha256:3271bd916fc2883a6b5b461503ee8f300d52a0cc6e607eb9b7a522ef09624c4d"
-    },
-    {
-      "path": "pagefind/index/en_12c89a5.pf_index",
-      "bytes": 29424,
-      "sha256": "sha256:5823851aed65cea57bdde34831fb209b62126a852ab810a96e2c1421ead1e961"
-    },
-    {
-      "path": "pagefind/index/en_1567aab.pf_index",
-      "bytes": 29374,
-      "sha256": "sha256:10f0f180b8eee5237eb7d478d24127587339318b480d498b85822ea1bc2c115d"
-    },
-    {
-      "path": "pagefind/index/en_1f26507.pf_index",
-      "bytes": 28587,
-      "sha256": "sha256:68f8ff35e03b6ff794edf48c08cce2eb50dea101ff06f5a27c1345debb656bec"
-    },
-    {
-      "path": "pagefind/index/en_3ced72d.pf_index",
-      "bytes": 29448,
-      "sha256": "sha256:1ad446ac3ef4bbb12e52a44498809ca1e8f0e90ae94fc6adcf69c1a0c0b73851"
-    },
-    {
-      "path": "pagefind/index/en_4ad16b6.pf_index",
-      "bytes": 29468,
-      "sha256": "sha256:b761c8dfacdcad525ec252b1b7afa25d9699deede0229c56b5475c35ead4616a"
-    },
-    {
-      "path": "pagefind/index/en_66a8735.pf_index",
-      "bytes": 29902,
-      "sha256": "sha256:cbfbe48a938c067d8be7c2d636d57692a2f986859e2ef41e20f287fc316c15b7"
-    },
-    {
-      "path": "pagefind/index/en_71a02a1.pf_index",
-      "bytes": 29389,
-      "sha256": "sha256:cc7f399d8e627c5ac49060b30c637081215fa56ae59a38d283a45524d5f47552"
-    },
-    {
-      "path": "pagefind/index/en_783ff89.pf_index",
-      "bytes": 9875,
-      "sha256": "sha256:a05f43243b22b0ab03fefbf1b15322fb6f7e966b5f955d1443ed6b58f9811e5b"
-    },
-    {
-      "path": "pagefind/index/en_87578cc.pf_index",
-      "bytes": 29031,
-      "sha256": "sha256:43d2599a7dd585f66d003309d54ddfaa14a6a3fe6e2da1b41cd58f86080ac171"
-    },
-    {
-      "path": "pagefind/index/en_9593080.pf_index",
-      "bytes": 28903,
-      "sha256": "sha256:37290d20fd09f24a34bec5e4af796e8248575fcfd1b1d2723c1cf2c45084b084"
-    },
-    {
-      "path": "pagefind/index/en_c92025f.pf_index",
-      "bytes": 30560,
-      "sha256": "sha256:bd557f65f36f721e6d7744a93c0dc368036efef2e1fd9c47357cd887a77ae28b"
-    },
-    {
-      "path": "pagefind/index/en_f28be52.pf_index",
-      "bytes": 30483,
-      "sha256": "sha256:4e8da85b6e17bf66512166611d2546700b607f4bbabcb7e8bc21fcadf81a074f"
-    },
-    {
-      "path": "pagefind/pagefind-entry.json",
-      "bytes": 173,
-      "sha256": "sha256:8409e5cfd610f987f72721a28b721ed58d4d063e843da05b58d789197d2bd6f1"
-    },
-    {
-      "path": "pagefind/pagefind.en_e0e8cd417b.pf_meta",
-      "bytes": 1111,
-      "sha256": "sha256:67143d724539e59373465e0cd24a91a7d9569f7301cec258ac6ea0062c710967"
-    },
-    {
-      "path": "shop/total-cost-ownership/index.html",
-      "bytes": 30856,
-      "sha256": "sha256:e2d3bc188f9ac5ea2a24097bd19cbf7b3f4e08323d6eed5646633ee31e2bd147"
-    },
-    {
-      "path": "sitemap.xml",
-      "bytes": 12872,
-      "sha256": "sha256:09a57f42265eed03be4744293623c450df3b21e0bc255e5e5c789d00fa3ca097"
+      "path": "articles/how-much-does-dehumidifier-cost-to-run/index.html",
+      "bytes": 52457,
+      "sha256": "sha256:f0eb9541f711951792223029f5b9d536814d7f3c0a7b33794d2dec309955d487"
     }
   ],
-  "removedFiles": [
-    "pagefind/filter/en_1356549.pf_filter",
-    "pagefind/filter/en_87bef8d.pf_filter",
-    "pagefind/index/en_11779c4.pf_index",
-    "pagefind/index/en_183de10.pf_index",
-    "pagefind/index/en_3698641.pf_index",
-    "pagefind/index/en_5c233bf.pf_index",
-    "pagefind/index/en_860add2.pf_index",
-    "pagefind/index/en_a93b35b.pf_index",
-    "pagefind/index/en_b9be2fe.pf_index",
-    "pagefind/index/en_c0a643e.pf_index",
-    "pagefind/index/en_c8dcb63.pf_index",
-    "pagefind/index/en_d4719cc.pf_index",
-    "pagefind/index/en_f0c0866.pf_index",
-    "pagefind/index/en_f2d934f.pf_index",
-    "pagefind/pagefind.en_d1cdb5e1f4.pf_meta"
-  ],
+  "removedFiles": [],
   "routes": [
-    "/articles/should-you-unplug-electronics-during-thunderstorm/"
+    "/articles/how-much-does-dehumidifier-cost-to-run/",
+    "/tools/household-energy-benchmark-explorer/page/2/",
+    "/tools/household-energy-benchmark-explorer/page/3/",
+    "/tools/us-crop-production-trend-explorer/page/2/"
   ]
 }
