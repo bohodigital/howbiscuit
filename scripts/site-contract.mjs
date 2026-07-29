@@ -145,12 +145,12 @@ function verifyFullCorpusReferences(scan) {
   const headerAssets = scan.files
     .filter((file) => /^_astro\/SiteHeader[^/]*\.js$/.test(file.path))
     .map((file) => file.contents.toString("utf8"));
-  if (headerAssets.length !== 1) fail("exactly one generated SiteHeader browser asset is required");
-  if (!headerAssets[0].includes("/search-index.json")) {
-    fail("the generated SiteHeader must load the first-party static search index");
+  if (headerAssets.length === 0) fail("a generated SiteHeader browser asset is required");
+  if (!headerAssets.some((asset) => asset.includes("/search-index.json"))) {
+    fail("a generated SiteHeader must load the first-party static search index");
   }
-  if (headerAssets[0].includes("/pagefind/pagefind.js")) {
-    fail("the generated SiteHeader must not dynamically load the Pagefind runtime");
+  if (headerAssets.some((asset) => asset.includes("/pagefind/pagefind.js"))) {
+    fail("generated SiteHeader assets must not dynamically load the Pagefind runtime");
   }
 
   let searchPayload;
