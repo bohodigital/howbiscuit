@@ -698,6 +698,74 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-put-hot-food-in-refrigerator/",
+      "title": "Can You Put Hot Food Directly in the Refrigerator?",
+      "description": "Hot food can go directly into the refrigerator, but large batches should be divided into shallow containers so they cool quickly and safely.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Yes. Hot food can be refrigerated directly. Divide large pots and large pieces into smaller portions or shallow containers, and refrigerate within two hours rather than waiting for everything to cool on the counter.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-leftovers-last-fridge/",
+          "/articles/organize-refrigerator-food-safety/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-put-hot-food-in-refrigerator-can-you-put-hot-food-in-refrigerator-lead-7ad07a22bc",
+          "href": "/images/articles/can-you-put-hot-food-in-refrigerator/can-you-put-hot-food-in-refrigerator.png",
+          "packageRelativePath": "media/can-you-put-hot-food-in-refrigerator.png",
+          "mimeType": "image/png",
+          "sha256": "7ad07a22bc12fdf7019cfd1ca25f84f75b5c60868adc92ce88f19230c343706c",
+          "sizeBytes": 4453,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Can You Put Hot Food Directly in the Refrigerator?",
+          "caption": "How Biscuit summary diagram for Can You Put Hot Food Directly in the Refrigerator?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-put-hot-food-in-refrigerator-can-you-put-hot-food-in-refrigerator-lead-7ad07a22bc",
+        "href": "/images/articles/can-you-put-hot-food-in-refrigerator/can-you-put-hot-food-in-refrigerator.png",
+        "packageRelativePath": "media/can-you-put-hot-food-in-refrigerator.png",
+        "mimeType": "image/png",
+        "sha256": "7ad07a22bc12fdf7019cfd1ca25f84f75b5c60868adc92ce88f19230c343706c",
+        "sizeBytes": 4453,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Can You Put Hot Food Directly in the Refrigerator?",
+        "caption": "How Biscuit summary diagram for Can You Put Hot Food Directly in the Refrigerator?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/can-you-refreeze-food-after-power-outage/",
       "title": "Can You Refreeze Food After a Power Outage?",
@@ -762,6 +830,73 @@
         "attribution": "Photo by USDA via Wikimedia Commons (U.S. federal government work; public domain in the United States) · Public domain (U.S. federal government work) · Source",
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Food_Safety_-_Cut_Waste_in_Refrigerators_(20120106-OC-AMW-0078).jpg",
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-use-soap-on-cast-iron/",
+      "title": "Can You Use Soap on Cast Iron?",
+      "description": "Yes. A small amount of mild dish soap is generally safe for seasoned cast iron. Wash by hand, dry promptly, and apply a very thin coat of oil if needed.",
+      "categoryId": "kitchen",
+      "topicId": "cookware-tools",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Yes. Mild dish soap can be used on seasoned cast iron. Avoid soaking and the dishwasher, dry the pan completely, and use harsh abrasion only when removing rust or deliberately stripping the surface for reseasoning.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-does-baking-powder-work/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-use-soap-on-cast-iron-can-you-use-soap-on-cast-iron-lead-83af96c645",
+          "href": "/images/articles/can-you-use-soap-on-cast-iron/can-you-use-soap-on-cast-iron.png",
+          "packageRelativePath": "media/can-you-use-soap-on-cast-iron.png",
+          "mimeType": "image/png",
+          "sha256": "83af96c6450fb54ae5988282ae4fb34062340293ba23b8391927b364cf5e3bdd",
+          "sizeBytes": 3885,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Can You Use Soap on Cast Iron?",
+          "caption": "How Biscuit summary diagram for Can You Use Soap on Cast Iron?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-use-soap-on-cast-iron-can-you-use-soap-on-cast-iron-lead-83af96c645",
+        "href": "/images/articles/can-you-use-soap-on-cast-iron/can-you-use-soap-on-cast-iron.png",
+        "packageRelativePath": "media/can-you-use-soap-on-cast-iron.png",
+        "mimeType": "image/png",
+        "sha256": "83af96c6450fb54ae5988282ae4fb34062340293ba23b8391927b364cf5e3bdd",
+        "sizeBytes": 3885,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Can You Use Soap on Cast Iron?",
+        "caption": "How Biscuit summary diagram for Can You Use Soap on Cast Iron?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
         "focalPoint": null
       }
     },
@@ -1252,6 +1387,74 @@
         "attribution": "Photo by Kerkyra via Wikimedia Commons (Public domain) · Public domain · Source",
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminumfoil.jpg",
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/does-dishwasher-use-less-water-than-hand-washing/",
+      "title": "Does a Dishwasher Use Less Water Than Hand-Washing?",
+      "description": "A modern dishwasher, especially an ENERGY STAR certified model run with full loads, usually uses less water than washing the same dishes by hand under a running faucet.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Usually, yes. A modern full dishwasher generally uses less water than hand-washing the same load, especially when hand-washing uses a running faucet. Run full loads, scrape instead of pre-rinsing, and compare gallons per cycle when buying a machine.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-much-does-dishwasher-cost-per-load/",
+          "/articles/should-you-rinse-dishes-before-dishwasher/"
+        ]
+      },
+      "media": [
+        {
+          "id": "does-dishwasher-use-less-water-than-hand-washing-does-dishwasher-use-less-water-than-hand-washing-lead-3a1a8db90e",
+          "href": "/images/articles/does-dishwasher-use-less-water-than-hand-washing/does-dishwasher-use-less-water-than-hand-washing.png",
+          "packageRelativePath": "media/does-dishwasher-use-less-water-than-hand-washing.png",
+          "mimeType": "image/png",
+          "sha256": "3a1a8db90e4d023e74fbd8a6f25d805b4dacbdd84154c5e43f527a9e008496a4",
+          "sizeBytes": 980,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Does a Dishwasher Use Less Water Than Hand-Washing?",
+          "caption": "How Biscuit summary diagram for Does a Dishwasher Use Less Water Than Hand-Washing?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "does-dishwasher-use-less-water-than-hand-washing-does-dishwasher-use-less-water-than-hand-washing-lead-3a1a8db90e",
+        "href": "/images/articles/does-dishwasher-use-less-water-than-hand-washing/does-dishwasher-use-less-water-than-hand-washing.png",
+        "packageRelativePath": "media/does-dishwasher-use-less-water-than-hand-washing.png",
+        "mimeType": "image/png",
+        "sha256": "3a1a8db90e4d023e74fbd8a6f25d805b4dacbdd84154c5e43f527a9e008496a4",
+        "sizeBytes": 980,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Does a Dishwasher Use Less Water Than Hand-Washing?",
+        "caption": "How Biscuit summary diagram for Does a Dishwasher Use Less Water Than Hand-Washing?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
         "focalPoint": null
       }
     },
@@ -2047,6 +2250,74 @@
       },
       "media": [],
       "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-long-can-cooked-food-sit-out/",
+      "title": "How Long Can Cooked Food Sit Out?",
+      "description": "Most perishable cooked food should be refrigerated within two hours, or within one hour when the temperature is above 90°F. Food held safely hot or cold follows different rules.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Most perishable cooked food should not sit at room temperature for more than two hours. Use a one-hour limit when the surrounding temperature is above 90°F. Discard food that exceeds the limit unless it was continuously held at a safe hot or cold temperature.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-leftovers-last-fridge/",
+          "/articles/power-outage-food-safety-chart/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-long-can-cooked-food-sit-out-how-long-can-cooked-food-sit-out-lead-150c2235cc",
+          "href": "/images/articles/how-long-can-cooked-food-sit-out/how-long-can-cooked-food-sit-out.png",
+          "packageRelativePath": "media/how-long-can-cooked-food-sit-out.png",
+          "mimeType": "image/png",
+          "sha256": "150c2235ccabc1ab4b6838fd067ebc81950fc37d711969ed3e0f38a52b8ff5d4",
+          "sizeBytes": 4532,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing How Long Can Cooked Food Sit Out?",
+          "caption": "How Biscuit summary diagram for How Long Can Cooked Food Sit Out?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "how-long-can-cooked-food-sit-out-how-long-can-cooked-food-sit-out-lead-150c2235cc",
+        "href": "/images/articles/how-long-can-cooked-food-sit-out/how-long-can-cooked-food-sit-out.png",
+        "packageRelativePath": "media/how-long-can-cooked-food-sit-out.png",
+        "mimeType": "image/png",
+        "sha256": "150c2235ccabc1ab4b6838fd067ebc81950fc37d711969ed3e0f38a52b8ff5d4",
+        "sizeBytes": 4532,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing How Long Can Cooked Food Sit Out?",
+        "caption": "How Biscuit summary diagram for How Long Can Cooked Food Sit Out?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
     },
     {
       "kind": "article",
@@ -3292,6 +3563,74 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-clean-dishwasher-filter/",
+      "title": "How to Clean a Dishwasher Filter",
+      "description": "A removable dishwasher filter can collect food, grit, labels, and debris. Here is how to locate, clean, inspect, and reinstall it without damaging the machine.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Turn off the dishwasher, remove the lower rack, locate the filter at the bottom of the tub, and remove it according to the model manual. Rinse it with warm water, use mild soap and a soft brush for stubborn debris, then reinstall and lock it securely before running the machine.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article summarizes documented manufacturer guidance and was not hands-on tested on a specific dishwasher by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-rinse-dishes-before-dishwasher/",
+          "/articles/does-dishwasher-use-less-water-than-hand-washing/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-to-clean-dishwasher-filter-how-to-clean-dishwasher-filter-lead-f2f6f5ac7f",
+          "href": "/images/articles/how-to-clean-dishwasher-filter/how-to-clean-dishwasher-filter.png",
+          "packageRelativePath": "media/how-to-clean-dishwasher-filter.png",
+          "mimeType": "image/png",
+          "sha256": "f2f6f5ac7f9ae95970b39784abe0c05ff004a5acfea086f668e03e14236cad0f",
+          "sizeBytes": 918,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing How to Clean a Dishwasher Filter",
+          "caption": "How Biscuit summary diagram for How to Clean a Dishwasher Filter",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "how-to-clean-dishwasher-filter-how-to-clean-dishwasher-filter-lead-f2f6f5ac7f",
+        "href": "/images/articles/how-to-clean-dishwasher-filter/how-to-clean-dishwasher-filter.png",
+        "packageRelativePath": "media/how-to-clean-dishwasher-filter.png",
+        "mimeType": "image/png",
+        "sha256": "f2f6f5ac7f9ae95970b39784abe0c05ff004a5acfea086f668e03e14236cad0f",
+        "sizeBytes": 918,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing How to Clean a Dishwasher Filter",
+        "caption": "How Biscuit summary diagram for How to Clean a Dishwasher Filter",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/how-to-read-energyguide-label/",
       "title": "How to Read an EnergyGuide Label",
@@ -3976,6 +4315,74 @@
         "attribution": "Photo by Teepetersen via Wikimedia Commons (CC BY-SA 4.0) · CC BY-SA 4.0 · Source",
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dishwasher.jpg",
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
+      "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
+      "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Usually, scrape food scraps into the trash or compost and skip the sink rinse. Pre-rinsing adds water and energy use. Use the dishwasher’s rinse feature only when dirty dishes must sit and the manual recommends it.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-much-does-dishwasher-cost-per-load/",
+          "/articles/organize-refrigerator-food-safety/"
+        ]
+      },
+      "media": [
+        {
+          "id": "should-you-rinse-dishes-before-dishwasher-should-you-rinse-dishes-before-dishwasher-lead-7d1e7628dd",
+          "href": "/images/articles/should-you-rinse-dishes-before-dishwasher/should-you-rinse-dishes-before-dishwasher.png",
+          "packageRelativePath": "media/should-you-rinse-dishes-before-dishwasher.png",
+          "mimeType": "image/png",
+          "sha256": "7d1e7628dd0ce289d313703edf26db024f63faabb96461048b712b30c604750b",
+          "sizeBytes": 3890,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Should You Rinse Dishes Before Putting Them in the Dishwasher?",
+          "caption": "How Biscuit summary diagram for Should You Rinse Dishes Before Putting Them in the Dishwasher?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "should-you-rinse-dishes-before-dishwasher-should-you-rinse-dishes-before-dishwasher-lead-7d1e7628dd",
+        "href": "/images/articles/should-you-rinse-dishes-before-dishwasher/should-you-rinse-dishes-before-dishwasher.png",
+        "packageRelativePath": "media/should-you-rinse-dishes-before-dishwasher.png",
+        "mimeType": "image/png",
+        "sha256": "7d1e7628dd0ce289d313703edf26db024f63faabb96461048b712b30c604750b",
+        "sizeBytes": 3890,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Should You Rinse Dishes Before Putting Them in the Dishwasher?",
+        "caption": "How Biscuit summary diagram for Should You Rinse Dishes Before Putting Them in the Dishwasher?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
         "focalPoint": null
       }
     },
@@ -4781,6 +5188,140 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-do-led-light-bulbs-flicker/",
+      "title": "Why Do LED Light Bulbs Flicker?",
+      "description": "LED flicker commonly comes from an incompatible dimmer, a non-dimmable bulb, a poor driver, a loose connection, or unstable power. Here is how to narrow it down safely.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "LED bulbs can flicker when their electronic drivers receive uneven power, especially with an incompatible dimmer. Start by checking whether the bulb is dimmable, testing a compatible bulb, and noting whether one lamp or the entire circuit is affected.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-unplug-electronics-during-thunderstorm/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-do-led-light-bulbs-flicker-why-do-led-light-bulbs-flicker-lead-fc2eedde18",
+          "href": "/images/articles/why-do-led-light-bulbs-flicker/why-do-led-light-bulbs-flicker.png",
+          "packageRelativePath": "media/why-do-led-light-bulbs-flicker.png",
+          "mimeType": "image/png",
+          "sha256": "fc2eedde1878c432edf7816fe1e622dacf54383c24a7ab5502ca1593c593ca74",
+          "sizeBytes": 3851,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Why Do LED Light Bulbs Flicker?",
+          "caption": "How Biscuit summary diagram for Why Do LED Light Bulbs Flicker?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-do-led-light-bulbs-flicker-why-do-led-light-bulbs-flicker-lead-fc2eedde18",
+        "href": "/images/articles/why-do-led-light-bulbs-flicker/why-do-led-light-bulbs-flicker.png",
+        "packageRelativePath": "media/why-do-led-light-bulbs-flicker.png",
+        "mimeType": "image/png",
+        "sha256": "fc2eedde1878c432edf7816fe1e622dacf54383c24a7ab5502ca1593c593ca74",
+        "sizeBytes": 3851,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Why Do LED Light Bulbs Flicker?",
+        "caption": "How Biscuit summary diagram for Why Do LED Light Bulbs Flicker?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-do-windows-condense-in-winter/",
+      "title": "Why Do Windows Condense in Winter?",
+      "description": "Winter window condensation forms when humid indoor air meets glass cold enough to fall below the air’s dew point. Here is how to reduce it and when it signals a larger moisture problem.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Indoor window condensation forms when moist indoor air touches glass whose surface temperature is below the air’s dew point. Reduce indoor moisture, use kitchen and bathroom exhaust, keep warm air moving across the glass, dry wet surfaces promptly, and investigate leaks or persistent mold.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on government and university moisture-control guidance and was not hands-on tested in a specific building by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/do-ceiling-fans-cool-a-room/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-do-windows-condense-in-winter-why-windows-condense-in-winter-lead-40269a265d",
+          "href": "/images/articles/why-do-windows-condense-in-winter/why-windows-condense-in-winter.png",
+          "packageRelativePath": "media/why-windows-condense-in-winter.png",
+          "mimeType": "image/png",
+          "sha256": "40269a265dfb8b8be33544ebef3b85a97d8f0f2f4fbb327b763f38f274b63045",
+          "sizeBytes": 2552,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram showing humid indoor air reaching a cold window and forming droplets",
+          "caption": "How Biscuit diagram of winter window condensation",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-do-windows-condense-in-winter-why-windows-condense-in-winter-lead-40269a265d",
+        "href": "/images/articles/why-do-windows-condense-in-winter/why-windows-condense-in-winter.png",
+        "packageRelativePath": "media/why-windows-condense-in-winter.png",
+        "mimeType": "image/png",
+        "sha256": "40269a265dfb8b8be33544ebef3b85a97d8f0f2f4fbb327b763f38f274b63045",
+        "sizeBytes": 2552,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram showing humid indoor air reaching a cold window and forming droplets",
+        "caption": "How Biscuit diagram of winter window condensation",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-does-my-wifi-keep-disconnecting/",
       "title": "Why Does My Wi-Fi Keep Disconnecting?",
@@ -5459,7 +6000,7 @@
       "topicId": "heating-cooling",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-30",
+      "updatedDate": "2026-07-31",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -5503,6 +6044,23 @@
     {
       "kind": "topic",
       "renderMode": "canonical-source",
+      "route": "/kitchen/kitchen-appliances/",
+      "title": "Kitchen Appliances",
+      "description": "Choosing, using, maintaining, and troubleshooting common countertop and major kitchen appliances.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-07-31",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
       "route": "/kitchen/troubleshooting-safety/",
       "title": "Kitchen Troubleshooting & Safety",
       "description": "Diagnosing texture, timing, equipment, storage, temperatures, contamination, and important stop conditions.",
@@ -5510,7 +6068,7 @@
       "topicId": "troubleshooting-safety",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-27",
+      "updatedDate": "2026-07-31",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -5688,5 +6246,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:47f37d3244bcc1614f3db504dfe08f417c395b624c175c7164f721e73657941c"
+  "registryDigest": "sha256:3c2f6afea70d58e914a37d22d31b10784c5bffe5f6caaa9bccb7841b5bbeffb6"
 }

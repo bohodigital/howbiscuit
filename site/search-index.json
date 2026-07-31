@@ -106,12 +106,28 @@
       "searchText": "can you plug a space heater into a power strip space heaters should be plugged directly into a wall outlet not into a power strip or extension cord here is why and what to do when the cord will not reach home tech guide articles can you plug space heater into power strip"
     },
     {
+      "route": "/articles/can-you-put-hot-food-in-refrigerator/",
+      "title": "Can You Put Hot Food Directly in the Refrigerator?",
+      "description": "Hot food can go directly into the refrigerator, but large batches should be divided into shallow containers so they cool quickly and safely.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you put hot food directly in the refrigerator hot food can go directly into the refrigerator but large batches should be divided into shallow containers so they cool quickly and safely kitchen guide articles can you put hot food in refrigerator"
+    },
+    {
       "route": "/articles/can-you-refreeze-food-after-power-outage/",
       "title": "Can You Refreeze Food After a Power Outage?",
       "description": "You can refreeze food that still contains ice crystals or remains at 40°F or below. Discard perishables held above 40°F for more than two hours.",
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "can you refreeze food after a power outage you can refreeze food that still contains ice crystals or remains at 40 f or below discard perishables held above 40 f for more than two hours kitchen guide articles can you refreeze food after power outage"
+    },
+    {
+      "route": "/articles/can-you-use-soap-on-cast-iron/",
+      "title": "Can You Use Soap on Cast Iron?",
+      "description": "Yes. A small amount of mild dish soap is generally safe for seasoned cast iron. Wash by hand, dry promptly, and apply a very thin coat of oil if needed.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you use soap on cast iron yes a small amount of mild dish soap is generally safe for seasoned cast iron wash by hand dry promptly and apply a very thin coat of oil if needed kitchen guide articles can you use soap on cast iron"
     },
     {
       "route": "/articles/clothes-taking-too-long-to-dry/",
@@ -168,6 +184,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "does aluminum foil improve wi fi signal metal can redirect wi fi but the famous study used computer optimized 3d reflectors coated with foil random kitchen foil can help one direction and hurt another home tech guide articles does aluminum foil improve wifi signal"
+    },
+    {
+      "route": "/articles/does-dishwasher-use-less-water-than-hand-washing/",
+      "title": "Does a Dishwasher Use Less Water Than Hand-Washing?",
+      "description": "A modern dishwasher, especially an ENERGY STAR certified model run with full loads, usually uses less water than washing the same dishes by hand under a running faucet.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "does a dishwasher use less water than hand washing a modern dishwasher especially an energy star certified model run with full loads usually uses less water than washing the same dishes by hand under a running faucet kitchen guide articles does dishwasher use less water than hand washing"
     },
     {
       "route": "/articles/does-turning-ac-off-save-money/",
@@ -264,6 +288,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how does baking powder work baking powder makes batter and dough rise by producing carbon dioxide bubbles here is what triggers it what goes wrong and how to test your can kitchen guide articles how does baking powder work"
+    },
+    {
+      "route": "/articles/how-long-can-cooked-food-sit-out/",
+      "title": "How Long Can Cooked Food Sit Out?",
+      "description": "Most perishable cooked food should be refrigerated within two hours, or within one hour when the temperature is above 90°F. Food held safely hot or cold follows different rules.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how long can cooked food sit out most perishable cooked food should be refrigerated within two hours or within one hour when the temperature is above 90 f food held safely hot or cold follows different rules kitchen guide articles how long can cooked food sit out"
     },
     {
       "route": "/articles/how-long-food-safe-refrigerator-without-power/",
@@ -410,6 +442,14 @@
       "searchText": "how to calculate what an appliance costs to run calculate appliance cost from annual kwh measured kwh or watts and time learn which method works for refrigerators dryers dishwashers ovens and small appliances home apartment guide articles how to calculate appliance electricity cost"
     },
     {
+      "route": "/articles/how-to-clean-dishwasher-filter/",
+      "title": "How to Clean a Dishwasher Filter",
+      "description": "A removable dishwasher filter can collect food, grit, labels, and debris. Here is how to locate, clean, inspect, and reinstall it without damaging the machine.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to clean a dishwasher filter a removable dishwasher filter can collect food grit labels and debris here is how to locate clean inspect and reinstall it without damaging the machine kitchen guide articles how to clean dishwasher filter"
+    },
+    {
       "route": "/articles/how-to-read-energyguide-label/",
       "title": "How to Read an EnergyGuide Label",
       "description": "Learn what the yellow EnergyGuide label says about annual energy use, estimated operating cost, similar-model comparisons, capacity, and local-rate recalculation.",
@@ -488,6 +528,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "repair or replace an appliance safety and recall status come first then compare diagnosis confidence repair cost repeat failures support parts operating cost installation downtime and replacement cost shop smarter guide articles repair or replace appliance"
+    },
+    {
+      "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
+      "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
+      "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "should you rinse dishes before putting them in the dishwasher usually no scrape off solid food and load the dishwasher without hand rinsing modern machines and detergents are designed to do the washing kitchen guide articles should you rinse dishes before dishwasher"
     },
     {
       "route": "/articles/should-you-unplug-electronics-during-thunderstorm/",
@@ -584,6 +632,22 @@
       "category": null,
       "type": "Editorial standard",
       "searchText": "why are some answers better than others a useful answer addresses the real question explains its reasoning shows the next move and makes the limits of its evidence visible editorial standard articles why are some answers better than others"
+    },
+    {
+      "route": "/articles/why-do-led-light-bulbs-flicker/",
+      "title": "Why Do LED Light Bulbs Flicker?",
+      "description": "LED flicker commonly comes from an incompatible dimmer, a non-dimmable bulb, a poor driver, a loose connection, or unstable power. Here is how to narrow it down safely.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why do led light bulbs flicker led flicker commonly comes from an incompatible dimmer a non dimmable bulb a poor driver a loose connection or unstable power here is how to narrow it down safely home tech guide articles why do led light bulbs flicker"
+    },
+    {
+      "route": "/articles/why-do-windows-condense-in-winter/",
+      "title": "Why Do Windows Condense in Winter?",
+      "description": "Winter window condensation forms when humid indoor air meets glass cold enough to fall below the air’s dew point. Here is how to reduce it and when it signals a larger moisture problem.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why do windows condense in winter winter window condensation forms when humid indoor air meets glass cold enough to fall below the air s dew point here is how to reduce it and when it signals a larger moisture problem home apartment guide articles why do windows condense in winter"
     },
     {
       "route": "/articles/why-does-my-wifi-keep-disconnecting/",
@@ -744,6 +808,14 @@
       "category": "Kitchen",
       "type": "Category",
       "searchText": "kitchen mechanism first kitchen guidance for appliances cookware food science substitutions meals and safety kitchen category kitchen"
+    },
+    {
+      "route": "/kitchen/kitchen-appliances/",
+      "title": "Kitchen Appliances",
+      "description": "Choosing, using, maintaining, and troubleshooting common countertop and major kitchen appliances.",
+      "category": "Kitchen",
+      "type": "Topic",
+      "searchText": "kitchen appliances choosing using maintaining and troubleshooting common countertop and major kitchen appliances kitchen topic kitchen kitchen appliances"
     },
     {
       "route": "/kitchen/troubleshooting-safety/",
