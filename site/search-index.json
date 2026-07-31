@@ -98,6 +98,14 @@
       "searchText": "can a microwave interfere with wi fi a microwave oven can interfere with nearby 2 4 ghz wi fi while it is running test the pattern move equipment or use 5 ghz or 6 ghz where supported home tech guide articles can microwave interfere with wifi"
     },
     {
+      "route": "/articles/can-you-plug-space-heater-into-power-strip/",
+      "title": "Can You Plug a Space Heater Into a Power Strip?",
+      "description": "Space heaters should be plugged directly into a wall outlet, not into a power strip or extension cord. Here is why and what to do when the cord will not reach.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "can you plug a space heater into a power strip space heaters should be plugged directly into a wall outlet not into a power strip or extension cord here is why and what to do when the cord will not reach home tech guide articles can you plug space heater into power strip"
+    },
+    {
       "route": "/articles/can-you-refreeze-food-after-power-outage/",
       "title": "Can You Refreeze Food After a Power Outage?",
       "description": "You can refreeze food that still contains ice crystals or remains at 40°F or below. Discard perishables held above 40°F for more than two hours.",
@@ -448,6 +456,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "power outage food safety chart what to keep and what to throw away use this refrigerator and freezer decision chart after an outage it includes the four hour 48 hour 24 hour 40 f and ice crystal rules kitchen guide articles power outage food safety chart"
+    },
+    {
+      "route": "/articles/power-strip-vs-surge-protector/",
+      "title": "Power Strip vs. Surge Protector: What Is the Difference?",
+      "description": "Power strips add outlets. Surge protectors also contain components intended to limit certain voltage surges. Here is how to tell what you own and what neither device can safely do.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "power strip vs surge protector what is the difference power strips add outlets surge protectors also contain components intended to limit certain voltage surges here is how to tell what you own and what neither device can safely do home tech guide articles power strip vs surge protector"
     },
     {
       "route": "/articles/refrigerator-not-cooling-freezer-works/",

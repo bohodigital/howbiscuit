@@ -1,221 +1,232 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "mcp-pb-20260731t042841z-e2f3d597fed8",
-  "approvalDigest": "sha256:6c0b2d65a247d437a9c0734de2dec85b837e5d07500ec052a752cc1aedfd88bb",
+  "releaseId": "mcp-pb-20260731t055213z-8b247c560150",
+  "approvalDigest": "sha256:cfbb1817d96f2f526b24e9a7ffbdadc0593c3bd3e31722289865a83cc46e78b1",
   "files": [
     {
-      "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.BEWX_3cm.js",
-      "bytes": 8310,
-      "sha256": "sha256:6d847bf69e96151e1bd02cff236ce2dc2be3435a366af1fd651b5b508142eee4"
-    },
-    {
-      "path": "articles/do-ceiling-fans-cool-a-room/index.html",
-      "bytes": 44384,
-      "sha256": "sha256:23fb644481824995fb84693ed4b5c3300682ddffd0bcd1c41f2113d12a04dbf4"
+      "path": "articles/can-you-plug-space-heater-into-power-strip/index.html",
+      "bytes": 40688,
+      "sha256": "sha256:04a82d90cf3fad479435211c8e89607a2fd953a34fd96fc4ac380baab2b44c60"
     },
     {
       "path": "articles/index.html",
-      "bytes": 76209,
-      "sha256": "sha256:cada5137cf1df3d21bf40f18943c0dec99ad8c1b72e4aea3b7fd66854bafa04b"
+      "bytes": 77582,
+      "sha256": "sha256:ba8d2981d00e52935c83ac0311a1ec6df875d355a09076169f2dc2012386ee2b"
+    },
+    {
+      "path": "articles/power-strip-vs-surge-protector/index.html",
+      "bytes": 42410,
+      "sha256": "sha256:c8b3a107a831c19678005d8314e75021365dcc80be3a9a3a6e3d6060ab7a2d44"
     },
     {
       "path": "feed.xml",
-      "bytes": 25027,
-      "sha256": "sha256:ee3e077f6a7856173d1850b90808f58fb078a37b407d152dcefb9f36a444caec"
+      "bytes": 25023,
+      "sha256": "sha256:f264c2fe1ed25b1021694597097c16e1a5f766c53e325003a1e163827d3ce791"
     },
     {
       "path": "home/cleaning/index.html",
-      "bytes": 31390,
-      "sha256": "sha256:dc39f45fe6d00bd7a1bb7c79aa196dc5b1eac56046bcc4321c22bbb695c2f061"
+      "bytes": 31422,
+      "sha256": "sha256:1e19df6ba1a636da88c85f40caf2c5e4d7a85d5a5fc153c0b0bde9b5873e5a3e"
     },
     {
       "path": "home/heating-cooling/index.html",
-      "bytes": 35227,
-      "sha256": "sha256:e8d82c110de1682a1275dce13b7abd4eb8b356c5d477982e3fc05478d043a623"
-    },
-    {
-      "path": "home/index.html",
-      "bytes": 67513,
-      "sha256": "sha256:25cefe518fe9649f934745d002ed23a56a3cbdc2140be1434522c82dd2269ad0"
+      "bytes": 35259,
+      "sha256": "sha256:3e966df4dcf08105ea7da2a2195977c23097ec34a4e38270d3e2e614ffe2a380"
     },
     {
       "path": "home/utilities-energy/index.html",
-      "bytes": 34387,
-      "sha256": "sha256:ed4c3475a48d4717234e8e098e862c436a802ccd6e568d17bcf5ce3e293fe50b"
+      "bytes": 34419,
+      "sha256": "sha256:01240441e3a1645fe25b687226ba024e51203920fcca41fe40d9640820770021"
+    },
+    {
+      "path": "home-tech/index.html",
+      "bytes": 60121,
+      "sha256": "sha256:34611fcbb90b274fe958bb8d36fdef7fef5a6f7bd6a14bee3616d548d10e7e15"
     },
     {
       "path": "home-tech/power-cooling-storage/index.html",
-      "bytes": 32425,
-      "sha256": "sha256:5385a60242c32653096f7bed502cfb6d5f2ff4a1fe9d244c47757a08d3ac54ba"
+      "bytes": 33800,
+      "sha256": "sha256:1b422b50871b317a839cc5f7c16a299c58ee1f7d40c991039634a9437b4ee6b0"
     },
     {
       "path": "home-tech/wifi-routers/index.html",
-      "bytes": 36496,
-      "sha256": "sha256:3dd09aeb54800a80792e2eccedfd426bce248e2d208c9110f94e130d632aa8be"
+      "bytes": 36528,
+      "sha256": "sha256:45c7fe8c93e69f825c672cf7a379052ef202f97323cccd59273514d38bcef6c5"
     },
     {
-      "path": "images/articles/do-ceiling-fans-cool-a-room/ceiling-fan-cools-people-not-rooms.png",
-      "bytes": 1635,
-      "sha256": "sha256:1dff5f5f99745eda505f8916a8e0f6a85a1b0c291f6ca3b76cd299a14a1c8284"
+      "path": "images/articles/can-you-plug-space-heater-into-power-strip/can-you-plug-space-heater-into-power-strip.png",
+      "bytes": 3745,
+      "sha256": "sha256:c7aad6768e077bd8506c396bb9bf69853dcb82aa457753209bf433ffcda102fe"
+    },
+    {
+      "path": "images/articles/power-strip-vs-surge-protector/power-strip-vs-surge-protector.png",
+      "bytes": 4397,
+      "sha256": "sha256:188c5edc168ef0f10f4d8975cf62120789c669463d9baf144680729575e14e52"
     },
     {
       "path": "index.html",
-      "bytes": 37231,
-      "sha256": "sha256:3b7a8d9f06b30dfccdd33726a93059d545cc48ab8edc7880c4cd026911fcf26d"
+      "bytes": 37600,
+      "sha256": "sha256:4cd4efaa36c798da4f6f24411fcf05863d338070f2d6e66def51c1ddce4519fa"
     },
     {
       "path": "kitchen/troubleshooting-safety/index.html",
-      "bytes": 38878,
-      "sha256": "sha256:1dc625b0e833c72ebeb96da8d0ec5ad77504fce5646f0e2105ed94616e15798c"
+      "bytes": 38910,
+      "sha256": "sha256:9679f7a0b2df2b433b3d09fc3f52e099b6bff61dd1de136b61c48b2a34f171a0"
     },
     {
       "path": "llms.txt",
-      "bytes": 26701,
-      "sha256": "sha256:2ee27622432ce203efdbcce880bdf8ccd903f2a4614fec441e61d14517cdfbe2"
+      "bytes": 27299,
+      "sha256": "sha256:078b2b73bebaa8c78bcad7e8a67e3621e821122df4693f5b258074f509f890bc"
     },
     {
-      "path": "pagefind/filter/en_638b72d.pf_filter",
-      "bytes": 262,
-      "sha256": "sha256:b9d4a168e20f50cb8638f5fbf84758ccc2b93ed21d127436d58fac69db9969a0"
+      "path": "pagefind/filter/en_6b7b3ae.pf_filter",
+      "bytes": 240,
+      "sha256": "sha256:dae5d0fb495c416c820d530e255fe285a367f002fd148d8ac6dcd33f26f51b9a"
     },
     {
-      "path": "pagefind/filter/en_ada56ef.pf_filter",
-      "bytes": 236,
-      "sha256": "sha256:c20d23525aa915b0ceed1b1812f645c22a77a02ce13dcb7af2ca112fa511c888"
+      "path": "pagefind/filter/en_f59b733.pf_filter",
+      "bytes": 265,
+      "sha256": "sha256:44ca17c50c1379f543a5c1cb8c8d597f317d99426cc3cfcecb0dc55c6816013b"
     },
     {
-      "path": "pagefind/fragment/en_42fa396.pf_fragment",
-      "bytes": 1642,
-      "sha256": "sha256:00e05333637d2353a65d90ba47ed80233bb6c9958f405a75519fa20c76c4c9b3"
+      "path": "pagefind/fragment/en_297bc4b.pf_fragment",
+      "bytes": 3499,
+      "sha256": "sha256:bc732796322a9ba40f0f83a9fa45cb4fd5dbc4909f55c9437ea597a6149d776a"
     },
     {
-      "path": "pagefind/fragment/en_97a89d9.pf_fragment",
-      "bytes": 7149,
-      "sha256": "sha256:8dd84a75c697a5f52e656b9dc91251615fde9deba10f88bf684301d4356e4f4d"
+      "path": "pagefind/fragment/en_9472301.pf_fragment",
+      "bytes": 3142,
+      "sha256": "sha256:fa728f4f93d19fe5107b0428131717818608f7600dc66e62ba5da73f3b2d65b6"
     },
     {
-      "path": "pagefind/fragment/en_a3ff963.pf_fragment",
-      "bytes": 2485,
-      "sha256": "sha256:db7143b6c8cf42ee2354b1420221ad467e14048e49d47c9b23830ef3cde3a812"
+      "path": "pagefind/fragment/en_ad766b5.pf_fragment",
+      "bytes": 7347,
+      "sha256": "sha256:a2600860c30c092afe987619314e43f113be8a46383ed07c94f0360f68906587"
     },
     {
-      "path": "pagefind/fragment/en_e2d9f86.pf_fragment",
-      "bytes": 3714,
-      "sha256": "sha256:b967c1ea43dd556533dee38c28219ebdeb1e838716ab70fca18aa28699b93ec8"
+      "path": "pagefind/fragment/en_c635233.pf_fragment",
+      "bytes": 1432,
+      "sha256": "sha256:1c88ef06f0ba701156d9987b46567bbfc94103253762af2e8e7c99484d63c302"
     },
     {
-      "path": "pagefind/fragment/en_fa61ece.pf_fragment",
-      "bytes": 3953,
-      "sha256": "sha256:9d02d88034bb1c39a7b2270918f43ba60a1f15cbf3a2fc0ea8b97290b0727764"
+      "path": "pagefind/fragment/en_ed23f55.pf_fragment",
+      "bytes": 2505,
+      "sha256": "sha256:61a4daed0ca41df62e11ffae64ba3f301ece3bbe062326cf7ca47fed9391175d"
     },
     {
-      "path": "pagefind/index/en_3070cd2.pf_index",
-      "bytes": 13275,
-      "sha256": "sha256:b8758508572694770594c1c9241a582cc282db66846b4b4ac5215043ec24b7de"
+      "path": "pagefind/fragment/en_f7ba1d5.pf_fragment",
+      "bytes": 3178,
+      "sha256": "sha256:01f1bc4ea3a7d0e4fc00f7654c967cac667a09b5d56e75793831d23cd460e685"
     },
     {
-      "path": "pagefind/index/en_4341eb3.pf_index",
-      "bytes": 29540,
-      "sha256": "sha256:2a0983437d4591b522f981c85d378f9b56e00c9b01ab5b40120b7858547d524b"
+      "path": "pagefind/index/en_3824696.pf_index",
+      "bytes": 22158,
+      "sha256": "sha256:0384bd6eb9b94bcae7a953e42703c6774c115ba7c56dbb27c2fecca89a834a03"
     },
     {
-      "path": "pagefind/index/en_5c40c2a.pf_index",
-      "bytes": 30279,
-      "sha256": "sha256:7dcfb4d5d348bcee063ae88c859cc458cdb01885aa2fe3044c5c2a387a366839"
+      "path": "pagefind/index/en_40d64fc.pf_index",
+      "bytes": 29447,
+      "sha256": "sha256:c591b52d1ce8d0b59cd45013c741c9420f08cb417bbd79edf83c55720c51d0b6"
     },
     {
-      "path": "pagefind/index/en_8e8ab42.pf_index",
-      "bytes": 29090,
-      "sha256": "sha256:66d86a1246c5a3648bc8d21f58ad49531698c5691709a79e9d52b6568f90bb85"
+      "path": "pagefind/index/en_44242e8.pf_index",
+      "bytes": 29232,
+      "sha256": "sha256:6c1249532a06522889da3c7712208905f7481abd0821229dee94c4202af06704"
     },
     {
-      "path": "pagefind/index/en_a5c02b0.pf_index",
-      "bytes": 29172,
-      "sha256": "sha256:a9200052aa3f1d567b7d4654116274d7244450a020952352ab2f796efa674d85"
+      "path": "pagefind/index/en_4eedb1b.pf_index",
+      "bytes": 29724,
+      "sha256": "sha256:c43ffd0659f68569ab765751d72fa4b382ffc51cbebc35c374bbf73eab1e8e7f"
     },
     {
-      "path": "pagefind/index/en_ab613d9.pf_index",
-      "bytes": 29196,
-      "sha256": "sha256:2299976eabb71a09241da6325f31c17524535c3fd7c288d730912a3a01e56cfd"
+      "path": "pagefind/index/en_8432d89.pf_index",
+      "bytes": 29316,
+      "sha256": "sha256:4e4c2d265b353fc50b0a65fda52e21c3107cea09e8881574746d7ec68ff411da"
     },
     {
-      "path": "pagefind/index/en_bec3a16.pf_index",
-      "bytes": 28157,
-      "sha256": "sha256:3bcaae05e6fe5addc48009da2e12f5bb4526ffee6f4909c18d1f88c68d2f6c17"
+      "path": "pagefind/index/en_895f516.pf_index",
+      "bytes": 30472,
+      "sha256": "sha256:260f9f7e2eb3bf025a855ef9270318318339ff8cef0d6724b4c9a7d646fb3e16"
     },
     {
-      "path": "pagefind/index/en_c321cc7.pf_index",
-      "bytes": 30213,
-      "sha256": "sha256:a7a3b9a2609051f0bb43ce8481b724cc7d891be2db46f34a234f3cc01b11c86a"
+      "path": "pagefind/index/en_8dacb87.pf_index",
+      "bytes": 29691,
+      "sha256": "sha256:bc65cb07d3d812f3f9ddf66b8aae2ffad0efa8e03929a5f96fb57e79db63d2b8"
     },
     {
-      "path": "pagefind/index/en_ceb2e43.pf_index",
-      "bytes": 29314,
-      "sha256": "sha256:09ce3102d54dced85dc51291de3c9ba148f16acb540da1077ab19292990cf1b8"
+      "path": "pagefind/index/en_97111ce.pf_index",
+      "bytes": 27339,
+      "sha256": "sha256:0ee489083a003bc3159de0228d1a7a4e2c22e34c753975fe4426ba074f82e407"
     },
     {
-      "path": "pagefind/index/en_d6a9c36.pf_index",
-      "bytes": 30253,
-      "sha256": "sha256:5071d98f60f93b9e5db9ccd01e31355fab687066895bbc8af49091af22a3e66e"
+      "path": "pagefind/index/en_cb9458c.pf_index",
+      "bytes": 28037,
+      "sha256": "sha256:7c232ca15a921254484db79f0505833797989c3843db8329f94b5dee2ba8da3f"
     },
     {
-      "path": "pagefind/index/en_eccd63a.pf_index",
-      "bytes": 29818,
-      "sha256": "sha256:aaa0efcd7c172177e3c6852d134aa6e681b42e523705200aa42b981fa834fe1d"
+      "path": "pagefind/index/en_d47e065.pf_index",
+      "bytes": 29395,
+      "sha256": "sha256:a06473e3848550f18464cc66532c4e37925f416d1e2d0fc991b97a032e40dcb2"
     },
     {
-      "path": "pagefind/index/en_f9e2d71.pf_index",
-      "bytes": 29688,
-      "sha256": "sha256:88728625056a0f7bfcd460c2e0d2f49686dafcea914cd68273072254c43ae4d6"
+      "path": "pagefind/index/en_e4329e1.pf_index",
+      "bytes": 29263,
+      "sha256": "sha256:b98a8287d24e9fa8849ed048631f1406f6c907655658fefc1f7414d5b1b43ea9"
+    },
+    {
+      "path": "pagefind/index/en_e82ddf5.pf_index",
+      "bytes": 30698,
+      "sha256": "sha256:626ac01a5b0fb024fee54b25350c2920a4305feb66bea8525634f6379f92b2ca"
     },
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 173,
-      "sha256": "sha256:407030f5f9001ba4db0d1de4e8a5f794bc95d27382d48be1ee4a2bb54dd115af"
+      "sha256": "sha256:89374a8db864dfe6259ebba05aaf9241499f1d465be92c0e9f9d06570bf87227"
     },
     {
-      "path": "pagefind/pagefind.en_8a17aee6a1.pf_meta",
-      "bytes": 1131,
-      "sha256": "sha256:afbf0d942adc981f4c9ae5305a1026d4129d4c6ec00a1cb90ee404738df39fc0"
+      "path": "pagefind/pagefind.en_f20dd5fdbc.pf_meta",
+      "bytes": 1140,
+      "sha256": "sha256:e0e60b807be213b8f5253153f1b00deecaaeaf0b56dd2c5f818b8f8b82d9a328"
     },
     {
       "path": "search-index.json",
-      "bytes": 63001,
-      "sha256": "sha256:2f10ae7b07a5ea586bad30c594b1bff73c86676f0dbffc376ddaafe189bccb8c"
+      "bytes": 64401,
+      "sha256": "sha256:a07fa0b7963831e391cc316210cc7b6718faec6e0dd665baa60dad63ed45bb2a"
     },
     {
       "path": "shop/total-cost-ownership/index.html",
-      "bytes": 30899,
-      "sha256": "sha256:c31f925a3e5af25e777b4a32e6123e9e010c99cb686a47ab00a6f41769e09980"
+      "bytes": 30931,
+      "sha256": "sha256:03c906e4ad735029397528566af80d366f9f521fdc25f092ef1a559b16e470fe"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 12999,
-      "sha256": "sha256:c70b4249c236d74c834101eeb938e48924d098b99db1f54793863ffb52d170a2"
+      "bytes": 13271,
+      "sha256": "sha256:edd831c32c9a95b6cd9000b79c589120cc28f8588049af09c2ee847efad3d9ae"
     }
   ],
   "removedFiles": [
-    "pagefind/filter/en_2c2aac8.pf_filter",
-    "pagefind/filter/en_be2330a.pf_filter",
-    "pagefind/fragment/en_9f66bfc.pf_fragment",
-    "pagefind/fragment/en_b016997.pf_fragment",
-    "pagefind/fragment/en_dbcb55f.pf_fragment",
-    "pagefind/fragment/en_e6bcced.pf_fragment",
-    "pagefind/index/en_12c89a5.pf_index",
-    "pagefind/index/en_1567aab.pf_index",
-    "pagefind/index/en_1f26507.pf_index",
-    "pagefind/index/en_3ced72d.pf_index",
-    "pagefind/index/en_4ad16b6.pf_index",
-    "pagefind/index/en_66a8735.pf_index",
-    "pagefind/index/en_71a02a1.pf_index",
-    "pagefind/index/en_783ff89.pf_index",
-    "pagefind/index/en_87578cc.pf_index",
-    "pagefind/index/en_9593080.pf_index",
-    "pagefind/index/en_c92025f.pf_index",
-    "pagefind/index/en_f28be52.pf_index",
-    "pagefind/pagefind.en_e0e8cd417b.pf_meta"
+    "pagefind/filter/en_638b72d.pf_filter",
+    "pagefind/filter/en_ada56ef.pf_filter",
+    "pagefind/fragment/en_4a8a2be.pf_fragment",
+    "pagefind/fragment/en_97a89d9.pf_fragment",
+    "pagefind/fragment/en_a3ff963.pf_fragment",
+    "pagefind/fragment/en_db9be13.pf_fragment",
+    "pagefind/index/en_3070cd2.pf_index",
+    "pagefind/index/en_4341eb3.pf_index",
+    "pagefind/index/en_5c40c2a.pf_index",
+    "pagefind/index/en_8e8ab42.pf_index",
+    "pagefind/index/en_a5c02b0.pf_index",
+    "pagefind/index/en_ab613d9.pf_index",
+    "pagefind/index/en_bec3a16.pf_index",
+    "pagefind/index/en_c321cc7.pf_index",
+    "pagefind/index/en_ceb2e43.pf_index",
+    "pagefind/index/en_d6a9c36.pf_index",
+    "pagefind/index/en_eccd63a.pf_index",
+    "pagefind/index/en_f9e2d71.pf_index",
+    "pagefind/pagefind.en_8a17aee6a1.pf_meta"
   ],
   "routes": [
-    "/articles/do-ceiling-fans-cool-a-room/"
+    "/articles/can-you-plug-space-heater-into-power-strip/",
+    "/articles/power-strip-vs-surge-protector/"
   ]
 }

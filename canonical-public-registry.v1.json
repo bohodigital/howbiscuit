@@ -630,6 +630,74 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-plug-space-heater-into-power-strip/",
+      "title": "Can You Plug a Space Heater Into a Power Strip?",
+      "description": "Space heaters should be plugged directly into a wall outlet, not into a power strip or extension cord. Here is why and what to do when the cord will not reach.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "No. Plug a portable electric space heater directly into a wall outlet. Do not use a power strip or extension cord, and do not plug anything else into the same outlet if the heater’s instructions warn against it.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-unplug-electronics-during-thunderstorm/",
+          "/articles/do-ceiling-fans-cool-a-room/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-plug-space-heater-into-power-strip-can-you-plug-space-heater-into-power-strip-lead-c7aad6768e",
+          "href": "/images/articles/can-you-plug-space-heater-into-power-strip/can-you-plug-space-heater-into-power-strip.png",
+          "packageRelativePath": "media/can-you-plug-space-heater-into-power-strip.png",
+          "mimeType": "image/png",
+          "sha256": "c7aad6768e077bd8506c396bb9bf69853dcb82aa457753209bf433ffcda102fe",
+          "sizeBytes": 3745,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Can You Plug a Space Heater Into a Power Strip?",
+          "caption": "How Biscuit summary diagram for Can You Plug a Space Heater Into a Power Strip?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-plug-space-heater-into-power-strip-can-you-plug-space-heater-into-power-strip-lead-c7aad6768e",
+        "href": "/images/articles/can-you-plug-space-heater-into-power-strip/can-you-plug-space-heater-into-power-strip.png",
+        "packageRelativePath": "media/can-you-plug-space-heater-into-power-strip.png",
+        "mimeType": "image/png",
+        "sha256": "c7aad6768e077bd8506c396bb9bf69853dcb82aa457753209bf433ffcda102fe",
+        "sizeBytes": 3745,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Can You Plug a Space Heater Into a Power Strip?",
+        "caption": "How Biscuit summary diagram for Can You Plug a Space Heater Into a Power Strip?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/can-you-refreeze-food-after-power-outage/",
       "title": "Can You Refreeze Food After a Power Outage?",
@@ -3638,6 +3706,74 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/power-strip-vs-surge-protector/",
+      "title": "Power Strip vs. Surge Protector: What Is the Difference?",
+      "description": "Power strips add outlets. Surge protectors also contain components intended to limit certain voltage surges. Here is how to tell what you own and what neither device can safely do.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-07-31",
+      "updatedDate": "2026-07-31",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A plain power strip mainly adds outlets. A surge protector adds circuitry designed to clamp certain voltage spikes. Similar appearance does not prove surge protection, so check the label, certification, ratings, and replacement guidance.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on documented guidance and was not hands-on tested by How Biscuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-unplug-electronics-during-thunderstorm/",
+          "/articles/can-you-plug-space-heater-into-power-strip/"
+        ]
+      },
+      "media": [
+        {
+          "id": "power-strip-vs-surge-protector-power-strip-vs-surge-protector-lead-188c5edc16",
+          "href": "/images/articles/power-strip-vs-surge-protector/power-strip-vs-surge-protector.png",
+          "packageRelativePath": "media/power-strip-vs-surge-protector.png",
+          "mimeType": "image/png",
+          "sha256": "188c5edc168ef0f10f4d8975cf62120789c669463d9baf144680729575e14e52",
+          "sizeBytes": 4397,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram summarizing Power Strip vs. Surge Protector: What Is the Difference?",
+          "caption": "How Biscuit summary diagram for Power Strip vs. Surge Protector: What Is the Difference?",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "power-strip-vs-surge-protector-power-strip-vs-surge-protector-lead-188c5edc16",
+        "href": "/images/articles/power-strip-vs-surge-protector/power-strip-vs-surge-protector.png",
+        "packageRelativePath": "media/power-strip-vs-surge-protector.png",
+        "mimeType": "image/png",
+        "sha256": "188c5edc168ef0f10f4d8975cf62120789c669463d9baf144680729575e14e52",
+        "sizeBytes": 4397,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram summarizing Power Strip vs. Surge Protector: What Is the Difference?",
+        "caption": "How Biscuit summary diagram for Power Strip vs. Surge Protector: What Is the Difference?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/refrigerator-not-cooling-freezer-works/",
       "title": "Refrigerator Not Cooling but Freezer Works",
@@ -5255,7 +5391,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-27",
+      "updatedDate": "2026-07-31",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -5552,5 +5688,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:2c47ec5b2c2d93c40628a36c8572d53b10d19549a9cd90260c6ee2662b810d32"
+  "registryDigest": "sha256:47f37d3244bcc1614f3db504dfe08f417c395b624c175c7164f721e73657941c"
 }
