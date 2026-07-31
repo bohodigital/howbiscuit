@@ -1,26 +1,221 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "scale-readiness-static-search-20260729",
-  "approvalDigest": "sha256:62a1684ef591eab83b174185acf2150b2a166112922c607badc95faf14718c28",
+  "releaseId": "mcp-pb-20260731t042841z-e2f3d597fed8",
+  "approvalDigest": "sha256:6c0b2d65a247d437a9c0734de2dec85b837e5d07500ec052a752cc1aedfd88bb",
   "files": [
     {
-      "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.8ZOM0i6j.js",
+      "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.BEWX_3cm.js",
       "bytes": 8310,
       "sha256": "sha256:6d847bf69e96151e1bd02cff236ce2dc2be3435a366af1fd651b5b508142eee4"
     },
     {
-      "path": "_headers",
-      "bytes": 704,
-      "sha256": "sha256:cd0ba281571321b07235f026b71c12422e7b97bb34d9babd80395dc67c73a6d1"
+      "path": "articles/do-ceiling-fans-cool-a-room/index.html",
+      "bytes": 44384,
+      "sha256": "sha256:23fb644481824995fb84693ed4b5c3300682ddffd0bcd1c41f2113d12a04dbf4"
+    },
+    {
+      "path": "articles/index.html",
+      "bytes": 76209,
+      "sha256": "sha256:cada5137cf1df3d21bf40f18943c0dec99ad8c1b72e4aea3b7fd66854bafa04b"
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 25027,
+      "sha256": "sha256:ee3e077f6a7856173d1850b90808f58fb078a37b407d152dcefb9f36a444caec"
+    },
+    {
+      "path": "home/cleaning/index.html",
+      "bytes": 31390,
+      "sha256": "sha256:dc39f45fe6d00bd7a1bb7c79aa196dc5b1eac56046bcc4321c22bbb695c2f061"
+    },
+    {
+      "path": "home/heating-cooling/index.html",
+      "bytes": 35227,
+      "sha256": "sha256:e8d82c110de1682a1275dce13b7abd4eb8b356c5d477982e3fc05478d043a623"
+    },
+    {
+      "path": "home/index.html",
+      "bytes": 67513,
+      "sha256": "sha256:25cefe518fe9649f934745d002ed23a56a3cbdc2140be1434522c82dd2269ad0"
+    },
+    {
+      "path": "home/utilities-energy/index.html",
+      "bytes": 34387,
+      "sha256": "sha256:ed4c3475a48d4717234e8e098e862c436a802ccd6e568d17bcf5ce3e293fe50b"
+    },
+    {
+      "path": "home-tech/power-cooling-storage/index.html",
+      "bytes": 32425,
+      "sha256": "sha256:5385a60242c32653096f7bed502cfb6d5f2ff4a1fe9d244c47757a08d3ac54ba"
+    },
+    {
+      "path": "home-tech/wifi-routers/index.html",
+      "bytes": 36496,
+      "sha256": "sha256:3dd09aeb54800a80792e2eccedfd426bce248e2d208c9110f94e130d632aa8be"
+    },
+    {
+      "path": "images/articles/do-ceiling-fans-cool-a-room/ceiling-fan-cools-people-not-rooms.png",
+      "bytes": 1635,
+      "sha256": "sha256:1dff5f5f99745eda505f8916a8e0f6a85a1b0c291f6ca3b76cd299a14a1c8284"
+    },
+    {
+      "path": "index.html",
+      "bytes": 37231,
+      "sha256": "sha256:3b7a8d9f06b30dfccdd33726a93059d545cc48ab8edc7880c4cd026911fcf26d"
+    },
+    {
+      "path": "kitchen/troubleshooting-safety/index.html",
+      "bytes": 38878,
+      "sha256": "sha256:1dc625b0e833c72ebeb96da8d0ec5ad77504fce5646f0e2105ed94616e15798c"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 26701,
+      "sha256": "sha256:2ee27622432ce203efdbcce880bdf8ccd903f2a4614fec441e61d14517cdfbe2"
+    },
+    {
+      "path": "pagefind/filter/en_638b72d.pf_filter",
+      "bytes": 262,
+      "sha256": "sha256:b9d4a168e20f50cb8638f5fbf84758ccc2b93ed21d127436d58fac69db9969a0"
+    },
+    {
+      "path": "pagefind/filter/en_ada56ef.pf_filter",
+      "bytes": 236,
+      "sha256": "sha256:c20d23525aa915b0ceed1b1812f645c22a77a02ce13dcb7af2ca112fa511c888"
+    },
+    {
+      "path": "pagefind/fragment/en_42fa396.pf_fragment",
+      "bytes": 1642,
+      "sha256": "sha256:00e05333637d2353a65d90ba47ed80233bb6c9958f405a75519fa20c76c4c9b3"
+    },
+    {
+      "path": "pagefind/fragment/en_97a89d9.pf_fragment",
+      "bytes": 7149,
+      "sha256": "sha256:8dd84a75c697a5f52e656b9dc91251615fde9deba10f88bf684301d4356e4f4d"
+    },
+    {
+      "path": "pagefind/fragment/en_a3ff963.pf_fragment",
+      "bytes": 2485,
+      "sha256": "sha256:db7143b6c8cf42ee2354b1420221ad467e14048e49d47c9b23830ef3cde3a812"
+    },
+    {
+      "path": "pagefind/fragment/en_e2d9f86.pf_fragment",
+      "bytes": 3714,
+      "sha256": "sha256:b967c1ea43dd556533dee38c28219ebdeb1e838716ab70fca18aa28699b93ec8"
+    },
+    {
+      "path": "pagefind/fragment/en_fa61ece.pf_fragment",
+      "bytes": 3953,
+      "sha256": "sha256:9d02d88034bb1c39a7b2270918f43ba60a1f15cbf3a2fc0ea8b97290b0727764"
+    },
+    {
+      "path": "pagefind/index/en_3070cd2.pf_index",
+      "bytes": 13275,
+      "sha256": "sha256:b8758508572694770594c1c9241a582cc282db66846b4b4ac5215043ec24b7de"
+    },
+    {
+      "path": "pagefind/index/en_4341eb3.pf_index",
+      "bytes": 29540,
+      "sha256": "sha256:2a0983437d4591b522f981c85d378f9b56e00c9b01ab5b40120b7858547d524b"
+    },
+    {
+      "path": "pagefind/index/en_5c40c2a.pf_index",
+      "bytes": 30279,
+      "sha256": "sha256:7dcfb4d5d348bcee063ae88c859cc458cdb01885aa2fe3044c5c2a387a366839"
+    },
+    {
+      "path": "pagefind/index/en_8e8ab42.pf_index",
+      "bytes": 29090,
+      "sha256": "sha256:66d86a1246c5a3648bc8d21f58ad49531698c5691709a79e9d52b6568f90bb85"
+    },
+    {
+      "path": "pagefind/index/en_a5c02b0.pf_index",
+      "bytes": 29172,
+      "sha256": "sha256:a9200052aa3f1d567b7d4654116274d7244450a020952352ab2f796efa674d85"
+    },
+    {
+      "path": "pagefind/index/en_ab613d9.pf_index",
+      "bytes": 29196,
+      "sha256": "sha256:2299976eabb71a09241da6325f31c17524535c3fd7c288d730912a3a01e56cfd"
+    },
+    {
+      "path": "pagefind/index/en_bec3a16.pf_index",
+      "bytes": 28157,
+      "sha256": "sha256:3bcaae05e6fe5addc48009da2e12f5bb4526ffee6f4909c18d1f88c68d2f6c17"
+    },
+    {
+      "path": "pagefind/index/en_c321cc7.pf_index",
+      "bytes": 30213,
+      "sha256": "sha256:a7a3b9a2609051f0bb43ce8481b724cc7d891be2db46f34a234f3cc01b11c86a"
+    },
+    {
+      "path": "pagefind/index/en_ceb2e43.pf_index",
+      "bytes": 29314,
+      "sha256": "sha256:09ce3102d54dced85dc51291de3c9ba148f16acb540da1077ab19292990cf1b8"
+    },
+    {
+      "path": "pagefind/index/en_d6a9c36.pf_index",
+      "bytes": 30253,
+      "sha256": "sha256:5071d98f60f93b9e5db9ccd01e31355fab687066895bbc8af49091af22a3e66e"
+    },
+    {
+      "path": "pagefind/index/en_eccd63a.pf_index",
+      "bytes": 29818,
+      "sha256": "sha256:aaa0efcd7c172177e3c6852d134aa6e681b42e523705200aa42b981fa834fe1d"
+    },
+    {
+      "path": "pagefind/index/en_f9e2d71.pf_index",
+      "bytes": 29688,
+      "sha256": "sha256:88728625056a0f7bfcd460c2e0d2f49686dafcea914cd68273072254c43ae4d6"
+    },
+    {
+      "path": "pagefind/pagefind-entry.json",
+      "bytes": 173,
+      "sha256": "sha256:407030f5f9001ba4db0d1de4e8a5f794bc95d27382d48be1ee4a2bb54dd115af"
+    },
+    {
+      "path": "pagefind/pagefind.en_8a17aee6a1.pf_meta",
+      "bytes": 1131,
+      "sha256": "sha256:afbf0d942adc981f4c9ae5305a1026d4129d4c6ec00a1cb90ee404738df39fc0"
     },
     {
       "path": "search-index.json",
-      "bytes": 62242,
-      "sha256": "sha256:f6a3cd4f7c8a4b06ad7bca8008cf1062dbfa402edd4046d537c782ed55b153f9"
+      "bytes": 63001,
+      "sha256": "sha256:2f10ae7b07a5ea586bad30c594b1bff73c86676f0dbffc376ddaafe189bccb8c"
+    },
+    {
+      "path": "shop/total-cost-ownership/index.html",
+      "bytes": 30899,
+      "sha256": "sha256:c31f925a3e5af25e777b4a32e6123e9e010c99cb686a47ab00a6f41769e09980"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 12999,
+      "sha256": "sha256:c70b4249c236d74c834101eeb938e48924d098b99db1f54793863ffb52d170a2"
     }
   ],
-  "removedFiles": [],
+  "removedFiles": [
+    "pagefind/filter/en_2c2aac8.pf_filter",
+    "pagefind/filter/en_be2330a.pf_filter",
+    "pagefind/fragment/en_9f66bfc.pf_fragment",
+    "pagefind/fragment/en_b016997.pf_fragment",
+    "pagefind/fragment/en_dbcb55f.pf_fragment",
+    "pagefind/fragment/en_e6bcced.pf_fragment",
+    "pagefind/index/en_12c89a5.pf_index",
+    "pagefind/index/en_1567aab.pf_index",
+    "pagefind/index/en_1f26507.pf_index",
+    "pagefind/index/en_3ced72d.pf_index",
+    "pagefind/index/en_4ad16b6.pf_index",
+    "pagefind/index/en_66a8735.pf_index",
+    "pagefind/index/en_71a02a1.pf_index",
+    "pagefind/index/en_783ff89.pf_index",
+    "pagefind/index/en_87578cc.pf_index",
+    "pagefind/index/en_9593080.pf_index",
+    "pagefind/index/en_c92025f.pf_index",
+    "pagefind/index/en_f28be52.pf_index",
+    "pagefind/pagefind.en_e0e8cd417b.pf_meta"
+  ],
   "routes": [
-    "/"
+    "/articles/do-ceiling-fans-cool-a-room/"
   ]
 }

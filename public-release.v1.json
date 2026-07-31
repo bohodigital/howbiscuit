@@ -1,9 +1,9 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:23e39373793b9cc3db665c8b6eba9d738af723c1d521b6e4371c026decdc8309",
-  "fileCount": 895,
-  "byteCount": 52047768,
-  "htmlRouteCount": 117,
+  "artifactDigest": "sha256:3224cf6ea84b282241ed61bc3963332e6adfc2e474aca6292472ed50223d2cfa",
+  "fileCount": 899,
+  "byteCount": 52115018,
+  "htmlRouteCount": 118,
   "routes": [
     "/",
     "/404.html",
@@ -23,6 +23,7 @@
     "/articles/cold-vs-warm-vs-hot-water-laundry/",
     "/articles/dehumidifier-running-not-collecting-water/",
     "/articles/dehumidifier-vs-air-conditioner/",
+    "/articles/do-ceiling-fans-cool-a-room/",
     "/articles/do-you-need-refrigerator-freezer-thermometer/",
     "/articles/does-aluminum-foil-improve-wifi-signal/",
     "/articles/does-turning-ac-off-save-money/",
@@ -450,6 +451,11 @@
       "sha256": "sha256:6d847bf69e96151e1bd02cff236ce2dc2be3435a366af1fd651b5b508142eee4"
     },
     {
+      "path": "_astro/SiteHeader.astro_astro_type_script_index_0_lang.BEWX_3cm.js",
+      "bytes": 8310,
+      "sha256": "sha256:6d847bf69e96151e1bd02cff236ce2dc2be3435a366af1fd651b5b508142eee4"
+    },
+    {
       "path": "_astro/_slug_.C3qI6nIE.css",
       "bytes": 8908,
       "sha256": "sha256:ff4cd7ee269fe09f621b80075b55f926da7d184f7bd258c8792ddccbee96e373"
@@ -563,6 +569,11 @@
       "path": "articles/dehumidifier-vs-air-conditioner/index.html",
       "bytes": 49534,
       "sha256": "sha256:88f49b801c33ce9e4574c01eac977d01f0cfd95fc4d76160f8bb6f478860c388"
+    },
+    {
+      "path": "articles/do-ceiling-fans-cool-a-room/index.html",
+      "bytes": 44384,
+      "sha256": "sha256:23fb644481824995fb84693ed4b5c3300682ddffd0bcd1c41f2113d12a04dbf4"
     },
     {
       "path": "articles/do-you-need-refrigerator-freezer-thermometer/index.html",
@@ -731,8 +742,8 @@
     },
     {
       "path": "articles/index.html",
-      "bytes": 75470,
-      "sha256": "sha256:159e7ab31c5a8d175e80fdd93af726d9b33ff10eff08e7c93d0ed306e7ee4e8e"
+      "bytes": 76209,
+      "sha256": "sha256:cada5137cf1df3d21bf40f18943c0dec99ad8c1b72e4aea3b7fd66854bafa04b"
     },
     {
       "path": "articles/mesh-wifi-vs-range-extender/index.html",
@@ -2646,8 +2657,8 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 24988,
-      "sha256": "sha256:e74d611a35555ac12743298099bcf8b5492e5f4a8709bea5724af25672cfd1d2"
+      "bytes": 25027,
+      "sha256": "sha256:ee3e077f6a7856173d1850b90808f58fb078a37b407d152dcefb9f36a444caec"
     },
     {
       "path": "h3-workers/events.js",
@@ -2671,23 +2682,23 @@
     },
     {
       "path": "home/cleaning/index.html",
-      "bytes": 31347,
-      "sha256": "sha256:c228b97ecbbad9b7d2f1b7bd9cb0d36666ed2881d80d25cef64eb721ea267bd3"
+      "bytes": 31390,
+      "sha256": "sha256:dc39f45fe6d00bd7a1bb7c79aa196dc5b1eac56046bcc4321c22bbb695c2f061"
     },
     {
       "path": "home/heating-cooling/index.html",
-      "bytes": 34498,
-      "sha256": "sha256:8d068dce3c73de52618d46c36b6e67161c24b8753b68462ef9171e0986b37b50"
+      "bytes": 35227,
+      "sha256": "sha256:e8d82c110de1682a1275dce13b7abd4eb8b356c5d477982e3fc05478d043a623"
     },
     {
       "path": "home/index.html",
-      "bytes": 65693,
-      "sha256": "sha256:421059ac749c81a480f3af9d29f3202f710dbd60eb737ee921fee9d918b42cdb"
+      "bytes": 67513,
+      "sha256": "sha256:25cefe518fe9649f934745d002ed23a56a3cbdc2140be1434522c82dd2269ad0"
     },
     {
       "path": "home/utilities-energy/index.html",
-      "bytes": 34344,
-      "sha256": "sha256:07362012ebfcb314002510f0cc513085abf1aa60614c47d79688b870c6fab9e8"
+      "bytes": 34387,
+      "sha256": "sha256:ed4c3475a48d4717234e8e098e862c436a802ccd6e568d17bcf5ce3e293fe50b"
     },
     {
       "path": "home-tech/index.html",
@@ -2696,13 +2707,13 @@
     },
     {
       "path": "home-tech/power-cooling-storage/index.html",
-      "bytes": 32382,
-      "sha256": "sha256:d83b3956ab36c181b4973b11e829d0c12cedf2c4e09bf931efa926e9853062d8"
+      "bytes": 32425,
+      "sha256": "sha256:5385a60242c32653096f7bed502cfb6d5f2ff4a1fe9d244c47757a08d3ac54ba"
     },
     {
       "path": "home-tech/wifi-routers/index.html",
-      "bytes": 36453,
-      "sha256": "sha256:12df1311374b9dc012feac6cbe435a44352171096b25b640d7f8438989020f20"
+      "bytes": 36496,
+      "sha256": "sha256:3dd09aeb54800a80792e2eccedfd426bce248e2d208c9110f94e130d632aa8be"
     },
     {
       "path": "images/articles/2-4-ghz-vs-5-ghz-wifi/photo-wireless-access-point.jpg",
@@ -2868,6 +2879,11 @@
       "path": "images/articles/dehumidifier-vs-air-conditioner/photo-front.jpg",
       "bytes": 129648,
       "sha256": "sha256:beea19c0471e6117920ea09fe9e37f5cfed50f73fd68aa2b60a748a82acf1420"
+    },
+    {
+      "path": "images/articles/do-ceiling-fans-cool-a-room/ceiling-fan-cools-people-not-rooms.png",
+      "bytes": 1635,
+      "sha256": "sha256:1dff5f5f99745eda505f8916a8e0f6a85a1b0c291f6ca3b76cd299a14a1c8284"
     },
     {
       "path": "images/articles/do-you-need-refrigerator-freezer-thermometer/photo-usda-refrigerator-thermometer.jpg",
@@ -3796,8 +3812,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 37033,
-      "sha256": "sha256:2ef5ef0c09ff1ae5c0e7b5aa665654cc429ce383ded05d157b2021c6ce0a0be3"
+      "bytes": 37231,
+      "sha256": "sha256:3b7a8d9f06b30dfccdd33726a93059d545cc48ab8edc7880c4cd026911fcf26d"
     },
     {
       "path": "kitchen/index.html",
@@ -3806,13 +3822,13 @@
     },
     {
       "path": "kitchen/troubleshooting-safety/index.html",
-      "bytes": 38835,
-      "sha256": "sha256:40b095590321dd53a557b87376458bd44b8375a840b8a5c942ef0fb23dfc9539"
+      "bytes": 38878,
+      "sha256": "sha256:1dc625b0e833c72ebeb96da8d0ec5ad77504fce5646f0e2105ed94616e15798c"
     },
     {
       "path": "llms.txt",
-      "bytes": 26377,
-      "sha256": "sha256:176317a2c0ac5f0dc5fce63f408534fc26913d442b28fbb6f5414605cace7d58"
+      "bytes": 26701,
+      "sha256": "sha256:2ee27622432ce203efdbcce880bdf8ccd903f2a4614fec441e61d14517cdfbe2"
     },
     {
       "path": "metro/atlanta/index.html",
@@ -3880,14 +3896,14 @@
       "sha256": "sha256:f2ca3056feaa0de6701e1d90c065706627f5f310f5b682edace01aeaea8b2541"
     },
     {
-      "path": "pagefind/filter/en_2c2aac8.pf_filter",
-      "bytes": 237,
-      "sha256": "sha256:25be7260d6c83d91eca73ab7098cd276e5830bb286e6e2ca008e780af76ceffb"
+      "path": "pagefind/filter/en_638b72d.pf_filter",
+      "bytes": 262,
+      "sha256": "sha256:b9d4a168e20f50cb8638f5fbf84758ccc2b93ed21d127436d58fac69db9969a0"
     },
     {
-      "path": "pagefind/filter/en_be2330a.pf_filter",
-      "bytes": 261,
-      "sha256": "sha256:eeefd8e5e04fd922225ba83bc6b8356cfee19b13872634c1c988c7ecf0aeceec"
+      "path": "pagefind/filter/en_ada56ef.pf_filter",
+      "bytes": 236,
+      "sha256": "sha256:c20d23525aa915b0ceed1b1812f645c22a77a02ce13dcb7af2ca112fa511c888"
     },
     {
       "path": "pagefind/fragment/en_12b76c3.pf_fragment",
@@ -3988,6 +4004,11 @@
       "path": "pagefind/fragment/en_41e1cc6.pf_fragment",
       "bytes": 1789,
       "sha256": "sha256:47996cb6862037c1a224a18004247128f88f36906333381a86fb67cdfb4a1b4b"
+    },
+    {
+      "path": "pagefind/fragment/en_42fa396.pf_fragment",
+      "bytes": 1642,
+      "sha256": "sha256:00e05333637d2353a65d90ba47ed80233bb6c9958f405a75519fa20c76c4c9b3"
     },
     {
       "path": "pagefind/fragment/en_449d9cb.pf_fragment",
@@ -4135,6 +4156,11 @@
       "sha256": "sha256:d48374d689fda27c5f7ba74c3070a3a91b1339b764c02912d3bab33f5a991dc0"
     },
     {
+      "path": "pagefind/fragment/en_97a89d9.pf_fragment",
+      "bytes": 7149,
+      "sha256": "sha256:8dd84a75c697a5f52e656b9dc91251615fde9deba10f88bf684301d4356e4f4d"
+    },
+    {
       "path": "pagefind/fragment/en_9af8936.pf_fragment",
       "bytes": 704,
       "sha256": "sha256:5f7ab3e071414a38d93f8647fd3052113c0a34a68cecc7af157d3439fbc803fb"
@@ -4150,11 +4176,6 @@
       "sha256": "sha256:95ceb6ad7f35500f59fa78728d3cc5b72a87c20cdb4df8687730dbd1de778591"
     },
     {
-      "path": "pagefind/fragment/en_9f66bfc.pf_fragment",
-      "bytes": 2456,
-      "sha256": "sha256:2ef7afe67a1c3366409df3248e54a08f16354ee02e02adde84f954afea00e88b"
-    },
-    {
       "path": "pagefind/fragment/en_a1dee89.pf_fragment",
       "bytes": 6680,
       "sha256": "sha256:1e7a2cde5c9665bdd870973a91ca5af9f7830875fc14ba8dfb504afee48d077c"
@@ -4163,6 +4184,11 @@
       "path": "pagefind/fragment/en_a32eefc.pf_fragment",
       "bytes": 2356,
       "sha256": "sha256:ead7c292ca9ac3431df669523f1a12ed45d0384a88806a636475cc8032f998bb"
+    },
+    {
+      "path": "pagefind/fragment/en_a3ff963.pf_fragment",
+      "bytes": 2485,
+      "sha256": "sha256:db7143b6c8cf42ee2354b1420221ad467e14048e49d47c9b23830ef3cde3a812"
     },
     {
       "path": "pagefind/fragment/en_a5a53dc.pf_fragment",
@@ -4198,11 +4224,6 @@
       "path": "pagefind/fragment/en_ad7a4eb.pf_fragment",
       "bytes": 4385,
       "sha256": "sha256:9da10338a991669517e738815e7ecb660f2eb0b608aa5004bbc836c60d5363a7"
-    },
-    {
-      "path": "pagefind/fragment/en_b016997.pf_fragment",
-      "bytes": 3590,
-      "sha256": "sha256:4d0b9d9a7e34341b5083d62106c76b16a6a452eac555c5be76c9f3f3ced50eb0"
     },
     {
       "path": "pagefind/fragment/en_b0526dd.pf_fragment",
@@ -4325,14 +4346,14 @@
       "sha256": "sha256:6598ecc168977287c5942029f5e15ded53b1c297fee8dd457bd600c4765daf8d"
     },
     {
-      "path": "pagefind/fragment/en_dbcb55f.pf_fragment",
-      "bytes": 1519,
-      "sha256": "sha256:3271bd916fc2883a6b5b461503ee8f300d52a0cc6e607eb9b7a522ef09624c4d"
-    },
-    {
       "path": "pagefind/fragment/en_e1d6e05.pf_fragment",
       "bytes": 4227,
       "sha256": "sha256:837977085e6de4536e8a3d0d62dada9e3a833d5fdeb2cb39189ba724a64fd0ab"
+    },
+    {
+      "path": "pagefind/fragment/en_e2d9f86.pf_fragment",
+      "bytes": 3714,
+      "sha256": "sha256:b967c1ea43dd556533dee38c28219ebdeb1e838716ab70fca18aa28699b93ec8"
     },
     {
       "path": "pagefind/fragment/en_e51e2e8.pf_fragment",
@@ -4343,11 +4364,6 @@
       "path": "pagefind/fragment/en_e5b6b92.pf_fragment",
       "bytes": 4210,
       "sha256": "sha256:759df3b78d92fe415b54b20405dfd7e5d2311701a65750c2d032c8060e5fc4ce"
-    },
-    {
-      "path": "pagefind/fragment/en_e6bcced.pf_fragment",
-      "bytes": 7021,
-      "sha256": "sha256:6ca4acd973ac35c20052c2f8fec56e3dc7571c45e9bedba92deafc00555cd79c"
     },
     {
       "path": "pagefind/fragment/en_e6e1e23.pf_fragment",
@@ -4385,6 +4401,11 @@
       "sha256": "sha256:a1e30c0643a57f416fb601711d19727c411640390846b79ab6afdc5859cde48c"
     },
     {
+      "path": "pagefind/fragment/en_fa61ece.pf_fragment",
+      "bytes": 3953,
+      "sha256": "sha256:9d02d88034bb1c39a7b2270918f43ba60a1f15cbf3a2fc0ea8b97290b0727764"
+    },
+    {
       "path": "pagefind/fragment/en_fa675d3.pf_fragment",
       "bytes": 2845,
       "sha256": "sha256:5f23855a4df33b644714ef5ef98dfc944847677177a63bceca1ab731eabdb7a3"
@@ -4395,64 +4416,64 @@
       "sha256": "sha256:19ada934806197f0d1cea489671eddfe754e6cc5cb91626b441a12197c7b31aa"
     },
     {
-      "path": "pagefind/index/en_12c89a5.pf_index",
-      "bytes": 29424,
-      "sha256": "sha256:5823851aed65cea57bdde34831fb209b62126a852ab810a96e2c1421ead1e961"
+      "path": "pagefind/index/en_3070cd2.pf_index",
+      "bytes": 13275,
+      "sha256": "sha256:b8758508572694770594c1c9241a582cc282db66846b4b4ac5215043ec24b7de"
     },
     {
-      "path": "pagefind/index/en_1567aab.pf_index",
-      "bytes": 29374,
-      "sha256": "sha256:10f0f180b8eee5237eb7d478d24127587339318b480d498b85822ea1bc2c115d"
+      "path": "pagefind/index/en_4341eb3.pf_index",
+      "bytes": 29540,
+      "sha256": "sha256:2a0983437d4591b522f981c85d378f9b56e00c9b01ab5b40120b7858547d524b"
     },
     {
-      "path": "pagefind/index/en_1f26507.pf_index",
-      "bytes": 28587,
-      "sha256": "sha256:68f8ff35e03b6ff794edf48c08cce2eb50dea101ff06f5a27c1345debb656bec"
+      "path": "pagefind/index/en_5c40c2a.pf_index",
+      "bytes": 30279,
+      "sha256": "sha256:7dcfb4d5d348bcee063ae88c859cc458cdb01885aa2fe3044c5c2a387a366839"
     },
     {
-      "path": "pagefind/index/en_3ced72d.pf_index",
-      "bytes": 29448,
-      "sha256": "sha256:1ad446ac3ef4bbb12e52a44498809ca1e8f0e90ae94fc6adcf69c1a0c0b73851"
+      "path": "pagefind/index/en_8e8ab42.pf_index",
+      "bytes": 29090,
+      "sha256": "sha256:66d86a1246c5a3648bc8d21f58ad49531698c5691709a79e9d52b6568f90bb85"
     },
     {
-      "path": "pagefind/index/en_4ad16b6.pf_index",
-      "bytes": 29468,
-      "sha256": "sha256:b761c8dfacdcad525ec252b1b7afa25d9699deede0229c56b5475c35ead4616a"
+      "path": "pagefind/index/en_a5c02b0.pf_index",
+      "bytes": 29172,
+      "sha256": "sha256:a9200052aa3f1d567b7d4654116274d7244450a020952352ab2f796efa674d85"
     },
     {
-      "path": "pagefind/index/en_66a8735.pf_index",
-      "bytes": 29902,
-      "sha256": "sha256:cbfbe48a938c067d8be7c2d636d57692a2f986859e2ef41e20f287fc316c15b7"
+      "path": "pagefind/index/en_ab613d9.pf_index",
+      "bytes": 29196,
+      "sha256": "sha256:2299976eabb71a09241da6325f31c17524535c3fd7c288d730912a3a01e56cfd"
     },
     {
-      "path": "pagefind/index/en_71a02a1.pf_index",
-      "bytes": 29389,
-      "sha256": "sha256:cc7f399d8e627c5ac49060b30c637081215fa56ae59a38d283a45524d5f47552"
+      "path": "pagefind/index/en_bec3a16.pf_index",
+      "bytes": 28157,
+      "sha256": "sha256:3bcaae05e6fe5addc48009da2e12f5bb4526ffee6f4909c18d1f88c68d2f6c17"
     },
     {
-      "path": "pagefind/index/en_783ff89.pf_index",
-      "bytes": 9875,
-      "sha256": "sha256:a05f43243b22b0ab03fefbf1b15322fb6f7e966b5f955d1443ed6b58f9811e5b"
+      "path": "pagefind/index/en_c321cc7.pf_index",
+      "bytes": 30213,
+      "sha256": "sha256:a7a3b9a2609051f0bb43ce8481b724cc7d891be2db46f34a234f3cc01b11c86a"
     },
     {
-      "path": "pagefind/index/en_87578cc.pf_index",
-      "bytes": 29031,
-      "sha256": "sha256:43d2599a7dd585f66d003309d54ddfaa14a6a3fe6e2da1b41cd58f86080ac171"
+      "path": "pagefind/index/en_ceb2e43.pf_index",
+      "bytes": 29314,
+      "sha256": "sha256:09ce3102d54dced85dc51291de3c9ba148f16acb540da1077ab19292990cf1b8"
     },
     {
-      "path": "pagefind/index/en_9593080.pf_index",
-      "bytes": 28903,
-      "sha256": "sha256:37290d20fd09f24a34bec5e4af796e8248575fcfd1b1d2723c1cf2c45084b084"
+      "path": "pagefind/index/en_d6a9c36.pf_index",
+      "bytes": 30253,
+      "sha256": "sha256:5071d98f60f93b9e5db9ccd01e31355fab687066895bbc8af49091af22a3e66e"
     },
     {
-      "path": "pagefind/index/en_c92025f.pf_index",
-      "bytes": 30560,
-      "sha256": "sha256:bd557f65f36f721e6d7744a93c0dc368036efef2e1fd9c47357cd887a77ae28b"
+      "path": "pagefind/index/en_eccd63a.pf_index",
+      "bytes": 29818,
+      "sha256": "sha256:aaa0efcd7c172177e3c6852d134aa6e681b42e523705200aa42b981fa834fe1d"
     },
     {
-      "path": "pagefind/index/en_f28be52.pf_index",
-      "bytes": 30483,
-      "sha256": "sha256:4e8da85b6e17bf66512166611d2546700b607f4bbabcb7e8bc21fcadf81a074f"
+      "path": "pagefind/index/en_f9e2d71.pf_index",
+      "bytes": 29688,
+      "sha256": "sha256:88728625056a0f7bfcd460c2e0d2f49686dafcea914cd68273072254c43ae4d6"
     },
     {
       "path": "pagefind/pagefind-component-ui.css",
@@ -4467,7 +4488,7 @@
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 173,
-      "sha256": "sha256:8409e5cfd610f987f72721a28b721ed58d4d063e843da05b58d789197d2bd6f1"
+      "sha256": "sha256:407030f5f9001ba4db0d1de4e8a5f794bc95d27382d48be1ee4a2bb54dd115af"
     },
     {
       "path": "pagefind/pagefind-highlight.js",
@@ -4500,9 +4521,9 @@
       "sha256": "sha256:4ca50d25bcab9e1c3afbc00ab5f7761114e83c8fc1b83d38655af1558b650c2a"
     },
     {
-      "path": "pagefind/pagefind.en_e0e8cd417b.pf_meta",
-      "bytes": 1111,
-      "sha256": "sha256:67143d724539e59373465e0cd24a91a7d9569f7301cec258ac6ea0062c710967"
+      "path": "pagefind/pagefind.en_8a17aee6a1.pf_meta",
+      "bytes": 1131,
+      "sha256": "sha256:afbf0d942adc981f4c9ae5305a1026d4129d4c6ec00a1cb90ee404738df39fc0"
     },
     {
       "path": "pagefind/pagefind.js",
@@ -4531,8 +4552,8 @@
     },
     {
       "path": "search-index.json",
-      "bytes": 62242,
-      "sha256": "sha256:f6a3cd4f7c8a4b06ad7bca8008cf1062dbfa402edd4046d537c782ed55b153f9"
+      "bytes": 63001,
+      "sha256": "sha256:2f10ae7b07a5ea586bad30c594b1bff73c86676f0dbffc376ddaafe189bccb8c"
     },
     {
       "path": "shop/index.html",
@@ -4541,13 +4562,13 @@
     },
     {
       "path": "shop/total-cost-ownership/index.html",
-      "bytes": 30856,
-      "sha256": "sha256:e2d3bc188f9ac5ea2a24097bd19cbf7b3f4e08323d6eed5646633ee31e2bd147"
+      "bytes": 30899,
+      "sha256": "sha256:c31f925a3e5af25e777b4a32e6123e9e010c99cb686a47ab00a6f41769e09980"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 12872,
-      "sha256": "sha256:09a57f42265eed03be4744293623c450df3b21e0bc255e5e5c789d00fa3ca097"
+      "bytes": 12999,
+      "sha256": "sha256:c70b4249c236d74c834101eeb938e48924d098b99db1f54793863ffb52d170a2"
     },
     {
       "path": "tools/agricultural-market-context-browser/index.html",
