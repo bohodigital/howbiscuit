@@ -98,6 +98,30 @@
       "searchText": "can a microwave interfere with wi fi a microwave oven can interfere with nearby 2 4 ghz wi fi while it is running test the pattern move equipment or use 5 ghz or 6 ghz where supported home tech guide articles can microwave interfere with wifi"
     },
     {
+      "route": "/articles/can-you-freeze-milk/",
+      "title": "Can You Freeze Milk?",
+      "description": "You can freeze pasteurized milk in a freezer-safe container with expansion space, then thaw it in the refrigerator. Texture may separate, so shake or blend it after thawing.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you freeze milk you can freeze pasteurized milk in a freezer safe container with expansion space then thaw it in the refrigerator texture may separate so shake or blend it after thawing kitchen guide articles can you freeze milk"
+    },
+    {
+      "route": "/articles/can-you-mix-bleach-and-vinegar/",
+      "title": "Can You Mix Bleach and Vinegar?",
+      "description": "Never mix chlorine bleach and vinegar. The combination can release toxic chlorine gas. Leave the area for fresh air and contact emergency or poison help if exposure occurs.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "can you mix bleach and vinegar never mix chlorine bleach and vinegar the combination can release toxic chlorine gas leave the area for fresh air and contact emergency or poison help if exposure occurs home apartment guide articles can you mix bleach and vinegar"
+    },
+    {
+      "route": "/articles/can-you-plug-air-conditioner-into-extension-cord/",
+      "title": "Can You Plug an Air Conditioner Into an Extension Cord?",
+      "description": "A room air conditioner should normally plug directly into a grounded wall outlet, not an extension cord. Here is the safe response when its factory cord will not reach.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "can you plug an air conditioner into an extension cord a room air conditioner should normally plug directly into a grounded wall outlet not an extension cord here is the safe response when its factory cord will not reach home tech guide articles can you plug air conditioner into extension cord"
+    },
+    {
       "route": "/articles/can-you-plug-space-heater-into-power-strip/",
       "title": "Can You Plug a Space Heater Into a Power Strip?",
       "description": "Space heaters should be plugged directly into a wall outlet, not into a power strip or extension cord. Here is why and what to do when the cord will not reach.",
@@ -168,6 +192,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "do ceiling fans cool a room what they actually do ceiling fans make people feel cooler by moving air but they do not meaningfully lower an empty room s temperature here is when to run one when to turn it off and how to pair it with air conditioning home apartment guide articles do ceiling fans cool a room"
+    },
+    {
+      "route": "/articles/do-you-have-to-preheat-oven/",
+      "title": "Do You Have to Preheat the Oven?",
+      "description": "Preheat for most baking and whenever a recipe or package says to. Some roasts and casseroles can start in a cold oven, but food-safety temperatures still govern doneness.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "do you have to preheat the oven preheat for most baking and whenever a recipe or package says to some roasts and casseroles can start in a cold oven but food safety temperatures still govern doneness kitchen guide articles do you have to preheat oven"
     },
     {
       "route": "/articles/do-you-need-refrigerator-freezer-thermometer/",
@@ -296,6 +328,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how long can cooked food sit out most perishable cooked food should be refrigerated within two hours or within one hour when the temperature is above 90 f food held safely hot or cold follows different rules kitchen guide articles how long can cooked food sit out"
+    },
+    {
+      "route": "/articles/how-long-does-cooked-rice-last/",
+      "title": "How Long Does Cooked Rice Last in the Fridge?",
+      "description": "Refrigerate cooked rice within two hours and use it within four days. Cool it promptly in shallow containers and reheat leftovers to 165°F.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how long does cooked rice last in the fridge refrigerate cooked rice within two hours and use it within four days cool it promptly in shallow containers and reheat leftovers to 165 f kitchen guide articles how long does cooked rice last"
     },
     {
       "route": "/articles/how-long-food-safe-refrigerator-without-power/",
@@ -432,6 +472,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "how often should you replace your wi fi router there is no universal router lifespan replace it when support ends security is obsolete failures persist or the hardware cannot meet verified household needs home tech guide articles how often should you replace wifi router"
+    },
+    {
+      "route": "/articles/how-often-test-replace-smoke-alarms/",
+      "title": "How Often Should You Test and Replace Smoke Alarms?",
+      "description": "Test smoke alarms at least monthly and replace the whole alarm when it is 10 years old, or sooner if its instructions or failed tests require it.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how often should you test and replace smoke alarms test smoke alarms at least monthly and replace the whole alarm when it is 10 years old or sooner if its instructions or failed tests require it home apartment guide articles how often test replace smoke alarms"
     },
     {
       "route": "/articles/how-to-calculate-appliance-electricity-cost/",
@@ -618,6 +666,14 @@
       "searchText": "what size dehumidifier do you need choose dehumidifier capacity from the space size and how damp it is energy star recommends 20 30 pints for many damp rooms under 2 000 square feet and more for wetter or larger spaces home tech guide articles what size dehumidifier do i need"
     },
     {
+      "route": "/articles/what-temperature-should-refrigerator-be/",
+      "title": "What Temperature Should a Refrigerator Be?",
+      "description": "Keep the refrigerator at 40°F or below and the freezer at 0°F. Verify the actual temperature with an appliance thermometer and allow air to circulate.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "what temperature should a refrigerator be keep the refrigerator at 40 f or below and the freezer at 0 f verify the actual temperature with an appliance thermometer and allow air to circulate kitchen guide articles what temperature should refrigerator be"
+    },
+    {
       "route": "/articles/where-to-place-wifi-extender/",
       "title": "Where Should You Place a Wi-Fi Extender?",
       "description": "Put the extender roughly halfway between the router and weak area, but only where it still receives a strong upstream signal. Test the link before moving farther.",
@@ -634,6 +690,14 @@
       "searchText": "why are some answers better than others a useful answer addresses the real question explains its reasoning shows the next move and makes the limits of its evidence visible editorial standard articles why are some answers better than others"
     },
     {
+      "route": "/articles/why-dishwasher-leaves-white-film/",
+      "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
+      "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does my dishwasher leave a white film on dishes white film on dishwasher loads is often mineral residue or detergent film but permanent glass etching can look similar use a simple wipe test then adjust water detergent and rinse aid kitchen guide articles why dishwasher leaves white film"
+    },
+    {
       "route": "/articles/why-do-led-light-bulbs-flicker/",
       "title": "Why Do LED Light Bulbs Flicker?",
       "description": "LED flicker commonly comes from an incompatible dimmer, a non-dimmable bulb, a poor driver, a loose connection, or unstable power. Here is how to narrow it down safely.",
@@ -648,6 +712,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why do windows condense in winter winter window condensation forms when humid indoor air meets glass cold enough to fall below the air s dew point here is how to reduce it and when it signals a larger moisture problem home apartment guide articles why do windows condense in winter"
+    },
+    {
+      "route": "/articles/why-does-gfci-outlet-keep-tripping/",
+      "title": "Why Does My GFCI Outlet Keep Tripping?",
+      "description": "A GFCI that keeps tripping may be detecting leakage current, moisture, a faulty appliance, or a wiring problem. Use this safe isolation sequence before calling an electrician.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my gfci outlet keep tripping a gfci that keeps tripping may be detecting leakage current moisture a faulty appliance or a wiring problem use this safe isolation sequence before calling an electrician home tech guide articles why does gfci outlet keep tripping"
     },
     {
       "route": "/articles/why-does-my-wifi-keep-disconnecting/",
@@ -688,6 +760,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "why is my wi fi so slow 12 things to check before buying anything slow wi fi can come from weak signal isp trouble congestion router placement or one problem device use this step by step diagnosis before buying new hardware home tech guide articles why is my wifi so slow"
+    },
+    {
+      "route": "/articles/why-is-washing-machine-shaking/",
+      "title": "Why Is My Washing Machine Shaking or Walking?",
+      "description": "A washer often shakes because the load is unbalanced, the machine is not level, or shipping hardware remains installed. Stop it and check in a safe order.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my washing machine shaking or walking a washer often shakes because the load is unbalanced the machine is not level or shipping hardware remains installed stop it and check in a safe order home apartment guide articles why is washing machine shaking"
     },
     {
       "route": "/articles/why-refrigerator-leaking-water/",

@@ -631,6 +631,210 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/can-you-freeze-milk/",
+      "title": "Can You Freeze Milk?",
+      "description": "You can freeze pasteurized milk in a freezer-safe container with expansion space, then thaw it in the refrigerator. Texture may separate, so shake or blend it after thawing.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Yes. Freeze pasteurized milk before its use-by date in a freezer-safe container with room for expansion. Thaw it in the refrigerator, not on the counter, and expect some separation or texture change.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-put-hot-food-in-refrigerator/",
+          "/articles/how-does-baking-powder-work/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-freeze-milk-can-you-freeze-milk-lead-1cc8cb7f81",
+          "href": "/images/articles/can-you-freeze-milk/can-you-freeze-milk-lead.png",
+          "packageRelativePath": "media/can-you-freeze-milk-lead.png",
+          "mimeType": "image/png",
+          "sha256": "1cc8cb7f81e22e10b9780914eb90f8d3a2a83af16d54e0b5db549855331979fc",
+          "sizeBytes": 1208,
+          "width": 1200,
+          "height": 630,
+          "alt": "Milk-freezing diagram: use pasteurized milk, leave expansion space, and thaw it in the refrigerator.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-freeze-milk-can-you-freeze-milk-lead-1cc8cb7f81",
+        "href": "/images/articles/can-you-freeze-milk/can-you-freeze-milk-lead.png",
+        "packageRelativePath": "media/can-you-freeze-milk-lead.png",
+        "mimeType": "image/png",
+        "sha256": "1cc8cb7f81e22e10b9780914eb90f8d3a2a83af16d54e0b5db549855331979fc",
+        "sizeBytes": 1208,
+        "width": 1200,
+        "height": 630,
+        "alt": "Milk-freezing diagram: use pasteurized milk, leave expansion space, and thaw it in the refrigerator.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-mix-bleach-and-vinegar/",
+      "title": "Can You Mix Bleach and Vinegar?",
+      "description": "Never mix chlorine bleach and vinegar. The combination can release toxic chlorine gas. Leave the area for fresh air and contact emergency or poison help if exposure occurs.",
+      "categoryId": "home",
+      "topicId": "cleaning",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "No. Never mix chlorine bleach with vinegar or any other cleaner. The combination can release toxic chlorine gas. If they were mixed, leave the area immediately for fresh air and get emergency or poison-control guidance.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-dishwasher-filter/",
+          "/articles/should-you-rinse-dishes-before-dishwasher/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-mix-bleach-and-vinegar-can-you-mix-bleach-and-vinegar-lead-a32fb08598",
+          "href": "/images/articles/can-you-mix-bleach-and-vinegar/can-you-mix-bleach-and-vinegar-lead.png",
+          "packageRelativePath": "media/can-you-mix-bleach-and-vinegar-lead.png",
+          "mimeType": "image/png",
+          "sha256": "a32fb085982ef0fbef0853f002ef6fda6140cfed8a94e660605f91d4213c40fd",
+          "sizeBytes": 1193,
+          "width": 1200,
+          "height": 630,
+          "alt": "Emergency decision diagram: do not mix bleach and vinegar, leave for fresh air after an accident, and call Poison Control or emergency help.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-mix-bleach-and-vinegar-can-you-mix-bleach-and-vinegar-lead-a32fb08598",
+        "href": "/images/articles/can-you-mix-bleach-and-vinegar/can-you-mix-bleach-and-vinegar-lead.png",
+        "packageRelativePath": "media/can-you-mix-bleach-and-vinegar-lead.png",
+        "mimeType": "image/png",
+        "sha256": "a32fb085982ef0fbef0853f002ef6fda6140cfed8a94e660605f91d4213c40fd",
+        "sizeBytes": 1193,
+        "width": 1200,
+        "height": 630,
+        "alt": "Emergency decision diagram: do not mix bleach and vinegar, leave for fresh air after an accident, and call Poison Control or emergency help.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-plug-air-conditioner-into-extension-cord/",
+      "title": "Can You Plug an Air Conditioner Into an Extension Cord?",
+      "description": "A room air conditioner should normally plug directly into a grounded wall outlet, not an extension cord. Here is the safe response when its factory cord will not reach.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "No. A room air conditioner should normally be plugged directly into a properly grounded wall outlet. Do not use an extension cord, power strip, surge protector, or multi-outlet adapter unless the appliance manufacturer explicitly provides a different instruction.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-plug-space-heater-into-power-strip/",
+          "/articles/power-strip-vs-surge-protector/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-plug-air-conditioner-into-extension-cord-can-you-plug-air-conditioner-into-extension-cord-lead-96a27018ca",
+          "href": "/images/articles/can-you-plug-air-conditioner-into-extension-cord/can-you-plug-air-conditioner-into-extension-cord-lead.png",
+          "packageRelativePath": "media/can-you-plug-air-conditioner-into-extension-cord-lead.png",
+          "mimeType": "image/png",
+          "sha256": "96a27018cac85ebf7bf2a2a15e30cf50c6c80d1c32c9b4088700100f8c838028",
+          "sizeBytes": 1220,
+          "width": 1200,
+          "height": 630,
+          "alt": "Decision diagram: plug a room air conditioner into a wall outlet, never an extension cord, and move the unit or call an electrician if the cord cannot reach.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-plug-air-conditioner-into-extension-cord-can-you-plug-air-conditioner-into-extension-cord-lead-96a27018ca",
+        "href": "/images/articles/can-you-plug-air-conditioner-into-extension-cord/can-you-plug-air-conditioner-into-extension-cord-lead.png",
+        "packageRelativePath": "media/can-you-plug-air-conditioner-into-extension-cord-lead.png",
+        "mimeType": "image/png",
+        "sha256": "96a27018cac85ebf7bf2a2a15e30cf50c6c80d1c32c9b4088700100f8c838028",
+        "sizeBytes": 1220,
+        "width": 1200,
+        "height": 630,
+        "alt": "Decision diagram: plug a room air conditioner into a wall outlet, never an extension cord, and move the unit or call an electrician if the cord cannot reach.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/can-you-plug-space-heater-into-power-strip/",
       "title": "Can You Plug a Space Heater Into a Power Strip?",
       "description": "Space heaters should be plugged directly into a wall outlet, not into a power strip or extension cord. Here is why and what to do when the cord will not reach.",
@@ -1250,6 +1454,74 @@
           "x": 0.5,
           "y": 0.48
         }
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/do-you-have-to-preheat-oven/",
+      "title": "Do You Have to Preheat the Oven?",
+      "description": "Preheat for most baking and whenever a recipe or package says to. Some roasts and casseroles can start in a cold oven, but food-safety temperatures still govern doneness.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Preheat the oven for most baking and whenever a recipe, package, or appliance instruction requires it. Many roasts, casseroles, and braises can start in a cold oven, but cooking time changes and safe internal temperatures still decide doneness.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-does-baking-powder-work/",
+          "/articles/can-you-use-soap-on-cast-iron/"
+        ]
+      },
+      "media": [
+        {
+          "id": "do-you-have-to-preheat-oven-do-you-have-to-preheat-oven-lead-dc2b40b289",
+          "href": "/images/articles/do-you-have-to-preheat-oven/do-you-have-to-preheat-oven-lead.png",
+          "packageRelativePath": "media/do-you-have-to-preheat-oven-lead.png",
+          "mimeType": "image/png",
+          "sha256": "dc2b40b289bcb37293a09a4ce8388d4b9299ed0d30c712f8591b44fee1b04802",
+          "sizeBytes": 1208,
+          "width": 1200,
+          "height": 630,
+          "alt": "Oven-preheat diagram: preheat for baking, recognize that roasting may be optional, and follow the recipe and thermometer.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "do-you-have-to-preheat-oven-do-you-have-to-preheat-oven-lead-dc2b40b289",
+        "href": "/images/articles/do-you-have-to-preheat-oven/do-you-have-to-preheat-oven-lead.png",
+        "packageRelativePath": "media/do-you-have-to-preheat-oven-lead.png",
+        "mimeType": "image/png",
+        "sha256": "dc2b40b289bcb37293a09a4ce8388d4b9299ed0d30c712f8591b44fee1b04802",
+        "sizeBytes": 1208,
+        "width": 1200,
+        "height": 630,
+        "alt": "Oven-preheat diagram: preheat for baking, recognize that roasting may be optional, and follow the recipe and thermometer.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
       }
     },
     {
@@ -2314,6 +2586,74 @@
         "caption": "How Biscuit summary diagram for How Long Can Cooked Food Sit Out?",
         "credit": "How Biscuit Editorial Desk",
         "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-long-does-cooked-rice-last/",
+      "title": "How Long Does Cooked Rice Last in the Fridge?",
+      "description": "Refrigerate cooked rice within two hours and use it within four days. Cool it promptly in shallow containers and reheat leftovers to 165°F.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cooked rice should be refrigerated within two hours—within one hour when the air temperature is above 90°F—and used within four days. Store it in shallow covered containers and reheat leftovers to 165°F.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no food-storage or reheating procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-can-cooked-food-sit-out/",
+          "/articles/can-you-put-hot-food-in-refrigerator/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-long-does-cooked-rice-last-how-long-does-cooked-rice-last-lead-88427dc46f",
+          "href": "/images/articles/how-long-does-cooked-rice-last/how-long-does-cooked-rice-last-lead.png",
+          "packageRelativePath": "media/how-long-does-cooked-rice-last-lead.png",
+          "mimeType": "image/png",
+          "sha256": "88427dc46f1fe61bc329e11f16fb2fe79722878108d8a796c4648a4fdfdd61da",
+          "sizeBytes": 1192,
+          "width": 1200,
+          "height": 630,
+          "alt": "Cooked-rice safety diagram: chill within two hours, use within four days, and reheat leftovers to 165 degrees Fahrenheit.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "how-long-does-cooked-rice-last-how-long-does-cooked-rice-last-lead-88427dc46f",
+        "href": "/images/articles/how-long-does-cooked-rice-last/how-long-does-cooked-rice-last-lead.png",
+        "packageRelativePath": "media/how-long-does-cooked-rice-last-lead.png",
+        "mimeType": "image/png",
+        "sha256": "88427dc46f1fe61bc329e11f16fb2fe79722878108d8a796c4648a4fdfdd61da",
+        "sizeBytes": 1192,
+        "width": 1200,
+        "height": 630,
+        "alt": "Cooked-rice safety diagram: chill within two hours, use within four days, and reheat leftovers to 165 degrees Fahrenheit.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
         "license": null,
         "sourceUrl": null,
         "focalPoint": null
@@ -3489,6 +3829,74 @@
         "attribution": "Photo by Evan-Amos via Wikimedia Commons (Public domain) · Public domain · Source",
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linksys-Wireless-G-Router.jpg",
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-often-test-replace-smoke-alarms/",
+      "title": "How Often Should You Test and Replace Smoke Alarms?",
+      "description": "Test smoke alarms at least monthly and replace the whole alarm when it is 10 years old, or sooner if its instructions or failed tests require it.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Test every smoke alarm at least once a month using its test button. Replace the entire alarm when it is 10 years old, or sooner if it fails a test, is damaged, or its manufacturer specifies an earlier end of life.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-windows-condense-in-winter/",
+          "/articles/can-you-plug-space-heater-into-power-strip/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-often-test-replace-smoke-alarms-how-often-test-replace-smoke-alarms-lead-56dfbc8985",
+          "href": "/images/articles/how-often-test-replace-smoke-alarms/how-often-test-replace-smoke-alarms-lead.png",
+          "packageRelativePath": "media/how-often-test-replace-smoke-alarms-lead.png",
+          "mimeType": "image/png",
+          "sha256": "56dfbc8985a7094af1b6f1936a427d1334b68b50d6677d4c4067a8512495ece4",
+          "sizeBytes": 1268,
+          "width": 1200,
+          "height": 630,
+          "alt": "Smoke-alarm maintenance diagram showing monthly testing, replacement at ten years, and the rule never to disable an alarm.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "how-often-test-replace-smoke-alarms-how-often-test-replace-smoke-alarms-lead-56dfbc8985",
+        "href": "/images/articles/how-often-test-replace-smoke-alarms/how-often-test-replace-smoke-alarms-lead.png",
+        "packageRelativePath": "media/how-often-test-replace-smoke-alarms-lead.png",
+        "mimeType": "image/png",
+        "sha256": "56dfbc8985a7094af1b6f1936a427d1334b68b50d6677d4c4067a8512495ece4",
+        "sizeBytes": 1268,
+        "width": 1200,
+        "height": 630,
+        "alt": "Smoke-alarm maintenance diagram showing monthly testing, replacement at ten years, and the rule never to disable an alarm.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
         "focalPoint": null
       }
     },
@@ -5085,6 +5493,74 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/what-temperature-should-refrigerator-be/",
+      "title": "What Temperature Should a Refrigerator Be?",
+      "description": "Keep the refrigerator at 40°F or below and the freezer at 0°F. Verify the actual temperature with an appliance thermometer and allow air to circulate.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Keep the refrigerator at 40°F or below and the freezer at 0°F. A practical refrigerator target is about 37°F, but verify the actual compartment temperature with an appliance thermometer because the control number may not equal degrees.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance or food-storage procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-put-hot-food-in-refrigerator/",
+          "/articles/how-long-can-cooked-food-sit-out/"
+        ]
+      },
+      "media": [
+        {
+          "id": "what-temperature-should-refrigerator-be-what-temperature-should-refrigerator-be-lead-c1ca0a0fd9",
+          "href": "/images/articles/what-temperature-should-refrigerator-be/what-temperature-should-refrigerator-be-lead.png",
+          "packageRelativePath": "media/what-temperature-should-refrigerator-be-lead.png",
+          "mimeType": "image/png",
+          "sha256": "c1ca0a0fd92b648982d810ff62d8b9c1a1362beb8c6bba96b58b5f3bccf89852",
+          "sizeBytes": 1264,
+          "width": 1200,
+          "height": 630,
+          "alt": "Refrigerator temperature diagram: keep the fresh-food section at 40 degrees Fahrenheit or below, the freezer at zero, and verify with a thermometer.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "what-temperature-should-refrigerator-be-what-temperature-should-refrigerator-be-lead-c1ca0a0fd9",
+        "href": "/images/articles/what-temperature-should-refrigerator-be/what-temperature-should-refrigerator-be-lead.png",
+        "packageRelativePath": "media/what-temperature-should-refrigerator-be-lead.png",
+        "mimeType": "image/png",
+        "sha256": "c1ca0a0fd92b648982d810ff62d8b9c1a1362beb8c6bba96b58b5f3bccf89852",
+        "sizeBytes": 1264,
+        "width": 1200,
+        "height": 630,
+        "alt": "Refrigerator temperature diagram: keep the fresh-food section at 40 degrees Fahrenheit or below, the freezer at zero, and verify with a thermometer.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/where-to-place-wifi-extender/",
       "title": "Where Should You Place a Wi-Fi Extender?",
@@ -5185,6 +5661,74 @@
       },
       "media": [],
       "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-dishwasher-leaves-white-film/",
+      "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
+      "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "White film is often hard-water mineral residue or undissolved detergent. If a small spot wipes away with vinegar, residue is likely; if cloudy glass does not change, it may be permanent etching. Check water hardness, detergent dose, rinse aid, loading, and the model manual.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-dishwasher-filter/",
+          "/articles/should-you-rinse-dishes-before-dishwasher/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-dishwasher-leaves-white-film-why-dishwasher-leaves-white-film-lead-1a351f0d87",
+          "href": "/images/articles/why-dishwasher-leaves-white-film/why-dishwasher-leaves-white-film-lead.png",
+          "packageRelativePath": "media/why-dishwasher-leaves-white-film-lead.png",
+          "mimeType": "image/png",
+          "sha256": "1a351f0d87690cf386164fca46bc13874336647c50c9d3ac675bc81ad9e7cf9f",
+          "sizeBytes": 1296,
+          "width": 1200,
+          "height": 630,
+          "alt": "Dishwasher-film diagram: check for hard water, adjust detergent and rinse aid, and distinguish removable film from permanent etching.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-dishwasher-leaves-white-film-why-dishwasher-leaves-white-film-lead-1a351f0d87",
+        "href": "/images/articles/why-dishwasher-leaves-white-film/why-dishwasher-leaves-white-film-lead.png",
+        "packageRelativePath": "media/why-dishwasher-leaves-white-film-lead.png",
+        "mimeType": "image/png",
+        "sha256": "1a351f0d87690cf386164fca46bc13874336647c50c9d3ac675bc81ad9e7cf9f",
+        "sizeBytes": 1296,
+        "width": 1200,
+        "height": 630,
+        "alt": "Dishwasher-film diagram: check for hard water, adjust detergent and rinse aid, and distinguish removable film from permanent etching.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
     },
     {
       "kind": "article",
@@ -5315,6 +5859,74 @@
         "caption": "How Biscuit diagram of winter window condensation",
         "credit": "How Biscuit Editorial Desk",
         "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-does-gfci-outlet-keep-tripping/",
+      "title": "Why Does My GFCI Outlet Keep Tripping?",
+      "description": "A GFCI that keeps tripping may be detecting leakage current, moisture, a faulty appliance, or a wiring problem. Use this safe isolation sequence before calling an electrician.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A GFCI usually trips because it detects current taking an unintended path. Unplug downstream devices, reset it once when the area is dry, and reconnect devices one at a time. If it will not reset or trips again with nothing connected, stop and call a qualified electrician.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-unplug-electronics-during-thunderstorm/",
+          "/articles/power-strip-vs-surge-protector/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-does-gfci-outlet-keep-tripping-why-does-gfci-outlet-keep-tripping-lead-d55e8cfb9d",
+          "href": "/images/articles/why-does-gfci-outlet-keep-tripping/why-does-gfci-outlet-keep-tripping-lead.png",
+          "packageRelativePath": "media/why-does-gfci-outlet-keep-tripping-lead.png",
+          "mimeType": "image/png",
+          "sha256": "d55e8cfb9db0afd2aac96355980c20108a6689ad896d9976ee9da178b6ab4dbb",
+          "sizeBytes": 1174,
+          "width": 1200,
+          "height": 630,
+          "alt": "Three-step GFCI troubleshooting diagram: unplug devices, reset once, and call a professional if it trips again.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-does-gfci-outlet-keep-tripping-why-does-gfci-outlet-keep-tripping-lead-d55e8cfb9d",
+        "href": "/images/articles/why-does-gfci-outlet-keep-tripping/why-does-gfci-outlet-keep-tripping-lead.png",
+        "packageRelativePath": "media/why-does-gfci-outlet-keep-tripping-lead.png",
+        "mimeType": "image/png",
+        "sha256": "d55e8cfb9db0afd2aac96355980c20108a6689ad896d9976ee9da178b6ab4dbb",
+        "sizeBytes": 1174,
+        "width": 1200,
+        "height": 630,
+        "alt": "Three-step GFCI troubleshooting diagram: unplug devices, reset once, and call a professional if it trips again.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
         "license": null,
         "sourceUrl": null,
         "focalPoint": null
@@ -5667,6 +6279,74 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-is-washing-machine-shaking/",
+      "title": "Why Is My Washing Machine Shaking or Walking?",
+      "description": "A washer often shakes because the load is unbalanced, the machine is not level, or shipping hardware remains installed. Stop it and check in a safe order.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Pause the washer first. Redistribute or reduce the load, confirm that all feet contact a firm level floor, and check the installation instructions for shipping bolts. Stop using the machine if it bangs violently, leaks, grinds, or continues moving after those checks.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk-researched from the declared sources; no appliance, food, electrical, fire-safety, cleaning, or household procedure was tested first-hand."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-windows-condense-in-winter/",
+          "/articles/do-ceiling-fans-cool-a-room/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-is-washing-machine-shaking-why-is-washing-machine-shaking-lead-85c44e6bb4",
+          "href": "/images/articles/why-is-washing-machine-shaking/why-is-washing-machine-shaking-lead.png",
+          "packageRelativePath": "media/why-is-washing-machine-shaking-lead.png",
+          "mimeType": "image/png",
+          "sha256": "85c44e6bb4a21e1069c31fb6efd2667473bb3271b8e07874d723ccd3c33d5d5a",
+          "sizeBytes": 1309,
+          "width": 1200,
+          "height": 630,
+          "alt": "Washer troubleshooting diagram: pause and redistribute the load, check level and shipping bolts, then obtain service if movement or damage continues.",
+          "caption": "How Biscuit decision guide.",
+          "credit": "Illustration by How Biscuit Editorial Desk",
+          "attribution": "Illustration by How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-is-washing-machine-shaking-why-is-washing-machine-shaking-lead-85c44e6bb4",
+        "href": "/images/articles/why-is-washing-machine-shaking/why-is-washing-machine-shaking-lead.png",
+        "packageRelativePath": "media/why-is-washing-machine-shaking-lead.png",
+        "mimeType": "image/png",
+        "sha256": "85c44e6bb4a21e1069c31fb6efd2667473bb3271b8e07874d723ccd3c33d5d5a",
+        "sizeBytes": 1309,
+        "width": 1200,
+        "height": 630,
+        "alt": "Washer troubleshooting diagram: pause and redistribute the load, check level and shipping bolts, then obtain service if movement or damage continues.",
+        "caption": "How Biscuit decision guide.",
+        "credit": "Illustration by How Biscuit Editorial Desk",
+        "attribution": "Illustration by How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-refrigerator-leaking-water/",
       "title": "Why Is My Refrigerator Leaking Water?",
@@ -5932,7 +6612,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-31",
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -5983,7 +6663,7 @@
       "topicId": "cleaning",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-27",
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -6051,7 +6731,7 @@
       "topicId": "kitchen-appliances",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-31",
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -6068,7 +6748,7 @@
       "topicId": "troubleshooting-safety",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-31",
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -6246,5 +6926,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:3c2f6afea70d58e914a37d22d31b10784c5bffe5f6caaa9bccb7841b5bbeffb6"
+  "registryDigest": "sha256:e6d3886c2ffac46acbddce38be0f2898fb25c9574b337f939ed4d88655456105"
 }
