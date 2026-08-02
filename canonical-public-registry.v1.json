@@ -4567,6 +4567,42 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-clean-window-air-conditioner-filter/",
+      "title": "How to Clean a Window Air Conditioner Filter",
+      "description": "A dirty window-air-conditioner filter restricts airflow and can reduce cooling performance. This guide explains the safe cleaning sequence for most reusable filters.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Turn the air conditioner off and unplug it, remove the filter according to the model’s manual, vacuum loose dust or wash the filter if it is reusable, let it dry completely, and reinstall it in the correct orientation.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No air conditioner or filter was physically inspected.",
+          "Panel removal and filter construction differ by model.",
+          "Manufacturer-specific instructions supersede this general sequence."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-bathroom-exhaust-fan-drips-water/",
+          "/articles/home-inventory-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/how-to-read-energyguide-label/",
       "title": "How to Read an EnergyGuide Label",
@@ -6584,6 +6620,42 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-bathroom-exhaust-fan-drips-water/",
+      "title": "Why Is My Bathroom Exhaust Fan Dripping Water?",
+      "description": "Water dripping from a bathroom exhaust fan usually comes from condensation inside a cold duct or leakage around the exterior roof or wall vent.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Dripping after showers, especially in cold weather, usually points to condensation inside the exhaust duct. Dripping during or after rain points more strongly to an exterior vent, cap, flashing, or seal leak. Water reaching electrical parts requires immediate shutdown and qualified inspection.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No fan, roof cap, wall cap, or duct was inspected.",
+          "Water can travel through concealed building materials before appearing at the fan.",
+          "A tissue test cannot measure rated airflow or confirm code compliance."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-window-air-conditioner-filter/",
+          "/articles/home-inventory-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-bluetooth-keeps-disconnecting/",
       "title": "Why Does Bluetooth Keep Disconnecting?",
       "description": "Repeated Bluetooth drops usually come from low accessory power, distance, competing paired devices, stale pairing data, power-saving settings, software problems, or failing hardware.",
@@ -8322,5 +8394,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:192c0c7035020133355a978003514981395c078c233b9a6dd14a962f05192006"
+  "registryDigest": "sha256:dec9ab4bf7e496d63e387b417e8e65fc362994ea6ca87b2df17b685590e45aac"
 }

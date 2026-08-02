@@ -594,6 +594,14 @@
       "searchText": "how to clean a dishwasher filter a removable dishwasher filter can collect food grit labels and debris here is how to locate clean inspect and reinstall it without damaging the machine kitchen guide articles how to clean dishwasher filter"
     },
     {
+      "route": "/articles/how-to-clean-window-air-conditioner-filter/",
+      "title": "How to Clean a Window Air Conditioner Filter",
+      "description": "A dirty window-air-conditioner filter restricts airflow and can reduce cooling performance. This guide explains the safe cleaning sequence for most reusable filters.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a window air conditioner filter a dirty window air conditioner filter restricts airflow and can reduce cooling performance this guide explains the safe cleaning sequence for most reusable filters home apartment guide articles how to clean window air conditioner filter"
+    },
+    {
       "route": "/articles/how-to-read-energyguide-label/",
       "title": "How to Read an EnergyGuide Label",
       "description": "Learn what the yellow EnergyGuide label says about annual energy use, estimated operating cost, similar-model comparisons, capacity, and local-rate recalculation.",
@@ -848,6 +856,14 @@
       "category": null,
       "type": "Editorial standard",
       "searchText": "why are some answers better than others a useful answer addresses the real question explains its reasoning shows the next move and makes the limits of its evidence visible editorial standard articles why are some answers better than others"
+    },
+    {
+      "route": "/articles/why-bathroom-exhaust-fan-drips-water/",
+      "title": "Why Is My Bathroom Exhaust Fan Dripping Water?",
+      "description": "Water dripping from a bathroom exhaust fan usually comes from condensation inside a cold duct or leakage around the exterior roof or wall vent.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my bathroom exhaust fan dripping water water dripping from a bathroom exhaust fan usually comes from condensation inside a cold duct or leakage around the exterior roof or wall vent home apartment guide articles why bathroom exhaust fan drips water"
     },
     {
       "route": "/articles/why-bluetooth-keeps-disconnecting/",
