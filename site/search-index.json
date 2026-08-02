@@ -66,6 +66,14 @@
       "searchText": "air purifier vs hvac filter which do you need portable air cleaners treat one room or area hvac filters work throughout a ducted system only while its fan runs learn when one both or neither solves the problem home apartment guide articles air purifier vs hvac filter"
     },
     {
+      "route": "/articles/apartment-move-in-inspection-checklist/",
+      "title": "Apartment Move-In Inspection Checklist: Document Damage Before You Unpack",
+      "description": "Inspect every room before moving furniture inside. Photograph existing damage, test essential systems, and submit the condition report on time.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "apartment move in inspection checklist document damage before you unpack inspect every room before moving furniture inside photograph existing damage test essential systems and submit the condition report on time tools guide articles apartment move in inspection checklist"
+    },
+    {
       "route": "/articles/appliance-buying-checklist/",
       "title": "Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls",
       "description": "Measure the space and delivery route, verify every hookup, read EnergyGuide and warranty terms, inspect delivery damage, check recalls, and document installation.",
@@ -88,6 +96,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "best place to put your wi fi router put your router near the center of the area you use out in the open off the floor and away from dense barriers use this test before buying an extender home tech guide articles best place to put wifi router"
+    },
+    {
+      "route": "/articles/can-100w-usb-c-charger-damage-phone/",
+      "title": "Can a 100-Watt USB-C Charger Damage Your Phone?",
+      "description": "A 100-watt USB-C laptop charger can usually charge a compatible phone safely. Learn how power negotiation works and which warning signs matter.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "can a 100 watt usb c charger damage your phone a 100 watt usb c laptop charger can usually charge a compatible phone safely learn how power negotiation works and which warning signs matter home tech guide articles can 100w usb c charger damage phone"
     },
     {
       "route": "/articles/can-microwave-interfere-with-wifi/",
@@ -120,6 +136,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "can you mix bleach and vinegar never mix chlorine bleach and vinegar the combination can release toxic chlorine gas leave the area for fresh air and contact emergency or poison help if exposure occurs home apartment guide articles can you mix bleach and vinegar"
+    },
+    {
+      "route": "/articles/can-you-paint-over-mold/",
+      "title": "Can You Paint Over Mold?",
+      "description": "Paint can hide mold temporarily, but it does not remove the growth or fix the moisture that caused it. Clean, dry, and repair the area first.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "can you paint over mold paint can hide mold temporarily but it does not remove the growth or fix the moisture that caused it clean dry and repair the area first home apartment guide articles can you paint over mold"
     },
     {
       "route": "/articles/can-you-plug-air-conditioner-into-extension-cord/",
@@ -168,6 +192,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "can you use soap on cast iron yes a small amount of mild dish soap is generally safe for seasoned cast iron wash by hand dry promptly and apply a very thin coat of oil if needed kitchen guide articles can you use soap on cast iron"
+    },
+    {
+      "route": "/articles/check-recalls-before-buying-used-product/",
+      "title": "How to Check for Recalls Before Buying a Used Product",
+      "description": "A used product can look perfect and still be recalled. Search the exact model, serial number, production date, or VIN before paying.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to check for recalls before buying a used product a used product can look perfect and still be recalled search the exact model serial number production date or vin before paying shop smarter guide articles check recalls before buying used product"
     },
     {
       "route": "/articles/clothes-taking-too-long-to-dry/",
@@ -578,6 +610,14 @@
       "searchText": "power outage food safety chart what to keep and what to throw away use this refrigerator and freezer decision chart after an outage it includes the four hour 48 hour 24 hour 40 f and ice crystal rules kitchen guide articles power outage food safety chart"
     },
     {
+      "route": "/articles/power-outage-home-checklist/",
+      "title": "Power Outage Home Checklist: What to Do Before, During, and After",
+      "description": "Keep the refrigerator closed, use flashlights instead of candles, operate generators outdoors, and inspect food and equipment when power returns.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "power outage home checklist what to do before during and after keep the refrigerator closed use flashlights instead of candles operate generators outdoors and inspect food and equipment when power returns tools guide articles power outage home checklist"
+    },
+    {
       "route": "/articles/power-strip-vs-surge-protector/",
       "title": "Power Strip vs. Surge Protector: What Is the Difference?",
       "description": "Power strips add outlets. Surge protectors also contain components intended to limit certain voltage surges. Here is how to tell what you own and what neither device can safely do.",
@@ -610,6 +650,14 @@
       "searchText": "repair or replace an appliance safety and recall status come first then compare diagnosis confidence repair cost repeat failures support parts operating cost installation downtime and replacement cost shop smarter guide articles repair or replace appliance"
     },
     {
+      "route": "/articles/return-policy-vs-warranty-vs-service-contract/",
+      "title": "Return Policy vs. Warranty vs. Service Contract: What Actually Protects You?",
+      "description": "A return policy, product warranty, and service contract address different problems. Learn what each protects and what to inspect before paying extra.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "return policy vs warranty vs service contract what actually protects you a return policy product warranty and service contract address different problems learn what each protects and what to inspect before paying extra shop smarter guide articles return policy vs warranty vs service contract"
+    },
+    {
       "route": "/articles/router-restart-vs-reset/",
       "title": "Router Restart vs. Reset: What’s the Difference?",
       "description": "Why restarting a router is a low-risk first step while a factory reset erases personalized settings and requires setup again.",
@@ -635,11 +683,11 @@
     },
     {
       "route": "/articles/should-you-wash-raw-chicken/",
-      "title": "Should You Wash Raw Chicken?",
-      "description": "Why USDA advises against washing raw chicken and what to do instead to reduce cross-contamination.",
+      "title": "Should You Wash Raw Chicken Before Cooking It?",
+      "description": "No. Washing raw chicken can spread bacteria through splashing and does not replace cooking poultry to a safe internal temperature.",
       "category": "Kitchen",
       "type": "Guide",
-      "searchText": "should you wash raw chicken why usda advises against washing raw chicken and what to do instead to reduce cross contamination kitchen guide articles should you wash raw chicken"
+      "searchText": "should you wash raw chicken before cooking it no washing raw chicken can spread bacteria through splashing and does not replace cooking poultry to a safe internal temperature kitchen guide articles should you wash raw chicken"
     },
     {
       "route": "/articles/tank-vs-tankless-water-heater/",
@@ -746,6 +794,14 @@
       "searchText": "why are some answers better than others a useful answer addresses the real question explains its reasoning shows the next move and makes the limits of its evidence visible editorial standard articles why are some answers better than others"
     },
     {
+      "route": "/articles/why-bread-goes-stale-in-refrigerator/",
+      "title": "Why Bread Goes Stale Faster in the Refrigerator",
+      "description": "Refrigeration can slow mold, but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why bread goes stale faster in the refrigerator refrigeration can slow mold but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale kitchen guide articles why bread goes stale in refrigerator"
+    },
+    {
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -850,6 +906,14 @@
       "searchText": "why is my washing machine shaking or walking a washer often shakes because the load is unbalanced the machine is not level or shipping hardware remains installed stop it and check in a safe order home apartment guide articles why is washing machine shaking"
     },
     {
+      "route": "/articles/why-phone-gets-hot-while-charging/",
+      "title": "Why Does My Phone Get Hot While Charging?",
+      "description": "Some warmth is normal during charging, especially with fast charging. Persistent excessive heat, swelling, odors, or a hot connector require attention.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my phone get hot while charging some warmth is normal during charging especially with fast charging persistent excessive heat swelling odors or a hot connector require attention home tech guide articles why phone gets hot while charging"
+    },
+    {
       "route": "/articles/why-refrigerator-leaking-water/",
       "title": "Why Is My Refrigerator Leaking Water?",
       "description": "Trace water from the first wet point. Common sources include supply lines, filters, ice makers, defrost drains, drain pans, condensation, door seals, or nearby plumbing.",
@@ -864,6 +928,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why salt melts ice and when it stops working a plain english field guide to freezing point depression brine the limits of rock salt and the least wasteful way to de ice a walk home apartment guide articles why salt melts ice"
+    },
+    {
+      "route": "/articles/why-toilet-keeps-running/",
+      "title": "Why Does My Toilet Keep Running?",
+      "description": "A running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube. A dye test can identify the path.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my toilet keep running a running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube a dye test can identify the path home apartment guide articles why toilet keeps running"
     },
     {
       "route": "/articles/window-ac-cost-per-hour/",
@@ -1048,6 +1120,14 @@
       "category": "Tools",
       "type": "Tool",
       "searchText": "appliance electricity cost calculator calculate appliance cost per use month and year from watts and time measured kwh or annual energyguide kwh your entries stay in your browser tools tool tools appliance electricity cost calculator"
+    },
+    {
+      "route": "/tools/checklists/",
+      "title": "Checklists",
+      "description": "Reusable setup, troubleshooting, inspection, maintenance, comparison, and buying checklists.",
+      "category": "Tools",
+      "type": "Topic",
+      "searchText": "checklists reusable setup troubleshooting inspection maintenance comparison and buying checklists tools topic tools checklists"
     },
     {
       "route": "/tools/household-energy-benchmark-explorer/",

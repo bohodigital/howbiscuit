@@ -354,6 +354,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/apartment-move-in-inspection-checklist/",
+      "title": "Apartment Move-In Inspection Checklist: Document Damage Before You Unpack",
+      "description": "Inspect every room before moving furniture inside. Photograph existing damage, test essential systems, and submit the condition report on time.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Inspect and photograph the apartment before unpacking. Record existing damage, test locks, utilities, plumbing, appliances, alarms, and ventilation, then submit the written condition report through a traceable method within the applicable deadline.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No apartment was inspected.",
+          "Local legal deadlines and required forms differ."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-paint-over-mold/",
+          "/articles/why-toilet-keeps-running/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/appliance-buying-checklist/",
       "title": "Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls",
@@ -558,6 +593,41 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wireless_Router_(50841204223).jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-100w-usb-c-charger-damage-phone/",
+      "title": "Can a 100-Watt USB-C Charger Damage Your Phone?",
+      "description": "A 100-watt USB-C laptop charger can usually charge a compatible phone safely. Learn how power negotiation works and which warning signs matter.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A legitimate 100-watt USB-C Power Delivery charger normally cannot force 100 watts into a phone. The phone and charger negotiate a supported power level, although damaged, counterfeit, incompatible, or overheated equipment can still be unsafe.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No charger, phone, or cable was physically tested.",
+          "Manufacturer implementation and supported charging rates vary by device model."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-phone-gets-hot-while-charging/",
+          "/articles/power-outage-home-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -835,6 +905,41 @@
         "sourceUrl": null,
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-paint-over-mold/",
+      "title": "Can You Paint Over Mold?",
+      "description": "Paint can hide mold temporarily, but it does not remove the growth or fix the moisture that caused it. Clean, dry, and repair the area first.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Do not paint directly over visible mold. Stop the moisture source, clean or remove affected material, dry the area completely, and only then prime and paint sound surfaces.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No site inspection was performed.",
+          "Hidden moisture and contamination cannot be evaluated from a general guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-toilet-keeps-running/",
+          "/articles/apartment-move-in-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -1247,6 +1352,41 @@
         "sourceUrl": null,
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/check-recalls-before-buying-used-product/",
+      "title": "How to Check for Recalls Before Buying a Used Product",
+      "description": "A used product can look perfect and still be recalled. Search the exact model, serial number, production date, or VIN before paying.",
+      "categoryId": "shop",
+      "topicId": "used-refurbished",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Find the exact model, serial number, production date, lot code, or VIN and search the appropriate official regulator and manufacturer before buying. Confirm that any required repair, replacement, refund, or stop-use remedy was actually completed.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No individual product or VIN was checked.",
+          "Recall coverage depends on the exact identifier and responsible regulator."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/return-policy-vs-warranty-vs-service-contract/",
+          "/articles/apartment-move-in-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -4741,6 +4881,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/power-outage-home-checklist/",
+      "title": "Power Outage Home Checklist: What to Do Before, During, and After",
+      "description": "Keep the refrigerator closed, use flashlights instead of candles, operate generators outdoors, and inspect food and equipment when power returns.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "During a power outage, protect medical needs first, use flashlights, keep refrigerator and freezer doors closed, stay away from downed lines, and operate generators outdoors at least 20 feet from the home. Evaluate food by time and measured temperature after restoration.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No generator, refrigerator, or emergency kit was tested.",
+          "Local conditions and equipment instructions can change the correct response."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-100w-usb-c-charger-damage-phone/",
+          "/articles/should-you-wash-raw-chicken/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/power-strip-vs-surge-protector/",
       "title": "Power Strip vs. Surge Protector: What Is the Difference?",
       "description": "Power strips add outlets. Surge protectors also contain components intended to limit certain voltage surges. Here is how to tell what you own and what neither device can safely do.",
@@ -5016,6 +5191,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/return-policy-vs-warranty-vs-service-contract/",
+      "title": "Return Policy vs. Warranty vs. Service Contract: What Actually Protects You?",
+      "description": "A return policy, product warranty, and service contract address different problems. Learn what each protects and what to inspect before paying extra.",
+      "categoryId": "shop",
+      "topicId": "total-cost-ownership",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A return policy governs whether the seller will take an item back, a warranty covers specified promises or defects, and a service contract is optional additional coverage sold separately. Read all three because they are not interchangeable.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No individual warranty, return policy, or service contract was reviewed.",
+          "Contract terms and state-law protections vary."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/",
+          "/articles/power-outage-home-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/router-restart-vs-reset/",
       "title": "Router Restart vs. Reset: What’s the Difference?",
       "description": "Why restarting a router is a low-risk first step while a factory reset erases personalized settings and requires setup again.",
@@ -5233,73 +5443,36 @@
       "kind": "article",
       "renderMode": "canonical-source",
       "route": "/articles/should-you-wash-raw-chicken/",
-      "title": "Should You Wash Raw Chicken?",
-      "description": "Why USDA advises against washing raw chicken and what to do instead to reduce cross-contamination.",
+      "title": "Should You Wash Raw Chicken Before Cooking It?",
+      "description": "No. Washing raw chicken can spread bacteria through splashing and does not replace cooking poultry to a safe internal temperature.",
       "categoryId": "kitchen",
       "topicId": "troubleshooting-safety",
       "articleType": "guide",
       "publishedDate": "2026-08-01",
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-02",
       "feedEligible": true,
       "searchEligible": true,
       "sitemapEligible": true,
       "llmsEligible": true,
       "featured": false,
-      "answerSummary": "No. USDA advises against washing raw chicken because splashing can spread bacteria around the sink and nearby surfaces.",
+      "answerSummary": "Do not wash raw chicken. Rinsing can spread bacteria to the sink, faucet, counters, utensils, and nearby food. Handle poultry carefully and cook the thickest part to at least 165°F, or 74°C, measured with a food thermometer.",
       "evidence": "Researched",
       "testing": {
-        "state": "not-hands-on-tested",
+        "state": "not-applicable",
         "notes": [
-          "Desk research only; no hands-on testing was performed.",
-          "This is U.S. household food-safety guidance and does not replace local public-health instructions.",
-          "The article does not evaluate a particular piece of poultry or kitchen.",
-          "No washing or cooking method was evaluated for this article."
+          "No food handling experiment was performed.",
+          "Product-specific cooking instructions and equipment accuracy vary."
         ]
       },
       "relatedContent": {
         "state": "structured",
         "routes": [
-          "/articles/how-long-can-cooked-food-sit-out/",
-          "/articles/organize-refrigerator-food-safety/",
-          "/articles/what-temperature-should-refrigerator-be/"
+          "/articles/why-bread-goes-stale-in-refrigerator/",
+          "/articles/power-outage-home-checklist/"
         ]
       },
-      "media": [
-        {
-          "id": "should-you-wash-raw-chicken-lead-diagram-8cf8011dea",
-          "href": "/images/articles/should-you-wash-raw-chicken/raw-chicken-no-rinse.png",
-          "packageRelativePath": "media/raw-chicken-no-rinse.png",
-          "mimeType": "image/png",
-          "sha256": "8cf8011deae183109cc77fb271dfdec49494633637b8254e665ab49b71d21407",
-          "sizeBytes": 39259,
-          "width": 1200,
-          "height": 630,
-          "alt": "Diagram showing raw chicken going from package to pan without rinsing, followed by hand and surface cleaning",
-          "caption": "Skip the sink rinse: transfer carefully, clean hands and surfaces, and cook poultry to a verified safe temperature.",
-          "credit": "How Biscuit Editorial Desk",
-          "attribution": "How Biscuit Editorial Desk",
-          "license": null,
-          "sourceUrl": null,
-          "focalPoint": null
-        }
-      ],
-      "leadMedia": {
-        "id": "should-you-wash-raw-chicken-lead-diagram-8cf8011dea",
-        "href": "/images/articles/should-you-wash-raw-chicken/raw-chicken-no-rinse.png",
-        "packageRelativePath": "media/raw-chicken-no-rinse.png",
-        "mimeType": "image/png",
-        "sha256": "8cf8011deae183109cc77fb271dfdec49494633637b8254e665ab49b71d21407",
-        "sizeBytes": 39259,
-        "width": 1200,
-        "height": 630,
-        "alt": "Diagram showing raw chicken going from package to pan without rinsing, followed by hand and surface cleaning",
-        "caption": "Skip the sink rinse: transfer carefully, clean hands and surfaces, and cook poultry to a verified safe temperature.",
-        "credit": "How Biscuit Editorial Desk",
-        "attribution": "How Biscuit Editorial Desk",
-        "license": null,
-        "sourceUrl": null,
-        "focalPoint": null
-      }
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -6160,6 +6333,41 @@
         "routes": [
           "/articles/how-does-baking-powder-work/",
           "/articles/why-salt-melts-ice/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-bread-goes-stale-in-refrigerator/",
+      "title": "Why Bread Goes Stale Faster in the Refrigerator",
+      "description": "Refrigeration can slow mold, but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Ordinary bread often becomes firm and stale faster in the refrigerator because cool temperatures accelerate starch retrogradation. Refrigeration may delay mold, while freezing is usually better for longer storage when texture matters.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No controlled storage experiment was conducted.",
+          "The article does not provide universal shelf-life numbers for all bread products."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-wash-raw-chicken/",
+          "/articles/power-outage-home-checklist/"
         ]
       },
       "media": [],
@@ -7066,6 +7274,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-phone-gets-hot-while-charging/",
+      "title": "Why Does My Phone Get Hot While Charging?",
+      "description": "Some warmth is normal during charging, especially with fast charging. Persistent excessive heat, swelling, odors, or a hot connector require attention.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A phone may become mildly warm because charging, the processor, the screen, and wireless radios all produce heat. Disconnect it if it becomes excessively hot, repeatedly shows temperature warnings, smells unusual, swells, or concentrates heat at a damaged connector.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No physical phone, charger, or battery was tested.",
+          "The guide cannot diagnose hidden battery or charging-circuit damage."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-100w-usb-c-charger-damage-phone/",
+          "/articles/power-outage-home-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-refrigerator-leaking-water/",
       "title": "Why Is My Refrigerator Leaking Water?",
@@ -7162,6 +7405,41 @@
         "routes": [
           "/articles/how-does-baking-powder-work/",
           "/articles/why-are-some-answers-better-than-others/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-toilet-keeps-running/",
+      "title": "Why Does My Toilet Keep Running?",
+      "description": "A running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube. A dye test can identify the path.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A toilet usually keeps running because the flapper does not seal or the fill valve keeps sending water into the overflow tube. Observe one flush, perform a dye test, and inspect the chain, float, refill tube, and water level.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No toilet or plumbing system was physically inspected.",
+          "Exterior leakage and concealed damage require site-specific diagnosis."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-paint-over-mold/",
+          "/articles/apartment-move-in-inspection-checklist/"
         ]
       },
       "media": [],
@@ -7331,7 +7609,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -7416,7 +7694,7 @@
       "topicId": "repairs-maintenance",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -7467,7 +7745,7 @@
       "topicId": "food-science",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -7501,7 +7779,7 @@
       "topicId": "troubleshooting-safety",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -7552,7 +7830,7 @@
       "topicId": "total-cost-ownership",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-27",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -7604,6 +7882,23 @@
       "articleType": "tool",
       "publishedDate": null,
       "updatedDate": "2026-07-26",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
+      "route": "/tools/checklists/",
+      "title": "Checklists",
+      "description": "Reusable setup, troubleshooting, inspection, maintenance, comparison, and buying checklists.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -7679,5 +7974,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:550415fd235a035fb5104f4263b5b8f93cf74c0bf77cba07010006ed00fa6a11"
+  "registryDigest": "sha256:3c8099edbdfa0f1d28fd4fa2016c276342b2f2fd8eec750b97ec9743592571a3"
 }
