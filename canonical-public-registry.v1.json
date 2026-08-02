@@ -4535,6 +4535,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/leave-laptop-plugged-in-all-the-time/",
+      "title": "Is It Safe to Leave a Laptop Plugged In All the Time?",
+      "description": "Modern laptops should stop active charging at their target level, but prolonged time at full charge and high temperature can accelerate battery aging.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A healthy modern laptop should stop charging when the battery reaches its target, so leaving it plugged in does not normally cause continuous overcharging. Heat and long periods near 100 percent can still accelerate chemical aging, so enable smart charging or a charge limit when available.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No laptop, adapter, or battery was physically tested.",
+          "Manufacturer battery algorithms and charge thresholds vary."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-bluetooth-keeps-disconnecting/",
+          "/articles/can-100w-usb-c-charger-damage-phone/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/mesh-wifi-vs-range-extender/",
       "title": "Mesh Wi-Fi vs. Range Extender: Which Should You Use?",
@@ -6341,6 +6376,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-bluetooth-keeps-disconnecting/",
+      "title": "Why Does Bluetooth Keep Disconnecting?",
+      "description": "Repeated Bluetooth drops usually come from low accessory power, distance, competing paired devices, stale pairing data, power-saving settings, software problems, or failing hardware.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Charge both devices, test the accessory near the host, prevent other paired devices from reconnecting, restart both sides, forget and pair again, then check software, drivers, Bluetooth profiles, and power-saving settings. Testing the accessory with another host identifies which side is failing.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No accessory or host device was physically tested.",
+          "Vehicle, hearing-device, medical, and specialized accessory procedures may differ."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/leave-laptop-plugged-in-all-the-time/",
+          "/articles/why-phone-gets-hot-while-charging/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-bread-goes-stale-in-refrigerator/",
       "title": "Why Bread Goes Stale Faster in the Refrigerator",
       "description": "Refrigeration can slow mold, but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale.",
@@ -7974,5 +8044,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:3c8099edbdfa0f1d28fd4fa2016c276342b2f2fd8eec750b97ec9743592571a3"
+  "registryDigest": "sha256:8b58f1cd12d0894b1b45b2d31fbba2af3ff370c83b058a398fabcb08e497c820"
 }

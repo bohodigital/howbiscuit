@@ -570,6 +570,14 @@
       "searchText": "is freezer burn safe to eat what freezer burn means why it affects quality more than safety and when a damaged package calls for a different decision kitchen guide articles is freezer burn safe to eat"
     },
     {
+      "route": "/articles/leave-laptop-plugged-in-all-the-time/",
+      "title": "Is It Safe to Leave a Laptop Plugged In All the Time?",
+      "description": "Modern laptops should stop active charging at their target level, but prolonged time at full charge and high temperature can accelerate battery aging.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "is it safe to leave a laptop plugged in all the time modern laptops should stop active charging at their target level but prolonged time at full charge and high temperature can accelerate battery aging home tech guide articles leave laptop plugged in all the time"
+    },
+    {
       "route": "/articles/mesh-wifi-vs-range-extender/",
       "title": "Mesh Wi-Fi vs. Range Extender: Which Should You Use?",
       "description": "Use a range extender for one isolated weak area and mesh for broader multi-room coverage, but diagnose placement, backhaul, compatibility, and router support first.",
@@ -792,6 +800,14 @@
       "category": null,
       "type": "Editorial standard",
       "searchText": "why are some answers better than others a useful answer addresses the real question explains its reasoning shows the next move and makes the limits of its evidence visible editorial standard articles why are some answers better than others"
+    },
+    {
+      "route": "/articles/why-bluetooth-keeps-disconnecting/",
+      "title": "Why Does Bluetooth Keep Disconnecting?",
+      "description": "Repeated Bluetooth drops usually come from low accessory power, distance, competing paired devices, stale pairing data, power-saving settings, software problems, or failing hardware.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does bluetooth keep disconnecting repeated bluetooth drops usually come from low accessory power distance competing paired devices stale pairing data power saving settings software problems or failing hardware home tech guide articles why bluetooth keeps disconnecting"
     },
     {
       "route": "/articles/why-bread-goes-stale-in-refrigerator/",
