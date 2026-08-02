@@ -1561,6 +1561,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/contractor-estimate-comparison-checklist/",
+      "title": "Contractor Estimate Comparison Checklist",
+      "description": "Compare written scope, materials, exclusions, schedule, licensing, insurance, permits, payment terms, warranties, and change-order rules instead of choosing only by total price.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Give each contractor the same project description and compare identity, verified licensing and insurance, scope, materials, exclusions, permits, schedule, price structure, payment milestones, change-order rules, warranties, and references. Do not choose solely by the smallest total.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No contractor, estimate, insurance policy, or license was evaluated.",
+          "Local construction law and project conditions can materially change the appropriate contract."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/home-inventory-checklist/",
+          "/articles/apartment-move-in-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/dehumidifier-running-not-collecting-water/",
       "title": "Why Is My Dehumidifier Running but Not Collecting Water?",
@@ -2842,6 +2877,41 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrometer.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-inventory-checklist/",
+      "title": "Home Inventory Checklist: Document Your Belongings Before a Loss",
+      "description": "Photograph every room, record valuable items and serial numbers, preserve receipts, store a copy away from home, and update the inventory after major purchases.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Create a room-by-room video and itemized record with descriptions, photographs, model and serial numbers, receipts, purchase dates, and estimated values. Keep at least one encrypted or otherwise secure copy outside the home and update it regularly.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No insurance policy or household inventory was reviewed.",
+          "Sensitive records require storage appropriate to the user's security needs."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/contractor-estimate-comparison-checklist/",
+          "/articles/apartment-move-in-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -8252,5 +8322,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:e18d0f53a4c6b9ba70bddad9edef1cc80d9f2d0705aa4ca3a02b1002036ec39f"
+  "registryDigest": "sha256:192c0c7035020133355a978003514981395c078c233b9a6dd14a962f05192006"
 }

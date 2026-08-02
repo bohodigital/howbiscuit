@@ -226,6 +226,14 @@
       "searchText": "how to compare unit prices when package sizes are different compare different package sizes by dividing final checkout cost by usable quantity converting to the same unit and accounting for discounts waste and product differences tools guide articles compare unit prices different package sizes"
     },
     {
+      "route": "/articles/contractor-estimate-comparison-checklist/",
+      "title": "Contractor Estimate Comparison Checklist",
+      "description": "Compare written scope, materials, exclusions, schedule, licensing, insurance, permits, payment terms, warranties, and change-order rules instead of choosing only by total price.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "contractor estimate comparison checklist compare written scope materials exclusions schedule licensing insurance permits payment terms warranties and change order rules instead of choosing only by total price tools guide articles contractor estimate comparison checklist"
+    },
+    {
       "route": "/articles/dehumidifier-running-not-collecting-water/",
       "title": "Why Is My Dehumidifier Running but Not Collecting Water?",
       "description": "A dehumidifier may stop collecting because the room is already below the setpoint, the room is too cold, airflow is blocked, the bucket or drain is wrong, or the compressor has failed.",
@@ -376,6 +384,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "home humidity and dehumidifier checklist measure humidity room by room find moisture sources choose dehumidifier capacity check drainage and safety and download the printable three day room log home tech guide articles home humidity dehumidifier checklist"
+    },
+    {
+      "route": "/articles/home-inventory-checklist/",
+      "title": "Home Inventory Checklist: Document Your Belongings Before a Loss",
+      "description": "Photograph every room, record valuable items and serial numbers, preserve receipts, store a copy away from home, and update the inventory after major purchases.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home inventory checklist document your belongings before a loss photograph every room record valuable items and serial numbers preserve receipts store a copy away from home and update the inventory after major purchases tools guide articles home inventory checklist"
     },
     {
       "route": "/articles/home-wifi-dead-zone-checklist/",
