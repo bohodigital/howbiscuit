@@ -2432,6 +2432,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/find-stop-drafts-windows-doors/",
+      "title": "How to Find and Stop Drafts Around Windows and Doors",
+      "description": "Locate the exact moving joint or fixed crack before sealing it. Use weatherstripping on operable edges and caulk on stationary gaps.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Close and latch the window or door, identify the exact leaking joint, use weatherstripping where parts move and caulk where components remain stationary, and repair water damage or alignment problems before sealing.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No blower-door test or building inspection was performed.",
+          "The guide cannot identify hidden envelope leakage or combustion-safety conditions."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-faucet-keeps-dripping/",
+          "/articles/can-you-paint-over-mold/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/fix-wifi-dead-zones-without-buying-anything/",
       "title": "How to Fix Wi-Fi Dead Zones Without Buying Anything",
@@ -6853,6 +6888,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-faucet-keeps-dripping/",
+      "title": "Why Does My Faucet Keep Dripping?",
+      "description": "A drip from the spout usually means an internal seal, washer, cartridge, valve seat, or ceramic component is no longer sealing.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Dry the fixture and identify the first wet point. A spout drip while the faucet is off usually means an internal valve component is not sealing, while water at the handle, base, supply line, or drain requires a different repair.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No faucet or plumbing connection was inspected.",
+          "Corroded valves, concealed leaks, and cabinet damage require site-specific diagnosis."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/find-stop-drafts-windows-doors/",
+          "/articles/why-toilet-keeps-running/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-freezer-frosting-up/",
       "title": "Why Is My Freezer Frosting Up?",
@@ -7747,7 +7817,7 @@
       "topicId": "heating-cooling",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-31",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8044,5 +8114,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:8b58f1cd12d0894b1b45b2d31fbba2af3ff370c83b058a398fabcb08e497c820"
+  "registryDigest": "sha256:4ba326d78bc92cefe92a3d285b6b53af606e3df1164cae1d00dcce19f43b55bc"
 }
