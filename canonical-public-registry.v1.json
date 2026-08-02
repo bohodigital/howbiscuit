@@ -1528,6 +1528,39 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/compare-unit-prices-different-package-sizes/",
+      "title": "How to Compare Unit Prices When Package Sizes Are Different",
+      "description": "Compare different package sizes by dividing final checkout cost by usable quantity, converting to the same unit, and accounting for discounts, waste, and product differences.",
+      "categoryId": "tools",
+      "topicId": "price-checkers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Divide each product's final checkout cost by its usable quantity, convert both results to the same unit, and compare the unit costs. Adjust for discounts, waste, concentration, and differences in what the packages actually contain.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The guide explains arithmetic using symbolic cost variables and does not report observed retail prices or rank products."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/return-policy-vs-warranty-vs-service-contract/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/dehumidifier-running-not-collecting-water/",
       "title": "Why Is My Dehumidifier Running but Not Collecting Water?",
@@ -8184,5 +8217,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:51210499500451d4e969ecd66eddb4e2bd4b1856100f9c84ade7136a1ceca3cc"
+  "registryDigest": "sha256:be51ebb7dbf077045033fe43b0093589a8fddddf8c26d3d3833b8300261bc281"
 }
