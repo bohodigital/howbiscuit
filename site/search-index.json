@@ -98,6 +98,14 @@
       "searchText": "can a microwave interfere with wi fi a microwave oven can interfere with nearby 2 4 ghz wi fi while it is running test the pattern move equipment or use 5 ghz or 6 ghz where supported home tech guide articles can microwave interfere with wifi"
     },
     {
+      "route": "/articles/can-you-freeze-eggs/",
+      "title": "Can You Freeze Eggs?",
+      "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you freeze eggs how to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer kitchen guide articles can you freeze eggs"
+    },
+    {
       "route": "/articles/can-you-freeze-milk/",
       "title": "Can You Freeze Milk?",
       "description": "You can freeze pasteurized milk in a freezer-safe container with expansion space, then thaw it in the refrigerator. Texture may separate, so shake or blend it after thawing.",
@@ -128,6 +136,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "can you plug a space heater into a power strip space heaters should be plugged directly into a wall outlet not into a power strip or extension cord here is why and what to do when the cord will not reach home tech guide articles can you plug space heater into power strip"
+    },
+    {
+      "route": "/articles/can-you-put-dish-soap-in-dishwasher/",
+      "title": "Can You Put Dish Soap in a Dishwasher?",
+      "description": "Why ordinary hand-washing liquid does not belong in an automatic dishwasher and what to do after an accidental dose.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you put dish soap in a dishwasher why ordinary hand washing liquid does not belong in an automatic dishwasher and what to do after an accidental dose kitchen guide articles can you put dish soap in dishwasher"
     },
     {
       "route": "/articles/can-you-put-hot-food-in-refrigerator/",
@@ -232,6 +248,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "does turning the ac off save money turning off or raising the ac when no one is home usually saves energy but heat humidity pets and health needs determine whether off is sensible home apartment guide articles does turning ac off save money"
+    },
+    {
+      "route": "/articles/does-unplugging-appliances-save-electricity/",
+      "title": "Does Unplugging Appliances Save Electricity?",
+      "description": "How standby power works, which devices are practical to switch off, and why measurement beats a universal savings claim.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "does unplugging appliances save electricity how standby power works which devices are practical to switch off and why measurement beats a universal savings claim home apartment guide articles does unplugging appliances save electricity"
     },
     {
       "route": "/articles/download-vs-upload-speed-latency/",
@@ -506,6 +530,14 @@
       "searchText": "how to read an energyguide label learn what the yellow energyguide label says about annual energy use estimated operating cost similar model comparisons capacity and local rate recalculation shop smarter guide articles how to read energyguide label"
     },
     {
+      "route": "/articles/is-freezer-burn-safe-to-eat/",
+      "title": "Is Freezer Burn Safe to Eat?",
+      "description": "What freezer burn means, why it affects quality more than safety, and when a damaged package calls for a different decision.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "is freezer burn safe to eat what freezer burn means why it affects quality more than safety and when a damaged package calls for a different decision kitchen guide articles is freezer burn safe to eat"
+    },
+    {
       "route": "/articles/mesh-wifi-vs-range-extender/",
       "title": "Mesh Wi-Fi vs. Range Extender: Which Should You Use?",
       "description": "Use a range extender for one isolated weak area and mesh for broader multi-room coverage, but diagnose placement, backhaul, compatibility, and router support first.",
@@ -578,6 +610,14 @@
       "searchText": "repair or replace an appliance safety and recall status come first then compare diagnosis confidence repair cost repeat failures support parts operating cost installation downtime and replacement cost shop smarter guide articles repair or replace appliance"
     },
     {
+      "route": "/articles/router-restart-vs-reset/",
+      "title": "Router Restart vs. Reset: What’s the Difference?",
+      "description": "Why restarting a router is a low-risk first step while a factory reset erases personalized settings and requires setup again.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "router restart vs reset what s the difference why restarting a router is a low risk first step while a factory reset erases personalized settings and requires setup again home tech guide articles router restart vs reset"
+    },
+    {
       "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
       "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
       "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
@@ -592,6 +632,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "should you unplug electronics during a thunderstorm unplug sensitive electronics before thunder begins not during an active storm learn what to disconnect what to leave alone and what surge protectors can actually do home tech guide articles should you unplug electronics during thunderstorm"
+    },
+    {
+      "route": "/articles/should-you-wash-raw-chicken/",
+      "title": "Should You Wash Raw Chicken?",
+      "description": "Why USDA advises against washing raw chicken and what to do instead to reduce cross-contamination.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "should you wash raw chicken why usda advises against washing raw chicken and what to do instead to reduce cross contamination kitchen guide articles should you wash raw chicken"
     },
     {
       "route": "/articles/tank-vs-tankless-water-heater/",
@@ -664,6 +712,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "what size dehumidifier do you need choose dehumidifier capacity from the space size and how damp it is energy star recommends 20 30 pints for many damp rooms under 2 000 square feet and more for wetter or larger spaces home tech guide articles what size dehumidifier do i need"
+    },
+    {
+      "route": "/articles/what-temperature-should-freezer-be/",
+      "title": "What Temperature Should a Freezer Be?",
+      "description": "The safe freezer target, how to measure it, and what to check when the compartment runs warmer than expected.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "what temperature should a freezer be the safe freezer target how to measure it and what to check when the compartment runs warmer than expected kitchen guide articles what temperature should freezer be"
     },
     {
       "route": "/articles/what-temperature-should-refrigerator-be/",
@@ -752,6 +808,30 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my hot water run out so fast hot water may run out because demand increased the tank is undersized recovery is slow an electric element failed sediment accumulated or a mixing or dip tube problem exists home apartment guide articles why hot water runs out fast"
+    },
+    {
+      "route": "/articles/why-is-my-dishwasher-not-drying-dishes/",
+      "title": "Why Is My Dishwasher Not Drying Dishes?",
+      "description": "A model-aware checklist for wet dishes, including cycle settings, rinse aid, loading, plastics, and signs that service may be needed.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why is my dishwasher not drying dishes a model aware checklist for wet dishes including cycle settings rinse aid loading plastics and signs that service may be needed kitchen guide articles why is my dishwasher not drying dishes"
+    },
+    {
+      "route": "/articles/why-is-my-refrigerator-sweating/",
+      "title": "Why Is My Refrigerator Sweating?",
+      "description": "How humidity, door openings, gasket gaps, blocked vents, and temperature problems can cause moisture inside or outside a refrigerator.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why is my refrigerator sweating how humidity door openings gasket gaps blocked vents and temperature problems can cause moisture inside or outside a refrigerator kitchen guide articles why is my refrigerator sweating"
+    },
+    {
+      "route": "/articles/why-is-my-smoke-alarm-chirping/",
+      "title": "Why Is My Smoke Alarm Chirping?",
+      "description": "How to distinguish an emergency alarm from a maintenance chirp and check the battery, age, and model-specific signal pattern.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my smoke alarm chirping how to distinguish an emergency alarm from a maintenance chirp and check the battery age and model specific signal pattern home apartment guide articles why is my smoke alarm chirping"
     },
     {
       "route": "/articles/why-is-my-wifi-so-slow/",
@@ -874,6 +954,14 @@
       "searchText": "heating cooling temperature control airflow seasonal preparation de icing efficiency and equipment warning signs home apartment topic home heating cooling"
     },
     {
+      "route": "/home/repairs-maintenance/",
+      "title": "Repairs & Maintenance",
+      "description": "Routine upkeep, practical diagnosis, reversible repairs, materials, stop conditions, and professional boundaries.",
+      "category": "Home & Apartment",
+      "type": "Topic",
+      "searchText": "repairs maintenance routine upkeep practical diagnosis reversible repairs materials stop conditions and professional boundaries home apartment topic home repairs maintenance"
+    },
+    {
       "route": "/home/utilities-energy/",
       "title": "Utilities & Energy",
       "description": "Electricity, water, gas, service costs, conservation tradeoffs, billing checks, and outage preparation.",
@@ -888,6 +976,14 @@
       "category": "Kitchen",
       "type": "Category",
       "searchText": "kitchen mechanism first kitchen guidance for appliances cookware food science substitutions meals and safety kitchen category kitchen"
+    },
+    {
+      "route": "/kitchen/food-science/",
+      "title": "Food Science",
+      "description": "The chemistry and physics behind ingredients, heat, texture, browning, preservation, and common failures.",
+      "category": "Kitchen",
+      "type": "Topic",
+      "searchText": "food science the chemistry and physics behind ingredients heat texture browning preservation and common failures kitchen topic kitchen food science"
     },
     {
       "route": "/kitchen/kitchen-appliances/",

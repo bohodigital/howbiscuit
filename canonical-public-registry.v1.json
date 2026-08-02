@@ -631,6 +631,78 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/can-you-freeze-eggs/",
+      "title": "Can You Freeze Eggs?",
+      "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Yes, but do not freeze raw eggs in their shells. Crack them first and freeze the contents in a suitable container.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "This article covers ordinary U.S. consumer handling, not commercial egg processing.",
+          "Quality after freezing varies by preparation and recipe.",
+          "No egg-freezing method was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-freeze-milk/",
+          "/articles/how-long-does-cooked-rice-last/",
+          "/articles/what-temperature-should-freezer-be/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-freeze-eggs-lead-diagram-16e5a8fe82",
+          "href": "/images/articles/can-you-freeze-eggs/freeze-eggs-out-of-shell.png",
+          "packageRelativePath": "media/freeze-eggs-out-of-shell.png",
+          "mimeType": "image/png",
+          "sha256": "16e5a8fe8261f6edf33170c39016bf70327ce8cdfe03cbfe53d1bef950144d2d",
+          "sizeBytes": 39202,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram showing eggs cracked out of their shells before freezing",
+          "caption": "Do not freeze eggs in their shells; crack them into a freezer-safe container and label the contents.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-freeze-eggs-lead-diagram-16e5a8fe82",
+        "href": "/images/articles/can-you-freeze-eggs/freeze-eggs-out-of-shell.png",
+        "packageRelativePath": "media/freeze-eggs-out-of-shell.png",
+        "mimeType": "image/png",
+        "sha256": "16e5a8fe8261f6edf33170c39016bf70327ce8cdfe03cbfe53d1bef950144d2d",
+        "sizeBytes": 39202,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram showing eggs cracked out of their shells before freezing",
+        "caption": "Do not freeze eggs in their shells; crack them into a freezer-safe container and label the contents.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/can-you-freeze-milk/",
       "title": "Can You Freeze Milk?",
       "description": "You can freeze pasteurized milk in a freezer-safe container with expansion space, then thaw it in the refrigerator. Texture may separate, so shake or blend it after thawing.",
@@ -893,6 +965,78 @@
         "height": 630,
         "alt": "Diagram summarizing Can You Plug a Space Heater Into a Power Strip?",
         "caption": "How Biscuit summary diagram for Can You Plug a Space Heater Into a Power Strip?",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-put-dish-soap-in-dishwasher/",
+      "title": "Can You Put Dish Soap in a Dishwasher?",
+      "description": "Why ordinary hand-washing liquid does not belong in an automatic dishwasher and what to do after an accidental dose.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "No. Ordinary hand dish soap can create excessive suds and leaks in an automatic dishwasher; use detergent labeled for automatic dishwashers.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "Cleanup and drain controls differ by dishwasher model.",
+          "This article does not recommend improvised chemical or cooking-oil remedies.",
+          "No detergent or dishwasher was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-dishwasher-filter/",
+          "/articles/should-you-rinse-dishes-before-dishwasher/",
+          "/articles/why-is-my-dishwasher-not-drying-dishes/"
+        ]
+      },
+      "media": [
+        {
+          "id": "can-you-put-dish-soap-in-dishwasher-lead-diagram-cf4432e6ad",
+          "href": "/images/articles/can-you-put-dish-soap-in-dishwasher/dish-soap-vs-dishwasher-detergent.png",
+          "packageRelativePath": "media/dish-soap-vs-dishwasher-detergent.png",
+          "mimeType": "image/png",
+          "sha256": "cf4432e6adbef6df6d39a87dc5e2c103f40297def6ec7edb15e239b08ef55026",
+          "sizeBytes": 44376,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram contrasting hand dish soap with detergent formulated for an automatic dishwasher",
+          "caption": "Hand dish soap creates excess suds; use only detergent identified for automatic dishwashers.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "can-you-put-dish-soap-in-dishwasher-lead-diagram-cf4432e6ad",
+        "href": "/images/articles/can-you-put-dish-soap-in-dishwasher/dish-soap-vs-dishwasher-detergent.png",
+        "packageRelativePath": "media/dish-soap-vs-dishwasher-detergent.png",
+        "mimeType": "image/png",
+        "sha256": "cf4432e6adbef6df6d39a87dc5e2c103f40297def6ec7edb15e239b08ef55026",
+        "sizeBytes": 44376,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram contrasting hand dish soap with detergent formulated for an automatic dishwasher",
+        "caption": "Hand dish soap creates excess suds; use only detergent identified for automatic dishwashers.",
         "credit": "How Biscuit Editorial Desk",
         "attribution": "How Biscuit Editorial Desk",
         "license": null,
@@ -1796,6 +1940,77 @@
         "attribution": "Photo by Shixart1985 via Wikimedia Commons · CC BY 2.0 · Source",
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Adjusting_the_temperature_on_a_thermostat_in_a_home_setting.jpg",
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/does-unplugging-appliances-save-electricity/",
+      "title": "Does Unplugging Appliances Save Electricity?",
+      "description": "How standby power works, which devices are practical to switch off, and why measurement beats a universal savings claim.",
+      "categoryId": "home",
+      "topicId": "utilities-energy",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "It can. Some devices draw standby power while appearing off, but the amount and practical benefit vary, so measure and prioritize devices that can safely lose power.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "No universal dollar or percentage savings is claimed.",
+          "Electrical rates, device behavior, and household usage vary.",
+          "No appliance or power meter was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-calculate-appliance-electricity-cost/",
+          "/articles/power-strip-vs-surge-protector/"
+        ]
+      },
+      "media": [
+        {
+          "id": "does-unplugging-appliances-save-electricity-lead-diagram-7415e75545",
+          "href": "/images/articles/does-unplugging-appliances-save-electricity/standby-power-control-path.png",
+          "packageRelativePath": "media/standby-power-control-path.png",
+          "mimeType": "image/png",
+          "sha256": "7415e75545d2b63380f26df4bcfa1ce3a6531acf5a99efe7e734bca1b7532961",
+          "sizeBytes": 45884,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram showing a device in standby, measurement at the outlet, and a safe shutoff decision",
+          "caption": "Measure standby use, decide whether the device can safely lose power, then use a switch or unplug only when appropriate.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "does-unplugging-appliances-save-electricity-lead-diagram-7415e75545",
+        "href": "/images/articles/does-unplugging-appliances-save-electricity/standby-power-control-path.png",
+        "packageRelativePath": "media/standby-power-control-path.png",
+        "mimeType": "image/png",
+        "sha256": "7415e75545d2b63380f26df4bcfa1ce3a6531acf5a99efe7e734bca1b7532961",
+        "sizeBytes": 45884,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram showing a device in standby, measurement at the outlet, and a safe shutoff decision",
+        "caption": "Measure standby use, decide whether the device can safely lose power, then use a switch or unplug only when appropriate.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
         "focalPoint": null
       }
     },
@@ -4108,6 +4323,78 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/is-freezer-burn-safe-to-eat/",
+      "title": "Is Freezer Burn Safe to Eat?",
+      "description": "What freezer burn means, why it affects quality more than safety, and when a damaged package calls for a different decision.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Freezer burn itself does not make continuously frozen food unsafe, but it can make the food dry, tough, or stale-tasting.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "This guidance assumes the food remained continuously frozen and was handled safely.",
+          "Appearance alone cannot reconstruct a food package’s temperature history.",
+          "No food was tasted or evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/what-temperature-should-freezer-be/",
+          "/articles/why-freezer-frosting-up/",
+          "/articles/how-long-food-stay-frozen-power-outage/"
+        ]
+      },
+      "media": [
+        {
+          "id": "is-freezer-burn-safe-to-eat-lead-diagram-cc18dbabe7",
+          "href": "/images/articles/is-freezer-burn-safe-to-eat/freezer-burn-quality-vs-safety.png",
+          "packageRelativePath": "media/freezer-burn-quality-vs-safety.png",
+          "mimeType": "image/png",
+          "sha256": "cc18dbabe7f3d0e0acb1490951d8bc94e121f1c89013253772b62c4b6684c8ec",
+          "sizeBytes": 38913,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram separating freezer burn quality changes from food safety decisions",
+          "caption": "Freezer burn changes quality; safety still depends on continuous freezing and safe handling.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "is-freezer-burn-safe-to-eat-lead-diagram-cc18dbabe7",
+        "href": "/images/articles/is-freezer-burn-safe-to-eat/freezer-burn-quality-vs-safety.png",
+        "packageRelativePath": "media/freezer-burn-quality-vs-safety.png",
+        "mimeType": "image/png",
+        "sha256": "cc18dbabe7f3d0e0acb1490951d8bc94e121f1c89013253772b62c4b6684c8ec",
+        "sizeBytes": 38913,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram separating freezer burn quality changes from food safety decisions",
+        "caption": "Freezer burn changes quality; safety still depends on continuous freezing and safe handling.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/mesh-wifi-vs-range-extender/",
       "title": "Mesh Wi-Fi vs. Range Extender: Which Should You Use?",
@@ -4729,6 +5016,78 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/router-restart-vs-reset/",
+      "title": "Router Restart vs. Reset: What’s the Difference?",
+      "description": "Why restarting a router is a low-risk first step while a factory reset erases personalized settings and requires setup again.",
+      "categoryId": "home-tech",
+      "topicId": "wifi-routers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A restart turns the router off and back on while preserving settings; a factory reset erases personalized settings and returns the device to its factory configuration.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "Button names, timing, backups, and defaults vary by router model and firmware.",
+          "A restart is not guaranteed to fix an ISP outage, damaged hardware, or compromised configuration.",
+          "No router was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-does-my-wifi-keep-disconnecting/",
+          "/articles/why-is-my-wifi-so-slow/",
+          "/articles/how-often-should-you-replace-wifi-router/"
+        ]
+      },
+      "media": [
+        {
+          "id": "router-restart-vs-reset-lead-diagram-df04ab6403",
+          "href": "/images/articles/router-restart-vs-reset/router-restart-vs-reset.png",
+          "packageRelativePath": "media/router-restart-vs-reset.png",
+          "mimeType": "image/png",
+          "sha256": "df04ab6403eb396b91f8706a1268c1153c4392b70b2843a1d395d181e85bc4b1",
+          "sizeBytes": 44962,
+          "width": 1200,
+          "height": 630,
+          "alt": "Comparison diagram showing a router restart preserving settings and a factory reset erasing personalized settings",
+          "caption": "Restart first for a routine recovery; factory reset only with a backup and model-specific reconfiguration plan.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "router-restart-vs-reset-lead-diagram-df04ab6403",
+        "href": "/images/articles/router-restart-vs-reset/router-restart-vs-reset.png",
+        "packageRelativePath": "media/router-restart-vs-reset.png",
+        "mimeType": "image/png",
+        "sha256": "df04ab6403eb396b91f8706a1268c1153c4392b70b2843a1d395d181e85bc4b1",
+        "sizeBytes": 44962,
+        "width": 1200,
+        "height": 630,
+        "alt": "Comparison diagram showing a router restart preserving settings and a factory reset erasing personalized settings",
+        "caption": "Restart first for a routine recovery; factory reset only with a backup and model-specific reconfiguration plan.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
       "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
       "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
@@ -4868,6 +5227,78 @@
           "x": 0.62,
           "y": 0.52
         }
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/should-you-wash-raw-chicken/",
+      "title": "Should You Wash Raw Chicken?",
+      "description": "Why USDA advises against washing raw chicken and what to do instead to reduce cross-contamination.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "No. USDA advises against washing raw chicken because splashing can spread bacteria around the sink and nearby surfaces.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "This is U.S. household food-safety guidance and does not replace local public-health instructions.",
+          "The article does not evaluate a particular piece of poultry or kitchen.",
+          "No washing or cooking method was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-can-cooked-food-sit-out/",
+          "/articles/organize-refrigerator-food-safety/",
+          "/articles/what-temperature-should-refrigerator-be/"
+        ]
+      },
+      "media": [
+        {
+          "id": "should-you-wash-raw-chicken-lead-diagram-8cf8011dea",
+          "href": "/images/articles/should-you-wash-raw-chicken/raw-chicken-no-rinse.png",
+          "packageRelativePath": "media/raw-chicken-no-rinse.png",
+          "mimeType": "image/png",
+          "sha256": "8cf8011deae183109cc77fb271dfdec49494633637b8254e665ab49b71d21407",
+          "sizeBytes": 39259,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram showing raw chicken going from package to pan without rinsing, followed by hand and surface cleaning",
+          "caption": "Skip the sink rinse: transfer carefully, clean hands and surfaces, and cook poultry to a verified safe temperature.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "should-you-wash-raw-chicken-lead-diagram-8cf8011dea",
+        "href": "/images/articles/should-you-wash-raw-chicken/raw-chicken-no-rinse.png",
+        "packageRelativePath": "media/raw-chicken-no-rinse.png",
+        "mimeType": "image/png",
+        "sha256": "8cf8011deae183109cc77fb271dfdec49494633637b8254e665ab49b71d21407",
+        "sizeBytes": 39259,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram showing raw chicken going from package to pan without rinsing, followed by hand and surface cleaning",
+        "caption": "Skip the sink rinse: transfer carefully, clean hands and surfaces, and cook poultry to a verified safe temperature.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
       }
     },
     {
@@ -5488,6 +5919,78 @@
         "attribution": "Photo by V.B.Speranza via Wikimedia Commons (CC BY-SA 4.0) · CC BY-SA 4.0 · Source",
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_Dehumidifier.jpg",
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/what-temperature-should-freezer-be/",
+      "title": "What Temperature Should a Freezer Be?",
+      "description": "The safe freezer target, how to measure it, and what to check when the compartment runs warmer than expected.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Set and verify a home freezer at 0°F (-18°C). Use an appliance thermometer rather than relying only on the control dial.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "This is general U.S. food-storage guidance, not a diagnosis of a particular appliance.",
+          "No freezer was evaluated for this article.",
+          "Model-specific controls, alarms, and service procedures vary; follow the appliance manual."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/what-temperature-should-refrigerator-be/",
+          "/articles/power-outage-food-safety-chart/",
+          "/articles/why-freezer-frosting-up/"
+        ]
+      },
+      "media": [
+        {
+          "id": "what-temperature-should-freezer-be-lead-diagram-a371bc4fbc",
+          "href": "/images/articles/what-temperature-should-freezer-be/freezer-temperature-guide.png",
+          "packageRelativePath": "media/freezer-temperature-guide.png",
+          "mimeType": "image/png",
+          "sha256": "a371bc4fbc96cec8016b6bc8861c9d5b1ed2b912ad671f413696a91603c03200",
+          "sizeBytes": 43550,
+          "width": 1200,
+          "height": 630,
+          "alt": "Diagram showing a freezer thermometer at zero degrees Fahrenheit and a check-adjust-recheck sequence",
+          "caption": "Use an appliance thermometer to check for 0°F (-18°C), adjust the control if needed, and recheck after the temperature settles.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "what-temperature-should-freezer-be-lead-diagram-a371bc4fbc",
+        "href": "/images/articles/what-temperature-should-freezer-be/freezer-temperature-guide.png",
+        "packageRelativePath": "media/freezer-temperature-guide.png",
+        "mimeType": "image/png",
+        "sha256": "a371bc4fbc96cec8016b6bc8861c9d5b1ed2b912ad671f413696a91603c03200",
+        "sizeBytes": 43550,
+        "width": 1200,
+        "height": 630,
+        "alt": "Diagram showing a freezer thermometer at zero degrees Fahrenheit and a check-adjust-recheck sequence",
+        "caption": "Use an appliance thermometer to check for 0°F (-18°C), adjust the control if needed, and recheck after the temperature settles.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
         "focalPoint": null
       }
     },
@@ -6210,6 +6713,222 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-is-my-dishwasher-not-drying-dishes/",
+      "title": "Why Is My Dishwasher Not Drying Dishes?",
+      "description": "A model-aware checklist for wet dishes, including cycle settings, rinse aid, loading, plastics, and signs that service may be needed.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Wet dishes often trace to the selected dry option, rinse-aid setup, pooled water from loading, or the way plastics retain less heat; a no-heat condition can require model-specific service.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "Dishwasher drying systems and option names differ by model.",
+          "This checklist does not diagnose electrical or component faults.",
+          "No dishwasher, detergent, or rinse aid was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-dishwasher-filter/",
+          "/articles/why-dishwasher-leaves-white-film/",
+          "/articles/should-you-rinse-dishes-before-dishwasher/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-is-my-dishwasher-not-drying-dishes-lead-diagram-1a96db8d8f",
+          "href": "/images/articles/why-is-my-dishwasher-not-drying-dishes/dishwasher-drying-checklist.png",
+          "packageRelativePath": "media/dishwasher-drying-checklist.png",
+          "mimeType": "image/png",
+          "sha256": "1a96db8d8f36195c7698fdf7dbe8848ab5d6da68cdba4db2f7921762b77652de",
+          "sizeBytes": 44264,
+          "width": 1200,
+          "height": 630,
+          "alt": "Dishwasher drying checklist showing cycle, rinse aid, loading, and service checks",
+          "caption": "Check the selected cycle, rinse-aid guidance, water-draining load angles, and model-specific fault indicators.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-is-my-dishwasher-not-drying-dishes-lead-diagram-1a96db8d8f",
+        "href": "/images/articles/why-is-my-dishwasher-not-drying-dishes/dishwasher-drying-checklist.png",
+        "packageRelativePath": "media/dishwasher-drying-checklist.png",
+        "mimeType": "image/png",
+        "sha256": "1a96db8d8f36195c7698fdf7dbe8848ab5d6da68cdba4db2f7921762b77652de",
+        "sizeBytes": 44264,
+        "width": 1200,
+        "height": 630,
+        "alt": "Dishwasher drying checklist showing cycle, rinse aid, loading, and service checks",
+        "caption": "Check the selected cycle, rinse-aid guidance, water-draining load angles, and model-specific fault indicators.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-is-my-refrigerator-sweating/",
+      "title": "Why Is My Refrigerator Sweating?",
+      "description": "How humidity, door openings, gasket gaps, blocked vents, and temperature problems can cause moisture inside or outside a refrigerator.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Refrigerator condensation usually forms when humid air meets a cold surface; frequent door openings, a poor door seal, blocked airflow, or off-target temperature can make it worse.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "Condensation and leaks can have different causes that cannot be distinguished remotely.",
+          "Acceptable exterior moisture and control settings vary by model and climate.",
+          "No refrigerator was physically inspected for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/what-temperature-should-refrigerator-be/",
+          "/articles/why-refrigerator-leaking-water/",
+          "/articles/organize-refrigerator-food-safety/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-is-my-refrigerator-sweating-lead-diagram-251287cd23",
+          "href": "/images/articles/why-is-my-refrigerator-sweating/refrigerator-condensation-check.png",
+          "packageRelativePath": "media/refrigerator-condensation-check.png",
+          "mimeType": "image/png",
+          "sha256": "251287cd2332ae56a0e5013ba7ded3be5c01d47b44dc12315af3d5f659fbe69f",
+          "sizeBytes": 42565,
+          "width": 1200,
+          "height": 630,
+          "alt": "Refrigerator condensation diagram showing humidity, door seal, airflow, and temperature checks",
+          "caption": "Trace refrigerator moisture through room humidity, door closure and gasket, blocked airflow, and verified temperature.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-is-my-refrigerator-sweating-lead-diagram-251287cd23",
+        "href": "/images/articles/why-is-my-refrigerator-sweating/refrigerator-condensation-check.png",
+        "packageRelativePath": "media/refrigerator-condensation-check.png",
+        "mimeType": "image/png",
+        "sha256": "251287cd2332ae56a0e5013ba7ded3be5c01d47b44dc12315af3d5f659fbe69f",
+        "sizeBytes": 42565,
+        "width": 1200,
+        "height": 630,
+        "alt": "Refrigerator condensation diagram showing humidity, door seal, airflow, and temperature checks",
+        "caption": "Trace refrigerator moisture through room humidity, door closure and gasket, blocked airflow, and verified temperature.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-is-my-smoke-alarm-chirping/",
+      "title": "Why Is My Smoke Alarm Chirping?",
+      "description": "How to distinguish an emergency alarm from a maintenance chirp and check the battery, age, and model-specific signal pattern.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-01",
+      "updatedDate": "2026-08-01",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "An intermittent chirp commonly signals a low battery, end-of-life condition, or another model-specific fault; first distinguish it from a full alarm and identify the exact unit.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Desk research only; no hands-on testing was performed.",
+          "Alarm patterns, battery types, end-of-life signals, and reset steps vary by model.",
+          "This article cannot determine whether smoke or carbon monoxide is present.",
+          "No alarm was evaluated for this article."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-often-test-replace-smoke-alarms/",
+          "/articles/can-you-plug-space-heater-into-power-strip/",
+          "/articles/why-does-gfci-outlet-keep-tripping/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-is-my-smoke-alarm-chirping-lead-diagram-de0bd847a7",
+          "href": "/images/articles/why-is-my-smoke-alarm-chirping/smoke-alarm-chirp-triage.png",
+          "packageRelativePath": "media/smoke-alarm-chirp-triage.png",
+          "mimeType": "image/png",
+          "sha256": "de0bd847a785b4423ef8ce0c42f1dcd9bb3dfc553bfdd4c7e523e44f08196553",
+          "sizeBytes": 43245,
+          "width": 1200,
+          "height": 630,
+          "alt": "Smoke alarm chirp triage diagram separating an active alarm from low-battery or end-of-life chirps",
+          "caption": "Treat an active alarm as an emergency; for an intermittent chirp, identify the unit and follow its model-specific signal guide.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": null
+        }
+      ],
+      "leadMedia": {
+        "id": "why-is-my-smoke-alarm-chirping-lead-diagram-de0bd847a7",
+        "href": "/images/articles/why-is-my-smoke-alarm-chirping/smoke-alarm-chirp-triage.png",
+        "packageRelativePath": "media/smoke-alarm-chirp-triage.png",
+        "mimeType": "image/png",
+        "sha256": "de0bd847a785b4423ef8ce0c42f1dcd9bb3dfc553bfdd4c7e523e44f08196553",
+        "sizeBytes": 43245,
+        "width": 1200,
+        "height": 630,
+        "alt": "Smoke alarm chirp triage diagram separating an active alarm from low-battery or end-of-life chirps",
+        "caption": "Treat an active alarm as an emergency; for an intermittent chirp, identify the unit and follow its model-specific signal guide.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-is-my-wifi-so-slow/",
       "title": "Why Is My Wi-Fi So Slow? 12 Things to Check Before Buying Anything",
@@ -6629,7 +7348,7 @@
       "topicId": "wifi-routers",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-26",
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -6690,6 +7409,23 @@
     {
       "kind": "topic",
       "renderMode": "canonical-source",
+      "route": "/home/repairs-maintenance/",
+      "title": "Repairs & Maintenance",
+      "description": "Routine upkeep, practical diagnosis, reversible repairs, materials, stop conditions, and professional boundaries.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-01",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
       "route": "/home/utilities-energy/",
       "title": "Utilities & Energy",
       "description": "Electricity, water, gas, service costs, conservation tradeoffs, billing checks, and outage preparation.",
@@ -6697,7 +7433,7 @@
       "topicId": "utilities-energy",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-07-27",
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -6715,6 +7451,23 @@
       "articleType": "category",
       "publishedDate": null,
       "updatedDate": "2026-07-18",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
+      "route": "/kitchen/food-science/",
+      "title": "Food Science",
+      "description": "The chemistry and physics behind ingredients, heat, texture, browning, preservation, and common failures.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-01",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -6926,5 +7679,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:e6d3886c2ffac46acbddce38be0f2898fb25c9574b337f939ed4d88655456105"
+  "registryDigest": "sha256:550415fd235a035fb5104f4263b5b8f93cf74c0bf77cba07010006ed00fa6a11"
 }
