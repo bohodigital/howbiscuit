@@ -3189,6 +3189,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-long-hard-boiled-eggs-last-fridge/",
+      "title": "How Long Do Hard-Boiled Eggs Last in the Fridge?",
+      "description": "Refrigerate hard-boiled eggs within two hours and use them within one week. Store them at 40°F or below.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Refrigerate hard-boiled eggs within two hours after cooking and use them within one week. Keep the refrigerator at 40°F or below and discard eggs whose time or temperature history is unsafe or unknown.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No eggs or refrigerator temperatures were physically tested.",
+          "Actual safety depends on time, temperature, contamination, and handling history."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-microwave-is-sparking/",
+          "/articles/should-you-wash-raw-chicken/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/how-long-leftovers-last-fridge/",
       "title": "How Long Do Leftovers Last in the Fridge?",
@@ -7415,6 +7450,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-microwave-is-sparking/",
+      "title": "Why Is My Microwave Sparking?",
+      "description": "Stop the microwave immediately. Common causes include metal, foil, metallic trim, burned food residue, an incorrectly positioned rack, empty operation, or cavity damage.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Stop the cycle immediately. Remove unauthorized metal, foil, twist ties, metallic trim, probes, and incorrectly placed racks; clean burned residue; inspect the cavity and door; and discontinue use if damage, recurring arcing, or an electrical odor remains.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No microwave oven was physically inspected or energized.",
+          "Damage behind internal covers cannot be evaluated from a general guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-hard-boiled-eggs-last-fridge/",
+          "/articles/power-outage-home-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-phone-gets-hot-while-charging/",
       "title": "Why Does My Phone Get Hot While Charging?",
       "description": "Some warmth is normal during charging, especially with fast charging. Persistent excessive heat, swelling, odors, or a hot connector require attention.",
@@ -7902,7 +7972,7 @@
       "topicId": "kitchen-appliances",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-02",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8114,5 +8184,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:4ba326d78bc92cefe92a3d285b6b53af606e3df1164cae1d00dcce19f43b55bc"
+  "registryDigest": "sha256:51210499500451d4e969ecd66eddb4e2bd4b1856100f9c84ade7136a1ceca3cc"
 }
