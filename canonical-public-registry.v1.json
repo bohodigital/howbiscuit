@@ -5614,6 +5614,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/spot-fake-online-store-before-buying/",
+      "title": "How to Spot a Fake Online Store Before You Buy",
+      "description": "Verify the exact domain, research the seller independently, compare prices, read return and shipping terms, and avoid payment methods that make recovery difficult.",
+      "categoryId": "shop",
+      "topicId": "products-to-avoid",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Do not trust the ad or padlock alone. Verify the complete domain, research the seller outside its own site, compare the price with established retailers, read the return and shipping terms, and pay through a method that preserves dispute rights.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No specific store or transaction was investigated.",
+          "Website ownership, policies, and payment protections can change."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/compare-unit-prices-different-package-sizes/",
+          "/articles/return-policy-vs-warranty-vs-service-contract/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/tank-vs-tankless-water-heater/",
       "title": "Tank vs. Tankless Water Heater: Which Is Better for Your Home?",
@@ -8217,5 +8252,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:be51ebb7dbf077045033fe43b0093589a8fddddf8c26d3d3833b8300261bc281"
+  "registryDigest": "sha256:e18d0f53a4c6b9ba70bddad9edef1cc80d9f2d0705aa4ca3a02b1002036ec39f"
 }
