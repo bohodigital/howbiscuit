@@ -5213,6 +5213,40 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-to-check-used-dishwasher-before-buying/",
+      "title": "How to Check a Used Dishwasher Before You Buy It",
+      "description": "Inspect a used dishwasher for recalls, leaks, drainage, heating, spray performance, damaged racks, hoses, wiring, dimensions, and operating condition.",
+      "categoryId": "shop",
+      "topicId": "used-refurbished",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Verify the exact model, recall status, dimensions, plumbing, and electrical requirements, then run a complete fill, wash, drain, and dry cycle. Reject a machine that leaks, leaves dirty standing water, produces electrical odor, or cannot complete the cycle.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No individual dishwasher was inspected; buyers must complete the physical and full-cycle tests on the exact appliance."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/appliance-buying-checklist/",
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-to-check-used-refrigerator-before-buying/",
       "title": "How to Check a Used Refrigerator Before You Buy It",
       "description": "Inspect a used refrigerator for recalls, safe temperatures, door-seal damage, compressor trouble, water leaks, wiring faults, dimensions, and total ownership cost.",
@@ -10833,5 +10867,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:04c382108b2ba37dea8d18bcedf34f9b59e786889fc57d8cb7b08048e57e40ce"
+  "registryDigest": "sha256:7b44dd747436b6157c9953b0307bcf8b385cdd6e95d1311c408eca97db723a0c"
 }
