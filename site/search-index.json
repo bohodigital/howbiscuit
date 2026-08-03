@@ -290,6 +290,14 @@
       "searchText": "how to compare unit prices when package sizes are different compare different package sizes by dividing final checkout cost by usable quantity converting to the same unit and accounting for discounts waste and product differences tools guide articles compare unit prices different package sizes"
     },
     {
+      "route": "/articles/computer-repair-handoff-checklist/",
+      "title": "Computer Repair Handoff Checklist: Back Up Data and Protect Your Privacy",
+      "description": "Prepare a laptop or desktop for repair by verifying backups, preserving encryption keys, limiting account access, documenting condition, and recording included accessories.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "computer repair handoff checklist back up data and protect your privacy prepare a laptop or desktop for repair by verifying backups preserving encryption keys limiting account access documenting condition and recording included accessories tools guide articles computer repair handoff checklist"
+    },
+    {
       "route": "/articles/contractor-estimate-comparison-checklist/",
       "title": "Contractor Estimate Comparison Checklist",
       "description": "Compare written scope, materials, exclusions, schedule, licensing, insurance, permits, payment terms, warranties, and change-order rules instead of choosing only by total price.",

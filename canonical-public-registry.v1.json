@@ -1821,6 +1821,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/computer-repair-handoff-checklist/",
+      "title": "Computer Repair Handoff Checklist: Back Up Data and Protect Your Privacy",
+      "description": "Prepare a laptop or desktop for repair by verifying backups, preserving encryption keys, limiting account access, documenting condition, and recording included accessories.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Before handing over a computer, create and verify a current backup, preserve BitLocker or FileVault recovery information, remove unnecessary sensitive data, give the technician only the access required, document the defect and physical condition, record every accessory, and obtain written authorization limits for cost, erasure, parts, and storage-drive handling.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "This is a source-based handoff checklist and does not inspect a computer, backup, repair provider, or storage device."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/password-manager-migration-checklist/",
+          "/articles/how-to-erase-phone-before-selling/",
+          "/articles/used-laptop-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/contractor-estimate-comparison-checklist/",
       "title": "Contractor Estimate Comparison Checklist",
       "description": "Compare written scope, materials, exclusions, schedule, licensing, insurance, permits, payment terms, warranties, and change-order rules instead of choosing only by total price.",
@@ -11171,5 +11206,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:bd1e496f221eaa300a95e11fdb2bc393612fa07988dcfcc0927d9e5e2769afac"
+  "registryDigest": "sha256:dd54ab023d6f7c93c307668489412734eec915ea695c1f42a5d9ef833c3af9b7"
 }
