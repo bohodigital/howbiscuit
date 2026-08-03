@@ -426,6 +426,14 @@
       "searchText": "how long can cooked food sit out most perishable cooked food should be refrigerated within two hours or within one hour when the temperature is above 90 f food held safely hot or cold follows different rules kitchen guide articles how long can cooked food sit out"
     },
     {
+      "route": "/articles/how-long-cooked-pasta-lasts-fridge/",
+      "title": "How Long Does Cooked Pasta Last in the Fridge?",
+      "description": "Store cooked pasta safely for three to four days, cool it promptly, and learn when temperature, sauce, storage history, or spoilage means it should be discarded.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how long does cooked pasta last in the fridge store cooked pasta safely for three to four days cool it promptly and learn when temperature sauce storage history or spoilage means it should be discarded kitchen guide articles how long cooked pasta lasts fridge"
+    },
+    {
       "route": "/articles/how-long-does-cooked-rice-last/",
       "title": "How Long Does Cooked Rice Last in the Fridge?",
       "description": "Refrigerate cooked rice within two hours and use it within four days. Cool it promptly in shallow containers and reheat leftovers to 165°F.",
@@ -616,6 +624,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to read an energyguide label learn what the yellow energyguide label says about annual energy use estimated operating cost similar model comparisons capacity and local rate recalculation shop smarter guide articles how to read energyguide label"
+    },
+    {
+      "route": "/articles/how-to-recycle-lithium-ion-batteries-safely/",
+      "title": "How to Recycle Lithium-Ion Batteries Safely",
+      "description": "Prepare ordinary lithium-ion batteries for recycling and handle swollen, damaged, defective, or recalled batteries without putting them in household trash or curbside recycling.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to recycle lithium ion batteries safely prepare ordinary lithium ion batteries for recycling and handle swollen damaged defective or recalled batteries without putting them in household trash or curbside recycling home tech guide articles how to recycle lithium ion batteries safely"
     },
     {
       "route": "/articles/how-to-spot-fake-online-reviews/",
@@ -1034,6 +1050,14 @@
       "searchText": "why is my microwave sparking stop the microwave immediately common causes include metal foil metallic trim burned food residue an incorrectly positioned rack empty operation or cavity damage kitchen guide articles why microwave is sparking"
     },
     {
+      "route": "/articles/why-phone-battery-drains-overnight/",
+      "title": "Why Does My Phone Battery Drain Overnight?",
+      "description": "Diagnose overnight battery drain on an iPhone or Android phone by checking background activity, cellular signal, updates, battery health, and application usage.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my phone battery drain overnight diagnose overnight battery drain on an iphone or android phone by checking background activity cellular signal updates battery health and application usage home tech guide articles why phone battery drains overnight"
+    },
+    {
       "route": "/articles/why-phone-gets-hot-while-charging/",
       "title": "Why Does My Phone Get Hot While Charging?",
       "description": "Some warmth is normal during charging, especially with fast charging. Persistent excessive heat, swelling, odors, or a hot connector require attention.",
@@ -1058,12 +1082,28 @@
       "searchText": "why salt melts ice and when it stops working a plain english field guide to freezing point depression brine the limits of rock salt and the least wasteful way to de ice a walk home apartment guide articles why salt melts ice"
     },
     {
+      "route": "/articles/why-toilet-bubbling-gurgling/",
+      "title": "Why Is My Toilet Bubbling or Gurgling?",
+      "description": "Diagnose a bubbling toilet by checking for a local clog, blocked vent, multiple slow drains, a restricted sewer line, or temporary municipal sewer work.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my toilet bubbling or gurgling diagnose a bubbling toilet by checking for a local clog blocked vent multiple slow drains a restricted sewer line or temporary municipal sewer work home apartment guide articles why toilet bubbling gurgling"
+    },
+    {
       "route": "/articles/why-toilet-keeps-running/",
       "title": "Why Does My Toilet Keep Running?",
       "description": "A running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube. A dye test can identify the path.",
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my toilet keep running a running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube a dye test can identify the path home apartment guide articles why toilet keeps running"
+    },
+    {
+      "route": "/articles/why-window-air-conditioner-leaking-water-inside/",
+      "title": "Why Is My Window Air Conditioner Leaking Water Inside?",
+      "description": "Diagnose a window air conditioner leaking indoors by checking its outward slope, filter, ice buildup, drainage path, base pan, and window installation.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my window air conditioner leaking water inside diagnose a window air conditioner leaking indoors by checking its outward slope filter ice buildup drainage path base pan and window installation home apartment guide articles why window air conditioner leaking water inside"
     },
     {
       "route": "/articles/window-ac-cost-per-hour/",

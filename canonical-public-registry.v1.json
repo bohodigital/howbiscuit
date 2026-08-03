@@ -3123,6 +3123,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-long-cooked-pasta-lasts-fridge/",
+      "title": "How Long Does Cooked Pasta Last in the Fridge?",
+      "description": "Store cooked pasta safely for three to four days, cool it promptly, and learn when temperature, sauce, storage history, or spoilage means it should be discarded.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cooked pasta should generally be used or frozen within three to four days when refrigerated at 40°F or below. Refrigerate it within two hours, or within one hour when the surrounding temperature is above 90°F.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article applies federal leftover guidance to cooked pasta and does not inspect a specific container’s handling history."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-leftovers-last-fridge/",
+          "/articles/how-long-can-cooked-food-sit-out/",
+          "/articles/can-you-put-hot-food-in-refrigerator/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-long-does-cooked-rice-last/",
       "title": "How Long Does Cooked Rice Last in the Fridge?",
       "description": "Refrigerate cooked rice within two hours and use it within four days. Cool it promptly in shallow containers and reheat leftovers to 165°F.",
@@ -4705,6 +4740,41 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dishwasher.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-recycle-lithium-ion-batteries-safely/",
+      "title": "How to Recycle Lithium-Ion Batteries Safely",
+      "description": "Prepare ordinary lithium-ion batteries for recycling and handle swollen, damaged, defective, or recalled batteries without putting them in household trash or curbside recycling.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Never put a lithium-ion battery or a device containing one in household garbage or ordinary curbside recycling. Protect exposed terminals on intact removable batteries and take them to an approved battery, electronics, or household hazardous-waste collection point.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The guidance is based on current EPA consumer materials and does not replace local collection-program instructions."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/",
+          "/articles/power-outage-home-checklist/",
+          "/articles/why-phone-gets-hot-while-charging/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -7839,6 +7909,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-phone-battery-drains-overnight/",
+      "title": "Why Does My Phone Battery Drain Overnight?",
+      "description": "Diagnose overnight battery drain on an iPhone or Android phone by checking background activity, cellular signal, updates, battery health, and application usage.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A phone can lose charge overnight because background applications, cloud synchronization, software updates, notifications, location services, weak cellular reception, or an aging battery continue using power while the screen is off.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article is based on current manufacturer documentation rather than a controlled test across phone models."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-phone-gets-hot-while-charging/",
+          "/articles/can-100w-usb-c-charger-damage-phone/",
+          "/articles/leave-laptop-plugged-in-all-the-time/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-phone-gets-hot-while-charging/",
       "title": "Why Does My Phone Get Hot While Charging?",
       "description": "Some warmth is normal during charging, especially with fast charging. Persistent excessive heat, swelling, odors, or a hot connector require attention.",
@@ -7977,6 +8082,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-toilet-bubbling-gurgling/",
+      "title": "Why Is My Toilet Bubbling or Gurgling?",
+      "description": "Diagnose a bubbling toilet by checking for a local clog, blocked vent, multiple slow drains, a restricted sewer line, or temporary municipal sewer work.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A toilet bubbles or gurgles when air is displaced through water in the bowl or trap, commonly because of a local obstruction, blocked vent, restricted main sewer line, septic problem, or temporary pressure change during municipal sewer work.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide provides symptom-based triage and cannot remotely inspect the building drain, vent, sewer lateral, or septic system."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-toilet-keeps-running/",
+          "/articles/power-outage-home-checklist/",
+          "/articles/why-bathroom-exhaust-fan-drips-water/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-toilet-keeps-running/",
       "title": "Why Does My Toilet Keep Running?",
       "description": "A running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube. A dye test can identify the path.",
@@ -8004,6 +8144,41 @@
         "routes": [
           "/articles/can-you-paint-over-mold/",
           "/articles/apartment-move-in-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-window-air-conditioner-leaking-water-inside/",
+      "title": "Why Is My Window Air Conditioner Leaking Water Inside?",
+      "description": "Diagnose a window air conditioner leaking indoors by checking its outward slope, filter, ice buildup, drainage path, base pan, and window installation.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Indoor leakage usually means the unit is tilted toward the room, airflow is restricted, ice is melting, the drainage path is obstructed, rain is entering around the installation, or the base pan has been damaged.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article uses manufacturer guidance and does not diagnose one physical air conditioner."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-window-air-conditioner-filter/",
+          "/articles/can-you-plug-air-conditioner-into-extension-cord/",
+          "/articles/window-ac-cost-per-hour/"
         ]
       },
       "media": [],
@@ -8173,7 +8348,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8241,7 +8416,7 @@
       "topicId": "heating-cooling",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8258,7 +8433,7 @@
       "topicId": "repairs-maintenance",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8309,7 +8484,7 @@
       "topicId": "food-science",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8538,5 +8713,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:35bcd91513157f2282d393dd0d5a4e6100d99706398f0ccff353102b61df7c8d"
+  "registryDigest": "sha256:21ea04214fd87a36535fef769f3375d1672d5681b8fbe11c8640cb4c215a01f6"
 }
