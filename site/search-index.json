@@ -610,6 +610,14 @@
       "searchText": "how to calculate what an appliance costs to run calculate appliance cost from annual kwh measured kwh or watts and time learn which method works for refrigerators dryers dishwashers ovens and small appliances home apartment guide articles how to calculate appliance electricity cost"
     },
     {
+      "route": "/articles/how-to-choose-led-light-bulb/",
+      "title": "How to Choose an LED Light Bulb",
+      "description": "Compare LED bulbs using base, shape, lumens, color temperature, color rendering, dimmer compatibility, fixture rating, beam angle, and energy use.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose an led light bulb compare led bulbs using base shape lumens color temperature color rendering dimmer compatibility fixture rating beam angle and energy use shop smarter guide articles how to choose led light bulb"
+    },
+    {
       "route": "/articles/how-to-clean-dishwasher-filter/",
       "title": "How to Clean a Dishwasher Filter",
       "description": "A removable dishwasher filter can collect food, grit, labels, and debris. Here is how to locate, clean, inspect, and reinstall it without damaging the machine.",

@@ -4606,6 +4606,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-to-choose-led-light-bulb/",
+      "title": "How to Choose an LED Light Bulb",
+      "description": "Compare LED bulbs using base, shape, lumens, color temperature, color rendering, dimmer compatibility, fixture rating, beam angle, and energy use.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Match the base, physical shape, fixture rating, and location first. Then choose brightness in lumens, appearance in kelvins, suitable color rendering, dimmer compatibility, beam pattern, and the lowest reasonable wattage that meets those requirements.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide explains specification selection and does not compare or test individual bulb models."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-led-light-bulbs-flicker/",
+          "/articles/does-unplugging-appliances-save-electricity/",
+          "/articles/energy-star-vs-energyguide/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-to-clean-dishwasher-filter/",
       "title": "How to Clean a Dishwasher Filter",
       "description": "A removable dishwasher filter can collect food, grit, labels, and debris. Here is how to locate, clean, inspect, and reinstall it without damaging the machine.",
@@ -8783,5 +8818,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:ff0fa0fa92f553ec3c0baf960d980efc1f2cf29dbfbd01da2273b3fed12c40a3"
+  "registryDigest": "sha256:b64a1d21e4919a0eaece5db428098c5814a1a2c57840f67dc71cc6848012dc1b"
 }
