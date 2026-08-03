@@ -4536,6 +4536,39 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-back-up-phone-before-factory-reset/",
+      "title": "How to Back Up Your Phone Before a Factory Reset",
+      "description": "Back up an iPhone or Android phone safely before a factory reset, including photos, messages, authenticator access, wallet data, files, and account recovery.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Do not factory-reset a phone until a fresh device backup has completed, separately synchronized photos and files have been verified, unsupported application data has been exported, and you have tested the account and authentication methods required after erasure.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article synthesizes current Apple and Google documentation and does not test restore completeness across every phone or application."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/how-to-calculate-appliance-electricity-cost/",
       "title": "How to Calculate What an Appliance Costs to Run",
@@ -7007,6 +7040,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-ceiling-fan-wobbles/",
+      "title": "Why Does My Ceiling Fan Wobble?",
+      "description": "Diagnose ceiling fan wobble by checking dust, loose blade hardware, warped blades, mounting components, downrods, and balance.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A ceiling fan wobbles when its rotating mass is uneven or its mounting system allows movement. Clean the blades evenly, tighten model-approved hardware, inspect for warping and mounting movement, and use a balancing kit only after structural problems are ruled out.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide follows manufacturer troubleshooting and cannot verify the mounting box, framing, or blade condition of a particular fan."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -8152,6 +8218,72 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-phone-says-moisture-detected-charging-port/",
+      "title": "Why Does My Phone Say Moisture Detected in the Charging Port?",
+      "description": "Safely clear a moisture-detected charging alert without rice, heat, compressed air, or tools that can damage a USB-C or Lightning connector.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Disconnect the cable immediately, keep the connector facing downward, and let the phone and cable dry in a ventilated room. Do not use rice, heat, compressed air, cotton swabs, or objects inside the port.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide follows current Apple liquid-detection instructions and does not assess a specific phone’s liquid exposure or internal damage."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-phone-gets-hot-while-charging/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-printer-offline-how-to-fix/",
+      "title": "Why Is My Printer Offline?",
+      "description": "Fix an offline printer on Windows or Mac by checking power, errors, Wi-Fi, the selected printer, print queues, paused printing, drivers, and saved connections.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Offline means the computer cannot currently communicate with the selected printer. Check the printer’s own error state, select the correct queue, clear paused or stuck jobs, verify the cable or common network, restart the devices, and re-add the printer only after simpler checks fail.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide uses current operating-system documentation and cannot inspect a particular printer, router, cable, or print server."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-refrigerator-leaking-water/",
       "title": "Why Is My Refrigerator Leaking Water?",
@@ -8318,6 +8450,39 @@
         "routes": [
           "/articles/can-you-paint-over-mold/",
           "/articles/apartment-move-in-inspection-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-washing-machine-not-draining/",
+      "title": "Why Is My Washing Machine Not Draining?",
+      "description": "Diagnose a washer that will not drain by checking its cycle, load, drain hose, standpipe, pump filter, detergent, error code, and drain pump.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A washer may retain water because the cycle was interrupted, the load is unbalanced, the drain hose is kinked or installed incorrectly, the household drain is blocked, a user-accessible pump filter is clogged, or the drain pump or control has failed.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide provides model-agnostic triage and cannot inspect the pump, control, wiring, hose routing, or household drain."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/power-outage-home-checklist/"
         ]
       },
       "media": [],
@@ -8506,6 +8671,23 @@
       "articleType": "category",
       "publishedDate": null,
       "updatedDate": "2026-07-18",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
+      "route": "/home-tech/computers-laptops/",
+      "title": "Computers & Laptops",
+      "description": "Choosing, setting up, maintaining, repairing, and extending the useful life of personal computers.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8904,5 +9086,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:30544f253a7a01f5a2c75ebb9887415eb3cf9f1bf76070a5f52282f6f7404691"
+  "registryDigest": "sha256:600c4b6a11d284e8696ff6e2fe1bf18be37737c1a82302d83a2ef755ad411773"
 }

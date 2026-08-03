@@ -602,6 +602,14 @@
       "searchText": "how often should you test and replace smoke alarms test smoke alarms at least monthly and replace the whole alarm when it is 10 years old or sooner if its instructions or failed tests require it home apartment guide articles how often test replace smoke alarms"
     },
     {
+      "route": "/articles/how-to-back-up-phone-before-factory-reset/",
+      "title": "How to Back Up Your Phone Before a Factory Reset",
+      "description": "Back up an iPhone or Android phone safely before a factory reset, including photos, messages, authenticator access, wallet data, files, and account recovery.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to back up your phone before a factory reset back up an iphone or android phone safely before a factory reset including photos messages authenticator access wallet data files and account recovery home tech guide articles how to back up phone before factory reset"
+    },
+    {
       "route": "/articles/how-to-calculate-appliance-electricity-cost/",
       "title": "How to Calculate What an Appliance Costs to Run",
       "description": "Calculate appliance cost from annual kWh, measured kWh, or watts and time. Learn which method works for refrigerators, dryers, dishwashers, ovens, and small appliances.",
@@ -946,6 +954,14 @@
       "searchText": "why bread goes stale faster in the refrigerator refrigeration can slow mold but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale kitchen guide articles why bread goes stale in refrigerator"
     },
     {
+      "route": "/articles/why-ceiling-fan-wobbles/",
+      "title": "Why Does My Ceiling Fan Wobble?",
+      "description": "Diagnose ceiling fan wobble by checking dust, loose blade hardware, warped blades, mounting components, downrods, and balance.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my ceiling fan wobble diagnose ceiling fan wobble by checking dust loose blade hardware warped blades mounting components downrods and balance home apartment guide articles why ceiling fan wobbles"
+    },
+    {
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -1106,6 +1122,22 @@
       "searchText": "why does my phone get hot while charging some warmth is normal during charging especially with fast charging persistent excessive heat swelling odors or a hot connector require attention home tech guide articles why phone gets hot while charging"
     },
     {
+      "route": "/articles/why-phone-says-moisture-detected-charging-port/",
+      "title": "Why Does My Phone Say Moisture Detected in the Charging Port?",
+      "description": "Safely clear a moisture-detected charging alert without rice, heat, compressed air, or tools that can damage a USB-C or Lightning connector.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my phone say moisture detected in the charging port safely clear a moisture detected charging alert without rice heat compressed air or tools that can damage a usb c or lightning connector home tech guide articles why phone says moisture detected charging port"
+    },
+    {
+      "route": "/articles/why-printer-offline-how-to-fix/",
+      "title": "Why Is My Printer Offline?",
+      "description": "Fix an offline printer on Windows or Mac by checking power, errors, Wi-Fi, the selected printer, print queues, paused printing, drivers, and saved connections.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why is my printer offline fix an offline printer on windows or mac by checking power errors wi fi the selected printer print queues paused printing drivers and saved connections home tech guide articles why printer offline how to fix"
+    },
+    {
       "route": "/articles/why-refrigerator-leaking-water/",
       "title": "Why Is My Refrigerator Leaking Water?",
       "description": "Trace water from the first wet point. Common sources include supply lines, filters, ice makers, defrost drains, drain pans, condensation, door seals, or nearby plumbing.",
@@ -1136,6 +1168,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my toilet keep running a running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube a dye test can identify the path home apartment guide articles why toilet keeps running"
+    },
+    {
+      "route": "/articles/why-washing-machine-not-draining/",
+      "title": "Why Is My Washing Machine Not Draining?",
+      "description": "Diagnose a washer that will not drain by checking its cycle, load, drain hose, standpipe, pump filter, detergent, error code, and drain pump.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my washing machine not draining diagnose a washer that will not drain by checking its cycle load drain hose standpipe pump filter detergent error code and drain pump home apartment guide articles why washing machine not draining"
     },
     {
       "route": "/articles/why-window-air-conditioner-leaking-water-inside/",
@@ -1192,6 +1232,14 @@
       "category": "Home Tech",
       "type": "Category",
       "searchText": "home tech practical help for connected devices computers entertainment systems privacy power cooling and storage home tech category home tech"
+    },
+    {
+      "route": "/home-tech/computers-laptops/",
+      "title": "Computers & Laptops",
+      "description": "Choosing, setting up, maintaining, repairing, and extending the useful life of personal computers.",
+      "category": "Home Tech",
+      "type": "Topic",
+      "searchText": "computers laptops choosing setting up maintaining repairing and extending the useful life of personal computers home tech topic home tech computers laptops"
     },
     {
       "route": "/home-tech/power-cooling-storage/",
