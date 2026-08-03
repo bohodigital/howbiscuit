@@ -6632,6 +6632,40 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/used-laptop-inspection-checklist/",
+      "title": "Used Laptop Inspection Checklist: Hardware, Battery, and Account Checks",
+      "description": "Inspect a used laptop for recalls, battery health, display and keyboard faults, ports, storage, charging, account locks, repair history, and ownership before paying.",
+      "categoryId": "shop",
+      "topicId": "used-refurbished",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Verify ownership, the exact model, recall status, battery condition, charging, display, keyboard, touchpad, ports, storage, wireless hardware, cameras, speakers, account locks, and a complete reset before paying for a used laptop.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No individual laptop was inspected; buyers must perform the physical and account checks on the exact device."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/",
+          "/articles/new-vs-used-refurbished-open-box-appliances/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/water-heater-leaking-what-to-do/",
       "title": "Is My Water Heater Leaking? What to Check and When to Shut It Down",
@@ -9878,5 +9912,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:1e6fbce69c876f7a85c3f297cb841ba8c3085879d176e515dda0caafedbfb429"
+  "registryDigest": "sha256:0f0ca334c0d89a51d3997ff5e0dd291c0a10935e9bab7a845af37f626b1f271b"
 }
