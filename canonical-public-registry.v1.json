@@ -701,6 +701,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/can-you-cut-mold-off-cheese/",
+      "title": "Can You Cut Mold Off Cheese and Eat the Rest?",
+      "description": "Learn which moldy cheeses can be trimmed, which must be discarded, and how to cut at least one inch around and below an isolated mold spot safely.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "An isolated mold spot on firm hard cheese can generally be removed by cutting at least one inch around and below it. Soft, shredded, sliced, and crumbled cheeses should be discarded because contamination can extend beyond the visible spot.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide summarizes USDA food-safety guidance and cannot identify mold species or inspect a specific cheese."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-leftovers-last-fridge/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/can-you-freeze-eggs/",
       "title": "Can You Freeze Eggs?",
       "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
@@ -3193,6 +3226,40 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-long-cooked-rice-lasts-fridge/",
+      "title": "How Long Does Cooked Rice Last in the Fridge?",
+      "description": "Store cooked rice safely for three to four days, cool it promptly, reheat it to 165°F, and know when it must be discarded.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cooked rice should generally be eaten or frozen within three to four days when refrigerated at 40°F or below. Cool it promptly in shallow containers because Bacillus cereus spores can survive cooking and grow when rice remains warm too long.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide applies federal leftover guidance and published Bacillus cereus research; it cannot reconstruct a specific batch’s time and temperature history."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-long-leftovers-last-fridge/",
+          "/articles/what-temperature-should-refrigerator-be/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-long-does-cooked-rice-last/",
       "title": "How Long Does Cooked Rice Last in the Fridge?",
       "description": "Refrigerate cooked rice within two hours and use it within four days. Cool it promptly in shallow containers and reheat leftovers to 165°F.",
@@ -4702,6 +4769,72 @@
           "/articles/why-do-led-light-bulbs-flicker/",
           "/articles/does-unplugging-appliances-save-electricity/",
           "/articles/energy-star-vs-energyguide/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-choose-right-size-dehumidifier/",
+      "title": "How to Choose the Right Size Dehumidifier",
+      "description": "Choose a dehumidifier using pints per day, untreated room dampness, Integrated Energy Factor, drainage, temperature, noise, and recall history.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Match capacity in pints per day to both the space and its untreated moisture condition. A wet basement needs more capacity than a mildly damp bedroom of the same floor area. Then compare efficiency, low-temperature operation, drainage, noise, filter access, and recall status.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article uses current ENERGY STAR sizing guidance and does not measure humidity or water removal in a particular home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-choose-smoke-alarm/",
+      "title": "How to Choose a Smoke Alarm",
+      "description": "Choose smoke alarms by checking UL 217 certification, sensor coverage, interconnection, battery backup, accessibility, replacement date, compatibility, and recalls.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Buy enough traceable UL 217-certified alarms for every sleeping room, outside each separate sleeping area, and every level of the home. Prefer interconnection, appropriate sensing coverage, battery backup, and alerts accessible to every occupant.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No alarm model was tested; buyers must verify current certification, compatibility, local code, and the needs of household occupants."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
         ]
       },
       "media": [],
@@ -8491,6 +8624,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-water-heater-popping-rumbling/",
+      "title": "Why Is My Water Heater Popping or Rumbling?",
+      "description": "Learn why a tank water heater pops, rumbles, crackles, or sizzles and when sediment, scale, pressure, leaks, or combustion problems require service.",
+      "categoryId": "home",
+      "topicId": "utilities-energy",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Popping or rumbling in a tank water heater commonly comes from water and steam moving through sediment or mineral scale at the bottom of the tank or around a heating element. Other sounds can come from condensation, thermal expansion, water hammer, fans, or controls.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article summarizes manufacturer guidance and cannot inspect a particular heater, tank, vent, drain valve, or plumbing system."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/appliance-buying-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-window-air-conditioner-leaking-water-inside/",
       "title": "Why Is My Window Air Conditioner Leaking Water Inside?",
       "description": "Diagnose a window air conditioner leaking indoors by checking its outward slope, filter, ice buildup, drainage path, base pan, and window installation.",
@@ -8806,7 +8972,7 @@
       "topicId": "utilities-energy",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -8909,6 +9075,23 @@
       "articleType": "category",
       "publishedDate": null,
       "updatedDate": "2026-07-18",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
+      "route": "/shop/product-comparisons/",
+      "title": "Product Comparisons",
+      "description": "Auditable comparisons based on real requirements, tradeoffs, support life, repairability, and total value.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -9086,5 +9269,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:600c4b6a11d284e8696ff6e2fe1bf18be37737c1a82302d83a2ef755ad411773"
+  "registryDigest": "sha256:777bdc7398282915b4d95d33c683e2f493b6e676726b3d2261ee0532ae1c1970"
 }

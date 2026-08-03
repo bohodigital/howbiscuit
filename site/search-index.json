@@ -114,6 +114,14 @@
       "searchText": "can a microwave interfere with wi fi a microwave oven can interfere with nearby 2 4 ghz wi fi while it is running test the pattern move equipment or use 5 ghz or 6 ghz where supported home tech guide articles can microwave interfere with wifi"
     },
     {
+      "route": "/articles/can-you-cut-mold-off-cheese/",
+      "title": "Can You Cut Mold Off Cheese and Eat the Rest?",
+      "description": "Learn which moldy cheeses can be trimmed, which must be discarded, and how to cut at least one inch around and below an isolated mold spot safely.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you cut mold off cheese and eat the rest learn which moldy cheeses can be trimmed which must be discarded and how to cut at least one inch around and below an isolated mold spot safely kitchen guide articles can you cut mold off cheese"
+    },
+    {
       "route": "/articles/can-you-freeze-eggs/",
       "title": "Can You Freeze Eggs?",
       "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
@@ -442,6 +450,14 @@
       "searchText": "how long does cooked pasta last in the fridge store cooked pasta safely for three to four days cool it promptly and learn when temperature sauce storage history or spoilage means it should be discarded kitchen guide articles how long cooked pasta lasts fridge"
     },
     {
+      "route": "/articles/how-long-cooked-rice-lasts-fridge/",
+      "title": "How Long Does Cooked Rice Last in the Fridge?",
+      "description": "Store cooked rice safely for three to four days, cool it promptly, reheat it to 165°F, and know when it must be discarded.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how long does cooked rice last in the fridge store cooked rice safely for three to four days cool it promptly reheat it to 165 f and know when it must be discarded kitchen guide articles how long cooked rice lasts fridge"
+    },
+    {
       "route": "/articles/how-long-does-cooked-rice-last/",
       "title": "How Long Does Cooked Rice Last in the Fridge?",
       "description": "Refrigerate cooked rice within two hours and use it within four days. Cool it promptly in shallow containers and reheat leftovers to 165°F.",
@@ -632,6 +648,22 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose an led light bulb compare led bulbs using base shape lumens color temperature color rendering dimmer compatibility fixture rating beam angle and energy use shop smarter guide articles how to choose led light bulb"
+    },
+    {
+      "route": "/articles/how-to-choose-right-size-dehumidifier/",
+      "title": "How to Choose the Right Size Dehumidifier",
+      "description": "Choose a dehumidifier using pints per day, untreated room dampness, Integrated Energy Factor, drainage, temperature, noise, and recall history.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose the right size dehumidifier choose a dehumidifier using pints per day untreated room dampness integrated energy factor drainage temperature noise and recall history shop smarter guide articles how to choose right size dehumidifier"
+    },
+    {
+      "route": "/articles/how-to-choose-smoke-alarm/",
+      "title": "How to Choose a Smoke Alarm",
+      "description": "Choose smoke alarms by checking UL 217 certification, sensor coverage, interconnection, battery backup, accessibility, replacement date, compatibility, and recalls.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a smoke alarm choose smoke alarms by checking ul 217 certification sensor coverage interconnection battery backup accessibility replacement date compatibility and recalls shop smarter guide articles how to choose smoke alarm"
     },
     {
       "route": "/articles/how-to-choose-water-filter-contaminant-certification/",
@@ -1178,6 +1210,14 @@
       "searchText": "why is my washing machine not draining diagnose a washer that will not drain by checking its cycle load drain hose standpipe pump filter detergent error code and drain pump home apartment guide articles why washing machine not draining"
     },
     {
+      "route": "/articles/why-water-heater-popping-rumbling/",
+      "title": "Why Is My Water Heater Popping or Rumbling?",
+      "description": "Learn why a tank water heater pops, rumbles, crackles, or sizzles and when sediment, scale, pressure, leaks, or combustion problems require service.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my water heater popping or rumbling learn why a tank water heater pops rumbles crackles or sizzles and when sediment scale pressure leaks or combustion problems require service home apartment guide articles why water heater popping rumbling"
+    },
+    {
       "route": "/articles/why-window-air-conditioner-leaking-water-inside/",
       "title": "Why Is My Window Air Conditioner Leaking Water Inside?",
       "description": "Diagnose a window air conditioner leaking indoors by checking its outward slope, filter, ice buildup, drainage path, base pan, and window installation.",
@@ -1344,6 +1384,14 @@
       "category": "Shop Smarter",
       "type": "Category",
       "searchText": "shop smarter evidence labeled buying guidance focused on comparisons local prices used goods total cost and avoiding waste shop smarter category shop"
+    },
+    {
+      "route": "/shop/product-comparisons/",
+      "title": "Product Comparisons",
+      "description": "Auditable comparisons based on real requirements, tradeoffs, support life, repairability, and total value.",
+      "category": "Shop Smarter",
+      "type": "Topic",
+      "searchText": "product comparisons auditable comparisons based on real requirements tradeoffs support life repairability and total value shop smarter topic shop product comparisons"
     },
     {
       "route": "/shop/total-cost-ownership/",
