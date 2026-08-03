@@ -378,6 +378,14 @@
       "searchText": "download speed vs upload speed vs latency download speed moves data to you upload moves it away and latency measures delay learn which metric affects streaming calls backups gaming and remote work home tech guide articles download vs upload speed latency"
     },
     {
+      "route": "/articles/electrical-panel-labeling-checklist/",
+      "title": "Electrical Panel Labeling Checklist: Map Every Breaker Without Opening the Panel",
+      "description": "Safely map and label household breakers by testing one circuit at a time, recording every affected light, outlet, and fixed appliance, and never removing the panel cover.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "electrical panel labeling checklist map every breaker without opening the panel safely map and label household breakers by testing one circuit at a time recording every affected light outlet and fixed appliance and never removing the panel cover tools guide articles electrical panel labeling checklist"
+    },
+    {
       "route": "/articles/energy-star-vs-energyguide/",
       "title": "ENERGY STAR vs. EnergyGuide",
       "description": "EnergyGuide reports standardized energy use and comparison information. ENERGY STAR is a voluntary efficiency certification for eligible products meeting current criteria.",
@@ -978,6 +986,14 @@
       "searchText": "portable air conditioner specifications explained sacc ducts ceer and drainage understand portable air conditioner sacc duct configuration ceer window kit fit drainage methods noise and electrical requirements without relying on the largest number on the box shop smarter guide articles portable air conditioner specifications explained"
     },
     {
+      "route": "/articles/portable-induction-cooktop-specifications-explained/",
+      "title": "Portable Induction Cooktop Specifications Explained: Power, Coil Size, and Cookware",
+      "description": "Understand portable induction cooktop input power, circuit requirements, active coil size, cookware compatibility, low-power control, fan behavior, and certification.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "portable induction cooktop specifications explained power coil size and cookware understand portable induction cooktop input power circuit requirements active coil size cookware compatibility low power control fan behavior and certification kitchen guide articles portable induction cooktop specifications explained"
+    },
+    {
       "route": "/articles/portable-power-bank-safety-capacity-airline-rules/",
       "title": "Portable Power Bank Safety: Capacity, Certification, and Airline Rules",
       "description": "Understand watt-hours, USB Power Delivery, certification marks, recalls, warning signs, and U.S. airline limits for portable power banks.",
@@ -1136,6 +1152,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "used vacuum safety and condition checklist verify the exact model and recall status inspect the cord or battery check filters and seals test the brush roll and airflow path and identify contamination before relying on a secondhand vacuum tools guide articles used vacuum inspection checklist"
+    },
+    {
+      "route": "/articles/used-washing-machine-inspection-checklist/",
+      "title": "Used Washing Machine Inspection Checklist: Fill, Wash, Drain, Spin, and Leak Test",
+      "description": "Inspect a used washer by verifying its model and recall status, running a complete water-connected cycle, checking for leaks and bearing noise, and calculating installation costs.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "used washing machine inspection checklist fill wash drain spin and leak test inspect a used washer by verifying its model and recall status running a complete water connected cycle checking for leaks and bearing noise and calculating installation costs shop smarter guide articles used washing machine inspection checklist"
     },
     {
       "route": "/articles/water-heater-leaking-what-to-do/",
@@ -1464,6 +1488,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why is my microwave sparking stop the microwave immediately common causes include metal foil metallic trim burned food residue an incorrectly positioned rack empty operation or cavity damage kitchen guide articles why microwave is sparking"
+    },
+    {
+      "route": "/articles/why-milk-curdles-in-coffee/",
+      "title": "Why Does Milk Curdle in Coffee? Acidity, Heat, and Protein Stability",
+      "description": "Milk can form flakes in coffee because acidity and heat destabilize casein proteins, especially when the milk is older or already close to spoiling.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does milk curdle in coffee acidity heat and protein stability milk can form flakes in coffee because acidity and heat destabilize casein proteins especially when the milk is older or already close to spoiling kitchen guide articles why milk curdles in coffee"
     },
     {
       "route": "/articles/why-phone-battery-drains-overnight/",
