@@ -3088,6 +3088,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-long-bacon-lasts-fridge/",
+      "title": "How Long Does Bacon Last in the Fridge?",
+      "description": "Learn how long raw and cooked bacon keep, how to freeze and thaw bacon safely, and why smell and color cannot extend safe storage time.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Ordinary bacon generally keeps seven days in a refrigerator maintained at 40°F or below. Freeze it when it will not be cooked within that period. Homemade cooked bacon generally keeps four to five refrigerated days.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide follows USDA bacon-specific storage guidance and cannot assess a particular package’s handling history."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/what-temperature-should-refrigerator-be/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-long-can-butter-sit-out/",
       "title": "How Long Can Butter Sit Out?",
       "description": "Learn how long ordinary commercial butter can remain at room temperature, how to store it, and which butter products should remain refrigerated.",
@@ -4940,6 +4973,37 @@
         "sourceUrl": null,
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-clean-laptop-screen-safely/",
+      "title": "How to Clean a Laptop Screen Without Damaging It",
+      "description": "Clean fingerprints, dust, and smudges from a laptop display without damaging its coating, bezel, hinges, or electronics.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Shut the laptop down, disconnect power, start with a clean dry microfiber cloth, and put any manufacturer-approved liquid on the cloth rather than spraying the screen. Use light pressure and let the display dry before powering on.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article compares official Apple and Dell care instructions and does not test cleaning solutions on every display coating."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -7206,6 +7270,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-computer-storage-full/",
+      "title": "Why Is My Computer Storage Full?",
+      "description": "Find what is filling a Windows PC or Mac, safely remove temporary files and old downloads, and avoid deleting important system data.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Use the operating system’s storage report to identify the largest category before deleting anything. Full drives usually result from applications, downloads, media, temporary files, cloud files kept locally, device backups, or one unexpectedly large folder.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide uses current Microsoft and Apple storage-management documentation and does not inspect a particular drive or file system."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -7750,6 +7845,39 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Food_Safety_-_Cut_Waste_in_Refrigerators_(20200605-FSIS-LSC-0017).jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-garage-door-closes-then-opens/",
+      "title": "Why Does My Garage Door Close and Then Open Again?",
+      "description": "Diagnose a garage door that reverses while closing by checking safety sensors, obstructions, travel limits, resistance, balance, and damaged hardware.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A garage door that starts closing and reverses is usually detecting an obstruction, misaligned safety sensors, excessive resistance, incorrect close travel, or a damaged or unbalanced door. Clear the path and inspect the sensors before adjusting anything.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This article follows Chamberlain Group guidance and cannot inspect the opener, door balance, tracks, springs, cables, or installation."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -8591,6 +8719,40 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-toilet-tank-sweating-condensation/",
+      "title": "Why Is My Toilet Tank Sweating?",
+      "description": "Stop toilet-tank condensation by reducing bathroom humidity, improving ventilation, checking for leaks, and considering a lined tank or anti-sweat valve.",
+      "categoryId": "home",
+      "topicId": "apartment-comfort",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A toilet tank sweats when humid bathroom air contacts porcelain cooled below the air’s dew point by cold refill water. Lower the room humidity, improve exhaust, repair a running toilet, and confirm the water is not actually coming from a plumbing leak.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide explains condensation and leak triage but cannot inspect the tank, fittings, bathroom ventilation, or room humidity."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/what-humidity-should-house-be/",
+          "/articles/why-bathroom-exhaust-fan-drips-water/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-washing-machine-not-draining/",
       "title": "Why Is My Washing Machine Not Draining?",
       "description": "Diagnose a washer that will not drain by checking its cycle, load, drain hose, standpipe, pump filter, detergent, error code, and drain pump.",
@@ -9269,5 +9431,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:777bdc7398282915b4d95d33c683e2f493b6e676726b3d2261ee0532ae1c1970"
+  "registryDigest": "sha256:e96fa4c8d709aa0dfd779520fa76ced9463eebdbbc498d5c0814c4e6d9b84e0c"
 }

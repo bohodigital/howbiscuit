@@ -1,370 +1,377 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "mcp-pb-20260803t163900z-f2fb5ca5f501",
-  "approvalDigest": "sha256:d05df8d6e4ffda27207f97f90a8a93b09ab3e07faf4c508c821099cd7c8d9ecd",
+  "releaseId": "mcp-pb-20260803t164644z-4da7666b3742",
+  "approvalDigest": "sha256:c8cf6e8ed53828e2aa4030bfaef3742deaf09da52cd7588dc99aa0a50ef09bb7",
   "files": [
     {
-      "path": "articles/can-you-cut-mold-off-cheese/index.html",
-      "bytes": 42366,
-      "sha256": "sha256:03f1f30463ba9bcdd56fb91dbc34d3a64fd9074a147a18287ce1b24792afcdc3"
+      "path": "articles/how-long-bacon-lasts-fridge/index.html",
+      "bytes": 41609,
+      "sha256": "sha256:4ea30cfb20dd2c9a7769143d7d03dd5c4f2b2e2ef2523e068389d93cddc2a2ff"
     },
     {
-      "path": "articles/how-long-cooked-rice-lasts-fridge/index.html",
-      "bytes": 42141,
-      "sha256": "sha256:eebebc082c24ec4b195dc5330ac135c42d628c34ffe8b63985bb3766231d89aa"
-    },
-    {
-      "path": "articles/how-to-choose-right-size-dehumidifier/index.html",
-      "bytes": 44022,
-      "sha256": "sha256:70562ffef9e1b2344219ab3b00e67fe18f698d80bd4d48f20719e49076ced822"
-    },
-    {
-      "path": "articles/how-to-choose-smoke-alarm/index.html",
-      "bytes": 43873,
-      "sha256": "sha256:beb9fbb8a9c352c27aee816f1d83eee12e2fc73ada5e868eb54e8c431f24204b"
+      "path": "articles/how-to-clean-laptop-screen-safely/index.html",
+      "bytes": 43172,
+      "sha256": "sha256:9efa0305d5b23a14507dbdf81de7b8c6ba06910042bae2c9848d8bdbb9454fcb"
     },
     {
       "path": "articles/index.html",
-      "bytes": 125922,
-      "sha256": "sha256:47342fb5a1eaaf43f42c44391f7c1f6e7739f1cc998df869acc3818808a86021"
+      "bytes": 129252,
+      "sha256": "sha256:640d37f2a96ac8b2a072d27cc2df987612f40eb9e2fe13f45bd776414cf84cb7"
     },
     {
-      "path": "articles/why-water-heater-popping-rumbling/index.html",
-      "bytes": 42546,
-      "sha256": "sha256:e2b739483014d34e2786ffb0a48492d0368dbda4c551186e35d4afcde58e4c60"
+      "path": "articles/why-computer-storage-full/index.html",
+      "bytes": 44519,
+      "sha256": "sha256:a4551b15f7128137fb6de5639a152f807e1a191357a55964c583efbc7cf002ab"
+    },
+    {
+      "path": "articles/why-garage-door-closes-then-opens/index.html",
+      "bytes": 44174,
+      "sha256": "sha256:7286dcfc136326c9b76945228e56aa7e26c8c12d53b7bdc38978539e12998312"
+    },
+    {
+      "path": "articles/why-toilet-tank-sweating-condensation/index.html",
+      "bytes": 42914,
+      "sha256": "sha256:31ca6bf3109fdc532cfe458891616279739abc7ecbac71656d8e2026983ad552"
     },
     {
       "path": "feed.xml",
-      "bytes": 23944,
-      "sha256": "sha256:dbeb3c8cd3eb5e07222cff526a9e5101976ae4be8b74ed10bf4740eccc6e04e4"
+      "bytes": 23951,
+      "sha256": "sha256:240ef3bbe0c63b8b7fdfc0bd222a9ab7edc8ddd55bbc5df7599b410cae27dd89"
     },
     {
       "path": "home/cleaning/index.html",
-      "bytes": 34566,
-      "sha256": "sha256:2312607c460a43084141889de427a3881c4731b9e1b74871a5ce5f59217a4572"
+      "bytes": 34846,
+      "sha256": "sha256:cd5ae16ad95f7862ea873e20896aeb9ef1e549ae3fa1ce4ad34b1716cad8028a"
     },
     {
       "path": "home/heating-cooling/index.html",
-      "bytes": 40397,
-      "sha256": "sha256:9140833c80753317b858f4d8e28851d4117c5f63d5506e78e0e82876bdb8ad53"
+      "bytes": 40677,
+      "sha256": "sha256:5d47aeab6e88681b7feda8c23d78abfe8984a9ca3451e6003d6e150fd8a1d19f"
     },
     {
       "path": "home/index.html",
-      "bytes": 91649,
-      "sha256": "sha256:103de23bcde5f16a463312773255bdc9c113d3dfd3b637e539c0640d8cb0a7f6"
+      "bytes": 95056,
+      "sha256": "sha256:ab45a93660608a7ec156e29611ee852e1a73ad767196f2830a32f013c36a0b61"
     },
     {
       "path": "home/repairs-maintenance/index.html",
-      "bytes": 36345,
-      "sha256": "sha256:df9a5eb99e71461bddffed17977196a4ef174e6164b15b5f33a7032397c6df3b"
+      "bytes": 37268,
+      "sha256": "sha256:8aaf690748047ec49e885a9d563925c4265a671e8d23858e24882d044ed736d5"
     },
     {
       "path": "home/utilities-energy/index.html",
-      "bytes": 38190,
-      "sha256": "sha256:899d69b2411e7a00423e098348e4567e4c5c776cce2e1f990f79f8610f2665df"
+      "bytes": 38470,
+      "sha256": "sha256:abe0f88ee7eb42be4ddb06c8ac298e0b15ec2f0d3a00420be54d07cd84cb1810"
     },
     {
       "path": "home-tech/computers-laptops/index.html",
-      "bytes": 32102,
-      "sha256": "sha256:d03fb2de4264bbb965ab14e5bbd1f84565975ad97c2a31bb4cc29aae16d9b877"
+      "bytes": 33564,
+      "sha256": "sha256:2963256bd663a0d9ff968b98ceeeac267d31bf4dad55e87f833d40a0245fb9ab"
+    },
+    {
+      "path": "home-tech/index.html",
+      "bytes": 84532,
+      "sha256": "sha256:d53d90b3685fc0f0a96e0186a03151f12877ce8a3ef0bc1771acb5be8f8ef528"
     },
     {
       "path": "home-tech/power-cooling-storage/index.html",
-      "bytes": 42198,
-      "sha256": "sha256:d59523eefac7fb5deff2200e95afb3c13117c9518e9e47263564c71180a5a2bb"
+      "bytes": 42478,
+      "sha256": "sha256:b94badfe7d10c79a1204c64164d44029ed03e9608a039f9ac46866db1c2d3099"
     },
     {
       "path": "home-tech/wifi-routers/index.html",
-      "bytes": 39649,
-      "sha256": "sha256:a5c3e50c3d335d9a2b979d24fff3102b4eca20ca04e44ac5d202f695741e80cd"
+      "bytes": 39929,
+      "sha256": "sha256:63397092c60f363b150f94e11181615e347a8850dbf7edc9323fba448b6cfa5a"
     },
     {
       "path": "index.html",
-      "bytes": 50427,
-      "sha256": "sha256:6243abf017e45ae6d0f3bf32ebbc47a9888f5b6a131d40ced61fcfd492a3b42e"
+      "bytes": 51319,
+      "sha256": "sha256:138e394e0d81a0eebbae372d8dd8c88498ecf0f3c658bc7ab38fea9aba5d922d"
     },
     {
       "path": "kitchen/food-science/index.html",
-      "bytes": 36662,
-      "sha256": "sha256:637d0e64e714623cb569d60e4aeaafdc00aae09842f2bc6d07380dbaa0566a9b"
+      "bytes": 37536,
+      "sha256": "sha256:33251da8a6d59d8344efb26b00398a79b3182676a6aed5d3d74c1e8e886b7dfb"
     },
     {
       "path": "kitchen/index.html",
-      "bytes": 91606,
-      "sha256": "sha256:8308fdbbbb888e6dc29ef61a24c7d02977a2b71b1234e8a9cd37e249a87d7670"
+      "bytes": 93076,
+      "sha256": "sha256:ddec49c0823c4b8a795e28bf1fd32ae6eef5b7002521d88383d90074e8cd1ff8"
     },
     {
       "path": "kitchen/kitchen-appliances/index.html",
-      "bytes": 35872,
-      "sha256": "sha256:4479e0f793716f322d776fb622980072d3a569b85ab71d649a4198342195a0c3"
+      "bytes": 36152,
+      "sha256": "sha256:5c9ba6f09e40da6b2d06a7d8f5ad3f4bc0e89929413e6f1c82bbc20bab2b60e8"
     },
     {
       "path": "kitchen/troubleshooting-safety/index.html",
-      "bytes": 46356,
-      "sha256": "sha256:91aa9b0270b6684aadda20386ee7d4ee19c2a3b433ee4a80fd8aeccee59f5f63"
+      "bytes": 46636,
+      "sha256": "sha256:852107c10cfe4393c8775d604e6d80b61b24c1432de35eb46da395b169f788b8"
     },
     {
       "path": "llms.txt",
-      "bytes": 47963,
-      "sha256": "sha256:0084e3736044ce71a7aecc1214fade1df5c20b395e76385250ddeb755331a7f5"
+      "bytes": 49218,
+      "sha256": "sha256:76c0c07a58572f97f905b88a243cf57120f40f8c6149c380df4d57fbd3bdad3c"
     },
     {
-      "path": "pagefind/filter/en_8a1415f.pf_filter",
-      "bytes": 351,
-      "sha256": "sha256:1146f65aba6620d6f7b1a679bc47043713b9cf200923a92cbfefb622fd7f8e73"
+      "path": "pagefind/filter/en_c1d15ef.pf_filter",
+      "bytes": 384,
+      "sha256": "sha256:78a9264cf1777102b902195634a16ef5bddcb2763f5e947d0c12c8f4ab0bf72b"
     },
     {
-      "path": "pagefind/filter/en_8e83e97.pf_filter",
-      "bytes": 376,
-      "sha256": "sha256:b9dcc7f0a78589d9fff942bc610cd3f259d0557df5ee82911ef233afba008f69"
+      "path": "pagefind/filter/en_c82c103.pf_filter",
+      "bytes": 359,
+      "sha256": "sha256:6bfc448f81984efaf376ddcd35ae93147f814579fc383fb7711fea3e4fb41b13"
     },
     {
-      "path": "pagefind/fragment/en_11fe4e4.pf_fragment",
-      "bytes": 4235,
-      "sha256": "sha256:c9d66f2752c6dded979c5d6f8c3174e0886fa6c960e9e59d22f17d488eff6180"
+      "path": "pagefind/fragment/en_17f5ee6.pf_fragment",
+      "bytes": 1433,
+      "sha256": "sha256:b5de9648d29e35bb754fc35a0f773189188ebd5ccb54b32bdb63cbe2d5ef1d96"
     },
     {
-      "path": "pagefind/fragment/en_183c1ed.pf_fragment",
-      "bytes": 1724,
-      "sha256": "sha256:1321f5bc2200673a5ad7a8b51b13c5e4d96ca3a60011489771949d49c5231c69"
+      "path": "pagefind/fragment/en_2bf014d.pf_fragment",
+      "bytes": 1419,
+      "sha256": "sha256:00438c3fa6d35a9faaa58b42496062894c78ad599a7b3cdbe3d702a09f1522da"
     },
     {
-      "path": "pagefind/fragment/en_1cead52.pf_fragment",
-      "bytes": 2579,
-      "sha256": "sha256:16afaa6650503992f075e27689e39327a2a4ca956c5cb026d5e1dad4c27e9a47"
+      "path": "pagefind/fragment/en_4e69e65.pf_fragment",
+      "bytes": 3290,
+      "sha256": "sha256:0651eede192d3d9778f885f9beef8c437b850637cdac02983ee6e2194624962e"
     },
     {
-      "path": "pagefind/fragment/en_32ebbfc.pf_fragment",
-      "bytes": 5206,
-      "sha256": "sha256:44045a50f41982e8e70c89fec36e42a07c91ecb2e72f3f96bbbf768005007398"
+      "path": "pagefind/fragment/en_524de18.pf_fragment",
+      "bytes": 4956,
+      "sha256": "sha256:e6d904b90089b3b4feed8be3907e97c30b78b483b89fba9dd2b92db9b8a9955e"
     },
     {
-      "path": "pagefind/fragment/en_7e702a3.pf_fragment",
-      "bytes": 3272,
-      "sha256": "sha256:6fce79607709ebf8241bb5486b6311cc842f50b2ec80357616c778a4b25c6ba0"
+      "path": "pagefind/fragment/en_65f1efd.pf_fragment",
+      "bytes": 3219,
+      "sha256": "sha256:d86c0aaecbbb7ec665fc5fc77515bbd2670e2f5e0d116dd3aaffbdf89a6c7c96"
     },
     {
-      "path": "pagefind/fragment/en_816358d.pf_fragment",
-      "bytes": 12828,
-      "sha256": "sha256:e9455cc280034bffce639e2c1b6a924fb63d44910b147dba1438470ddee15661"
+      "path": "pagefind/fragment/en_7f29c9a.pf_fragment",
+      "bytes": 915,
+      "sha256": "sha256:5da3a1cc2bdf1621b5c6001000c888947cec2c9abb7ad3e4e5c5b3e123dd758e"
     },
     {
-      "path": "pagefind/fragment/en_865b3c5.pf_fragment",
-      "bytes": 2942,
-      "sha256": "sha256:6e19d83eeab2a59844c3064fc523cfd26e8551b3f20908204ca7d0333efdc129"
+      "path": "pagefind/fragment/en_8ed68ad.pf_fragment",
+      "bytes": 5430,
+      "sha256": "sha256:a7195ff0c4e3ba7add47e86b33b47d21ec773d15f559723abc2510c629fcca89"
     },
     {
-      "path": "pagefind/fragment/en_90ff728.pf_fragment",
-      "bytes": 4891,
-      "sha256": "sha256:63bac61d134a922f095c274d1bb046a711e2af58a5a81e28d27085e4614da712"
+      "path": "pagefind/fragment/en_a241526.pf_fragment",
+      "bytes": 3398,
+      "sha256": "sha256:4e0092a06eaa11d85346f0812812926c90e3cd4ff6c72bb7e6f45991390808f2"
     },
     {
-      "path": "pagefind/fragment/en_9560407.pf_fragment",
-      "bytes": 1373,
-      "sha256": "sha256:23f9de1a651cf4267dc181ea6bf2820027df7ac50b7c6a7a942a782bdb944693"
+      "path": "pagefind/fragment/en_a622df1.pf_fragment",
+      "bytes": 4306,
+      "sha256": "sha256:49220c8efc44db66ad35ae29ebba811c807c327f1643d97062e971ef1676ddac"
     },
     {
-      "path": "pagefind/fragment/en_d5d62d3.pf_fragment",
-      "bytes": 3515,
-      "sha256": "sha256:556e994f22a6191d53f0d501537c6b385610e432ccc7e80cd5de17f50d584a30"
+      "path": "pagefind/fragment/en_afc18f7.pf_fragment",
+      "bytes": 13147,
+      "sha256": "sha256:eb1a3af34332b4efcb14b8ccf188c53b5717ed759366c43f146e160549c03154"
     },
     {
-      "path": "pagefind/fragment/en_ddfe5cd.pf_fragment",
-      "bytes": 3063,
-      "sha256": "sha256:b923d90e9f12c2bfd07762c891db136a63bc9172fbc4075dc96ada56cb3236b8"
+      "path": "pagefind/fragment/en_bfee7e2.pf_fragment",
+      "bytes": 3292,
+      "sha256": "sha256:52faad4b9f23746cc7c59937a70191bd3d5453361e40fbde346d5dc38c10f983"
     },
     {
-      "path": "pagefind/fragment/en_eb8052a.pf_fragment",
-      "bytes": 813,
-      "sha256": "sha256:a66c95316dd1c9b2c39651442102065dd24fde1022de20f2253dd67c53884c5c"
+      "path": "pagefind/fragment/en_c0bcbcb.pf_fragment",
+      "bytes": 4732,
+      "sha256": "sha256:bb844d5d71fca02ec2fd91b45f745cfecd988df59eb088df544c10530c68703c"
     },
     {
-      "path": "pagefind/fragment/en_f526be1.pf_fragment",
-      "bytes": 3510,
-      "sha256": "sha256:18752d9218b9a229959347a958e9e79a7607fa5e044a9a4fd00594dfe22ce718"
+      "path": "pagefind/fragment/en_e6c91ab.pf_fragment",
+      "bytes": 2699,
+      "sha256": "sha256:99b342577e90a7300c69f4d6d1dbb1227f4678e616f907017c298bcc60d26784"
     },
     {
-      "path": "pagefind/index/en_34a9b8c.pf_index",
-      "bytes": 29827,
-      "sha256": "sha256:d9518fff01382ad9bf107d57fba83b8547c685646ffa0811393c7f49caa04681"
+      "path": "pagefind/index/en_2bbbf36.pf_index",
+      "bytes": 30964,
+      "sha256": "sha256:e15d8187552ea366f99f51af59d4659daef0bbdd7e6d845ad3597a69b71e4d89"
     },
     {
-      "path": "pagefind/index/en_515bf13.pf_index",
-      "bytes": 27290,
-      "sha256": "sha256:1e8920871c5a7e4a15920432c64ab2b9612bbc1e5e391b3599545f832b26415f"
+      "path": "pagefind/index/en_4980ae7.pf_index",
+      "bytes": 29951,
+      "sha256": "sha256:908079db0c3850ab7ecb46595bbec94aaf182b83fb30f52bd7d72e2df1765e9d"
     },
     {
-      "path": "pagefind/index/en_55f6303.pf_index",
-      "bytes": 29280,
-      "sha256": "sha256:1ed7b479ad04e8df44402fc487fba934437ab7c068dc442d66d909ec4a0dc653"
+      "path": "pagefind/index/en_4d60cff.pf_index",
+      "bytes": 27536,
+      "sha256": "sha256:dc70fc35135980cf26f511c09e88c2b81f665c29a3b55cea8da4ad2fac64c7ea"
     },
     {
-      "path": "pagefind/index/en_65fa261.pf_index",
-      "bytes": 29678,
-      "sha256": "sha256:bcbdf396c97f1c88782f996a24dc737a590f49808ec082ad85ac1b18bf84e1eb"
+      "path": "pagefind/index/en_4ee0e83.pf_index",
+      "bytes": 29194,
+      "sha256": "sha256:5a38bd2e1bdb1d1803932feb2d818a6723e25d0994e51b2e9b38428210b8f246"
     },
     {
-      "path": "pagefind/index/en_70a85b3.pf_index",
-      "bytes": 31263,
-      "sha256": "sha256:56ceb9fb64853d6b5ca95c64b48b6fe36284a27a5fd76d04474240083485f33f"
+      "path": "pagefind/index/en_5453ced.pf_index",
+      "bytes": 29524,
+      "sha256": "sha256:00199e9e9c73c252055ee71f9662170f23a0a5fda966ed95fa01984cbe9ba353"
     },
     {
-      "path": "pagefind/index/en_7c526ed.pf_index",
-      "bytes": 28844,
-      "sha256": "sha256:2c9e4b0c55b3973fb6d9f0579f13ee9a4750b33eaa992edd62ed628fe8eb90f0"
+      "path": "pagefind/index/en_54834f7.pf_index",
+      "bytes": 28776,
+      "sha256": "sha256:d859370e70bc56d8715bc85e8142acd6350c1c8e76bf9ede2c55207739ad842e"
     },
     {
-      "path": "pagefind/index/en_7fe01cf.pf_index",
-      "bytes": 29624,
-      "sha256": "sha256:9f708d1d6c078b45c826a23a523bc095f5a03de2ef7a40a1b6e1f9ad42c29c0f"
+      "path": "pagefind/index/en_5ccff2f.pf_index",
+      "bytes": 29914,
+      "sha256": "sha256:53ce5db0f367cf1f8b8c280f65718efd2d95354b5cecb48644202f68bb0bc877"
     },
     {
-      "path": "pagefind/index/en_84c6cf2.pf_index",
-      "bytes": 28796,
-      "sha256": "sha256:cff3877a6ca60f08c2fed6a1a66f6891c3b511e40f9139f9ce9e0f1528e2c225"
+      "path": "pagefind/index/en_61ffdf4.pf_index",
+      "bytes": 29250,
+      "sha256": "sha256:ad8abdb98f0bfe43206349cad677d5aa357c89669aea4d6813075c418626fccc"
     },
     {
-      "path": "pagefind/index/en_92c0d5c.pf_index",
-      "bytes": 28905,
-      "sha256": "sha256:96fb4eef2a1a5296313129d7a3613ba4e10251f3da94f5db0a8daa0aa1f92eee"
+      "path": "pagefind/index/en_6b4cfb9.pf_index",
+      "bytes": 29420,
+      "sha256": "sha256:ac452927d509ef8d9a6d4a238c070f5435c60b884d700d46347a6402954a3a88"
     },
     {
-      "path": "pagefind/index/en_98a3cb3.pf_index",
-      "bytes": 32752,
-      "sha256": "sha256:497d380643cfd51dec678f9708b48904bfa091d4a103b2e3ebe3160d9db62d4b"
+      "path": "pagefind/index/en_81807cf.pf_index",
+      "bytes": 28325,
+      "sha256": "sha256:254f8d741a5af08f71b2d50b3e9a4fee2838f0226d3bbf306a313f7a93c503e3"
     },
     {
-      "path": "pagefind/index/en_a4f1661.pf_index",
-      "bytes": 29899,
-      "sha256": "sha256:1dcc8975744dfa33d2318b5730832f925bac6b909e7fadb43be91c1723333f70"
+      "path": "pagefind/index/en_a231bb8.pf_index",
+      "bytes": 26983,
+      "sha256": "sha256:1b946fc9d11e457b4eda3269802a7d7e85c5c20c596150931e6766f8c920b8a9"
     },
     {
-      "path": "pagefind/index/en_ac58d98.pf_index",
-      "bytes": 29276,
-      "sha256": "sha256:3ae9b39319340a3c8548191a5581c5c8a52386c822c80d4a40233f0a6afba350"
+      "path": "pagefind/index/en_a31124c.pf_index",
+      "bytes": 28445,
+      "sha256": "sha256:378180772ba36fe1e159e429881f2b5c6cab8b4f08c951e003466d3d9ffb7ef3"
     },
     {
-      "path": "pagefind/index/en_b95113a.pf_index",
-      "bytes": 12929,
-      "sha256": "sha256:419ad6c642d33f40f54610f3dab5be75e3a7f32616759c25e5e7432fa76b51af"
+      "path": "pagefind/index/en_b898e19.pf_index",
+      "bytes": 29635,
+      "sha256": "sha256:360ae52ca020bd662208c9fdd11f14f608ba3f111d59f67d198797376f3b75c1"
     },
     {
-      "path": "pagefind/index/en_be58ccf.pf_index",
-      "bytes": 27692,
-      "sha256": "sha256:2215abb6f241d33132ab01c83dd47d264c77865cf08a4f9eb7cf53ab8f40de72"
+      "path": "pagefind/index/en_c7cd2f6.pf_index",
+      "bytes": 28050,
+      "sha256": "sha256:d4500e63bb033ad19c8c372a2ad781035eb758ad3fc3553b3bf483c58bbde487"
     },
     {
-      "path": "pagefind/index/en_c4edd42.pf_index",
-      "bytes": 29255,
-      "sha256": "sha256:5c6297e6c8beaf0ddfe4ae3760514c72e7d3bf996dea5ded6b2c4dc1a038ce84"
+      "path": "pagefind/index/en_c91f429.pf_index",
+      "bytes": 31223,
+      "sha256": "sha256:c104ade0c413f34e72c049ed5da51885c9110ccc96d8ac2f5deb2871ed0c9988"
     },
     {
-      "path": "pagefind/index/en_d0806aa.pf_index",
-      "bytes": 26629,
-      "sha256": "sha256:0a441932056123f82c893f83c3250dbe41b1b6809d9c918d878da7246c37e81b"
+      "path": "pagefind/index/en_d033109.pf_index",
+      "bytes": 29358,
+      "sha256": "sha256:a10db6a8df7c993cb3fb1a6c5d0c6998e1fc082a256e6c4f02072972cbaa1642"
     },
     {
-      "path": "pagefind/index/en_d45bf9a.pf_index",
-      "bytes": 29931,
-      "sha256": "sha256:5aa38187718eb296dc481da72097a71bd2bf2231f03576d3486802583e582516"
+      "path": "pagefind/index/en_d36c549.pf_index",
+      "bytes": 3332,
+      "sha256": "sha256:1e69e119062c6aa210132efe4a71ee83ad3c33b16e1994840b2d5f52fc0f75ac"
     },
     {
-      "path": "pagefind/index/en_d4e0d8e.pf_index",
-      "bytes": 28436,
-      "sha256": "sha256:7d2c0621f335f0007cd05aaa68a5636f9274d7ae9a4353ab6eba2c48a6a12fb7"
+      "path": "pagefind/index/en_d448ae5.pf_index",
+      "bytes": 29979,
+      "sha256": "sha256:8000d66f3a9c85e3b7aef11a686e3eff74165e6cf8dab7c35c808849d4996c4f"
     },
     {
-      "path": "pagefind/index/en_db4253d.pf_index",
-      "bytes": 28605,
-      "sha256": "sha256:f171dd10499608d6a03258c2df11c1fcb1c1ad987ee37b31bf570ffa31a86059"
+      "path": "pagefind/index/en_e36e395.pf_index",
+      "bytes": 27320,
+      "sha256": "sha256:85a1f5fb9df60ff1181b1516be52be8d80093f204d744b0f48abbf0f559f8c3c"
     },
     {
-      "path": "pagefind/index/en_ef32e37.pf_index",
-      "bytes": 29182,
-      "sha256": "sha256:22e6a8a150b0fa73297facd3ab39278f43b3c6dc17210f23a046af9bff99b560"
+      "path": "pagefind/index/en_f0b09d3.pf_index",
+      "bytes": 29838,
+      "sha256": "sha256:e09c317884650bd66df1f7adb4924d9ca6c36ad5e92c643585665e709f92706f"
+    },
+    {
+      "path": "pagefind/index/en_fe74a1e.pf_index",
+      "bytes": 25487,
+      "sha256": "sha256:54852b7ae6bed2850861c3aaf45cd8b8fec803d45372fb67c9eed0a018936004"
     },
     {
       "path": "pagefind/pagefind-entry.json",
       "bytes": 173,
-      "sha256": "sha256:a474042a15169146603bacdf0c110e21c787ae3c32f315886c0d8bbe7be4059b"
+      "sha256": "sha256:cbd5032199e9eae6f7ceb63a9d3b6c89ef41ed0794019ca14ab444531348a115"
     },
     {
-      "path": "pagefind/pagefind.en_eb8db88fcd.pf_meta",
-      "bytes": 1882,
-      "sha256": "sha256:ca329f076004516ac734db84420bdea14b5fce6027c78eb36489da2412a70b08"
+      "path": "pagefind/pagefind.en_1561162c32.pf_meta",
+      "bytes": 1915,
+      "sha256": "sha256:cb061e3a02a5845c61d24fbfb7de30023904d4398078893fe9734f8f3959879e"
     },
     {
       "path": "search-index.json",
-      "bytes": 113965,
-      "sha256": "sha256:a8ec0d8b0a765492a13f8a7eaf0caaf5f8fe9576a151a1cda61aa8bbdffa64cf"
-    },
-    {
-      "path": "shop/index.html",
-      "bytes": 54088,
-      "sha256": "sha256:185e8cf0eae111adcde16ea0409b5501330c7b6921cd9b3a81b969993fa5eb18"
+      "bytes": 117004,
+      "sha256": "sha256:b05f6e460412d8eeddf253d8a67591ae22ac8e4a9789d12afceb031e271d70e5"
     },
     {
       "path": "shop/product-comparisons/index.html",
-      "bytes": 32776,
-      "sha256": "sha256:3cb3a0f44a3a0829e18a702d7a7a96078b157afa9b6344ac647788cd0492f70b"
+      "bytes": 33056,
+      "sha256": "sha256:a2a96b3b35767f49cf9aaafc8a66ca6cb4aaa979a006e03e2ed9b493c5f57b0a"
     },
     {
       "path": "shop/total-cost-ownership/index.html",
-      "bytes": 34172,
-      "sha256": "sha256:d9be6bf91a57d0b7b3d1a98d6a4b2160d9966d82d4525abd0335e65fa5ac6f0f"
+      "bytes": 34452,
+      "sha256": "sha256:efc32d8c7834601aa3848aae24bccae4f1190f71ca17eb22d82b3a66cb5145bd"
     },
     {
       "path": "shop/used-refurbished/index.html",
-      "bytes": 32213,
-      "sha256": "sha256:2f5600e61292406ace29e15b7c14d5015e064b9142ed84b1bbe8d7d8ff847980"
+      "bytes": 32493,
+      "sha256": "sha256:2f81a9e4e2df38cf650305eb466fdbd0826e1db071f962dce60cdc047c11cf61"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 23792,
-      "sha256": "sha256:dc62b00716d33192da2ae79325b6d50d87fccba36a0df0b756162599214dd6a2"
+      "bytes": 24447,
+      "sha256": "sha256:c57e53be5ece85d1a014654783187e7a94bc683dc19d15004f322c1e44f27b1f"
     },
     {
       "path": "tools/checklists/index.html",
-      "bytes": 33401,
-      "sha256": "sha256:3b221eaa2ccf3ae8ea51d9283ed3417032e891de722dbbd6ca64d5dd4a3afc50"
+      "bytes": 33681,
+      "sha256": "sha256:86b31b1ab9491b1227410a5fb2f63ec85edf0ed3cc0ecfdfad5bc0b6c5565bfb"
     }
   ],
   "removedFiles": [
-    "pagefind/filter/en_ceefc86.pf_filter",
-    "pagefind/filter/en_e346c1e.pf_filter",
-    "pagefind/fragment/en_44a95b4.pf_fragment",
-    "pagefind/fragment/en_7591999.pf_fragment",
-    "pagefind/fragment/en_84c26e2.pf_fragment",
-    "pagefind/fragment/en_ad13f3d.pf_fragment",
-    "pagefind/fragment/en_dd701e5.pf_fragment",
-    "pagefind/fragment/en_e3dd1a1.pf_fragment",
-    "pagefind/fragment/en_e92a8f6.pf_fragment",
-    "pagefind/index/en_29eeb51.pf_index",
-    "pagefind/index/en_3117b46.pf_index",
-    "pagefind/index/en_36a941e.pf_index",
-    "pagefind/index/en_3753a08.pf_index",
-    "pagefind/index/en_43ff9d2.pf_index",
-    "pagefind/index/en_46fb928.pf_index",
-    "pagefind/index/en_64122ee.pf_index",
-    "pagefind/index/en_8082382.pf_index",
-    "pagefind/index/en_8f2e396.pf_index",
-    "pagefind/index/en_9114d99.pf_index",
-    "pagefind/index/en_9886cd4.pf_index",
-    "pagefind/index/en_b9c17a2.pf_index",
-    "pagefind/index/en_c2c2b0f.pf_index",
-    "pagefind/index/en_cc4bd64.pf_index",
-    "pagefind/index/en_d2ea623.pf_index",
-    "pagefind/index/en_e36ace5.pf_index",
-    "pagefind/index/en_e69af4f.pf_index",
-    "pagefind/index/en_ec485bc.pf_index",
-    "pagefind/index/en_fa0afa6.pf_index",
-    "pagefind/pagefind.en_d0cf10b8df.pf_meta"
+    "pagefind/filter/en_8a1415f.pf_filter",
+    "pagefind/filter/en_8e83e97.pf_filter",
+    "pagefind/fragment/en_11fe4e4.pf_fragment",
+    "pagefind/fragment/en_32ebbfc.pf_fragment",
+    "pagefind/fragment/en_3c6b149.pf_fragment",
+    "pagefind/fragment/en_64b0e57.pf_fragment",
+    "pagefind/fragment/en_67eb229.pf_fragment",
+    "pagefind/fragment/en_816358d.pf_fragment",
+    "pagefind/fragment/en_90ff728.pf_fragment",
+    "pagefind/fragment/en_9560407.pf_fragment",
+    "pagefind/index/en_34a9b8c.pf_index",
+    "pagefind/index/en_515bf13.pf_index",
+    "pagefind/index/en_55f6303.pf_index",
+    "pagefind/index/en_65fa261.pf_index",
+    "pagefind/index/en_70a85b3.pf_index",
+    "pagefind/index/en_7c526ed.pf_index",
+    "pagefind/index/en_7fe01cf.pf_index",
+    "pagefind/index/en_84c6cf2.pf_index",
+    "pagefind/index/en_92c0d5c.pf_index",
+    "pagefind/index/en_98a3cb3.pf_index",
+    "pagefind/index/en_a4f1661.pf_index",
+    "pagefind/index/en_ac58d98.pf_index",
+    "pagefind/index/en_b95113a.pf_index",
+    "pagefind/index/en_be58ccf.pf_index",
+    "pagefind/index/en_c4edd42.pf_index",
+    "pagefind/index/en_d0806aa.pf_index",
+    "pagefind/index/en_d45bf9a.pf_index",
+    "pagefind/index/en_d4e0d8e.pf_index",
+    "pagefind/index/en_db4253d.pf_index",
+    "pagefind/index/en_ef32e37.pf_index",
+    "pagefind/pagefind.en_eb8db88fcd.pf_meta"
   ],
   "routes": [
-    "/articles/why-water-heater-popping-rumbling/",
-    "/articles/how-long-cooked-rice-lasts-fridge/",
-    "/articles/can-you-cut-mold-off-cheese/",
-    "/articles/how-to-choose-right-size-dehumidifier/",
-    "/articles/how-to-choose-smoke-alarm/"
+    "/articles/why-computer-storage-full/",
+    "/articles/how-to-clean-laptop-screen-safely/",
+    "/articles/why-garage-door-closes-then-opens/",
+    "/articles/why-toilet-tank-sweating-condensation/",
+    "/articles/how-long-bacon-lasts-fridge/"
   ]
 }

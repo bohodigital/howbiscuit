@@ -426,6 +426,14 @@
       "searchText": "how does baking powder work baking powder makes batter and dough rise by producing carbon dioxide bubbles here is what triggers it what goes wrong and how to test your can kitchen guide articles how does baking powder work"
     },
     {
+      "route": "/articles/how-long-bacon-lasts-fridge/",
+      "title": "How Long Does Bacon Last in the Fridge?",
+      "description": "Learn how long raw and cooked bacon keep, how to freeze and thaw bacon safely, and why smell and color cannot extend safe storage time.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how long does bacon last in the fridge learn how long raw and cooked bacon keep how to freeze and thaw bacon safely and why smell and color cannot extend safe storage time kitchen guide articles how long bacon lasts fridge"
+    },
+    {
       "route": "/articles/how-long-can-butter-sit-out/",
       "title": "How Long Can Butter Sit Out?",
       "description": "Learn how long ordinary commercial butter can remain at room temperature, how to store it, and which butter products should remain refrigerated.",
@@ -680,6 +688,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to clean a dishwasher filter a removable dishwasher filter can collect food grit labels and debris here is how to locate clean inspect and reinstall it without damaging the machine kitchen guide articles how to clean dishwasher filter"
+    },
+    {
+      "route": "/articles/how-to-clean-laptop-screen-safely/",
+      "title": "How to Clean a Laptop Screen Without Damaging It",
+      "description": "Clean fingerprints, dust, and smudges from a laptop display without damaging its coating, bezel, hinges, or electronics.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to clean a laptop screen without damaging it clean fingerprints dust and smudges from a laptop display without damaging its coating bezel hinges or electronics home tech guide articles how to clean laptop screen safely"
     },
     {
       "route": "/articles/how-to-clean-window-air-conditioner-filter/",
@@ -994,6 +1010,14 @@
       "searchText": "why does my ceiling fan wobble diagnose ceiling fan wobble by checking dust loose blade hardware warped blades mounting components downrods and balance home apartment guide articles why ceiling fan wobbles"
     },
     {
+      "route": "/articles/why-computer-storage-full/",
+      "title": "Why Is My Computer Storage Full?",
+      "description": "Find what is filling a Windows PC or Mac, safely remove temporary files and old downloads, and avoid deleting important system data.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why is my computer storage full find what is filling a windows pc or mac safely remove temporary files and old downloads and avoid deleting important system data home tech guide articles why computer storage full"
+    },
+    {
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -1064,6 +1088,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why is my freezer frosting up excess frost usually means moist air is entering or the freezer is not defrosting correctly check the door gasket alignment food vents drain and model specific defrost system kitchen guide articles why freezer frosting up"
+    },
+    {
+      "route": "/articles/why-garage-door-closes-then-opens/",
+      "title": "Why Does My Garage Door Close and Then Open Again?",
+      "description": "Diagnose a garage door that reverses while closing by checking safety sensors, obstructions, travel limits, resistance, balance, and damaged hardware.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my garage door close and then open again diagnose a garage door that reverses while closing by checking safety sensors obstructions travel limits resistance balance and damaged hardware home apartment guide articles why garage door closes then opens"
     },
     {
       "route": "/articles/why-garlic-turns-blue-green/",
@@ -1200,6 +1232,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my toilet keep running a running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube a dye test can identify the path home apartment guide articles why toilet keeps running"
+    },
+    {
+      "route": "/articles/why-toilet-tank-sweating-condensation/",
+      "title": "Why Is My Toilet Tank Sweating?",
+      "description": "Stop toilet-tank condensation by reducing bathroom humidity, improving ventilation, checking for leaks, and considering a lined tank or anti-sweat valve.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my toilet tank sweating stop toilet tank condensation by reducing bathroom humidity improving ventilation checking for leaks and considering a lined tank or anti sweat valve home apartment guide articles why toilet tank sweating condensation"
     },
     {
       "route": "/articles/why-washing-machine-not-draining/",
