@@ -5925,6 +5925,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/portable-power-bank-safety-capacity-airline-rules/",
+      "title": "Portable Power Bank Safety: Capacity, Certification, and Airline Rules",
+      "description": "Understand watt-hours, USB Power Delivery, certification marks, recalls, warning signs, and U.S. airline limits for portable power banks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A power bank should have a legible watt-hour rating, output compatible with the connected device, verifiable safety markings, no unresolved recall, and no signs of swelling, cracking, overheating, leakage, or connector damage.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No power bank was capacity-tested, opened, thermally tested, or charged under laboratory conditions."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/power-outage-food-safety-chart/",
       "title": "Power Outage Food Safety Chart: What to Keep and What to Throw Away",
@@ -10067,5 +10098,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:8ef757d5fba9179a32c24057686bfce744f54e1d5f34b6f9e3b49367b843e8cd"
+  "registryDigest": "sha256:2b250a0a42a9d5aa7081f95b794827c26e1982b7603b719b40f3489459ccf4c6"
 }
