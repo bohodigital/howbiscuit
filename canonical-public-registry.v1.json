@@ -2932,6 +2932,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/garbage-disposal-humming-not-spinning/",
+      "title": "Why Is My Garbage Disposal Humming but Not Spinning?",
+      "description": "Safely diagnose a humming garbage disposal by isolating power, checking for a jam, using the correct unjamming method, and resetting the motor only after it moves freely.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A disposal that hums without spinning is usually receiving power while its mechanism is jammed. Turn it off immediately, isolate power, keep hands out of the chamber, remove visible objects with long-handled tools, use the exact model’s approved unjamming method, and reset the motor only after the mechanism turns freely.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on manufacturer procedures and does not inspect a particular disposal, switch, drain, or electrical connection."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-faucet-keeps-dripping/",
+          "/articles/why-toilet-keeps-running/",
+          "/articles/why-dishwasher-leaves-white-film/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/heat-pump-vs-electric-water-heater/",
       "title": "Heat Pump vs. Standard Electric Water Heater",
@@ -10900,5 +10935,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:998e9272682842a50313a342f6016418f50646b3be9e8071b648a0dd86734081"
+  "registryDigest": "sha256:8171357190f6a11beee8afb732f95a5ff3143c02d1b7c5de41e622cad4ca2685"
 }
