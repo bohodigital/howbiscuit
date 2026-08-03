@@ -765,6 +765,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/can-you-freeze-bread/",
+      "title": "Can You Freeze Bread? The Best Way to Freeze Slices and Loaves",
+      "description": "Bread freezes well when it is still fresh, wrapped against air, and divided into portions you can use without repeatedly thawing the entire loaf.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Bread can be frozen successfully. Freeze it while fresh, use airtight freezer packaging, and divide it into portions before freezing so you can remove only what you need.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No side-by-side packaging or thawing test was conducted."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/can-you-freeze-eggs/",
       "title": "Can You Freeze Eggs?",
       "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
@@ -10036,5 +10067,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:fa37507f0f2f0ddad5ce8e08e257ff198d9a0f19ccf5a7533ea76aeaadbaf98b"
+  "registryDigest": "sha256:8ef757d5fba9179a32c24057686bfce744f54e1d5f34b6f9e3b49367b843e8cd"
 }
