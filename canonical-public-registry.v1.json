@@ -4677,6 +4677,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-to-choose-water-filter-contaminant-certification/",
+      "title": "How to Choose a Water Filter That Actually Removes What You Need",
+      "description": "Choose a water filter by matching accredited certification to the exact contaminant, model, cartridge, capacity, and replacement schedule you need.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Identify the water problem first, then verify that the exact filter model and replacement cartridge are certified by an accredited third party for the specific reduction claim you need. A generic logo or the word purified is not enough.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No individual filter was tested or endorsed; buyers must verify the exact model, cartridge, contaminant claim, and current certification."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-to-clean-dishwasher-filter/",
       "title": "How to Clean a Dishwasher Filter",
       "description": "A removable dishwasher filter can collect food, grit, labels, and debris. Here is how to locate, clean, inspect, and reinstall it without damaging the machine.",
@@ -8871,5 +8904,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:d04100b11285f941447b2f0a2c77ec678dd8b19b057d3bead6f1c34067913845"
+  "registryDigest": "sha256:30544f253a7a01f5a2c75ebb9887415eb3cf9f1bf76070a5f52282f6f7404691"
 }
