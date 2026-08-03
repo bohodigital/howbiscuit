@@ -420,6 +420,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/apartment-move-out-checklist/",
+      "title": "Apartment Move-Out Checklist: Document Condition, Clean, and Return Every Key",
+      "description": "Protect the condition record by following the lease, photographing the empty unit, requesting a walkthrough, preserving receipts, and obtaining proof that keys and possession were returned.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A useful move-out record shows the condition of the empty unit, compliance with the lease and documented instructions, and when and how possession, keys, and a forwarding address were delivered.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "This general checklist is not state-specific legal advice and was not tested against every lease or jurisdiction."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/appliance-buying-checklist/",
       "title": "Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls",
@@ -2939,6 +2970,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dirty_AC_filters_2023_%281%29_01.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-fire-escape-plan-checklist/",
+      "title": "Home Fire Escape Plan Checklist: Two Ways Out and One Meeting Place",
+      "description": "Map two usable exits from every room, choose an outdoor meeting place, account for anyone who needs assistance, and practice the plan with the actual household.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A home fire escape plan should identify two usable ways out of every room, one outdoor meeting place, and the assistance each household member may need. Draw it, walk every route, and practice it.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "This checklist does not replace local fire-code, building-management, or fire-department guidance."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -10022,7 +10084,7 @@
       "topicId": "checklists",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -10098,5 +10160,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:2b250a0a42a9d5aa7081f95b794827c26e1982b7603b719b40f3489459ccf4c6"
+  "registryDigest": "sha256:cc9b19f23739252d0cab00e56c62bdfde1c34400033920f82a468ad587b020b4"
 }

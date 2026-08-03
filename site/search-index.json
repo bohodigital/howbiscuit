@@ -82,6 +82,14 @@
       "searchText": "apartment move in inspection checklist document damage before you unpack inspect every room before moving furniture inside photograph existing damage test essential systems and submit the condition report on time tools guide articles apartment move in inspection checklist"
     },
     {
+      "route": "/articles/apartment-move-out-checklist/",
+      "title": "Apartment Move-Out Checklist: Document Condition, Clean, and Return Every Key",
+      "description": "Protect the condition record by following the lease, photographing the empty unit, requesting a walkthrough, preserving receipts, and obtaining proof that keys and possession were returned.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "apartment move out checklist document condition clean and return every key protect the condition record by following the lease photographing the empty unit requesting a walkthrough preserving receipts and obtaining proof that keys and possession were returned tools guide articles apartment move out checklist"
+    },
+    {
       "route": "/articles/appliance-buying-checklist/",
       "title": "Appliance Buying Checklist: Measurements, Hookups, Delivery, Warranty, and Recalls",
       "description": "Measure the space and delivery route, verify every hookup, read EnergyGuide and warranty terms, inspect delivery damage, check recalls, and document installation.",
@@ -408,6 +416,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "home energy check for a high summer electric bill use this step by step home energy checklist to find why a summer electric bill increased from billing days and rates to ac filters air leaks and hidden loads tools guide articles home energy check high summer bill"
+    },
+    {
+      "route": "/articles/home-fire-escape-plan-checklist/",
+      "title": "Home Fire Escape Plan Checklist: Two Ways Out and One Meeting Place",
+      "description": "Map two usable exits from every room, choose an outdoor meeting place, account for anyone who needs assistance, and practice the plan with the actual household.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home fire escape plan checklist two ways out and one meeting place map two usable exits from every room choose an outdoor meeting place account for anyone who needs assistance and practice the plan with the actual household tools guide articles home fire escape plan checklist"
     },
     {
       "route": "/articles/home-humidity-dehumidifier-checklist/",
