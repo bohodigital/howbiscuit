@@ -618,6 +618,14 @@
       "searchText": "how often should you replace your wi fi router there is no universal router lifespan replace it when support ends security is obsolete failures persist or the hardware cannot meet verified household needs home tech guide articles how often should you replace wifi router"
     },
     {
+      "route": "/articles/how-often-test-carbon-monoxide-alarms/",
+      "title": "How Often Should You Test Carbon Monoxide Alarms?",
+      "description": "Test carbon monoxide alarms at least monthly, replace batteries and units according to their instructions, and treat any alarm as a real warning until emergency responders say otherwise.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how often should you test carbon monoxide alarms test carbon monoxide alarms at least monthly replace batteries and units according to their instructions and treat any alarm as a real warning until emergency responders say otherwise home apartment guide articles how often test carbon monoxide alarms"
+    },
+    {
       "route": "/articles/how-often-test-replace-smoke-alarms/",
       "title": "How Often Should You Test and Replace Smoke Alarms?",
       "description": "Test smoke alarms at least monthly and replace the whole alarm when it is 10 years old, or sooner if its instructions or failed tests require it.",
@@ -640,6 +648,22 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "how to calculate what an appliance costs to run calculate appliance cost from annual kwh measured kwh or watts and time learn which method works for refrigerators dryers dishwashers ovens and small appliances home apartment guide articles how to calculate appliance electricity cost"
+    },
+    {
+      "route": "/articles/how-to-calculate-flooring-needed/",
+      "title": "How to Calculate How Much Flooring You Need",
+      "description": "Measure each floor section, add the areas, include the product-appropriate waste allowance, divide by coverage per box, and round up to whole boxes from the same lot.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "how to calculate how much flooring you need measure each floor section add the areas include the product appropriate waste allowance divide by coverage per box and round up to whole boxes from the same lot tools guide articles how to calculate flooring needed"
+    },
+    {
+      "route": "/articles/how-to-calculate-paint-needed/",
+      "title": "How to Calculate How Much Paint You Need",
+      "description": "Measure the paintable area, subtract only large openings, multiply by the number of coats, divide by the product's stated coverage, and round up to practical container sizes.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "how to calculate how much paint you need measure the paintable area subtract only large openings multiply by the number of coats divide by the product s stated coverage and round up to practical container sizes tools guide articles how to calculate paint needed"
     },
     {
       "route": "/articles/how-to-check-used-refrigerator-before-buying/",
@@ -680,6 +704,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose a water filter that actually removes what you need choose a water filter by matching accredited certification to the exact contaminant model cartridge capacity and replacement schedule you need shop smarter guide articles how to choose water filter contaminant certification"
+    },
+    {
+      "route": "/articles/how-to-clean-and-sanitize-cutting-board/",
+      "title": "How to Clean and Sanitize a Cutting Board",
+      "description": "Wash cutting boards with hot soapy water after each use, sanitize after raw meat or other high-risk contamination, dry thoroughly, and replace boards with deep grooves or damage.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to clean and sanitize a cutting board wash cutting boards with hot soapy water after each use sanitize after raw meat or other high risk contamination dry thoroughly and replace boards with deep grooves or damage kitchen guide articles how to clean and sanitize cutting board"
     },
     {
       "route": "/articles/how-to-clean-dishwasher-filter/",
@@ -906,6 +938,14 @@
       "searchText": "what can an air purifier remove air purifiers can reduce some airborne particles such as smoke dust pollen and pet allergens they do not repair mold remove radon or replace carbon monoxide alarms home apartment guide articles what can air purifier remove"
     },
     {
+      "route": "/articles/what-does-gfci-outlet-do/",
+      "title": "What Does a GFCI Outlet Do?",
+      "description": "A GFCI watches for current leaking away from the intended circuit and quickly shuts off power to reduce the risk of severe electric shock, especially where electricity may meet water.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "what does a gfci outlet do a gfci watches for current leaking away from the intended circuit and quickly shuts off power to reduce the risk of severe electric shock especially where electricity may meet water home apartment guide articles what does gfci outlet do"
+    },
+    {
       "route": "/articles/what-food-throw-away-after-power-outage/",
       "title": "What Food Should You Throw Away After a Power Outage?",
       "description": "Discard refrigerated meat, milk, eggs, soft cheese, leftovers, and other perishables after four hours without safe cooling. Use this item-by-item guide.",
@@ -1048,6 +1088,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why do windows condense in winter winter window condensation forms when humid indoor air meets glass cold enough to fall below the air s dew point here is how to reduce it and when it signals a larger moisture problem home apartment guide articles why do windows condense in winter"
+    },
+    {
+      "route": "/articles/why-does-dishwasher-smell-bad/",
+      "title": "Why Does My Dishwasher Smell Bad?",
+      "description": "Dishwasher odors usually come from trapped food, a dirty filter, residue on the gasket or tub, standing water, or a drainage problem. Clean the accessible parts first and use the model manual before adding cleaners.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does my dishwasher smell bad dishwasher odors usually come from trapped food a dirty filter residue on the gasket or tub standing water or a drainage problem clean the accessible parts first and use the model manual before adding cleaners kitchen guide articles why does dishwasher smell bad"
     },
     {
       "route": "/articles/why-does-gfci-outlet-keep-tripping/",

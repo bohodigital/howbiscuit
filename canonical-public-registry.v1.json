@@ -4569,6 +4569,80 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-often-test-carbon-monoxide-alarms/",
+      "title": "How Often Should You Test Carbon Monoxide Alarms?",
+      "description": "Test carbon monoxide alarms at least monthly, replace batteries and units according to their instructions, and treat any alarm as a real warning until emergency responders say otherwise.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Test every carbon monoxide alarm at least once a month using its test button. Follow the manufacturer's schedule for batteries, sensors, end-of-life chirps, and full replacement.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on current primary and manufacturer documentation, not a hands-on test of every product or home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-often-test-replace-smoke-alarms/",
+          "/articles/why-is-my-smoke-alarm-chirping/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-often-test-carbon-monoxide-alarms-how-often-test-carbon-monoxide-alarms-lead-6509de7e3c",
+          "href": "/images/articles/how-often-test-carbon-monoxide-alarms/how-often-test-carbon-monoxide-alarms.png",
+          "packageRelativePath": "media/how-often-test-carbon-monoxide-alarms.png",
+          "mimeType": "image/png",
+          "sha256": "6509de7e3c37d48552070931f4f15ca5457f96882c66c5aae0936a41d394bfb0",
+          "sizeBytes": 765,
+          "width": 400,
+          "height": 225,
+          "alt": "Test every carbon monoxide alarm at least monthly and follow its date label.",
+          "caption": "Test every carbon monoxide alarm at least monthly and follow its date label.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "leadMedia": {
+        "id": "how-often-test-carbon-monoxide-alarms-how-often-test-carbon-monoxide-alarms-lead-6509de7e3c",
+        "href": "/images/articles/how-often-test-carbon-monoxide-alarms/how-often-test-carbon-monoxide-alarms.png",
+        "packageRelativePath": "media/how-often-test-carbon-monoxide-alarms.png",
+        "mimeType": "image/png",
+        "sha256": "6509de7e3c37d48552070931f4f15ca5457f96882c66c5aae0936a41d394bfb0",
+        "sizeBytes": 765,
+        "width": 400,
+        "height": 225,
+        "alt": "Test every carbon monoxide alarm at least monthly and follow its date label.",
+        "caption": "Test every carbon monoxide alarm at least monthly and follow its date label.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-often-test-replace-smoke-alarms/",
       "title": "How Often Should You Test and Replace Smoke Alarms?",
       "description": "Test smoke alarms at least monthly and replace the whole alarm when it is 10 years old, or sooner if its instructions or failed tests require it.",
@@ -4734,6 +4808,154 @@
         "license": null,
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Electricity_meter.JPG",
         "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-calculate-flooring-needed/",
+      "title": "How to Calculate How Much Flooring You Need",
+      "description": "Measure each floor section, add the areas, include the product-appropriate waste allowance, divide by coverage per box, and round up to whole boxes from the same lot.",
+      "categoryId": "tools",
+      "topicId": "calculators",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Calculate net floor area, add the waste percentage appropriate to the material and layout, divide by square feet per box, and round up. Keep unopened returnable boxes and retain spare material for future repairs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on current primary and manufacturer documentation, not a hands-on test of every product or home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-calculate-paint-needed/",
+          "/articles/how-to-calculate-appliance-electricity-cost/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-to-calculate-flooring-needed-how-to-calculate-flooring-needed-lead-ef6a767bd1",
+          "href": "/images/articles/how-to-calculate-flooring-needed/how-to-calculate-flooring-needed.png",
+          "packageRelativePath": "media/how-to-calculate-flooring-needed.png",
+          "mimeType": "image/png",
+          "sha256": "ef6a767bd1b7f49877d76a331b9ae3c2e64034d4d8849dca9334e0b92f320b7d",
+          "sizeBytes": 711,
+          "width": 400,
+          "height": 225,
+          "alt": "Area plus layout waste, divided by box coverage, rounded up.",
+          "caption": "Area plus layout waste, divided by box coverage, rounded up.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "leadMedia": {
+        "id": "how-to-calculate-flooring-needed-how-to-calculate-flooring-needed-lead-ef6a767bd1",
+        "href": "/images/articles/how-to-calculate-flooring-needed/how-to-calculate-flooring-needed.png",
+        "packageRelativePath": "media/how-to-calculate-flooring-needed.png",
+        "mimeType": "image/png",
+        "sha256": "ef6a767bd1b7f49877d76a331b9ae3c2e64034d4d8849dca9334e0b92f320b7d",
+        "sizeBytes": 711,
+        "width": 400,
+        "height": 225,
+        "alt": "Area plus layout waste, divided by box coverage, rounded up.",
+        "caption": "Area plus layout waste, divided by box coverage, rounded up.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-calculate-paint-needed/",
+      "title": "How to Calculate How Much Paint You Need",
+      "description": "Measure the paintable area, subtract only large openings, multiply by the number of coats, divide by the product's stated coverage, and round up to practical container sizes.",
+      "categoryId": "tools",
+      "topicId": "calculators",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Use paintable square feet multiplied by coats, divided by the coverage printed for the specific paint. Add a modest contingency for texture, porous surfaces, color changes, and touch-ups rather than relying on one universal gallons-per-room rule.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on current primary and manufacturer documentation, not a hands-on test of every product or home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-calculate-flooring-needed/",
+          "/articles/how-to-calculate-appliance-electricity-cost/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-to-calculate-paint-needed-how-to-calculate-paint-needed-lead-8efeef9eaf",
+          "href": "/images/articles/how-to-calculate-paint-needed/how-to-calculate-paint-needed.png",
+          "packageRelativePath": "media/how-to-calculate-paint-needed.png",
+          "mimeType": "image/png",
+          "sha256": "8efeef9eaffc737298cb32bbf5cf126918549e7a7390d75f649732370a3da9be",
+          "sizeBytes": 712,
+          "width": 400,
+          "height": 225,
+          "alt": "Area × coats ÷ product coverage gives the starting paint estimate.",
+          "caption": "Area × coats ÷ product coverage gives the starting paint estimate.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "leadMedia": {
+        "id": "how-to-calculate-paint-needed-how-to-calculate-paint-needed-lead-8efeef9eaf",
+        "href": "/images/articles/how-to-calculate-paint-needed/how-to-calculate-paint-needed.png",
+        "packageRelativePath": "media/how-to-calculate-paint-needed.png",
+        "mimeType": "image/png",
+        "sha256": "8efeef9eaffc737298cb32bbf5cf126918549e7a7390d75f649732370a3da9be",
+        "sizeBytes": 712,
+        "width": 400,
+        "height": 225,
+        "alt": "Area × coats ÷ product coverage gives the starting paint estimate.",
+        "caption": "Area × coats ÷ product coverage gives the starting paint estimate.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        }
       }
     },
     {
@@ -4905,6 +5127,81 @@
       },
       "media": [],
       "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-clean-and-sanitize-cutting-board/",
+      "title": "How to Clean and Sanitize a Cutting Board",
+      "description": "Wash cutting boards with hot soapy water after each use, sanitize after raw meat or other high-risk contamination, dry thoroughly, and replace boards with deep grooves or damage.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Clean a cutting board first with hot soapy water, rinse it, then sanitize when needed with a food-contact-safe product or the USDA bleach solution. Keep raw-animal-food boards separate from ready-to-eat food.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on current primary and manufacturer documentation, not a hands-on test of every product or home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/should-you-wash-raw-chicken/",
+          "/articles/how-long-can-cooked-food-sit-out/",
+          "/articles/organize-refrigerator-food-safety/"
+        ]
+      },
+      "media": [
+        {
+          "id": "how-to-clean-and-sanitize-cutting-board-how-to-clean-and-sanitize-cutting-board-lead-8a2777de7f",
+          "href": "/images/articles/how-to-clean-and-sanitize-cutting-board/how-to-clean-and-sanitize-cutting-board.png",
+          "packageRelativePath": "media/how-to-clean-and-sanitize-cutting-board.png",
+          "mimeType": "image/png",
+          "sha256": "8a2777de7f0bdeb99b305f0cbd380d41be6a6cc6763411ac9679e6747037cd71",
+          "sizeBytes": 726,
+          "width": 400,
+          "height": 225,
+          "alt": "Clean first, sanitize when needed, keep raw food separate, and dry fully.",
+          "caption": "Clean first, sanitize when needed, keep raw food separate, and dry fully.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "leadMedia": {
+        "id": "how-to-clean-and-sanitize-cutting-board-how-to-clean-and-sanitize-cutting-board-lead-8a2777de7f",
+        "href": "/images/articles/how-to-clean-and-sanitize-cutting-board/how-to-clean-and-sanitize-cutting-board.png",
+        "packageRelativePath": "media/how-to-clean-and-sanitize-cutting-board.png",
+        "mimeType": "image/png",
+        "sha256": "8a2777de7f0bdeb99b305f0cbd380d41be6a6cc6763411ac9679e6747037cd71",
+        "sizeBytes": 726,
+        "width": 400,
+        "height": 225,
+        "alt": "Clean first, sanitize when needed, keep raw food separate, and dry fully.",
+        "caption": "Clean first, sanitize when needed, keep raw food separate, and dry fully.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
     },
     {
       "kind": "article",
@@ -6542,6 +6839,81 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/what-does-gfci-outlet-do/",
+      "title": "What Does a GFCI Outlet Do?",
+      "description": "A GFCI watches for current leaking away from the intended circuit and quickly shuts off power to reduce the risk of severe electric shock, especially where electricity may meet water.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A ground-fault circuit interrupter compares current leaving and returning on a circuit. If it detects an imbalance consistent with leakage, it trips quickly to reduce shock risk.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on current primary and manufacturer documentation, not a hands-on test of every product or home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-does-gfci-outlet-keep-tripping/",
+          "/articles/can-you-plug-air-conditioner-into-extension-cord/",
+          "/articles/power-strip-vs-surge-protector/"
+        ]
+      },
+      "media": [
+        {
+          "id": "what-does-gfci-outlet-do-what-does-gfci-outlet-do-lead-da97cf96f5",
+          "href": "/images/articles/what-does-gfci-outlet-do/what-does-gfci-outlet-do.png",
+          "packageRelativePath": "media/what-does-gfci-outlet-do.png",
+          "mimeType": "image/png",
+          "sha256": "da97cf96f51f992e137897919589d6781537b9d772e8fa2cd388d4a64f420c97",
+          "sizeBytes": 810,
+          "width": 400,
+          "height": 225,
+          "alt": "A GFCI cuts power when current leaks away from the intended circuit.",
+          "caption": "A GFCI cuts power when current leaks away from the intended circuit.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "leadMedia": {
+        "id": "what-does-gfci-outlet-do-what-does-gfci-outlet-do-lead-da97cf96f5",
+        "href": "/images/articles/what-does-gfci-outlet-do/what-does-gfci-outlet-do.png",
+        "packageRelativePath": "media/what-does-gfci-outlet-do.png",
+        "mimeType": "image/png",
+        "sha256": "da97cf96f51f992e137897919589d6781537b9d772e8fa2cd388d4a64f420c97",
+        "sizeBytes": 810,
+        "width": 400,
+        "height": 225,
+        "alt": "A GFCI cuts power when current leaks away from the intended circuit.",
+        "caption": "A GFCI cuts power when current leaks away from the intended circuit.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/what-food-throw-away-after-power-outage/",
       "title": "What Food Should You Throw Away After a Power Outage?",
@@ -7534,6 +7906,81 @@
         "license": null,
         "sourceUrl": null,
         "focalPoint": null
+      }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-does-dishwasher-smell-bad/",
+      "title": "Why Does My Dishwasher Smell Bad?",
+      "description": "Dishwasher odors usually come from trapped food, a dirty filter, residue on the gasket or tub, standing water, or a drainage problem. Clean the accessible parts first and use the model manual before adding cleaners.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with the filter, sump area, door gasket, spray arms, and drain path. Remove food residue, clean only with model-approved methods, and call for service when odor comes with standing water, leaks, electrical smells, or repeated drainage failure.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide is based on current primary and manufacturer documentation, not a hands-on test of every product or home."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-dishwasher-filter/",
+          "/articles/why-is-my-dishwasher-not-drying-dishes/",
+          "/articles/can-you-put-dish-soap-in-dishwasher/"
+        ]
+      },
+      "media": [
+        {
+          "id": "why-does-dishwasher-smell-bad-why-does-dishwasher-smell-bad-lead-fb2e9c1e8f",
+          "href": "/images/articles/why-does-dishwasher-smell-bad/why-does-dishwasher-smell-bad.png",
+          "packageRelativePath": "media/why-does-dishwasher-smell-bad.png",
+          "mimeType": "image/png",
+          "sha256": "fb2e9c1e8fc45df382ec73c1db1c96bf1688fd2a1032cfab6f8e1afb25b4356a",
+          "sizeBytes": 677,
+          "width": 400,
+          "height": 225,
+          "alt": "Check the filter, gasket, trapped food, standing water, and drain path.",
+          "caption": "Check the filter, gasket, trapped food, standing water, and drain path.",
+          "credit": "How Biscuit Editorial Desk",
+          "attribution": "How Biscuit Editorial Desk",
+          "license": null,
+          "sourceUrl": null,
+          "focalPoint": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ],
+      "leadMedia": {
+        "id": "why-does-dishwasher-smell-bad-why-does-dishwasher-smell-bad-lead-fb2e9c1e8f",
+        "href": "/images/articles/why-does-dishwasher-smell-bad/why-does-dishwasher-smell-bad.png",
+        "packageRelativePath": "media/why-does-dishwasher-smell-bad.png",
+        "mimeType": "image/png",
+        "sha256": "fb2e9c1e8fc45df382ec73c1db1c96bf1688fd2a1032cfab6f8e1afb25b4356a",
+        "sizeBytes": 677,
+        "width": 400,
+        "height": 225,
+        "alt": "Check the filter, gasket, trapped food, standing water, and drain path.",
+        "caption": "Check the filter, gasket, trapped food, standing water, and drain path.",
+        "credit": "How Biscuit Editorial Desk",
+        "attribution": "How Biscuit Editorial Desk",
+        "license": null,
+        "sourceUrl": null,
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        }
       }
     },
     {
@@ -9431,5 +9878,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:e96fa4c8d709aa0dfd779520fa76ced9463eebdbbc498d5c0814c4e6d9b84e0c"
+  "registryDigest": "sha256:1e6fbce69c876f7a85c3f297cb841ba8c3085879d176e515dda0caafedbfb429"
 }
