@@ -3055,6 +3055,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-long-can-butter-sit-out/",
+      "title": "How Long Can Butter Sit Out?",
+      "description": "Learn how long ordinary commercial butter can remain at room temperature, how to store it, and which butter products should remain refrigerated.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "USDA FoodKeeper data says ordinary butter may be left at room temperature for one to two days. Keep only a small covered portion out and refrigerate the rest.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article uses USDA FoodKeeper data and general federal storage guidance rather than testing butter under different household temperatures."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/what-temperature-should-refrigerator-be/",
+          "/articles/is-freezer-burn-safe-to-eat/",
+          "/articles/can-you-freeze-milk/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-long-can-cooked-food-sit-out/",
       "title": "How Long Can Cooked Food Sit Out?",
       "description": "Most perishable cooked food should be refrigerated within two hours, or within one hour when the temperature is above 90°F. Food held safely hot or cold follows different rules.",
@@ -7415,6 +7450,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-garlic-turns-blue-green/",
+      "title": "Why Did My Garlic Turn Blue or Green?",
+      "description": "Learn why garlic turns blue or green in vinegar, lemon, pickles, and acidic cooking, when the color is harmless, and how to distinguish it from mold.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Garlic can turn blue, turquoise, or green when cutting activates its natural sulfur chemistry and acidic conditions promote formation of blue and yellow pigments. The color itself is generally harmless when the food was prepared and stored safely.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article summarizes published food-science and preservation guidance and does not chemically analyze a specific batch of garlic."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-onions-make-you-cry/",
+          "/articles/how-does-baking-powder-work/",
+          "/articles/can-you-use-soap-on-cast-iron/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-hot-water-runs-out-fast/",
       "title": "Why Does My Hot Water Run Out So Fast?",
@@ -8713,5 +8783,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:21ea04214fd87a36535fef769f3375d1672d5681b8fbe11c8640cb4c215a01f6"
+  "registryDigest": "sha256:ff0fa0fa92f553ec3c0baf960d980efc1f2cf29dbfbd01da2273b3fed12c40a3"
 }

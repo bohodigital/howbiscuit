@@ -418,6 +418,14 @@
       "searchText": "how does baking powder work baking powder makes batter and dough rise by producing carbon dioxide bubbles here is what triggers it what goes wrong and how to test your can kitchen guide articles how does baking powder work"
     },
     {
+      "route": "/articles/how-long-can-butter-sit-out/",
+      "title": "How Long Can Butter Sit Out?",
+      "description": "Learn how long ordinary commercial butter can remain at room temperature, how to store it, and which butter products should remain refrigerated.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how long can butter sit out learn how long ordinary commercial butter can remain at room temperature how to store it and which butter products should remain refrigerated kitchen guide articles how long can butter sit out"
+    },
+    {
       "route": "/articles/how-long-can-cooked-food-sit-out/",
       "title": "How Long Can Cooked Food Sit Out?",
       "description": "Most perishable cooked food should be refrigerated within two hours, or within one hour when the temperature is above 90°F. Food held safely hot or cold follows different rules.",
@@ -984,6 +992,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why is my freezer frosting up excess frost usually means moist air is entering or the freezer is not defrosting correctly check the door gasket alignment food vents drain and model specific defrost system kitchen guide articles why freezer frosting up"
+    },
+    {
+      "route": "/articles/why-garlic-turns-blue-green/",
+      "title": "Why Did My Garlic Turn Blue or Green?",
+      "description": "Learn why garlic turns blue or green in vinegar, lemon, pickles, and acidic cooking, when the color is harmless, and how to distinguish it from mold.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my garlic turn blue or green learn why garlic turns blue or green in vinegar lemon pickles and acidic cooking when the color is harmless and how to distinguish it from mold kitchen guide articles why garlic turns blue green"
     },
     {
       "route": "/articles/why-hot-water-runs-out-fast/",
