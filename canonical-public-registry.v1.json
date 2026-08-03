@@ -3240,6 +3240,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-water-leak-triage-checklist/",
+      "title": "Home Water Leak Triage Checklist: Shut Off, Document, Dry, and Escalate",
+      "description": "Use this practical first-response checklist for plumbing leaks, appliance failures, ceiling drips, and other household water damage.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Protect people first, stop the source only when it is safe, keep away from wet electrical equipment, isolate sewage or contaminated water, document the damage, and begin extracting and drying a small clean-water leak promptly. Escalate when electricity, sewage, structural instability, large areas, HVAC contamination, or concealed cavities are involved.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "This is a source-based emergency checklist and does not inspect a particular building, water source, electrical system, or material assembly."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/water-heater-leaking-what-to-do/",
+          "/articles/renter-repair-request-documentation-checklist/",
+          "/articles/home-inventory-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/home-wifi-dead-zone-checklist/",
       "title": "Home Wi-Fi Dead-Zone Checklist",
@@ -6167,6 +6202,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/monitor-says-no-signal/",
+      "title": "Why Does My Monitor Say No Signal? Test the Display Chain in Order",
+      "description": "Diagnose a monitor that powers on but reports no signal by isolating the selected input, cable, port, adapter, dock, graphics output, and computer.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A no-signal message means the monitor has enough power to display its own status but is not receiving usable video. Select the correct input, reconnect both ends of the cable, use the correct graphics port, bypass docks and adapters, cross-test the monitor and computer, and then inspect resolution, refresh rate, and drivers.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This is a researched troubleshooting sequence and does not inspect a particular monitor, graphics card, dock, or cable."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-tell-usb-c-port-supports-video/",
+          "/articles/used-laptop-inspection-checklist/",
+          "/articles/why-computer-storage-full/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/new-vs-used-refurbished-open-box-appliances/",
       "title": "New vs. Used vs. Refurbished vs. Open-Box Appliances",
@@ -7395,6 +7465,41 @@
         "routes": [
           "/articles/check-recalls-before-buying-used-product/",
           "/articles/new-vs-used-refurbished-open-box-appliances/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/used-tv-inspection-checklist/",
+      "title": "Used TV Inspection Checklist: Screen, Ports, Apps, and Ownership",
+      "description": "Inspect a used television’s screen, inputs, sound, network connection, remote, stand, serial number, recall status, and factory-reset state before paying.",
+      "categoryId": "shop",
+      "topicId": "used-refurbished",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Test the exact television before payment. Verify the model and serial number, search recalls, display several solid colors and moving video, test every needed input and audio output, connect to the network, confirm included hardware, and require a factory reset that returns the set to initial setup.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The checklist is a researched inspection framework and does not evaluate a particular television."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/check-recalls-before-buying-used-product/",
+          "/articles/new-vs-used-refurbished-open-box-appliances/",
+          "/articles/how-to-spot-fake-online-reviews/"
         ]
       },
       "media": [],
@@ -10935,5 +11040,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:8171357190f6a11beee8afb732f95a5ff3143c02d1b7c5de41e622cad4ca2685"
+  "registryDigest": "sha256:e7530a537c643f18305e65b28821ff5d99d56b24763e89d2d6c524468cc3b39b"
 }

@@ -474,6 +474,14 @@
       "searchText": "home inventory checklist document your belongings before a loss photograph every room record valuable items and serial numbers preserve receipts store a copy away from home and update the inventory after major purchases tools guide articles home inventory checklist"
     },
     {
+      "route": "/articles/home-water-leak-triage-checklist/",
+      "title": "Home Water Leak Triage Checklist: Shut Off, Document, Dry, and Escalate",
+      "description": "Use this practical first-response checklist for plumbing leaks, appliance failures, ceiling drips, and other household water damage.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home water leak triage checklist shut off document dry and escalate use this practical first response checklist for plumbing leaks appliance failures ceiling drips and other household water damage tools guide articles home water leak triage checklist"
+    },
+    {
       "route": "/articles/home-wifi-dead-zone-checklist/",
       "title": "Home Wi-Fi Dead-Zone Checklist",
       "description": "Record Wi-Fi performance room by room, test one change at a time, and decide whether the problem is your device, router placement, or internet service.",
@@ -914,6 +922,14 @@
       "searchText": "mesh wi fi vs range extender which should you use use a range extender for one isolated weak area and mesh for broader multi room coverage but diagnose placement backhaul compatibility and router support first home tech guide articles mesh wifi vs range extender"
     },
     {
+      "route": "/articles/monitor-says-no-signal/",
+      "title": "Why Does My Monitor Say No Signal? Test the Display Chain in Order",
+      "description": "Diagnose a monitor that powers on but reports no signal by isolating the selected input, cable, port, adapter, dock, graphics output, and computer.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my monitor say no signal test the display chain in order diagnose a monitor that powers on but reports no signal by isolating the selected input cable port adapter dock graphics output and computer home tech guide articles monitor says no signal"
+    },
+    {
       "route": "/articles/new-vs-used-refurbished-open-box-appliances/",
       "title": "New vs. Used vs. Refurbished vs. Open-Box Appliances",
       "description": "Condition labels are not standardized. Verify the seller, exact model, serial, recall status, warranty, return policy, missing parts, damage, sanitation, and installation.",
@@ -1104,6 +1120,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "used laptop inspection checklist hardware battery and account checks inspect a used laptop for recalls battery health display and keyboard faults ports storage charging account locks repair history and ownership before paying shop smarter guide articles used laptop inspection checklist"
+    },
+    {
+      "route": "/articles/used-tv-inspection-checklist/",
+      "title": "Used TV Inspection Checklist: Screen, Ports, Apps, and Ownership",
+      "description": "Inspect a used television’s screen, inputs, sound, network connection, remote, stand, serial number, recall status, and factory-reset state before paying.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "used tv inspection checklist screen ports apps and ownership inspect a used television s screen inputs sound network connection remote stand serial number recall status and factory reset state before paying shop smarter guide articles used tv inspection checklist"
     },
     {
       "route": "/articles/used-vacuum-inspection-checklist/",
