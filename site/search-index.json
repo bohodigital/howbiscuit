@@ -170,6 +170,14 @@
       "searchText": "can you put dish soap in a dishwasher why ordinary hand washing liquid does not belong in an automatic dishwasher and what to do after an accidental dose kitchen guide articles can you put dish soap in dishwasher"
     },
     {
+      "route": "/articles/can-you-put-glass-in-the-freezer/",
+      "title": "Can You Put Glass in the Freezer?",
+      "description": "Glass can go in the freezer only when the container is intended for freezing, undamaged, not overfilled, and protected from sudden temperature changes.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you put glass in the freezer glass can go in the freezer only when the container is intended for freezing undamaged not overfilled and protected from sudden temperature changes kitchen guide articles can you put glass in the freezer"
+    },
+    {
       "route": "/articles/can-you-put-hot-food-in-refrigerator/",
       "title": "Can You Put Hot Food Directly in the Refrigerator?",
       "description": "Hot food can go directly into the refrigerator, but large batches should be divided into shallow containers so they cool quickly and safely.",
@@ -610,6 +618,14 @@
       "searchText": "how to read an energyguide label learn what the yellow energyguide label says about annual energy use estimated operating cost similar model comparisons capacity and local rate recalculation shop smarter guide articles how to read energyguide label"
     },
     {
+      "route": "/articles/how-to-spot-fake-online-reviews/",
+      "title": "How to Spot a Fake Online Review",
+      "description": "No single clue proves a review is fake. Compare sources, timing, reviewer history, incentives, listing changes, and recurring product-specific details.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to spot a fake online review no single clue proves a review is fake compare sources timing reviewer history incentives listing changes and recurring product specific details shop smarter guide articles how to spot fake online reviews"
+    },
+    {
       "route": "/articles/is-freezer-burn-safe-to-eat/",
       "title": "Is Freezer Burn Safe to Eat?",
       "description": "What freezer burn means, why it affects quality more than safety, and when a damaged package calls for a different decision.",
@@ -896,6 +912,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "why do led light bulbs flicker led flicker commonly comes from an incompatible dimmer a non dimmable bulb a poor driver a loose connection or unstable power here is how to narrow it down safely home tech guide articles why do led light bulbs flicker"
+    },
+    {
+      "route": "/articles/why-do-onions-make-you-cry/",
+      "title": "Why Do Onions Make You Cry?",
+      "description": "Cutting an onion ruptures its cells and starts an enzyme-driven reaction that releases a volatile sulfur compound, causing the eyes to produce tears.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why do onions make you cry cutting an onion ruptures its cells and starts an enzyme driven reaction that releases a volatile sulfur compound causing the eyes to produce tears kitchen guide articles why do onions make you cry"
     },
     {
       "route": "/articles/why-do-windows-condense-in-winter/",

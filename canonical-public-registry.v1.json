@@ -1152,6 +1152,42 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/can-you-put-glass-in-the-freezer/",
+      "title": "Can You Put Glass in the Freezer?",
+      "description": "Glass can go in the freezer only when the container is intended for freezing, undamaged, not overfilled, and protected from sudden temperature changes.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Use only undamaged glass specifically identified for freezing, leave enough empty space for expansion, cool hot food safely before freezing, and avoid sudden temperature changes. Do not freeze liquids in random household jars or eat food from a cracked container.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No glass containers were frozen or stress-tested.",
+          "Manufacturers may specify stricter temperature and reheating limits.",
+          "Container damage can be microscopic and not visible during inspection."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-onions-make-you-cry/",
+          "/articles/home-inventory-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/can-you-put-hot-food-in-refrigerator/",
       "title": "Can You Put Hot Food Directly in the Refrigerator?",
       "description": "Hot food can go directly into the refrigerator, but large batches should be divided into shallow containers so they cool quickly and safely.",
@@ -4673,6 +4709,42 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-to-spot-fake-online-reviews/",
+      "title": "How to Spot a Fake Online Review",
+      "description": "No single clue proves a review is fake. Compare sources, timing, reviewer history, incentives, listing changes, and recurring product-specific details.",
+      "categoryId": "shop",
+      "topicId": "products-to-avoid",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Treat review authenticity as a pattern-evaluation problem. Compare several sources, inspect timing and reviewer histories, look for specific recurring details and disclosed incentives, check whether the listing changed, and verify important claims against independent records.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No commercial review-detection service or marketplace dataset was tested.",
+          "Platform badges and moderation systems differ.",
+          "Public review patterns rarely prove a reviewer’s identity, intent, or payment arrangement by themselves."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-onions-make-you-cry/",
+          "/articles/home-inventory-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/is-freezer-burn-safe-to-eat/",
       "title": "Is Freezer Burn Safe to Eat?",
       "description": "What freezer burn means, why it affects quality more than safety, and when a damaged package calls for a different decision.",
@@ -6861,6 +6933,42 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-do-onions-make-you-cry/",
+      "title": "Why Do Onions Make You Cry?",
+      "description": "Cutting an onion ruptures its cells and starts an enzyme-driven reaction that releases a volatile sulfur compound, causing the eyes to produce tears.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-02",
+      "updatedDate": "2026-08-02",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cutting an onion ruptures cells and lets enzymes react with sulfur-containing precursors. The reaction produces volatile syn-propanethial-S-oxide, which reaches the eye surface, stimulates sensory nerves, and triggers tear production.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No onion varieties or cutting methods were experimentally compared.",
+          "The practical countermeasures are based on exposure pathways rather than a controlled kitchen trial.",
+          "Individual eye sensitivity and room airflow vary."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-put-glass-in-the-freezer/",
+          "/articles/how-to-spot-fake-online-reviews/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-do-windows-condense-in-winter/",
       "title": "Why Do Windows Condense in Winter?",
       "description": "Winter window condensation forms when humid indoor air meets glass cold enough to fall below the air’s dew point. Here is how to reduce it and when it signals a larger moisture problem.",
@@ -8430,5 +8538,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:dc87a9ad62c14125d760994252cceda09cc5e354408e1dc58ad96a584c9290cb"
+  "registryDigest": "sha256:35bcd91513157f2282d393dd0d5a4e6100d99706398f0ccff353102b61df7c8d"
 }
