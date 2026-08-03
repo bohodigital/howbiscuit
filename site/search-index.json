@@ -170,6 +170,14 @@
       "searchText": "can you freeze milk you can freeze pasteurized milk in a freezer safe container with expansion space then thaw it in the refrigerator texture may separate so shake or blend it after thawing kitchen guide articles can you freeze milk"
     },
     {
+      "route": "/articles/can-you-freeze-yogurt/",
+      "title": "Can You Freeze Yogurt? What Happens to the Texture",
+      "description": "Yogurt can be frozen when it is fresh and properly refrigerated, but thawed yogurt may separate, become watery, or feel grainy. Freeze small portions and plan to use them in blended or cooked recipes.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you freeze yogurt what happens to the texture yogurt can be frozen when it is fresh and properly refrigerated but thawed yogurt may separate become watery or feel grainy freeze small portions and plan to use them in blended or cooked recipes kitchen guide articles can you freeze yogurt"
+    },
+    {
       "route": "/articles/can-you-mix-bleach-and-vinegar/",
       "title": "Can You Mix Bleach and Vinegar?",
       "description": "Never mix chlorine bleach and vinegar. The combination can release toxic chlorine gas. Leave the area for fresh air and contact emergency or poison help if exposure occurs.",
@@ -456,6 +464,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "home wi fi dead zone checklist record wi fi performance room by room test one change at a time and decide whether the problem is your device router placement or internet service home tech guide articles home wifi dead zone checklist"
+    },
+    {
+      "route": "/articles/household-emergency-communication-plan-checklist/",
+      "title": "Household Emergency Communication Plan Checklist",
+      "description": "Choose household and out-of-area contacts, identify meeting places, document school and workplace plans, account for medical and accessibility needs, distribute printed copies, and practice the plan.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "household emergency communication plan checklist choose household and out of area contacts identify meeting places document school and workplace plans account for medical and accessibility needs distribute printed copies and practice the plan tools guide articles household emergency communication plan checklist"
     },
     {
       "route": "/articles/how-does-baking-powder-work/",
@@ -810,6 +826,14 @@
       "searchText": "how to spot a fake online review no single clue proves a review is fake compare sources timing reviewer history incentives listing changes and recurring product specific details shop smarter guide articles how to spot fake online reviews"
     },
     {
+      "route": "/articles/how-to-tell-usb-c-port-supports-video/",
+      "title": "How to Tell Whether a USB-C Port Supports Video Output",
+      "description": "The connector shape does not guarantee display output. Look for DisplayPort Alternate Mode, Thunderbolt, or explicit external-monitor support in the exact device documentation, then test with a compatible cable or adapter.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to tell whether a usb c port supports video output the connector shape does not guarantee display output look for displayport alternate mode thunderbolt or explicit external monitor support in the exact device documentation then test with a compatible cable or adapter home tech guide articles how to tell usb c port supports video"
+    },
+    {
       "route": "/articles/how-to-verify-product-safety-certification/",
       "title": "How to Verify UL, ETL, CSA, and FCC Marks",
       "description": "A logo printed on a label is only a lead. Match the exact company, model, identifier, product category, standard, and certification status against the issuing organization’s official directory.",
@@ -874,6 +898,14 @@
       "searchText": "password manager migration checklist move without locking yourself out secure the destination vault first export as little plaintext as possible verify critical accounts transfer passkeys and authentication methods separately and delete temporary files tools guide articles password manager migration checklist"
     },
     {
+      "route": "/articles/phone-storage-full-after-deleting-photos/",
+      "title": "Why Is My Phone Storage Full Even After Deleting Photos?",
+      "description": "Deleted photos may remain in a recovery folder, while downloads, messages, app data, caches, and offline media continue occupying the device. First determine whether the warning concerns phone storage or cloud storage.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why is my phone storage full even after deleting photos deleted photos may remain in a recovery folder while downloads messages app data caches and offline media continue occupying the device first determine whether the warning concerns phone storage or cloud storage home tech guide articles phone storage full after deleting photos"
+    },
+    {
       "route": "/articles/portable-ac-cost-to-run/",
       "title": "How Much Does a Portable AC Cost to Run?",
       "description": "Calculate a portable air conditioner’s hourly and monthly electricity cost using its watts, runtime, and your local electricity rate.",
@@ -928,6 +960,22 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why is my refrigerator running all the time a refrigerator may run longer because of heat door openings a recent grocery load a low temperature setting blocked vents bad seals dirty coils or a mechanical fault kitchen guide articles refrigerator running constantly"
+    },
+    {
+      "route": "/articles/refurbished-phone-inspection-checklist/",
+      "title": "Refurbished Phone Transferability and Condition Checklist",
+      "description": "Verify the exact model, IMEI status, carrier compatibility, account locks, software support, repair history, battery condition, hardware functions, warranty, and return process for a refurbished phone.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "refurbished phone transferability and condition checklist verify the exact model imei status carrier compatibility account locks software support repair history battery condition hardware functions warranty and return process for a refurbished phone tools guide articles refurbished phone inspection checklist"
+    },
+    {
+      "route": "/articles/renter-repair-request-documentation-checklist/",
+      "title": "Renter Repair Request Documentation Checklist",
+      "description": "Report the problem through the lease’s required channel, describe the condition and urgency, attach dated evidence, preserve delivery records, document access and follow-up, and obtain local guidance before using legal remedies.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "renter repair request documentation checklist report the problem through the lease s required channel describe the condition and urgency attach dated evidence preserve delivery records document access and follow up and obtain local guidance before using legal remedies tools guide articles renter repair request documentation checklist"
     },
     {
       "route": "/articles/repair-or-replace-appliance/",
@@ -1000,6 +1048,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "used laptop inspection checklist hardware battery and account checks inspect a used laptop for recalls battery health display and keyboard faults ports storage charging account locks repair history and ownership before paying shop smarter guide articles used laptop inspection checklist"
+    },
+    {
+      "route": "/articles/used-vacuum-inspection-checklist/",
+      "title": "Used Vacuum Safety and Condition Checklist",
+      "description": "Verify the exact model and recall status, inspect the cord or battery, check filters and seals, test the brush roll and airflow path, and identify contamination before relying on a secondhand vacuum.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "used vacuum safety and condition checklist verify the exact model and recall status inspect the cord or battery check filters and seals test the brush roll and airflow path and identify contamination before relying on a secondhand vacuum tools guide articles used vacuum inspection checklist"
     },
     {
       "route": "/articles/water-heater-leaking-what-to-do/",
@@ -1144,6 +1200,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my ceiling fan wobble diagnose ceiling fan wobble by checking dust loose blade hardware warped blades mounting components downrods and balance home apartment guide articles why ceiling fan wobbles"
+    },
+    {
+      "route": "/articles/why-circuit-breaker-keeps-tripping/",
+      "title": "Why Does My Circuit Breaker Keep Tripping?",
+      "description": "A breaker can trip because a circuit is overloaded, an appliance or cord has failed, wiring is shorted, current is leaking to ground, or an arc-fault device detected abnormal arcing. Reset it once only when conditions are safe.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my circuit breaker keep tripping a breaker can trip because a circuit is overloaded an appliance or cord has failed wiring is shorted current is leaking to ground or an arc fault device detected abnormal arcing reset it once only when conditions are safe home apartment guide articles why circuit breaker keeps tripping"
     },
     {
       "route": "/articles/why-computer-storage-full/",
@@ -1338,6 +1402,14 @@
       "searchText": "why does my phone say moisture detected in the charging port safely clear a moisture detected charging alert without rice heat compressed air or tools that can damage a usb c or lightning connector home tech guide articles why phone says moisture detected charging port"
     },
     {
+      "route": "/articles/why-potatoes-turn-green-safe-to-eat/",
+      "title": "Why Do Potatoes Turn Green, and Can You Eat Them?",
+      "description": "Light exposure produces green chlorophyll and can accompany higher concentrations of potato glycoalkaloids. Discard potatoes that are broadly green, bitter, badly sprouted, damaged, soft, or shriveled.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why do potatoes turn green and can you eat them light exposure produces green chlorophyll and can accompany higher concentrations of potato glycoalkaloids discard potatoes that are broadly green bitter badly sprouted damaged soft or shriveled kitchen guide articles why potatoes turn green safe to eat"
+    },
+    {
       "route": "/articles/why-printer-offline-how-to-fix/",
       "title": "Why Is My Printer Offline?",
       "description": "Fix an offline printer on Windows or Mac by checking power, errors, Wi-Fi, the selected printer, print queues, paused printing, drivers, and saved connections.",
@@ -1368,6 +1440,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why is my shower water pressure low compare the shower with other fixtures and compare hot water with cold water before taking anything apart a clogged showerhead valve problem water heater issue leak or utility condition can produce similar symptoms home apartment guide articles why shower water pressure low"
+    },
+    {
+      "route": "/articles/why-tap-water-cloudy-milky/",
+      "title": "Why Is My Tap Water Cloudy or Milky?",
+      "description": "Tiny air bubbles commonly make cold tap water look white or cloudy. Fill a clear glass and watch it: bubble cloudiness usually clears from the bottom upward, while persistent cloudiness, sediment, color, or odor needs a different response.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my tap water cloudy or milky tiny air bubbles commonly make cold tap water look white or cloudy fill a clear glass and watch it bubble cloudiness usually clears from the bottom upward while persistent cloudiness sediment color or odor needs a different response home apartment guide articles why tap water cloudy milky"
     },
     {
       "route": "/articles/why-toilet-bubbling-gurgling/",
