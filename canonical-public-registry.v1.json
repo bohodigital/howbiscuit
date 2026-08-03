@@ -147,6 +147,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/air-conditioner-smells-musty/",
+      "title": "Why Does My Air Conditioner Smell Musty?",
+      "description": "A persistent musty odor usually points to retained moisture somewhere in the air conditioner, drain system, ductwork, or room. A filter may help, but it cannot repair a clogged drain or contaminated system.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A musty air-conditioner smell usually means moisture is lingering where dust or organic material can support microbial growth, commonly around the filter, coil, condensate pan, drain line, ductwork, or nearby room surfaces.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No air-conditioning system was inspected or sampled for this guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/air-drying-vs-clothes-dryer/",
       "title": "Air-Drying vs. Clothes Dryer: Cost, Time, and Fabric Tradeoffs",
@@ -7643,6 +7674,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-brown-sugar-hardens-how-to-soften/",
+      "title": "Why Does Brown Sugar Get Hard, and How Do You Soften It?",
+      "description": "Brown sugar hardens when it loses moisture. Restore that moisture slowly for lasting softness or warm only the amount you need when baking cannot wait.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Brown sugar hardens when moisture evaporates from it. Restore a small amount of moisture slowly for lasting softness, or use carefully monitored heat for a faster but temporary result.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The softening methods were researched but not compared hands-on in a controlled kitchen test."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-ceiling-fan-wobbles/",
       "title": "Why Does My Ceiling Fan Wobble?",
       "description": "Diagnose ceiling fan wobble by checking dust, loose blade hardware, warped blades, mounting components, downrods, and balance.",
@@ -9130,6 +9192,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-shower-water-pressure-low/",
+      "title": "Why Is My Shower Water Pressure Low?",
+      "description": "Compare the shower with other fixtures and compare hot water with cold water before taking anything apart. A clogged showerhead, valve problem, water-heater issue, leak, or utility condition can produce similar symptoms.",
+      "categoryId": "home",
+      "topicId": "utilities-energy",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "First determine whether the problem affects one shower, all fixtures, only hot water, or the entire property. One weak shower usually points to a local restriction, while a sudden whole-home change can involve the supply, a valve, a leak, or the utility.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No shower, valve, or building water supply was measured for this guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-toilet-bubbling-gurgling/",
       "title": "Why Is My Toilet Bubbling or Gurgling?",
       "description": "Diagnose a bubbling toilet by checking for a local clog, blocked vent, multiple slow drains, a restricted sewer line, or temporary municipal sewer work.",
@@ -9227,6 +9320,37 @@
           "/articles/what-humidity-should-house-be/",
           "/articles/why-bathroom-exhaust-fan-drips-water/"
         ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-usb-c-charger-charging-slowly/",
+      "title": "Why Is My USB-C Charger Charging So Slowly?",
+      "description": "USB-C describes the connector, not one guaranteed charging speed. The charger, port, cable, device, temperature, and charging protocol all affect how quickly a battery fills.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A USB-C device charges only as quickly as the slowest compatible part of the charging path allows, including the device, charger port, protocol, cable, and temporary thermal limits.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No specific charger, cable, or device combination was hands-on tested for this guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
       },
       "media": [],
       "leadMedia": null
@@ -9912,5 +10036,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:0f0ca334c0d89a51d3997ff5e0dd291c0a10935e9bab7a845af37f626b1f271b"
+  "registryDigest": "sha256:fa37507f0f2f0ddad5ce8e08e257ff198d9a0f19ccf5a7533ea76aeaadbaf98b"
 }

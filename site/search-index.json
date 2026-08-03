@@ -42,6 +42,14 @@
       "searchText": "2 4 ghz vs 5 ghz wi fi which should you use use 2 4 ghz when range and wall penetration matter use 5 ghz when a nearby device needs more capacity learn why the router may choose automatically home tech guide articles 2 4 ghz vs 5 ghz wifi"
     },
     {
+      "route": "/articles/air-conditioner-smells-musty/",
+      "title": "Why Does My Air Conditioner Smell Musty?",
+      "description": "A persistent musty odor usually points to retained moisture somewhere in the air conditioner, drain system, ductwork, or room. A filter may help, but it cannot repair a clogged drain or contaminated system.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my air conditioner smell musty a persistent musty odor usually points to retained moisture somewhere in the air conditioner drain system ductwork or room a filter may help but it cannot repair a clogged drain or contaminated system home apartment guide articles air conditioner smells musty"
+    },
+    {
       "route": "/articles/air-drying-vs-clothes-dryer/",
       "title": "Air-Drying vs. Clothes Dryer: Cost, Time, and Fabric Tradeoffs",
       "description": "Air drying reduces dryer energy and can reduce fabric wear, but requires time, space, ventilation, and humidity control. Compare cost, weather, pollen, and fabric needs.",
@@ -1050,6 +1058,14 @@
       "searchText": "why bread goes stale faster in the refrigerator refrigeration can slow mold but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale kitchen guide articles why bread goes stale in refrigerator"
     },
     {
+      "route": "/articles/why-brown-sugar-hardens-how-to-soften/",
+      "title": "Why Does Brown Sugar Get Hard, and How Do You Soften It?",
+      "description": "Brown sugar hardens when it loses moisture. Restore that moisture slowly for lasting softness or warm only the amount you need when baking cannot wait.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does brown sugar get hard and how do you soften it brown sugar hardens when it loses moisture restore that moisture slowly for lasting softness or warm only the amount you need when baking cannot wait kitchen guide articles why brown sugar hardens how to soften"
+    },
+    {
       "route": "/articles/why-ceiling-fan-wobbles/",
       "title": "Why Does My Ceiling Fan Wobble?",
       "description": "Diagnose ceiling fan wobble by checking dust, loose blade hardware, warped blades, mounting components, downrods, and balance.",
@@ -1274,6 +1290,14 @@
       "searchText": "why salt melts ice and when it stops working a plain english field guide to freezing point depression brine the limits of rock salt and the least wasteful way to de ice a walk home apartment guide articles why salt melts ice"
     },
     {
+      "route": "/articles/why-shower-water-pressure-low/",
+      "title": "Why Is My Shower Water Pressure Low?",
+      "description": "Compare the shower with other fixtures and compare hot water with cold water before taking anything apart. A clogged showerhead, valve problem, water-heater issue, leak, or utility condition can produce similar symptoms.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my shower water pressure low compare the shower with other fixtures and compare hot water with cold water before taking anything apart a clogged showerhead valve problem water heater issue leak or utility condition can produce similar symptoms home apartment guide articles why shower water pressure low"
+    },
+    {
       "route": "/articles/why-toilet-bubbling-gurgling/",
       "title": "Why Is My Toilet Bubbling or Gurgling?",
       "description": "Diagnose a bubbling toilet by checking for a local clog, blocked vent, multiple slow drains, a restricted sewer line, or temporary municipal sewer work.",
@@ -1296,6 +1320,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why is my toilet tank sweating stop toilet tank condensation by reducing bathroom humidity improving ventilation checking for leaks and considering a lined tank or anti sweat valve home apartment guide articles why toilet tank sweating condensation"
+    },
+    {
+      "route": "/articles/why-usb-c-charger-charging-slowly/",
+      "title": "Why Is My USB-C Charger Charging So Slowly?",
+      "description": "USB-C describes the connector, not one guaranteed charging speed. The charger, port, cable, device, temperature, and charging protocol all affect how quickly a battery fills.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why is my usb c charger charging so slowly usb c describes the connector not one guaranteed charging speed the charger port cable device temperature and charging protocol all affect how quickly a battery fills home tech guide articles why usb c charger charging slowly"
     },
     {
       "route": "/articles/why-washing-machine-not-draining/",
