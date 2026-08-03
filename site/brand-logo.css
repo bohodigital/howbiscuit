@@ -1,0 +1,43 @@
+.hb-custom-header {
+  border-bottom-color: #142432;
+  background: color-mix(in srgb, #142432, transparent 3%);
+}
+
+.hb-custom-header .hb-brand {
+  color: #fff8e7;
+}
+
+.hb-brand-mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  border-radius: 0.65rem;
+}
+
+.hb-custom-header .hb-brand i {
+  color: color-mix(in srgb, #fff8e7, transparent 28%);
+}
+
+.hb-custom-header .hb-category-menu summary,
+.hb-custom-header .hb-header-action,
+.hb-custom-header .hb-all-guides-link {
+  color: #fff8e7;
+}
+
+.hb-custom-header .hb-category-menu[open] summary,
+.hb-custom-header .hb-category-menu summary:hover,
+.hb-custom-header .hb-header-action:hover,
+.hb-custom-header .hb-all-guides-link:hover,
+.hb-custom-header .hb-all-guides-link[aria-current='page'] {
+  border-color: #fff8e7;
+  background: #f7c94b;
+  color: #142432;
+}
+
+@media (max-width: 30rem) {
+  .hb-brand-mark {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 0.55rem;
+  }
+}

@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
-  <rect width="96" height="96" rx="22" fill="#fff8e7"/>
-  <circle cx="48" cy="48" r="30" fill="#f4b400" stroke="#9a5b00" stroke-width="4"/>
-  <circle cx="36" cy="39" r="4" fill="#5f3b00"/>
-  <circle cx="58" cy="38" r="4" fill="#5f3b00"/>
-  <circle cx="45" cy="55" r="4" fill="#5f3b00"/>
-  <path d="M27 68h42" stroke="#2d6a4f" stroke-width="5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">How Biscuit</title>
+  <desc id="desc">How Biscuit HB question-mark logo.</desc>
+  <rect width="1024" height="1024" rx="224" fill="#ef6547"/>
+  <path fill="#fff8e7" d="M148 264h104v218h124v-218h104v496H376V586H252v174H148z"/>
+  <path fill="#fff8e7" fill-rule="evenodd" d="M376 264h214c111 0 180 58 180 146 0 59-31 103-85 128 65 22 103 72 103 141 0 104-76 157-198 157H376V264zm104 92v137h100c52 0 81-23 81-68 0-46-29-69-81-69H480zm0 225v163h109c59 0 90-27 90-81s-31-82-90-82H480z"/>
+  <path fill="#142432" d="M352 594l116-116 42 42-116 116z"/>
+  <path fill="#fff8e7" d="M787 379h61c94 0 155 52 155 135 0 62-32 103-91 128l-32 13v62h-96V595l79-31c30-12 43-27 43-51 0-28-20-43-59-43h-60z"/>
+  <rect x="784" y="750" width="96" height="96" rx="12" fill="#142432"/>
 </svg>

@@ -1,300 +1,1311 @@
 {
   "schemaVersion": "public-promotion-package.v1",
-  "releaseId": "mcp-pb-20260803t170625z-d1707fe58d16",
-  "approvalDigest": "sha256:68364af953a97b266ca99f7e7346e4f04f08e6f60d6133b8341db7a2fffe250f",
+  "releaseId": "brand-logo-20260803",
+  "approvalDigest": "sha256:8404f9d69304d47a2ccc9c02665dc26635d15625fc5b53c79754685b54bebe94",
   "files": [
     {
+      "path": "404.html",
+      "bytes": 24378,
+      "sha256": "sha256:9713c58958e7813aa3810f34442e5d66cf6b3f2798ba6a21facae2e586b6c7e4"
+    },
+    {
+      "path": "about/index.html",
+      "bytes": 27450,
+      "sha256": "sha256:bd1d4242b90c9ed85bf887d360cd3ae4002905ae1697358a54603388432cb1f4"
+    },
+    {
+      "path": "affiliate-disclosure/index.html",
+      "bytes": 27373,
+      "sha256": "sha256:ab50767803b07905fd233559a743634ee5a678ae4b59f8d94a2b00f93dc363ad"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "bytes": 18623,
+      "sha256": "sha256:5c0b90ff804f9fdf24a4ac23ff86ae6725c83468dcc4e510cf5428342b7f74d0"
+    },
+    {
+      "path": "articles/2-4-ghz-vs-5-ghz-wifi/index.html",
+      "bytes": 46181,
+      "sha256": "sha256:7995839b8c644d75affc03c4a7fa8ce30b744ababa1462ccd96377f0dd43e38c"
+    },
+    {
+      "path": "articles/air-drying-vs-clothes-dryer/index.html",
+      "bytes": 45616,
+      "sha256": "sha256:4b1c5203f894dca3165da2bca63ee652a3ac3116cd105fb8b9f4a74522d6430d"
+    },
+    {
+      "path": "articles/air-fryer-vs-oven-electricity-cost/index.html",
+      "bytes": 48625,
+      "sha256": "sha256:3f0e31a242b7c6c5f94345ff11144125c5c0153d569ec918205a84f2b0fcd753"
+    },
+    {
+      "path": "articles/air-purifier-vs-hvac-filter/index.html",
+      "bytes": 47178,
+      "sha256": "sha256:49635ccfede58708daa070ac9dd9ce69f7ed4d7c6f3cf65efee26a54a42f1199"
+    },
+    {
+      "path": "articles/apartment-move-in-inspection-checklist/index.html",
+      "bytes": 42420,
+      "sha256": "sha256:679ecccd54d79742a6978bf40c7b2c08158c0a4faea6580713de9b4eadc23681"
+    },
+    {
+      "path": "articles/appliance-buying-checklist/index.html",
+      "bytes": 50459,
+      "sha256": "sha256:8c72d15abd76a5584f2718183fd5f2224ff5131bd7c5eba002634c8d707485de"
+    },
+    {
+      "path": "articles/appliance-extended-warranty-worth-it/index.html",
+      "bytes": 47693,
+      "sha256": "sha256:04e4f1356207532837fb1eb9da1ea5f0fc0a972526bcb0bdeabf2e4d570581c8"
+    },
+    {
+      "path": "articles/best-place-to-put-wifi-router/index.html",
+      "bytes": 47611,
+      "sha256": "sha256:572059e345f79ef3a12cc07943b71834c4b9530a0afe292d4a8c39334a3188b9"
+    },
+    {
+      "path": "articles/can-100w-usb-c-charger-damage-phone/index.html",
+      "bytes": 40965,
+      "sha256": "sha256:e18e35f0817ca77058f37c0c24c8dc96e6214c45c702f4ae6a7b83a2cd41f5ef"
+    },
+    {
+      "path": "articles/can-microwave-interfere-with-wifi/index.html",
+      "bytes": 46848,
+      "sha256": "sha256:22b3ed72f587912ded825e27429527f2ecf158df64b87d93da3f3d25b62c7cf6"
+    },
+    {
+      "path": "articles/can-you-cut-mold-off-cheese/index.html",
+      "bytes": 42635,
+      "sha256": "sha256:ff94e7e6e73e77a470a2b1bdae605066d2052cb1f09b5af0d9b2b3ab20485cba"
+    },
+    {
+      "path": "articles/can-you-freeze-eggs/index.html",
+      "bytes": 38322,
+      "sha256": "sha256:755fa84098db2b8965d195724bf786befb4ad9cadc986c058537aa8ff8078820"
+    },
+    {
+      "path": "articles/can-you-freeze-milk/index.html",
+      "bytes": 40403,
+      "sha256": "sha256:c9c518d72a9faaf0cd98ca8139860cf90bdf30f9d8a1e33962ac174aa673288b"
+    },
+    {
+      "path": "articles/can-you-mix-bleach-and-vinegar/index.html",
+      "bytes": 40480,
+      "sha256": "sha256:0a08ffc49347e91b60305d5d4e86756947fbd5eed7571b5a525271401bb542ed"
+    },
+    {
+      "path": "articles/can-you-paint-over-mold/index.html",
+      "bytes": 40703,
+      "sha256": "sha256:252f0f6e7a03bfd5c2cbb619a4d554745c9818b5c17d2bfacaaa987cfdbd7594"
+    },
+    {
+      "path": "articles/can-you-plug-air-conditioner-into-extension-cord/index.html",
+      "bytes": 40500,
+      "sha256": "sha256:c3808b2295ae0a32dae48801813b71473efc3ec46e44bee8806ff5f3b6b88eeb"
+    },
+    {
+      "path": "articles/can-you-plug-space-heater-into-power-strip/index.html",
+      "bytes": 40957,
+      "sha256": "sha256:82430c17a37cac19a7ddff550d0486d310110f5142b50bdbd34b171241726890"
+    },
+    {
+      "path": "articles/can-you-put-dish-soap-in-dishwasher/index.html",
+      "bytes": 39308,
+      "sha256": "sha256:cb2a8198e75cc5d0fc20cd31994ce08d0543ea71de4db80390d99cdbebba6b82"
+    },
+    {
+      "path": "articles/can-you-put-glass-in-the-freezer/index.html",
+      "bytes": 42037,
+      "sha256": "sha256:aa2d53274942628e6a79f0b1790b47a0b57e4638155a830b909a26fdde183274"
+    },
+    {
+      "path": "articles/can-you-put-hot-food-in-refrigerator/index.html",
+      "bytes": 42253,
+      "sha256": "sha256:b2197915604b940929f5ea6c2bfb1252de65e0f86aed56c1eadc5cd65baa8ef7"
+    },
+    {
+      "path": "articles/can-you-refreeze-food-after-power-outage/index.html",
+      "bytes": 46390,
+      "sha256": "sha256:74ed57a5996ac8c56f5fca19dd6415efbed9009f268a9777f32bfb44070e207d"
+    },
+    {
+      "path": "articles/can-you-use-soap-on-cast-iron/index.html",
+      "bytes": 41029,
+      "sha256": "sha256:620ac4b8fa70955d14b06c6e1f456165f609154edcd7cdeb187d8ab8b232c6be"
+    },
+    {
+      "path": "articles/check-recalls-before-buying-used-product/index.html",
+      "bytes": 42401,
+      "sha256": "sha256:fd17e424df9b432c85fde748ed16ae5ee5e39e4047e2f2f61b55fb6541e4c78f"
+    },
+    {
+      "path": "articles/clothes-taking-too-long-to-dry/index.html",
+      "bytes": 47576,
+      "sha256": "sha256:6bab28338af7bd2f6152f65e5a8c80a4879c9fa0d8b3810fe5ae1d5194f8dbb6"
+    },
+    {
+      "path": "articles/cold-vs-warm-vs-hot-water-laundry/index.html",
+      "bytes": 44998,
+      "sha256": "sha256:4b0fba2d45339131145f7c55898931971a32ec29a7d9971077e74e05455746aa"
+    },
+    {
+      "path": "articles/compare-unit-prices-different-package-sizes/index.html",
+      "bytes": 43923,
+      "sha256": "sha256:e50aba22e1d15482f762ca5cb7c28f6ad18627894f894d968113aee263efb367"
+    },
+    {
+      "path": "articles/contractor-estimate-comparison-checklist/index.html",
+      "bytes": 44737,
+      "sha256": "sha256:72c59a7a584676e4f091369c993adeedd2730f9aec043c9a8f64410600562391"
+    },
+    {
+      "path": "articles/dehumidifier-running-not-collecting-water/index.html",
+      "bytes": 50828,
+      "sha256": "sha256:829da8414da76cd4aec5faa97dab3b4b9897fc2530fd956646bd226f7e8f54ec"
+    },
+    {
+      "path": "articles/dehumidifier-vs-air-conditioner/index.html",
+      "bytes": 49803,
+      "sha256": "sha256:8b55ffd1bb6b2035d61a4723b9601fa45b61850c31e9e5c6146e715969ed6458"
+    },
+    {
+      "path": "articles/do-ceiling-fans-cool-a-room/index.html",
+      "bytes": 44653,
+      "sha256": "sha256:7448c8e67c5b1a39b3b2d56a67841f1fbc359e0f69d6d62d90956fa14d457e72"
+    },
+    {
+      "path": "articles/do-you-have-to-preheat-oven/index.html",
+      "bytes": 40343,
+      "sha256": "sha256:3383e10ca4db7c184a01966db4717a755856595e8ec85807d5aa60d58155f11c"
+    },
+    {
+      "path": "articles/do-you-need-refrigerator-freezer-thermometer/index.html",
+      "bytes": 50195,
+      "sha256": "sha256:afc1031731ae39274dbf3c84a37185ad80aa0203ce4580f6c1ac31f4824bb71c"
+    },
+    {
+      "path": "articles/does-aluminum-foil-improve-wifi-signal/index.html",
+      "bytes": 43579,
+      "sha256": "sha256:0d0d53b61b7dcb7c2eecfdef59feab80ec4b46e51d7e9f3253f1a6a5e0298b34"
+    },
+    {
+      "path": "articles/does-dishwasher-use-less-water-than-hand-washing/index.html",
+      "bytes": 42390,
+      "sha256": "sha256:e03f6c41d48df448c84ce77ee36e8674893c523db29b84986b3c3e94bdf2d9db"
+    },
+    {
+      "path": "articles/does-turning-ac-off-save-money/index.html",
+      "bytes": 50109,
+      "sha256": "sha256:95ef2c38ce018e7a32e6440f63bce8ec7f15ab33683147dac9a671bc0c7b04db"
+    },
+    {
+      "path": "articles/does-unplugging-appliances-save-electricity/index.html",
+      "bytes": 39818,
+      "sha256": "sha256:e092f6dc12328766b9033498f8e0db142d1b27bb9e7c6dc22ad1dd3bce46a5f3"
+    },
+    {
+      "path": "articles/download-vs-upload-speed-latency/index.html",
+      "bytes": 45544,
+      "sha256": "sha256:3b176d2e447b66a4274df01b05a40002c476e521f00662a78f6b96777200f87e"
+    },
+    {
+      "path": "articles/energy-star-vs-energyguide/index.html",
+      "bytes": 44370,
+      "sha256": "sha256:64d3b3ac7067c261acadc169fcf52a914fee0d340ccff7abae65a4e35a418734"
+    },
+    {
+      "path": "articles/ethernet-vs-wifi/index.html",
+      "bytes": 47004,
+      "sha256": "sha256:6ab3c83da0db96b5da91600ebeb0f6b6aabc285ee3df5d530b52c9557bfb1203"
+    },
+    {
+      "path": "articles/fan-vs-air-conditioner-cost/index.html",
+      "bytes": 47937,
+      "sha256": "sha256:6f06ac8827ffca599452dd01f4f0d46e0b1404f5077c8c2dcf29089ff2d75259"
+    },
+    {
+      "path": "articles/find-stop-drafts-windows-doors/index.html",
+      "bytes": 42384,
+      "sha256": "sha256:0f20b9f33ce11864c54bcea583631e381d6aaa09a18e0792c60402d2e8fb90ca"
+    },
+    {
+      "path": "articles/fix-wifi-dead-zones-without-buying-anything/index.html",
+      "bytes": 46351,
+      "sha256": "sha256:5aae789180111ea9192059963365b7bdd87eed2e5e609f9ed98017c61684e955"
+    },
+    {
+      "path": "articles/front-load-washer-smells/index.html",
+      "bytes": 45219,
+      "sha256": "sha256:3a9f3e744f4ac49e1a1cd74b9cd0e5718bac445164ae402eca94ccec2681b1d7"
+    },
+    {
+      "path": "articles/heat-pump-vs-electric-water-heater/index.html",
+      "bytes": 47045,
+      "sha256": "sha256:4b533588e8a44ff5ce07cca33adf3c86d82863495aef758ec3a3ac3b3af7c6e1"
+    },
+    {
+      "path": "articles/home-energy-check-high-summer-bill/index.html",
+      "bytes": 63338,
+      "sha256": "sha256:ee87b0354331507149299eae8a9dd8c6c0e1667707f606c4758bebe5ef1c7913"
+    },
+    {
+      "path": "articles/home-humidity-dehumidifier-checklist/index.html",
+      "bytes": 59197,
+      "sha256": "sha256:ede18cc450bf531e9d4d08d878af546eb7d37e1119e03af8c104759932fabac3"
+    },
+    {
+      "path": "articles/home-inventory-checklist/index.html",
+      "bytes": 43869,
+      "sha256": "sha256:5c29f0d09ae2e86a6ef627ce5e917194e40127d0c45296a26e980d5e72fcb8c3"
+    },
+    {
+      "path": "articles/home-wifi-dead-zone-checklist/index.html",
+      "bytes": 52362,
+      "sha256": "sha256:c8539762d28b0a118436df453a5a8b22ccb959f751ff0159483c8006cdb3bb48"
+    },
+    {
+      "path": "articles/how-does-baking-powder-work/index.html",
+      "bytes": 37043,
+      "sha256": "sha256:5b8a669fafb8d1d3b043a5643612ed37869c1b44330771a54c9ca8e8bdcce462"
+    },
+    {
+      "path": "articles/how-long-bacon-lasts-fridge/index.html",
+      "bytes": 41878,
+      "sha256": "sha256:a5030fd3922852d6873ae95104234e25cdc6c7291d6d71d2aa643dc8dd9dd184"
+    },
+    {
+      "path": "articles/how-long-can-butter-sit-out/index.html",
+      "bytes": 41382,
+      "sha256": "sha256:ddd43b5e33508329787433e0473efd96376078ad8bedbc937c86f9cdcb242b7e"
+    },
+    {
+      "path": "articles/how-long-can-cooked-food-sit-out/index.html",
+      "bytes": 42818,
+      "sha256": "sha256:d64caf9a5b3dd4e013eb9676277cb42fc4bcae96c2afe0f6b7d421895c053843"
+    },
+    {
+      "path": "articles/how-long-cooked-pasta-lasts-fridge/index.html",
+      "bytes": 42088,
+      "sha256": "sha256:b9b7ab2195e8d9b23beefceb2ba6239f05178c823f72df453e3b36f7330c7ee4"
+    },
+    {
+      "path": "articles/how-long-cooked-rice-lasts-fridge/index.html",
+      "bytes": 42410,
+      "sha256": "sha256:3f19492c4722423f430a2602f46661dbfbd5a259a1b593671816f7d225ce2252"
+    },
+    {
+      "path": "articles/how-long-does-cooked-rice-last/index.html",
+      "bytes": 40189,
+      "sha256": "sha256:77125bae2315fd68183c91b92ed6574ca5acb4e7e6680cc82afacc7cbe25cef3"
+    },
+    {
+      "path": "articles/how-long-food-safe-refrigerator-without-power/index.html",
+      "bytes": 51768,
+      "sha256": "sha256:658b6e0925986b8a6d88002a918c743cd60625e17dc011a9d203585d65a29180"
+    },
+    {
+      "path": "articles/how-long-food-stay-frozen-power-outage/index.html",
+      "bytes": 51475,
+      "sha256": "sha256:517dc12f813a0117922702ea782d1645b768d8126f01aed0a277a2cd32f11db2"
+    },
+    {
+      "path": "articles/how-long-hard-boiled-eggs-last-fridge/index.html",
+      "bytes": 41698,
+      "sha256": "sha256:a3c1106a7465a1c1e782525d06c35f2bc425f1de1920b51b9219155c5b67dbf6"
+    },
+    {
+      "path": "articles/how-long-leftovers-last-fridge/index.html",
+      "bytes": 47727,
+      "sha256": "sha256:bb83d24da796d9c4c593b265ba9d5b68acff42ea5f2ab29b1620baa27bad6401"
+    },
+    {
+      "path": "articles/how-much-does-air-purifier-cost-to-run/index.html",
+      "bytes": 47606,
+      "sha256": "sha256:2520924456a60a75429cb04f7db6c36034a86b0bdd57288265e3b60027de279d"
+    },
+    {
+      "path": "articles/how-much-does-dehumidifier-cost-to-run/index.html",
+      "bytes": 52726,
+      "sha256": "sha256:aa3714c737e8646da74b9e043823e53100fdc2ecb9d0278a3868f8e01dab2c66"
+    },
+    {
+      "path": "articles/how-much-does-dishwasher-cost-per-load/index.html",
+      "bytes": 46503,
+      "sha256": "sha256:178e6c12fe2c9e5c40724621adbe2f962f68a5c3178fbf4f4dad3b7df6c858a9"
+    },
+    {
+      "path": "articles/how-much-does-electric-dryer-cost-per-load/index.html",
+      "bytes": 46226,
+      "sha256": "sha256:85ac7025fecbfc6b6b0a762fc59cdbf49d80ba7ebdeba150435665ba8717ab3c"
+    },
+    {
+      "path": "articles/how-much-does-electric-oven-cost-per-hour/index.html",
+      "bytes": 45850,
+      "sha256": "sha256:a15a3e7ad5d4dfdcfae1aa15d7d4647aed82e9065452535845386a9a74c50c75"
+    },
+    {
+      "path": "articles/how-much-does-refrigerator-cost-to-run/index.html",
+      "bytes": 48724,
+      "sha256": "sha256:2e67b45868160edef995b84d757fc5501e525a9b2b03a0e55ed3bfaeaa8afb02"
+    },
+    {
+      "path": "articles/how-much-does-washing-machine-cost-per-load/index.html",
+      "bytes": 47475,
+      "sha256": "sha256:fb7ac2eefc66136821fea8501cd2b2006f1f1c305438b9af3bec87991a4c4846"
+    },
+    {
+      "path": "articles/how-much-does-water-heater-cost-to-run/index.html",
+      "bytes": 49659,
+      "sha256": "sha256:fa2d5fe375813f244c92378db2b4dd0bb6c9212aee4f05ad754b4fb5042e272a"
+    },
+    {
+      "path": "articles/how-much-electricity-does-microwave-use/index.html",
+      "bytes": 46850,
+      "sha256": "sha256:ffac1ca1af80bb9f23dfb01595d4c8f748c6d0b5ac97ad4533744247f405f355"
+    },
+    {
+      "path": "articles/how-much-internet-speed-do-you-need/index.html",
+      "bytes": 50622,
+      "sha256": "sha256:027a19136b7ca3ba6ff66b4beb019a136903cce608eb4cc964d8931722ffb626"
+    },
+    {
+      "path": "articles/how-much-laundry-detergent-use/index.html",
+      "bytes": 44576,
+      "sha256": "sha256:62a73819e078c9eec64a7278d30ce19983a936dc652937c6824303da0f33d122"
+    },
+    {
+      "path": "articles/how-often-change-hvac-filter/index.html",
+      "bytes": 46602,
+      "sha256": "sha256:6895b0c153538abd6cf6fddda0a7c8967a2fab1233ff8dab8faa23cfee3eb9fe"
+    },
+    {
+      "path": "articles/how-often-clean-dryer-vent/index.html",
+      "bytes": 46484,
+      "sha256": "sha256:f097807faa91dcf0f174505a9ebeea6e9f67114e421592c25865a3e944ea8c59"
+    },
+    {
+      "path": "articles/how-often-should-you-replace-wifi-router/index.html",
+      "bytes": 47346,
+      "sha256": "sha256:690806bc25b25ef0890dfd75af5d271f0640306c19ea10e65121aa66d28ebdd5"
+    },
+    {
+      "path": "articles/how-often-test-carbon-monoxide-alarms/index.html",
+      "bytes": 43784,
+      "sha256": "sha256:1b1915ecae4ba94cd4ef0455ad1987179ec362c5cec5e161004c62c21903e403"
+    },
+    {
+      "path": "articles/how-often-test-replace-smoke-alarms/index.html",
+      "bytes": 40964,
+      "sha256": "sha256:fec313054f7a726e1a4959509b907f25b75fc9b4ecf1999902cb89ea77b1196f"
+    },
+    {
+      "path": "articles/how-to-back-up-phone-before-factory-reset/index.html",
+      "bytes": 44753,
+      "sha256": "sha256:bbe55d4b12defd954e70b13ac663b993a5598fd8bb439d5d3a2f58c23aa75afc"
+    },
+    {
+      "path": "articles/how-to-calculate-appliance-electricity-cost/index.html",
+      "bytes": 56595,
+      "sha256": "sha256:6e23fc51f84907083c9e9f2834bdc152fc6df0bb62b9dc9ff5b7df06c158e708"
+    },
+    {
+      "path": "articles/how-to-calculate-flooring-needed/index.html",
+      "bytes": 45174,
+      "sha256": "sha256:2e8b76856bb24919f46871ef1317c23d3a6ac275e1815dd33e74deb01a2fcd73"
+    },
+    {
+      "path": "articles/how-to-calculate-paint-needed/index.html",
+      "bytes": 44189,
+      "sha256": "sha256:4888b59023392dc6f231b21bbecb682e26ab020acfa2e44f65fda22a71ce4976"
+    },
+    {
+      "path": "articles/how-to-check-used-refrigerator-before-buying/index.html",
+      "bytes": 44734,
+      "sha256": "sha256:c1f7f0cb1a2a0e1720796b0895ca7b9eb1e921a43410cc4e0bbfda0e0a06c666"
+    },
+    {
+      "path": "articles/how-to-choose-led-light-bulb/index.html",
+      "bytes": 42979,
+      "sha256": "sha256:0455e42890fdfb8ef52f2f4d11509f7080dd13084e7009a1ed2723ab1d99a89f"
+    },
+    {
+      "path": "articles/how-to-choose-right-size-dehumidifier/index.html",
+      "bytes": 44291,
+      "sha256": "sha256:e0fa68ced761355de0d0c628accedcba2beafe6a0adc0044f7b026326e96f71c"
+    },
+    {
+      "path": "articles/how-to-choose-smoke-alarm/index.html",
+      "bytes": 44142,
+      "sha256": "sha256:73c0a93b7d8bc14a2b03ee45496328c336aec5d5742fa1eeabd5ed898b9f8fe7"
+    },
+    {
+      "path": "articles/how-to-choose-water-filter-contaminant-certification/index.html",
+      "bytes": 44345,
+      "sha256": "sha256:200aa253747324290fa42d589a7de82c404b7f7b37bacf600322be2c447fa50e"
+    },
+    {
+      "path": "articles/how-to-clean-and-sanitize-cutting-board/index.html",
+      "bytes": 43775,
+      "sha256": "sha256:3323fe1c7bda38a0e9d9876ebd338ccb22b884f1a9880990850298adbe8d4745"
+    },
+    {
+      "path": "articles/how-to-clean-dishwasher-filter/index.html",
+      "bytes": 42780,
+      "sha256": "sha256:0a0cff20f3343f7e65b5a8778cc6dfc1b78fa076140417ec28a73f8f733efa0d"
+    },
+    {
+      "path": "articles/how-to-clean-laptop-screen-safely/index.html",
+      "bytes": 43441,
+      "sha256": "sha256:5dddcf60ab5875cf2cc575e5e883f609da5e415d2f3597165d61eae2f2975ebc"
+    },
+    {
+      "path": "articles/how-to-clean-window-air-conditioner-filter/index.html",
+      "bytes": 43471,
+      "sha256": "sha256:0643a00a65ddaa5248e8cf5ee5769cbacd1be5b361ac1481bf746c1ce0179b0d"
+    },
+    {
+      "path": "articles/how-to-read-energyguide-label/index.html",
+      "bytes": 47009,
+      "sha256": "sha256:b91db5b8a47c39aa690fa8f71a1e8228883e1c3ab9aa4ebe6d9303aee338366c"
+    },
+    {
+      "path": "articles/how-to-recycle-lithium-ion-batteries-safely/index.html",
+      "bytes": 43503,
+      "sha256": "sha256:268d452aecf9d7e9b08679195a088c2fcb4b52be69eb08c81cabb957cba4b8f5"
+    },
+    {
+      "path": "articles/how-to-spot-fake-online-reviews/index.html",
+      "bytes": 43976,
+      "sha256": "sha256:66f66f5514807d3ed09aa8957c6bb44399e729487b4975090d7dfd55ebd685a4"
+    },
+    {
       "path": "articles/index.html",
-      "bytes": 134124,
-      "sha256": "sha256:8d3bfc04be439425778330c1fbc38f8ae854b21c714a1086402fb9e211d7236d"
+      "bytes": 134393,
+      "sha256": "sha256:5a4f2a3bd690446cca11923a1d7bdb12293bba2c27f47e929f6232f6cdc85da5"
+    },
+    {
+      "path": "articles/is-freezer-burn-safe-to-eat/index.html",
+      "bytes": 38631,
+      "sha256": "sha256:d19d44d704db079552cdf316b11ebf9f4bf5333516c41d06dabada718575bec4"
+    },
+    {
+      "path": "articles/leave-laptop-plugged-in-all-the-time/index.html",
+      "bytes": 42707,
+      "sha256": "sha256:d2208560aaded99a47ac5f064f7880e05da2def0c62868e62e817b3ce189c4dc"
+    },
+    {
+      "path": "articles/mesh-wifi-vs-range-extender/index.html",
+      "bytes": 50237,
+      "sha256": "sha256:bfe355900308cb273c631737ce26dbce191c09f5a28b24b6cc3c0a6e076390b5"
+    },
+    {
+      "path": "articles/new-vs-used-refurbished-open-box-appliances/index.html",
+      "bytes": 46727,
+      "sha256": "sha256:b03bd1b5ab5d0bc8ff2a5be803ea922ba3f918b7e0b65b27718f408f36b11b73"
+    },
+    {
+      "path": "articles/organize-refrigerator-food-safety/index.html",
+      "bytes": 48059,
+      "sha256": "sha256:47ca9e329e175a07496d90e27665f1b582b5d91f0a1fbfc003417640fcdb4e99"
+    },
+    {
+      "path": "articles/portable-ac-cost-to-run/index.html",
+      "bytes": 50249,
+      "sha256": "sha256:2e1a563117105d97c8c9e3eff0ee0b050f1215886e04c2b274871039eb3c48af"
+    },
+    {
+      "path": "articles/power-outage-food-safety-chart/index.html",
+      "bytes": 44334,
+      "sha256": "sha256:80f71dc3c6a8ff929ad6f29d81ff9fcbf8aaa3735328954e1ccffeecbf322df6"
+    },
+    {
+      "path": "articles/power-outage-home-checklist/index.html",
+      "bytes": 44251,
+      "sha256": "sha256:f0e381c88ce441e9abad3de69bec7bb7f7bcb13cb74e2d08ee1e5f02e212bc57"
+    },
+    {
+      "path": "articles/power-strip-vs-surge-protector/index.html",
+      "bytes": 42679,
+      "sha256": "sha256:ca11555e2405db81da349cf53240ffc897dcc1356689ea86fec87528c8e033d0"
+    },
+    {
+      "path": "articles/refrigerator-not-cooling-freezer-works/index.html",
+      "bytes": 46127,
+      "sha256": "sha256:851526d3d767b6ad6aa67a844a0c24ea3af4888b751edb7bc3a113b5eab89e2b"
+    },
+    {
+      "path": "articles/refrigerator-running-constantly/index.html",
+      "bytes": 48600,
+      "sha256": "sha256:11d648567bfb72b2867b7558815d352be7f531dc912eea650b06c5546550617b"
+    },
+    {
+      "path": "articles/repair-or-replace-appliance/index.html",
+      "bytes": 47668,
+      "sha256": "sha256:0be8ac1688ab743e8bd0b1dea77f19c8edccc9493500636eec50274cc7079bff"
+    },
+    {
+      "path": "articles/return-policy-vs-warranty-vs-service-contract/index.html",
+      "bytes": 41648,
+      "sha256": "sha256:d730101cd07ee570662513aeef689efcc714712f04dedbdec03d2a74274b3b66"
+    },
+    {
+      "path": "articles/router-restart-vs-reset/index.html",
+      "bytes": 39178,
+      "sha256": "sha256:507ebb68d659024c24597a74517b661d4bd485644ee5f21e909644453a1596ce"
+    },
+    {
+      "path": "articles/should-you-rinse-dishes-before-dishwasher/index.html",
+      "bytes": 40829,
+      "sha256": "sha256:d4cffbe0412b1a1f36afbc299a8c189d48bbcdca53fc6c95f10fe12a9fe40c80"
+    },
+    {
+      "path": "articles/should-you-unplug-electronics-during-thunderstorm/index.html",
+      "bytes": 48157,
+      "sha256": "sha256:a142d19615f236843d6fa4fbc166470e2938f34b387c6df7cb7a22ac386ba72d"
+    },
+    {
+      "path": "articles/should-you-wash-raw-chicken/index.html",
+      "bytes": 40632,
+      "sha256": "sha256:10d17a650918b8e64e0ae9b056132d7f806016a3878eed981d660aedfc97167b"
+    },
+    {
+      "path": "articles/spot-fake-online-store-before-buying/index.html",
+      "bytes": 43593,
+      "sha256": "sha256:fb494b2893a6dd735a508f95fc1ca5ed36191c38b334496fb85b13c410544122"
+    },
+    {
+      "path": "articles/tank-vs-tankless-water-heater/index.html",
+      "bytes": 48006,
+      "sha256": "sha256:68f85d0f14352c126d9fc1425ae6e71b94f1e15b577f13d947d8d64854112265"
     },
     {
       "path": "articles/used-laptop-inspection-checklist/index.html",
-      "bytes": 46062,
-      "sha256": "sha256:332e502fbeaca04e73a2d25acfff9bee38fc62f4d065b52af22d17d6a3128b3d"
+      "bytes": 46331,
+      "sha256": "sha256:a416943aa49201959c9d46618f78bcaafb70d0d04f39a13eec64a0c1cc55949d"
     },
     {
-      "path": "feed.xml",
-      "bytes": 24234,
-      "sha256": "sha256:df3c6f5d479ea1bd9a7bebeb3638a222ba74f26e2e4455fb43878b11df6c1152"
+      "path": "articles/water-heater-leaking-what-to-do/index.html",
+      "bytes": 46567,
+      "sha256": "sha256:034c6af0037d56844bb6353bda38e8c65c359ace7feec1d869a20610a3da531f"
+    },
+    {
+      "path": "articles/water-heater-temperature-setting/index.html",
+      "bytes": 47946,
+      "sha256": "sha256:cd19d2529f04962aafbc5675119f2f48846d51433f3c18f5c565d15c3baf9e81"
+    },
+    {
+      "path": "articles/what-can-air-purifier-remove/index.html",
+      "bytes": 47571,
+      "sha256": "sha256:b187762c1d9566266015eda594842708e1a6debbd3e873f92a2d84acffc5d790"
+    },
+    {
+      "path": "articles/what-does-gfci-outlet-do/index.html",
+      "bytes": 43202,
+      "sha256": "sha256:ab739a8f986abd8acd5f339c339ba7e002b467d6040f732e63e6eaf1e536560e"
+    },
+    {
+      "path": "articles/what-food-throw-away-after-power-outage/index.html",
+      "bytes": 49698,
+      "sha256": "sha256:29359f8996891e5bec77e16a30f133d8bd4766bce5c24d4bb3864e79500e9692"
+    },
+    {
+      "path": "articles/what-humidity-should-house-be/index.html",
+      "bytes": 49395,
+      "sha256": "sha256:e9e3a58177cdbe770d3c0c37158a219698424a5dd69ffc402a316c3724671ed1"
+    },
+    {
+      "path": "articles/what-merv-rating-should-i-use/index.html",
+      "bytes": 49081,
+      "sha256": "sha256:46b5d7060e6caec3859e49b1a18fe275006ccde19070d1d6c6631be25131e2f0"
+    },
+    {
+      "path": "articles/what-size-air-purifier-do-i-need/index.html",
+      "bytes": 47762,
+      "sha256": "sha256:f62a4533eb3f22f9b73aecaf510f77c67ec25c73dd460afb9be4c53a75aa2e0a"
+    },
+    {
+      "path": "articles/what-size-dehumidifier-do-i-need/index.html",
+      "bytes": 54081,
+      "sha256": "sha256:1cb0276d1ac70cc887452fa0101a1a858a48e8b3bb7ada134a32c5aadc5be97d"
+    },
+    {
+      "path": "articles/what-temperature-should-freezer-be/index.html",
+      "bytes": 39391,
+      "sha256": "sha256:326037b5072502b89c273c7ed93ea02165e53e73cd39bcd9b0f1cb9225d329d1"
+    },
+    {
+      "path": "articles/what-temperature-should-refrigerator-be/index.html",
+      "bytes": 41258,
+      "sha256": "sha256:99645c05a940396ae5f5ce2fce05dc0084099f9c5d3713197aef57335ef3fcb2"
+    },
+    {
+      "path": "articles/where-to-place-wifi-extender/index.html",
+      "bytes": 46545,
+      "sha256": "sha256:fccd1ae17780ff7335a6603534e9a19c1952cf1938bbf8116739d0760089d99e"
+    },
+    {
+      "path": "articles/why-are-some-answers-better-than-others/index.html",
+      "bytes": 35656,
+      "sha256": "sha256:385140818ed8a06f14cbe85e5fd9363eedc3026c76602910e40055f3d30706c5"
+    },
+    {
+      "path": "articles/why-bathroom-exhaust-fan-drips-water/index.html",
+      "bytes": 42115,
+      "sha256": "sha256:a7c62798c63a0d42bc6e13ef77182fdfc77be0468360f9466413f1e0df359c08"
+    },
+    {
+      "path": "articles/why-bluetooth-keeps-disconnecting/index.html",
+      "bytes": 42464,
+      "sha256": "sha256:ab1faed3a6f920376f36eb7580146021ff56038cba134540ec55573439618583"
+    },
+    {
+      "path": "articles/why-bread-goes-stale-in-refrigerator/index.html",
+      "bytes": 40682,
+      "sha256": "sha256:12278cc7ba1d400bd8dab95455acd30b45fa38d23949bcdc7b8136c37b784a30"
+    },
+    {
+      "path": "articles/why-ceiling-fan-wobbles/index.html",
+      "bytes": 42029,
+      "sha256": "sha256:b2d71adad68f2b2842bb66b7624c5d7464543e9b8888fe428eb0808c538f167e"
+    },
+    {
+      "path": "articles/why-computer-storage-full/index.html",
+      "bytes": 44788,
+      "sha256": "sha256:5454bcf4e80ba2b20e97acbf82c20847c14c8613db4857aaa268acea4c0b80fc"
+    },
+    {
+      "path": "articles/why-dishwasher-leaves-white-film/index.html",
+      "bytes": 41135,
+      "sha256": "sha256:c8be3a441f340bcab62dfb9ca5f35c84548cfa7830a4f5ada46f78a961e2e7d1"
+    },
+    {
+      "path": "articles/why-do-led-light-bulbs-flicker/index.html",
+      "bytes": 42224,
+      "sha256": "sha256:36b80c8a13f805053bd16a8bd090c41a3f3c6ca99e793cf39e9254b8aee67fba"
+    },
+    {
+      "path": "articles/why-do-onions-make-you-cry/index.html",
+      "bytes": 42895,
+      "sha256": "sha256:e2a5e045c9e7099268315068278f542dae55be5485229721d365e328539dd3bf"
+    },
+    {
+      "path": "articles/why-do-windows-condense-in-winter/index.html",
+      "bytes": 43645,
+      "sha256": "sha256:d17a381c52b11ef5b2eccb6cda016ccbf7b7681b7be9b545ff81cf923b362d75"
+    },
+    {
+      "path": "articles/why-does-dishwasher-smell-bad/index.html",
+      "bytes": 44734,
+      "sha256": "sha256:e77447b29d922dc9b8637c33ca8c86cf989c68bc3f8ee8ce1f4424f72f9397c8"
+    },
+    {
+      "path": "articles/why-does-gfci-outlet-keep-tripping/index.html",
+      "bytes": 40214,
+      "sha256": "sha256:a535bb6e6c4a2173a94aba57f047d6a734ca8a44649f1427aeb73c79bffd92d9"
+    },
+    {
+      "path": "articles/why-does-my-wifi-keep-disconnecting/index.html",
+      "bytes": 52143,
+      "sha256": "sha256:631da016015ca9792aad72a181408f5c46f8af247c93728ffb0f063d876e869f"
+    },
+    {
+      "path": "articles/why-electric-bill-high-summer/index.html",
+      "bytes": 56255,
+      "sha256": "sha256:d1f54636383f2b5729d4b4c63130c6ee80074bcec9dfc64a62df8a084d2470c6"
+    },
+    {
+      "path": "articles/why-faucet-keeps-dripping/index.html",
+      "bytes": 42260,
+      "sha256": "sha256:6d61a91ad3bfa19f1700460b45f3d7335a51699733bc53ececa4b11c53b5717b"
+    },
+    {
+      "path": "articles/why-freezer-frosting-up/index.html",
+      "bytes": 45811,
+      "sha256": "sha256:9da696222e9cc2082fb8f884180d02572d8deba61a2ecf68aa7bb76cc82cfe79"
+    },
+    {
+      "path": "articles/why-garage-door-closes-then-opens/index.html",
+      "bytes": 44443,
+      "sha256": "sha256:66f37292e40bee4f9ec9e0d21073ca2c518615c08b9104af5905c751680997fa"
+    },
+    {
+      "path": "articles/why-garlic-turns-blue-green/index.html",
+      "bytes": 41733,
+      "sha256": "sha256:49f0698f2a9e8b7755ef8d6b905d4f96be7a442a7b50863a9049d2242e4de432"
+    },
+    {
+      "path": "articles/why-hot-water-runs-out-fast/index.html",
+      "bytes": 46541,
+      "sha256": "sha256:f2093b6bae73fa322d499dac3eb7fadfb15cc79f84901a9c60a5b270af37e6b5"
+    },
+    {
+      "path": "articles/why-is-my-dishwasher-not-drying-dishes/index.html",
+      "bytes": 39487,
+      "sha256": "sha256:22109c2d48af24997ac15a919741e409771be20d7336233e45584a10671bfc8f"
+    },
+    {
+      "path": "articles/why-is-my-laptop-fan-so-loud/index.html",
+      "bytes": 43505,
+      "sha256": "sha256:7ebd5e4126b55b2edb30d1a6d62b756f2d96d828f832ac1c048bab03f9e05552"
+    },
+    {
+      "path": "articles/why-is-my-refrigerator-sweating/index.html",
+      "bytes": 40631,
+      "sha256": "sha256:08e58ae7b57b6505a642c7a3fdb4d9046d0fafc44098419e31c22793ca545c37"
+    },
+    {
+      "path": "articles/why-is-my-smoke-alarm-chirping/index.html",
+      "bytes": 40765,
+      "sha256": "sha256:f52b741344a02f7d0a832562196460fd0eab576bceb54cda8a5f49606a11d8e3"
+    },
+    {
+      "path": "articles/why-is-my-wifi-so-slow/index.html",
+      "bytes": 55068,
+      "sha256": "sha256:f1c554e54e32cf9b70fadc73004ee4d2d88f945eef8c99d4baeb225657ca0d4a"
+    },
+    {
+      "path": "articles/why-is-washing-machine-shaking/index.html",
+      "bytes": 40518,
+      "sha256": "sha256:9de929ff30e8fc7d23a83c4bf6a59d1516bd93c9540d0720761d9cef10fb84da"
+    },
+    {
+      "path": "articles/why-microwave-is-sparking/index.html",
+      "bytes": 42089,
+      "sha256": "sha256:63e0f2ff28afc3f0295d64ff2eb787b207f86546862a5c07a6ae6b615557d403"
+    },
+    {
+      "path": "articles/why-phone-battery-drains-overnight/index.html",
+      "bytes": 43052,
+      "sha256": "sha256:f7dd7bf21e5e4e0d838de483519a55d9fa4c6d6310abbaa6c7e0d24e229c147f"
+    },
+    {
+      "path": "articles/why-phone-gets-hot-while-charging/index.html",
+      "bytes": 41788,
+      "sha256": "sha256:12ad3b29009952e5f63cded0a2a7675138b24063c1f42f70ae0829bd2a2a6334"
+    },
+    {
+      "path": "articles/why-phone-says-moisture-detected-charging-port/index.html",
+      "bytes": 43164,
+      "sha256": "sha256:7f17df7e4c7d95fe269451431e160817bf297a4b092c85619d20cf0b1b5e566a"
+    },
+    {
+      "path": "articles/why-printer-offline-how-to-fix/index.html",
+      "bytes": 42816,
+      "sha256": "sha256:41a28dedac1117716041dd5bba009764f82fc76ee51af40694028e404077c56d"
+    },
+    {
+      "path": "articles/why-refrigerator-leaking-water/index.html",
+      "bytes": 45590,
+      "sha256": "sha256:0efddbc5434d5736d401ad84b408194929530a660920fd03b3b8d1dab922bea0"
+    },
+    {
+      "path": "articles/why-salt-melts-ice/index.html",
+      "bytes": 52523,
+      "sha256": "sha256:c8c0b3f2cd5f9d579c12a5046292b6545f9ffb39b371443193e01b5a65652cca"
+    },
+    {
+      "path": "articles/why-toilet-bubbling-gurgling/index.html",
+      "bytes": 41844,
+      "sha256": "sha256:1019374589e8ace819b58831ec47d19ff4db17e5b8be2ea1ccbc9e688c6f798f"
+    },
+    {
+      "path": "articles/why-toilet-keeps-running/index.html",
+      "bytes": 40212,
+      "sha256": "sha256:d8fb41d851b1baa4ddb865bc8187a7b1846fc0299a4d7584c6c8d1a5ff03dc0a"
+    },
+    {
+      "path": "articles/why-toilet-tank-sweating-condensation/index.html",
+      "bytes": 43183,
+      "sha256": "sha256:097ce3704454e99d48728d254436400d0b7e4df79029e57a9626234afbb0f4b1"
+    },
+    {
+      "path": "articles/why-washing-machine-not-draining/index.html",
+      "bytes": 43232,
+      "sha256": "sha256:177ec7b73c20a90b3b05a3b21ed9abd3fb27748517f13db68f8ada8f384bcf06"
+    },
+    {
+      "path": "articles/why-water-heater-popping-rumbling/index.html",
+      "bytes": 42815,
+      "sha256": "sha256:ffb0aca8c1be70ae6a090655436055ea758f89ab1a3bea2fb9282d70e9a9063c"
+    },
+    {
+      "path": "articles/why-window-air-conditioner-leaking-water-inside/index.html",
+      "bytes": 41616,
+      "sha256": "sha256:551f9befdad0f29df89b66fdbda2cfbc5852643af0ed7b18a1f67ff3044d2b5e"
+    },
+    {
+      "path": "articles/window-ac-cost-per-hour/index.html",
+      "bytes": 51615,
+      "sha256": "sha256:25432ad3c045ad4b6af142f7adb1aed4be47d6acdbebafb6ed209e41030e1d58"
+    },
+    {
+      "path": "brand-logo.css",
+      "bytes": 941,
+      "sha256": "sha256:c70624e2a2704105cdf3e022a79e8ce1a6a7a58feb74d8eda5e2d8d7815118fe"
+    },
+    {
+      "path": "contact/index.html",
+      "bytes": 27425,
+      "sha256": "sha256:ddc91551a9eb9f7f349090d2b9eff385b77cc0d6d27626eeb1a1cdc8820804d2"
+    },
+    {
+      "path": "corrections/index.html",
+      "bytes": 27378,
+      "sha256": "sha256:530feb5ede160174b25e35a5ca184566b57e22c29c3a2d0f4c505466ab890076"
+    },
+    {
+      "path": "editorial-policy/index.html",
+      "bytes": 27963,
+      "sha256": "sha256:b9a99c494777d7b043e54fabf76213bf73e7d908211047ef8eda6c3a83b440f8"
+    },
+    {
+      "path": "electricity-prices-by-state/index.html",
+      "bytes": 42521,
+      "sha256": "sha256:9f094a80a9a5836f5c81ce6463b1ac4d2907734c14d367ecb8155006789009d0"
+    },
+    {
+      "path": "favicon.ico",
+      "bytes": 32038,
+      "sha256": "sha256:12a25947e803ee1c0e7b665bf29628e2f1a02b3f3b85e49fc87bfe6cc0af2459"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 890,
+      "sha256": "sha256:3a40e795354ed41bb0867faa8edcbd185234cd148d9beb0463932cb9c485d28c"
     },
     {
       "path": "home/cleaning/index.html",
-      "bytes": 35100,
-      "sha256": "sha256:bbcf4c44a9c6e8ded855deaea163947324763708ce44cf6a18c2b91d9fbbe5e0"
+      "bytes": 35369,
+      "sha256": "sha256:de2adcd108b993bedc9d92db17c6abbd7eecc64e1d53ec318bc150ab457bece6"
     },
     {
       "path": "home/heating-cooling/index.html",
-      "bytes": 40931,
-      "sha256": "sha256:a50fef92698f033dff4ad67395eafec54b5fdd05f517b420e34ebc53cf508fd8"
+      "bytes": 41200,
+      "sha256": "sha256:f6f2b143b3318f385ce613b94cca5b42677485a3a34938c1ab76c280cb560162"
+    },
+    {
+      "path": "home/index.html",
+      "bytes": 98169,
+      "sha256": "sha256:e27091c70a1ee7bb6b9a8ad8198affeb52178c9643c9cc1afb2961e7cd20cc5f"
     },
     {
       "path": "home/repairs-maintenance/index.html",
-      "bytes": 38819,
-      "sha256": "sha256:653db1afc8e16fb9a75cac8589ac450743da77fba2c0c73760748bca5ec4b33a"
+      "bytes": 39088,
+      "sha256": "sha256:369a8518f6bd9c62f53fb4de32a4e05a7a9ccfa59e729e571dc716bdd5429df7"
     },
     {
       "path": "home/utilities-energy/index.html",
-      "bytes": 38724,
-      "sha256": "sha256:910c394d13d2f77773dfdff2a15f31ad3f86523dc9c7a25352a7aea50059c31e"
+      "bytes": 38993,
+      "sha256": "sha256:2f9a0ec647a318eff439c02fc4f5e9f84d8683cfde55c8b94362b86421912f92"
     },
     {
       "path": "home-tech/computers-laptops/index.html",
-      "bytes": 33818,
-      "sha256": "sha256:802fa771c3b8ec0c51ead9dffa0df947450944bcd943586e8dfcb5cd76af4445"
+      "bytes": 34087,
+      "sha256": "sha256:0a25152b7bb9b803d178d4c3a4eb3f97eeca40a78e1122c14f05a0a072f14d50"
+    },
+    {
+      "path": "home-tech/index.html",
+      "bytes": 84801,
+      "sha256": "sha256:068ac9409fdb832c1427ab75b4253f049738f872092ef9f5af2d480772f18e8b"
     },
     {
       "path": "home-tech/power-cooling-storage/index.html",
-      "bytes": 42732,
-      "sha256": "sha256:d2fac2fbe67d0b4e865c04c696a010043484921b7844032f446d58f9dabb54c8"
+      "bytes": 43001,
+      "sha256": "sha256:9ee6cb683625c835228b55bdf9bec6837ed4e355f4b3d3335fa1aab1ba21245e"
     },
     {
       "path": "home-tech/wifi-routers/index.html",
-      "bytes": 40183,
-      "sha256": "sha256:046779acddb0fbca379049a6219f9d753ac95c409c7b302901817b82ecbdd3ad"
+      "bytes": 40452,
+      "sha256": "sha256:076b4e4cfce3fd898a7a28054fae8af8f810492b255b6ee93c8af67ad7449fc6"
     },
     {
       "path": "index.html",
-      "bytes": 52574,
-      "sha256": "sha256:dcf48d313caede842ff3cf9b0dd1bd21bbbcbb85e4e832796fb75a120192d88f"
+      "bytes": 53150,
+      "sha256": "sha256:4759d8249d998cd24650f65791292ed3f2936c3a1b5a93b12ea600c47d3a73ab"
     },
     {
       "path": "kitchen/food-science/index.html",
-      "bytes": 37790,
-      "sha256": "sha256:5d04cae2ce3e2d52f67cd300be76783c0668a9e681ade62139401bfa96179732"
+      "bytes": 38059,
+      "sha256": "sha256:65415a0ff210b1698ceb45790d5eadcbb6e1096e3eed6edc126bd4053058164e"
+    },
+    {
+      "path": "kitchen/index.html",
+      "bytes": 96267,
+      "sha256": "sha256:df73344306a8b3f0c22840190882ddb2b6f15622dec9828c657058256058f08f"
     },
     {
       "path": "kitchen/kitchen-appliances/index.html",
-      "bytes": 37072,
-      "sha256": "sha256:e8ca024734e50ff662f285f8631df1b90ea2404f2625d5edd948a44050fd9999"
+      "bytes": 37341,
+      "sha256": "sha256:c8cf0644c7238153ca04adb4695af94f3db3712d8a144c1902163c7ed1e2ad3c"
     },
     {
       "path": "kitchen/troubleshooting-safety/index.html",
-      "bytes": 47555,
-      "sha256": "sha256:e696b6f35741945eb46efeeb1bad9777880bfd7e060f87776327453fccf61039"
+      "bytes": 47824,
+      "sha256": "sha256:ba7ab1c93467cd7da8f8da45cf16268f1a7ae4c4e0f25523324ca4317d1d85ef"
     },
     {
-      "path": "llms.txt",
-      "bytes": 51305,
-      "sha256": "sha256:b9261937be8d9de09be51b15ddd2cc8e48dbf6119c48d4d4e9ffba7d1146f201"
+      "path": "logo-512.png",
+      "bytes": 49197,
+      "sha256": "sha256:702fe8ea9ed0a4bb485544a23430d2eb802941136c42a4d316bd76fce233d656"
     },
     {
-      "path": "pagefind/filter/en_d802a79.pf_filter",
-      "bytes": 396,
-      "sha256": "sha256:f9ad82728ba2e0cf741a566be2c4d66ad9c7a7aede10be762fbc5eb71fa52314"
+      "path": "logo.svg",
+      "bytes": 951,
+      "sha256": "sha256:ab75eb1723048f85dfa5642ea43858c6937a004f8c4cd24275318030d9d3084f"
     },
     {
-      "path": "pagefind/filter/en_ed6cb3c.pf_filter",
-      "bytes": 369,
-      "sha256": "sha256:b3948771500a2e9daee696a0aa187165435bf572b39756f8b86a5e8c2d6cbbff"
+      "path": "metro/atlanta/index.html",
+      "bytes": 26229,
+      "sha256": "sha256:d64591a86a439f9a7f5717f11fbfa628d391648071749ee90ee42650291704af"
     },
     {
-      "path": "pagefind/fragment/en_332d8fb.pf_fragment",
-      "bytes": 852,
-      "sha256": "sha256:9c3dddcdfc72e6de88e2b9c26e814b07e3195557ba6fda8a2f57dde2d102acff"
+      "path": "metro/boston/index.html",
+      "bytes": 26205,
+      "sha256": "sha256:81d126c793496f950d0301239236ce2f00a401319fbe9f91ccc8683e58b1c28f"
     },
     {
-      "path": "pagefind/fragment/en_5364963.pf_fragment",
-      "bytes": 2674,
-      "sha256": "sha256:597608074b7850497ff4cf2d4daa97bd2bbf9a7df92021f2ea5e4df6a6c95508"
+      "path": "metro/chicago/index.html",
+      "bytes": 26474,
+      "sha256": "sha256:7bdaa7d8cddf43d32fba527dcf2d54c780dbeab86e62e391392a1040aa57ef3a"
     },
     {
-      "path": "pagefind/fragment/en_8ef52ea.pf_fragment",
-      "bytes": 4458,
-      "sha256": "sha256:3ce843a6c51e20ae99214e1c6afe81ce476909da64bdb84187c569ad932407bc"
+      "path": "metro/dallas-fort-worth/index.html",
+      "bytes": 26373,
+      "sha256": "sha256:a171ed269c604b803c5e333b01193d631a7cf60c02ce5dae26a45fab62bb3011"
     },
     {
-      "path": "pagefind/fragment/en_dfd8c49.pf_fragment",
-      "bytes": 4062,
-      "sha256": "sha256:870e7611fc4a1d810d9796cf11b5c229e7e6e0861382e92aeb7ef2a8c4ad9126"
+      "path": "metro/denver/index.html",
+      "bytes": 26217,
+      "sha256": "sha256:4934120dfbec98c723f6b03b4fd15a4acaa0e9ac8142f9f84171225d57e60458"
     },
     {
-      "path": "pagefind/fragment/en_f73423c.pf_fragment",
-      "bytes": 13732,
-      "sha256": "sha256:e8ec29076b3977c18f1f768cf525b8589d4708451a738cad268b45363e805507"
+      "path": "metro/houston/index.html",
+      "bytes": 26240,
+      "sha256": "sha256:e3021123e747ad37306070d34721c3fe8f7116a77c0682dcf5e3ad358ee03be8"
     },
     {
-      "path": "pagefind/index/en_1b99aaa.pf_index",
-      "bytes": 29316,
-      "sha256": "sha256:52d6ec25277dfae61ca20cc9287343c065f5e4e4f18ef1bdbaeb0aa076794b35"
+      "path": "metro/los-angeles/index.html",
+      "bytes": 26304,
+      "sha256": "sha256:ad7576e71e404b14022f691b4999178b595620943cdddc1d9a85235540c8bb25"
     },
     {
-      "path": "pagefind/index/en_42c40c6.pf_index",
-      "bytes": 28521,
-      "sha256": "sha256:602610aec489925fa9e69a4e5cd4593c67fdf7e069d2791ed416e4f201528251"
+      "path": "metro/miami/index.html",
+      "bytes": 26218,
+      "sha256": "sha256:fe3619b789de3a261d219fe7051a001d35c2d3fc7e1ef8a10c17bfca99ac7fbb"
     },
     {
-      "path": "pagefind/index/en_49a120b.pf_index",
-      "bytes": 33273,
-      "sha256": "sha256:5c696748f64b548ee48e1c7d70e3625c4cf796b11b07bfef387c49de48450290"
+      "path": "metro/new-york/index.html",
+      "bytes": 26292,
+      "sha256": "sha256:0c80ea83400f2da80dcd32ececad557a53cad9a3762772ab03256a9dbfd4f0f9"
     },
     {
-      "path": "pagefind/index/en_57996a9.pf_index",
-      "bytes": 28685,
-      "sha256": "sha256:98072393b418f2ca6b23b2644203d38815ddd33005a62faad7734a8e3d8847d5"
+      "path": "metro/phoenix/index.html",
+      "bytes": 26240,
+      "sha256": "sha256:7d5124bc48cd62b1270cdc8b9259873fd94d1ce02d5b83b51cfe54c3de44ec1a"
     },
     {
-      "path": "pagefind/index/en_5d5c3c6.pf_index",
-      "bytes": 29987,
-      "sha256": "sha256:16f58f4eedaa9caba90514de73fe48ea5a6530dbba7f0952604537358dae2f50"
+      "path": "metro/seattle/index.html",
+      "bytes": 26243,
+      "sha256": "sha256:eb0e5046c998c7942f2f73a8f78a276b8e9bbc62a98348dc19da513fbdbf05c5"
     },
     {
-      "path": "pagefind/index/en_5dfe4ae.pf_index",
-      "bytes": 29183,
-      "sha256": "sha256:47ef2920d5bfd48e606846f4044f0037535346b5d50e0f17fcca3244ac53bc7f"
+      "path": "metro/washington-dc/index.html",
+      "bytes": 26326,
+      "sha256": "sha256:24fc87c655326f36ccfd5df1ce5711670e488a35f95aec6ccfb2f521e7f5c3eb"
     },
     {
-      "path": "pagefind/index/en_6142744.pf_index",
-      "bytes": 29918,
-      "sha256": "sha256:fed0a04cfa4b88746b0f66960790041ab9380d96deca9fe0dfb1c0d28662f47b"
-    },
-    {
-      "path": "pagefind/index/en_62ea978.pf_index",
-      "bytes": 28082,
-      "sha256": "sha256:6d6f1d0ba64466eee6d02d4f0c7e539649e475643afee75ae62a55e51095441f"
-    },
-    {
-      "path": "pagefind/index/en_669961b.pf_index",
-      "bytes": 30786,
-      "sha256": "sha256:45472c84a95e6449322d5f80b696a5c7b88c0822b357f11b4ea7d174a5837e12"
-    },
-    {
-      "path": "pagefind/index/en_66f4709.pf_index",
-      "bytes": 26959,
-      "sha256": "sha256:6cef2ebf37d62ab89964865d86d2493ff1400a730da8d23507f297b5d003ae27"
-    },
-    {
-      "path": "pagefind/index/en_7368ad2.pf_index",
-      "bytes": 28546,
-      "sha256": "sha256:655df4e326bc31f2b3e75653626fe174801c9e1391840a3f1e13412b91667b9d"
-    },
-    {
-      "path": "pagefind/index/en_739eb05.pf_index",
-      "bytes": 29491,
-      "sha256": "sha256:c3de2c49e55ccf244831aa4db6571d3f55f0e801cfc90aceb378997fe5294c74"
-    },
-    {
-      "path": "pagefind/index/en_7b84e6a.pf_index",
-      "bytes": 29448,
-      "sha256": "sha256:b1f61e09f33b19d271329a3a6da13427aa1d3db16825dda242dfc4db0fd1497e"
-    },
-    {
-      "path": "pagefind/index/en_8a3bac4.pf_index",
-      "bytes": 26990,
-      "sha256": "sha256:bc46701db830b96ac6a0b457ab0efdafc406307a4de15759228bd8cd8f79397b"
-    },
-    {
-      "path": "pagefind/index/en_9f4331f.pf_index",
-      "bytes": 29617,
-      "sha256": "sha256:345c983a6a258d9e01c2b32f5886c6c9cdf9290cec9ea499d4af1f340a74d229"
-    },
-    {
-      "path": "pagefind/index/en_bdbad25.pf_index",
-      "bytes": 29969,
-      "sha256": "sha256:f1c3207fec4e6ae60c4130657d94000266b4e36cb63e9a6afcb6dbe6fe4789dd"
-    },
-    {
-      "path": "pagefind/index/en_db547f9.pf_index",
-      "bytes": 18845,
-      "sha256": "sha256:c9b0d5b186fdb7572c957e301304dcfcf0d9e46dc3ae106f9562565f2433a969"
-    },
-    {
-      "path": "pagefind/index/en_e211883.pf_index",
-      "bytes": 29769,
-      "sha256": "sha256:a7b44177bc5e4f034733f087f3ab2195fdc0e2c656a8b24abe9eb476c4405446"
-    },
-    {
-      "path": "pagefind/index/en_f085017.pf_index",
-      "bytes": 28902,
-      "sha256": "sha256:3fc2d97403e6d02985d6904797c8a0a5657615dc081d51a02eec29908023e437"
-    },
-    {
-      "path": "pagefind/index/en_f283279.pf_index",
-      "bytes": 29160,
-      "sha256": "sha256:3f8f17d399a87903ac43fbdc519486f091e1f27848f9bc9820015b727961efea"
-    },
-    {
-      "path": "pagefind/index/en_f3474c3.pf_index",
-      "bytes": 29803,
-      "sha256": "sha256:f9412d535c2767e8fc37411d91f110e48f6363769c3867e9732f8315b2c411fa"
-    },
-    {
-      "path": "pagefind/pagefind-entry.json",
-      "bytes": 173,
-      "sha256": "sha256:436569ecbf7f7c531dcbcaf2b02feb842c7ee2f758fd27c1f9bd2fdbcbd2a74b"
-    },
-    {
-      "path": "pagefind/pagefind.en_bad6bd29b1.pf_meta",
-      "bytes": 1975,
-      "sha256": "sha256:c37e86879da622e43cda7b8733af9f11d4669b08a8754c54b1f07386bc705508"
-    },
-    {
-      "path": "search-index.json",
-      "bytes": 121893,
-      "sha256": "sha256:e642aae9209d483bd35c9ed3ebf44015edcb9f90543e3ef0751e915238364dd7"
+      "path": "privacy/index.html",
+      "bytes": 28300,
+      "sha256": "sha256:64a7ab45e4f62f1653eb33465ac69fd754571c8c6bb677548f22670d6e3b8cbb"
     },
     {
       "path": "shop/index.html",
-      "bytes": 56018,
-      "sha256": "sha256:489610a9d767acd7ab68b22815d59f55b373e9a0ed2911c48df894e3bb0692cb"
+      "bytes": 56287,
+      "sha256": "sha256:a45946fa2f0b08227bd80f25ba0acc897d93e116f7c9138821a96745f5adee51"
     },
     {
       "path": "shop/product-comparisons/index.html",
-      "bytes": 33310,
-      "sha256": "sha256:c93cdcbdc9e4dd83dc05d5b8f9572205017fcaec37e38c7ddca825565349119f"
+      "bytes": 33579,
+      "sha256": "sha256:d42fbb270e5ad4ece179ebc560e95e464636f7af2b5aa9aa7df90614858c94aa"
     },
     {
       "path": "shop/total-cost-ownership/index.html",
-      "bytes": 34706,
-      "sha256": "sha256:e777ad2978e2f8f79bd4fb93386dcd6103686ebf0f350d6fd1312617ed33908b"
+      "bytes": 34975,
+      "sha256": "sha256:f3e00ee13b54c9ab292c6e6a736f35770dc5729b2487f2e24fa21ce045dd9a55"
     },
     {
       "path": "shop/used-refurbished/index.html",
-      "bytes": 33445,
-      "sha256": "sha256:58e6b042865a6c6fe60e89d52619c8970197387cf11eb908adac6e47b8030259"
+      "bytes": 33714,
+      "sha256": "sha256:8111d64d1da2881fb9aafb0625f3b0210cb030774c0daacb6aa0e051ca12aace"
     },
     {
-      "path": "sitemap.xml",
-      "bytes": 25369,
-      "sha256": "sha256:c86cd4f176f56d10729a6f3b1922d6daf066c5c8b87932b6753c41fb4d4cf916"
+      "path": "tools/agricultural-market-context-browser/index.html",
+      "bytes": 40099,
+      "sha256": "sha256:e23cd7ea66d915eee1d22b16cc18696187b0b7579ed8d2da31adad4ec5fad343"
+    },
+    {
+      "path": "tools/appliance-electricity-cost-calculator/index.html",
+      "bytes": 42638,
+      "sha256": "sha256:bd3cc490f7fb1ec7c5716e5c30ca7901ebe87428c3d64ed334ff696cd104ad0a"
     },
     {
       "path": "tools/checklists/index.html",
-      "bytes": 33935,
-      "sha256": "sha256:9d139a6bc77ab11a3f70c64ad8ee794b17284cfcc598b31e622953ec5d7fe9bb"
+      "bytes": 34204,
+      "sha256": "sha256:d2f09198e43fcbed730734e17398120e51d427ba3846e306d2ff848b415f97fe"
+    },
+    {
+      "path": "tools/household-energy-benchmark-explorer/index.html",
+      "bytes": 77689,
+      "sha256": "sha256:bc1c856d275e6e47c4fae7b6888248cb45a8ca3defa280a32fe064baaba78f76"
+    },
+    {
+      "path": "tools/household-energy-benchmark-explorer/page/2/index.html",
+      "bytes": 245378,
+      "sha256": "sha256:05dd006aff42e312c3720dcbfa9dcd093ecb757201aa10723e4b3437ebcb6ab2"
+    },
+    {
+      "path": "tools/household-energy-benchmark-explorer/page/3/index.html",
+      "bytes": 174987,
+      "sha256": "sha256:8394727b5b852a16f274e2600f1b587217a1da016b9cba445a5b38b2eeb52c9d"
+    },
+    {
+      "path": "tools/index.html",
+      "bytes": 47675,
+      "sha256": "sha256:9def7ee8fe108691caed32277d93dbfbc88c1386d610b1a81ecf012384a4c4e5"
+    },
+    {
+      "path": "tools/us-crop-production-trend-explorer/index.html",
+      "bytes": 50550,
+      "sha256": "sha256:9cafb8911a8168d648d792c9082af6b4c6a45a98616817887d5a4960ff03e346"
+    },
+    {
+      "path": "tools/us-crop-production-trend-explorer/page/2/index.html",
+      "bytes": 37257,
+      "sha256": "sha256:336c3576649c5fb2b3295e4f684641f4eb35b5caa2899687a612e0d84dc00f8f"
+    },
+    {
+      "path": "tools/usda-staple-food-identity-explorer/index.html",
+      "bytes": 46705,
+      "sha256": "sha256:ad7b3dcd6fdefd26723a2066aef85fcddec23bcf40a8579f9eee287686e097f1"
+    },
+    {
+      "path": "tools/zip-to-metro-relationship-explainer/index.html",
+      "bytes": 56631,
+      "sha256": "sha256:c859f73b0bac25da9b07a4fe9ce8bcac7fe3dca41826cd2519af878d5a181c7f"
     }
   ],
-  "removedFiles": [
-    "pagefind/filter/en_38596bc.pf_filter",
-    "pagefind/filter/en_7e81487.pf_filter",
-    "pagefind/fragment/en_1afcc2e.pf_fragment",
-    "pagefind/fragment/en_1cead52.pf_fragment",
-    "pagefind/fragment/en_541a3d8.pf_fragment",
-    "pagefind/fragment/en_66e571a.pf_fragment",
-    "pagefind/index/en_3325d46.pf_index",
-    "pagefind/index/en_36f7d95.pf_index",
-    "pagefind/index/en_3a3464b.pf_index",
-    "pagefind/index/en_3a585de.pf_index",
-    "pagefind/index/en_3c63437.pf_index",
-    "pagefind/index/en_49b739f.pf_index",
-    "pagefind/index/en_6588767.pf_index",
-    "pagefind/index/en_6ae6fb5.pf_index",
-    "pagefind/index/en_7d5f87d.pf_index",
-    "pagefind/index/en_8371bcc.pf_index",
-    "pagefind/index/en_84fb886.pf_index",
-    "pagefind/index/en_a1fcffa.pf_index",
-    "pagefind/index/en_baee836.pf_index",
-    "pagefind/index/en_c2b75ad.pf_index",
-    "pagefind/index/en_c8a1580.pf_index",
-    "pagefind/index/en_c8d9228.pf_index",
-    "pagefind/index/en_d923fd5.pf_index",
-    "pagefind/index/en_ee7616d.pf_index",
-    "pagefind/index/en_ef899af.pf_index",
-    "pagefind/index/en_f083e99.pf_index",
-    "pagefind/index/en_f84d83e.pf_index",
-    "pagefind/pagefind.en_648ba7be77.pf_meta"
-  ],
+  "removedFiles": [],
   "routes": [
-    "/articles/used-laptop-inspection-checklist/"
+    "/",
+    "/about/",
+    "/affiliate-disclosure/",
+    "/articles/",
+    "/articles/2-4-ghz-vs-5-ghz-wifi/",
+    "/articles/air-drying-vs-clothes-dryer/",
+    "/articles/air-fryer-vs-oven-electricity-cost/",
+    "/articles/air-purifier-vs-hvac-filter/",
+    "/articles/apartment-move-in-inspection-checklist/",
+    "/articles/appliance-buying-checklist/",
+    "/articles/appliance-extended-warranty-worth-it/",
+    "/articles/best-place-to-put-wifi-router/",
+    "/articles/can-100w-usb-c-charger-damage-phone/",
+    "/articles/can-microwave-interfere-with-wifi/",
+    "/articles/can-you-cut-mold-off-cheese/",
+    "/articles/can-you-freeze-eggs/",
+    "/articles/can-you-freeze-milk/",
+    "/articles/can-you-mix-bleach-and-vinegar/",
+    "/articles/can-you-paint-over-mold/",
+    "/articles/can-you-plug-air-conditioner-into-extension-cord/",
+    "/articles/can-you-plug-space-heater-into-power-strip/",
+    "/articles/can-you-put-dish-soap-in-dishwasher/",
+    "/articles/can-you-put-glass-in-the-freezer/",
+    "/articles/can-you-put-hot-food-in-refrigerator/",
+    "/articles/can-you-refreeze-food-after-power-outage/",
+    "/articles/can-you-use-soap-on-cast-iron/",
+    "/articles/check-recalls-before-buying-used-product/",
+    "/articles/clothes-taking-too-long-to-dry/",
+    "/articles/cold-vs-warm-vs-hot-water-laundry/",
+    "/articles/compare-unit-prices-different-package-sizes/",
+    "/articles/contractor-estimate-comparison-checklist/",
+    "/articles/dehumidifier-running-not-collecting-water/",
+    "/articles/dehumidifier-vs-air-conditioner/",
+    "/articles/do-ceiling-fans-cool-a-room/",
+    "/articles/do-you-have-to-preheat-oven/",
+    "/articles/do-you-need-refrigerator-freezer-thermometer/",
+    "/articles/does-aluminum-foil-improve-wifi-signal/",
+    "/articles/does-dishwasher-use-less-water-than-hand-washing/",
+    "/articles/does-turning-ac-off-save-money/",
+    "/articles/does-unplugging-appliances-save-electricity/",
+    "/articles/download-vs-upload-speed-latency/",
+    "/articles/energy-star-vs-energyguide/",
+    "/articles/ethernet-vs-wifi/",
+    "/articles/fan-vs-air-conditioner-cost/",
+    "/articles/find-stop-drafts-windows-doors/",
+    "/articles/fix-wifi-dead-zones-without-buying-anything/",
+    "/articles/front-load-washer-smells/",
+    "/articles/heat-pump-vs-electric-water-heater/",
+    "/articles/home-energy-check-high-summer-bill/",
+    "/articles/home-humidity-dehumidifier-checklist/",
+    "/articles/home-inventory-checklist/",
+    "/articles/home-wifi-dead-zone-checklist/",
+    "/articles/how-does-baking-powder-work/",
+    "/articles/how-long-bacon-lasts-fridge/",
+    "/articles/how-long-can-butter-sit-out/",
+    "/articles/how-long-can-cooked-food-sit-out/",
+    "/articles/how-long-cooked-pasta-lasts-fridge/",
+    "/articles/how-long-cooked-rice-lasts-fridge/",
+    "/articles/how-long-does-cooked-rice-last/",
+    "/articles/how-long-food-safe-refrigerator-without-power/",
+    "/articles/how-long-food-stay-frozen-power-outage/",
+    "/articles/how-long-hard-boiled-eggs-last-fridge/",
+    "/articles/how-long-leftovers-last-fridge/",
+    "/articles/how-much-does-air-purifier-cost-to-run/",
+    "/articles/how-much-does-dehumidifier-cost-to-run/",
+    "/articles/how-much-does-dishwasher-cost-per-load/",
+    "/articles/how-much-does-electric-dryer-cost-per-load/",
+    "/articles/how-much-does-electric-oven-cost-per-hour/",
+    "/articles/how-much-does-refrigerator-cost-to-run/",
+    "/articles/how-much-does-washing-machine-cost-per-load/",
+    "/articles/how-much-does-water-heater-cost-to-run/",
+    "/articles/how-much-electricity-does-microwave-use/",
+    "/articles/how-much-internet-speed-do-you-need/",
+    "/articles/how-much-laundry-detergent-use/",
+    "/articles/how-often-change-hvac-filter/",
+    "/articles/how-often-clean-dryer-vent/",
+    "/articles/how-often-should-you-replace-wifi-router/",
+    "/articles/how-often-test-carbon-monoxide-alarms/",
+    "/articles/how-often-test-replace-smoke-alarms/",
+    "/articles/how-to-back-up-phone-before-factory-reset/",
+    "/articles/how-to-calculate-appliance-electricity-cost/",
+    "/articles/how-to-calculate-flooring-needed/",
+    "/articles/how-to-calculate-paint-needed/",
+    "/articles/how-to-check-used-refrigerator-before-buying/",
+    "/articles/how-to-choose-led-light-bulb/",
+    "/articles/how-to-choose-right-size-dehumidifier/",
+    "/articles/how-to-choose-smoke-alarm/",
+    "/articles/how-to-choose-water-filter-contaminant-certification/",
+    "/articles/how-to-clean-and-sanitize-cutting-board/",
+    "/articles/how-to-clean-dishwasher-filter/",
+    "/articles/how-to-clean-laptop-screen-safely/",
+    "/articles/how-to-clean-window-air-conditioner-filter/",
+    "/articles/how-to-read-energyguide-label/",
+    "/articles/how-to-recycle-lithium-ion-batteries-safely/",
+    "/articles/how-to-spot-fake-online-reviews/",
+    "/articles/is-freezer-burn-safe-to-eat/",
+    "/articles/leave-laptop-plugged-in-all-the-time/",
+    "/articles/mesh-wifi-vs-range-extender/",
+    "/articles/new-vs-used-refurbished-open-box-appliances/",
+    "/articles/organize-refrigerator-food-safety/",
+    "/articles/portable-ac-cost-to-run/",
+    "/articles/power-outage-food-safety-chart/",
+    "/articles/power-outage-home-checklist/",
+    "/articles/power-strip-vs-surge-protector/",
+    "/articles/refrigerator-not-cooling-freezer-works/",
+    "/articles/refrigerator-running-constantly/",
+    "/articles/repair-or-replace-appliance/",
+    "/articles/return-policy-vs-warranty-vs-service-contract/",
+    "/articles/router-restart-vs-reset/",
+    "/articles/should-you-rinse-dishes-before-dishwasher/",
+    "/articles/should-you-unplug-electronics-during-thunderstorm/",
+    "/articles/should-you-wash-raw-chicken/",
+    "/articles/spot-fake-online-store-before-buying/",
+    "/articles/tank-vs-tankless-water-heater/",
+    "/articles/used-laptop-inspection-checklist/",
+    "/articles/water-heater-leaking-what-to-do/",
+    "/articles/water-heater-temperature-setting/",
+    "/articles/what-can-air-purifier-remove/",
+    "/articles/what-does-gfci-outlet-do/",
+    "/articles/what-food-throw-away-after-power-outage/",
+    "/articles/what-humidity-should-house-be/",
+    "/articles/what-merv-rating-should-i-use/",
+    "/articles/what-size-air-purifier-do-i-need/",
+    "/articles/what-size-dehumidifier-do-i-need/",
+    "/articles/what-temperature-should-freezer-be/",
+    "/articles/what-temperature-should-refrigerator-be/",
+    "/articles/where-to-place-wifi-extender/",
+    "/articles/why-are-some-answers-better-than-others/",
+    "/articles/why-bathroom-exhaust-fan-drips-water/",
+    "/articles/why-bluetooth-keeps-disconnecting/",
+    "/articles/why-bread-goes-stale-in-refrigerator/",
+    "/articles/why-ceiling-fan-wobbles/",
+    "/articles/why-computer-storage-full/",
+    "/articles/why-dishwasher-leaves-white-film/",
+    "/articles/why-do-led-light-bulbs-flicker/",
+    "/articles/why-do-onions-make-you-cry/",
+    "/articles/why-do-windows-condense-in-winter/",
+    "/articles/why-does-dishwasher-smell-bad/",
+    "/articles/why-does-gfci-outlet-keep-tripping/",
+    "/articles/why-does-my-wifi-keep-disconnecting/",
+    "/articles/why-electric-bill-high-summer/",
+    "/articles/why-faucet-keeps-dripping/",
+    "/articles/why-freezer-frosting-up/",
+    "/articles/why-garage-door-closes-then-opens/",
+    "/articles/why-garlic-turns-blue-green/",
+    "/articles/why-hot-water-runs-out-fast/",
+    "/articles/why-is-my-dishwasher-not-drying-dishes/",
+    "/articles/why-is-my-laptop-fan-so-loud/",
+    "/articles/why-is-my-refrigerator-sweating/",
+    "/articles/why-is-my-smoke-alarm-chirping/",
+    "/articles/why-is-my-wifi-so-slow/",
+    "/articles/why-is-washing-machine-shaking/",
+    "/articles/why-microwave-is-sparking/",
+    "/articles/why-phone-battery-drains-overnight/",
+    "/articles/why-phone-gets-hot-while-charging/",
+    "/articles/why-phone-says-moisture-detected-charging-port/",
+    "/articles/why-printer-offline-how-to-fix/",
+    "/articles/why-refrigerator-leaking-water/",
+    "/articles/why-salt-melts-ice/",
+    "/articles/why-toilet-bubbling-gurgling/",
+    "/articles/why-toilet-keeps-running/",
+    "/articles/why-toilet-tank-sweating-condensation/",
+    "/articles/why-washing-machine-not-draining/",
+    "/articles/why-water-heater-popping-rumbling/",
+    "/articles/why-window-air-conditioner-leaking-water-inside/",
+    "/articles/window-ac-cost-per-hour/",
+    "/contact/",
+    "/corrections/",
+    "/editorial-policy/",
+    "/electricity-prices-by-state/",
+    "/home-tech/",
+    "/home-tech/computers-laptops/",
+    "/home-tech/power-cooling-storage/",
+    "/home-tech/wifi-routers/",
+    "/home/",
+    "/home/cleaning/",
+    "/home/heating-cooling/",
+    "/home/repairs-maintenance/",
+    "/home/utilities-energy/",
+    "/kitchen/",
+    "/kitchen/food-science/",
+    "/kitchen/kitchen-appliances/",
+    "/kitchen/troubleshooting-safety/",
+    "/metro/atlanta/",
+    "/metro/boston/",
+    "/metro/chicago/",
+    "/metro/dallas-fort-worth/",
+    "/metro/denver/",
+    "/metro/houston/",
+    "/metro/los-angeles/",
+    "/metro/miami/",
+    "/metro/new-york/",
+    "/metro/phoenix/",
+    "/metro/seattle/",
+    "/metro/washington-dc/",
+    "/privacy/",
+    "/shop/",
+    "/shop/product-comparisons/",
+    "/shop/total-cost-ownership/",
+    "/shop/used-refurbished/",
+    "/tools/",
+    "/tools/agricultural-market-context-browser/",
+    "/tools/appliance-electricity-cost-calculator/",
+    "/tools/checklists/",
+    "/tools/household-energy-benchmark-explorer/",
+    "/tools/household-energy-benchmark-explorer/page/2/",
+    "/tools/household-energy-benchmark-explorer/page/3/",
+    "/tools/us-crop-production-trend-explorer/",
+    "/tools/us-crop-production-trend-explorer/page/2/",
+    "/tools/usda-staple-food-identity-explorer/",
+    "/tools/zip-to-metro-relationship-explainer/"
   ]
 }
