@@ -386,6 +386,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/aluminum-foil-in-air-fryer/",
+      "title": "Can You Put Aluminum Foil in an Air Fryer? Check the Model First",
+      "description": "Some air fryers allow foil and others prohibit it. Learn how model-specific instructions, airflow, heater clearance, and secure placement determine safe use.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Aluminum foil is permitted in some air fryers and prohibited in others. Check the exact model’s manual, place foil only in an approved basket, pan, or rack, keep ventilation openings clear, secure the foil beneath food, and keep it away from heating elements.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The guide compares current manufacturer instructions and does not evaluate a particular air fryer or liner."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-put-dish-soap-in-dishwasher/",
+          "/articles/why-microwave-is-sparking/",
+          "/articles/do-you-have-to-preheat-oven/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/apartment-move-in-inspection-checklist/",
       "title": "Apartment Move-In Inspection Checklist: Document Damage Before You Unpack",
       "description": "Inspect every room before moving furniture inside. Photograph existing damage, test essential systems, and submit the condition report on time.",
@@ -6267,6 +6302,41 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/portable-air-conditioner-specifications-explained/",
+      "title": "Portable Air Conditioner Specifications Explained: SACC, Ducts, CEER, and Drainage",
+      "description": "Understand portable-air-conditioner SACC, duct configuration, CEER, window-kit fit, drainage methods, noise, and electrical requirements without relying on the largest number on the box.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The most useful portable-air-conditioner specifications are seasonally adjusted cooling capacity, duct configuration, combined energy efficiency ratio, window-kit fit, hose routing, condensate handling, noise, and electrical requirements. SACC is generally more informative than a larger legacy capacity number because the federal test accounts for portable-unit losses and infiltration effects.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This is a specification explainer based on federal definitions and does not test or rank individual products."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/portable-ac-cost-to-run/",
+          "/articles/dehumidifier-vs-air-conditioner/",
+          "/articles/fan-vs-air-conditioner-cost/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/portable-power-bank-safety-capacity-airline-rules/",
       "title": "Portable Power Bank Safety: Capacity, Certification, and Airline Rules",
       "description": "Understand watt-hours, USB Power Delivery, certification marks, recalls, warning signs, and U.S. airline limits for portable power banks.",
@@ -7017,6 +7087,41 @@
         "routes": [
           "/articles/why-bread-goes-stale-in-refrigerator/",
           "/articles/power-outage-home-checklist/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/smart-tv-keeps-buffering/",
+      "title": "Why Does My Smart TV Keep Buffering? Find the Real Bottleneck",
+      "description": "Diagnose smart-TV buffering by determining whether the problem affects one app, every app, one television, or every device on the network.",
+      "categoryId": "home-tech",
+      "topicId": "tvs-streaming",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A smart TV buffers when video data is not arriving or being decoded fast enough to sustain playback. First determine whether the failure affects one app, one television, or every device, then test the television’s own connection, Wi-Fi signal, competing traffic, software, and direct Ethernet performance.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article synthesizes current provider support documentation and does not test a specific television, router, or internet connection."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-does-my-wifi-keep-disconnecting/",
+          "/articles/how-much-internet-speed-do-you-need/",
+          "/articles/ethernet-vs-wifi/"
         ]
       },
       "media": [],
@@ -8986,6 +9091,41 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-honey-crystallizes/",
+      "title": "Why Does Honey Crystallize, and Is It Still Safe to Eat?",
+      "description": "Crystallized honey is generally safe to eat. Learn why glucose forms crystals, how to soften the honey gently, and which signs indicate fermentation instead.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Honey crystallizes when some of its glucose leaves the liquid phase and forms solid crystals. The change is natural and usually does not harm the honey. Eat it crystallized or warm the sealed container gently in water, but discard honey that foams, smells alcoholic, grows mold, or was contaminated.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "This is a source-based food-science explainer and does not include laboratory analysis or a reheating trial."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-brown-sugar-hardens-how-to-soften/",
+          "/articles/why-garlic-turns-blue-green/",
+          "/articles/why-bread-goes-stale-in-refrigerator/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/why-hot-water-runs-out-fast/",
       "title": "Why Does My Hot Water Run Out So Fast?",
@@ -10115,6 +10255,41 @@
       }
     },
     {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/window-air-conditioner-freezing-up/",
+      "title": "Why Is My Window Air Conditioner Freezing Up?",
+      "description": "Safely thaw a frozen window air conditioner, check the filter and airflow, and recognize when repeated icing requires qualified service.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A window air conditioner usually freezes because airflow across the indoor coil is restricted, the outdoor temperature is below the model’s operating range, the fan is too slow, or a mechanical or refrigerant problem is present. Turn cooling off, thaw the unit naturally, clean the filter, clear airflow, and stop using it if ice quickly returns.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "This guide synthesizes manufacturer instructions and does not inspect a particular air conditioner."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/how-to-clean-window-air-conditioner-filter/",
+          "/articles/window-ac-cost-per-hour/",
+          "/articles/can-you-plug-air-conditioner-into-extension-cord/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
       "kind": "trust",
       "renderMode": "canonical-source",
       "route": "/contact/",
@@ -10396,7 +10571,7 @@
       "topicId": "troubleshooting-safety",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -10625,5 +10800,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:e10b4b32c9c8d20113babcf6f3f331ba08535b9763914f93b2e38b202e3226aa"
+  "registryDigest": "sha256:b7966f5bab7939080cb03aa530d91c88eac1014acf7e172132b9dab8004a66bb"
 }

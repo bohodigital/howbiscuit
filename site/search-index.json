@@ -74,6 +74,14 @@
       "searchText": "air purifier vs hvac filter which do you need portable air cleaners treat one room or area hvac filters work throughout a ducted system only while its fan runs learn when one both or neither solves the problem home apartment guide articles air purifier vs hvac filter"
     },
     {
+      "route": "/articles/aluminum-foil-in-air-fryer/",
+      "title": "Can You Put Aluminum Foil in an Air Fryer? Check the Model First",
+      "description": "Some air fryers allow foil and others prohibit it. Learn how model-specific instructions, airflow, heater clearance, and secure placement determine safe use.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you put aluminum foil in an air fryer check the model first some air fryers allow foil and others prohibit it learn how model specific instructions airflow heater clearance and secure placement determine safe use kitchen guide articles aluminum foil in air fryer"
+    },
+    {
       "route": "/articles/apartment-move-in-inspection-checklist/",
       "title": "Apartment Move-In Inspection Checklist: Document Damage Before You Unpack",
       "description": "Inspect every room before moving furniture inside. Photograph existing damage, test essential systems, and submit the condition report on time.",
@@ -914,6 +922,14 @@
       "searchText": "how much does a portable ac cost to run calculate a portable air conditioner s hourly and monthly electricity cost using its watts runtime and your local electricity rate home apartment guide articles portable ac cost to run"
     },
     {
+      "route": "/articles/portable-air-conditioner-specifications-explained/",
+      "title": "Portable Air Conditioner Specifications Explained: SACC, Ducts, CEER, and Drainage",
+      "description": "Understand portable-air-conditioner SACC, duct configuration, CEER, window-kit fit, drainage methods, noise, and electrical requirements without relying on the largest number on the box.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "portable air conditioner specifications explained sacc ducts ceer and drainage understand portable air conditioner sacc duct configuration ceer window kit fit drainage methods noise and electrical requirements without relying on the largest number on the box shop smarter guide articles portable air conditioner specifications explained"
+    },
+    {
       "route": "/articles/portable-power-bank-safety-capacity-airline-rules/",
       "title": "Portable Power Bank Safety: Capacity, Certification, and Airline Rules",
       "description": "Understand watt-hours, USB Power Delivery, certification marks, recalls, warning signs, and U.S. airline limits for portable power banks.",
@@ -1024,6 +1040,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "should you wash raw chicken before cooking it no washing raw chicken can spread bacteria through splashing and does not replace cooking poultry to a safe internal temperature kitchen guide articles should you wash raw chicken"
+    },
+    {
+      "route": "/articles/smart-tv-keeps-buffering/",
+      "title": "Why Does My Smart TV Keep Buffering? Find the Real Bottleneck",
+      "description": "Diagnose smart-TV buffering by determining whether the problem affects one app, every app, one television, or every device on the network.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my smart tv keep buffering find the real bottleneck diagnose smart tv buffering by determining whether the problem affects one app every app one television or every device on the network home tech guide articles smart tv keeps buffering"
     },
     {
       "route": "/articles/spot-fake-online-store-before-buying/",
@@ -1314,6 +1338,14 @@
       "searchText": "why did my garlic turn blue or green learn why garlic turns blue or green in vinegar lemon pickles and acidic cooking when the color is harmless and how to distinguish it from mold kitchen guide articles why garlic turns blue green"
     },
     {
+      "route": "/articles/why-honey-crystallizes/",
+      "title": "Why Does Honey Crystallize, and Is It Still Safe to Eat?",
+      "description": "Crystallized honey is generally safe to eat. Learn why glucose forms crystals, how to soften the honey gently, and which signs indicate fermentation instead.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does honey crystallize and is it still safe to eat crystallized honey is generally safe to eat learn why glucose forms crystals how to soften the honey gently and which signs indicate fermentation instead kitchen guide articles why honey crystallizes"
+    },
+    {
       "route": "/articles/why-hot-water-runs-out-fast/",
       "title": "Why Does My Hot Water Run Out So Fast?",
       "description": "Hot water may run out because demand increased, the tank is undersized, recovery is slow, an electric element failed, sediment accumulated, or a mixing or dip-tube problem exists.",
@@ -1512,6 +1544,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "how much does a window ac cost per hour calculate a window air conditioner s hourly daily and monthly electricity cost from its wattage and your local electric rate home apartment guide articles window ac cost per hour"
+    },
+    {
+      "route": "/articles/window-air-conditioner-freezing-up/",
+      "title": "Why Is My Window Air Conditioner Freezing Up?",
+      "description": "Safely thaw a frozen window air conditioner, check the filter and airflow, and recognize when repeated icing requires qualified service.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my window air conditioner freezing up safely thaw a frozen window air conditioner check the filter and airflow and recognize when repeated icing requires qualified service home apartment guide articles window air conditioner freezing up"
     },
     {
       "route": "/contact/",
