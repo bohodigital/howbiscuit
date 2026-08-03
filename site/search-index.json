@@ -610,6 +610,14 @@
       "searchText": "how to calculate what an appliance costs to run calculate appliance cost from annual kwh measured kwh or watts and time learn which method works for refrigerators dryers dishwashers ovens and small appliances home apartment guide articles how to calculate appliance electricity cost"
     },
     {
+      "route": "/articles/how-to-check-used-refrigerator-before-buying/",
+      "title": "How to Check a Used Refrigerator Before You Buy It",
+      "description": "Inspect a used refrigerator for recalls, safe temperatures, door-seal damage, compressor trouble, water leaks, wiring faults, dimensions, and total ownership cost.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to check a used refrigerator before you buy it inspect a used refrigerator for recalls safe temperatures door seal damage compressor trouble water leaks wiring faults dimensions and total ownership cost shop smarter guide articles how to check used refrigerator before buying"
+    },
+    {
       "route": "/articles/how-to-choose-led-light-bulb/",
       "title": "How to Choose an LED Light Bulb",
       "description": "Compare LED bulbs using base, shape, lumens, color temperature, color rendering, dimmer compatibility, fixture rating, beam angle, and energy use.",
@@ -1288,6 +1296,14 @@
       "category": "Shop Smarter",
       "type": "Topic",
       "searchText": "total cost of ownership upfront cost subscriptions energy maintenance repair replacement resale and switching costs shop smarter topic shop total cost ownership"
+    },
+    {
+      "route": "/shop/used-refurbished/",
+      "title": "Used & Refurbished",
+      "description": "Inspection, remaining life, warranties, repair costs, seller risk, and when used is poor value.",
+      "category": "Shop Smarter",
+      "type": "Topic",
+      "searchText": "used refurbished inspection remaining life warranties repair costs seller risk and when used is poor value shop smarter topic shop used refurbished"
     },
     {
       "route": "/tools/",
