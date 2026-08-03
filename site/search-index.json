@@ -146,6 +146,14 @@
       "searchText": "can you freeze bread the best way to freeze slices and loaves bread freezes well when it is still fresh wrapped against air and divided into portions you can use without repeatedly thawing the entire loaf kitchen guide articles can you freeze bread"
     },
     {
+      "route": "/articles/can-you-freeze-cheese/",
+      "title": "Can You Freeze Cheese? What Freezes Well and What Changes Texture",
+      "description": "Most firm cheeses can be frozen for cooking, although they may become drier or more crumbly. Fresh and high-moisture cheeses usually show larger texture changes.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you freeze cheese what freezes well and what changes texture most firm cheeses can be frozen for cooking although they may become drier or more crumbly fresh and high moisture cheeses usually show larger texture changes kitchen guide articles can you freeze cheese"
+    },
+    {
       "route": "/articles/can-you-freeze-eggs/",
       "title": "Can You Freeze Eggs?",
       "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
@@ -770,6 +778,14 @@
       "searchText": "how to clean a window air conditioner filter a dirty window air conditioner filter restricts airflow and can reduce cooling performance this guide explains the safe cleaning sequence for most reusable filters home apartment guide articles how to clean window air conditioner filter"
     },
     {
+      "route": "/articles/how-to-erase-phone-before-selling/",
+      "title": "How to Erase an Old Phone Before You Sell or Trade It In",
+      "description": "Transfer data and authentication methods first, remove account locks, handle SIM and eSIM service, perform the built-in factory reset, and verify that the setup screen appears before handing over a phone.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to erase an old phone before you sell or trade it in transfer data and authentication methods first remove account locks handle sim and esim service perform the built in factory reset and verify that the setup screen appears before handing over a phone home tech guide articles how to erase phone before selling"
+    },
+    {
       "route": "/articles/how-to-read-energyguide-label/",
       "title": "How to Read an EnergyGuide Label",
       "description": "Learn what the yellow EnergyGuide label says about annual energy use, estimated operating cost, similar-model comparisons, capacity, and local-rate recalculation.",
@@ -794,6 +810,14 @@
       "searchText": "how to spot a fake online review no single clue proves a review is fake compare sources timing reviewer history incentives listing changes and recurring product specific details shop smarter guide articles how to spot fake online reviews"
     },
     {
+      "route": "/articles/how-to-verify-product-safety-certification/",
+      "title": "How to Verify UL, ETL, CSA, and FCC Marks",
+      "description": "A logo printed on a label is only a lead. Match the exact company, model, identifier, product category, standard, and certification status against the issuing organization’s official directory.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "how to verify ul etl csa and fcc marks a logo printed on a label is only a lead match the exact company model identifier product category standard and certification status against the issuing organization s official directory tools guide articles how to verify product safety certification"
+    },
+    {
       "route": "/articles/is-freezer-burn-safe-to-eat/",
       "title": "Is Freezer Burn Safe to Eat?",
       "description": "What freezer burn means, why it affects quality more than safety, and when a damaged package calls for a different decision.",
@@ -808,6 +832,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "is it safe to leave a laptop plugged in all the time modern laptops should stop active charging at their target level but prolonged time at full charge and high temperature can accelerate battery aging home tech guide articles leave laptop plugged in all the time"
+    },
+    {
+      "route": "/articles/mattress-warranty-terms-explained/",
+      "title": "Mattress Warranty Terms Explained: Indentations, Foundations, and Claims",
+      "description": "A long warranty does not guarantee comfort or cover every sag. Read the measurable indentation threshold, foundation requirements, exclusions, claim costs, evidence rules, and transfer terms.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "mattress warranty terms explained indentations foundations and claims a long warranty does not guarantee comfort or cover every sag read the measurable indentation threshold foundation requirements exclusions claim costs evidence rules and transfer terms tools guide articles mattress warranty terms explained"
     },
     {
       "route": "/articles/mesh-wifi-vs-range-extender/",
@@ -832,6 +864,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to organize a refrigerator for food safety and less waste keep the refrigerator at 40 f or below preserve airflow contain raw food leaks date leftovers and create a visible use first area to reduce waste kitchen guide articles organize refrigerator food safety"
+    },
+    {
+      "route": "/articles/password-manager-migration-checklist/",
+      "title": "Password Manager Migration Checklist: Move Without Locking Yourself Out",
+      "description": "Secure the destination vault first, export as little plaintext as possible, verify critical accounts, transfer passkeys and authentication methods separately, and delete temporary files.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "password manager migration checklist move without locking yourself out secure the destination vault first export as little plaintext as possible verify critical accounts transfer passkeys and authentication methods separately and delete temporary files tools guide articles password manager migration checklist"
     },
     {
       "route": "/articles/portable-ac-cost-to-run/",

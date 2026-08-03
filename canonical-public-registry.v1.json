@@ -827,6 +827,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/can-you-freeze-cheese/",
+      "title": "Can You Freeze Cheese? What Freezes Well and What Changes Texture",
+      "description": "Most firm cheeses can be frozen for cooking, although they may become drier or more crumbly. Fresh and high-moisture cheeses usually show larger texture changes.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Many firm and semi-firm cheeses can be frozen, especially for later cooking. Thawed cheese may be drier, more crumbly, grainy, or separated, and fresh high-moisture varieties generally change the most.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No varieties were frozen and compared side by side for this guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/can-you-freeze-eggs/",
       "title": "Can You Freeze Eggs?",
       "description": "How to freeze raw egg whites or whole eggs safely without putting shell eggs in the freezer.",
@@ -5464,6 +5495,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/how-to-erase-phone-before-selling/",
+      "title": "How to Erase an Old Phone Before You Sell or Trade It In",
+      "description": "Transfer data and authentication methods first, remove account locks, handle SIM and eSIM service, perform the built-in factory reset, and verify that the setup screen appears before handing over a phone.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Do not erase the old phone until the replacement device can access essential data, phone service, email, password management, and multifactor authentication. Then remove account locks and removable cards, perform the operating system’s factory reset, and verify the initial setup screen.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No specific phone was transferred or erased for this guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/how-to-read-energyguide-label/",
       "title": "How to Read an EnergyGuide Label",
@@ -5605,6 +5667,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/how-to-verify-product-safety-certification/",
+      "title": "How to Verify UL, ETL, CSA, and FCC Marks",
+      "description": "A logo printed on a label is only a lead. Match the exact company, model, identifier, product category, standard, and certification status against the issuing organization’s official directory.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Verify a certification or authorization mark through the issuing organization’s official database and match the exact company, model, file number or identifier, product category, electrical rating, standard, country designation, and current status.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No physical label was authenticated and no laboratory testing was performed."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/is-freezer-burn-safe-to-eat/",
       "title": "Is Freezer Burn Safe to Eat?",
       "description": "What freezer burn means, why it affects quality more than safety, and when a damaged package calls for a different decision.",
@@ -5705,6 +5798,37 @@
           "/articles/why-bluetooth-keeps-disconnecting/",
           "/articles/can-100w-usb-c-charger-damage-phone/"
         ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/mattress-warranty-terms-explained/",
+      "title": "Mattress Warranty Terms Explained: Indentations, Foundations, and Claims",
+      "description": "A long warranty does not guarantee comfort or cover every sag. Read the measurable indentation threshold, foundation requirements, exclusions, claim costs, evidence rules, and transfer terms.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The warranty term is less important than the document’s definition of a covered defect, measurable indentation threshold, foundation requirements, exclusions, remedy, evidence rules, transportation costs, and transferability.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "No individual warranty claim was evaluated, and this is not legal advice."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
       },
       "media": [],
       "leadMedia": null
@@ -5915,6 +6039,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Food_Safety_-_Cut_Waste_in_Refrigerators_(20200605-FSIS-LSC-0017).jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/password-manager-migration-checklist/",
+      "title": "Password Manager Migration Checklist: Move Without Locking Yourself Out",
+      "description": "Secure the destination vault first, export as little plaintext as possible, verify critical accounts, transfer passkeys and authentication methods separately, and delete temporary files.",
+      "categoryId": "tools",
+      "topicId": "checklists",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Set up and secure the destination first, inventory special data, use an encrypted or direct transfer when available, verify critical credentials and recovery paths, transfer multifactor authentication and passkeys separately, then delete temporary plaintext files before retiring the old vault.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No universal cross-provider migration was performed because supported fields and formats differ."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -10160,5 +10315,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:cc9b19f23739252d0cab00e56c62bdfde1c34400033920f82a468ad587b020b4"
+  "registryDigest": "sha256:23142a120aa8b4ee760bc74e06ab5ad54ad7bb8464137bb8f4c77aea98e1705d"
 }
