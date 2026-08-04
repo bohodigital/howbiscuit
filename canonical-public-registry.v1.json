@@ -6449,6 +6449,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/internet-plan-total-cost-checklist/",
+      "title": "Internet Plan Total Cost Checklist: Price, Fees, Equipment, and Promotions",
+      "description": "Compare internet plans using the full monthly and first-year cost, not only the introductory headline price or advertised speed.",
+      "categoryId": "shop",
+      "topicId": "total-cost-ownership",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Record the standard monthly price, promotional duration, required equipment, installation, activation, taxes and government fees, data charges, contract term, termination fee, speed, latency, and discount conditions. Compare at least the first-year and post-promotion totals.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The checklist was not applied to a specific address, provider, network, or order.",
+          "It does not guarantee actual speed, availability, billing accuracy, or eligibility for discounts."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/is-food-in-dented-can-safe/",
       "title": "Is Food in a Dented Can Safe to Eat?",
       "description": "Learn which canned-food dents may be harmless and which seam damage, bulging, leaks, rust, or abnormal contents mean the can must be discarded.",
@@ -12229,7 +12261,7 @@
       "topicId": "total-cost-ownership",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-02",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12407,5 +12439,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:b5e47f8c4ba2194ef3da354e60cff22aafe5158cdd0261748df68da13522e7d3"
+  "registryDigest": "sha256:e141632e29425925037c9f9369c62fda8f01a5eed619dd5c10e730d74cbe345c"
 }
