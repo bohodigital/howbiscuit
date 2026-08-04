@@ -82,6 +82,14 @@
       "searchText": "can you put aluminum foil in an air fryer check the model first some air fryers allow foil and others prohibit it learn how model specific instructions airflow heater clearance and secure placement determine safe use kitchen guide articles aluminum foil in air fryer"
     },
     {
+      "route": "/articles/annual-home-maintenance-calendar/",
+      "title": "Annual Home Maintenance Calendar: A Month-by-Month Template",
+      "description": "A reusable month-by-month home maintenance schedule for filters, alarms, drains, exterior checks, heating and cooling equipment, records, and seasonal preparation.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "annual home maintenance calendar a month by month template a reusable month by month home maintenance schedule for filters alarms drains exterior checks heating and cooling equipment records and seasonal preparation tools guide articles annual home maintenance calendar"
+    },
+    {
       "route": "/articles/apartment-move-in-inspection-checklist/",
       "title": "Apartment Move-In Inspection Checklist: Document Damage Before You Unpack",
       "description": "Inspect every room before moving furniture inside. Photograph existing damage, test essential systems, and submit the condition report on time.",
@@ -112,6 +120,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "are extended warranties on appliances worth it compare the service contract with the manufacturer warranty repair risk deductibles exclusions shipping reimbursement limits claims process and provider reputation shop smarter guide articles appliance extended warranty worth it"
+    },
+    {
+      "route": "/articles/appliance-model-serial-inventory-template/",
+      "title": "Appliance Model and Serial Number Inventory Template",
+      "description": "A copy-ready appliance inventory for model numbers, serial numbers, purchase dates, warranties, receipts, recalls, manuals, service history, and replacement parts.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "appliance model and serial number inventory template a copy ready appliance inventory for model numbers serial numbers purchase dates warranties receipts recalls manuals service history and replacement parts tools guide articles appliance model serial inventory template"
     },
     {
       "route": "/articles/best-place-to-put-wifi-router/",
@@ -914,6 +930,14 @@
       "searchText": "is freezer burn safe to eat what freezer burn means why it affects quality more than safety and when a damaged package calls for a different decision kitchen guide articles is freezer burn safe to eat"
     },
     {
+      "route": "/articles/laptop-connected-wifi-no-internet/",
+      "title": "Laptop Connected to Wi-Fi but No Internet? Test the Connection in Order",
+      "description": "A step-by-step way to separate a laptop problem, router problem, DNS failure, captive portal, or internet-service outage without changing random settings.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "laptop connected to wi fi but no internet test the connection in order a step by step way to separate a laptop problem router problem dns failure captive portal or internet service outage without changing random settings home tech guide articles laptop connected wifi no internet"
+    },
+    {
       "route": "/articles/leave-laptop-plugged-in-all-the-time/",
       "title": "Is It Safe to Leave a Laptop Plugged In All the Time?",
       "description": "Modern laptops should stop active charging at their target level, but prolonged time at full charge and high temperature can accelerate battery aging.",
@@ -1138,12 +1162,28 @@
       "searchText": "tank vs tankless water heater which is better for your home storage heaters provide a hot water reserve tankless units heat on demand but remain limited by flow temperature rise gas or electrical service venting and simultaneous fixtures home apartment guide articles tank vs tankless water heater"
     },
     {
+      "route": "/articles/used-dehumidifier-inspection-checklist/",
+      "title": "Used Dehumidifier Inspection Checklist: Recall, Fan, Bucket, Drain, and Frost",
+      "description": "Check a secondhand dehumidifier for fire recalls, water damage, missing parts, fan and compressor problems, drain leaks, frost, and poor collection before buying.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "used dehumidifier inspection checklist recall fan bucket drain and frost check a secondhand dehumidifier for fire recalls water damage missing parts fan and compressor problems drain leaks frost and poor collection before buying shop smarter guide articles used dehumidifier inspection checklist"
+    },
+    {
       "route": "/articles/used-laptop-inspection-checklist/",
       "title": "Used Laptop Inspection Checklist: Hardware, Battery, and Account Checks",
       "description": "Inspect a used laptop for recalls, battery health, display and keyboard faults, ports, storage, charging, account locks, repair history, and ownership before paying.",
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "used laptop inspection checklist hardware battery and account checks inspect a used laptop for recalls battery health display and keyboard faults ports storage charging account locks repair history and ownership before paying shop smarter guide articles used laptop inspection checklist"
+    },
+    {
+      "route": "/articles/used-microwave-inspection-checklist/",
+      "title": "Used Microwave Inspection Checklist: Door, Interior, Cord, and Recall Check",
+      "description": "Inspect a secondhand microwave for door damage, arcing, cord problems, recalls, missing labels, and unsafe repairs before paying or bringing it home.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "used microwave inspection checklist door interior cord and recall check inspect a secondhand microwave for door damage arcing cord problems recalls missing labels and unsafe repairs before paying or bringing it home shop smarter guide articles used microwave inspection checklist"
     },
     {
       "route": "/articles/used-tv-inspection-checklist/",
@@ -1184,6 +1224,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "what temperature should a water heater be set to for most residential applications 120 f is the ordinary starting point learn how scald risk bacteria mixing valves appliance needs and system type affect the setting home apartment guide articles water heater temperature setting"
+    },
+    {
+      "route": "/articles/webcam-not-working-troubleshooting/",
+      "title": "Webcam Not Working? Check the Shutter, Permissions, App, and Driver",
+      "description": "A practical order for diagnosing a black webcam, missing camera, privacy block, app conflict, USB problem, or driver failure without weakening security settings.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "webcam not working check the shutter permissions app and driver a practical order for diagnosing a black webcam missing camera privacy block app conflict usb problem or driver failure without weakening security settings home tech guide articles webcam not working troubleshooting"
     },
     {
       "route": "/articles/what-can-air-purifier-remove/",
@@ -1330,6 +1378,14 @@
       "searchText": "why is my computer storage full find what is filling a windows pc or mac safely remove temporary files and old downloads and avoid deleting important system data home tech guide articles why computer storage full"
     },
     {
+      "route": "/articles/why-cut-apples-turn-brown/",
+      "title": "Why Do Cut Apples Turn Brown, and How Can You Slow It Down?",
+      "description": "Cut apples brown because oxygen reaches enzymes inside damaged cells. Learn which treatments actually slow browning and when color change becomes spoilage.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why do cut apples turn brown and how can you slow it down cut apples brown because oxygen reaches enzymes inside damaged cells learn which treatments actually slow browning and when color change becomes spoilage kitchen guide articles why cut apples turn brown"
+    },
+    {
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -1394,6 +1450,14 @@
       "searchText": "why is my electric bill so high in summer a high summer electric bill usually comes from more cooling hours higher rates a longer billing period air leaks or an inefficient system here is how to identify the cause home apartment guide articles why electric bill high summer"
     },
     {
+      "route": "/articles/why-electrical-outlet-feels-warm/",
+      "title": "Why Does an Electrical Outlet Feel Warm? When to Unplug and Stop",
+      "description": "A safety-first guide to warmth at outlets, switches, plugs, and wall plates, including ordinary charger heat, overload warning signs, and urgent stop conditions.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does an electrical outlet feel warm when to unplug and stop a safety first guide to warmth at outlets switches plugs and wall plates including ordinary charger heat overload warning signs and urgent stop conditions home apartment guide articles why electrical outlet feels warm"
+    },
+    {
       "route": "/articles/why-faucet-keeps-dripping/",
       "title": "Why Does My Faucet Keep Dripping?",
       "description": "A drip from the spout usually means an internal seal, washer, cartridge, valve seat, or ceramic component is no longer sealing.",
@@ -1424,6 +1488,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why did my garlic turn blue or green learn why garlic turns blue or green in vinegar lemon pickles and acidic cooking when the color is harmless and how to distinguish it from mold kitchen guide articles why garlic turns blue green"
+    },
+    {
+      "route": "/articles/why-hard-boiled-egg-yolk-turns-green/",
+      "title": "Why Does a Hard-Boiled Egg Yolk Turn Green?",
+      "description": "The green-gray ring around a hard-cooked egg yolk is usually a harmless iron-and-sulfur reaction caused by overcooking or slow cooling.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does a hard boiled egg yolk turn green the green gray ring around a hard cooked egg yolk is usually a harmless iron and sulfur reaction caused by overcooking or slow cooling kitchen guide articles why hard boiled egg yolk turns green"
     },
     {
       "route": "/articles/why-honey-crystallizes/",
@@ -1624,6 +1696,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why is my water heater popping or rumbling learn why a tank water heater pops rumbles crackles or sizzles and when sediment scale pressure leaks or combustion problems require service home apartment guide articles why water heater popping rumbling"
+    },
+    {
+      "route": "/articles/why-water-pipes-bang/",
+      "title": "Why Do Water Pipes Bang? How to Recognize Water Hammer",
+      "description": "Learn why pipes thump when a valve closes, how to distinguish water hammer from loose piping, and when a plumbing pressure problem needs professional attention.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why do water pipes bang how to recognize water hammer learn why pipes thump when a valve closes how to distinguish water hammer from loose piping and when a plumbing pressure problem needs professional attention home apartment guide articles why water pipes bang"
     },
     {
       "route": "/articles/why-window-air-conditioner-leaking-water-inside/",

@@ -421,6 +421,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/annual-home-maintenance-calendar/",
+      "title": "Annual Home Maintenance Calendar: A Month-by-Month Template",
+      "description": "A reusable month-by-month home maintenance schedule for filters, alarms, drains, exterior checks, heating and cooling equipment, records, and seasonal preparation.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Use a calendar that spreads inspection, cleaning, documentation, and seasonal preparation across the year. Adjust the month for local climate and always follow equipment manuals, lease rules, and professional service requirements.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The calendar was not applied to a specific building.",
+          "It does not replace equipment manuals, landlord duties, inspections, or licensed trade work."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/apartment-move-in-inspection-checklist/",
       "title": "Apartment Move-In Inspection Checklist: Document Damage Before You Unpack",
       "description": "Inspect every room before moving furniture inside. Photograph existing damage, test essential systems, and submit the condition report on time.",
@@ -621,6 +653,38 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Food_Safety_-_Cut_Waste_in_Refrigerators_(20200605-FSIS-LSC-0017).jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/appliance-model-serial-inventory-template/",
+      "title": "Appliance Model and Serial Number Inventory Template",
+      "description": "A copy-ready appliance inventory for model numbers, serial numbers, purchase dates, warranties, receipts, recalls, manuals, service history, and replacement parts.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Create one record per appliance with the exact model and serial numbers, label photo, purchase and installation dates, seller, receipt, warranty, manual, service history, recall checks, and safe shutoff information. Store a backup away from the home.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The template was not completed for a specific household.",
+          "It does not establish ownership, coverage, warranty eligibility, or recall status by itself."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -6138,6 +6202,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/laptop-connected-wifi-no-internet/",
+      "title": "Laptop Connected to Wi-Fi but No Internet? Test the Connection in Order",
+      "description": "A step-by-step way to separate a laptop problem, router problem, DNS failure, captive portal, or internet-service outage without changing random settings.",
+      "categoryId": "home-tech",
+      "topicId": "wifi-routers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A Wi-Fi connection only proves that the laptop joined the local wireless network. Test another website, another device, the router, and the laptop’s network settings in that order to locate the actual break.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No specific laptop, router, modem, VPN, or internet provider was tested.",
+          "The guide cannot diagnose a provider outage or damaged network hardware remotely."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/leave-laptop-plugged-in-all-the-time/",
       "title": "Is It Safe to Leave a Laptop Plugged In All the Time?",
       "description": "Modern laptops should stop active charging at their target level, but prolonged time at full charge and high temperature can accelerate battery aging.",
@@ -7540,6 +7636,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/used-dehumidifier-inspection-checklist/",
+      "title": "Used Dehumidifier Inspection Checklist: Recall, Fan, Bucket, Drain, and Frost",
+      "description": "Check a secondhand dehumidifier for fire recalls, water damage, missing parts, fan and compressor problems, drain leaks, frost, and poor collection before buying.",
+      "categoryId": "shop",
+      "topicId": "used-refurbished",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Do not buy a used dehumidifier until the exact model and serial range have been checked for recalls. Then inspect the cord, housing, filter, bucket, drain, fan, compressor, frost behavior, and actual water collection under humid conditions.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No dehumidifier, room humidity, temperature, drain setup, electrical circuit, or seller was tested.",
+          "This checklist cannot reveal all sealed-system, refrigerant, insulation, or internal electrical faults."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/used-laptop-inspection-checklist/",
       "title": "Used Laptop Inspection Checklist: Hardware, Battery, and Account Checks",
       "description": "Inspect a used laptop for recalls, battery health, display and keyboard faults, ports, storage, charging, account locks, repair history, and ownership before paying.",
@@ -7567,6 +7695,38 @@
           "/articles/check-recalls-before-buying-used-product/",
           "/articles/new-vs-used-refurbished-open-box-appliances/"
         ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/used-microwave-inspection-checklist/",
+      "title": "Used Microwave Inspection Checklist: Door, Interior, Cord, and Recall Check",
+      "description": "Inspect a secondhand microwave for door damage, arcing, cord problems, recalls, missing labels, and unsafe repairs before paying or bringing it home.",
+      "categoryId": "shop",
+      "topicId": "used-refurbished",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Buy a used microwave only when the exact model is identifiable, the recall check is clear, the door closes squarely, the cord and enclosure are undamaged, the interior shows no serious arcing, and the unit heats water normally without odor, noise, or sparking.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No microwave, leakage meter, electrical circuit, seller, model, or transaction was inspected.",
+          "This checklist cannot certify a repaired or damaged oven as safe."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
       },
       "media": [],
       "leadMedia": null
@@ -7805,6 +7965,38 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hot_water_storage.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/webcam-not-working-troubleshooting/",
+      "title": "Webcam Not Working? Check the Shutter, Permissions, App, and Driver",
+      "description": "A practical order for diagnosing a black webcam, missing camera, privacy block, app conflict, USB problem, or driver failure without weakening security settings.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with the physical shutter or camera key, then test the camera in the operating system’s own app. If it works there, fix the affected app; if it fails everywhere, check permissions, connections, updates, and the device driver.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No webcam model, operating system build, conference app, or managed device was tested.",
+          "Hardware damage, internal cable faults, and organization policy cannot be ruled out remotely."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -8773,6 +8965,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-cut-apples-turn-brown/",
+      "title": "Why Do Cut Apples Turn Brown, and How Can You Slow It Down?",
+      "description": "Cut apples brown because oxygen reaches enzymes inside damaged cells. Learn which treatments actually slow browning and when color change becomes spoilage.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cut apples turn brown when cutting damages their cells and exposes enzymes and plant compounds to oxygen. Acidic liquids, ascorbic acid, cold storage, and limiting air exposure can slow the reaction, but they do not make cut fruit shelf-stable.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No apple variety, treatment, storage temperature, or browning rate was tested.",
+          "The guide does not establish a safety time for fruit left unrefrigerated beyond general cut-produce guidance."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-dishwasher-leaves-white-film/",
       "title": "Why Does My Dishwasher Leave a White Film on Dishes?",
       "description": "White film on dishwasher loads is often mineral residue or detergent film, but permanent glass etching can look similar. Use a simple wipe test, then adjust water, detergent, and rinse aid.",
@@ -9292,6 +9516,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-electrical-outlet-feels-warm/",
+      "title": "Why Does an Electrical Outlet Feel Warm? When to Unplug and Stop",
+      "description": "A safety-first guide to warmth at outlets, switches, plugs, and wall plates, including ordinary charger heat, overload warning signs, and urgent stop conditions.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A wall outlet or switch should not become distinctly hot. Unplug the load and stop using the outlet if it is hot, discolored, buzzing, sparking, loose, or smells burned; those signs can indicate overload, a poor connection, or damaged wiring.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No outlet temperature, load, circuit, wiring method, breaker, device, or building was inspected.",
+          "This guide cannot determine whether concealed wiring is loose or damaged."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-faucet-keeps-dripping/",
       "title": "Why Does My Faucet Keep Dripping?",
       "description": "A drip from the spout usually means an internal seal, washer, cartridge, valve seat, or ceramic component is no longer sealing.",
@@ -9457,6 +9713,38 @@
           "/articles/how-does-baking-powder-work/",
           "/articles/can-you-use-soap-on-cast-iron/"
         ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-hard-boiled-egg-yolk-turns-green/",
+      "title": "Why Does a Hard-Boiled Egg Yolk Turn Green?",
+      "description": "The green-gray ring around a hard-cooked egg yolk is usually a harmless iron-and-sulfur reaction caused by overcooking or slow cooling.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A green-gray ring around a hard-cooked yolk usually forms when sulfur from the egg white reacts with iron in the yolk. It is generally harmless and is encouraged by prolonged heating or slow cooling.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No eggs, cooking method, altitude, cooling method, or storage history was tested.",
+          "The guide does not diagnose spoilage from appearance alone."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
       },
       "media": [],
       "leadMedia": null
@@ -10559,6 +10847,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-water-pipes-bang/",
+      "title": "Why Do Water Pipes Bang? How to Recognize Water Hammer",
+      "description": "Learn why pipes thump when a valve closes, how to distinguish water hammer from loose piping, and when a plumbing pressure problem needs professional attention.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A sharp bang immediately after a faucet, washer, dishwasher, or toilet valve closes is often water hammer: moving water stops suddenly and creates a pressure wave. Repeated knocking can also come from loose pipes or pressure problems.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No building pressure, pipe support, arrestor, valve, or plumbing layout was inspected.",
+          "This guide cannot identify concealed leakage or certify code compliance."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-window-air-conditioner-leaking-water-inside/",
       "title": "Why Is My Window Air Conditioner Leaking Water Inside?",
       "description": "Diagnose a window air conditioner leaking indoors by checking its outward slope, filter, ice buildup, drainage path, base pan, and window installation.",
@@ -10824,7 +11144,7 @@
       "topicId": "wifi-routers",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-01",
+      "updatedDate": "2026-08-03",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -11206,5 +11526,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:dd54ab023d6f7c93c307668489412734eec915ea695c1f42a5d9ef833c3af9b7"
+  "registryDigest": "sha256:afa9c50f4b5fb1fb2a67d7e5ecdf88d5ad14455647e358ce8d3190da992f7f79"
 }
