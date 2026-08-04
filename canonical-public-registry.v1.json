@@ -3567,6 +3567,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/home-router-security-checklist/",
+      "title": "Home Router Security Checklist: Passwords, Updates, Encryption, and Guests",
+      "description": "A practical checklist for securing a home Wi-Fi router without exposing the administration page, breaking connected devices, or forgetting recovery information.",
+      "categoryId": "home-tech",
+      "topicId": "wifi-routers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Change the router administrator password, use WPA2 or WPA3 with a strong Wi-Fi password, install firmware updates, disable unnecessary remote administration and obsolete features, separate guests and untrusted smart devices where possible, and keep a private recovery record.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No router, mesh system, internet provider, firmware version, or connected device was tested.",
+          "This checklist cannot detect an existing compromise or prove that network isolation works on a specific model."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/home-service-call-notes-template/",
       "title": "Home Service Call Notes Template: Symptoms, Dates, Photos, and Follow-Up",
       "description": "A reusable record for documenting appliance, plumbing, electrical, HVAC, and household repair calls without relying on memory or vague verbal promises.",
@@ -12471,5 +12503,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:44cb9d2590f51c39cc6d583cfe28f5954a14fdf51e3dd6554359a4484c176c14"
+  "registryDigest": "sha256:358d42ca820f64b362e34618d60cb29e386396be57e1b9110dd0ae5a117a1414"
 }

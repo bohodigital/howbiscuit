@@ -554,6 +554,14 @@
       "searchText": "home network device inventory template know what is connected a reusable inventory for routers computers phones tvs cameras speakers appliances hubs accounts updates and retirement status tools guide articles home network device inventory template"
     },
     {
+      "route": "/articles/home-router-security-checklist/",
+      "title": "Home Router Security Checklist: Passwords, Updates, Encryption, and Guests",
+      "description": "A practical checklist for securing a home Wi-Fi router without exposing the administration page, breaking connected devices, or forgetting recovery information.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "home router security checklist passwords updates encryption and guests a practical checklist for securing a home wi fi router without exposing the administration page breaking connected devices or forgetting recovery information home tech guide articles home router security checklist"
+    },
+    {
       "route": "/articles/home-service-call-notes-template/",
       "title": "Home Service Call Notes Template: Symptoms, Dates, Photos, and Follow-Up",
       "description": "A reusable record for documenting appliance, plumbing, electrical, HVAC, and household repair calls without relying on memory or vague verbal promises.",
