@@ -554,6 +554,22 @@
       "searchText": "home network device inventory template know what is connected a reusable inventory for routers computers phones tvs cameras speakers appliances hubs accounts updates and retirement status tools guide articles home network device inventory template"
     },
     {
+      "route": "/articles/home-stairway-safety-checklist/",
+      "title": "Home Stairway Safety Checklist: Lighting, Handrails, Treads, and Clutter",
+      "description": "Inspect household stairs for fall hazards, loose rails, poor lighting, damaged treads, rugs, cords, gates, and changing mobility needs.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "home stairway safety checklist lighting handrails treads and clutter inspect household stairs for fall hazards loose rails poor lighting damaged treads rugs cords gates and changing mobility needs home apartment guide articles home stairway safety checklist"
+    },
+    {
+      "route": "/articles/home-utility-shutoff-checklist/",
+      "title": "Home Utility Shutoff Checklist: Water, Electricity, and Gas",
+      "description": "A preparation checklist for locating, labeling, documenting, and safely using household utility shutoffs before a leak, storm, fire, or evacuation.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "home utility shutoff checklist water electricity and gas a preparation checklist for locating labeling documenting and safely using household utility shutoffs before a leak storm fire or evacuation home apartment guide articles home utility shutoff checklist"
+    },
+    {
       "route": "/articles/home-water-leak-triage-checklist/",
       "title": "Home Water Leak Triage Checklist: Shut Off, Document, Dry, and Escalate",
       "description": "Use this practical first-response checklist for plumbing leaks, appliance failures, ceiling drips, and other household water damage.",
@@ -1080,6 +1096,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to organize a refrigerator for food safety and less waste keep the refrigerator at 40 f or below preserve airflow contain raw food leaks date leftovers and create a visible use first area to reduce waste kitchen guide articles organize refrigerator food safety"
+    },
+    {
+      "route": "/articles/parchment-paper-in-air-fryer/",
+      "title": "Can You Put Parchment Paper in an Air Fryer? Check the Manual First",
+      "description": "Parchment can block airflow or reach the heater if used incorrectly. Learn when a model permits it, how to keep it weighted, and why loose paper during preheating can burn.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you put parchment paper in an air fryer check the manual first parchment can block airflow or reach the heater if used incorrectly learn when a model permits it how to keep it weighted and why loose paper during preheating can burn kitchen guide articles parchment paper in air fryer"
     },
     {
       "route": "/articles/password-manager-migration-checklist/",
@@ -1664,6 +1688,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my hot water run out so fast hot water may run out because demand increased the tank is undersized recovery is slow an electric element failed sediment accumulated or a mixing or dip tube problem exists home apartment guide articles why hot water runs out fast"
+    },
+    {
+      "route": "/articles/why-ice-cubes-smell-bad/",
+      "title": "Why Do Ice Cubes Smell Bad or Taste Strange?",
+      "description": "Old ice can absorb freezer odors, while water quality, stale filters, spills, plumbing, and dirty bins can also change taste and smell.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why do ice cubes smell bad or taste strange old ice can absorb freezer odors while water quality stale filters spills plumbing and dirty bins can also change taste and smell kitchen guide articles why ice cubes smell bad"
     },
     {
       "route": "/articles/why-is-my-dishwasher-not-drying-dishes/",

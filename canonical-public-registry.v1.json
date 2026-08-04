@@ -3567,6 +3567,70 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/home-stairway-safety-checklist/",
+      "title": "Home Stairway Safety Checklist: Lighting, Handrails, Treads, and Clutter",
+      "description": "Inspect household stairs for fall hazards, loose rails, poor lighting, damaged treads, rugs, cords, gates, and changing mobility needs.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Keep stairs well lit and clear, secure handrails, repair loose or uneven treads, remove sliding rugs and cords, mark hard-to-see changes, and use hardware-mounted gates at the top where child safety requires one. Escalate structural or code questions to a qualified professional.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The checklist was not applied to a specific stairway or building code.",
+          "It does not certify structural capacity, accessibility, code compliance, or suitability for an individual's medical needs."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-utility-shutoff-checklist/",
+      "title": "Home Utility Shutoff Checklist: Water, Electricity, and Gas",
+      "description": "A preparation checklist for locating, labeling, documenting, and safely using household utility shutoffs before a leak, storm, fire, or evacuation.",
+      "categoryId": "home",
+      "topicId": "utilities-energy",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Locate and label the water main, electrical panel, and gas utility controls before an emergency. Learn the building-specific procedure from the utility or qualified professional, keep the correct tools accessible, and never turn gas back on yourself after an emergency shutoff.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The checklist was not applied to a specific home, utility, panel, valve, or lease.",
+          "It does not authorize a resident to operate utility-owned equipment or enter a hazardous area."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/home-water-leak-triage-checklist/",
       "title": "Home Water Leak Triage Checklist: Shut Off, Document, Dry, and Escalate",
       "description": "Use this practical first-response checklist for plumbing leaks, appliance failures, ceiling drips, and other household water damage.",
@@ -6922,6 +6986,38 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Food_Safety_-_Cut_Waste_in_Refrigerators_(20200605-FSIS-LSC-0017).jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/parchment-paper-in-air-fryer/",
+      "title": "Can You Put Parchment Paper in an Air Fryer? Check the Manual First",
+      "description": "Parchment can block airflow or reach the heater if used incorrectly. Learn when a model permits it, how to keep it weighted, and why loose paper during preheating can burn.",
+      "categoryId": "kitchen",
+      "topicId": "kitchen-appliances",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Use parchment only when the exact air-fryer manual permits it. Keep it smaller than the basket, preserve airflow, place food on top before starting, and never allow loose paper to preheat where the fan can pull it into the heating element.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No air fryer, parchment brand, temperature, food load, or liner shape was tested.",
+          "This guide cannot approve parchment for a model whose manufacturer prohibits it."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -10464,6 +10560,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-ice-cubes-smell-bad/",
+      "title": "Why Do Ice Cubes Smell Bad or Taste Strange?",
+      "description": "Old ice can absorb freezer odors, while water quality, stale filters, spills, plumbing, and dirty bins can also change taste and smell.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Discard the affected ice, compare the water before freezing, clean the bin and refrigerator, seal strong-smelling food, replace the correct filter when due, and flush new plumbing or filters according to the manual. Stop using the water when the odor suggests contamination or the supply itself is abnormal.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No refrigerator, water sample, filter, plumbing, ice bin, or household food storage was inspected.",
+          "This guide cannot determine whether water is microbiologically or chemically safe."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-is-my-dishwasher-not-drying-dishes/",
       "title": "Why Is My Dishwasher Not Drying Dishes?",
       "description": "A model-aware checklist for wet dishes, including cycle settings, rinse aid, loading, plastics, and signs that service may be needed.",
@@ -12183,5 +12311,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:d187f7bc5627cfbc3ed42a428f8914ab4e43a549345f114cd2123bb7c3f11284"
+  "registryDigest": "sha256:a0fb73b7b98217ab69b5a2b5dfb1b8b41f02b8973abb5754583e3cfb47ec1230"
 }
