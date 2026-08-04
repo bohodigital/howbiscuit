@@ -3567,6 +3567,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/home-service-call-notes-template/",
+      "title": "Home Service Call Notes Template: Symptoms, Dates, Photos, and Follow-Up",
+      "description": "A reusable record for documenting appliance, plumbing, electrical, HVAC, and household repair calls without relying on memory or vague verbal promises.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Record the symptom, start date, operating conditions, model and serial number, photos, safety stop conditions, technician identity, diagnosis, work performed, parts, promises, next deadline, and final result. Preserve receipts and messages with the same record.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The template was not applied to a specific service company, landlord, product, warranty, or jurisdiction.",
+          "It does not determine liability, coverage, or the technical cause of a failure."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/home-stairway-safety-checklist/",
       "title": "Home Stairway Safety Checklist: Lighting, Handrails, Treads, and Clutter",
       "description": "Inspect household stairs for fall hazards, loose rails, poor lighting, damaged treads, rugs, cords, gates, and changing mobility needs.",
@@ -12439,5 +12471,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:e141632e29425925037c9f9369c62fda8f01a5eed619dd5c10e730d74cbe345c"
+  "registryDigest": "sha256:44cb9d2590f51c39cc6d583cfe28f5954a14fdf51e3dd6554359a4484c176c14"
 }
