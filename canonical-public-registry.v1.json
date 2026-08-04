@@ -587,6 +587,38 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/appliance-delivery-inspection-checklist/",
+      "title": "Appliance Delivery Inspection Checklist: Document Damage Before You Sign",
+      "description": "A practical checklist for inspecting a refrigerator, washer, dryer, range, dishwasher, or other major appliance during delivery and installation.",
+      "categoryId": "shop",
+      "topicId": "deals-worth-considering",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Before signing, photograph the packaging, verify the exact model, inspect all visible surfaces and connections, confirm included parts, and record any damage or installation exception on the delivery receipt. Do not let a rushed driver turn an undocumented defect into your problem.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The checklist was not applied to a specific delivery or retailer policy.",
+          "It does not create legal rights beyond the contract or applicable law."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/appliance-extended-warranty-worth-it/",
       "title": "Are Extended Warranties on Appliances Worth It?",
@@ -945,6 +977,38 @@
         "state": "not-hands-on-tested",
         "notes": [
           "No varieties were frozen and compared side by side for this guide."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/can-you-freeze-cream-cheese/",
+      "title": "Can You Freeze Cream Cheese? Yes, but Expect Texture Changes",
+      "description": "Cream cheese can be frozen for later cooking, but thawing often makes it grainy or crumbly. Learn how to portion, thaw, and use it safely.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cream cheese can be frozen, but ice formation often separates moisture and fat, leaving the thawed cheese grainy or crumbly. It is usually best for cooked dishes, fillings, and baking rather than smooth spreading.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No cream cheese brand, package, freezer, thawing method, or recipe was tested.",
+          "The guide cannot predict whether a particular thawed package will meet a reader’s texture preference."
         ]
       },
       "relatedContent": {
@@ -2680,6 +2744,38 @@
           "/articles/power-strip-vs-surge-protector/",
           "/articles/home-fire-escape-plan-checklist/"
         ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/emergency-document-checklist/",
+      "title": "Emergency Document Checklist: What to Copy, Protect, and Carry",
+      "description": "A practical checklist for organizing identity, insurance, property, medical, household, and financial records before an emergency disrupts normal access.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Create a compact paper set for immediate needs and an encrypted digital backup for complete records. Include identity, household, insurance, property, medical-summary, financial-contact, and recovery information while minimizing unnecessary sensitive data in the portable copy.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The checklist was not applied to a specific household or jurisdiction.",
+          "It does not replace legal, financial, medical, insurance, or agency-specific document requirements."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
       },
       "media": [],
       "leadMedia": null
@@ -6202,6 +6298,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/keyboard-typing-wrong-characters/",
+      "title": "Keyboard Typing the Wrong Characters? Check Layout, Num Lock, and Hardware",
+      "description": "Fix swapped symbols, unexpected numbers, accented letters, repeated keys, and mismatched keyboard layouts without randomly remapping the entire keyboard.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "If many symbols move in a consistent pattern, check the active language and keyboard layout. If a small group of letter keys types numbers, check Num Lock or an embedded keypad. If only one key misbehaves across devices and apps, suspect dirt, damage, or hardware failure.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No keyboard, layout, accessibility setting, language pack, or hardware switch was tested.",
+          "This guide cannot diagnose liquid damage or internal keyboard-cable failure remotely."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/laptop-connected-wifi-no-internet/",
       "title": "Laptop Connected to Wi-Fi but No Internet? Test the Connection in Order",
       "description": "A step-by-step way to separate a laptop problem, router problem, DNS failure, captive portal, or internet-service outage without changing random settings.",
@@ -6403,6 +6531,38 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/moving-box-labeling-template/",
+      "title": "Moving Box Labeling Template: Room, Priority, Contents, and Handling",
+      "description": "A reusable box-label system for room destination, contents, priority, fragility, orientation, inventory number, and unpacking order.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Give every box a unique number and label at least two sides with destination room, short contents description, unpacking priority, and handling instructions. Keep valuable or sensitive details in a private inventory rather than on the box.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The template was not tested with a specific mover, storage facility, or insurance policy.",
+          "Color perception, language, weather, handling, and label adhesion affect real-world readability."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/new-vs-used-refurbished-open-box-appliances/",
       "title": "New vs. Used vs. Refurbished vs. Open-Box Appliances",
@@ -6469,6 +6629,38 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:OvenElectric.JPG",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/online-return-window-checklist/",
+      "title": "Online Return Window Checklist: Dates, Condition, Shipping, and Proof",
+      "description": "A step-by-step checklist for calculating an online return deadline, preserving item condition, obtaining authorization, documenting shipment, and tracking the refund.",
+      "categoryId": "shop",
+      "topicId": "deals-worth-considering",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Calculate the deadline from the seller’s actual policy, document the item and packaging, request required authorization, use the correct return address and carrier method, save acceptance and tracking proof, and monitor the refund until it posts.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The checklist was not applied to a particular retailer, marketplace, transaction, or state law.",
+          "It does not determine whether a seller must accept a return or how a dispute will be resolved."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -8804,6 +8996,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-bread-dough-does-not-rise/",
+      "title": "Why Is My Bread Dough Not Rising? Check Yeast, Temperature, Time, and Dough",
+      "description": "A troubleshooting guide for bread dough that stays dense, rises slowly, collapses, or never becomes puffy after mixing.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Dough usually fails to rise because the yeast is inactive, the dough is too cold or dry, salt or heat damaged the yeast, fermentation needs more time, or the dough structure cannot retain gas. Diagnose the dough before adding more yeast blindly.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No recipe, yeast batch, dough temperature, flour, proofing box, or oven was tested.",
+          "The guide cannot correct a fundamentally unbalanced recipe without ingredient weights."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-bread-goes-stale-in-refrigerator/",
       "title": "Why Bread Goes Stale Faster in the Refrigerator",
       "description": "Refrigeration can slow mold, but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale.",
@@ -8922,6 +9146,38 @@
         "state": "not-hands-on-tested",
         "notes": [
           "No energized panel, circuit, appliance, or breaker was inspected or tested."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-computer-clock-keeps-changing/",
+      "title": "Why Does My Computer Clock Keep Changing?",
+      "description": "Fix a computer clock that drifts, jumps to the wrong hour, resets after shutdown, or shows the wrong time zone without guessing at hardware first.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "First verify the time zone and automatic time settings. A consistent one-hour shift usually points to time zone or daylight-saving configuration; gradual drift can be synchronization trouble; a date that resets after power-off can indicate firmware settings or a failing clock battery.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No computer, firmware, network, battery, domain policy, or operating-system build was tested.",
+          "This guide cannot confirm a hardware clock-battery failure remotely."
         ]
       },
       "relatedContent": {
@@ -9443,6 +9699,38 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linksys-Wireless-G-Router.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-door-sticks-humid-weather/",
+      "title": "Why Does a Door Stick in Humid Weather?",
+      "description": "Wood doors and frames can swell as moisture rises, but sticking can also reveal hinge movement, paint buildup, settlement, or water damage.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Humidity can raise the moisture content of wood, making a door or frame expand enough to rub. Before sanding, find the exact contact point and check hinges, paint, leaks, frame movement, and seasonal history so you do not remove too much material.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No door, frame, hinge, moisture level, finish, leak, or building movement was inspected.",
+          "This guide cannot distinguish ordinary seasonal movement from structural settlement without an onsite assessment."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -10241,6 +10529,38 @@
         "sourceUrl": null,
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-lights-dim-when-appliance-starts/",
+      "title": "Why Do Lights Dim When an Appliance Starts?",
+      "description": "Brief dimming can come from motor starting current, but repeated or severe voltage changes may point to overloaded circuits, loose connections, or utility trouble.",
+      "categoryId": "home",
+      "topicId": "utilities-energy",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A very brief, slight dip can occur when a motor or compressor draws extra current at startup. Dimming that is deep, prolonged, worsening, affects many circuits, or comes with heat, odor, buzzing, or brightening needs electrical or utility investigation.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No circuit voltage, branch wiring, service neutral, appliance starting current, panel, or utility feed was measured.",
+          "This guide cannot determine whether a specific voltage dip is within equipment or utility limits."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -11475,6 +11795,23 @@
       "featured": false
     },
     {
+      "kind": "topic",
+      "renderMode": "canonical-source",
+      "route": "/tools/templates/",
+      "title": "Templates",
+      "description": "Reusable planning, comparison, inventory, maintenance, budgeting, and documentation templates.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-03",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
       "kind": "tool",
       "renderMode": "canonical-source",
       "route": "/tools/us-crop-production-trend-explorer/",
@@ -11526,5 +11863,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:afa9c50f4b5fb1fb2a67d7e5ecdf88d5ad14455647e358ce8d3190da992f7f79"
+  "registryDigest": "sha256:7fb8b3f5b291cf2c7657674b76c93d204e81a7c3f2db5c63a7fd6f99e088ebf3"
 }

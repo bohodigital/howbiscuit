@@ -114,6 +114,14 @@
       "searchText": "appliance buying checklist measurements hookups delivery warranty and recalls measure the space and delivery route verify every hookup read energyguide and warranty terms inspect delivery damage check recalls and document installation shop smarter guide articles appliance buying checklist"
     },
     {
+      "route": "/articles/appliance-delivery-inspection-checklist/",
+      "title": "Appliance Delivery Inspection Checklist: Document Damage Before You Sign",
+      "description": "A practical checklist for inspecting a refrigerator, washer, dryer, range, dishwasher, or other major appliance during delivery and installation.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "appliance delivery inspection checklist document damage before you sign a practical checklist for inspecting a refrigerator washer dryer range dishwasher or other major appliance during delivery and installation shop smarter guide articles appliance delivery inspection checklist"
+    },
+    {
       "route": "/articles/appliance-extended-warranty-worth-it/",
       "title": "Are Extended Warranties on Appliances Worth It?",
       "description": "Compare the service contract with the manufacturer warranty, repair risk, deductibles, exclusions, shipping, reimbursement limits, claims process, and provider reputation.",
@@ -176,6 +184,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "can you freeze cheese what freezes well and what changes texture most firm cheeses can be frozen for cooking although they may become drier or more crumbly fresh and high moisture cheeses usually show larger texture changes kitchen guide articles can you freeze cheese"
+    },
+    {
+      "route": "/articles/can-you-freeze-cream-cheese/",
+      "title": "Can You Freeze Cream Cheese? Yes, but Expect Texture Changes",
+      "description": "Cream cheese can be frozen for later cooking, but thawing often makes it grainy or crumbly. Learn how to portion, thaw, and use it safely.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "can you freeze cream cheese yes but expect texture changes cream cheese can be frozen for later cooking but thawing often makes it grainy or crumbly learn how to portion thaw and use it safely kitchen guide articles can you freeze cream cheese"
     },
     {
       "route": "/articles/can-you-freeze-eggs/",
@@ -408,6 +424,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "electrical panel labeling checklist map every breaker without opening the panel safely map and label household breakers by testing one circuit at a time recording every affected light outlet and fixed appliance and never removing the panel cover tools guide articles electrical panel labeling checklist"
+    },
+    {
+      "route": "/articles/emergency-document-checklist/",
+      "title": "Emergency Document Checklist: What to Copy, Protect, and Carry",
+      "description": "A practical checklist for organizing identity, insurance, property, medical, household, and financial records before an emergency disrupts normal access.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "emergency document checklist what to copy protect and carry a practical checklist for organizing identity insurance property medical household and financial records before an emergency disrupts normal access tools guide articles emergency document checklist"
     },
     {
       "route": "/articles/energy-star-vs-energyguide/",
@@ -930,6 +954,14 @@
       "searchText": "is freezer burn safe to eat what freezer burn means why it affects quality more than safety and when a damaged package calls for a different decision kitchen guide articles is freezer burn safe to eat"
     },
     {
+      "route": "/articles/keyboard-typing-wrong-characters/",
+      "title": "Keyboard Typing the Wrong Characters? Check Layout, Num Lock, and Hardware",
+      "description": "Fix swapped symbols, unexpected numbers, accented letters, repeated keys, and mismatched keyboard layouts without randomly remapping the entire keyboard.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "keyboard typing the wrong characters check layout num lock and hardware fix swapped symbols unexpected numbers accented letters repeated keys and mismatched keyboard layouts without randomly remapping the entire keyboard home tech guide articles keyboard typing wrong characters"
+    },
+    {
       "route": "/articles/laptop-connected-wifi-no-internet/",
       "title": "Laptop Connected to Wi-Fi but No Internet? Test the Connection in Order",
       "description": "A step-by-step way to separate a laptop problem, router problem, DNS failure, captive portal, or internet-service outage without changing random settings.",
@@ -970,12 +1002,28 @@
       "searchText": "why does my monitor say no signal test the display chain in order diagnose a monitor that powers on but reports no signal by isolating the selected input cable port adapter dock graphics output and computer home tech guide articles monitor says no signal"
     },
     {
+      "route": "/articles/moving-box-labeling-template/",
+      "title": "Moving Box Labeling Template: Room, Priority, Contents, and Handling",
+      "description": "A reusable box-label system for room destination, contents, priority, fragility, orientation, inventory number, and unpacking order.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "moving box labeling template room priority contents and handling a reusable box label system for room destination contents priority fragility orientation inventory number and unpacking order tools guide articles moving box labeling template"
+    },
+    {
       "route": "/articles/new-vs-used-refurbished-open-box-appliances/",
       "title": "New vs. Used vs. Refurbished vs. Open-Box Appliances",
       "description": "Condition labels are not standardized. Verify the seller, exact model, serial, recall status, warranty, return policy, missing parts, damage, sanitation, and installation.",
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "new vs used vs refurbished vs open box appliances condition labels are not standardized verify the seller exact model serial recall status warranty return policy missing parts damage sanitation and installation shop smarter guide articles new vs used refurbished open box appliances"
+    },
+    {
+      "route": "/articles/online-return-window-checklist/",
+      "title": "Online Return Window Checklist: Dates, Condition, Shipping, and Proof",
+      "description": "A step-by-step checklist for calculating an online return deadline, preserving item condition, obtaining authorization, documenting shipment, and tracking the refund.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "online return window checklist dates condition shipping and proof a step by step checklist for calculating an online return deadline preserving item condition obtaining authorization documenting shipment and tracking the refund shop smarter guide articles online return window checklist"
     },
     {
       "route": "/articles/organize-refrigerator-food-safety/",
@@ -1338,6 +1386,14 @@
       "searchText": "why does bluetooth keep disconnecting repeated bluetooth drops usually come from low accessory power distance competing paired devices stale pairing data power saving settings software problems or failing hardware home tech guide articles why bluetooth keeps disconnecting"
     },
     {
+      "route": "/articles/why-bread-dough-does-not-rise/",
+      "title": "Why Is My Bread Dough Not Rising? Check Yeast, Temperature, Time, and Dough",
+      "description": "A troubleshooting guide for bread dough that stays dense, rises slowly, collapses, or never becomes puffy after mixing.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why is my bread dough not rising check yeast temperature time and dough a troubleshooting guide for bread dough that stays dense rises slowly collapses or never becomes puffy after mixing kitchen guide articles why bread dough does not rise"
+    },
+    {
       "route": "/articles/why-bread-goes-stale-in-refrigerator/",
       "title": "Why Bread Goes Stale Faster in the Refrigerator",
       "description": "Refrigeration can slow mold, but ordinary refrigerator temperatures accelerate the starch changes that make bread firm and stale.",
@@ -1368,6 +1424,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why does my circuit breaker keep tripping a breaker can trip because a circuit is overloaded an appliance or cord has failed wiring is shorted current is leaking to ground or an arc fault device detected abnormal arcing reset it once only when conditions are safe home apartment guide articles why circuit breaker keeps tripping"
+    },
+    {
+      "route": "/articles/why-computer-clock-keeps-changing/",
+      "title": "Why Does My Computer Clock Keep Changing?",
+      "description": "Fix a computer clock that drifts, jumps to the wrong hour, resets after shutdown, or shows the wrong time zone without guessing at hardware first.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "why does my computer clock keep changing fix a computer clock that drifts jumps to the wrong hour resets after shutdown or shows the wrong time zone without guessing at hardware first home tech guide articles why computer clock keeps changing"
     },
     {
       "route": "/articles/why-computer-storage-full/",
@@ -1440,6 +1504,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "why does my wi fi keep disconnecting repeated wi fi drops can come from weak signal one problem device modem trouble power saving saved settings or router faults diagnose them in this order home tech guide articles why does my wifi keep disconnecting"
+    },
+    {
+      "route": "/articles/why-door-sticks-humid-weather/",
+      "title": "Why Does a Door Stick in Humid Weather?",
+      "description": "Wood doors and frames can swell as moisture rises, but sticking can also reveal hinge movement, paint buildup, settlement, or water damage.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does a door stick in humid weather wood doors and frames can swell as moisture rises but sticking can also reveal hinge movement paint buildup settlement or water damage home apartment guide articles why door sticks humid weather"
     },
     {
       "route": "/articles/why-electric-bill-high-summer/",
@@ -1560,6 +1632,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why is my washing machine shaking or walking a washer often shakes because the load is unbalanced the machine is not level or shipping hardware remains installed stop it and check in a safe order home apartment guide articles why is washing machine shaking"
+    },
+    {
+      "route": "/articles/why-lights-dim-when-appliance-starts/",
+      "title": "Why Do Lights Dim When an Appliance Starts?",
+      "description": "Brief dimming can come from motor starting current, but repeated or severe voltage changes may point to overloaded circuits, loose connections, or utility trouble.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why do lights dim when an appliance starts brief dimming can come from motor starting current but repeated or severe voltage changes may point to overloaded circuits loose connections or utility trouble home apartment guide articles why lights dim when appliance starts"
     },
     {
       "route": "/articles/why-microwave-is-sparking/",
@@ -1944,6 +2024,14 @@
       "category": "Tools",
       "type": "Tool",
       "searchText": "household energy benchmark explorer compare approved state and united states residential electricity or natural gas aggregates by period with units and limitations kept visible tools tool tools household energy benchmark explorer"
+    },
+    {
+      "route": "/tools/templates/",
+      "title": "Templates",
+      "description": "Reusable planning, comparison, inventory, maintenance, budgeting, and documentation templates.",
+      "category": "Tools",
+      "type": "Topic",
+      "searchText": "templates reusable planning comparison inventory maintenance budgeting and documentation templates tools topic tools templates"
     },
     {
       "route": "/tools/us-crop-production-trend-explorer/",
