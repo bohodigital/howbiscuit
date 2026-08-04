@@ -338,6 +338,14 @@
       "searchText": "contractor estimate comparison checklist compare written scope materials exclusions schedule licensing insurance permits payment terms warranties and change order rules instead of choosing only by total price tools guide articles contractor estimate comparison checklist"
     },
     {
+      "route": "/articles/counterfeit-electrical-product-warning-signs/",
+      "title": "Counterfeit Electrical Product Warning Signs: Labels, Listings, Seller, and Build",
+      "description": "A practical inspection guide for suspicious chargers, power strips, cords, adapters, batteries, and small electrical products before they enter the home.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "counterfeit electrical product warning signs labels listings seller and build a practical inspection guide for suspicious chargers power strips cords adapters batteries and small electrical products before they enter the home shop smarter guide articles counterfeit electrical product warning signs"
+    },
+    {
       "route": "/articles/dehumidifier-running-not-collecting-water/",
       "title": "Why Is My Dehumidifier Running but Not Collecting Water?",
       "description": "A dehumidifier may stop collecting because the room is already below the setpoint, the room is too cold, airflow is blocked, the bucket or drain is wrong, or the compressor has failed.",
@@ -474,6 +482,14 @@
       "searchText": "how to fix wi fi dead zones without buying anything map the weak area move and raise the router try another band reduce interference and test one change at a time before buying mesh or an extender home tech guide articles fix wifi dead zones without buying anything"
     },
     {
+      "route": "/articles/freezer-inventory-template/",
+      "title": "Freezer Inventory Template: Track Food, Portions, Dates, and Use-First Items",
+      "description": "A copy-ready freezer inventory for food name, portion, freeze date, quantity, location, quality target, thawing plan, and use-first status.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "freezer inventory template track food portions dates and use first items a copy ready freezer inventory for food name portion freeze date quantity location quality target thawing plan and use first status tools guide articles freezer inventory template"
+    },
+    {
       "route": "/articles/front-load-washer-smells/",
       "title": "Why Does My Front-Load Washer Smell?",
       "description": "Musty odor often comes from moisture and detergent residue in the gasket, dispenser, drum, filter, or drain area. Clean the exact model correctly and prevent moisture from remaining.",
@@ -528,6 +544,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "home inventory checklist document your belongings before a loss photograph every room record valuable items and serial numbers preserve receipts store a copy away from home and update the inventory after major purchases tools guide articles home inventory checklist"
+    },
+    {
+      "route": "/articles/home-network-device-inventory-template/",
+      "title": "Home Network Device Inventory Template: Know What Is Connected",
+      "description": "A reusable inventory for routers, computers, phones, TVs, cameras, speakers, appliances, hubs, accounts, updates, and retirement status.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home network device inventory template know what is connected a reusable inventory for routers computers phones tvs cameras speakers appliances hubs accounts updates and retirement status tools guide articles home network device inventory template"
     },
     {
       "route": "/articles/home-water-leak-triage-checklist/",
@@ -866,6 +890,22 @@
       "searchText": "how to clean and sanitize a cutting board wash cutting boards with hot soapy water after each use sanitize after raw meat or other high risk contamination dry thoroughly and replace boards with deep grooves or damage kitchen guide articles how to clean and sanitize cutting board"
     },
     {
+      "route": "/articles/how-to-clean-coffee-maker/",
+      "title": "How to Clean a Coffee Maker: Wash, Descale, Rinse, and Dry",
+      "description": "A safe general method for cleaning a drip coffee maker while keeping washing, mineral-scale removal, rinsing, mold control, and electrical safety separate.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to clean a coffee maker wash descale rinse and dry a safe general method for cleaning a drip coffee maker while keeping washing mineral scale removal rinsing mold control and electrical safety separate kitchen guide articles how to clean coffee maker"
+    },
+    {
+      "route": "/articles/how-to-clean-computer-keyboard-safely/",
+      "title": "How to Clean a Computer Keyboard Without Damaging It",
+      "description": "Remove dust, crumbs, skin oil, and surface grime from laptop and desktop keyboards without flooding switches, prying off keycaps, or spraying cleaner into electronics.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to clean a computer keyboard without damaging it remove dust crumbs skin oil and surface grime from laptop and desktop keyboards without flooding switches prying off keycaps or spraying cleaner into electronics home tech guide articles how to clean computer keyboard safely"
+    },
+    {
       "route": "/articles/how-to-clean-dishwasher-filter/",
       "title": "How to Clean a Dishwasher Filter",
       "description": "A removable dishwasher filter can collect food, grit, labels, and debris. Here is how to locate, clean, inspect, and reinstall it without damaging the machine.",
@@ -968,6 +1008,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "laptop connected to wi fi but no internet test the connection in order a step by step way to separate a laptop problem router problem dns failure captive portal or internet service outage without changing random settings home tech guide articles laptop connected wifi no internet"
+    },
+    {
+      "route": "/articles/laptop-plugged-in-not-charging/",
+      "title": "Laptop Plugged In but Not Charging? Check Power, Limits, Heat, and Battery Health",
+      "description": "A safe troubleshooting order for a laptop that recognizes the charger but stays at the same percentage, charges slowly, or reports plugged in but not charging.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "laptop plugged in but not charging check power limits heat and battery health a safe troubleshooting order for a laptop that recognizes the charger but stays at the same percentage charges slowly or reports plugged in but not charging home tech guide articles laptop plugged in not charging"
     },
     {
       "route": "/articles/leave-laptop-plugged-in-all-the-time/",
@@ -1202,12 +1250,28 @@
       "searchText": "how to spot a fake online store before you buy verify the exact domain research the seller independently compare prices read return and shipping terms and avoid payment methods that make recovery difficult shop smarter guide articles spot fake online store before buying"
     },
     {
+      "route": "/articles/sump-pump-testing-checklist/",
+      "title": "Sump Pump Testing Checklist: Power, Float, Discharge, and Backup",
+      "description": "A safety-first checklist for testing a sump pump before heavy rain without touching live wiring, entering a flooded area, or assuming a motor sound proves water is moving.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "sump pump testing checklist power float discharge and backup a safety first checklist for testing a sump pump before heavy rain without touching live wiring entering a flooded area or assuming a motor sound proves water is moving home apartment guide articles sump pump testing checklist"
+    },
+    {
       "route": "/articles/tank-vs-tankless-water-heater/",
       "title": "Tank vs. Tankless Water Heater: Which Is Better for Your Home?",
       "description": "Storage heaters provide a hot-water reserve. Tankless units heat on demand but remain limited by flow, temperature rise, gas or electrical service, venting, and simultaneous fixtures.",
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "tank vs tankless water heater which is better for your home storage heaters provide a hot water reserve tankless units heat on demand but remain limited by flow temperature rise gas or electrical service venting and simultaneous fixtures home apartment guide articles tank vs tankless water heater"
+    },
+    {
+      "route": "/articles/used-coffee-maker-inspection-checklist/",
+      "title": "Used Coffee Maker Inspection Checklist: Cord, Reservoir, Heat, Leaks, and Recall",
+      "description": "Inspect a secondhand drip coffee maker for electrical damage, stale water, missing parts, leaks, overheating, mineral scale, and recalls before buying.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "used coffee maker inspection checklist cord reservoir heat leaks and recall inspect a secondhand drip coffee maker for electrical damage stale water missing parts leaks overheating mineral scale and recalls before buying shop smarter guide articles used coffee maker inspection checklist"
     },
     {
       "route": "/articles/used-dehumidifier-inspection-checklist/",
@@ -1368,6 +1432,14 @@
       "category": null,
       "type": "Editorial standard",
       "searchText": "why are some answers better than others a useful answer addresses the real question explains its reasoning shows the next move and makes the limits of its evidence visible editorial standard articles why are some answers better than others"
+    },
+    {
+      "route": "/articles/why-basement-smells-musty/",
+      "title": "Why Does My Basement Smell Musty? Find the Moisture Source First",
+      "description": "A musty basement odor usually points to moisture supporting mold, mildew, damp materials, or microbial growth. Trace water entry and humidity before deodorizing.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my basement smell musty find the moisture source first a musty basement odor usually points to moisture supporting mold mildew damp materials or microbial growth trace water entry and humidity before deodorizing home apartment guide articles why basement smells musty"
     },
     {
       "route": "/articles/why-bathroom-exhaust-fan-drips-water/",
@@ -1568,6 +1640,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why does a hard boiled egg yolk turn green the green gray ring around a hard cooked egg yolk is usually a harmless iron and sulfur reaction caused by overcooking or slow cooling kitchen guide articles why hard boiled egg yolk turns green"
+    },
+    {
+      "route": "/articles/why-homemade-mayonnaise-breaks/",
+      "title": "Why Does Homemade Mayonnaise Break? How to Rescue the Emulsion",
+      "description": "Mayonnaise separates when oil droplets join faster than egg and water can stabilize them. Learn how temperature, oil speed, ratios, and technique affect the emulsion.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why does homemade mayonnaise break how to rescue the emulsion mayonnaise separates when oil droplets join faster than egg and water can stabilize them learn how temperature oil speed ratios and technique affect the emulsion kitchen guide articles why homemade mayonnaise breaks"
     },
     {
       "route": "/articles/why-honey-crystallizes/",
