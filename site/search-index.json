@@ -594,6 +594,14 @@
       "searchText": "household emergency communication plan checklist choose household and out of area contacts identify meeting places document school and workplace plans account for medical and accessibility needs distribute printed copies and practice the plan tools guide articles household emergency communication plan checklist"
     },
     {
+      "route": "/articles/household-warranty-expiration-tracker/",
+      "title": "Household Warranty Expiration Tracker: Products, Receipts, Claims, and Deadlines",
+      "description": "A reusable tracker for product warranties, seller return windows, service contracts, credit-card benefits, registration, receipts, serial numbers, and claim deadlines.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "household warranty expiration tracker products receipts claims and deadlines a reusable tracker for product warranties seller return windows service contracts credit card benefits registration receipts serial numbers and claim deadlines tools guide articles household warranty expiration tracker"
+    },
+    {
       "route": "/articles/how-does-baking-powder-work/",
       "title": "How Does Baking Powder Work?",
       "description": "Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.",
@@ -1320,6 +1328,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "used microwave inspection checklist door interior cord and recall check inspect a secondhand microwave for door damage arcing cord problems recalls missing labels and unsafe repairs before paying or bringing it home shop smarter guide articles used microwave inspection checklist"
+    },
+    {
+      "route": "/articles/used-monitor-inspection-checklist/",
+      "title": "Used Monitor Inspection Checklist: Panel, Ports, Stand, and Ownership",
+      "description": "Inspect a secondhand computer monitor for panel defects, image retention, port damage, missing power parts, unstable stands, and account or workplace ownership issues.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "used monitor inspection checklist panel ports stand and ownership inspect a secondhand computer monitor for panel defects image retention port damage missing power parts unstable stands and account or workplace ownership issues home tech guide articles used monitor inspection checklist"
     },
     {
       "route": "/articles/used-tv-inspection-checklist/",

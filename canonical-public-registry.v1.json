@@ -3766,6 +3766,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/household-warranty-expiration-tracker/",
+      "title": "Household Warranty Expiration Tracker: Products, Receipts, Claims, and Deadlines",
+      "description": "A reusable tracker for product warranties, seller return windows, service contracts, credit-card benefits, registration, receipts, serial numbers, and claim deadlines.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Create one record per product with purchase and delivery dates, seller return deadline, warrantor, coverage period, serial number, receipt, registration, exclusions, service-contract details, claim contacts, and reminder dates. Store the documents with the tracker, not only the expiration date.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "The tracker was not applied to a specific product or legal jurisdiction.",
+          "It does not determine whether coverage exists, whether a term is enforceable, or whether a claim will be approved."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/how-does-baking-powder-work/",
       "title": "How Does Baking Powder Work?",
       "description": "Baking powder makes batter and dough rise by producing carbon dioxide bubbles. Here is what triggers it, what goes wrong, and how to test your can.",
@@ -8278,6 +8310,38 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/used-monitor-inspection-checklist/",
+      "title": "Used Monitor Inspection Checklist: Panel, Ports, Stand, and Ownership",
+      "description": "Inspect a secondhand computer monitor for panel defects, image retention, port damage, missing power parts, unstable stands, and account or workplace ownership issues.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-03",
+      "updatedDate": "2026-08-03",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Verify the exact model and seller's ownership, inspect the screen and housing while off, then test every intended input with known-good equipment. Reject a monitor with cracked glass, unstable mounting, burned connectors, severe flicker, intermittent power, or unresolved recall status.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "No monitor, colorimeter, cable, computer, power supply, panel, or seller was tested.",
+          "This checklist cannot certify electrical safety, color accuracy, or ownership."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/used-tv-inspection-checklist/",
       "title": "Used TV Inspection Checklist: Screen, Ports, Apps, and Ownership",
       "description": "Inspect a used television’s screen, inputs, sound, network connection, remote, stand, serial number, recall status, and factory-reset state before paying.",
@@ -12311,5 +12375,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:a0fb73b7b98217ab69b5a2b5dfb1b8b41f02b8973abb5754583e3cfb47ec1230"
+  "registryDigest": "sha256:fc9bfe5adc310b0a704db8e49cac4e826f2a8a510f172c7f6f0ee50ac43d13e4"
 }
