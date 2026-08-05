@@ -314,6 +314,14 @@
       "searchText": "how to check for recalls before buying a used product a used product can look perfect and still be recalled search the exact model serial number production date or vin before paying shop smarter guide articles check recalls before buying used product"
     },
     {
+      "route": "/articles/choose-car-battery-charger-maintainer/",
+      "title": "How to Choose a Car Battery Charger or Maintainer",
+      "description": "Compare automotive chargers and maintainers by voltage, chemistry, amp-hours, charging stages, protection, connection method, and storage use.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a car battery charger or maintainer compare automotive chargers and maintainers by voltage chemistry amp hours charging stages protection connection method and storage use shop smarter guide articles choose car battery charger maintainer"
+    },
+    {
       "route": "/articles/choose-emergency-flashlight/",
       "title": "How to Choose an Emergency Flashlight That Will Still Work When the Power Fails",
       "description": "Compare emergency flashlights by ANSI lumens, candela, runtime, beam, batteries, water resistance, impact resistance, and controls.",
@@ -346,6 +354,14 @@
       "searchText": "how to choose a home safe for fire and theft protection compare home safes by fire rating burglary resistance ul certification contents anchoring lock type water protection and location shop smarter guide articles choose home safe fire theft protection"
     },
     {
+      "route": "/articles/choose-paper-shredder-home-use/",
+      "title": "How to Choose a Paper Shredder for Home Use",
+      "description": "Compare paper shredders by strip, cross, or micro cut, sheet capacity, runtime, cooling, bin size, safety, maintenance, and recalls.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a paper shredder for home use compare paper shredders by strip cross or micro cut sheet capacity runtime cooling bin size safety maintenance and recalls shop smarter guide articles choose paper shredder home use"
+    },
+    {
       "route": "/articles/choose-portable-car-jump-starter/",
       "title": "How to Choose a Portable Jump Starter for Your Car",
       "description": "Choose a car jump starter by battery voltage, engine size, cold-weather support, clamps, reverse-polarity protection, override mode, and recalls.",
@@ -376,6 +392,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose a stud finder without trusting it with your life choose a stud finder by wall material scan depth center detection metal and wire sensing calibration batteries and safety limitations shop smarter guide articles choose stud finder wall scanner"
+    },
+    {
+      "route": "/articles/clean-drain-portable-air-conditioner-safely/",
+      "title": "How to Clean and Drain a Portable Air Conditioner Safely",
+      "description": "Clean portable AC filters, drain the lower tank, connect continuous drainage correctly, inspect the exhaust hose, and store the unit safely.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean and drain a portable air conditioner safely clean portable ac filters drain the lower tank connect continuous drainage correctly inspect the exhaust hose and store the unit safely home apartment guide articles clean drain portable air conditioner safely"
     },
     {
       "route": "/articles/clean-dryer-moisture-sensor/",
@@ -424,6 +448,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "how to clean a washing machine drain pump filter safely drain residual washer water remove and rinse a user serviceable pump filter reinstall it correctly and test the machine for leaks home apartment guide articles clean washing machine drain pump filter safely"
+    },
+    {
+      "route": "/articles/clear-stuck-print-queue-windows-11/",
+      "title": "How to Clear a Stuck Print Queue in Windows 11",
+      "description": "Cancel stuck print jobs, restart the Windows Print Spooler, clear spool files safely, and diagnose recurring printer queue failures.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to clear a stuck print queue in windows 11 cancel stuck print jobs restart the windows print spooler clear spool files safely and diagnose recurring printer queue failures home tech guide articles clear stuck print queue windows 11"
     },
     {
       "route": "/articles/clothes-taking-too-long-to-dry/",
@@ -488,6 +520,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "dehumidifier vs air conditioner which do you need an air conditioner removes heat and some moisture a dehumidifier removes moisture but returns heat to the room choose from temperature humidity moisture source and room conditions home tech guide articles dehumidifier vs air conditioner"
+    },
+    {
+      "route": "/articles/disable-startup-apps-windows-11-safely/",
+      "title": "How to Disable Startup Apps in Windows 11 Without Breaking Anything",
+      "description": "Find high-impact Windows startup apps, disable nonessential software safely, test the result, and distinguish startup from restartable apps.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to disable startup apps in windows 11 without breaking anything find high impact windows startup apps disable nonessential software safely test the result and distinguish startup from restartable apps home tech guide articles disable startup apps windows 11 safely"
     },
     {
       "route": "/articles/do-ceiling-fans-cool-a-room/",
@@ -1194,6 +1234,14 @@
       "searchText": "why is my humidifier leaving white dust everywhere stop humidifier white dust by using distilled water replacing mineral cartridges cleaning the tank and controlling indoor humidity home apartment guide articles humidifier leaving white dust"
     },
     {
+      "route": "/articles/identity-theft-incident-recovery-log-template/",
+      "title": "Identity Theft Incident and Recovery Log Template",
+      "description": "Track fraudulent accounts, FTC and police reports, credit freezes, fraud alerts, disputes, evidence, deadlines, and written resolutions.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "identity theft incident and recovery log template track fraudulent accounts ftc and police reports credit freezes fraud alerts disputes evidence deadlines and written resolutions tools guide articles identity theft incident recovery log template"
+    },
+    {
       "route": "/articles/internet-plan-total-cost-checklist/",
       "title": "Internet Plan Total Cost Checklist: Price, Fees, Equipment, and Promotions",
       "description": "Compare internet plans using the full monthly and first-year cost, not only the introductory headline price or advertised speed.",
@@ -1272,6 +1320,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "why does my monitor say no signal test the display chain in order diagnose a monitor that powers on but reports no signal by isolating the selected input cable port adapter dock graphics output and computer home tech guide articles monitor says no signal"
+    },
+    {
+      "route": "/articles/mortgage-escrow-tax-insurance-log-template/",
+      "title": "Mortgage Escrow, Property Tax, and Insurance Payment Log Template",
+      "description": "Track mortgage escrow deposits, tax and insurance payments, annual analyses, shortages, surpluses, servicer errors, and corrections.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "mortgage escrow property tax and insurance payment log template track mortgage escrow deposits tax and insurance payments annual analyses shortages surpluses servicer errors and corrections tools guide articles mortgage escrow tax insurance log template"
     },
     {
       "route": "/articles/moving-box-labeling-template/",
@@ -1600,6 +1656,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to store cucumbers without making them slimy or soft refrigerate cucumbers without chilling or trapping moisture separate them from apples and onions and store cut cucumber safely kitchen guide articles store cucumbers without slime softness"
+    },
+    {
+      "route": "/articles/store-green-onions-scallions-crisp/",
+      "title": "How to Store Green Onions So They Stay Crisp",
+      "description": "Keep green onions crisp using a damp towel or shallow root-water method, store chopped scallions, and freeze extras for cooking.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store green onions so they stay crisp keep green onions crisp using a damp towel or shallow root water method store chopped scallions and freeze extras for cooking kitchen guide articles store green onions scallions crisp"
     },
     {
       "route": "/articles/store-lemons-limes/",
@@ -2336,6 +2400,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why is my window air conditioner freezing up safely thaw a frozen window air conditioner check the filter and airflow and recognize when repeated icing requires qualified service home apartment guide articles window air conditioner freezing up"
+    },
+    {
+      "route": "/articles/window-air-conditioner-rattling-buzzing-clicking/",
+      "title": "Why Is My Window Air Conditioner Rattling, Buzzing, Clicking, or Pinging?",
+      "description": "Diagnose window AC rattling, buzzing, clicking, pinging, splashing, loose installation, fan interference, and electrical warning signs.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my window air conditioner rattling buzzing clicking or pinging diagnose window ac rattling buzzing clicking pinging splashing loose installation fan interference and electrical warning signs home apartment guide articles window air conditioner rattling buzzing clicking"
     },
     {
       "route": "/contact/",

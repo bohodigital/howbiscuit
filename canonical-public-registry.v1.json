@@ -1840,6 +1840,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-car-battery-charger-maintainer/",
+      "title": "How to Choose a Car Battery Charger or Maintainer",
+      "description": "Compare automotive chargers and maintainers by voltage, chemistry, amp-hours, charging stages, protection, connection method, and storage use.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A maintainer keeps a healthy stored battery charged. A charger restores a discharged battery. Neither can reliably repair an internally damaged, frozen, leaking, or exhausted battery.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-emergency-flashlight/",
       "title": "How to Choose an Emergency Flashlight That Will Still Work When the Power Fails",
       "description": "Compare emergency flashlights by ANSI lumens, candela, runtime, beam, batteries, water resistance, impact resistance, and controls.",
@@ -1964,6 +1995,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-paper-shredder-home-use/",
+      "title": "How to Choose a Paper Shredder for Home Use",
+      "description": "Compare paper shredders by strip, cross, or micro cut, sheet capacity, runtime, cooling, bin size, safety, maintenance, and recalls.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Strip-cut shredders leave long readable fragments. Cross-cut and micro-cut machines produce smaller particles but usually require more maintenance and can have lower practical throughput.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-portable-car-jump-starter/",
       "title": "How to Choose a Portable Jump Starter for Your Car",
       "description": "Choose a car jump starter by battery voltage, engine size, cold-weather support, clamps, reverse-polarity protection, override mode, and recalls.",
@@ -2071,6 +2133,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Basic stud finders detect density changes near drywall surfaces. More advanced scanners can identify metal, wiring, pipes, and deeper objects, but wall material and object conditions limit every device.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/clean-drain-portable-air-conditioner-safely/",
+      "title": "How to Clean and Drain a Portable Air Conditioner Safely",
+      "description": "Clean portable AC filters, drain the lower tank, connect continuous drainage correctly, inspect the exhaust hose, and store the unit safely.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Portable air conditioners remove moisture while cooling. Some evaporate most condensate through the exhaust, while others require occasional or continuous draining depending on mode and humidity.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2257,6 +2350,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "A front-load washer can hold several gallons of hot or dirty water behind its pump filter. Opening the filter without draining the machine first can flood the room.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/clear-stuck-print-queue-windows-11/",
+      "title": "How to Clear a Stuck Print Queue in Windows 11",
+      "description": "Cancel stuck print jobs, restart the Windows Print Spooler, clear spool files safely, and diagnose recurring printer queue failures.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "One damaged or abandoned print job can block every document behind it. Windows provides a safe escalation path from canceling the queue to restarting and clearing the spooler.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2681,6 +2805,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:AirConditioner.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/disable-startup-apps-windows-11-safely/",
+      "title": "How to Disable Startup Apps in Windows 11 Without Breaking Anything",
+      "description": "Find high-impact Windows startup apps, disable nonessential software safely, test the result, and distinguish startup from restartable apps.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Startup apps can slow sign-in and continue using memory, disk, processor, and network resources. Disabling startup does not uninstall the application.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -7195,6 +7350,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/identity-theft-incident-recovery-log-template/",
+      "title": "Identity Theft Incident and Recovery Log Template",
+      "description": "Track fraudulent accounts, FTC and police reports, credit freezes, fraud alerts, disputes, evidence, deadlines, and written resolutions.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Identity theft recovery can involve banks, creditors, government agencies, credit bureaus, police, insurers, and online accounts. A dated log prevents deadlines and promises from dissolving into telephone-call fog.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/internet-plan-total-cost-checklist/",
       "title": "Internet Plan Total Cost Checklist: Price, Fees, Equipment, and Promotions",
       "description": "Compare internet plans using the full monthly and first-year cost, not only the introductory headline price or advertised speed.",
@@ -7591,6 +7777,37 @@
           "/articles/used-laptop-inspection-checklist/",
           "/articles/why-computer-storage-full/"
         ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/mortgage-escrow-tax-insurance-log-template/",
+      "title": "Mortgage Escrow, Property Tax, and Insurance Payment Log Template",
+      "description": "Track mortgage escrow deposits, tax and insurance payments, annual analyses, shortages, surpluses, servicer errors, and corrections.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A mortgage payment can increase even when the interest rate is fixed because property taxes, insurance premiums, or an escrow shortage changed. The annual statement should be reconciled against the actual bills and payments.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
       },
       "media": [],
       "leadMedia": null
@@ -9306,6 +9523,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Cucumbers prefer cooler-than-room conditions but are vulnerable to chilling injury in very cold storage. Ordinary home refrigeration is still practical when they are kept dry and used promptly.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/store-green-onions-scallions-crisp/",
+      "title": "How to Store Green Onions So They Stay Crisp",
+      "description": "Keep green onions crisp using a damp towel or shallow root-water method, store chopped scallions, and freeze extras for cooking.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Green onions wilt quickly because their hollow leaves lose water. Cold storage with controlled moisture preserves them better than a dry open refrigerator shelf.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -13402,6 +13650,37 @@
       "leadMedia": null
     },
     {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/window-air-conditioner-rattling-buzzing-clicking/",
+      "title": "Why Is My Window Air Conditioner Rattling, Buzzing, Clicking, or Pinging?",
+      "description": "Diagnose window AC rattling, buzzing, clicking, pinging, splashing, loose installation, fan interference, and electrical warning signs.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Some ticking and pinging from a window air conditioner is normal because the rear fan throws condensate against the condenser. Violent rattling, electrical buzzing, grinding, or a loose window installation is not.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
       "kind": "trust",
       "renderMode": "canonical-source",
       "route": "/contact/",
@@ -13946,5 +14225,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:298a2e02c3a2f1cec53bf376f938b88777b5714bb390a0af23d21091dfc6bc4c"
+  "registryDigest": "sha256:d5afa438f0593659f4a190248787bb4e0e882a15eba112f95c9e5450a437d5db"
 }
