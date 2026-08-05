@@ -322,6 +322,14 @@
       "searchText": "how to choose an emergency flashlight that will still work when the power fails compare emergency flashlights by ansi lumens candela runtime beam batteries water resistance impact resistance and controls shop smarter guide articles choose emergency flashlight"
     },
     {
+      "route": "/articles/choose-extension-cord-gauge-length-amps/",
+      "title": "How to Choose an Extension Cord Without Overheating It",
+      "description": "Choose an extension cord by amps, watts, wire gauge, length, grounding, indoor or outdoor rating, listing, and condition.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose an extension cord without overheating it choose an extension cord by amps watts wire gauge length grounding indoor or outdoor rating listing and condition shop smarter guide articles choose extension cord gauge length amps"
+    },
+    {
       "route": "/articles/choose-fire-extinguisher-home-use/",
       "title": "How to Choose a Fire Extinguisher for Home Use",
       "description": "Choose a UL-listed A-B-C home fire extinguisher by class, rating, size, weight, rechargeability, placement, recalls, and safe-use limits.",
@@ -378,12 +386,28 @@
       "searchText": "how to clean a ductless mini split air filter safely clean a ductless mini split filter safely separate washable and specialty filters protect coils and fans and follow the model schedule home apartment guide articles clean ductless mini split filter safely"
     },
     {
+      "route": "/articles/clean-garbage-disposal-splash-guard-safely/",
+      "title": "How to Clean a Garbage Disposal Splash Guard Without Putting Your Hand Inside",
+      "description": "Disconnect power, remove or lift the disposal splash guard safely, scrub its underside, remove debris with tools, and prevent recurring odor.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a garbage disposal splash guard without putting your hand inside disconnect power remove or lift the disposal splash guard safely scrub its underside remove debris with tools and prevent recurring odor home apartment guide articles clean garbage disposal splash guard safely"
+    },
+    {
       "route": "/articles/clean-range-hood-grease-filter-safely/",
       "title": "How to Clean a Range Hood Grease Filter Safely",
       "description": "Remove and clean a washable metal range-hood filter, identify charcoal filters, prevent chemical damage, and reinstall it safely.",
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "how to clean a range hood grease filter safely remove and clean a washable metal range hood filter identify charcoal filters prevent chemical damage and reinstall it safely home apartment guide articles clean range hood grease filter safely"
+    },
+    {
+      "route": "/articles/clean-refrigerator-door-gasket-check-seal/",
+      "title": "How to Clean a Refrigerator Door Gasket and Check the Seal",
+      "description": "Clean refrigerator gasket folds safely, remove sticky residue, inspect damage, check door contact, and know when the seal needs replacement.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a refrigerator door gasket and check the seal clean refrigerator gasket folds safely remove sticky residue inspect damage check door contact and know when the seal needs replacement home apartment guide articles clean refrigerator door gasket check seal"
     },
     {
       "route": "/articles/clothes-taking-too-long-to-dry/",
@@ -618,6 +642,14 @@
       "searchText": "home fire escape plan checklist two ways out and one meeting place map two usable exits from every room choose an outdoor meeting place account for anyone who needs assistance and practice the plan with the actual household tools guide articles home fire escape plan checklist"
     },
     {
+      "route": "/articles/home-generator-maintenance-test-outage-log-template/",
+      "title": "Home Generator Maintenance, Test, Fuel, and Outage Log Template",
+      "description": "Track generator inspections, fuel, oil, batteries, tests, loads, CO safety, transfer equipment, outage hours, faults, and maintenance.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home generator maintenance test fuel and outage log template track generator inspections fuel oil batteries tests loads co safety transfer equipment outage hours faults and maintenance tools guide articles home generator maintenance test outage log template"
+    },
+    {
       "route": "/articles/home-humidity-dehumidifier-checklist/",
       "title": "Home Humidity and Dehumidifier Checklist",
       "description": "Measure humidity room by room, find moisture sources, choose dehumidifier capacity, check drainage and safety, and download the printable three-day room log.",
@@ -648,6 +680,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "home network device inventory template know what is connected a reusable inventory for routers computers phones tvs cameras speakers appliances hubs accounts updates and retirement status tools guide articles home network device inventory template"
+    },
+    {
+      "route": "/articles/home-roof-inspection-repair-storm-damage-log-template/",
+      "title": "Home Roof Inspection, Repair, and Storm-Damage Log Template",
+      "description": "Track roof materials, age, inspections, storms, photographs, temporary repairs, contractors, permits, warranties, estimates, and insurance claims.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home roof inspection repair and storm damage log template track roof materials age inspections storms photographs temporary repairs contractors permits warranties estimates and insurance claims tools guide articles home roof inspection repair storm damage log template"
     },
     {
       "route": "/articles/home-router-security-checklist/",
@@ -1410,6 +1450,14 @@
       "searchText": "how to set up and test file history in windows 11 configure windows 11 file history on an external or network drive review retention and verify the backup by restoring a test file home tech guide articles set up test file history windows 11"
     },
     {
+      "route": "/articles/set-up-use-windows-sandbox-safely/",
+      "title": "How to Set Up Windows Sandbox and Use It More Safely",
+      "description": "Install Windows Sandbox, verify virtualization and edition support, disable networking, map folders read-only, and understand isolation limits.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to set up windows sandbox and use it more safely install windows sandbox verify virtualization and edition support disable networking map folders read only and understand isolation limits home tech guide articles set up use windows sandbox safely"
+    },
+    {
       "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
       "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
       "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
@@ -1458,6 +1506,14 @@
       "searchText": "how to spot a fake online store before you buy verify the exact domain research the seller independently compare prices read return and shipping terms and avoid payment methods that make recovery difficult shop smarter guide articles spot fake online store before buying"
     },
     {
+      "route": "/articles/stop-onedrive-folder-backup-without-losing-files/",
+      "title": "How to Stop OneDrive Folder Backup Without Losing Your Desktop or Documents",
+      "description": "Stop OneDrive Desktop, Documents, or Pictures backup safely, download cloud-only files, choose the correct destination, and verify the move.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to stop onedrive folder backup without losing your desktop or documents stop onedrive desktop documents or pictures backup safely download cloud only files choose the correct destination and verify the move home tech guide articles stop onedrive folder backup without losing files"
+    },
+    {
       "route": "/articles/store-broccoli-green-crisp/",
       "title": "How to Store Broccoli So It Stays Green and Crisp",
       "description": "Refrigerate broccoli in a loose bag, prevent trapped moisture, identify spoilage, store cut florets, revive limp stalks, and freeze extras.",
@@ -1472,6 +1528,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to store carrots so they stay crisp store whole and cut carrots in the refrigerator remove tops control moisture revive limp carrots and freeze extras correctly kitchen guide articles store carrots stay crisp"
+    },
+    {
+      "route": "/articles/store-cucumbers-without-slime-softness/",
+      "title": "How to Store Cucumbers Without Making Them Slimy or Soft",
+      "description": "Refrigerate cucumbers without chilling or trapping moisture, separate them from apples and onions, and store cut cucumber safely.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store cucumbers without making them slimy or soft refrigerate cucumbers without chilling or trapping moisture separate them from apples and onions and store cut cucumber safely kitchen guide articles store cucumbers without slime softness"
     },
     {
       "route": "/articles/store-lemons-limes/",
@@ -1688,6 +1752,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "where should you place a wi fi extender put the extender roughly halfway between the router and weak area but only where it still receives a strong upstream signal test the link before moving farther home tech guide articles where to place wifi extender"
+    },
+    {
+      "route": "/articles/whipped-cream-grainy-overwhipped-fix/",
+      "title": "Why Did My Whipped Cream Turn Grainy, and Can You Fix It?",
+      "description": "Fix slightly overwhipped grainy cream with cold liquid cream, recognize soft and stiff peaks, and know when it has turned into butter.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my whipped cream turn grainy and can you fix it fix slightly overwhipped grainy cream with cold liquid cream recognize soft and stiff peaks and know when it has turned into butter kitchen guide articles whipped cream grainy overwhipped fix"
     },
     {
       "route": "/articles/why-are-some-answers-better-than-others/",

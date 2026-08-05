@@ -1871,6 +1871,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-extension-cord-gauge-length-amps/",
+      "title": "How to Choose an Extension Cord Without Overheating It",
+      "description": "Choose an extension cord by amps, watts, wire gauge, length, grounding, indoor or outdoor rating, listing, and condition.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A longer or thinner cord has greater electrical resistance and voltage drop. The cord label and appliance manual, not appearance, determine whether the combination is suitable.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-fire-extinguisher-home-use/",
       "title": "How to Choose a Fire Extinguisher for Home Use",
       "description": "Choose a UL-listed A-B-C home fire extinguisher by class, rating, size, weight, rechargeability, placement, recalls, and safe-use limits.",
@@ -2088,6 +2119,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/clean-garbage-disposal-splash-guard-safely/",
+      "title": "How to Clean a Garbage Disposal Splash Guard Without Putting Your Hand Inside",
+      "description": "Disconnect power, remove or lift the disposal splash guard safely, scrub its underside, remove debris with tools, and prevent recurring odor.",
+      "categoryId": "home",
+      "topicId": "cleaning",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The underside of a disposal splash guard can collect grease and food residue even when the visible sink surface looks clean. The guard may be removable, replaceable, or fixed to the disposal assembly.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/clean-range-hood-grease-filter-safely/",
       "title": "How to Clean a Range Hood Grease Filter Safely",
       "description": "Remove and clean a washable metal range-hood filter, identify charcoal filters, prevent chemical damage, and reinstall it safely.",
@@ -2102,6 +2164,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Metal mesh and baffle filters collect airborne grease and are commonly washable. Recirculating charcoal filters capture odors and usually require replacement rather than cleaning.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/clean-refrigerator-door-gasket-check-seal/",
+      "title": "How to Clean a Refrigerator Door Gasket and Check the Seal",
+      "description": "Clean refrigerator gasket folds safely, remove sticky residue, inspect damage, check door contact, and know when the seal needs replacement.",
+      "categoryId": "home",
+      "topicId": "cleaning",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Food residue, crumbs, mildew, and sticky spills can keep a refrigerator gasket from sealing evenly. Cleaning helps only when the gasket and door remain correctly aligned and undamaged.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -3771,6 +3864,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-generator-maintenance-test-outage-log-template/",
+      "title": "Home Generator Maintenance, Test, Fuel, and Outage Log Template",
+      "description": "Track generator inspections, fuel, oil, batteries, tests, loads, CO safety, transfer equipment, outage hours, faults, and maintenance.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Portable and permanently installed generators have different operating and maintenance requirements. Every interval and procedure should come from the exact manufacturer manual.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/home-humidity-dehumidifier-checklist/",
       "title": "Home Humidity and Dehumidifier Checklist",
@@ -3927,6 +4051,37 @@
         "notes": [
           "The template was not used on a specific network or router.",
           "It does not detect hidden compromise, establish device ownership, or replace professional security assessment."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-roof-inspection-repair-storm-damage-log-template/",
+      "title": "Home Roof Inspection, Repair, and Storm-Damage Log Template",
+      "description": "Track roof materials, age, inspections, storms, photographs, temporary repairs, contractors, permits, warranties, estimates, and insurance claims.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Roof damage can remain hidden until water reaches the interior. A dated baseline and post-storm record helps contractors, insurers, and owners distinguish new damage from prior wear.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
         ]
       },
       "relatedContent": {
@@ -8485,6 +8640,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/set-up-use-windows-sandbox-safely/",
+      "title": "How to Set Up Windows Sandbox and Use It More Safely",
+      "description": "Install Windows Sandbox, verify virtualization and edition support, disable networking, map folders read-only, and understand isolation limits.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Windows Sandbox creates a disposable virtual Windows environment. Closing it deletes its local state, but networking, clipboard sharing, mapped folders, and user actions can still create paths back to the host or internet.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
       "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
       "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
@@ -8765,6 +8951,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/stop-onedrive-folder-backup-without-losing-files/",
+      "title": "How to Stop OneDrive Folder Backup Without Losing Your Desktop or Documents",
+      "description": "Stop OneDrive Desktop, Documents, or Pictures backup safely, download cloud-only files, choose the correct destination, and verify the move.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Stopping OneDrive backup changes where Desktop, Documents, or Pictures live. It does not necessarily delete the files, but choosing the wrong destination or deleting synchronized copies afterward can make them disappear from multiple devices.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/store-broccoli-green-crisp/",
       "title": "How to Store Broccoli So It Stays Green and Crisp",
       "description": "Refrigerate broccoli in a loose bag, prevent trapped moisture, identify spoilage, store cut florets, revive limp stalks, and freeze extras.",
@@ -8810,6 +9027,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Carrots become limp when they lose water. Cold, humid storage slows that loss, while attached tops, warm air, damage, and uncontrolled moisture shorten storage life.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/store-cucumbers-without-slime-softness/",
+      "title": "How to Store Cucumbers Without Making Them Slimy or Soft",
+      "description": "Refrigerate cucumbers without chilling or trapping moisture, separate them from apples and onions, and store cut cucumber safely.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cucumbers prefer cooler-than-room conditions but are vulnerable to chilling injury in very cold storage. Ordinary home refrigeration is still practical when they are kept dry and used promptly.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -10175,6 +10423,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wifi_Range_Extender.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/whipped-cream-grainy-overwhipped-fix/",
+      "title": "Why Did My Whipped Cream Turn Grainy, and Can You Fix It?",
+      "description": "Fix slightly overwhipped grainy cream with cold liquid cream, recognize soft and stiff peaks, and know when it has turned into butter.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Whipped cream becomes grainy when milk-fat globules clump too extensively and the foam begins moving toward butter. A slightly overwhipped batch can often be rescued; a fully separated batch is butter and buttermilk.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -13388,5 +13667,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:8f3dc99e64182081d1dc2b5c9c8daceb27783bbfbae4d8269dadb7e1f736f59c"
+  "registryDigest": "sha256:0f23b870ae7c6b7f6e535dd2071c07ebfb045548fbdfba0d158ba1b3b8ed8ce4"
 }
