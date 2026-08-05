@@ -138,6 +138,14 @@
       "searchText": "appliance model and serial number inventory template a copy ready appliance inventory for model numbers serial numbers purchase dates warranties receipts recalls manuals service history and replacement parts tools guide articles appliance model serial inventory template"
     },
     {
+      "route": "/articles/bathroom-caulk-turning-black-replace/",
+      "title": "Why Is Bathroom Caulk Turning Black, and When Should You Replace It?",
+      "description": "Determine whether black shower caulk needs cleaning or replacement, fix moisture, remove failed sealant, and recaulk the joint correctly.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is bathroom caulk turning black and when should you replace it determine whether black shower caulk needs cleaning or replacement fix moisture remove failed sealant and recaulk the joint correctly home apartment guide articles bathroom caulk turning black replace"
+    },
+    {
       "route": "/articles/best-place-to-put-wifi-router/",
       "title": "Best Place to Put Your Wi-Fi Router",
       "description": "Put your router near the center of the area you use, out in the open, off the floor, and away from dense barriers. Use this test before buying an extender.",
@@ -290,6 +298,14 @@
       "searchText": "can you use soap on cast iron yes a small amount of mild dish soap is generally safe for seasoned cast iron wash by hand dry promptly and apply a very thin coat of oil if needed kitchen guide articles can you use soap on cast iron"
     },
     {
+      "route": "/articles/check-bitlocker-back-up-recovery-key/",
+      "title": "How to Check Whether BitLocker Is On and Back Up the Recovery Key",
+      "description": "Check whether BitLocker or Device Encryption is enabled, find the 48-digit recovery key, store it safely, and prepare for hardware changes.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to check whether bitlocker is on and back up the recovery key check whether bitlocker or device encryption is enabled find the 48 digit recovery key store it safely and prepare for hardware changes home tech guide articles check bitlocker back up recovery key"
+    },
+    {
       "route": "/articles/check-recalls-before-buying-used-product/",
       "title": "How to Check for Recalls Before Buying a Used Product",
       "description": "A used product can look perfect and still be recalled. Search the exact model, serial number, production date, or VIN before paying.",
@@ -306,12 +322,36 @@
       "searchText": "how to choose an emergency flashlight that will still work when the power fails compare emergency flashlights by ansi lumens candela runtime beam batteries water resistance impact resistance and controls shop smarter guide articles choose emergency flashlight"
     },
     {
+      "route": "/articles/choose-portable-car-jump-starter/",
+      "title": "How to Choose a Portable Jump Starter for Your Car",
+      "description": "Choose a car jump starter by battery voltage, engine size, cold-weather support, clamps, reverse-polarity protection, override mode, and recalls.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a portable jump starter for your car choose a car jump starter by battery voltage engine size cold weather support clamps reverse polarity protection override mode and recalls shop smarter guide articles choose portable car jump starter"
+    },
+    {
+      "route": "/articles/choose-portable-power-station-outage/",
+      "title": "How to Choose a Portable Power Station for an Outage",
+      "description": "Choose a portable power station by watt-hours, running and surge watts, runtime, outlets, waveform, solar input, certification, and battery safety.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a portable power station for an outage choose a portable power station by watt hours running and surge watts runtime outlets waveform solar input certification and battery safety shop smarter guide articles choose portable power station outage"
+    },
+    {
       "route": "/articles/choose-stud-finder-wall-scanner/",
       "title": "How to Choose a Stud Finder Without Trusting It With Your Life",
       "description": "Choose a stud finder by wall material, scan depth, center detection, metal and wire sensing, calibration, batteries, and safety limitations.",
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose a stud finder without trusting it with your life choose a stud finder by wall material scan depth center detection metal and wire sensing calibration batteries and safety limitations shop smarter guide articles choose stud finder wall scanner"
+    },
+    {
+      "route": "/articles/clean-dryer-moisture-sensor/",
+      "title": "How to Clean a Dryer Moisture Sensor Without Damaging It",
+      "description": "Clean dryer moisture-sensor bars safely, remove lint and softener residue, test automatic cycles, and distinguish sensor from vent trouble.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a dryer moisture sensor without damaging it clean dryer moisture sensor bars safely remove lint and softener residue test automatic cycles and distinguish sensor from vent trouble home apartment guide articles clean dryer moisture sensor"
     },
     {
       "route": "/articles/clean-ductless-mini-split-filter-safely/",
@@ -640,6 +680,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "household emergency communication plan checklist choose household and out of area contacts identify meeting places document school and workplace plans account for medical and accessibility needs distribute printed copies and practice the plan tools guide articles household emergency communication plan checklist"
+    },
+    {
+      "route": "/articles/household-utility-bill-meter-reading-log-template/",
+      "title": "Household Utility Bill and Meter Reading Log Template",
+      "description": "Track electric, gas, water, and sewer bills by meter readings, billing days, usage, rates, fixed fees, estimates, payments, and disputes.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "household utility bill and meter reading log template track electric gas water and sewer bills by meter readings billing days usage rates fixed fees estimates payments and disputes tools guide articles household utility bill meter reading log template"
     },
     {
       "route": "/articles/household-warranty-expiration-tracker/",
@@ -1370,6 +1418,22 @@
       "searchText": "how to store carrots so they stay crisp store whole and cut carrots in the refrigerator remove tops control moisture revive limp carrots and freeze extras correctly kitchen guide articles store carrots stay crisp"
     },
     {
+      "route": "/articles/store-lemons-limes/",
+      "title": "How to Store Lemons and Limes So They Do Not Dry Out or Mold",
+      "description": "Store lemons and limes on the counter or in the refrigerator, prevent shriveling and mold, refrigerate cut citrus, and freeze juice and zest.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store lemons and limes so they do not dry out or mold store lemons and limes on the counter or in the refrigerator prevent shriveling and mold refrigerate cut citrus and freeze juice and zest kitchen guide articles store lemons limes"
+    },
+    {
+      "route": "/articles/store-tomatoes-without-ruining-texture/",
+      "title": "How to Store Tomatoes Without Ruining Their Texture",
+      "description": "Ripen tomatoes at room temperature, refrigerate ripe fruit when needed, protect texture, store cut tomatoes safely, and freeze extras.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store tomatoes without ruining their texture ripen tomatoes at room temperature refrigerate ripe fruit when needed protect texture store cut tomatoes safely and freeze extras kitchen guide articles store tomatoes without ruining texture"
+    },
+    {
       "route": "/articles/sump-pump-testing-checklist/",
       "title": "Sump Pump Testing Checklist: Power, Float, Discharge, and Backup",
       "description": "A safety-first checklist for testing a sump pump before heavy rain without touching live wiring, entering a flooded area, or assuming a motor sound proves water is moving.",
@@ -1384,6 +1448,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "tank vs tankless water heater which is better for your home storage heaters provide a hot water reserve tankless units heat on demand but remain limited by flow temperature rise gas or electrical service venting and simultaneous fixtures home apartment guide articles tank vs tankless water heater"
+    },
+    {
+      "route": "/articles/turn-off-personalized-ads-tracking-windows-11/",
+      "title": "How to Turn Off Personalized Ads and App Tracking in Windows 11",
+      "description": "Disable the Windows advertising ID, app-launch tracking, suggested content, tailored experiences, Microsoft ads, and Edge personalization.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to turn off personalized ads and app tracking in windows 11 disable the windows advertising id app launch tracking suggested content tailored experiences microsoft ads and edge personalization home tech guide articles turn off personalized ads tracking windows 11"
     },
     {
       "route": "/articles/use-dynamic-lock-windows-11/",

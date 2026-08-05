@@ -720,6 +720,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/bathroom-caulk-turning-black-replace/",
+      "title": "Why Is Bathroom Caulk Turning Black, and When Should You Replace It?",
+      "description": "Determine whether black shower caulk needs cleaning or replacement, fix moisture, remove failed sealant, and recaulk the joint correctly.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Black bathroom caulk can be surface mold, embedded staining, or evidence that moisture is moving behind a failed seal. New caulk will fail again when leaks, humidity, or wet substrate remain.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/best-place-to-put-wifi-router/",
       "title": "Best Place to Put Your Wi-Fi Router",
@@ -1743,6 +1774,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/check-bitlocker-back-up-recovery-key/",
+      "title": "How to Check Whether BitLocker Is On and Back Up the Recovery Key",
+      "description": "Check whether BitLocker or Device Encryption is enabled, find the 48-digit recovery key, store it safely, and prepare for hardware changes.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "BitLocker can request its recovery key after security, firmware, TPM, startup, or hardware changes. Back up the key before the computer is the only device capable of reaching it.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/check-recalls-before-buying-used-product/",
       "title": "How to Check for Recalls Before Buying a Used Product",
       "description": "A used product can look perfect and still be recalled. Search the exact model, serial number, production date, or VIN before paying.",
@@ -1809,6 +1871,68 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-portable-car-jump-starter/",
+      "title": "How to Choose a Portable Jump Starter for Your Car",
+      "description": "Choose a car jump starter by battery voltage, engine size, cold-weather support, clamps, reverse-polarity protection, override mode, and recalls.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Peak-amp numbers are not standardized consistently enough to compare every jump starter directly. A better specification is the manufacturer’s documented vehicle, engine, battery, and temperature support.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-portable-power-station-outage/",
+      "title": "How to Choose a Portable Power Station for an Outage",
+      "description": "Choose a portable power station by watt-hours, running and surge watts, runtime, outlets, waveform, solar input, certification, and battery safety.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A portable power station can run electronics without fuel or carbon-monoxide exhaust, but its runtime depends on battery energy, conversion loss, connected load, temperature, and battery condition.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-stud-finder-wall-scanner/",
       "title": "How to Choose a Stud Finder Without Trusting It With Your Life",
       "description": "Choose a stud finder by wall material, scan depth, center detection, metal and wire sensing, calibration, batteries, and safety limitations.",
@@ -1823,6 +1947,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Basic stud finders detect density changes near drywall surfaces. More advanced scanners can identify metal, wiring, pipes, and deeper objects, but wall material and object conditions limit every device.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/clean-dryer-moisture-sensor/",
+      "title": "How to Clean a Dryer Moisture Sensor Without Damaging It",
+      "description": "Clean dryer moisture-sensor bars safely, remove lint and softener residue, test automatic cycles, and distinguish sensor from vent trouble.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Fabric-softener and dryer-sheet residue can coat moisture-sensor bars and interfere with automatic-cycle readings. Abrasive cleaning can damage the sensor surface.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -3942,6 +4097,37 @@
         "state": "not-applicable",
         "notes": [
           "This general checklist does not replace local emergency-management, school, workplace, or medical guidance."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/household-utility-bill-meter-reading-log-template/",
+      "title": "Household Utility Bill and Meter Reading Log Template",
+      "description": "Track electric, gas, water, and sewer bills by meter readings, billing days, usage, rates, fixed fees, estimates, payments, and disputes.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Monthly totals are difficult to compare when billing periods have different lengths or contain rate changes. Logging usage per day separates consumption changes from calendar and price changes.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
         ]
       },
       "relatedContent": {
@@ -8424,6 +8610,68 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/store-lemons-limes/",
+      "title": "How to Store Lemons and Limes So They Do Not Dry Out or Mold",
+      "description": "Store lemons and limes on the counter or in the refrigerator, prevent shriveling and mold, refrigerate cut citrus, and freeze juice and zest.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Lemons and limes lose moisture and shrivel when exposed to warm dry air. Refrigerated bag storage extends quality, but trapped water and damaged fruit encourage mold.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/store-tomatoes-without-ruining-texture/",
+      "title": "How to Store Tomatoes Without Ruining Their Texture",
+      "description": "Ripen tomatoes at room temperature, refrigerate ripe fruit when needed, protect texture, store cut tomatoes safely, and freeze extras.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Cold slows tomato deterioration but can dull aroma and alter texture. The practical decision depends on ripeness, room temperature, and how soon the tomato will be eaten.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/sump-pump-testing-checklist/",
       "title": "Sump Pump Testing Checklist: Power, Float, Discharge, and Backup",
       "description": "A safety-first checklist for testing a sump pump before heavy rain without touching live wiring, entering a flooded area, or assuming a motor sound proves water is moving.",
@@ -8521,6 +8769,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hot_water_storage.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/turn-off-personalized-ads-tracking-windows-11/",
+      "title": "How to Turn Off Personalized Ads and App Tracking in Windows 11",
+      "description": "Disable the Windows advertising ID, app-launch tracking, suggested content, tailored experiences, Microsoft ads, and Edge personalization.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Windows, Microsoft accounts, Edge, applications, and websites have separate personalization controls. Turning off one advertising switch does not disable every other tracking or recommendation system.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -12830,5 +13109,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:f2ceaa89c4cd8900a16e84ecd77fe5f6b2c0bf689e7696394a49d57b50ddaca8"
+  "registryDigest": "sha256:f838ef62690a811d75512972a53e1c20d30ea04c5f976ab6f05bfe211032353e"
 }
