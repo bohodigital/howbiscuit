@@ -1774,6 +1774,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/ceiling-fan-wobble-unsafe-fix/",
+      "title": "Why Does My Ceiling Fan Wobble, and When Is It Unsafe?",
+      "description": "Diagnose ceiling-fan wobble from loose blades, bent arms, imbalance, downrod trouble, or an unsafe electrical box and mounting bracket.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Minor movement can result from unequal blade weight or alignment. Movement at the ceiling box, canopy, downrod, or motor mount requires shutdown and inspection.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/check-bitlocker-back-up-recovery-key/",
       "title": "How to Check Whether BitLocker Is On and Back Up the Recovery Key",
       "description": "Check whether BitLocker or Device Encryption is enabled, find the 48-digit recovery key, store it safely, and prepare for hardware changes.",
@@ -1840,6 +1871,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-battery-backup-sump-pump/",
+      "title": "How to Choose a Battery-Backup Sump Pump",
+      "description": "Compare backup sump pumps by flow at head, battery, runtime, float, charger, alarm, discharge plumbing, and outage performance.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A backup pump protects against power loss, primary-pump failure, stuck floats, and sometimes inflow beyond the primary pump’s capacity. Its advertised zero-head flow is not the flow available at your discharge height.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-car-battery-charger-maintainer/",
       "title": "How to Choose a Car Battery Charger or Maintainer",
       "description": "Compare automotive chargers and maintainers by voltage, chemistry, amp-hours, charging stages, protection, connection method, and storage use.",
@@ -1854,6 +1916,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "A maintainer keeps a healthy stored battery charged. A charger restores a discharged battery. Neither can reliably repair an internally damaged, frozen, leaking, or exhausted battery.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-clothes-garment-steamer-safely/",
+      "title": "How to Choose a Clothes Steamer Without Getting Burned",
+      "description": "Compare garment steamers by handheld or standing design, output, tank, distilled water, voltage, stability, burn risk, and recalls.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Garment steamers can spit or leak near-boiling water when defective, overfilled, tilted improperly, clogged, or used outside their instructions.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2823,6 +2916,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Startup apps can slow sign-in and continue using memory, disk, processor, and network resources. Disabling startup does not uninstall the application.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/dishwasher-white-film-dishes-glasses/",
+      "title": "Why Is My Dishwasher Leaving White Film on Dishes and Glasses?",
+      "description": "Test dishwasher film with vinegar and fix hard-water residue, detergent problems, rinse-aid settings, dirty filters, or glass etching.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "White dishwasher residue and permanent glass etching can look similar. A simple vinegar test separates a cleanable deposit from irreversible surface damage.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -3978,6 +4102,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hot_water_heater_with_pipe.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/hollandaise-sauce-broke-fix/",
+      "title": "Why Did My Hollandaise Sauce Break, and How Do You Fix It?",
+      "description": "Rescue broken hollandaise with warm water or a fresh yolk emulsion and prevent separation caused by heat, cold, or fast butter addition.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Hollandaise is an emulsion of butterfat in an egg-yolk water phase. It needs enough water, controlled heat, and gradual butter addition to remain smooth.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -7350,6 +7505,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/hvac-air-filter-replacement-service-log-template/",
+      "title": "HVAC Air Filter Replacement and Service Log Template",
+      "description": "Track HVAC filter sizes, MERV ratings, airflow direction, inspections, replacements, system symptoms, indoor-air events, and service visits.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Filter replacement schedules depend on system use, filter depth, dust loading, pets, smoke, construction, and manufacturer limits. One universal calendar interval does not fit every home.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/identity-theft-incident-recovery-log-template/",
       "title": "Identity Theft Incident and Recovery Log Template",
       "description": "Track fraudulent accounts, FTC and police reports, credit freezes, fraud alerts, disputes, evidence, deadlines, and written resolutions.",
@@ -9416,6 +9602,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/stop-website-notifications-chrome-edge-firefox/",
+      "title": "How to Stop Website Notifications in Chrome, Edge, and Firefox",
+      "description": "Block unwanted website notifications in Chrome, Edge, and Firefox and distinguish them from browser pop-ups and Windows alerts.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Website notifications can appear even when the site is no longer open. Revoke the site’s browser permission rather than merely dismissing each notification.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/store-asparagus-stays-crisp/",
       "title": "How to Store Asparagus So It Stays Crisp",
       "description": "Refrigerate asparagus upright in shallow water or wrap its cut ends in a damp towel, prevent slime, and freeze extra spears.",
@@ -9796,6 +10013,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/use-storage-sense-windows-11-safely/",
+      "title": "How to Use Storage Sense in Windows 11 Without Deleting Files You Need",
+      "description": "Configure Windows 11 Storage Sense without losing Downloads, recent deleted files, or OneDrive files that must remain available offline.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Storage Sense can clear temporary files and age out Recycle Bin contents automatically. Downloads and cloud files are treated separately, so review every option before enabling scheduled cleanup.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/used-coffee-maker-inspection-checklist/",
       "title": "Used Coffee Maker Inspection Checklist: Cord, Reservoir, Heat, Leaks, and Recall",
       "description": "Inspect a secondhand drip coffee maker for electrical damage, stale water, missing parts, leaks, overheating, mineral scale, and recalls before buying.",
@@ -10043,6 +10291,37 @@
         "state": "not-hands-on-tested",
         "notes": [
           "This is a researched inspection framework and does not evaluate a particular washing machine."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/vehicle-accident-evidence-insurance-repair-log-template/",
+      "title": "Vehicle Accident Evidence, Insurance, and Repair Log Template",
+      "description": "Track crash evidence, drivers, insurance, police, injuries, towing, estimates, repairs, rental expenses, deadlines, and resolution.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A collision can produce separate police, insurance, medical, repair, rental, lender, and state-reporting records. One chronological log keeps facts, deadlines, and promises together.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
         ]
       },
       "relatedContent": {
@@ -14225,5 +14504,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:d5afa438f0593659f4a190248787bb4e0e882a15eba112f95c9e5450a437d5db"
+  "registryDigest": "sha256:e798c42a5725081c8c59d6806b699311aef8b6709b11e5315bee89928ed7d663"
 }

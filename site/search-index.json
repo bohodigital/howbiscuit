@@ -298,6 +298,14 @@
       "searchText": "can you use soap on cast iron yes a small amount of mild dish soap is generally safe for seasoned cast iron wash by hand dry promptly and apply a very thin coat of oil if needed kitchen guide articles can you use soap on cast iron"
     },
     {
+      "route": "/articles/ceiling-fan-wobble-unsafe-fix/",
+      "title": "Why Does My Ceiling Fan Wobble, and When Is It Unsafe?",
+      "description": "Diagnose ceiling-fan wobble from loose blades, bent arms, imbalance, downrod trouble, or an unsafe electrical box and mounting bracket.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my ceiling fan wobble and when is it unsafe diagnose ceiling fan wobble from loose blades bent arms imbalance downrod trouble or an unsafe electrical box and mounting bracket home apartment guide articles ceiling fan wobble unsafe fix"
+    },
+    {
       "route": "/articles/check-bitlocker-back-up-recovery-key/",
       "title": "How to Check Whether BitLocker Is On and Back Up the Recovery Key",
       "description": "Check whether BitLocker or Device Encryption is enabled, find the 48-digit recovery key, store it safely, and prepare for hardware changes.",
@@ -314,12 +322,28 @@
       "searchText": "how to check for recalls before buying a used product a used product can look perfect and still be recalled search the exact model serial number production date or vin before paying shop smarter guide articles check recalls before buying used product"
     },
     {
+      "route": "/articles/choose-battery-backup-sump-pump/",
+      "title": "How to Choose a Battery-Backup Sump Pump",
+      "description": "Compare backup sump pumps by flow at head, battery, runtime, float, charger, alarm, discharge plumbing, and outage performance.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a battery backup sump pump compare backup sump pumps by flow at head battery runtime float charger alarm discharge plumbing and outage performance shop smarter guide articles choose battery backup sump pump"
+    },
+    {
       "route": "/articles/choose-car-battery-charger-maintainer/",
       "title": "How to Choose a Car Battery Charger or Maintainer",
       "description": "Compare automotive chargers and maintainers by voltage, chemistry, amp-hours, charging stages, protection, connection method, and storage use.",
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose a car battery charger or maintainer compare automotive chargers and maintainers by voltage chemistry amp hours charging stages protection connection method and storage use shop smarter guide articles choose car battery charger maintainer"
+    },
+    {
+      "route": "/articles/choose-clothes-garment-steamer-safely/",
+      "title": "How to Choose a Clothes Steamer Without Getting Burned",
+      "description": "Compare garment steamers by handheld or standing design, output, tank, distilled water, voltage, stability, burn risk, and recalls.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a clothes steamer without getting burned compare garment steamers by handheld or standing design output tank distilled water voltage stability burn risk and recalls shop smarter guide articles choose clothes garment steamer safely"
     },
     {
       "route": "/articles/choose-emergency-flashlight/",
@@ -530,6 +554,14 @@
       "searchText": "how to disable startup apps in windows 11 without breaking anything find high impact windows startup apps disable nonessential software safely test the result and distinguish startup from restartable apps home tech guide articles disable startup apps windows 11 safely"
     },
     {
+      "route": "/articles/dishwasher-white-film-dishes-glasses/",
+      "title": "Why Is My Dishwasher Leaving White Film on Dishes and Glasses?",
+      "description": "Test dishwasher film with vinegar and fix hard-water residue, detergent problems, rinse-aid settings, dirty filters, or glass etching.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my dishwasher leaving white film on dishes and glasses test dishwasher film with vinegar and fix hard water residue detergent problems rinse aid settings dirty filters or glass etching home apartment guide articles dishwasher white film dishes glasses"
+    },
+    {
       "route": "/articles/do-ceiling-fans-cool-a-room/",
       "title": "Do Ceiling Fans Cool a Room? What They Actually Do",
       "description": "Ceiling fans make people feel cooler by moving air, but they do not meaningfully lower an empty room’s temperature. Here is when to run one, when to turn it off, and how to pair it with air conditioning.",
@@ -680,6 +712,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "heat pump vs standard electric water heater heat pump water heaters move heat from surrounding air and may use resistance backup compare efficiency recovery room size temperature noise condensate and installation home apartment guide articles heat pump vs electric water heater"
+    },
+    {
+      "route": "/articles/hollandaise-sauce-broke-fix/",
+      "title": "Why Did My Hollandaise Sauce Break, and How Do You Fix It?",
+      "description": "Rescue broken hollandaise with warm water or a fresh yolk emulsion and prevent separation caused by heat, cold, or fast butter addition.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my hollandaise sauce break and how do you fix it rescue broken hollandaise with warm water or a fresh yolk emulsion and prevent separation caused by heat cold or fast butter addition kitchen guide articles hollandaise sauce broke fix"
     },
     {
       "route": "/articles/home-energy-check-high-summer-bill/",
@@ -1234,6 +1274,14 @@
       "searchText": "why is my humidifier leaving white dust everywhere stop humidifier white dust by using distilled water replacing mineral cartridges cleaning the tank and controlling indoor humidity home apartment guide articles humidifier leaving white dust"
     },
     {
+      "route": "/articles/hvac-air-filter-replacement-service-log-template/",
+      "title": "HVAC Air Filter Replacement and Service Log Template",
+      "description": "Track HVAC filter sizes, MERV ratings, airflow direction, inspections, replacements, system symptoms, indoor-air events, and service visits.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "hvac air filter replacement and service log template track hvac filter sizes merv ratings airflow direction inspections replacements system symptoms indoor air events and service visits tools guide articles hvac air filter replacement service log template"
+    },
+    {
       "route": "/articles/identity-theft-incident-recovery-log-template/",
       "title": "Identity Theft Incident and Recovery Log Template",
       "description": "Track fraudulent accounts, FTC and police reports, credit freezes, fraud alerts, disputes, evidence, deadlines, and written resolutions.",
@@ -1626,6 +1674,14 @@
       "searchText": "how to stop onedrive folder backup without losing your desktop or documents stop onedrive desktop documents or pictures backup safely download cloud only files choose the correct destination and verify the move home tech guide articles stop onedrive folder backup without losing files"
     },
     {
+      "route": "/articles/stop-website-notifications-chrome-edge-firefox/",
+      "title": "How to Stop Website Notifications in Chrome, Edge, and Firefox",
+      "description": "Block unwanted website notifications in Chrome, Edge, and Firefox and distinguish them from browser pop-ups and Windows alerts.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to stop website notifications in chrome edge and firefox block unwanted website notifications in chrome edge and firefox and distinguish them from browser pop ups and windows alerts home tech guide articles stop website notifications chrome edge firefox"
+    },
+    {
       "route": "/articles/store-asparagus-stays-crisp/",
       "title": "How to Store Asparagus So It Stays Crisp",
       "description": "Refrigerate asparagus upright in shallow water or wrap its cut ends in a damp towel, prevent slime, and freeze extra spears.",
@@ -1714,6 +1770,14 @@
       "searchText": "how to use dynamic lock in windows 11 and why it is not an instant lock pair a phone and enable windows dynamic lock test the bluetooth delay understand its limits and keep using windows key l home tech guide articles use dynamic lock windows 11"
     },
     {
+      "route": "/articles/use-storage-sense-windows-11-safely/",
+      "title": "How to Use Storage Sense in Windows 11 Without Deleting Files You Need",
+      "description": "Configure Windows 11 Storage Sense without losing Downloads, recent deleted files, or OneDrive files that must remain available offline.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to use storage sense in windows 11 without deleting files you need configure windows 11 storage sense without losing downloads recent deleted files or onedrive files that must remain available offline home tech guide articles use storage sense windows 11 safely"
+    },
+    {
       "route": "/articles/used-coffee-maker-inspection-checklist/",
       "title": "Used Coffee Maker Inspection Checklist: Cord, Reservoir, Heat, Leaks, and Recall",
       "description": "Inspect a secondhand drip coffee maker for electrical damage, stale water, missing parts, leaks, overheating, mineral scale, and recalls before buying.",
@@ -1776,6 +1840,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "used washing machine inspection checklist fill wash drain spin and leak test inspect a used washer by verifying its model and recall status running a complete water connected cycle checking for leaks and bearing noise and calculating installation costs shop smarter guide articles used washing machine inspection checklist"
+    },
+    {
+      "route": "/articles/vehicle-accident-evidence-insurance-repair-log-template/",
+      "title": "Vehicle Accident Evidence, Insurance, and Repair Log Template",
+      "description": "Track crash evidence, drivers, insurance, police, injuries, towing, estimates, repairs, rental expenses, deadlines, and resolution.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "vehicle accident evidence insurance and repair log template track crash evidence drivers insurance police injuries towing estimates repairs rental expenses deadlines and resolution tools guide articles vehicle accident evidence insurance repair log template"
     },
     {
       "route": "/articles/water-heater-leaking-what-to-do/",
