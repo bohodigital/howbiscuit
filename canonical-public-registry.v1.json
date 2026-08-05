@@ -2150,6 +2150,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-portable-induction-cooktop/",
+      "title": "How to Choose a Portable Induction Cooktop",
+      "description": "Compare portable induction cooktops by wattage, circuit needs, coil size, cookware compatibility, low-power control, noise, and safety.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Portable induction cooktops heat magnetic cookware directly. The pan must be compatible, reasonably flat, and matched to the active coil area.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-portable-power-station-outage/",
       "title": "How to Choose a Portable Power Station for an Outage",
       "description": "Choose a portable power station by watt-hours, running and surge watts, runtime, outlets, waveform, solar input, certification, and battery safety.",
@@ -2195,6 +2226,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "PSI describes pressure while GPM describes water flow. Both affect cleaning, but surface damage also depends on nozzle angle, distance, dwell time, detergent, and material condition.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-step-ladder-home-use/",
+      "title": "How to Choose a Step Ladder for Home Use",
+      "description": "Choose a household step ladder by duty rating, height, fiberglass or aluminum construction, locking spreaders, feet, and safe standing level.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Ladder duty rating includes the user, tools, clothing, and carried materials. The top cap and top step are not standing surfaces unless the ladder is specifically designed and labeled otherwise.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2752,6 +2814,37 @@
         "notes": [
           "No product, seller, laboratory listing, shipment, packaging, or certification mark was authenticated.",
           "This guide cannot determine trademark infringement, legal authenticity, or compliance from photographs alone."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/create-use-system-restore-point-windows-11/",
+      "title": "How to Create and Use a System Restore Point in Windows 11",
+      "description": "Turn on System Protection, create a Windows 11 restore point, review affected programs, and restore from Windows or recovery mode.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A restore point can roll Windows system files, drivers, applications, and registry settings back to an earlier state. It does not replace a backup of personal files.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
         ]
       },
       "relatedContent": {
@@ -3797,6 +3890,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/find-laptop-battery-drain-windows-11/",
+      "title": "How to Find What Is Draining Your Laptop Battery in Windows 11",
+      "description": "Review Windows battery usage, identify background applications, generate a battery report, and compare full charge with design capacity.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Windows can show which applications consumed battery power and whether capacity has declined. High use by one application is not automatically proof that the battery itself is defective.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/find-stop-drafts-windows-doors/",
       "title": "How to Find and Stop Drafts Around Windows and Doors",
       "description": "Locate the exact moving joint or fixed crack before sealing it. Use weatherstripping on operable edges and caulk on stationary gaps.",
@@ -3921,6 +4045,37 @@
         "notes": [
           "The template was not used with a specific freezer or household.",
           "It does not determine whether food remained continuously frozen or was handled safely before freezing."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/freezer-temperature-power-outage-food-loss-log-template/",
+      "title": "Freezer Temperature, Power Outage, and Food-Loss Log Template",
+      "description": "Track freezer temperatures, outage duration, door openings, ice crystals, food safety decisions, losses, photographs, and insurance records.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A closed full freezer can hold a safe temperature for roughly 48 hours, while a half-full freezer may hold it for about 24 hours. Actual conditions still depend on the appliance, room, food load, and door opening.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
         ]
       },
       "relatedContent": {
@@ -8696,6 +8851,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/refrigerator-ice-maker-not-making-ice/",
+      "title": "Why Is My Refrigerator Ice Maker Not Making Ice?",
+      "description": "Check freezer temperature, water supply, filter, bin, feeler arm, fill tube, and controls when a refrigerator ice maker stops working.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Ice production can stop because the freezer is too warm, the water supply is restricted, the filter is clogged, the control is off, or the ice maker detects a full bin.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/refrigerator-not-cooling-freezer-works/",
       "title": "Refrigerator Not Cooling but Freezer Works",
@@ -8917,6 +9103,37 @@
         "state": "not-hands-on-tested",
         "notes": [
           "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/renter-move-in-condition-security-deposit-log-template/",
+      "title": "Renter Move-In Condition and Security Deposit Log Template",
+      "description": "Document apartment condition, photographs, appliances, keys, meters, repairs, move-out comparison, and security-deposit deductions.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A signed move-in inspection and dated photographs help distinguish preexisting damage from tenant-caused damage when the tenancy ends.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
         ]
       },
       "relatedContent": {
@@ -9647,6 +9864,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Asparagus loses water rapidly through its cut stem and tender tips. Cold, humid storage slows drying without requiring the entire spear to sit in water.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/store-bell-peppers-stay-crisp/",
+      "title": "How to Store Bell Peppers So They Stay Crisp",
+      "description": "Refrigerate bell peppers without trapped moisture, store cut peppers safely, identify spoilage, and freeze extras for cooked dishes.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Bell peppers lose water and soften after harvest. Cold, humid storage slows that loss, but extended exposure to very low temperatures can eventually cause chilling injury.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -11482,6 +11730,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "A cake sinks when expanding batter rises before its starch, gluten, and egg structure become strong enough to hold the volume. Too much air can collapse just as surely as too little structure.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-caramel-crystallized-fix/",
+      "title": "Why Did My Caramel Crystallize, and Can You Fix It?",
+      "description": "Prevent grainy caramel by dissolving sugar, avoiding stirring, washing pan walls, and using acid or invert sugar, and learn when it can be rescued.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Grainy caramel is usually crystallized sucrose rather than burned sugar. Early crystallization can sometimes be redissolved with water; fully burned or contaminated caramel should be discarded.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -14504,5 +14783,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:e798c42a5725081c8c59d6806b699311aef8b6709b11e5315bee89928ed7d663"
+  "registryDigest": "sha256:b348cc649af9e7fbb6075b0cf401b83d3b8a6ea89c6fee31fd0df375b422b201"
 }

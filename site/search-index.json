@@ -394,6 +394,14 @@
       "searchText": "how to choose a portable jump starter for your car choose a car jump starter by battery voltage engine size cold weather support clamps reverse polarity protection override mode and recalls shop smarter guide articles choose portable car jump starter"
     },
     {
+      "route": "/articles/choose-portable-induction-cooktop/",
+      "title": "How to Choose a Portable Induction Cooktop",
+      "description": "Compare portable induction cooktops by wattage, circuit needs, coil size, cookware compatibility, low-power control, noise, and safety.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a portable induction cooktop compare portable induction cooktops by wattage circuit needs coil size cookware compatibility low power control noise and safety shop smarter guide articles choose portable induction cooktop"
+    },
+    {
       "route": "/articles/choose-portable-power-station-outage/",
       "title": "How to Choose a Portable Power Station for an Outage",
       "description": "Choose a portable power station by watt-hours, running and surge watts, runtime, outlets, waveform, solar input, certification, and battery safety.",
@@ -408,6 +416,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose a pressure washer without destroying the surface compare pressure washers by psi gpm electric or gas power gfci nozzle angle hose water supply and surface safety shop smarter guide articles choose pressure washer psi gpm electric gas"
+    },
+    {
+      "route": "/articles/choose-step-ladder-home-use/",
+      "title": "How to Choose a Step Ladder for Home Use",
+      "description": "Choose a household step ladder by duty rating, height, fiberglass or aluminum construction, locking spreaders, feet, and safe standing level.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a step ladder for home use choose a household step ladder by duty rating height fiberglass or aluminum construction locking spreaders feet and safe standing level shop smarter guide articles choose step ladder home use"
     },
     {
       "route": "/articles/choose-stud-finder-wall-scanner/",
@@ -528,6 +544,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "counterfeit electrical product warning signs labels listings seller and build a practical inspection guide for suspicious chargers power strips cords adapters batteries and small electrical products before they enter the home shop smarter guide articles counterfeit electrical product warning signs"
+    },
+    {
+      "route": "/articles/create-use-system-restore-point-windows-11/",
+      "title": "How to Create and Use a System Restore Point in Windows 11",
+      "description": "Turn on System Protection, create a Windows 11 restore point, review affected programs, and restore from Windows or recovery mode.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to create and use a system restore point in windows 11 turn on system protection create a windows 11 restore point review affected programs and restore from windows or recovery mode home tech guide articles create use system restore point windows 11"
     },
     {
       "route": "/articles/dehumidifier-running-not-collecting-water/",
@@ -666,6 +690,14 @@
       "searchText": "fan vs air conditioner cost how much cheaper is a fan a fan usually costs far less to run than an air conditioner but it does not lower room temperature compare hourly costs and learn when to use each home apartment guide articles fan vs air conditioner cost"
     },
     {
+      "route": "/articles/find-laptop-battery-drain-windows-11/",
+      "title": "How to Find What Is Draining Your Laptop Battery in Windows 11",
+      "description": "Review Windows battery usage, identify background applications, generate a battery report, and compare full charge with design capacity.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to find what is draining your laptop battery in windows 11 review windows battery usage identify background applications generate a battery report and compare full charge with design capacity home tech guide articles find laptop battery drain windows 11"
+    },
+    {
       "route": "/articles/find-stop-drafts-windows-doors/",
       "title": "How to Find and Stop Drafts Around Windows and Doors",
       "description": "Locate the exact moving joint or fixed crack before sealing it. Use weatherstripping on operable edges and caulk on stationary gaps.",
@@ -688,6 +720,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "freezer inventory template track food portions dates and use first items a copy ready freezer inventory for food name portion freeze date quantity location quality target thawing plan and use first status tools guide articles freezer inventory template"
+    },
+    {
+      "route": "/articles/freezer-temperature-power-outage-food-loss-log-template/",
+      "title": "Freezer Temperature, Power Outage, and Food-Loss Log Template",
+      "description": "Track freezer temperatures, outage duration, door openings, ice crystals, food safety decisions, losses, photographs, and insurance records.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "freezer temperature power outage and food loss log template track freezer temperatures outage duration door openings ice crystals food safety decisions losses photographs and insurance records tools guide articles freezer temperature power outage food loss log template"
     },
     {
       "route": "/articles/front-load-washer-smells/",
@@ -1506,6 +1546,14 @@
       "searchText": "power strip vs surge protector what is the difference power strips add outlets surge protectors also contain components intended to limit certain voltage surges here is how to tell what you own and what neither device can safely do home tech guide articles power strip vs surge protector"
     },
     {
+      "route": "/articles/refrigerator-ice-maker-not-making-ice/",
+      "title": "Why Is My Refrigerator Ice Maker Not Making Ice?",
+      "description": "Check freezer temperature, water supply, filter, bin, feeler arm, fill tube, and controls when a refrigerator ice maker stops working.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my refrigerator ice maker not making ice check freezer temperature water supply filter bin feeler arm fill tube and controls when a refrigerator ice maker stops working home apartment guide articles refrigerator ice maker not making ice"
+    },
+    {
       "route": "/articles/refrigerator-not-cooling-freezer-works/",
       "title": "Refrigerator Not Cooling but Freezer Works",
       "description": "Protect food first, then check blocked vents, overpacking, frost, the evaporator fan, damper, door seals, controls, and model-specific faults.",
@@ -1544,6 +1592,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "how to remove old bluetooth devices and re pair them in windows 11 delete old bluetooth pairings clear accessory memory stop competing connections and pair headphones keyboards phones or controllers again home tech guide articles remove old bluetooth devices repair windows 11"
+    },
+    {
+      "route": "/articles/renter-move-in-condition-security-deposit-log-template/",
+      "title": "Renter Move-In Condition and Security Deposit Log Template",
+      "description": "Document apartment condition, photographs, appliances, keys, meters, repairs, move-out comparison, and security-deposit deductions.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "renter move in condition and security deposit log template document apartment condition photographs appliances keys meters repairs move out comparison and security deposit deductions tools guide articles renter move in condition security deposit log template"
     },
     {
       "route": "/articles/renter-repair-request-documentation-checklist/",
@@ -1688,6 +1744,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to store asparagus so it stays crisp refrigerate asparagus upright in shallow water or wrap its cut ends in a damp towel prevent slime and freeze extra spears kitchen guide articles store asparagus stays crisp"
+    },
+    {
+      "route": "/articles/store-bell-peppers-stay-crisp/",
+      "title": "How to Store Bell Peppers So They Stay Crisp",
+      "description": "Refrigerate bell peppers without trapped moisture, store cut peppers safely, identify spoilage, and freeze extras for cooked dishes.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store bell peppers so they stay crisp refrigerate bell peppers without trapped moisture store cut peppers safely identify spoilage and freeze extras for cooked dishes kitchen guide articles store bell peppers stay crisp"
     },
     {
       "route": "/articles/store-broccoli-green-crisp/",
@@ -2024,6 +2088,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why did my cake sink in the middle fix sunken cakes by checking doneness leavener mixing creaming ingredient temperature pan size oven heat and cooling method kitchen guide articles why cake sank in middle"
+    },
+    {
+      "route": "/articles/why-caramel-crystallized-fix/",
+      "title": "Why Did My Caramel Crystallize, and Can You Fix It?",
+      "description": "Prevent grainy caramel by dissolving sugar, avoiding stirring, washing pan walls, and using acid or invert sugar, and learn when it can be rescued.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my caramel crystallize and can you fix it prevent grainy caramel by dissolving sugar avoiding stirring washing pan walls and using acid or invert sugar and learn when it can be rescued kitchen guide articles why caramel crystallized fix"
     },
     {
       "route": "/articles/why-ceiling-fan-wobbles/",
