@@ -752,6 +752,130 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-bluetooth-trackers/",
+      "title": "5 Bluetooth Trackers Worth Comparing in 2026: AirTag Alternatives for Keys, Bags, and Luggage",
+      "description": "Five researched Bluetooth trackers in 2026, with picks for iPhone, Samsung Galaxy, cross-platform use, network choice, and rechargeable ownership.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with Apple AirTag for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-computer-speakers-under-150/",
+      "title": "5 Computer Speakers Under a 150-Dollar Ceiling Worth Comparing in 2026: Better Desktop Sound Without a Soundbar",
+      "description": "Five researched computer speakers under the 150-dollar ceiling in 2026, including overall 2.1, budget, compact Bluetooth, gaming, and content-creation picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with Logitech Z407 for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-external-ssds/",
+      "title": "5 External SSDs Worth Comparing in 2026: Fast Storage for Backups, Photos, Games, and Phones",
+      "description": "Five researched external SSDs in 2026, with picks for overall performance, value, phone use, high-capacity desks, and compact everyday storage.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with SanDisk Professional Pro-G40 SSD for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-gaming-monitors-under-300/",
+      "title": "5 Gaming Monitors Under a 300-Dollar Ceiling Worth Comparing in 2026: High Refresh Rates Without Bad Panels",
+      "description": "Five researched gaming monitors under the 300-dollar ceiling in 2026, with 1440p HDR, 32-inch, fast IPS, 27-inch value, and cheap 1080p picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with AOC Q27G3XMN for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-laptops-under-500/",
       "title": "5 Recommended Laptops Under the 500-dollar ceiling in 2026: The Cheap Models Actually Worth Buying",
       "description": "The recommended sub-the 500-dollar ceiling laptops for everyday Windows work, school, ChromeOS, and portable 2-in-1 use, with exact configuration traps explained.",
@@ -766,6 +890,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "The Lenovo IdeaPad Slim 3x is the strongest overall value only in its 16GB Snapdragon X configuration at the 500-dollar ceiling or less. Choose the Acer Aspire Go 15 when conventional Windows compatibility matters, or a Chromebook Plus model when your work lives in a browser.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-mechanical-keyboards-under-100/",
+      "title": "5 Mechanical Keyboards Under a 100-Dollar Ceiling Worth Comparing in 2026: Better Typing Without Boutique Prices",
+      "description": "Five researched mechanical keyboards under the 100-dollar ceiling in 2026, with full-size, 75%, compact, work-and-play, and sub-the 50-dollar ceiling picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with Keychron C2 Pro for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1038,6 +1193,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-smart-plugs/",
+      "title": "5 Smart Plugs Worth Comparing in 2026: Matter, Energy Monitoring, and Outdoor Control",
+      "description": "Five researched smart plugs in 2026, including reliable overall, budget Matter, Thread, Matter with energy monitoring, and outdoor picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with Kasa Smart Plug Mini EP25 for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-usb-c-chargers/",
       "title": "5 Recommended USB-C Chargers in 2026: One Brick for Phones, Laptops, and Travel",
       "description": "Five USB-C chargers chosen by honest port behavior, useful power, travel fit, and standards—not one misleading total-wattage number.",
@@ -1052,6 +1238,99 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "The Anker Prime 67W is the most useful one-brick charger for most people. Pick Anker's 140W four-port model for a power-hungry laptop, UGREEN's 300W station for a desk, or the 65W travel model for international plug adaptation.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-usb-c-hubs-laptop-docks/",
+      "title": "Five USB-C Hubs and Laptop Docks Worth Comparing in 2026: Ports Without Compatibility Surprises",
+      "description": "Five researched USB-C hubs and laptop docks in 2026, including travel, budget, USB-C expansion, Thunderbolt 5, and dual-display picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with Plugable USB-C Hub (9-in-1) with 4K HDMI and 140W pass-through for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-video-doorbells-without-subscription/",
+      "title": "5 Video Doorbells Without a Subscription Worth Comparing in 2026: Local Storage That Actually Works",
+      "description": "Five researched video doorbells without required subscriptions in 2026, with overall, package, NVR, Apple/Matter, and DIY local-storage picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with TP-Link Tapo D225 for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-webcams/",
+      "title": "5 Webcams Worth Comparing in 2026: Clearer Calls, Better Streams, and Fewer Potato Faces",
+      "description": "Five researched webcams in 2026, including the strongest overall, budget, premium tracking, streaming, and professional picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Start with Insta360 Link 2C for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -15310,5 +15589,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:66af1cd4688f00b28efcd23392f0ac1ced619ff5be50fa7ae1d943b46675352b"
+  "registryDigest": "sha256:aff4a661c45c8f46a01c40cfa7e3fc97203075111e9dcf94dab1f2586efd86d8"
 }
