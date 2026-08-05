@@ -1286,6 +1286,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-robot-vacuums-under-300/",
+      "title": "Robot Vacuum Navigation: Five Models Under a 300-Dollar Ceiling",
+      "description": "Five researched robot vacuums under the 300-dollar ceiling in 2026, with cleaning, self-washing sale, auto-empty, pet-hair, and cheap-brand picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Robot vacuum navigation is the first filter. Start with Roborock Q7 M5, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-smart-plugs/",
       "title": "5 Smart Plugs Worth Comparing in 2026: Matter, Energy Monitoring, and Outdoor Control",
       "description": "Five researched smart plugs in 2026, including reliable overall, budget Matter, Thread, Matter with energy monitoring, and outdoor picks.",
@@ -1424,6 +1455,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Tablet ecosystem longevity is the first filter. Start with Motorola MotoPad (2026), then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-ups-battery-backups/",
+      "title": "Battery Backup Runtime: Five UPS Models Worth Comparing",
+      "description": "Five researched UPS battery backups in 2026, with overall, budget, pure-sine, advanced-management, and compact picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Battery backup runtime is the first filter. Start with CyberPower CP1500AVRLCD3, then compare the other four options against your exact needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -15462,6 +15524,23 @@
     {
       "kind": "topic",
       "renderMode": "canonical-source",
+      "route": "/home-tech/smart-home/",
+      "title": "Smart Home",
+      "description": "Compatibility, local control, subscriptions, privacy, reliability, and safer connected-home defaults.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-05",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
       "route": "/home-tech/tvs-streaming/",
       "title": "TVs & Streaming",
       "description": "Televisions, streaming devices, HDMI, audio, picture settings, and playback troubleshooting.",
@@ -15885,5 +15964,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:47fe3b0667cedb7323250b7f015f8424af443b19900721aa3cf6a68137f7bc67"
+  "registryDigest": "sha256:3c1ebb5328b7f674cf38ee086083759639d25ed703b46bf6cc1b5991591ddfcf"
 }

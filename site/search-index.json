@@ -274,6 +274,14 @@
       "searchText": "5 recommended power banks in 2026 pocket chargers laptop batteries and travel picks five useful power banks for laptops travel pockets and magnetic charging with watt hours and recall model numbers checked shop smarter guide articles best power banks"
     },
     {
+      "route": "/articles/best-robot-vacuums-under-300/",
+      "title": "Robot Vacuum Navigation: Five Models Under a 300-Dollar Ceiling",
+      "description": "Five researched robot vacuums under the 300-dollar ceiling in 2026, with cleaning, self-washing sale, auto-empty, pet-hair, and cheap-brand picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "robot vacuum navigation five models under a 300 dollar ceiling five researched robot vacuums under the 300 dollar ceiling in 2026 with cleaning self washing sale auto empty pet hair and cheap brand picks home tech guide articles best robot vacuums under 300"
+    },
+    {
       "route": "/articles/best-smart-plugs/",
       "title": "5 Smart Plugs Worth Comparing in 2026: Matter, Energy Monitoring, and Outdoor Control",
       "description": "Five researched smart plugs in 2026, including reliable overall, budget Matter, Thread, Matter with energy monitoring, and outdoor picks.",
@@ -312,6 +320,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "tablet ecosystem longevity five models under a 300 dollar ceiling five researched tablets under the 300 dollar ceiling in 2026 with picks for android apple sale pricing included pen value large displays and cheap media use shop smarter guide articles best tablets under 300"
+    },
+    {
+      "route": "/articles/best-ups-battery-backups/",
+      "title": "Battery Backup Runtime: Five UPS Models Worth Comparing",
+      "description": "Five researched UPS battery backups in 2026, with overall, budget, pure-sine, advanced-management, and compact picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "battery backup runtime five ups models worth comparing five researched ups battery backups in 2026 with overall budget pure sine advanced management and compact picks home tech guide articles best ups battery backups"
     },
     {
       "route": "/articles/best-usb-c-chargers/",
@@ -2896,6 +2912,14 @@
       "category": "Home Tech",
       "type": "Topic",
       "searchText": "privacy security updates accounts backups passwords network security recovery and practical privacy controls home tech topic home tech privacy security"
+    },
+    {
+      "route": "/home-tech/smart-home/",
+      "title": "Smart Home",
+      "description": "Compatibility, local control, subscriptions, privacy, reliability, and safer connected-home defaults.",
+      "category": "Home Tech",
+      "type": "Topic",
+      "searchText": "smart home compatibility local control subscriptions privacy reliability and safer connected home defaults home tech topic home tech smart home"
     },
     {
       "route": "/home-tech/tvs-streaming/",
