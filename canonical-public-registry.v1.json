@@ -1871,6 +1871,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/cheese-sauce-grainy-fix/",
+      "title": "Why Did My Cheese Sauce Turn Grainy, and Can You Fix It?",
+      "description": "Rescue grainy cheese sauce with warm liquid, blending, or a fresh emulsion and prevent separation by controlling heat.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Boiling cheese sauce can tighten dairy proteins and release fat. A mildly broken sauce can often be smoothed; a severely overheated one may remain coarse.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-battery-backup-sump-pump/",
       "title": "How to Choose a Battery-Backup Sump Pump",
       "description": "Compare backup sump pumps by flow at head, battery, runtime, float, charger, alarm, discharge plumbing, and outage performance.",
@@ -2288,6 +2319,68 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Basic stud finders detect density changes near drywall surfaces. More advanced scanners can identify metal, wiring, pipes, and deeper objects, but wall material and object conditions limit every device.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-wet-dry-shop-vacuum/",
+      "title": "How to Choose a Wet/Dry Shop Vacuum",
+      "description": "Compare wet/dry vacuums by CFM, sealed suction, hose diameter, tank, filters, wet shutoff, drain, noise, and hazardous-dust limits.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Airflow helps move dust and large debris, while sealed suction helps lift dense material and liquids. Neither number by itself describes every cleaning task.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-window-fan-ventilation/",
+      "title": "How to Choose a Window Fan That Actually Ventilates the Room",
+      "description": "Choose a window fan by fit, reversible airflow, noise, controls, secure mounting, outdoor air quality, and heat-safety limits.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A window fan can exhaust indoor air or pull outdoor air inside. It cannot cool below the outdoor temperature, filter smoke automatically, or safely replace air conditioning during dangerous heat.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -8513,6 +8606,37 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/pipes-bang-water-hammer-faucet-appliance-stops/",
+      "title": "Why Do My Pipes Bang When a Faucet or Appliance Stops?",
+      "description": "Diagnose water hammer, loose pipes, excessive pressure, thermal expansion, and appliance-valve banging in household plumbing.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Water hammer occurs when moving water stops abruptly and creates a pressure wave. Quick-closing appliance valves are frequent triggers.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/portable-ac-cost-to-run/",
       "title": "How Much Does a Portable AC Cost to Run?",
@@ -10005,6 +10129,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/store-green-beans-stay-crisp/",
+      "title": "How to Store Green Beans So They Stay Crisp",
+      "description": "Refrigerate green beans without trapped moisture, identify spoilage, revive slightly limp pods, and blanch extras before freezing.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Green beans lose moisture after harvest but can also develop chilling injury in very cold storage. A crisper drawer provides a practical household compromise.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/store-green-onions-scallions-crisp/",
       "title": "How to Store Green Onions So They Stay Crisp",
       "description": "Keep green onions crisp using a damp towel or shallow root-water method, store chopped scallions, and freeze extras for cooking.",
@@ -10086,6 +10241,37 @@
         "state": "not-hands-on-tested",
         "notes": [
           "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/subscription-cancellation-recurring-charge-dispute-log-template/",
+      "title": "Subscription Cancellation and Recurring-Charge Dispute Log Template",
+      "description": "Track subscription terms, trial deadlines, cancellations, confirmation numbers, recurring charges, bank notices, disputes, and refunds.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Canceling a service, revoking an automatic payment, and disputing a charge are separate actions. A complete log preserves evidence for each one.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
         ]
       },
       "relatedContent": {
@@ -10565,6 +10751,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "A collision can produce separate police, insurance, medical, repair, rental, lender, and state-reporting records. One chronological log keeps facts, deadlines, and promises together.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/vehicle-registration-insurance-inspection-recall-log-template/",
+      "title": "Vehicle Registration, Insurance, Inspection, and Recall Renewal Log Template",
+      "description": "Track vehicle registration, insurance, inspections, emissions, taxes, titles, recalls, renewal deadlines, and confirmations.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Vehicle requirements are set primarily by states and local jurisdictions. A renewal log prevents expired registration, insurance gaps, missed inspections, and unrepaired safety recalls.",
       "evidence": "Researched",
       "testing": {
         "state": "not-applicable",
@@ -14783,5 +15000,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:b348cc649af9e7fbb6075b0cf401b83d3b8a6ea89c6fee31fd0df375b422b201"
+  "registryDigest": "sha256:b604eea6681568786f6d27e69eeb67a0c08db1c7cbef8f689ac4ed6f705d1ebf"
 }

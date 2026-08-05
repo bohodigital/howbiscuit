@@ -322,6 +322,14 @@
       "searchText": "how to check for recalls before buying a used product a used product can look perfect and still be recalled search the exact model serial number production date or vin before paying shop smarter guide articles check recalls before buying used product"
     },
     {
+      "route": "/articles/cheese-sauce-grainy-fix/",
+      "title": "Why Did My Cheese Sauce Turn Grainy, and Can You Fix It?",
+      "description": "Rescue grainy cheese sauce with warm liquid, blending, or a fresh emulsion and prevent separation by controlling heat.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my cheese sauce turn grainy and can you fix it rescue grainy cheese sauce with warm liquid blending or a fresh emulsion and prevent separation by controlling heat kitchen guide articles cheese sauce grainy fix"
+    },
+    {
       "route": "/articles/choose-battery-backup-sump-pump/",
       "title": "How to Choose a Battery-Backup Sump Pump",
       "description": "Compare backup sump pumps by flow at head, battery, runtime, float, charger, alarm, discharge plumbing, and outage performance.",
@@ -432,6 +440,22 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to choose a stud finder without trusting it with your life choose a stud finder by wall material scan depth center detection metal and wire sensing calibration batteries and safety limitations shop smarter guide articles choose stud finder wall scanner"
+    },
+    {
+      "route": "/articles/choose-wet-dry-shop-vacuum/",
+      "title": "How to Choose a Wet/Dry Shop Vacuum",
+      "description": "Compare wet/dry vacuums by CFM, sealed suction, hose diameter, tank, filters, wet shutoff, drain, noise, and hazardous-dust limits.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a wet dry shop vacuum compare wet dry vacuums by cfm sealed suction hose diameter tank filters wet shutoff drain noise and hazardous dust limits shop smarter guide articles choose wet dry shop vacuum"
+    },
+    {
+      "route": "/articles/choose-window-fan-ventilation/",
+      "title": "How to Choose a Window Fan That Actually Ventilates the Room",
+      "description": "Choose a window fan by fit, reversible airflow, noise, controls, secure mounting, outdoor air quality, and heat-safety limits.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a window fan that actually ventilates the room choose a window fan by fit reversible airflow noise controls secure mounting outdoor air quality and heat safety limits shop smarter guide articles choose window fan ventilation"
     },
     {
       "route": "/articles/clean-drain-portable-air-conditioner-safely/",
@@ -1490,6 +1514,14 @@
       "searchText": "why is my phone storage full even after deleting photos deleted photos may remain in a recovery folder while downloads messages app data caches and offline media continue occupying the device first determine whether the warning concerns phone storage or cloud storage home tech guide articles phone storage full after deleting photos"
     },
     {
+      "route": "/articles/pipes-bang-water-hammer-faucet-appliance-stops/",
+      "title": "Why Do My Pipes Bang When a Faucet or Appliance Stops?",
+      "description": "Diagnose water hammer, loose pipes, excessive pressure, thermal expansion, and appliance-valve banging in household plumbing.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why do my pipes bang when a faucet or appliance stops diagnose water hammer loose pipes excessive pressure thermal expansion and appliance valve banging in household plumbing home apartment guide articles pipes bang water hammer faucet appliance stops"
+    },
+    {
       "route": "/articles/portable-ac-cost-to-run/",
       "title": "How Much Does a Portable AC Cost to Run?",
       "description": "Calculate a portable air conditioner’s hourly and monthly electricity cost using its watts, runtime, and your local electricity rate.",
@@ -1778,6 +1810,14 @@
       "searchText": "how to store cucumbers without making them slimy or soft refrigerate cucumbers without chilling or trapping moisture separate them from apples and onions and store cut cucumber safely kitchen guide articles store cucumbers without slime softness"
     },
     {
+      "route": "/articles/store-green-beans-stay-crisp/",
+      "title": "How to Store Green Beans So They Stay Crisp",
+      "description": "Refrigerate green beans without trapped moisture, identify spoilage, revive slightly limp pods, and blanch extras before freezing.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store green beans so they stay crisp refrigerate green beans without trapped moisture identify spoilage revive slightly limp pods and blanch extras before freezing kitchen guide articles store green beans stay crisp"
+    },
+    {
       "route": "/articles/store-green-onions-scallions-crisp/",
       "title": "How to Store Green Onions So They Stay Crisp",
       "description": "Keep green onions crisp using a damp towel or shallow root-water method, store chopped scallions, and freeze extras for cooking.",
@@ -1800,6 +1840,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "how to store tomatoes without ruining their texture ripen tomatoes at room temperature refrigerate ripe fruit when needed protect texture store cut tomatoes safely and freeze extras kitchen guide articles store tomatoes without ruining texture"
+    },
+    {
+      "route": "/articles/subscription-cancellation-recurring-charge-dispute-log-template/",
+      "title": "Subscription Cancellation and Recurring-Charge Dispute Log Template",
+      "description": "Track subscription terms, trial deadlines, cancellations, confirmation numbers, recurring charges, bank notices, disputes, and refunds.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "subscription cancellation and recurring charge dispute log template track subscription terms trial deadlines cancellations confirmation numbers recurring charges bank notices disputes and refunds tools guide articles subscription cancellation recurring charge dispute log template"
     },
     {
       "route": "/articles/sump-pump-testing-checklist/",
@@ -1912,6 +1960,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "vehicle accident evidence insurance and repair log template track crash evidence drivers insurance police injuries towing estimates repairs rental expenses deadlines and resolution tools guide articles vehicle accident evidence insurance repair log template"
+    },
+    {
+      "route": "/articles/vehicle-registration-insurance-inspection-recall-log-template/",
+      "title": "Vehicle Registration, Insurance, Inspection, and Recall Renewal Log Template",
+      "description": "Track vehicle registration, insurance, inspections, emissions, taxes, titles, recalls, renewal deadlines, and confirmations.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "vehicle registration insurance inspection and recall renewal log template track vehicle registration insurance inspections emissions taxes titles recalls renewal deadlines and confirmations tools guide articles vehicle registration insurance inspection recall log template"
     },
     {
       "route": "/articles/water-heater-leaking-what-to-do/",
