@@ -814,6 +814,68 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-dash-cams-under-200/",
+      "title": "Dash Camera Evidence: Five Models Under a 200-Dollar Ceiling",
+      "description": "Five researched dash cams under the 200-dollar ceiling in 2026, with affordable, compact, 4K, night-driving, and front/rear picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Dash camera evidence is the first filter. Start with Nextbase Piqo, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-e-readers/",
+      "title": "Reader Ecosystem Flexibility: Five E-Readers Worth Comparing",
+      "description": "Five researched e-readers in 2026, including polished Kindle, open Kobo color, budget monochrome, premium Kindle color, and Android picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Reader ecosystem flexibility is the first filter. Start with Amazon Kindle Paperwhite, 12th generation, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-external-ssds/",
       "title": "5 External SSDs Worth Comparing in 2026: Fast Storage for Backups, Photos, Games, and Phones",
       "description": "Five researched external SSDs in 2026, with picks for overall performance, value, phone use, high-capacity desks, and compact everyday storage.",
@@ -859,6 +921,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Start with AOC Q27G3XMN for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-home-printers-under-200/",
+      "title": "Printer Ownership Costs: Five Home Models Under a 200-Dollar Ceiling",
+      "description": "Five researched home printers under the 200-dollar ceiling in 2026, with monochrome laser, all-in-one, ink-tank, cheap photo, and lowest-cost picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Printer ownership costs is the first filter. Start with Brother HL-L2460DW, then compare the other four options against your exact needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1224,6 +1317,130 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-smartwatches-under-250/",
+      "title": "Smartwatch Phone Compatibility: Five Models Under a 250-Dollar Ceiling",
+      "description": "Five researched smartwatches under the 250-dollar ceiling in 2026, with picks for overall value, iPhone, running, sub-the 100-dollar ceiling buyers, and deeper fitness tracking.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Smartwatch phone compatibility is the first filter. Start with Amazfit Active 2, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-soundbars-under-300/",
+      "title": "Soundbar Dialogue Clarity: Five Models Under a 300-Dollar Ceiling",
+      "description": "Five researched soundbars under the 300-dollar ceiling in 2026, including overall, rear-speaker, standalone, compact, and streaming-box picks.",
+      "categoryId": "home-tech",
+      "topicId": "tvs-streaming",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Soundbar dialogue clarity is the first filter. Start with Samsung HW-B750D / HW-B750F, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-streaming-devices/",
+      "title": "Streaming Platform Longevity: Five Devices Worth Comparing in 2026",
+      "description": "Five researched streaming devices in 2026, with overall Roku, Google smart-home, premium Apple, Alexa, and budget 4K picks.",
+      "categoryId": "home-tech",
+      "topicId": "tvs-streaming",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Streaming platform longevity is the first filter. Start with Roku Streaming Stick Plus, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-tablets-under-300/",
+      "title": "Tablet Ecosystem Longevity: Five Models Under a 300-Dollar Ceiling",
+      "description": "Five researched tablets under the 300-dollar ceiling in 2026, with picks for Android, Apple sale pricing, included pen value, large displays, and cheap media use.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Tablet ecosystem longevity is the first filter. Start with Motorola MotoPad (2026), then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-usb-c-chargers/",
       "title": "5 Recommended USB-C Chargers in 2026: One Brick for Phones, Laptops, and Travel",
       "description": "Five USB-C chargers chosen by honest port behavior, useful power, travel fit, and standards—not one misleading total-wattage number.",
@@ -1269,6 +1486,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Start with Plugable USB-C Hub (9-in-1) with 4K HDMI and 140W pass-through for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-usb-microphones-under-150/",
+      "title": "Microphone Room Control: Five USB Models Under a 150-Dollar Ceiling",
+      "description": "Five researched USB microphones under the 150-dollar ceiling in 2026, with overall, value, streaming-software, control, and sub-the 50-dollar ceiling picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Microphone room control is the first filter. Start with Shure MV6, then compare the other four options against your exact needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1393,6 +1641,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Soundcore's Space A40 remains the recommended all-around value below the 100-dollar ceiling because it combines useful ANC, long battery life, multipoint, LDAC, and a mature app. Choose the Nothing Ear (3a) for deeper EQ controls or Push Active for secure ear hooks.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-wireless-mice-under-50/",
+      "title": "Wireless Mouse Comfort: Five Models Under a 50-Dollar Ceiling",
+      "description": "Five researched wireless mice under the 50-dollar ceiling in 2026, with productivity, gaming, vertical, lightweight, and cheap everyday picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Wireless mouse comfort is the first filter. Start with Logitech M720 Triathlon, then compare the other four options against your exact needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -15183,6 +15462,23 @@
     {
       "kind": "topic",
       "renderMode": "canonical-source",
+      "route": "/home-tech/tvs-streaming/",
+      "title": "TVs & Streaming",
+      "description": "Televisions, streaming devices, HDMI, audio, picture settings, and playback troubleshooting.",
+      "categoryId": "home-tech",
+      "topicId": "tvs-streaming",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-05",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
       "route": "/home-tech/wifi-routers/",
       "title": "Wi-Fi & Routers",
       "description": "Coverage, speed, placement, mesh systems, modems, and reliable home-network troubleshooting.",
@@ -15589,5 +15885,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:aff4a661c45c8f46a01c40cfa7e3fc97203075111e9dcf94dab1f2586efd86d8"
+  "registryDigest": "sha256:47fe3b0667cedb7323250b7f015f8424af443b19900721aa3cf6a68137f7bc67"
 }
