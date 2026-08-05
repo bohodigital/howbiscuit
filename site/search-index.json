@@ -298,6 +298,30 @@
       "searchText": "how to check for recalls before buying a used product a used product can look perfect and still be recalled search the exact model serial number production date or vin before paying shop smarter guide articles check recalls before buying used product"
     },
     {
+      "route": "/articles/choose-emergency-flashlight/",
+      "title": "How to Choose an Emergency Flashlight That Will Still Work When the Power Fails",
+      "description": "Compare emergency flashlights by ANSI lumens, candela, runtime, beam, batteries, water resistance, impact resistance, and controls.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose an emergency flashlight that will still work when the power fails compare emergency flashlights by ansi lumens candela runtime beam batteries water resistance impact resistance and controls shop smarter guide articles choose emergency flashlight"
+    },
+    {
+      "route": "/articles/choose-stud-finder-wall-scanner/",
+      "title": "How to Choose a Stud Finder Without Trusting It With Your Life",
+      "description": "Choose a stud finder by wall material, scan depth, center detection, metal and wire sensing, calibration, batteries, and safety limitations.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a stud finder without trusting it with your life choose a stud finder by wall material scan depth center detection metal and wire sensing calibration batteries and safety limitations shop smarter guide articles choose stud finder wall scanner"
+    },
+    {
+      "route": "/articles/clean-ductless-mini-split-filter-safely/",
+      "title": "How to Clean a Ductless Mini-Split Air Filter Safely",
+      "description": "Clean a ductless mini-split filter safely, separate washable and specialty filters, protect coils and fans, and follow the model schedule.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a ductless mini split air filter safely clean a ductless mini split filter safely separate washable and specialty filters protect coils and fans and follow the model schedule home apartment guide articles clean ductless mini split filter safely"
+    },
+    {
       "route": "/articles/clothes-taking-too-long-to-dry/",
       "title": "Why Are Clothes Taking So Long to Dry?",
       "description": "Long drying time often starts with airflow, lint, venting, load size, washer spin, sensors, cycle choice, room temperature, or a heating fault. Check safety before running another cycle.",
@@ -536,6 +560,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "home humidity and dehumidifier checklist measure humidity room by room find moisture sources choose dehumidifier capacity check drainage and safety and download the printable three day room log home tech guide articles home humidity dehumidifier checklist"
+    },
+    {
+      "route": "/articles/home-improvement-permit-inspection-log-template/",
+      "title": "Home Improvement Permit and Inspection Log Template",
+      "description": "Track building permits, approved plans, contractors, revisions, staged inspections, corrections, final approval, and certificates.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home improvement permit and inspection log template track building permits approved plans contractors revisions staged inspections corrections final approval and certificates tools guide articles home improvement permit inspection log template"
     },
     {
       "route": "/articles/home-inventory-checklist/",
@@ -1146,6 +1178,14 @@
       "searchText": "password manager migration checklist move without locking yourself out secure the destination vault first export as little plaintext as possible verify critical accounts transfer passkeys and authentication methods separately and delete temporary files tools guide articles password manager migration checklist"
     },
     {
+      "route": "/articles/pet-medical-vaccination-emergency-record-template/",
+      "title": "Pet Medical, Vaccination, Medication, and Emergency Record Template",
+      "description": "Track pet identity, microchip, veterinarian, diagnoses, medicines, vaccinations, tests, insurance, emergency consent, and evacuation records.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "pet medical vaccination medication and emergency record template track pet identity microchip veterinarian diagnoses medicines vaccinations tests insurance emergency consent and evacuation records tools guide articles pet medical vaccination emergency record template"
+    },
+    {
       "route": "/articles/phone-storage-full-after-deleting-photos/",
       "title": "Why Is My Phone Storage Full Even After Deleting Photos?",
       "description": "Deleted photos may remain in a recovery folder, while downloads, messages, app data, caches, and offline media continue occupying the device. First determine whether the warning concerns phone storage or cloud storage.",
@@ -1266,6 +1306,14 @@
       "searchText": "return policy vs warranty vs service contract what actually protects you a return policy product warranty and service contract address different problems learn what each protects and what to inspect before paying extra shop smarter guide articles return policy vs warranty vs service contract"
     },
     {
+      "route": "/articles/review-turn-off-location-access-windows-11/",
+      "title": "How to Review and Turn Off Location Access in Windows 11",
+      "description": "Review Windows 11 location services, app permissions, desktop access, recent activity, local history, default location, and browser permissions.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to review and turn off location access in windows 11 review windows 11 location services app permissions desktop access recent activity local history default location and browser permissions home tech guide articles review turn off location access windows 11"
+    },
+    {
       "route": "/articles/router-restart-vs-reset/",
       "title": "Router Restart vs. Reset: What’s the Difference?",
       "description": "Why restarting a router is a low-risk first step while a factory reset erases personalized settings and requires setup again.",
@@ -1314,6 +1362,14 @@
       "searchText": "how to spot a fake online store before you buy verify the exact domain research the seller independently compare prices read return and shipping terms and avoid payment methods that make recovery difficult shop smarter guide articles spot fake online store before buying"
     },
     {
+      "route": "/articles/store-carrots-stay-crisp/",
+      "title": "How to Store Carrots So They Stay Crisp",
+      "description": "Store whole and cut carrots in the refrigerator, remove tops, control moisture, revive limp carrots, and freeze extras correctly.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store carrots so they stay crisp store whole and cut carrots in the refrigerator remove tops control moisture revive limp carrots and freeze extras correctly kitchen guide articles store carrots stay crisp"
+    },
+    {
       "route": "/articles/sump-pump-testing-checklist/",
       "title": "Sump Pump Testing Checklist: Power, Float, Discharge, and Backup",
       "description": "A safety-first checklist for testing a sump pump before heavy rain without touching live wiring, entering a flooded area, or assuming a motor sound proves water is moving.",
@@ -1328,6 +1384,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "tank vs tankless water heater which is better for your home storage heaters provide a hot water reserve tankless units heat on demand but remain limited by flow temperature rise gas or electrical service venting and simultaneous fixtures home apartment guide articles tank vs tankless water heater"
+    },
+    {
+      "route": "/articles/use-dynamic-lock-windows-11/",
+      "title": "How to Use Dynamic Lock in Windows 11, and Why It Is Not an Instant Lock",
+      "description": "Pair a phone and enable Windows Dynamic Lock, test the Bluetooth delay, understand its limits, and keep using Windows key + L.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to use dynamic lock in windows 11 and why it is not an instant lock pair a phone and enable windows dynamic lock test the bluetooth delay understand its limits and keep using windows key l home tech guide articles use dynamic lock windows 11"
     },
     {
       "route": "/articles/used-coffee-maker-inspection-checklist/",
@@ -1552,6 +1616,14 @@
       "category": "Kitchen",
       "type": "Guide",
       "searchText": "why does brown sugar get hard and how do you soften it brown sugar hardens when it loses moisture restore that moisture slowly for lasting softness or warm only the amount you need when baking cannot wait kitchen guide articles why brown sugar hardens how to soften"
+    },
+    {
+      "route": "/articles/why-cake-sank-in-middle/",
+      "title": "Why Did My Cake Sink in the Middle?",
+      "description": "Fix sunken cakes by checking doneness, leavener, mixing, creaming, ingredient temperature, pan size, oven heat, and cooling method.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my cake sink in the middle fix sunken cakes by checking doneness leavener mixing creaming ingredient temperature pan size oven heat and cooling method kitchen guide articles why cake sank in middle"
     },
     {
       "route": "/articles/why-ceiling-fan-wobbles/",
@@ -1898,6 +1970,14 @@
       "searchText": "why is my toilet bubbling or gurgling diagnose a bubbling toilet by checking for a local clog blocked vent multiple slow drains a restricted sewer line or temporary municipal sewer work home apartment guide articles why toilet bubbling gurgling"
     },
     {
+      "route": "/articles/why-toilet-gurgles-when-drain-runs/",
+      "title": "Why Does My Toilet Gurgle When Another Drain Runs?",
+      "description": "Diagnose toilet gurgling caused by a local clog, blocked vent, main sewer restriction, septic failure, or municipal sewer cleaning.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why does my toilet gurgle when another drain runs diagnose toilet gurgling caused by a local clog blocked vent main sewer restriction septic failure or municipal sewer cleaning home apartment guide articles why toilet gurgles when drain runs"
+    },
+    {
       "route": "/articles/why-toilet-keeps-running/",
       "title": "Why Does My Toilet Keep Running?",
       "description": "A running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube. A dye test can identify the path.",
@@ -2024,6 +2104,14 @@
       "category": "Home Tech",
       "type": "Topic",
       "searchText": "power cooling storage power delivery battery care heat airflow storage capacity failure signs and replacement decisions home tech topic home tech power cooling storage"
+    },
+    {
+      "route": "/home-tech/privacy-security/",
+      "title": "Privacy & Security",
+      "description": "Updates, accounts, backups, passwords, network security, recovery, and practical privacy controls.",
+      "category": "Home Tech",
+      "type": "Topic",
+      "searchText": "privacy security updates accounts backups passwords network security recovery and practical privacy controls home tech topic home tech privacy security"
     },
     {
       "route": "/home-tech/wifi-routers/",

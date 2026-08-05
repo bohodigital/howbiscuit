@@ -1777,6 +1777,99 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-emergency-flashlight/",
+      "title": "How to Choose an Emergency Flashlight That Will Still Work When the Power Fails",
+      "description": "Compare emergency flashlights by ANSI lumens, candela, runtime, beam, batteries, water resistance, impact resistance, and controls.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Emergency lighting needs reliable low and medium modes more than a brief turbo output. Standardized ANSI/PLATO FL 1 claims make output, runtime, beam distance, impact, and water resistance easier to compare.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/choose-stud-finder-wall-scanner/",
+      "title": "How to Choose a Stud Finder Without Trusting It With Your Life",
+      "description": "Choose a stud finder by wall material, scan depth, center detection, metal and wire sensing, calibration, batteries, and safety limitations.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Basic stud finders detect density changes near drywall surfaces. More advanced scanners can identify metal, wiring, pipes, and deeper objects, but wall material and object conditions limit every device.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/clean-ductless-mini-split-filter-safely/",
+      "title": "How to Clean a Ductless Mini-Split Air Filter Safely",
+      "description": "Clean a ductless mini-split filter safely, separate washable and specialty filters, protect coils and fans, and follow the model schedule.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Many wall-mounted mini-split filters are washable, but deodorizing, allergen, and specialty filters can have different cleaning and replacement schedules. The exact model manual controls.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/clothes-taking-too-long-to-dry/",
       "title": "Why Are Clothes Taking So Long to Dry?",
@@ -3496,6 +3589,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrometer.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-improvement-permit-inspection-log-template/",
+      "title": "Home Improvement Permit and Inspection Log Template",
+      "description": "Track building permits, approved plans, contractors, revisions, staged inspections, corrections, final approval, and certificates.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Permit rules are local and project-specific. A complete log preserves which work was approved, which inspections occurred before concealment, and whether the project received final closure.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -7181,6 +7305,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/pet-medical-vaccination-emergency-record-template/",
+      "title": "Pet Medical, Vaccination, Medication, and Emergency Record Template",
+      "description": "Track pet identity, microchip, veterinarian, diagnoses, medicines, vaccinations, tests, insurance, emergency consent, and evacuation records.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A pet record should be usable during routine care, boarding, travel, evacuation, poisoning, and after-hours emergencies even when the usual veterinary clinic is closed.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/phone-storage-full-after-deleting-photos/",
       "title": "Why Is My Phone Storage Full Even After Deleting Photos?",
       "description": "Deleted photos may remain in a recovery folder, while downloads, messages, app data, caches, and offline media continue occupying the device. First determine whether the warning concerns phone storage or cloud storage.",
@@ -7886,6 +8041,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/review-turn-off-location-access-windows-11/",
+      "title": "How to Review and Turn Off Location Access in Windows 11",
+      "description": "Review Windows 11 location services, app permissions, desktop access, recent activity, local history, default location, and browser permissions.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Turning off Windows location services blocks future operating-system location access, but browsers, IP-address estimates, connected phones, and third-party accounts can maintain separate location permissions or records.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/router-restart-vs-reset/",
       "title": "Router Restart vs. Reset: What’s the Difference?",
       "description": "Why restarting a router is a low-risk first step while a factory reset erases personalized settings and requires setup again.",
@@ -8207,6 +8393,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/store-carrots-stay-crisp/",
+      "title": "How to Store Carrots So They Stay Crisp",
+      "description": "Store whole and cut carrots in the refrigerator, remove tops, control moisture, revive limp carrots, and freeze extras correctly.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Carrots become limp when they lose water. Cold, humid storage slows that loss, while attached tops, warm air, damage, and uncontrolled moisture shorten storage life.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/sump-pump-testing-checklist/",
       "title": "Sump Pump Testing Checklist: Power, Float, Discharge, and Backup",
       "description": "A safety-first checklist for testing a sump pump before heavy rain without touching live wiring, entering a flooded area, or assuming a motor sound proves water is moving.",
@@ -8304,6 +8521,37 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hot_water_storage.jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/use-dynamic-lock-windows-11/",
+      "title": "How to Use Dynamic Lock in Windows 11, and Why It Is Not an Instant Lock",
+      "description": "Pair a phone and enable Windows Dynamic Lock, test the Bluetooth delay, understand its limits, and keep using Windows key + L.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Dynamic Lock can lock Windows after the paired phone moves out of Bluetooth range, but Microsoft says the lock may take up to about one minute. It is a backup habit, not a substitute for manually locking the PC.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -9658,6 +9906,37 @@
         "state": "not-hands-on-tested",
         "notes": [
           "The softening methods were researched but not compared hands-on in a controlled kitchen test."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-cake-sank-in-middle/",
+      "title": "Why Did My Cake Sink in the Middle?",
+      "description": "Fix sunken cakes by checking doneness, leavener, mixing, creaming, ingredient temperature, pan size, oven heat, and cooling method.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A cake sinks when expanding batter rises before its starch, gluten, and egg structure become strong enough to hold the volume. Too much air can collapse just as surely as too little structure.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
         ]
       },
       "relatedContent": {
@@ -11641,6 +11920,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-toilet-gurgles-when-drain-runs/",
+      "title": "Why Does My Toilet Gurgle When Another Drain Runs?",
+      "description": "Diagnose toilet gurgling caused by a local clog, blocked vent, main sewer restriction, septic failure, or municipal sewer cleaning.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Toilet gurgling occurs when air or wastewater moves through the drainage system abnormally. One isolated sound may be minor, but multiple slow drains or sewage movement can precede a backup.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-toilet-keeps-running/",
       "title": "Why Does My Toilet Keep Running?",
       "description": "A running toilet usually means water is leaking past the flapper or the fill system is sending water into the overflow tube. A dye test can identify the path.",
@@ -12097,6 +12407,23 @@
     {
       "kind": "topic",
       "renderMode": "canonical-source",
+      "route": "/home-tech/privacy-security/",
+      "title": "Privacy & Security",
+      "description": "Updates, accounts, backups, passwords, network security, recovery, and practical privacy controls.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "topic",
+      "publishedDate": null,
+      "updatedDate": "2026-08-05",
+      "feedEligible": false,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false
+    },
+    {
+      "kind": "topic",
+      "renderMode": "canonical-source",
       "route": "/home-tech/wifi-routers/",
       "title": "Wi-Fi & Routers",
       "description": "Coverage, speed, placement, mesh systems, modems, and reliable home-network troubleshooting.",
@@ -12155,7 +12482,7 @@
       "topicId": "heating-cooling",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12172,7 +12499,7 @@
       "topicId": "repairs-maintenance",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12223,7 +12550,7 @@
       "topicId": "food-science",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12257,7 +12584,7 @@
       "topicId": "troubleshooting-safety",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12308,7 +12635,7 @@
       "topicId": "product-comparisons",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12444,7 +12771,7 @@
       "topicId": "templates",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -12503,5 +12830,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:358d42ca820f64b362e34618d60cb29e386396be57e1b9110dd0ae5a117a1414"
+  "registryDigest": "sha256:f2ceaa89c4cd8900a16e84ecd77fe5f6b2c0bf689e7696394a49d57b50ddaca8"
 }
