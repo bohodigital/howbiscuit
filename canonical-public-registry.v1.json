@@ -976,6 +976,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-portable-power-stations/",
+      "title": "5 Recommended Portable Power Stations in 2026: Backup Power Without Buying the Wrong Battery",
+      "description": "Five portable power stations for balanced backup, budgets, home or RV loads, camping, and swappable batteries—without confusing surge claims for continuous power.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "EcoFlow's DELTA 3 Plus is the recommended balanced 1kWh-class station. BLUETTI Elite 30 V2 handles lighter budgets, Anker SOLIX F3800 targets serious home or RV loads, Jackery Explorer 1000 V2 suits camping, and BLUETTI AC180T offers swappable modules.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-power-banks/",
       "title": "5 Recommended Power Banks in 2026: Pocket Chargers, Laptop Batteries, and Travel Picks",
       "description": "Five useful power banks for laptops, travel, pockets, and magnetic charging, with watt-hours and recall model numbers checked.",
@@ -14846,7 +14877,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -15279,5 +15310,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:4b8ce7e7ee97b88806ccb13aa486f84134b5356f64a220356e3ef9b1c50e9500"
+  "registryDigest": "sha256:66af1cd4688f00b28efcd23392f0ac1ced619ff5be50fa7ae1d943b46675352b"
 }
