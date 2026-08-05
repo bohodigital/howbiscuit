@@ -751,6 +751,130 @@
     },
     {
       "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-laptops-under-500/",
+      "title": "5 Recommended Laptops Under the 500-dollar ceiling in 2026: The Cheap Models Actually Worth Buying",
+      "description": "The recommended sub-the 500-dollar ceiling laptops for everyday Windows work, school, ChromeOS, and portable 2-in-1 use, with exact configuration traps explained.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Lenovo IdeaPad Slim 3x is the strongest overall value only in its 16GB Snapdragon X configuration at the 500-dollar ceiling or less. Choose the Acer Aspire Go 15 when conventional Windows compatibility matters, or a Chromebook Plus model when your work lives in a browser.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-mesh-wifi-systems/",
+      "title": "5 Recommended Mesh Wi-Fi Systems in 2026: Better Coverage, Fewer Dead Zones",
+      "description": "The recommended mesh Wi-Fi systems for ordinary broadband, multi-gig homes, low-cost coverage, and buyers who refuse a required subscription.",
+      "categoryId": "home-tech",
+      "topicId": "wifi-routers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "TP-Link's Deco BE63 is the overall recommendation mesh for current multi-gig homes. ASUS ZenWiFi ET9 is the stronger no-subscription choice, while older XE75, XE5300, and eero 6 kits only make sense at a meaningful discount and with supported hardware.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-mini-pcs/",
+      "title": "5 Recommended Mini PCs in 2026: Tiny Computers for Work, Home Labs, and Gaming",
+      "description": "Five mini PCs ranked for ordinary work, budgets, macOS, Windows value, and dedicated-GPU gaming—with barebones traps exposed.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "GMKtec's NucBox M6 Ultra offers the strongest overall value when you verify the exact RAM, storage, Windows license, and seller support. Apple Mac mini M4 is the recommended polished choice, while ASUS ROG NUC is a costly specialist gaming machine.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-phones-under-500/",
+      "title": "5 Recommended Phones Under the 500-dollar ceiling in 2026: Flagship Features Without the Flagship Bill",
+      "description": "Five worthwhile unlocked phones below the 500-dollar ceiling, ranked by camera quality, support, battery life, durability, and honest retail pricing.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Google Pixel 10a is the overall recommendation phone under the 500-dollar ceiling at its the checked price unlocked 128GB price. Nothing's Phone (4a) Pro is the feature-rich alternative, while Samsung's Galaxy A37 5G replaces the handoff's ineligible the checked price A57.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
       "renderMode": "preserve-existing-public-artifact",
       "route": "/articles/best-place-to-put-wifi-router/",
       "title": "Best Place to Put Your Wi-Fi Router",
@@ -817,6 +941,161 @@
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wireless_Router_(50841204223).jpg",
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-portable-monitors/",
+      "title": "5 Recommended Portable Monitors in 2026: Second Screens for Work, Travel, and Gaming",
+      "description": "Five portable monitors covering value, budget work, touch, high-refresh gaming, and a genuinely large temporary workspace.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The ARZOPA Z3FC is the value recommendation for most buyers in its current 16.1-inch 2560×1440 configuration. KYY K3 is the cheap document screen, Lenovo M14t Gen 2 is the business touch pick, and ASUS covers gaming and large transportable use.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-power-banks/",
+      "title": "5 Recommended Power Banks in 2026: Pocket Chargers, Laptop Batteries, and Travel Picks",
+      "description": "Five useful power banks for laptops, travel, pockets, and magnetic charging, with watt-hours and recall model numbers checked.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Anker's Prime 20,000mAh 200W A1336 is the recommended laptop-capable all-rounder, while EcoFlow's RAPID 25K offers more travel capacity at a printed 90Wh. For a pocket, choose INIU's P50-E1—not the recalled BI-B41.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-usb-c-chargers/",
+      "title": "5 Recommended USB-C Chargers in 2026: One Brick for Phones, Laptops, and Travel",
+      "description": "Five USB-C chargers chosen by honest port behavior, useful power, travel fit, and standards—not one misleading total-wattage number.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Anker Prime 67W is the most useful one-brick charger for most people. Pick Anker's 140W four-port model for a power-hungry laptop, UGREEN's 300W station for a desk, or the 65W travel model for international plug adaptation.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-wifi-7-routers/",
+      "title": "5 Recommended Wi-Fi 7 Routers in 2026: Fast Picks Without Paying for Meaningless Numbers",
+      "description": "Five Wi-Fi 7 routers ranked by measured performance, useful ports, controls, subscription costs, and hardware support—not box-speed arithmetic.",
+      "categoryId": "home-tech",
+      "topicId": "wifi-routers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The eero Max 7 is the simplest high-performance Wi-Fi 7 choice, while the ASUS ROG Strix GS-BE18000 is better for a multi-gig wired network. Value buyers should verify the exact TP-Link hardware revision before purchasing.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-wireless-earbuds-under-100/",
+      "title": "5 Recommended Wireless Earbuds Under the 100-dollar ceiling in 2026: Cheap Without Sounding Cheap",
+      "description": "Five sub-the 100-dollar ceiling wireless earbuds ranked for noise canceling, sound controls, workouts, calls, and real availability.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Soundcore's Space A40 remains the recommended all-around value below the 100-dollar ceiling because it combines useful ANC, long battery life, multipoint, LDAC, and a mature app. Choose the Nothing Ear (3a) for deeper EQ controls or Push Active for secure ear hooks.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -14601,7 +14880,7 @@
       "topicId": "wifi-routers",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-05",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -15000,5 +15279,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:b604eea6681568786f6d27e69eeb67a0c08db1c7cbef8f689ac4ed6f705d1ebf"
+  "registryDigest": "sha256:4b8ce7e7ee97b88806ccb13aa486f84134b5356f64a220356e3ef9b1c50e9500"
 }

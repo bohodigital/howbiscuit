@@ -146,12 +146,84 @@
       "searchText": "why is bathroom caulk turning black and when should you replace it determine whether black shower caulk needs cleaning or replacement fix moisture remove failed sealant and recaulk the joint correctly home apartment guide articles bathroom caulk turning black replace"
     },
     {
+      "route": "/articles/best-laptops-under-500/",
+      "title": "5 Recommended Laptops Under the 500-dollar ceiling in 2026: The Cheap Models Actually Worth Buying",
+      "description": "The recommended sub-the 500-dollar ceiling laptops for everyday Windows work, school, ChromeOS, and portable 2-in-1 use, with exact configuration traps explained.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "5 recommended laptops under the 500 dollar ceiling in 2026 the cheap models actually worth buying the recommended sub the 500 dollar ceiling laptops for everyday windows work school chromeos and portable 2 in 1 use with exact configuration traps explained shop smarter guide articles best laptops under 500"
+    },
+    {
+      "route": "/articles/best-mesh-wifi-systems/",
+      "title": "5 Recommended Mesh Wi-Fi Systems in 2026: Better Coverage, Fewer Dead Zones",
+      "description": "The recommended mesh Wi-Fi systems for ordinary broadband, multi-gig homes, low-cost coverage, and buyers who refuse a required subscription.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "5 recommended mesh wi fi systems in 2026 better coverage fewer dead zones the recommended mesh wi fi systems for ordinary broadband multi gig homes low cost coverage and buyers who refuse a required subscription home tech guide articles best mesh wifi systems"
+    },
+    {
+      "route": "/articles/best-mini-pcs/",
+      "title": "5 Recommended Mini PCs in 2026: Tiny Computers for Work, Home Labs, and Gaming",
+      "description": "Five mini PCs ranked for ordinary work, budgets, macOS, Windows value, and dedicated-GPU gaming—with barebones traps exposed.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "5 recommended mini pcs in 2026 tiny computers for work home labs and gaming five mini pcs ranked for ordinary work budgets macos windows value and dedicated gpu gaming with barebones traps exposed home tech guide articles best mini pcs"
+    },
+    {
+      "route": "/articles/best-phones-under-500/",
+      "title": "5 Recommended Phones Under the 500-dollar ceiling in 2026: Flagship Features Without the Flagship Bill",
+      "description": "Five worthwhile unlocked phones below the 500-dollar ceiling, ranked by camera quality, support, battery life, durability, and honest retail pricing.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "5 recommended phones under the 500 dollar ceiling in 2026 flagship features without the flagship bill five worthwhile unlocked phones below the 500 dollar ceiling ranked by camera quality support battery life durability and honest retail pricing shop smarter guide articles best phones under 500"
+    },
+    {
       "route": "/articles/best-place-to-put-wifi-router/",
       "title": "Best Place to Put Your Wi-Fi Router",
       "description": "Put your router near the center of the area you use, out in the open, off the floor, and away from dense barriers. Use this test before buying an extender.",
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "best place to put your wi fi router put your router near the center of the area you use out in the open off the floor and away from dense barriers use this test before buying an extender home tech guide articles best place to put wifi router"
+    },
+    {
+      "route": "/articles/best-portable-monitors/",
+      "title": "5 Recommended Portable Monitors in 2026: Second Screens for Work, Travel, and Gaming",
+      "description": "Five portable monitors covering value, budget work, touch, high-refresh gaming, and a genuinely large temporary workspace.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "5 recommended portable monitors in 2026 second screens for work travel and gaming five portable monitors covering value budget work touch high refresh gaming and a genuinely large temporary workspace home tech guide articles best portable monitors"
+    },
+    {
+      "route": "/articles/best-power-banks/",
+      "title": "5 Recommended Power Banks in 2026: Pocket Chargers, Laptop Batteries, and Travel Picks",
+      "description": "Five useful power banks for laptops, travel, pockets, and magnetic charging, with watt-hours and recall model numbers checked.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "5 recommended power banks in 2026 pocket chargers laptop batteries and travel picks five useful power banks for laptops travel pockets and magnetic charging with watt hours and recall model numbers checked shop smarter guide articles best power banks"
+    },
+    {
+      "route": "/articles/best-usb-c-chargers/",
+      "title": "5 Recommended USB-C Chargers in 2026: One Brick for Phones, Laptops, and Travel",
+      "description": "Five USB-C chargers chosen by honest port behavior, useful power, travel fit, and standards—not one misleading total-wattage number.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "5 recommended usb c chargers in 2026 one brick for phones laptops and travel five usb c chargers chosen by honest port behavior useful power travel fit and standards not one misleading total wattage number shop smarter guide articles best usb c chargers"
+    },
+    {
+      "route": "/articles/best-wifi-7-routers/",
+      "title": "5 Recommended Wi-Fi 7 Routers in 2026: Fast Picks Without Paying for Meaningless Numbers",
+      "description": "Five Wi-Fi 7 routers ranked by measured performance, useful ports, controls, subscription costs, and hardware support—not box-speed arithmetic.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "5 recommended wi fi 7 routers in 2026 fast picks without paying for meaningless numbers five wi fi 7 routers ranked by measured performance useful ports controls subscription costs and hardware support not box speed arithmetic home tech guide articles best wifi 7 routers"
+    },
+    {
+      "route": "/articles/best-wireless-earbuds-under-100/",
+      "title": "5 Recommended Wireless Earbuds Under the 100-dollar ceiling in 2026: Cheap Without Sounding Cheap",
+      "description": "Five sub-the 100-dollar ceiling wireless earbuds ranked for noise canceling, sound controls, workouts, calls, and real availability.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "5 recommended wireless earbuds under the 100 dollar ceiling in 2026 cheap without sounding cheap five sub the 100 dollar ceiling wireless earbuds ranked for noise canceling sound controls workouts calls and real availability shop smarter guide articles best wireless earbuds under 100"
     },
     {
       "route": "/articles/can-100w-usb-c-charger-damage-phone/",
