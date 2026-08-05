@@ -322,6 +322,22 @@
       "searchText": "how to choose an emergency flashlight that will still work when the power fails compare emergency flashlights by ansi lumens candela runtime beam batteries water resistance impact resistance and controls shop smarter guide articles choose emergency flashlight"
     },
     {
+      "route": "/articles/choose-fire-extinguisher-home-use/",
+      "title": "How to Choose a Fire Extinguisher for Home Use",
+      "description": "Choose a UL-listed A-B-C home fire extinguisher by class, rating, size, weight, rechargeability, placement, recalls, and safe-use limits.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a fire extinguisher for home use choose a ul listed a b c home fire extinguisher by class rating size weight rechargeability placement recalls and safe use limits shop smarter guide articles choose fire extinguisher home use"
+    },
+    {
+      "route": "/articles/choose-home-safe-fire-theft-protection/",
+      "title": "How to Choose a Home Safe for Fire and Theft Protection",
+      "description": "Compare home safes by fire rating, burglary resistance, UL certification, contents, anchoring, lock type, water protection, and location.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a home safe for fire and theft protection compare home safes by fire rating burglary resistance ul certification contents anchoring lock type water protection and location shop smarter guide articles choose home safe fire theft protection"
+    },
+    {
       "route": "/articles/choose-portable-car-jump-starter/",
       "title": "How to Choose a Portable Jump Starter for Your Car",
       "description": "Choose a car jump starter by battery voltage, engine size, cold-weather support, clamps, reverse-polarity protection, override mode, and recalls.",
@@ -360,6 +376,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "how to clean a ductless mini split air filter safely clean a ductless mini split filter safely separate washable and specialty filters protect coils and fans and follow the model schedule home apartment guide articles clean ductless mini split filter safely"
+    },
+    {
+      "route": "/articles/clean-range-hood-grease-filter-safely/",
+      "title": "How to Clean a Range Hood Grease Filter Safely",
+      "description": "Remove and clean a washable metal range-hood filter, identify charcoal filters, prevent chemical damage, and reinstall it safely.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a range hood grease filter safely remove and clean a washable metal range hood filter identify charcoal filters prevent chemical damage and reinstall it safely home apartment guide articles clean range hood grease filter safely"
     },
     {
       "route": "/articles/clothes-taking-too-long-to-dry/",
@@ -1330,6 +1354,14 @@
       "searchText": "refurbished phone transferability and condition checklist verify the exact model imei status carrier compatibility account locks software support repair history battery condition hardware functions warranty and return process for a refurbished phone tools guide articles refurbished phone inspection checklist"
     },
     {
+      "route": "/articles/remove-old-bluetooth-devices-repair-windows-11/",
+      "title": "How to Remove Old Bluetooth Devices and Re-Pair Them in Windows 11",
+      "description": "Delete old Bluetooth pairings, clear accessory memory, stop competing connections, and pair headphones, keyboards, phones, or controllers again.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to remove old bluetooth devices and re pair them in windows 11 delete old bluetooth pairings clear accessory memory stop competing connections and pair headphones keyboards phones or controllers again home tech guide articles remove old bluetooth devices repair windows 11"
+    },
+    {
       "route": "/articles/renter-repair-request-documentation-checklist/",
       "title": "Renter Repair Request Documentation Checklist",
       "description": "Report the problem through the lease’s required channel, describe the condition and urgency, attach dated evidence, preserve delivery records, document access and follow-up, and obtain local guidance before using legal remedies.",
@@ -1370,6 +1402,14 @@
       "searchText": "router restart vs reset what s the difference why restarting a router is a low risk first step while a factory reset erases personalized settings and requires setup again home tech guide articles router restart vs reset"
     },
     {
+      "route": "/articles/set-up-test-file-history-windows-11/",
+      "title": "How to Set Up and Test File History in Windows 11",
+      "description": "Configure Windows 11 File History on an external or network drive, review retention, and verify the backup by restoring a test file.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to set up and test file history in windows 11 configure windows 11 file history on an external or network drive review retention and verify the backup by restoring a test file home tech guide articles set up test file history windows 11"
+    },
+    {
       "route": "/articles/should-you-rinse-dishes-before-dishwasher/",
       "title": "Should You Rinse Dishes Before Putting Them in the Dishwasher?",
       "description": "Usually, no. Scrape off solid food and load the dishwasher without hand-rinsing. Modern machines and detergents are designed to do the washing.",
@@ -1402,12 +1442,28 @@
       "searchText": "why does my smart tv keep buffering find the real bottleneck diagnose smart tv buffering by determining whether the problem affects one app every app one television or every device on the network home tech guide articles smart tv keeps buffering"
     },
     {
+      "route": "/articles/smoke-carbon-monoxide-alarm-inventory-test-log-template/",
+      "title": "Smoke and Carbon Monoxide Alarm Inventory and Test Log Template",
+      "description": "Track smoke and carbon-monoxide alarm locations, models, age, batteries, monthly tests, interconnection, recalls, and replacement deadlines.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "smoke and carbon monoxide alarm inventory and test log template track smoke and carbon monoxide alarm locations models age batteries monthly tests interconnection recalls and replacement deadlines tools guide articles smoke carbon monoxide alarm inventory test log template"
+    },
+    {
       "route": "/articles/spot-fake-online-store-before-buying/",
       "title": "How to Spot a Fake Online Store Before You Buy",
       "description": "Verify the exact domain, research the seller independently, compare prices, read return and shipping terms, and avoid payment methods that make recovery difficult.",
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "how to spot a fake online store before you buy verify the exact domain research the seller independently compare prices read return and shipping terms and avoid payment methods that make recovery difficult shop smarter guide articles spot fake online store before buying"
+    },
+    {
+      "route": "/articles/store-broccoli-green-crisp/",
+      "title": "How to Store Broccoli So It Stays Green and Crisp",
+      "description": "Refrigerate broccoli in a loose bag, prevent trapped moisture, identify spoilage, store cut florets, revive limp stalks, and freeze extras.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store broccoli so it stays green and crisp refrigerate broccoli in a loose bag prevent trapped moisture identify spoilage store cut florets revive limp stalks and freeze extras kitchen guide articles store broccoli green crisp"
     },
     {
       "route": "/articles/store-carrots-stay-crisp/",
@@ -1842,6 +1898,14 @@
       "searchText": "why does my garage door close and then open again diagnose a garage door that reverses while closing by checking safety sensors obstructions travel limits resistance balance and damaged hardware home apartment guide articles why garage door closes then opens"
     },
     {
+      "route": "/articles/why-garage-door-opener-beeping/",
+      "title": "Why Is My Garage Door Opener Beeping?",
+      "description": "Identify garage-opener beeps caused by battery backup, low battery, obstruction, timer-to-close, smart sensors, or setup confirmation.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my garage door opener beeping identify garage opener beeps caused by battery backup low battery obstruction timer to close smart sensors or setup confirmation home apartment guide articles why garage door opener beeping"
+    },
+    {
       "route": "/articles/why-garlic-turns-blue-green/",
       "title": "Why Did My Garlic Turn Blue or Green?",
       "description": "Learn why garlic turns blue or green in vinegar, lemon, pickles, and acidic cooking, when the color is harmless, and how to distinguish it from mold.",
@@ -1944,6 +2008,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "why do lights dim when an appliance starts brief dimming can come from motor starting current but repeated or severe voltage changes may point to overloaded circuits loose connections or utility trouble home apartment guide articles why lights dim when appliance starts"
+    },
+    {
+      "route": "/articles/why-mashed-potatoes-turn-gluey/",
+      "title": "Why Do Mashed Potatoes Turn Gluey?",
+      "description": "Prevent gluey mashed potatoes by choosing the right variety, cooking evenly, drying them, using a ricer, and avoiding blenders or overmixing.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why do mashed potatoes turn gluey prevent gluey mashed potatoes by choosing the right variety cooking evenly drying them using a ricer and avoiding blenders or overmixing kitchen guide articles why mashed potatoes turn gluey"
     },
     {
       "route": "/articles/why-microwave-is-sparking/",
