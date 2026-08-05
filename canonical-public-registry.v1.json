@@ -2026,6 +2026,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/choose-pressure-washer-psi-gpm-electric-gas/",
+      "title": "How to Choose a Pressure Washer Without Destroying the Surface",
+      "description": "Compare pressure washers by PSI, GPM, electric or gas power, GFCI, nozzle angle, hose, water supply, and surface safety.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "PSI describes pressure while GPM describes water flow. Both affect cleaning, but surface damage also depends on nozzle angle, distance, dwell time, detergent, and material condition.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/choose-stud-finder-wall-scanner/",
       "title": "How to Choose a Stud Finder Without Trusting It With Your Life",
       "description": "Choose a stud finder by wall material, scan depth, center detection, metal and wire sensing, calibration, batteries, and safety limitations.",
@@ -2195,6 +2226,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Food residue, crumbs, mildew, and sticky spills can keep a refrigerator gasket from sealing evenly. Cleaning helps only when the gasket and door remain correctly aligned and undamaged.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/clean-washing-machine-drain-pump-filter-safely/",
+      "title": "How to Clean a Washing Machine Drain-Pump Filter Safely",
+      "description": "Drain residual washer water, remove and rinse a user-serviceable pump filter, reinstall it correctly, and test the machine for leaks.",
+      "categoryId": "home",
+      "topicId": "repairs-maintenance",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A front-load washer can hold several gallons of hot or dirty water behind its pump filter. Opening the filter without draining the machine first can flood the room.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -4051,6 +4113,37 @@
         "notes": [
           "The template was not used on a specific network or router.",
           "It does not detect hidden compromise, establish device ownership, or replace professional security assessment."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/home-paint-color-product-touch-up-record-template/",
+      "title": "Home Paint Color, Product, Sheen, and Touch-Up Record Template",
+      "description": "Track paint colors, formulas, sheen, product lines, primers, tools, rooms, contractors, leftover cans, touch-ups, and lead safety.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A color name alone is rarely enough to reproduce a finish. Touch-ups depend on the exact product, sheen, formula, substrate, age, lighting, batch, and application method.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
         ]
       },
       "relatedContent": {
@@ -7071,6 +7164,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/humidifier-leaving-white-dust/",
+      "title": "Why Is My Humidifier Leaving White Dust Everywhere?",
+      "description": "Stop humidifier white dust by using distilled water, replacing mineral cartridges, cleaning the tank, and controlling indoor humidity.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The mist can evaporate while dissolved minerals remain airborne and settle on furniture, floors, electronics, and vents. Cleaning the room without changing the water source merely resets the evidence.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/internet-plan-total-cost-checklist/",
       "title": "Internet Plan Total Cost Checklist: Price, Fees, Equipment, and Promotions",
       "description": "Compare internet plans using the full monthly and first-year cost, not only the introductory headline price or advertised speed.",
@@ -7494,6 +7618,37 @@
         "notes": [
           "The template was not tested with a specific mover, storage facility, or insurance policy.",
           "Color perception, language, weather, handling, and label adhesion affect real-world readability."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/moving-company-estimate-inventory-damage-claim-log-template/",
+      "title": "Moving Company Estimate, Inventory, Delivery, and Damage Claim Log Template",
+      "description": "Track movers, brokers, estimates, inventories, bills of lading, liability, delivery, missing goods, damage claims, and deadlines.",
+      "categoryId": "tools",
+      "topicId": "templates",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Interstate movers must provide specified documents and written estimates, but state rules control many local moves. A complete file makes it harder for verbal promises, undocumented damage, and surprise charges to replace the actual agreement.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-applicable",
+        "notes": [
+          "Testing not applicable"
         ]
       },
       "relatedContent": {
@@ -8471,6 +8626,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/reset-windows-pc-before-selling-donating/",
+      "title": "How to Reset a Windows PC Before You Sell, Donate, or Recycle It",
+      "description": "Back up your data, remove accounts, use Reset this PC with drive cleaning, verify the setup screen, and remove the device from Microsoft.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A routine Windows reset for troubleshooting is not the same as preparing a computer for a stranger. Use the data-cleaning option, verify the setup screen, and preserve anything needed before the reset begins.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/return-policy-vs-warranty-vs-service-contract/",
       "title": "Return Policy vs. Warranty vs. Service Contract: What Actually Protects You?",
       "description": "A return policy, product warranty, and service contract address different problems. Learn what each protects and what to inspect before paying extra.",
@@ -8605,6 +8791,37 @@
         "sourceUrl": null,
         "focalPoint": null
       }
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/run-microsoft-defender-offline-scan-windows-11/",
+      "title": "How to Run a Microsoft Defender Offline Scan in Windows 11",
+      "description": "Start a Defender Offline scan, understand the restart process, review Protection history, and respond safely after suspected malware.",
+      "categoryId": "home-tech",
+      "topicId": "privacy-security",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Defender Offline scans outside the normal Windows kernel, where some rootkits and persistent malware have less opportunity to hide or interfere.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
     },
     {
       "kind": "article",
@@ -8965,6 +9182,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Stopping OneDrive backup changes where Desktop, Documents, or Pictures live. It does not necessarily delete the files, but choosing the wrong destination or deleting synchronized copies afterward can make them disappear from multiple devices.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/store-asparagus-stays-crisp/",
+      "title": "How to Store Asparagus So It Stays Crisp",
+      "description": "Refrigerate asparagus upright in shallow water or wrap its cut ends in a damp towel, prevent slime, and freeze extra spears.",
+      "categoryId": "kitchen",
+      "topicId": "troubleshooting-safety",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Asparagus loses water rapidly through its cut stem and tender tips. Cold, humid storage slows drying without requiring the entire spear to sit in water.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -10839,6 +11087,37 @@
         "state": "not-hands-on-tested",
         "notes": [
           "This guide uses current Microsoft and Apple storage-management documentation and does not inspect a particular drive or file system."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-custard-curdled-fix/",
+      "title": "Why Did My Custard Curdle, and Can It Be Fixed?",
+      "description": "Prevent curdled custard with tempering, low heat, stirring, a thermometer, and proper baking, and rescue a slightly grainy sauce.",
+      "categoryId": "kitchen",
+      "topicId": "food-science",
+      "articleType": "guide",
+      "publishedDate": "2026-08-05",
+      "updatedDate": "2026-08-05",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Sudden heat, a hot pan, poor tempering, or continued cooking after thickening can push a smooth custard past its narrow useful temperature range.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
         ]
       },
       "relatedContent": {
@@ -13667,5 +13946,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:0f23b870ae7c6b7f6e535dd2071c07ebfb045548fbdfba0d158ba1b3b8ed8ce4"
+  "registryDigest": "sha256:298a2e02c3a2f1cec53bf376f938b88777b5714bb390a0af23d21091dfc6bc4c"
 }

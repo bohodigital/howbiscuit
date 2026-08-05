@@ -362,6 +362,14 @@
       "searchText": "how to choose a portable power station for an outage choose a portable power station by watt hours running and surge watts runtime outlets waveform solar input certification and battery safety shop smarter guide articles choose portable power station outage"
     },
     {
+      "route": "/articles/choose-pressure-washer-psi-gpm-electric-gas/",
+      "title": "How to Choose a Pressure Washer Without Destroying the Surface",
+      "description": "Compare pressure washers by PSI, GPM, electric or gas power, GFCI, nozzle angle, hose, water supply, and surface safety.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "how to choose a pressure washer without destroying the surface compare pressure washers by psi gpm electric or gas power gfci nozzle angle hose water supply and surface safety shop smarter guide articles choose pressure washer psi gpm electric gas"
+    },
+    {
       "route": "/articles/choose-stud-finder-wall-scanner/",
       "title": "How to Choose a Stud Finder Without Trusting It With Your Life",
       "description": "Choose a stud finder by wall material, scan depth, center detection, metal and wire sensing, calibration, batteries, and safety limitations.",
@@ -408,6 +416,14 @@
       "category": "Home & Apartment",
       "type": "Guide",
       "searchText": "how to clean a refrigerator door gasket and check the seal clean refrigerator gasket folds safely remove sticky residue inspect damage check door contact and know when the seal needs replacement home apartment guide articles clean refrigerator door gasket check seal"
+    },
+    {
+      "route": "/articles/clean-washing-machine-drain-pump-filter-safely/",
+      "title": "How to Clean a Washing Machine Drain-Pump Filter Safely",
+      "description": "Drain residual washer water, remove and rinse a user-serviceable pump filter, reinstall it correctly, and test the machine for leaks.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "how to clean a washing machine drain pump filter safely drain residual washer water remove and rinse a user serviceable pump filter reinstall it correctly and test the machine for leaks home apartment guide articles clean washing machine drain pump filter safely"
     },
     {
       "route": "/articles/clothes-taking-too-long-to-dry/",
@@ -680,6 +696,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "home network device inventory template know what is connected a reusable inventory for routers computers phones tvs cameras speakers appliances hubs accounts updates and retirement status tools guide articles home network device inventory template"
+    },
+    {
+      "route": "/articles/home-paint-color-product-touch-up-record-template/",
+      "title": "Home Paint Color, Product, Sheen, and Touch-Up Record Template",
+      "description": "Track paint colors, formulas, sheen, product lines, primers, tools, rooms, contractors, leftover cans, touch-ups, and lead safety.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "home paint color product sheen and touch up record template track paint colors formulas sheen product lines primers tools rooms contractors leftover cans touch ups and lead safety tools guide articles home paint color product touch up record template"
     },
     {
       "route": "/articles/home-roof-inspection-repair-storm-damage-log-template/",
@@ -1162,6 +1186,14 @@
       "searchText": "how to verify ul etl csa and fcc marks a logo printed on a label is only a lead match the exact company model identifier product category standard and certification status against the issuing organization s official directory tools guide articles how to verify product safety certification"
     },
     {
+      "route": "/articles/humidifier-leaving-white-dust/",
+      "title": "Why Is My Humidifier Leaving White Dust Everywhere?",
+      "description": "Stop humidifier white dust by using distilled water, replacing mineral cartridges, cleaning the tank, and controlling indoor humidity.",
+      "category": "Home & Apartment",
+      "type": "Guide",
+      "searchText": "why is my humidifier leaving white dust everywhere stop humidifier white dust by using distilled water replacing mineral cartridges cleaning the tank and controlling indoor humidity home apartment guide articles humidifier leaving white dust"
+    },
+    {
       "route": "/articles/internet-plan-total-cost-checklist/",
       "title": "Internet Plan Total Cost Checklist: Price, Fees, Equipment, and Promotions",
       "description": "Compare internet plans using the full monthly and first-year cost, not only the introductory headline price or advertised speed.",
@@ -1248,6 +1280,14 @@
       "category": "Tools",
       "type": "Guide",
       "searchText": "moving box labeling template room priority contents and handling a reusable box label system for room destination contents priority fragility orientation inventory number and unpacking order tools guide articles moving box labeling template"
+    },
+    {
+      "route": "/articles/moving-company-estimate-inventory-damage-claim-log-template/",
+      "title": "Moving Company Estimate, Inventory, Delivery, and Damage Claim Log Template",
+      "description": "Track movers, brokers, estimates, inventories, bills of lading, liability, delivery, missing goods, damage claims, and deadlines.",
+      "category": "Tools",
+      "type": "Guide",
+      "searchText": "moving company estimate inventory delivery and damage claim log template track movers brokers estimates inventories bills of lading liability delivery missing goods damage claims and deadlines tools guide articles moving company estimate inventory damage claim log template"
     },
     {
       "route": "/articles/new-vs-used-refurbished-open-box-appliances/",
@@ -1418,6 +1458,14 @@
       "searchText": "repair or replace an appliance safety and recall status come first then compare diagnosis confidence repair cost repeat failures support parts operating cost installation downtime and replacement cost shop smarter guide articles repair or replace appliance"
     },
     {
+      "route": "/articles/reset-windows-pc-before-selling-donating/",
+      "title": "How to Reset a Windows PC Before You Sell, Donate, or Recycle It",
+      "description": "Back up your data, remove accounts, use Reset this PC with drive cleaning, verify the setup screen, and remove the device from Microsoft.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to reset a windows pc before you sell donate or recycle it back up your data remove accounts use reset this pc with drive cleaning verify the setup screen and remove the device from microsoft home tech guide articles reset windows pc before selling donating"
+    },
+    {
       "route": "/articles/return-policy-vs-warranty-vs-service-contract/",
       "title": "Return Policy vs. Warranty vs. Service Contract: What Actually Protects You?",
       "description": "A return policy, product warranty, and service contract address different problems. Learn what each protects and what to inspect before paying extra.",
@@ -1440,6 +1488,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "router restart vs reset what s the difference why restarting a router is a low risk first step while a factory reset erases personalized settings and requires setup again home tech guide articles router restart vs reset"
+    },
+    {
+      "route": "/articles/run-microsoft-defender-offline-scan-windows-11/",
+      "title": "How to Run a Microsoft Defender Offline Scan in Windows 11",
+      "description": "Start a Defender Offline scan, understand the restart process, review Protection history, and respond safely after suspected malware.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "how to run a microsoft defender offline scan in windows 11 start a defender offline scan understand the restart process review protection history and respond safely after suspected malware home tech guide articles run microsoft defender offline scan windows 11"
     },
     {
       "route": "/articles/set-up-test-file-history-windows-11/",
@@ -1512,6 +1568,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "how to stop onedrive folder backup without losing your desktop or documents stop onedrive desktop documents or pictures backup safely download cloud only files choose the correct destination and verify the move home tech guide articles stop onedrive folder backup without losing files"
+    },
+    {
+      "route": "/articles/store-asparagus-stays-crisp/",
+      "title": "How to Store Asparagus So It Stays Crisp",
+      "description": "Refrigerate asparagus upright in shallow water or wrap its cut ends in a damp towel, prevent slime, and freeze extra spears.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "how to store asparagus so it stays crisp refrigerate asparagus upright in shallow water or wrap its cut ends in a damp towel prevent slime and freeze extra spears kitchen guide articles store asparagus stays crisp"
     },
     {
       "route": "/articles/store-broccoli-green-crisp/",
@@ -1856,6 +1920,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "why is my computer storage full find what is filling a windows pc or mac safely remove temporary files and old downloads and avoid deleting important system data home tech guide articles why computer storage full"
+    },
+    {
+      "route": "/articles/why-custard-curdled-fix/",
+      "title": "Why Did My Custard Curdle, and Can It Be Fixed?",
+      "description": "Prevent curdled custard with tempering, low heat, stirring, a thermometer, and proper baking, and rescue a slightly grainy sauce.",
+      "category": "Kitchen",
+      "type": "Guide",
+      "searchText": "why did my custard curdle and can it be fixed prevent curdled custard with tempering low heat stirring a thermometer and proper baking and rescue a slightly grainy sauce kitchen guide articles why custard curdled fix"
     },
     {
       "route": "/articles/why-cut-apples-turn-brown/",
