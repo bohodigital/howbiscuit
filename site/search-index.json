@@ -186,6 +186,14 @@
       "searchText": "reader ecosystem flexibility five e readers worth comparing five researched e readers in 2026 including polished kindle open kobo color budget monochrome premium kindle color and android picks home tech guide articles best e readers"
     },
     {
+      "route": "/articles/best-ergonomic-office-chairs-under-300/",
+      "title": "Office Chair Fit and Adjustability: Five Models Under a 300-Dollar Ceiling",
+      "description": "Five researched ergonomic office chairs under the 300-dollar ceiling in 2026, with overall adjustability, budget, mesh, tall-user, and padded picks.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "office chair fit and adjustability five models under a 300 dollar ceiling five researched ergonomic office chairs under the 300 dollar ceiling in 2026 with overall adjustability budget mesh tall user and padded picks shop smarter guide articles best ergonomic office chairs under 300"
+    },
+    {
       "route": "/articles/best-external-hard-drives/",
       "title": "External Hard Drive Backup Planning: Five Models Worth Comparing",
       "description": "Five researched external hard drives in 2026, with portable, value, desktop-capacity, rugged, and high-capacity backup picks.",
@@ -226,12 +234,28 @@
       "searchText": "printer ownership costs five home models under a 200 dollar ceiling five researched home printers under the 200 dollar ceiling in 2026 with monochrome laser all in one ink tank cheap photo and lowest cost picks home tech guide articles best home printers under 200"
     },
     {
+      "route": "/articles/best-indoor-security-cameras-without-subscription/",
+      "title": "Indoor Camera Local Storage: Five Subscription-Optional Models",
+      "description": "Five researched indoor security cameras without required subscriptions in 2026, including optical zoom, privacy, pan/tilt, HomeKit, and budget picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "indoor camera local storage five subscription optional models five researched indoor security cameras without required subscriptions in 2026 including optical zoom privacy pan tilt homekit and budget picks home tech guide articles best indoor security cameras without subscription"
+    },
+    {
       "route": "/articles/best-label-makers/",
       "title": "Label Maker Tape Compatibility: Five Models Worth Comparing",
       "description": "Five researched label makers in 2026, with hybrid keyboard/Bluetooth, phone-only, handheld, paper-label, and stylish portable picks.",
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "label maker tape compatibility five models worth comparing five researched label makers in 2026 with hybrid keyboard bluetooth phone only handheld paper label and stylish portable picks shop smarter guide articles best label makers"
+    },
+    {
+      "route": "/articles/best-laptop-stands/",
+      "title": "Laptop Stand Ergonomics and Stability: Five Models Worth Comparing",
+      "description": "Five researched laptop stands in 2026, including adjustable overall, fixed aluminum, premium portable, ultra-portable, and budget picks.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "laptop stand ergonomics and stability five models worth comparing five researched laptop stands in 2026 including adjustable overall fixed aluminum premium portable ultra portable and budget picks shop smarter guide articles best laptop stands"
     },
     {
       "route": "/articles/best-laptops-under-500/",
@@ -274,6 +298,14 @@
       "searchText": "5 recommended mini pcs in 2026 tiny computers for work home labs and gaming five mini pcs ranked for ordinary work budgets macos windows value and dedicated gpu gaming with barebones traps exposed home tech guide articles best mini pcs"
     },
     {
+      "route": "/articles/best-outdoor-security-cameras-without-subscription/",
+      "title": "Outdoor Camera Local Recording: Five Subscription-Optional Models",
+      "description": "Five researched outdoor security cameras without required subscriptions in 2026, including dual-lens, solar, pan/tilt, PoE, and NVR-friendly picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "outdoor camera local recording five subscription optional models five researched outdoor security cameras without required subscriptions in 2026 including dual lens solar pan tilt poe and nvr friendly picks home tech guide articles best outdoor security cameras without subscription"
+    },
+    {
       "route": "/articles/best-phones-under-500/",
       "title": "5 Recommended Phones Under the 500-dollar ceiling in 2026: Flagship Features Without the Flagship Bill",
       "description": "Five worthwhile unlocked phones below the 500-dollar ceiling, ranked by camera quality, support, battery life, durability, and honest retail pricing.",
@@ -306,6 +338,14 @@
       "searchText": "5 recommended portable monitors in 2026 second screens for work travel and gaming five portable monitors covering value budget work touch high refresh gaming and a genuinely large temporary workspace home tech guide articles best portable monitors"
     },
     {
+      "route": "/articles/best-portable-photo-printers-under-200/",
+      "title": "Portable Photo Printer Media Costs: Five Models Under a 200-Dollar Ceiling",
+      "description": "Five researched portable photo printers under the 200-dollar ceiling in 2026, with 4x6, square/card, sticker, pocket, and budget picks.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "portable photo printer media costs five models under a 200 dollar ceiling five researched portable photo printers under the 200 dollar ceiling in 2026 with 4x6 square card sticker pocket and budget picks shop smarter guide articles best portable photo printers under 200"
+    },
+    {
       "route": "/articles/best-portable-power-stations/",
       "title": "5 Recommended Portable Power Stations in 2026: Backup Power Without Buying the Wrong Battery",
       "description": "Five portable power stations for balanced backup, budgets, home or RV loads, camping, and swappable batteries—without confusing surge claims for continuous power.",
@@ -320,6 +360,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "5 recommended power banks in 2026 pocket chargers laptop batteries and travel picks five useful power banks for laptops travel pockets and magnetic charging with watt hours and recall model numbers checked shop smarter guide articles best power banks"
+    },
+    {
+      "route": "/articles/best-projectors-under-500/",
+      "title": "Projector Room and Screen Matching: Five Models Under a 500-Dollar Ceiling",
+      "description": "Five researched projectors under the 500-dollar ceiling in 2026, with bright-room, dark-room, cheap smart, portable, and gaming picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "projector room and screen matching five models under a 500 dollar ceiling five researched projectors under the 500 dollar ceiling in 2026 with bright room dark room cheap smart portable and gaming picks home tech guide articles best projectors under 500"
     },
     {
       "route": "/articles/best-robot-vacuums-under-300/",
@@ -338,12 +386,28 @@
       "searchText": "sd card camera compatibility five models worth comparing five researched full size sd cards in 2026 with uhs i value uhs ii speed v90 video professional burst and durable picks shop smarter guide articles best sd cards"
     },
     {
+      "route": "/articles/best-smart-light-bulbs/",
+      "title": "Smart Bulb Ecosystem Compatibility: Five Models Worth Comparing",
+      "description": "Five researched smart light bulbs in 2026, including premium ecosystem, effects, Apple Home, budget pack, and Matter/Thread picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "smart bulb ecosystem compatibility five models worth comparing five researched smart light bulbs in 2026 including premium ecosystem effects apple home budget pack and matter thread picks home tech guide articles best smart light bulbs"
+    },
+    {
       "route": "/articles/best-smart-plugs/",
       "title": "5 Smart Plugs Worth Comparing in 2026: Matter, Energy Monitoring, and Outdoor Control",
       "description": "Five researched smart plugs in 2026, including reliable overall, budget Matter, Thread, Matter with energy monitoring, and outdoor picks.",
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "5 smart plugs worth comparing in 2026 matter energy monitoring and outdoor control five researched smart plugs in 2026 including reliable overall budget matter thread matter with energy monitoring and outdoor picks home tech guide articles best smart plugs"
+    },
+    {
+      "route": "/articles/best-smart-thermostats-under-200/",
+      "title": "Smart Thermostat HVAC Compatibility: Five Models Under a 200-Dollar Ceiling",
+      "description": "Five researched smart thermostats under the 200-dollar ceiling in 2026, with overall, Google, Alexa, budget, and room-sensor picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "smart thermostat hvac compatibility five models under a 200 dollar ceiling five researched smart thermostats under the 200 dollar ceiling in 2026 with overall google alexa budget and room sensor picks home tech guide articles best smart thermostats under 200"
     },
     {
       "route": "/articles/best-smartwatches-under-250/",
@@ -384,6 +448,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "tablet ecosystem longevity five models under a 300 dollar ceiling five researched tablets under the 300 dollar ceiling in 2026 with picks for android apple sale pricing included pen value large displays and cheap media use shop smarter guide articles best tablets under 300"
+    },
+    {
+      "route": "/articles/best-tv-antennas/",
+      "title": "TV Antenna Placement and Reception: Five Models Worth Comparing",
+      "description": "Five researched TV antennas in 2026, with overall indoor, budget indoor, attic/outdoor, long-range, and compact-window picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "tv antenna placement and reception five models worth comparing five researched tv antennas in 2026 with overall indoor budget indoor attic outdoor long range and compact window picks home tech guide articles best tv antennas"
     },
     {
       "route": "/articles/best-ups-battery-backups/",
@@ -456,6 +528,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "wi fi extender placement five models for a stubborn dead zone five researched wi fi extenders in 2026 with wi fi 7 value reliability speed and ultra budget picks home tech guide articles best wifi extenders"
+    },
+    {
+      "route": "/articles/best-wireless-chargers/",
+      "title": "Wireless Charger Device Compatibility: Five Models Worth Comparing",
+      "description": "Five researched wireless chargers in 2026, including Qi2 stand, 3-in-1 Apple, budget pad, cooling car mount, and foldable travel picks.",
+      "category": "Shop Smarter",
+      "type": "Guide",
+      "searchText": "wireless charger device compatibility five models worth comparing five researched wireless chargers in 2026 including qi2 stand 3 in 1 apple budget pad cooling car mount and foldable travel picks shop smarter guide articles best wireless chargers"
     },
     {
       "route": "/articles/best-wireless-earbuds-under-100/",
