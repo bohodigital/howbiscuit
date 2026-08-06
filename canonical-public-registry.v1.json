@@ -845,6 +845,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-document-scanners/",
+      "title": "Document Scanner Workflow: Five Models Worth Comparing",
+      "description": "Five researched document scanners in 2026, including overall wireless, compact desktop, portable USB, receipt, and ultra-portable picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Document scanner workflow is the first filter. Start with Brother ADS-1800W, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-e-readers/",
       "title": "Reader Ecosystem Flexibility: Five E-Readers Worth Comparing",
       "description": "Five researched e-readers in 2026, including polished Kindle, open Kobo color, budget monochrome, premium Kindle color, and Android picks.",
@@ -876,6 +907,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-external-hard-drives/",
+      "title": "External Hard Drive Backup Planning: Five Models Worth Comparing",
+      "description": "Five researched external hard drives in 2026, with portable, value, desktop-capacity, rugged, and high-capacity backup picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "External hard drive backup planning is the first filter. Start with WD My Passport 5TB, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-external-ssds/",
       "title": "5 External SSDs Worth Comparing in 2026: Fast Storage for Backups, Photos, Games, and Phones",
       "description": "Five researched external SSDs in 2026, with picks for overall performance, value, phone use, high-capacity desks, and compact everyday storage.",
@@ -890,6 +952,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Start with SanDisk Professional Pro-G40 SSD for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-gaming-headsets-under-100/",
+      "title": "Gaming Headset Platform Compatibility: Five Models Under a 100-Dollar Ceiling",
+      "description": "Five researched gaming headsets under the 100-dollar ceiling in 2026, with wireless, wired, PC, console, comfort, and ultra-budget picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Gaming headset platform compatibility is the first filter. Start with Turtle Beach Stealth 600 Gen 3, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -952,6 +1045,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Printer ownership costs is the first filter. Start with Brother HL-L2460DW, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-label-makers/",
+      "title": "Label Maker Tape Compatibility: Five Models Worth Comparing",
+      "description": "Five researched label makers in 2026, with hybrid keyboard/Bluetooth, phone-only, handheld, paper-label, and stylish portable picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Label maker tape compatibility is the first filter. Start with Brother P-touch PT-D610BT, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1045,6 +1169,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "TP-Link's Deco BE63 is the overall recommendation mesh for current multi-gig homes. ASUS ZenWiFi ET9 is the stronger no-subscription choice, while older XE75, XE5300, and eero 6 kits only make sense at a meaningful discount and with supported hardware.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-microsd-cards/",
+      "title": "microSD Endurance and Compatibility: Five Models Worth Comparing",
+      "description": "Five researched microSD cards in 2026, with overall, speed, handheld gaming, value, and high-endurance recording picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "microSD endurance and compatibility is the first filter. Start with Lexar Professional Silver Plus 512GB, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1193,6 +1348,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-portable-bluetooth-speakers-under-100/",
+      "title": "Portable Bluetooth Speaker Durability: Five Models Under a 100-Dollar Ceiling",
+      "description": "Five researched portable Bluetooth speakers under the 100-dollar ceiling in 2026, including overall, sound-customization, mini, clip-on, and under-the 50-dollar ceiling picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Portable Bluetooth speaker durability is the first filter. Start with Ultimate Ears WONDERBOOM 4, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-portable-monitors/",
       "title": "5 Recommended Portable Monitors in 2026: Second Screens for Work, Travel, and Gaming",
       "description": "Five portable monitors covering value, budget work, touch, high-refresh gaming, and a genuinely large temporary workspace.",
@@ -1300,6 +1486,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Robot vacuum navigation is the first filter. Start with Roborock Q7 M5, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-sd-cards/",
+      "title": "SD Card Camera Compatibility: Five Models Worth Comparing",
+      "description": "Five researched full-size SD cards in 2026, with UHS-I value, UHS-II speed, V90 video, professional burst, and durable picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "SD card camera compatibility is the first filter. Start with SanDisk Extreme PRO SDXC UHS-I 256GB, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1441,6 +1658,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-surge-protectors/",
+      "title": "Surge Protector Safety and Replacement: Five Models Worth Comparing",
+      "description": "Five researched surge protectors in 2026, with high-outlet, rotating-plug, USB-C, budget, and home-office picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Surge protector safety and replacement is the first filter. Start with Tripp Lite TLP1208TELTV, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-tablets-under-300/",
       "title": "Tablet Ecosystem Longevity: Five Models Under a 300-Dollar Ceiling",
       "description": "Five researched tablets under the 300-dollar ceiling in 2026, with picks for Android, Apple sale pricing, included pen value, large displays, and cheap media use.",
@@ -1565,6 +1813,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-usb-flash-drives/",
+      "title": "USB Flash Drive Speed and Security: Five Models Worth Comparing",
+      "description": "Five researched USB flash drives in 2026, with fast USB-C, overall speed, encrypted, budget, and high-capacity picks.",
+      "categoryId": "shop",
+      "topicId": "product-comparisons",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "USB flash drive speed and security is the first filter. Start with Kingston DataTraveler Max USB-C 1TB, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-usb-microphones-under-150/",
       "title": "Microphone Room Control: Five USB Models Under a 150-Dollar Ceiling",
       "description": "Five researched USB microphones under the 150-dollar ceiling in 2026, with overall, value, streaming-software, control, and sub-the 50-dollar ceiling picks.",
@@ -1672,6 +1951,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "The eero Max 7 is the simplest high-performance Wi-Fi 7 choice, while the ASUS ROG Strix GS-BE18000 is better for a multi-gig wired network. Value buyers should verify the exact TP-Link hardware revision before purchasing.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-wifi-extenders/",
+      "title": "Wi-Fi Extender Placement: Five Models for a Stubborn Dead Zone",
+      "description": "Five researched Wi-Fi extenders in 2026, with Wi-Fi 7, value, reliability, speed, and ultra-budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-06",
+      "updatedDate": "2026-08-06",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Wi-Fi extender placement is the first filter. Start with TP-Link RE655BE, then compare the other four options against your exact compatibility, support, and configuration needs.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -15480,7 +15790,7 @@
       "topicId": "computers-laptops",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-05",
+      "updatedDate": "2026-08-06",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -15497,7 +15807,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-05",
+      "updatedDate": "2026-08-06",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -15769,7 +16079,7 @@
       "topicId": "product-comparisons",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-05",
+      "updatedDate": "2026-08-06",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -15964,5 +16274,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:3c1ebb5328b7f674cf38ee086083759639d25ed703b46bf6cc1b5991591ddfcf"
+  "registryDigest": "sha256:249d987fa9c934861082605c17c85052aa4a4f4c3f5f141feb13ac28ec362673"
 }
