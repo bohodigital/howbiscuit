@@ -1031,6 +1031,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-car-battery-chargers-maintainers/",
+      "title": "Car Battery Chargers and Maintainers in 2026",
+      "description": "Five researched car battery chargers and maintainers in 2026, with overall, storage, faster, classic, and premium picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The NOCO Genius5 is the recommended battery charger/maintainer for most households because five amps is fast enough to recover ordinary automotive batteries without turning the charger into a huge shop unit, while support for common lead-acid and supported lithium chemistries makes it useful across cars, motorcycles, mowers, and powersports equipment. NOCO Genius1 is the inexpensive storage maintainer, Genius10 is the faster large-battery choice, Battery Tender Plus is the classic long-term maintainer, and CTEK MXS: 5.0 is the premium lead-acid conditioning alternative. The charger mode must match the battery chemistry.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-car-phone-mounts/",
       "title": "Car Phone Mounts for Clear Sightlines and Stable Navigation",
       "description": "Five researched car phone mounts in 2026, with cooled MagSafe, universal suction, adjustable suction, charging vent, and cupholder picks.",
@@ -2309,6 +2340,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-portable-tire-inflators/",
+      "title": "Portable Tire Inflators in 2026",
+      "description": "Five researched portable tire inflators in 2026, with overall compact, cordless, power-tool, fast, and budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Slime Cordless Pro Power Tire Inflator is the recommended portable tire inflator for most drivers based on its combination of compact storage, useful hose length, carrying case, and strong tested inflation speed. AVID POWER Cordless Tire Inflator is the versatile battery/12V alternative, DeWalt DCC020IB is recommended for DeWalt battery owners, Milwaukee M18 Inflator is the fast heavy-duty pick, and Fanttik X8 Apex is the compact rechargeable option. Inflators are for restoring pressure and routine top-offs; a damaged tire, sidewall failure, or repeated pressure loss still requires repair.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-power-banks/",
       "title": "5 Recommended Power Banks in 2026: Pocket Chargers, Laptop Batteries, and Travel Picks",
       "description": "Five useful power banks for laptops, travel, pockets, and magnetic charging, with watt-hours and recall model numbers checked.",
@@ -2385,6 +2447,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Projector room and screen matching is the first filter. Start with Epson EpiqVision Flex CO-FH02, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-radar-detectors/",
+      "title": "Radar Detectors in 2026",
+      "description": "Five researched radar detectors in 2026, with maximum-performance, enthusiast, plug-and-play, non-arrow, and value picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Uniden R8w is the recommended high-performance radar detector for enthusiasts who want directional arrows, long detection range, Wi-Fi updates, GPS filtering, and deep customization. Valentine One Gen2 is the expert-control alternative with exceptional measured range, Escort Redline 360c is the premium plug-and-play choice, Uniden R4w is the recommended high-end non-arrow detector, and Cobra RAD: 700i is the accessible connected option. Radar detectors do not make speeding legal, do not reliably protect against every enforcement method, and are prohibited in some jurisdictions and vehicle classes.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2540,6 +2633,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "The Chamberlain myQ Smart Garage Control G0401 remains the easiest mainstream retrofit for compatible openers when its ecosystem meets your automation needs. Meross MSG100 is the better choice for broad voice-platform integration, Meross MSG200 is recommended for multiple garage doors, Tailwind iQ3 is the automation-heavy enthusiast choice, and Genie Aladdin Connect is the brand-specific alternative for compatible Genie hardware. Compatibility with the opener's wall-button signaling is the first gate.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-smart-home-hubs/",
+      "title": "Smart Home Hubs in 2026 for Matter, Thread, Zigbee, and Local Control",
+      "description": "Five researched smart-home hubs in 2026, with local-control, Matter/Aqara, Z-Wave/SmartThings, local automation, and premium multiprotocol picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Home Assistant Green is the recommended smart-home hub for buyers who value local control, enormous device integration, and long-term independence from any single consumer platform, provided they accept more setup than Alexa or Google Home. Aqara Hub M3 is the easier Matter/Thread/Zigbee choice for Aqara-heavy homes, Aeotec Smart Home Hub is recommended for SmartThings and Z-Wave, Hubitat Elevation C-8 Pro is the local-automation/Z-Wave power-user alternative, and Homey Pro is the polished premium multiprotocol option. Matter simplifies device interoperability, but it does not make every feature identical across platforms.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2912,6 +3036,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Tablet ecosystem longevity is the first filter. Start with Motorola MotoPad (2026), then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-thermal-cameras/",
+      "title": "Thermal Cameras in 2026 for Home Inspection and Electronics",
+      "description": "Five researched affordable thermal cameras in 2026, with dual-camera phone, FLIR, compact USB-C, handheld, and high-resolution picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The TOPDON TC002C Duo is the recommended phone-connected thermal camera for buyers who want high thermal resolution plus a visible-light camera for easier inspection context. FLIR ONE Pro remains the established ecosystem pick, HIKMICRO Mini2 V2 is the compact value option, TOPDON TC004 Mini is recommended for a standalone handheld device, and Seek Thermal CompactPRO is the high-resolution phone alternative. Thermal images show surface-temperature patterns; they do not see through walls and cannot by themselves prove moisture, mold, electrical safety, or a specific diagnosis.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -17669,5 +17824,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:edd23e1963ae59f8be4cef0c9979f25773da51370fccca1821be76a4001abcd3"
+  "registryDigest": "sha256:0119a56c11e044ecf1cde9d9dd7de928d70745f08ebad8fe3a0ab5d2a6213ed4"
 }
