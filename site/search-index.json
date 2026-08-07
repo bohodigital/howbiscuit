@@ -146,6 +146,14 @@
       "searchText": "why is bathroom caulk turning black and when should you replace it determine whether black shower caulk needs cleaning or replacement fix moisture remove failed sealant and recaulk the joint correctly home apartment guide articles bathroom caulk turning black replace"
     },
     {
+      "route": "/articles/best-2-5gb-ethernet-adapters/",
+      "title": "2.5Gb Ethernet Adapters in 2026 for Laptops and Mini PCs",
+      "description": "Five researched 2.5Gb Ethernet adapters in 2026, with USB-C, dual-connector, USB-A, compact, and value picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "2 5gb ethernet adapters in 2026 for laptops and mini pcs five researched 2 5gb ethernet adapters in 2026 with usb c dual connector usb a compact and value picks home tech guide articles best 2 5gb ethernet adapters"
+    },
+    {
       "route": "/articles/best-2-5gb-ethernet-switches/",
       "title": "2.5Gb Ethernet Switches for Faster Home Networks: Five Models to Compare",
       "description": "Five researched 2.5GbE switches in 2026, with 8-port, enthusiast-value, 10G-uplink, mainstream five-port, and NAS-focused picks.",
@@ -234,6 +242,14 @@
       "searchText": "document scanner workflow five models worth comparing five researched document scanners in 2026 including overall wireless compact desktop portable usb receipt and ultra portable picks home tech guide articles best document scanners"
     },
     {
+      "route": "/articles/best-drawing-tablets/",
+      "title": "Drawing Tablets in 2026 for Beginners and Digital Artists",
+      "description": "Five researched drawing tablets in 2026, with Wacom pro, value pen display, Huion alternative, budget pen tablet, and standalone picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "drawing tablets in 2026 for beginners and digital artists five researched drawing tablets in 2026 with wacom pro value pen display huion alternative budget pen tablet and standalone picks home tech guide articles best drawing tablets"
+    },
+    {
       "route": "/articles/best-e-readers/",
       "title": "Reader Ecosystem Flexibility: Five E-Readers Worth Comparing",
       "description": "Five researched e-readers in 2026, including polished Kindle, open Kobo color, budget monochrome, premium Kindle color, and Android picks.",
@@ -248,6 +264,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "office chair fit and adjustability five models under a 300 dollar ceiling five researched ergonomic office chairs under the 300 dollar ceiling in 2026 with overall adjustability budget mesh tall user and padded picks shop smarter guide articles best ergonomic office chairs under 300"
+    },
+    {
+      "route": "/articles/best-ethernet-cables/",
+      "title": "Ethernet Cables in 2026: Cat6, Cat6A, Patch, and In-Wall Picks",
+      "description": "Five researched Ethernet cables in 2026, including Cat6 patch, Cat6A, in-wall bulk, budget, and short-rack picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "ethernet cables in 2026 cat6 cat6a patch and in wall picks five researched ethernet cables in 2026 including cat6 patch cat6a in wall bulk budget and short rack picks home tech guide articles best ethernet cables"
     },
     {
       "route": "/articles/best-external-hard-drives/",
@@ -394,6 +418,14 @@
       "searchText": "monitor arms for single dual and ultrawide displays five models to compare five researched monitor arms in 2026 with premium single value dual budget dual heavy ultrawide and cheap single picks home tech guide articles best monitor arms"
     },
     {
+      "route": "/articles/best-nas-hard-drives/",
+      "title": "NAS Hard Drives in 2026: CMR Drives for Home Servers and RAID",
+      "description": "Five researched NAS hard-drive families in 2026, with home, value, performance, pro-workload, and warranty picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "nas hard drives in 2026 cmr drives for home servers and raid five researched nas hard drive families in 2026 with home value performance pro workload and warranty picks home tech guide articles best nas hard drives"
+    },
+    {
       "route": "/articles/best-noise-canceling-headphones-under-200/",
       "title": "Noise-Canceling Headphones Under a 200-Dollar Ceiling: Five Models to Compare",
       "description": "Five researched noise-canceling headphones under the 200-dollar ceiling in 2026, with travel, value, battery, style, and lightweight picks.",
@@ -522,6 +554,14 @@
       "searchText": "sd card camera compatibility five models worth comparing five researched full size sd cards in 2026 with uhs i value uhs ii speed v90 video professional burst and durable picks shop smarter guide articles best sd cards"
     },
     {
+      "route": "/articles/best-smart-displays/",
+      "title": "Smart Displays in 2026 for Kitchens, Cameras, and Smart Homes",
+      "description": "Five researched smart displays in 2026, with overall Alexa+, Google, dashboard, giant-screen, and camera-heavy picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "smart displays in 2026 for kitchens cameras and smart homes five researched smart displays in 2026 with overall alexa google dashboard giant screen and camera heavy picks home tech guide articles best smart displays"
+    },
+    {
       "route": "/articles/best-smart-garage-door-controllers/",
       "title": "Smart Garage Door Controllers: Five Retrofit Options to Compare",
       "description": "Five researched smart garage door controllers in 2026, including mainstream myQ, broad-platform, multi-door, advanced automation, and Genie picks.",
@@ -554,12 +594,36 @@
       "searchText": "5 smart plugs worth comparing in 2026 matter energy monitoring and outdoor control five researched smart plugs in 2026 including reliable overall budget matter thread matter with energy monitoring and outdoor picks home tech guide articles best smart plugs"
     },
     {
+      "route": "/articles/best-smart-smoke-carbon-monoxide-alarms/",
+      "title": "Smart Smoke and Carbon Monoxide Alarms in 2026",
+      "description": "Five researched smart or connected smoke and CO alarms in 2026, including First Alert, Kidde/Ring, and X-Sense systems.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "smart smoke and carbon monoxide alarms in 2026 five researched smart or connected smoke and co alarms in 2026 including first alert kidde ring and x sense systems home tech guide articles best smart smoke carbon monoxide alarms"
+    },
+    {
+      "route": "/articles/best-smart-speakers/",
+      "title": "Smart Speakers in 2026: Alexa+, Gemini, Siri, and Better Sound",
+      "description": "Five researched smart speakers in 2026, with sound-quality, Alexa+, Apple, Google Gemini, and budget picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "smart speakers in 2026 alexa gemini siri and better sound five researched smart speakers in 2026 with sound quality alexa apple google gemini and budget picks home tech guide articles best smart speakers"
+    },
+    {
       "route": "/articles/best-smart-thermostats-under-200/",
       "title": "Smart Thermostat HVAC Compatibility: Five Models Under a 200-Dollar Ceiling",
       "description": "Five researched smart thermostats under the 200-dollar ceiling in 2026, with overall, Google, Alexa, budget, and room-sensor picks.",
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "smart thermostat hvac compatibility five models under a 200 dollar ceiling five researched smart thermostats under the 200 dollar ceiling in 2026 with overall google alexa budget and room sensor picks home tech guide articles best smart thermostats under 200"
+    },
+    {
+      "route": "/articles/best-smart-water-leak-sensors/",
+      "title": "Smart Water Leak Sensors in 2026",
+      "description": "Five researched smart water-leak sensors in 2026, with long-range, multipack, cable, Zigbee, and Apple-friendly picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "smart water leak sensors in 2026 five researched smart water leak sensors in 2026 with long range multipack cable zigbee and apple friendly picks home tech guide articles best smart water leak sensors"
     },
     {
       "route": "/articles/best-smartwatches-under-250/",
@@ -600,6 +664,14 @@
       "category": "Shop Smarter",
       "type": "Guide",
       "searchText": "tablet ecosystem longevity five models under a 300 dollar ceiling five researched tablets under the 300 dollar ceiling in 2026 with picks for android apple sale pricing included pen value large displays and cheap media use shop smarter guide articles best tablets under 300"
+    },
+    {
+      "route": "/articles/best-travel-routers/",
+      "title": "Travel Routers in 2026 for Hotels, VPNs, and Remote Work",
+      "description": "Five researched travel routers in 2026, with Wi-Fi 7, value, VPN, home-ecosystem, and budget picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "travel routers in 2026 for hotels vpns and remote work five researched travel routers in 2026 with wi fi 7 value vpn home ecosystem and budget picks home tech guide articles best travel routers"
     },
     {
       "route": "/articles/best-tv-antennas/",
@@ -680,6 +752,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "5 recommended wi fi 7 routers in 2026 fast picks without paying for meaningless numbers five wi fi 7 routers ranked by measured performance useful ports controls subscription costs and hardware support not box speed arithmetic home tech guide articles best wifi 7 routers"
+    },
+    {
+      "route": "/articles/best-wifi-adapters-desktop-pcs/",
+      "title": "Wi-Fi Adapters for Desktop PCs in 2026",
+      "description": "Five researched Wi-Fi adapters for desktop PCs in 2026, including Wi-Fi 7 PCIe, Wi-Fi 6E value, and USB picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "wi fi adapters for desktop pcs in 2026 five researched wi fi adapters for desktop pcs in 2026 including wi fi 7 pcie wi fi 6e value and usb picks home tech guide articles best wifi adapters desktop pcs"
     },
     {
       "route": "/articles/best-wifi-extenders/",
