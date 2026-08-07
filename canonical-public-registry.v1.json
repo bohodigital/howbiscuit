@@ -845,6 +845,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-aa-aaa-battery-chargers/",
+      "title": "AA and AAA Battery Chargers: Five Models to Compare",
+      "description": "Five researched AA/AAA battery chargers in 2026, including simple Eneloop, versatile USB-C, universal, analyzing, and enthusiast picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Panasonic BQ-CC55 is the recommended simple AA/AAA NiMH charger for households that want independent charging channels, clear status lights, and minimal setup. XTAR VC4SL is the recommended USB-C multi-chemistry option, Nitecore UMS4 is the broad universal alternative, Opus BT-C3100 v2.2 is recommended for analyzing cells, and Powerex MH-C9000PRO is the NiMH enthusiast choice. Battery chemistry matters: a charger that accepts NiMH AA cells may not safely charge regulated 1.5V lithium AA cells.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-bluetooth-trackers/",
       "title": "5 Bluetooth Trackers Worth Comparing in 2026: AirTag Alternatives for Keys, Bags, and Luggage",
       "description": "Five researched Bluetooth trackers in 2026, with picks for iPhone, Samsung Galaxy, cross-platform use, network choice, and rechargeable ownership.",
@@ -876,6 +907,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-borescope-inspection-cameras/",
+      "title": "Borescope Inspection Cameras for Cars, Walls, and Drains",
+      "description": "Five researched borescope inspection cameras in 2026, with standalone, rugged, phone-connected, dual-lens, and articulating picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Teslong NTS300 Pro is the recommended general-purpose borescope for buyers who want a dedicated screen rather than depending on a phone. Ridgid micro CA-25 is the rugged trades-focused alternative, Klein Tools ET20 is the compact phone-connected pick, DEPSTECH's 1080p dual-lens model is the budget consumer option, and DEPSTECH's two-way articulating borescope is recommended when steering the camera tip matters. Camera-head diameter, cable stiffness, focal distance, articulation, and waterproof rating matter more than enormous megapixel claims.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-capture-cards/",
       "title": "Capture Cards for Streaming and Recording Gameplay: Five Models to Compare",
       "description": "Five researched capture cards in 2026, with overall 4K60-class, easy mainstream, budget, HDMI 2.1, and dual-source picks.",
@@ -890,6 +952,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "The AVerMedia Live Gamer Ultra S GC553Pro is the strongest all-around external capture card for 2026 buyers who want 4K60-class recording, HDR/VRR support, and modern console compatibility. Elgato HD60 X remains the easiest mainstream setup, Elgato Game Capture Neo is the budget choice, AVerMedia Live Gamer Ultra 2.1 is the high-refresh HDMI 2.1 pick, and Live Gamer Duo is recommended for two simultaneous HDMI sources. Passthrough resolution and capture resolution are different specifications.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-car-phone-mounts/",
+      "title": "Car Phone Mounts for Clear Sightlines and Stable Navigation",
+      "description": "Five researched car phone mounts in 2026, with cooled MagSafe, universal suction, adjustable suction, charging vent, and cupholder picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Spigen OneTap Pro 3 CryoMax is the recommended car phone mount for MagSafe-compatible buyers who want strong magnetic grip, dashboard/windshield mounting, wireless charging, and active cooling. Belkin Universal Car Mount is the recommended conventional dash mount, Vanmass is the easiest highly adjustable suction mount, iOttie Velox is the MagSafe vent-charging pick, and APPS2Car is the stable cupholder choice. The correct mount depends on the vehicle's sightlines, vent design, dashboard material, and local windshield-mount rules.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1248,6 +1341,68 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-home-weather-stations/",
+      "title": "Home Weather Stations in 2026: Five Connected Options to Compare",
+      "description": "Five researched home weather stations in 2026, with connected, value, advanced-display, mainstream, and budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "WeatherFlow Tempest is the recommended home weather station for most connected-home buyers because its solar power, sonic wind sensor, lightning detection, and polished network service eliminate most moving parts. Ambient Weather WS-2902C is the better value with a physical console, Ambient WS-2000 adds a richer display and sensor ecosystem, AcuRite Iris 5-in-1 is the approachable mainstream option, and Sainlogic 8-in-1 is the budget display-heavy pick. Rain, wind, and temperature accuracy depend heavily on placement, not just sensor quality.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-indoor-air-quality-monitors/",
+      "title": "Indoor Air Quality Monitors for CO2, Particles, VOCs, and Radon",
+      "description": "Five researched indoor air quality monitors in 2026, with multi-pollutant, CO2-only, HomeKit, open/local-data, and budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Airthings View Plus is the recommended all-around indoor air quality monitor for buyers who want radon, CO2, PM2.5, VOC trends, humidity, and temperature in one mainstream device. Aranet4 HOME is the recommended dedicated CO2/ventilation monitor, Qingping Air Monitor Gen 2 offers strong multi-sensor value with Apple integration, AirGradient ONE is recommended for open/local-data-minded users, and Amazon Smart Air Quality Monitor is the cheap ecosystem pick. Consumer sensors show trends and screening information, not regulatory-grade exposure measurements or medical diagnoses.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-indoor-security-cameras-without-subscription/",
       "title": "Indoor Camera Local Storage: Five Subscription-Optional Models",
       "description": "Five researched indoor security cameras without required subscriptions in 2026, including optical zoom, privacy, pan/tilt, HomeKit, and budget picks.",
@@ -1589,6 +1744,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-obd2-scanners/",
+      "title": "OBD2 Scanners: BlueDriver and Four Diagnostic Tools",
+      "description": "Five researched OBD-II scanners in 2026, with overall DIY, phone-based, budget handheld, hybrid, and advanced app picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Innova 5610 is the recommended OBD-II scanner for most serious DIY owners because it combines live data, maintenance information, broad code coverage, and a handheld interface without forcing every diagnostic step through a phone. Topdon TopScan is the recommended mobile value, Launch CR529 is the cheap handheld, Ancel BD310 is the recommended handheld/Bluetooth hybrid, and Carly is the feature-rich subscription app option. A code identifies a detected condition, not the part that must be replaced.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-outdoor-security-cameras-without-subscription/",
       "title": "Outdoor Camera Local Recording: Five Subscription-Optional Models",
       "description": "Five researched outdoor security cameras without required subscriptions in 2026, including dual-lens, solar, pan/tilt, PoE, and NVR-friendly picks.",
@@ -1782,6 +1968,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-portable-car-jump-starters/",
+      "title": "Portable Car Jump Starters: Five Emergency Options to Compare",
+      "description": "Five researched portable car jump starters in 2026, with overall, large-engine, compact, inflator-combo, and budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Clore Jump-N-Carry JNC325 is the recommended portable jump starter for most drivers because real-world testing found strong starting performance, useful 24-inch leads, and a simple interface. Gooloo GT6000 is the large-engine/high-output option, NOCO Boost Plus GB40 is the compact pick, Topdon V1200Air is recommended when you also need a tire inflator, and AstroAI S8 is the budget emergency choice. Peak-amp marketing is less useful than tested cold-start performance, clamp quality, cable length, battery condition, and supported engine size.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-portable-monitors/",
       "title": "5 Recommended Portable Monitors in 2026: Second Screens for Work, Travel, and Gaming",
       "description": "Five portable monitors covering value, budget work, touch, high-refresh gaming, and a genuinely large temporary workspace.",
@@ -1937,6 +2154,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-rechargeable-aa-batteries/",
+      "title": "Rechargeable AA Batteries: Five NiMH Options to Compare",
+      "description": "Five researched rechargeable AA batteries in 2026, with high-drain, long-cycle, high-capacity, mainstream, and budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Panasonic Eneloop Pro AA is the recommended rechargeable AA for high-drain devices when maximum runtime per charge matters, while standard white Eneloop is the better long-term default because it trades some capacity for far more rated recharge cycles and excellent shelf retention. EBL: 2800mAh is the high-capacity value pick, Energizer Recharge Universal is the easy retail choice, and Amazon Basics Performance NiMH is the budget option. NiMH cells are typically 1.2V nominal, so devices that genuinely require 1.5V may behave differently.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-robot-vacuums-under-300/",
       "title": "Robot Vacuum Navigation: Five Models Under a 300-Dollar Ceiling",
       "description": "Five researched robot vacuums under the 300-dollar ceiling in 2026, with cleaning, self-washing sale, auto-empty, pet-hair, and cheap-brand picks.",
@@ -1999,6 +2247,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-smart-garage-door-controllers/",
+      "title": "Smart Garage Door Controllers: Five Retrofit Options to Compare",
+      "description": "Five researched smart garage door controllers in 2026, including mainstream myQ, broad-platform, multi-door, advanced automation, and Genie picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Chamberlain myQ Smart Garage Control G0401 remains the easiest mainstream retrofit for compatible openers when its ecosystem meets your automation needs. Meross MSG100 is the better choice for broad voice-platform integration, Meross MSG200 is recommended for multiple garage doors, Tailwind iQ3 is the automation-heavy enthusiast choice, and Genie Aladdin Connect is the brand-specific alternative for compatible Genie hardware. Compatibility with the opener's wall-button signaling is the first gate.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-smart-light-bulbs/",
       "title": "Smart Bulb Ecosystem Compatibility: Five Models Worth Comparing",
       "description": "Five researched smart light bulbs in 2026, including premium ecosystem, effects, Apple Home, budget pack, and Matter/Thread picks.",
@@ -2013,6 +2292,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Smart bulb ecosystem compatibility is the first filter. Start with Philips Hue White and Color Ambiance A19, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-smart-locks/",
+      "title": "Smart Locks for Keyless Entry, Matter, and Retrofit Doors: Five Models to Compare",
+      "description": "Five researched smart locks in 2026, with video, retrofit, face recognition, Matter/UWB, and premium iPhone-focused picks.",
+      "categoryId": "home-tech",
+      "topicId": "smart-home",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Eufy Video Smart Lock E330 is the recommended all-in-one smart lock for buyers who want fingerprint, keypad, app, physical key, and an integrated door camera without adding separate hardware. Yale Approach is the recommended retrofit option for renters or people keeping the outside deadbolt hardware, Lockly Visage Zeno is the facial-recognition pick, Aqara U400 is the feature-heavy Matter/UWB alternative, and Schlage Sense Pro is the premium UWB lock for iPhone-heavy households. A smart lock should preserve a physical or emergency-power fallback.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -16461,7 +16771,7 @@
       "topicId": "smart-home",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-06",
+      "updatedDate": "2026-08-07",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -16894,5 +17204,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:fee565575078a29d38b772d8a35f55138ecfa79a2a6e250ef437db3ad4b887f4"
+  "registryDigest": "sha256:25ebb3004892d9b710412b0c15a464cdfc03479de40163a9578688ba27e952ff"
 }
