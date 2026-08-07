@@ -752,6 +752,99 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-2-5gb-ethernet-switches/",
+      "title": "2.5Gb Ethernet Switches for Faster Home Networks: Five Models to Compare",
+      "description": "Five researched 2.5GbE switches in 2026, with 8-port, enthusiast-value, 10G-uplink, mainstream five-port, and NAS-focused picks.",
+      "categoryId": "home-tech",
+      "topicId": "wifi-routers",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The TP-Link TL-SG108S-M2 is the recommended simple 2.5GbE switch for most homes because it provides eight fanless 2.5GbE ports at a mainstream price without configuration. BrosTrend S3 is the enthusiast-value alternative, UGREEN's 2.5G switch with 10G SFP+ is recommended for a faster uplink, TRENDnet TEG-S350 is the safe five-port mainstream pick, and QNAP QSW-1105-5T is the NAS-focused option. A 2.5GbE switch cannot outrun the slowest router, NIC, cable, drive, or internet plan.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-2-bay-nas-devices/",
+      "title": "Two-Bay NAS Devices for Backups, Photos, and Media: Five Models to Compare",
+      "description": "Five researched two-bay NAS devices in 2026, with value, software-first, high-performance, affordable 2.5GbE, and app-rich picks.",
+      "categoryId": "home-tech",
+      "topicId": "power-cooling-storage",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The TerraMaster F2-425 is the recommended two-bay NAS for buyers who want strong value, 2.5GbE networking, upgradeable memory, and useful media-server capability. Synology DS225+ is the easiest software-first choice, UGREEN NASync DXP2800 GT is the high-performance premium option, ASUSTOR Drivestor 2 Gen2 is the affordable 2.5GbE alternative, and QNAP TS-216G is the app-rich mainstream choice. All prices should be labeled diskless unless drives are actually included.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-4k-monitors-under-400/",
+      "title": "4K Monitors Under a 400-Dollar Ceiling: Five Models to Compare",
+      "description": "Five researched 4K monitors under the 400-dollar ceiling in 2026, with USB-C, creative, smart-TV, gaming, and 32-inch picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Dell S2725QC is the recommended 4K monitor under the 400-dollar ceiling for most home-office buyers because it pairs a sharp 27-inch 4K panel with USB-C charging, a 120Hz refresh rate, HDMI 2.1 bandwidth, and excellent ergonomics. Asus ProArt PA279CV is the creative-work pick when below the cap, Samsung Smart Monitor M8 M80F is recommended for combined PC and streaming use, Asus TUF VG27UQ1A is the gaming choice, and Dell S3225QS is the larger productivity option. None should be marketed as serious HDR displays merely because they accept HDR input.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-bluetooth-trackers/",
       "title": "5 Bluetooth Trackers Worth Comparing in 2026: AirTag Alternatives for Keys, Bags, and Luggage",
       "description": "Five researched Bluetooth trackers in 2026, with picks for iPhone, Samsung Galaxy, cross-platform use, network choice, and rechargeable ownership.",
@@ -766,6 +859,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Start with Apple AirTag for the broadest use case, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-capture-cards/",
+      "title": "Capture Cards for Streaming and Recording Gameplay: Five Models to Compare",
+      "description": "Five researched capture cards in 2026, with overall 4K60-class, easy mainstream, budget, HDMI 2.1, and dual-source picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The AVerMedia Live Gamer Ultra S GC553Pro is the strongest all-around external capture card for 2026 buyers who want 4K60-class recording, HDR/VRR support, and modern console compatibility. Elgato HD60 X remains the easiest mainstream setup, Elgato Game Capture Neo is the budget choice, AVerMedia Live Gamer Ultra 2.1 is the high-refresh HDMI 2.1 pick, and Live Gamer Duo is recommended for two simultaneous HDMI sources. Passthrough resolution and capture resolution are different specifications.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1062,6 +1186,37 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-hdmi-2-1-cables/",
+      "title": "HDMI 2.1 Cables for 4K 120Hz and 8K: Five Models to Compare",
+      "description": "Five researched HDMI 2.1 cables in 2026, including certified 48Gbps, value, budget, mainstream-brand, and premium retail picks.",
+      "categoryId": "home-tech",
+      "topicId": "tvs-streaming",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Zeskit Maya Ultra High Speed HDMI cable is the safest HDMI 2.1 recommendation for most 4K/120Hz console and PC setups because it is widely available in certified passive lengths and explicitly targets the full 48Gbps feature set. Cable Matters and Monoprice offer excellent value alternatives, Anker is the mainstream accessory-brand pick, and Belkin is the premium retail option. The useful phrase is Ultra High Speed HDMI Certification, not a seller typing 8K into a title with enough confidence.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-home-printers-under-200/",
       "title": "Printer Ownership Costs: Five Home Models Under a 200-Dollar Ceiling",
       "description": "Five researched home printers under the 200-dollar ceiling in 2026, with monochrome laser, all-in-one, ink-tank, cheap photo, and lowest-cost picks.",
@@ -1107,6 +1262,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Indoor camera local storage is the first filter. Start with Reolink E1 Zoom, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-kvm-switches/",
+      "title": "KVM Switches for Shared Monitors, Keyboards, and Mice: Five Models to Compare",
+      "description": "Five researched KVM switches in 2026, with simple HDMI, value, dual-monitor, advanced dual-monitor, and USB-C dock picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The UGREEN USB: 3.0 HDMI KVM Switch 4K60 is the recommended simple KVM for two HDMI computers sharing one monitor and USB peripherals. Cable Matters is the strong alternative, UGREEN's dual-monitor KVM handles two-display desks, TESmart is the more advanced dual-monitor choice, and Cable Matters' fourteen-in-one USB-C KVM Dock is the hybrid laptop/workstation option. KVMs should be purchased from the actual port topology backward, not from an 8K label forward.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -1341,6 +1527,68 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/best-monitor-arms/",
+      "title": "Monitor Arms for Single, Dual, and Ultrawide Displays: Five Models to Compare",
+      "description": "Five researched monitor arms in 2026, with premium single, value dual, budget dual, heavy ultrawide, and cheap single picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Ergotron LX Pro is the recommended single-monitor arm for most buyers who want smooth movement and long-term mechanical quality. The Workstream by Monoprice Dual Monitor Arm is the stronger value for two displays, Huanuo HNDS6 is the budget dual choice, Ergotron HX is recommended for very heavy ultrawides, and North Bayou F80 is the cheap single-arm option. Monitor weight without the original stand, VESA pattern, desk thickness, and center of gravity are the compatibility numbers that matter.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-noise-canceling-headphones-under-200/",
+      "title": "Noise-Canceling Headphones Under a 200-Dollar Ceiling: Five Models to Compare",
+      "description": "Five researched noise-canceling headphones under the 200-dollar ceiling in 2026, with travel, value, battery, style, and lightweight picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Soundcore Space One Pro is the recommended noise-canceling headphone under the 200-dollar ceiling for most buyers because it combines strong ANC, comfortable folding earcups, long battery life, and useful app controls. JBL Live 780NC2 is the more feature-rich alternative when it stays below the cap, CMF Headphone Pro is the style/value pick, 1MORE SonoFlow Pro HQ51 is the battery-focused choice, and Sony WH-CH720N is the lightweight mainstream option. Fit and seal matter enough that a technically better ANC system can still perform worse on the wrong head.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/best-outdoor-security-cameras-without-subscription/",
       "title": "Outdoor Camera Local Recording: Five Subscription-Optional Models",
       "description": "Five researched outdoor security cameras without required subscriptions in 2026, including dual-lens, solar, pan/tilt, PoE, and NVR-friendly picks.",
@@ -1355,6 +1603,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Outdoor camera local recording is the first filter. Start with Reolink Argus 4 Pro, then compare the other four options against your exact compatibility, support, and configuration needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-pc-controllers/",
+      "title": "PC Controllers in 2026: Five Wired, Wireless, Value, and Premium Options",
+      "description": "Five researched PC controllers in 2026, including Steam-first, value, budget, wired, and premium picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The 2026 Valve Steam Controller is the recommended PC controller for dedicated Steam users because its TMR sticks, deep remapping, touch controls, and tight Steam integration make it unusually flexible. GameSir G7 Pro is the better multiplatform value, Turtle Beach Rematch Core is the cheap wired choice, GameSir Kaleid is the recommended feature-heavy wired controller, and Asus ROG Raikiri II is the premium option. Platform support is the first specification to check.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -2013,6 +2292,37 @@
       "llmsEligible": true,
       "featured": false,
       "answerSummary": "Battery backup runtime is the first filter. Start with CyberPower CP1500AVRLCD3, then compare the other four options against your exact needs.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "Not hands-on tested"
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/best-usb-c-cables/",
+      "title": "USB-C Cables for Charging, Data, and Displays: Five Models to Compare",
+      "description": "Five researched USB-C cables in 2026, including all-around 240W/data, Thunderbolt 5, charging-first, value data/video, and flexible budget picks.",
+      "categoryId": "home-tech",
+      "topicId": "computers-laptops",
+      "articleType": "guide",
+      "publishedDate": "2026-08-07",
+      "updatedDate": "2026-08-07",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "The Cable Matters 6-foot 240W USB-C cable is the recommended all-around cable for buyers who need high-power charging, fast 20Gbps data, and display support in one clearly specified cable. Cable Matters Thunderbolt 5 is the premium 80Gbps option, Anker Prime 240W is the sturdy charging-first pick, UGREEN 240W 10Gbps is the value data/video choice, and INIU Swoosh 240W is the flexible cheap charging cable. A 240W label says nothing by itself about data speed or video support.",
       "evidence": "Researched",
       "testing": {
         "state": "not-hands-on-tested",
@@ -16100,7 +16410,7 @@
       "topicId": "computers-laptops",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-06",
+      "updatedDate": "2026-08-07",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -16117,7 +16427,7 @@
       "topicId": "power-cooling-storage",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-06",
+      "updatedDate": "2026-08-07",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -16168,7 +16478,7 @@
       "topicId": "tvs-streaming",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-06",
+      "updatedDate": "2026-08-07",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -16185,7 +16495,7 @@
       "topicId": "wifi-routers",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-05",
+      "updatedDate": "2026-08-07",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -16584,5 +16894,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:080d14ec26be681700875b052d5c815244a3ac3dfc56560e4c2518d0e1f572fa"
+  "registryDigest": "sha256:fee565575078a29d38b772d8a35f55138ecfa79a2a6e250ef437db3ad4b887f4"
 }

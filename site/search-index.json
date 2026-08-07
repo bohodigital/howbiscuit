@@ -146,12 +146,44 @@
       "searchText": "why is bathroom caulk turning black and when should you replace it determine whether black shower caulk needs cleaning or replacement fix moisture remove failed sealant and recaulk the joint correctly home apartment guide articles bathroom caulk turning black replace"
     },
     {
+      "route": "/articles/best-2-5gb-ethernet-switches/",
+      "title": "2.5Gb Ethernet Switches for Faster Home Networks: Five Models to Compare",
+      "description": "Five researched 2.5GbE switches in 2026, with 8-port, enthusiast-value, 10G-uplink, mainstream five-port, and NAS-focused picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "2 5gb ethernet switches for faster home networks five models to compare five researched 2 5gbe switches in 2026 with 8 port enthusiast value 10g uplink mainstream five port and nas focused picks home tech guide articles best 2 5gb ethernet switches"
+    },
+    {
+      "route": "/articles/best-2-bay-nas-devices/",
+      "title": "Two-Bay NAS Devices for Backups, Photos, and Media: Five Models to Compare",
+      "description": "Five researched two-bay NAS devices in 2026, with value, software-first, high-performance, affordable 2.5GbE, and app-rich picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "two bay nas devices for backups photos and media five models to compare five researched two bay nas devices in 2026 with value software first high performance affordable 2 5gbe and app rich picks home tech guide articles best 2 bay nas devices"
+    },
+    {
+      "route": "/articles/best-4k-monitors-under-400/",
+      "title": "4K Monitors Under a 400-Dollar Ceiling: Five Models to Compare",
+      "description": "Five researched 4K monitors under the 400-dollar ceiling in 2026, with USB-C, creative, smart-TV, gaming, and 32-inch picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "4k monitors under a 400 dollar ceiling five models to compare five researched 4k monitors under the 400 dollar ceiling in 2026 with usb c creative smart tv gaming and 32 inch picks home tech guide articles best 4k monitors under 400"
+    },
+    {
       "route": "/articles/best-bluetooth-trackers/",
       "title": "5 Bluetooth Trackers Worth Comparing in 2026: AirTag Alternatives for Keys, Bags, and Luggage",
       "description": "Five researched Bluetooth trackers in 2026, with picks for iPhone, Samsung Galaxy, cross-platform use, network choice, and rechargeable ownership.",
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "5 bluetooth trackers worth comparing in 2026 airtag alternatives for keys bags and luggage five researched bluetooth trackers in 2026 with picks for iphone samsung galaxy cross platform use network choice and rechargeable ownership home tech guide articles best bluetooth trackers"
+    },
+    {
+      "route": "/articles/best-capture-cards/",
+      "title": "Capture Cards for Streaming and Recording Gameplay: Five Models to Compare",
+      "description": "Five researched capture cards in 2026, with overall 4K60-class, easy mainstream, budget, HDMI 2.1, and dual-source picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "capture cards for streaming and recording gameplay five models to compare five researched capture cards in 2026 with overall 4k60 class easy mainstream budget hdmi 2 1 and dual source picks home tech guide articles best capture cards"
     },
     {
       "route": "/articles/best-computer-speakers-under-150/",
@@ -226,6 +258,14 @@
       "searchText": "5 gaming monitors under a 300 dollar ceiling worth comparing in 2026 high refresh rates without bad panels five researched gaming monitors under the 300 dollar ceiling in 2026 with 1440p hdr 32 inch fast ips 27 inch value and cheap 1080p picks home tech guide articles best gaming monitors under 300"
     },
     {
+      "route": "/articles/best-hdmi-2-1-cables/",
+      "title": "HDMI 2.1 Cables for 4K 120Hz and 8K: Five Models to Compare",
+      "description": "Five researched HDMI 2.1 cables in 2026, including certified 48Gbps, value, budget, mainstream-brand, and premium retail picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "hdmi 2 1 cables for 4k 120hz and 8k five models to compare five researched hdmi 2 1 cables in 2026 including certified 48gbps value budget mainstream brand and premium retail picks home tech guide articles best hdmi 2 1 cables"
+    },
+    {
       "route": "/articles/best-home-printers-under-200/",
       "title": "Printer Ownership Costs: Five Home Models Under a 200-Dollar Ceiling",
       "description": "Five researched home printers under the 200-dollar ceiling in 2026, with monochrome laser, all-in-one, ink-tank, cheap photo, and lowest-cost picks.",
@@ -240,6 +280,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "indoor camera local storage five subscription optional models five researched indoor security cameras without required subscriptions in 2026 including optical zoom privacy pan tilt homekit and budget picks home tech guide articles best indoor security cameras without subscription"
+    },
+    {
+      "route": "/articles/best-kvm-switches/",
+      "title": "KVM Switches for Shared Monitors, Keyboards, and Mice: Five Models to Compare",
+      "description": "Five researched KVM switches in 2026, with simple HDMI, value, dual-monitor, advanced dual-monitor, and USB-C dock picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "kvm switches for shared monitors keyboards and mice five models to compare five researched kvm switches in 2026 with simple hdmi value dual monitor advanced dual monitor and usb c dock picks home tech guide articles best kvm switches"
     },
     {
       "route": "/articles/best-label-makers/",
@@ -298,12 +346,36 @@
       "searchText": "5 recommended mini pcs in 2026 tiny computers for work home labs and gaming five mini pcs ranked for ordinary work budgets macos windows value and dedicated gpu gaming with barebones traps exposed home tech guide articles best mini pcs"
     },
     {
+      "route": "/articles/best-monitor-arms/",
+      "title": "Monitor Arms for Single, Dual, and Ultrawide Displays: Five Models to Compare",
+      "description": "Five researched monitor arms in 2026, with premium single, value dual, budget dual, heavy ultrawide, and cheap single picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "monitor arms for single dual and ultrawide displays five models to compare five researched monitor arms in 2026 with premium single value dual budget dual heavy ultrawide and cheap single picks home tech guide articles best monitor arms"
+    },
+    {
+      "route": "/articles/best-noise-canceling-headphones-under-200/",
+      "title": "Noise-Canceling Headphones Under a 200-Dollar Ceiling: Five Models to Compare",
+      "description": "Five researched noise-canceling headphones under the 200-dollar ceiling in 2026, with travel, value, battery, style, and lightweight picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "noise canceling headphones under a 200 dollar ceiling five models to compare five researched noise canceling headphones under the 200 dollar ceiling in 2026 with travel value battery style and lightweight picks home tech guide articles best noise canceling headphones under 200"
+    },
+    {
       "route": "/articles/best-outdoor-security-cameras-without-subscription/",
       "title": "Outdoor Camera Local Recording: Five Subscription-Optional Models",
       "description": "Five researched outdoor security cameras without required subscriptions in 2026, including dual-lens, solar, pan/tilt, PoE, and NVR-friendly picks.",
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "outdoor camera local recording five subscription optional models five researched outdoor security cameras without required subscriptions in 2026 including dual lens solar pan tilt poe and nvr friendly picks home tech guide articles best outdoor security cameras without subscription"
+    },
+    {
+      "route": "/articles/best-pc-controllers/",
+      "title": "PC Controllers in 2026: Five Wired, Wireless, Value, and Premium Options",
+      "description": "Five researched PC controllers in 2026, including Steam-first, value, budget, wired, and premium picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "pc controllers in 2026 five wired wireless value and premium options five researched pc controllers in 2026 including steam first value budget wired and premium picks home tech guide articles best pc controllers"
     },
     {
       "route": "/articles/best-phones-under-500/",
@@ -464,6 +536,14 @@
       "category": "Home Tech",
       "type": "Guide",
       "searchText": "battery backup runtime five ups models worth comparing five researched ups battery backups in 2026 with overall budget pure sine advanced management and compact picks home tech guide articles best ups battery backups"
+    },
+    {
+      "route": "/articles/best-usb-c-cables/",
+      "title": "USB-C Cables for Charging, Data, and Displays: Five Models to Compare",
+      "description": "Five researched USB-C cables in 2026, including all-around 240W/data, Thunderbolt 5, charging-first, value data/video, and flexible budget picks.",
+      "category": "Home Tech",
+      "type": "Guide",
+      "searchText": "usb c cables for charging data and displays five models to compare five researched usb c cables in 2026 including all around 240w data thunderbolt 5 charging first value data video and flexible budget picks home tech guide articles best usb c cables"
     },
     {
       "route": "/articles/best-usb-c-chargers/",
