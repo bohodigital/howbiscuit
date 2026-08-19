@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "howbiscuit-pagefind-deltas.v1",
+  "indexes": [
+    {
+      "batchId": "PB-20260819T195518Z-D2C3B984A3A4",
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4",
+      "routes": [
+        "/articles/why-heat-pump-steams-in-winter/",
+        "/articles/why-led-bulb-glows-when-off/",
+        "/articles/why-stainless-steel-pan-rainbow-stains/"
+      ]
+    }
+  ]
+}

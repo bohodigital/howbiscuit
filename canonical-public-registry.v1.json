@@ -15793,6 +15793,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-heat-pump-steams-in-winter/",
+      "title": "Why Does a Heat Pump Look Like It Is Smoking in Winter?",
+      "description": "Why a heat pump can release a cloud that looks like smoke during cold weather, how the defrost cycle creates steam, and which icing or operating symptoms deserve service.",
+      "categoryId": "home",
+      "topicId": "heating-cooling",
+      "articleType": "guide",
+      "publishedDate": "2026-08-19",
+      "updatedDate": "2026-08-19",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A heat pump can release a visible cloud during cold-weather defrost, and that cloud is often water vapor rather than smoke. The system temporarily warms the outdoor coil to melt frost; moisture can then evaporate into visible steam. Persistent heavy icing, burning odor, electrical symptoms, or failure to resume normal heating are different problems.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article relies on HVAC manufacturer documentation rather than inspection of a specific system."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-windows-condense-in-winter/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-homemade-mayonnaise-breaks/",
       "title": "Why Does Homemade Mayonnaise Break? How to Rescue the Emulsion",
       "description": "Mayonnaise separates when oil droplets join faster than egg and water can stabilize them. Learn how temperature, oil speed, ratios, and technique affect the emulsion.",
@@ -16350,6 +16383,39 @@
     {
       "kind": "article",
       "renderMode": "canonical-source",
+      "route": "/articles/why-led-bulb-glows-when-off/",
+      "title": "Why Does an LED Bulb Glow Faintly When the Switch Is Off?",
+      "description": "Why some LED bulbs glow faintly after switch-off, how dimmers and illuminated switches can cause ghosting, and what to check before treating it as a wiring fault.",
+      "categoryId": "home",
+      "topicId": "utilities-energy",
+      "articleType": "guide",
+      "publishedDate": "2026-08-19",
+      "updatedDate": "2026-08-19",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "A faint LED glow after the switch is off usually means a tiny current is still passing through the lighting circuit. Electronic dimmers, illuminated switches, and locator lights can allow enough leakage current to charge an LED driver even though the current is far too small to visibly light an incandescent bulb.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article relies on manufacturer technical guidance rather than measurements from a specific lighting circuit."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/why-do-led-light-bulbs-flicker/"
+        ]
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
       "route": "/articles/why-lights-dim-when-appliance-starts/",
       "title": "Why Do Lights Dim When an Appliance Starts?",
       "description": "Brief dimming can come from motor starting current, but repeated or severe voltage changes may point to overloaded circuits, loose connections, or utility trouble.",
@@ -16776,6 +16842,39 @@
       "relatedContent": {
         "state": "structured",
         "routes": []
+      },
+      "media": [],
+      "leadMedia": null
+    },
+    {
+      "kind": "article",
+      "renderMode": "canonical-source",
+      "route": "/articles/why-stainless-steel-pan-rainbow-stains/",
+      "title": "Why Does a Stainless Steel Pan Get Rainbow Stains?",
+      "description": "What causes blue or rainbow heat tint on stainless steel cookware, whether it affects cooking, how vinegar can remove it, and how to reduce it next time.",
+      "categoryId": "kitchen",
+      "topicId": "cookware-tools",
+      "articleType": "guide",
+      "publishedDate": "2026-08-19",
+      "updatedDate": "2026-08-19",
+      "feedEligible": true,
+      "searchEligible": true,
+      "sitemapEligible": true,
+      "llmsEligible": true,
+      "featured": false,
+      "answerSummary": "Rainbow or blue discoloration on stainless steel cookware is usually heat tint: a very thin oxide layer that changes how light reflects from the surface. Cookware makers describe it as cosmetic rather than a cooking-performance failure, and white vinegar can often remove or reduce the visible tint after the pan has cooled.",
+      "evidence": "Researched",
+      "testing": {
+        "state": "not-hands-on-tested",
+        "notes": [
+          "The article relies on cookware-manufacturer care guidance rather than laboratory analysis of a specific pan."
+        ]
+      },
+      "relatedContent": {
+        "state": "structured",
+        "routes": [
+          "/articles/can-you-use-soap-on-cast-iron/"
+        ]
       },
       "media": [],
       "leadMedia": null
@@ -17476,7 +17575,7 @@
       "topicId": "heating-cooling",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-05",
+      "updatedDate": "2026-08-19",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -17510,7 +17609,7 @@
       "topicId": "utilities-energy",
       "articleType": "topic",
       "publishedDate": null,
-      "updatedDate": "2026-08-03",
+      "updatedDate": "2026-08-19",
       "feedEligible": false,
       "searchEligible": true,
       "sitemapEligible": true,
@@ -17824,5 +17923,5 @@
       "featured": false
     }
   ],
-  "registryDigest": "sha256:0119a56c11e044ecf1cde9d9dd7de928d70745f08ebad8fe3a0ab5d2a6213ed4"
+  "registryDigest": "sha256:069c43a9c14667af35684359089c34c115c128c29df8d70e0ac88f1f95afbf9d"
 }

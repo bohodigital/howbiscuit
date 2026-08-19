@@ -1,9 +1,9 @@
 {
   "schemaVersion": "public-release.v1",
-  "artifactDigest": "sha256:0286c63bea1ea1d70a46cd1df456bd93a838a6b16ddcbeaba41f9b767cfc8860",
-  "fileCount": 1673,
-  "byteCount": 71752129,
-  "htmlRouteCount": 466,
+  "artifactDigest": "sha256:940d2142ca262dab90d6de5a6e472e18d230bd63ce7e82e2aa09f15921f7dad5",
+  "fileCount": 1696,
+  "byteCount": 72576772,
+  "htmlRouteCount": 469,
   "routes": [
     "/",
     "/404.html",
@@ -387,6 +387,7 @@
     "/articles/why-garage-door-opener-beeping/",
     "/articles/why-garlic-turns-blue-green/",
     "/articles/why-hard-boiled-egg-yolk-turns-green/",
+    "/articles/why-heat-pump-steams-in-winter/",
     "/articles/why-homemade-mayonnaise-breaks/",
     "/articles/why-honey-crystallizes/",
     "/articles/why-hot-water-runs-out-fast/",
@@ -397,6 +398,7 @@
     "/articles/why-is-my-smoke-alarm-chirping/",
     "/articles/why-is-my-wifi-so-slow/",
     "/articles/why-is-washing-machine-shaking/",
+    "/articles/why-led-bulb-glows-when-off/",
     "/articles/why-lights-dim-when-appliance-starts/",
     "/articles/why-mashed-potatoes-turn-gluey/",
     "/articles/why-microwave-is-sparking/",
@@ -409,6 +411,7 @@
     "/articles/why-refrigerator-leaking-water/",
     "/articles/why-salt-melts-ice/",
     "/articles/why-shower-water-pressure-low/",
+    "/articles/why-stainless-steel-pan-rainbow-stains/",
     "/articles/why-tap-water-cloudy-milky/",
     "/articles/why-toilet-bubbling-gurgling/",
     "/articles/why-toilet-gurgles-when-drain-runs/",
@@ -830,13 +833,13 @@
     },
     {
       "path": "_redirects",
-      "bytes": 363,
-      "sha256": "sha256:ee08600a979a486830db58742ee8ce8273a6d2c555eb7f4bb64cdac821fe7323"
+      "bytes": 329,
+      "sha256": "sha256:b115e45c5f26c3d793f308d985aca5b255eaeedc0f1896209c2a709c17190d49"
     },
     {
       "path": "_worker.js",
-      "bytes": 3103,
-      "sha256": "sha256:6c89c0f0a6d78d6e7e96e5964f9a783172ff29b1843dbd7dcdc42fdacf8f738d"
+      "bytes": 3065,
+      "sha256": "sha256:1673afc3f35af034bd7f3314ada54aec2a131b910263ba4e97d032c92e885405"
     },
     {
       "path": "about/index.html",
@@ -2135,8 +2138,8 @@
     },
     {
       "path": "articles/index.html",
-      "bytes": 299850,
-      "sha256": "sha256:c17cee4badfb95c016db38e0c03d84baaac31e9c49234f8c28a7227cce369063"
+      "bytes": 301880,
+      "sha256": "sha256:991d3821c83a58c0f85fbf1e625de727ad7262607d5544413ecd57039f128c4e"
     },
     {
       "path": "articles/internet-plan-total-cost-checklist/index.html",
@@ -2749,6 +2752,11 @@
       "sha256": "sha256:469a59ff46827eceb4dc65ba580fbc87544de65fe35c742f9802a0033f1d7183"
     },
     {
+      "path": "articles/why-heat-pump-steams-in-winter/index.html",
+      "bytes": 47946,
+      "sha256": "sha256:7d1729d2a6b200816fd0265c2be5391338d0e089a3f298453cfdf42f850d8e97"
+    },
+    {
       "path": "articles/why-homemade-mayonnaise-breaks/index.html",
       "bytes": 42967,
       "sha256": "sha256:727d63df72bfb72d9bdc092317689ea5f71b705aca91c4da16551a649f167500"
@@ -2797,6 +2805,11 @@
       "path": "articles/why-is-washing-machine-shaking/index.html",
       "bytes": 40589,
       "sha256": "sha256:0e649eede4b3bf7f14415d7ad7d47cd9c0ecac15055211fbc9fd4a5ac182269f"
+    },
+    {
+      "path": "articles/why-led-bulb-glows-when-off/index.html",
+      "bytes": 47583,
+      "sha256": "sha256:e1370da4aae3e26b6ac0d15037783ef46837e94631aa643ea865731162714a1e"
     },
     {
       "path": "articles/why-lights-dim-when-appliance-starts/index.html",
@@ -2857,6 +2870,11 @@
       "path": "articles/why-shower-water-pressure-low/index.html",
       "bytes": 42125,
       "sha256": "sha256:62969771f805bcc27432f4890f86f15b7359407123d57c18795c7333766d88c7"
+    },
+    {
+      "path": "articles/why-stainless-steel-pan-rainbow-stains/index.html",
+      "bytes": 47248,
+      "sha256": "sha256:b89ba8c2bfce03e172e92c43dc11fbed3aab30bc29c7f578ee3ef7a13771d805"
     },
     {
       "path": "articles/why-tap-water-cloudy-milky/index.html",
@@ -4710,8 +4728,8 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 22931,
-      "sha256": "sha256:951edaae7349379d9f67046ae312147c1c9bd5f474cc0f39797bcc96f6d3dc45"
+      "bytes": 22901,
+      "sha256": "sha256:5f9c990d02a51f0ae048e7653a39d5e757612fa5b94545a44d62cc5dba4ce5a3"
     },
     {
       "path": "h3-workers/events.js",
@@ -4735,28 +4753,28 @@
     },
     {
       "path": "home/cleaning/index.html",
-      "bytes": 39202,
-      "sha256": "sha256:6b087bfc5b3ecffdb76c91ddcf8b1aa05307f9d7275c523a1b6bd7ac804410de"
+      "bytes": 39235,
+      "sha256": "sha256:77af98faf80de89d7dc796e37f133bf2b089dcf9d7e38fe2e1295a5cc50c4473"
     },
     {
       "path": "home/heating-cooling/index.html",
-      "bytes": 46301,
-      "sha256": "sha256:ccd495dd5fe800e8a872c1924c87c846d7edb143624af31a0b6b45889edf4431"
+      "bytes": 47001,
+      "sha256": "sha256:97669497fbc06b583e5e9003fa2dcbcac57aa1464b244dbbff3a3365b4d41426"
     },
     {
       "path": "home/index.html",
-      "bytes": 138178,
-      "sha256": "sha256:7923caf52a5249a769ca6b783ad986d6a29139f3be428be8a41a83bb7c6d9e1f"
+      "bytes": 141266,
+      "sha256": "sha256:7766816fe9af2b33daeaeb5d86bdbaed4ed9762a1560a5dd88a7a929accbfc51"
     },
     {
       "path": "home/repairs-maintenance/index.html",
-      "bytes": 49955,
-      "sha256": "sha256:18142987456b5466c78f325249823131e1a3ef524fbb2a7dd39732ec070ee578"
+      "bytes": 49988,
+      "sha256": "sha256:b2dddad1460479bb3441bc44d00a45d539036f168e3b465f27e2cf2977dc4bf4"
     },
     {
       "path": "home/utilities-energy/index.html",
-      "bytes": 43540,
-      "sha256": "sha256:9630a7edba12e2010deb7063099d2137c2eca7405663e3a411f4c6db6c560c8e"
+      "bytes": 44230,
+      "sha256": "sha256:a245b46d84292ab8e5c43d590004cdfc328ea5313beecf9b5ed6d9bafba5ec98"
     },
     {
       "path": "home-tech/computers-laptops/index.html",
@@ -6070,33 +6088,33 @@
     },
     {
       "path": "index.html",
-      "bytes": 98923,
-      "sha256": "sha256:3995ba67e9c637939676c3e7a12e9ed9ee87dffe46fe9a1d3e814c361846b175"
+      "bytes": 99576,
+      "sha256": "sha256:86ea124a8eb3da8239760795e00cad843be9dfcb43a9ca81a9f7d27f1300bd95"
     },
     {
       "path": "kitchen/food-science/index.html",
-      "bytes": 52615,
-      "sha256": "sha256:38ab9976323e4217315002a39952465c11bee69c4f69b4309943cfe8f168a3e6"
+      "bytes": 52648,
+      "sha256": "sha256:36734571c40d26c20ed145d2102651397be0eb3d7b79b6986251e7c4613af8fb"
     },
     {
       "path": "kitchen/index.html",
-      "bytes": 140310,
-      "sha256": "sha256:a5073e1ca1571532972b5a64d34d019da871cd0dd5142d222d7334ffb271d8e3"
+      "bytes": 142069,
+      "sha256": "sha256:b2c45063578c9cee3781f0f69265098975974fd4c72b70b39722b916f2e5244c"
     },
     {
       "path": "kitchen/kitchen-appliances/index.html",
-      "bytes": 40613,
-      "sha256": "sha256:5de775a02cf99dfd2f32e32e997a43f5f2f43de35a18f4cecc335185ce6ca793"
+      "bytes": 40646,
+      "sha256": "sha256:97dd7ada9e6704fffd1715d557769a8709a89ee71978fd4fbd6912d1e49c2164"
     },
     {
       "path": "kitchen/troubleshooting-safety/index.html",
-      "bytes": 55124,
-      "sha256": "sha256:62d28b14bccae8fceff607f169733e1e427274ec82f19cb9bc2a1ee58caa736b"
+      "bytes": 55157,
+      "sha256": "sha256:56acf9c51e838bb60015e5b7640705aa3fe755500d72010d2340171036b71fa9"
     },
     {
       "path": "llms.txt",
-      "bytes": 121624,
-      "sha256": "sha256:68db64d3f1da141c92f563959608d529ac6655d4e4eb6531a05a5e288ae95c09"
+      "bytes": 122492,
+      "sha256": "sha256:6ab54c6a9693c40a098a155e331a40f72866e0a1a0ae7fd0e36d9c0323b497a3"
     },
     {
       "path": "logo-512.png",
@@ -8739,6 +8757,106 @@
       "sha256": "sha256:9541233b37f38fd67cc6d9a44546a4db99eb6fcfbfa57053e07eed9997b55edc"
     },
     {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/filter/en_c37f57a.pf_filter",
+      "bytes": 50,
+      "sha256": "sha256:e4a2b42425c90d436861f1f482f3dd79b81dd7a84e658a9f3f2773bfd3946605"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/filter/en_d41e89c.pf_filter",
+      "bytes": 78,
+      "sha256": "sha256:a6066ef91e8690f626d76504a3257b7d4801845754a39c765caae5a101929389"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/fragment/en_231d83d.pf_fragment",
+      "bytes": 3682,
+      "sha256": "sha256:eb6999901386238a0c1f3c381395196188c514dfd54fde40b060e000132772ae"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/fragment/en_8e82144.pf_fragment",
+      "bytes": 3512,
+      "sha256": "sha256:26b2dbce674ead21df1c1878b5ed7f791886a99586acf9420418f4bc19864b5e"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/fragment/en_d87857e.pf_fragment",
+      "bytes": 3573,
+      "sha256": "sha256:2fd1814067b058b6d823479cf42f84a45144335a365066a7681e5ab7c3b7c6fd"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/index/en_46d4dc9.pf_index",
+      "bytes": 12792,
+      "sha256": "sha256:e85146345ee875f51fe484cf9fa6f09626465e10a0f3c0163f4735b4bb8568d1"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-component-ui.css",
+      "bytes": 41830,
+      "sha256": "sha256:de389c7e5d87d6e2b10d65fb1e36e8989a12a2ad8dd6239b7e070d81fb5d8b0d"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-component-ui.js",
+      "bytes": 175488,
+      "sha256": "sha256:958620129dd14bd851805daeb12ce708bd63b9287325d1d5ae6f73a04d1723f8"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-entry.json",
+      "bytes": 171,
+      "sha256": "sha256:1abef32e7816fa1c6579ba6ea8dc32ac8f53d0d68ae9b341cbcab2c6aa504d18"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-highlight.js",
+      "bytes": 44352,
+      "sha256": "sha256:04741266a86911636cefc41c8b407e380dda99b7d208724f700f94cdf57e37b5"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-modular-ui.css",
+      "bytes": 7336,
+      "sha256": "sha256:653ab29e4de5629f6ddf5f6fcdf5d2b3eb539a8c07fff8a56b8ce2156a570788"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-modular-ui.js",
+      "bytes": 14634,
+      "sha256": "sha256:f3efa0f74b305ccab0bc9edc7c09ab69867180b4c43093d84bb9b508ac4ec32c"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-ui.css",
+      "bytes": 14482,
+      "sha256": "sha256:e113b816110ed07b017613e901addfe635350f2a5b84990aa76c91a74b158084"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-ui.js",
+      "bytes": 119987,
+      "sha256": "sha256:2efa93f2e80a199ca742a69bd4cfffabc5c591ebe7763f64f7c655fd00d2209f"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind-worker.js",
+      "bytes": 41255,
+      "sha256": "sha256:4ca50d25bcab9e1c3afbc00ab5f7761114e83c8fc1b83d38655af1558b650c2a"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind.en_a9c237c3b3.pf_meta",
+      "bytes": 151,
+      "sha256": "sha256:eec4872dc9fde7501b9747afba92b30f2064d46851b31df8744b4ff689897326"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/pagefind.js",
+      "bytes": 45555,
+      "sha256": "sha256:252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/wasm.en.pagefind",
+      "bytes": 72209,
+      "sha256": "sha256:f884c7e6558f566866b9dd85f694a03f626b3f164fa52cd4e1be5562e523d604"
+    },
+    {
+      "path": "pagefind-deltas/pb-20260819t195518z-d2c3b984a3a4/wasm.unknown.pagefind",
+      "bytes": 68024,
+      "sha256": "sha256:9541233b37f38fd67cc6d9a44546a4db99eb6fcfbfa57053e07eed9997b55edc"
+    },
+    {
+      "path": "pagefind-deltas.v1.json",
+      "bytes": 395,
+      "sha256": "sha256:08f06665db883ba88d214c879a03b05cbecff59a576fbf6063b98499e3bf4383"
+    },
+    {
       "path": "privacy/index.html",
       "bytes": 28371,
       "sha256": "sha256:73aa6da310e59d753519704d7d4630b752121a8caa83750d5074f48ec90ad563"
@@ -8750,8 +8868,8 @@
     },
     {
       "path": "search-index.json",
-      "bytes": 288079,
-      "sha256": "sha256:825b1d6422f36d36691e3f4719f257394438524027f3b4deb59ef25a30e203ed"
+      "bytes": 290143,
+      "sha256": "sha256:009212708ea07fd45a328804d4d6725c176bc8bb359979be8f4f4d841c80bf80"
     },
     {
       "path": "shop/index.html",
@@ -8775,8 +8893,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 58729,
-      "sha256": "sha256:6eb8e41ba81baf3450dcd37bac139d718f3b28ce902d70906a23098355410b63"
+      "bytes": 59124,
+      "sha256": "sha256:c63eb2b87af822c92d2591a1a39c543c2ca85d7452371ee0f425e66e1c105335"
     },
     {
       "path": "tools/agricultural-market-context-browser/index.html",
